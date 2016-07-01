@@ -1,0 +1,3 @@
+package iso20022
+
+type SettlementConditionModificationStatus1Code string

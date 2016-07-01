@@ -1,0 +1,3 @@
+package iso20022
+
+type UnderlyingProductIdentifier1Code string

@@ -1,0 +1,3 @@
+package iso20022
+
+type NewSecuritiesIssuanceType3Code string
