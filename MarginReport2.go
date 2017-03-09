@@ -20,12 +20,10 @@ type MarginReport2 struct {
 
 	// Provides the margin details such as the exposure amount and the initial margin.
 	MarginCalculation []*MarginCalculation2 `xml:"MrgnClctn"`
-
 }
 
-
 func (m *MarginReport2) AddMarginProduct() *MarginProductType1Choice {
-	newValue := new (MarginProductType1Choice)
+	newValue := new(MarginProductType1Choice)
 	m.MarginProduct = append(m.MarginProduct, newValue)
 	return newValue
 }
@@ -40,7 +38,7 @@ func (m *MarginReport2) SetCollateralisedMarginAccountIndicator(value string) {
 }
 
 func (m *MarginReport2) AddNonClearingMember() *PartyIdentificationAndAccount31 {
-	newValue := new (PartyIdentificationAndAccount31)
+	newValue := new(PartyIdentificationAndAccount31)
 	m.NonClearingMember = append(m.NonClearingMember, newValue)
 	return newValue
 }
@@ -51,8 +49,7 @@ func (m *MarginReport2) AddMarginCalculationSummary() *MarginCalculation1 {
 }
 
 func (m *MarginReport2) AddMarginCalculation() *MarginCalculation2 {
-	newValue := new (MarginCalculation2)
+	newValue := new(MarginCalculation2)
 	m.MarginCalculation = append(m.MarginCalculation, newValue)
 	return newValue
 }
-

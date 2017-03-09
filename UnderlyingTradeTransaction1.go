@@ -23,9 +23,7 @@ type UnderlyingTradeTransaction1 struct {
 
 	// Additional information related to the underlying transaction.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (u *UnderlyingTradeTransaction1) AddType() *UnderlyingTradeTransactionType1Choice {
 	u.Type = new(UnderlyingTradeTransactionType1Choice)
@@ -55,4 +53,3 @@ func (u *UnderlyingTradeTransaction1) SetContractAmountPercentage(value string) 
 func (u *UnderlyingTradeTransaction1) AddAdditionalInformation(value string) {
 	u.AdditionalInformation = append(u.AdditionalInformation, (*Max2000Text)(&value))
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.017.001.01 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.017.001.01 Document"`
 	Message *AccountMandateMaintenanceRequestV01 `xml:"AcctMndtMntncReq"`
 }
 
@@ -50,9 +50,7 @@ type AccountMandateMaintenanceRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountMandateMaintenanceRequestV01) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -70,7 +68,7 @@ func (a *AccountMandateMaintenanceRequestV01) AddUnderlyingMasterAgreement() *is
 }
 
 func (a *AccountMandateMaintenanceRequestV01) AddAccountIdentification() *iso20022.AccountForAction1 {
-	newValue := new (iso20022.AccountForAction1)
+	newValue := new(iso20022.AccountForAction1)
 	a.AccountIdentification = append(a.AccountIdentification, newValue)
 	return newValue
 }
@@ -81,13 +79,13 @@ func (a *AccountMandateMaintenanceRequestV01) AddAccountServicerIdentification()
 }
 
 func (a *AccountMandateMaintenanceRequestV01) AddOrganisationIdentification() *iso20022.OrganisationIdentification6 {
-	newValue := new (iso20022.OrganisationIdentification6)
+	newValue := new(iso20022.OrganisationIdentification6)
 	a.OrganisationIdentification = append(a.OrganisationIdentification, newValue)
 	return newValue
 }
 
 func (a *AccountMandateMaintenanceRequestV01) AddMandate() *iso20022.OperationMandate1 {
-	newValue := new (iso20022.OperationMandate1)
+	newValue := new(iso20022.OperationMandate1)
 	a.Mandate = append(a.Mandate, newValue)
 	return newValue
 }
@@ -98,8 +96,7 @@ func (a *AccountMandateMaintenanceRequestV01) AddAdditionalMessageInformation() 
 }
 
 func (a *AccountMandateMaintenanceRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

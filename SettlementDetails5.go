@@ -59,9 +59,7 @@ type SettlementDetails5 struct {
 
 	// Specifies whether physical settlement may be executed using a letter of guarantee or if the physical certificates should be used.
 	LetterOfGuarantee *LetterOfGuarantee1Choice `xml:"LttrOfGrnt,omitempty"`
-
 }
-
 
 func (s *SettlementDetails5) SetHoldIndicator(value string) {
 	s.HoldIndicator = (*YesNoIndicator)(&value)
@@ -78,7 +76,7 @@ func (s *SettlementDetails5) AddSecuritiesTransactionType() *SecuritiesTransacti
 }
 
 func (s *SettlementDetails5) AddSettlementTransactionCondition() *SettlementTransactionCondition2Choice {
-	newValue := new (SettlementTransactionCondition2Choice)
+	newValue := new(SettlementTransactionCondition2Choice)
 	s.SettlementTransactionCondition = append(s.SettlementTransactionCondition, newValue)
 	return newValue
 }
@@ -156,4 +154,3 @@ func (s *SettlementDetails5) AddLetterOfGuarantee() *LetterOfGuarantee1Choice {
 	s.LetterOfGuarantee = new(LetterOfGuarantee1Choice)
 	return s.LetterOfGuarantee
 }
-

@@ -8,9 +8,7 @@ type PartyIdentification29Choice struct {
 
 	// Identifies the name and address of a non-financial institution.
 	NameAndAddress *PartyIdentification26 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PartyIdentification29Choice) SetBIC(value string) {
 	p.BIC = (*BICIdentifier)(&value)
@@ -20,4 +18,3 @@ func (p *PartyIdentification29Choice) AddNameAndAddress() *PartyIdentification26
 	p.NameAndAddress = new(PartyIdentification26)
 	return p.NameAndAddress
 }
-

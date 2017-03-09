@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.003.001.02 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:reda.003.001.02 Document"`
 	Message *PriceReportCorrectionV02 `xml:"reda.003.001.02"`
 }
 
@@ -31,9 +31,7 @@ type PriceReportCorrectionV02 struct {
 
 	// Information related to the correction of a price of a financial instrument.
 	PriceCorrectionDetails []*iso20022.PriceCorrection2 `xml:"PricCrrctnDtls"`
-
 }
-
 
 func (p *PriceReportCorrectionV02) AddPoolReference() *iso20022.AdditionalReference3 {
 	p.PoolReference = new(iso20022.AdditionalReference3)
@@ -46,8 +44,7 @@ func (p *PriceReportCorrectionV02) AddPreviousReference() *iso20022.AdditionalRe
 }
 
 func (p *PriceReportCorrectionV02) AddPriceCorrectionDetails() *iso20022.PriceCorrection2 {
-	newValue := new (iso20022.PriceCorrection2)
+	newValue := new(iso20022.PriceCorrection2)
 	p.PriceCorrectionDetails = append(p.PriceCorrectionDetails, newValue)
 	return newValue
 }
-

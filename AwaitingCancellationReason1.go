@@ -8,9 +8,7 @@ type AwaitingCancellationReason1 struct {
 
 	// Provides additional information about the reason in narrative form.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (a *AwaitingCancellationReason1) AddCode() *AwaitingCancellationReason1Choice {
 	a.Code = new(AwaitingCancellationReason1Choice)
@@ -20,4 +18,3 @@ func (a *AwaitingCancellationReason1) AddCode() *AwaitingCancellationReason1Choi
 func (a *AwaitingCancellationReason1) SetAdditionalReasonInformation(value string) {
 	a.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

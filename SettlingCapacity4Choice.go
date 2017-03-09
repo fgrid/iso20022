@@ -8,9 +8,7 @@ type SettlingCapacity4Choice struct {
 
 	// Settlement capacity expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlingCapacity4Choice) SetCode(value string) {
 	s.Code = (*SettlingCapacity2Code)(&value)
@@ -20,4 +18,3 @@ func (s *SettlingCapacity4Choice) AddProprietary() *GenericIdentification20 {
 	s.Proprietary = new(GenericIdentification20)
 	return s.Proprietary
 }
-

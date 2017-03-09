@@ -8,9 +8,7 @@ type Limit1 struct {
 
 	// Specifies the maximum number of times an event may occur.
 	Limit *Max3NumericText `xml:"Lmt"`
-
 }
-
 
 func (l *Limit1) SetCurrent(value string) {
 	l.Current = (*Max3NumericText)(&value)
@@ -19,4 +17,3 @@ func (l *Limit1) SetCurrent(value string) {
 func (l *Limit1) SetLimit(value string) {
 	l.Limit = (*Max3NumericText)(&value)
 }
-

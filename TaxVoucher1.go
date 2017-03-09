@@ -65,9 +65,7 @@ type TaxVoucher1 struct {
 
 	// Provides information about the foreign exchange transaction.
 	ForeignExchangeDetails *ForeignExchangeTerms9 `xml:"FXDtls,omitempty"`
-
 }
-
 
 func (t *TaxVoucher1) SetTaxVoucherRate(value string) {
 	t.TaxVoucherRate = (*BaseOneRate)(&value)
@@ -156,4 +154,3 @@ func (t *TaxVoucher1) AddForeignExchangeDetails() *ForeignExchangeTerms9 {
 	t.ForeignExchangeDetails = new(ForeignExchangeTerms9)
 	return t.ForeignExchangeDetails
 }
-

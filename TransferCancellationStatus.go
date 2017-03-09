@@ -8,9 +8,7 @@ type TransferCancellationStatus struct {
 
 	// Additional information about the status in textual form.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TransferCancellationStatus) SetStatus(value string) {
 	t.Status = (*CancellationStatus1Code)(&value)
@@ -19,4 +17,3 @@ func (t *TransferCancellationStatus) SetStatus(value string) {
 func (t *TransferCancellationStatus) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max350Text)(&value)
 }
-

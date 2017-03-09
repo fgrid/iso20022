@@ -11,9 +11,7 @@ type HoldingBalance5 struct {
 
 	// Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
 	SafekeepingPlace *SafekeepingPlaceFormatChoice `xml:"SfkpgPlc,omitempty"`
-
 }
-
 
 func (h *HoldingBalance5) AddBalance() *UnitOrFaceAmountOrCode1Choice {
 	h.Balance = new(UnitOrFaceAmountOrCode1Choice)
@@ -28,4 +26,3 @@ func (h *HoldingBalance5) AddSafekeepingPlace() *SafekeepingPlaceFormatChoice {
 	h.SafekeepingPlace = new(SafekeepingPlaceFormatChoice)
 	return h.SafekeepingPlace
 }
-

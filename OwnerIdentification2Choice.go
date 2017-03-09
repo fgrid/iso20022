@@ -8,9 +8,7 @@ type OwnerIdentification2Choice struct {
 
 	// Identification of an organisation.
 	OrganisationOwnerIdentification *PartyIdentification95 `xml:"OrgOwnrId"`
-
 }
-
 
 func (o *OwnerIdentification2Choice) AddIndividualOwnerIdentification() *IndividualPersonIdentification2Choice {
 	o.IndividualOwnerIdentification = new(IndividualPersonIdentification2Choice)
@@ -21,4 +19,3 @@ func (o *OwnerIdentification2Choice) AddOrganisationOwnerIdentification() *Party
 	o.OrganisationOwnerIdentification = new(PartyIdentification95)
 	return o.OrganisationOwnerIdentification
 }
-

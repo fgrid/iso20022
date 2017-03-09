@@ -26,9 +26,7 @@ type CardTransaction10 struct {
 
 	// Response to the reconciliation.
 	TransactionResponse *ResponseType2 `xml:"TxRspn"`
-
 }
-
 
 func (c *CardTransaction10) AddReconciliation() *TransactionIdentifier2 {
 	c.Reconciliation = new(TransactionIdentifier2)
@@ -65,4 +63,3 @@ func (c *CardTransaction10) AddTransactionResponse() *ResponseType2 {
 	c.TransactionResponse = new(ResponseType2)
 	return c.TransactionResponse
 }
-

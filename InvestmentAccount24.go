@@ -35,12 +35,10 @@ type InvestmentAccount24 struct {
 
 	// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
 	SubAccountDetails *SubAccount1 `xml:"SubAcctDtls,omitempty"`
-
 }
 
-
 func (i *InvestmentAccount24) AddOwnerIdentification() *PartyIdentification2Choice {
-	newValue := new (PartyIdentification2Choice)
+	newValue := new(PartyIdentification2Choice)
 	i.OwnerIdentification = append(i.OwnerIdentification, newValue)
 	return newValue
 }
@@ -59,7 +57,7 @@ func (i *InvestmentAccount24) SetAccountDesignation(value string) {
 }
 
 func (i *InvestmentAccount24) AddIntermediaryInformation() *Intermediary10 {
-	newValue := new (Intermediary10)
+	newValue := new(Intermediary10)
 	i.IntermediaryInformation = append(i.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -89,4 +87,3 @@ func (i *InvestmentAccount24) AddSubAccountDetails() *SubAccount1 {
 	i.SubAccountDetails = new(SubAccount1)
 	return i.SubAccountDetails
 }
-

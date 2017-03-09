@@ -11,9 +11,7 @@ type AlternateSecurityIdentification1 struct {
 
 	// Entity that issues the proprietary identification.
 	ProprietaryIdentificationSource *Max35Text `xml:"PrtryIdSrc"`
-
 }
-
 
 func (a *AlternateSecurityIdentification1) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (a *AlternateSecurityIdentification1) SetDomesticIdentificationSource(value
 func (a *AlternateSecurityIdentification1) SetProprietaryIdentificationSource(value string) {
 	a.ProprietaryIdentificationSource = (*Max35Text)(&value)
 }
-

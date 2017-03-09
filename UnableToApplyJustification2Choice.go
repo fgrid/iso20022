@@ -11,9 +11,7 @@ type UnableToApplyJustification2Choice struct {
 
 	// Indicates whether or not the referred item is a possible duplicate of a previous instruction or entry.
 	PossibleDuplicateInstruction *TrueFalseIndicator `xml:"PssblDplctInstr"`
-
 }
-
 
 func (u *UnableToApplyJustification2Choice) SetAnyInformation(value string) {
 	u.AnyInformation = (*YesNoIndicator)(&value)
@@ -27,4 +25,3 @@ func (u *UnableToApplyJustification2Choice) AddMissingOrIncorrectInformation() *
 func (u *UnableToApplyJustification2Choice) SetPossibleDuplicateInstruction(value string) {
 	u.PossibleDuplicateInstruction = (*TrueFalseIndicator)(&value)
 }
-

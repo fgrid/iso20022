@@ -8,9 +8,7 @@ type UnderlyingTransaction11 struct {
 
 	// Provides information on the original (group of) transactions, to which the cancellation request refers.
 	OriginalPaymentInformationAndCancellation []*OriginalPaymentInstruction13 `xml:"OrgnlPmtInfAndCxl,omitempty"`
-
 }
-
 
 func (u *UnderlyingTransaction11) AddOriginalGroupInformationAndCancellation() *OriginalGroupHeader4 {
 	u.OriginalGroupInformationAndCancellation = new(OriginalGroupHeader4)
@@ -18,8 +16,7 @@ func (u *UnderlyingTransaction11) AddOriginalGroupInformationAndCancellation() *
 }
 
 func (u *UnderlyingTransaction11) AddOriginalPaymentInformationAndCancellation() *OriginalPaymentInstruction13 {
-	newValue := new (OriginalPaymentInstruction13)
+	newValue := new(OriginalPaymentInstruction13)
 	u.OriginalPaymentInformationAndCancellation = append(u.OriginalPaymentInformationAndCancellation, newValue)
 	return newValue
 }
-

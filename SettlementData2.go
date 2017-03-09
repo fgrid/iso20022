@@ -41,9 +41,7 @@ type SettlementData2 struct {
 
 	// Cash settlement is pending.
 	Pending *YesNoIndicator `xml:"Pdg"`
-
 }
-
 
 func (s *SettlementData2) SetCashFlowUniqueReference(value string) {
 	s.CashFlowUniqueReference = (*Max35Text)(&value)
@@ -98,4 +96,3 @@ func (s *SettlementData2) SetSuspended(value string) {
 func (s *SettlementData2) SetPending(value string) {
 	s.Pending = (*YesNoIndicator)(&value)
 }
-

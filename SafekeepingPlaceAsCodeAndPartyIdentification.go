@@ -11,9 +11,7 @@ type SafekeepingPlaceAsCodeAndPartyIdentification struct {
 
 	// Place of safekeeping.
 	Party *PartyIdentification3 `xml:"Pty,omitempty"`
-
 }
-
 
 func (s *SafekeepingPlaceAsCodeAndPartyIdentification) SetPlaceSafekeeping(value string) {
 	s.PlaceSafekeeping = (*SafekeepingPlace1Code)(&value)
@@ -27,4 +25,3 @@ func (s *SafekeepingPlaceAsCodeAndPartyIdentification) AddParty() *PartyIdentifi
 	s.Party = new(PartyIdentification3)
 	return s.Party
 }
-

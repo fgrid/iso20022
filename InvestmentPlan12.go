@@ -36,7 +36,7 @@ type InvestmentPlan12 struct {
 	// Cash settlement standing instruction associated to the investment plan.
 	CashSettlement []*CashSettlement1 `xml:"CshSttlm,omitempty"`
 
-	// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. 
+	// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account.
 	ContractReference *Max35Text `xml:"CtrctRef,omitempty"`
 
 	// Reference of the previous contract to which this savings or withdrawal plan is related.
@@ -51,14 +51,12 @@ type InvestmentPlan12 struct {
 	// Specifies the type of insurance contract to which the savings investment plan is linked.
 	InsuranceCover *InsuranceType2Choice `xml:"InsrncCover,omitempty"`
 
-	// Status of the savings or withdrawal investment plan. 
+	// Status of the savings or withdrawal investment plan.
 	PlanStatus *PlanStatus2Choice `xml:"PlanSts,omitempty"`
 
 	// Role or function of the instalment manager.
 	InstalmentManagerRole *PartyRole4Choice `xml:"InstlmtMgrRole,omitempty"`
-
 }
-
 
 func (i *InvestmentPlan12) AddFrequency() *Frequency20Choice {
 	i.Frequency = new(Frequency20Choice)
@@ -100,13 +98,13 @@ func (i *InvestmentPlan12) SetRoundingDirection(value string) {
 }
 
 func (i *InvestmentPlan12) AddSecurityDetails() *Repartition4 {
-	newValue := new (Repartition4)
+	newValue := new(Repartition4)
 	i.SecurityDetails = append(i.SecurityDetails, newValue)
 	return newValue
 }
 
 func (i *InvestmentPlan12) AddCashSettlement() *CashSettlement1 {
-	newValue := new (CashSettlement1)
+	newValue := new(CashSettlement1)
 	i.CashSettlement = append(i.CashSettlement, newValue)
 	return newValue
 }
@@ -141,4 +139,3 @@ func (i *InvestmentPlan12) AddInstalmentManagerRole() *PartyRole4Choice {
 	i.InstalmentManagerRole = new(PartyRole4Choice)
 	return i.InstalmentManagerRole
 }
-

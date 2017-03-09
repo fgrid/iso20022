@@ -49,7 +49,7 @@ type SecuritiesTradeDetails61 struct {
 	SettlementDate *SettlementDate12Choice `xml:"SttlmDt"`
 
 	// Specifies the price of the traded financial instrument.
-	// This is the deal price of the individual trade transaction. 
+	// This is the deal price of the individual trade transaction.
 	// If there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).
 	DealPrice *Price3 `xml:"DealPric,omitempty"`
 
@@ -94,9 +94,7 @@ type SecuritiesTradeDetails61 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails61) SetAccountOwnerTransactionIdentification(value string) {
 	s.AccountOwnerTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -183,7 +181,7 @@ func (s *SecuritiesTradeDetails61) AddFinancialInstrumentAttributes() *Financial
 }
 
 func (s *SecuritiesTradeDetails61) AddTradeTransactionCondition() *TradeTransactionCondition6Choice {
-	newValue := new (TradeTransactionCondition6Choice)
+	newValue := new(TradeTransactionCondition6Choice)
 	s.TradeTransactionCondition = append(s.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -234,8 +232,7 @@ func (s *SecuritiesTradeDetails61) AddOtherBusinessParties() *OtherParties31 {
 }
 
 func (s *SecuritiesTradeDetails61) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -15,7 +15,7 @@ type CorporateActionRate44 struct {
 	// Public index rate applied to the amount paid to adjust it to inflation.
 	IndexFactor *RateAndAmountFormat14Choice `xml:"IndxFctr,omitempty"`
 
-	// The actual interest rate used for the payment of the interest for the specified interest period. 
+	// The actual interest rate used for the payment of the interest for the specified interest period.
 	// Usage guideline: It is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.
 	InterestRateUsedForPayment []*InterestRateUsedForPaymentFormat5Choice `xml:"IntrstRateUsdForPmt,omitempty"`
 
@@ -42,9 +42,7 @@ type CorporateActionRate44 struct {
 
 	// Overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder.
 	TaxOnIncome *RateAndAmountFormat14Choice `xml:"TaxOnIncm,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate44) AddAdditionalTax() *RateAndAmountFormat14Choice {
 	c.AdditionalTax = new(RateAndAmountFormat14Choice)
@@ -52,13 +50,13 @@ func (c *CorporateActionRate44) AddAdditionalTax() *RateAndAmountFormat14Choice 
 }
 
 func (c *CorporateActionRate44) AddGrossDividendRate() *GrossDividendRateFormat9Choice {
-	newValue := new (GrossDividendRateFormat9Choice)
+	newValue := new(GrossDividendRateFormat9Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate44) AddNetDividendRate() *NetDividendRateFormat11Choice {
-	newValue := new (NetDividendRateFormat11Choice)
+	newValue := new(NetDividendRateFormat11Choice)
 	c.NetDividendRate = append(c.NetDividendRate, newValue)
 	return newValue
 }
@@ -69,7 +67,7 @@ func (c *CorporateActionRate44) AddIndexFactor() *RateAndAmountFormat14Choice {
 }
 
 func (c *CorporateActionRate44) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat5Choice {
-	newValue := new (InterestRateUsedForPaymentFormat5Choice)
+	newValue := new(InterestRateUsedForPaymentFormat5Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
@@ -85,25 +83,25 @@ func (c *CorporateActionRate44) AddProrationRate() *RateFormat3Choice {
 }
 
 func (c *CorporateActionRate44) AddWithholdingTaxRate() *RateFormat10Choice {
-	newValue := new (RateFormat10Choice)
+	newValue := new(RateFormat10Choice)
 	c.WithholdingTaxRate = append(c.WithholdingTaxRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate44) AddWithholdingOfForeignTax() *RateAndAmountFormat20Choice {
-	newValue := new (RateAndAmountFormat20Choice)
+	newValue := new(RateAndAmountFormat20Choice)
 	c.WithholdingOfForeignTax = append(c.WithholdingOfForeignTax, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate44) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	c.TaxRelatedRate = append(c.TaxRelatedRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate44) AddTaxableIncomePerDividendShare() *RateTypeAndAmountAndStatus11 {
-	newValue := new (RateTypeAndAmountAndStatus11)
+	newValue := new(RateTypeAndAmountAndStatus11)
 	c.TaxableIncomePerDividendShare = append(c.TaxableIncomePerDividendShare, newValue)
 	return newValue
 }
@@ -117,4 +115,3 @@ func (c *CorporateActionRate44) AddTaxOnIncome() *RateAndAmountFormat14Choice {
 	c.TaxOnIncome = new(RateAndAmountFormat14Choice)
 	return c.TaxOnIncome
 }
-

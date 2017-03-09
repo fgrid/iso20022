@@ -8,17 +8,14 @@ type OrganisationIdentification4 struct {
 
 	// Unique identification of an organisation, as assigned by an institution, using an identification scheme.
 	Other []*GenericOrganisationIdentification1 `xml:"Othr,omitempty"`
-
 }
-
 
 func (o *OrganisationIdentification4) SetBICOrBEI(value string) {
 	o.BICOrBEI = (*AnyBICIdentifier)(&value)
 }
 
 func (o *OrganisationIdentification4) AddOther() *GenericOrganisationIdentification1 {
-	newValue := new (GenericOrganisationIdentification1)
+	newValue := new(GenericOrganisationIdentification1)
 	o.Other = append(o.Other, newValue)
 	return newValue
 }
-

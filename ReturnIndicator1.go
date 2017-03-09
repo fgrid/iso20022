@@ -14,9 +14,7 @@ type ReturnIndicator1 struct {
 
 	// Additional information, in free text form, to complement the investigation result.
 	AdditionalInformation *Max500Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *ReturnIndicator1) AddResponsePeriod() *DateOrDateTimePeriodChoice {
 	r.ResponsePeriod = new(DateOrDateTimePeriodChoice)
@@ -36,4 +34,3 @@ func (r *ReturnIndicator1) AddInvestigationResult() *InvestigationResult1Choice 
 func (r *ReturnIndicator1) SetAdditionalInformation(value string) {
 	r.AdditionalInformation = (*Max500Text)(&value)
 }
-

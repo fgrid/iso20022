@@ -8,9 +8,7 @@ type DocumentLineType1Choice struct {
 
 	// Proprietary identification of the type of the remittance document.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (d *DocumentLineType1Choice) SetCode(value string) {
 	d.Code = (*ExternalDocumentLineType1Code)(&value)
@@ -19,4 +17,3 @@ func (d *DocumentLineType1Choice) SetCode(value string) {
 func (d *DocumentLineType1Choice) SetProprietary(value string) {
 	d.Proprietary = (*Max35Text)(&value)
 }
-

@@ -20,9 +20,7 @@ type MarginCollateral1 struct {
 
 	// Sum of all margin collateral movements due to party B in progress but not yet settled.
 	InTransitToPartyB *ActiveCurrencyAndAmount `xml:"InTrnstToPtyB,omitempty"`
-
 }
-
 
 func (m *MarginCollateral1) SetHeldByPartyA(value, currency string) {
 	m.HeldByPartyA = NewActiveCurrencyAndAmount(value, currency)
@@ -47,4 +45,3 @@ func (m *MarginCollateral1) SetInTransitToPartyA(value, currency string) {
 func (m *MarginCollateral1) SetInTransitToPartyB(value, currency string) {
 	m.InTransitToPartyB = NewActiveCurrencyAndAmount(value, currency)
 }
-

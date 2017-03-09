@@ -8,9 +8,7 @@ type PreviousYear2 struct {
 
 	// Indicates whether the ISA contains a cash component asset for transfer.
 	CashComponentIndicator *YesNoIndicator `xml:"CshCmpntInd"`
-
 }
-
 
 func (p *PreviousYear2) AddPreviousYears() *PreviousYear1Choice {
 	p.PreviousYears = new(PreviousYear1Choice)
@@ -20,4 +18,3 @@ func (p *PreviousYear2) AddPreviousYears() *PreviousYear1Choice {
 func (p *PreviousYear2) SetCashComponentIndicator(value string) {
 	p.CashComponentIndicator = (*YesNoIndicator)(&value)
 }
-

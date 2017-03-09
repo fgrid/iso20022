@@ -15,9 +15,7 @@ type TradeLegStatement3 struct {
 
 	// Provides the lists of all trades during the period in consideration for the statement.
 	TradeLegsDetails []*TradeLeg9 `xml:"TradLegsDtls"`
-
 }
-
 
 func (t *TradeLegStatement3) AddClearingAccount() *SecuritiesAccount18 {
 	t.ClearingAccount = new(SecuritiesAccount18)
@@ -35,8 +33,7 @@ func (t *TradeLegStatement3) AddNonClearingMember() *PartyIdentificationAndAccou
 }
 
 func (t *TradeLegStatement3) AddTradeLegsDetails() *TradeLeg9 {
-	newValue := new (TradeLeg9)
+	newValue := new(TradeLeg9)
 	t.TradeLegsDetails = append(t.TradeLegsDetails, newValue)
 	return newValue
 }
-

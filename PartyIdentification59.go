@@ -20,9 +20,7 @@ type PartyIdentification59 struct {
 
 	// Identification of the Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 "Financial Services - Legal Entity Identifier (LEI)".
 	LegalEntityIdentifier *LEIIdentifier `xml:"LglNttyIdr,omitempty"`
-
 }
-
 
 func (p *PartyIdentification59) SetPartyName(value string) {
 	p.PartyName = (*Max34Text)(&value)
@@ -49,4 +47,3 @@ func (p *PartyIdentification59) AddClearingSystemIdentification() *ClearingSyste
 func (p *PartyIdentification59) SetLegalEntityIdentifier(value string) {
 	p.LegalEntityIdentifier = (*LEIIdentifier)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document03400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.034.001.01 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:seev.034.001.01 Document"`
 	Message *CorporateActionInstructionStatusAdviceV01 `xml:"CorpActnInstrStsAdvc"`
 }
 
@@ -57,9 +57,7 @@ type CorporateActionInstructionStatusAdviceV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	c.Identification = new(iso20022.DocumentIdentification11)
@@ -72,7 +70,7 @@ func (c *CorporateActionInstructionStatusAdviceV01) AddInstructionIdentification
 }
 
 func (c *CorporateActionInstructionStatusAdviceV01) AddOtherDocumentIdentification() *iso20022.DocumentIdentification14 {
-	newValue := new (iso20022.DocumentIdentification14)
+	newValue := new(iso20022.DocumentIdentification14)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -83,7 +81,7 @@ func (c *CorporateActionInstructionStatusAdviceV01) AddCorporateActionGeneralInf
 }
 
 func (c *CorporateActionInstructionStatusAdviceV01) AddInstructionProcessingStatus() *iso20022.InstructionProcessingStatus1Choice {
-	newValue := new (iso20022.InstructionProcessingStatus1Choice)
+	newValue := new(iso20022.InstructionProcessingStatus1Choice)
 	c.InstructionProcessingStatus = append(c.InstructionProcessingStatus, newValue)
 	return newValue
 }
@@ -109,8 +107,7 @@ func (c *CorporateActionInstructionStatusAdviceV01) AddMessageRecipient() *iso20
 }
 
 func (c *CorporateActionInstructionStatusAdviceV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

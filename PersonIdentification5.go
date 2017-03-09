@@ -8,9 +8,7 @@ type PersonIdentification5 struct {
 
 	// Unique identification of a person, as assigned by an institution, using an identification scheme.
 	Other []*GenericPersonIdentification1 `xml:"Othr,omitempty"`
-
 }
-
 
 func (p *PersonIdentification5) AddDateAndPlaceOfBirth() *DateAndPlaceOfBirth {
 	p.DateAndPlaceOfBirth = new(DateAndPlaceOfBirth)
@@ -18,8 +16,7 @@ func (p *PersonIdentification5) AddDateAndPlaceOfBirth() *DateAndPlaceOfBirth {
 }
 
 func (p *PersonIdentification5) AddOther() *GenericPersonIdentification1 {
-	newValue := new (GenericPersonIdentification1)
+	newValue := new(GenericPersonIdentification1)
 	p.Other = append(p.Other, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type Cancellation7Choice struct {
 
 	// Reference of the transfer instruction to be cancelled.
 	CancellationByReference *TransferReference7 `xml:"CxlByRef"`
-
 }
-
 
 func (c *Cancellation7Choice) AddCancellationByTransferInstructionDetails() *ISATransfer19 {
 	c.CancellationByTransferInstructionDetails = new(ISATransfer19)
@@ -21,4 +19,3 @@ func (c *Cancellation7Choice) AddCancellationByReference() *TransferReference7 {
 	c.CancellationByReference = new(TransferReference7)
 	return c.CancellationByReference
 }
-

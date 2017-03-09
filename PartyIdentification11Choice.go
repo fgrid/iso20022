@@ -11,9 +11,7 @@ type PartyIdentification11Choice struct {
 
 	// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 	ProprietaryIdentification *GenericIdentification1 `xml:"PrtryId"`
-
 }
-
 
 func (p *PartyIdentification11Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -27,4 +25,3 @@ func (p *PartyIdentification11Choice) AddProprietaryIdentification() *GenericIde
 	p.ProprietaryIdentification = new(GenericIdentification1)
 	return p.ProprietaryIdentification
 }
-

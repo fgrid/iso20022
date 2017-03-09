@@ -8,9 +8,7 @@ type DateFormat21Choice struct {
 
 	// Date not specified, for example, the date is unknown.
 	NotSpecifiedDate *DateType8Code `xml:"NotSpcfdDt"`
-
 }
-
 
 func (d *DateFormat21Choice) AddDate() *DateAndDateTimeChoice {
 	d.Date = new(DateAndDateTimeChoice)
@@ -20,4 +18,3 @@ func (d *DateFormat21Choice) AddDate() *DateAndDateTimeChoice {
 func (d *DateFormat21Choice) SetNotSpecifiedDate(value string) {
 	d.NotSpecifiedDate = (*DateType8Code)(&value)
 }
-

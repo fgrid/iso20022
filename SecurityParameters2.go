@@ -11,9 +11,7 @@ type SecurityParameters2 struct {
 
 	// Key to inject in the point of interaction, protected by the temporary key previously sent.
 	SymmetricKey []*CryptographicKey4 `xml:"SmmtrcKey,omitempty"`
-
 }
-
 
 func (s *SecurityParameters2) SetPOIChallenge(value string) {
 	s.POIChallenge = (*Max140Binary)(&value)
@@ -24,8 +22,7 @@ func (s *SecurityParameters2) SetTMChallenge(value string) {
 }
 
 func (s *SecurityParameters2) AddSymmetricKey() *CryptographicKey4 {
-	newValue := new (CryptographicKey4)
+	newValue := new(CryptographicKey4)
 	s.SymmetricKey = append(s.SymmetricKey, newValue)
 	return newValue
 }
-

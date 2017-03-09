@@ -14,9 +14,7 @@ type LegalOrganisation2 struct {
 
 	// Date when the organisation was registered.
 	RegistrationDate *ISODate `xml:"RegnDt,omitempty"`
-
 }
-
 
 func (l *LegalOrganisation2) SetIdentification(value string) {
 	l.Identification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (l *LegalOrganisation2) SetEstablishmentDate(value string) {
 func (l *LegalOrganisation2) SetRegistrationDate(value string) {
 	l.RegistrationDate = (*ISODate)(&value)
 }
-

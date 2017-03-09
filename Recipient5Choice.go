@@ -8,9 +8,7 @@ type Recipient5Choice struct {
 
 	// Identifier of a cryptographic asymmetric key, previously exchanged between initiator and recipient.
 	KeyIdentifier *KEKIdentifier2 `xml:"KeyIdr"`
-
 }
-
 
 func (r *Recipient5Choice) AddIssuerAndSerialNumber() *IssuerAndSerialNumber1 {
 	r.IssuerAndSerialNumber = new(IssuerAndSerialNumber1)
@@ -21,4 +19,3 @@ func (r *Recipient5Choice) AddKeyIdentifier() *KEKIdentifier2 {
 	r.KeyIdentifier = new(KEKIdentifier2)
 	return r.KeyIdentifier
 }
-

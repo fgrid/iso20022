@@ -8,9 +8,7 @@ type TradeOriginator4Choice struct {
 
 	// Trading party capacity expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (t *TradeOriginator4Choice) SetCode(value string) {
 	t.Code = (*OriginatorRole2Code)(&value)
@@ -20,4 +18,3 @@ func (t *TradeOriginator4Choice) AddProprietary() *GenericIdentification47 {
 	t.Proprietary = new(GenericIdentification47)
 	return t.Proprietary
 }
-

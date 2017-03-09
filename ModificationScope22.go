@@ -8,9 +8,7 @@ type ModificationScope22 struct {
 
 	// Identification of information which is part of a service level agreement.
 	ServiceLevelAgreement *DocumentToSend2 `xml:"SvcLvlAgrmt"`
-
 }
-
 
 func (m *ModificationScope22) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope22) AddServiceLevelAgreement() *DocumentToSend2 {
 	m.ServiceLevelAgreement = new(DocumentToSend2)
 	return m.ServiceLevelAgreement
 }
-

@@ -11,9 +11,7 @@ type OtherIdentification2 struct {
 
 	// Type of the identification.
 	Type *IdentificationSource4Choice `xml:"Tp"`
-
 }
-
 
 func (o *OtherIdentification2) SetIdentification(value string) {
 	o.Identification = (*RestrictedFINXMax31Text)(&value)
@@ -27,4 +25,3 @@ func (o *OtherIdentification2) AddType() *IdentificationSource4Choice {
 	o.Type = new(IdentificationSource4Choice)
 	return o.Type
 }
-

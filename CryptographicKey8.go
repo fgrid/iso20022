@@ -41,9 +41,7 @@ type CryptographicKey8 struct {
 
 	// Value of the public component of a RSA key.
 	PublicKeyValue *PublicRSAKey1 `xml:"PblcKeyVal,omitempty"`
-
 }
-
 
 func (c *CryptographicKey8) SetName(value string) {
 	c.Name = (*Max140Text)(&value)
@@ -98,4 +96,3 @@ func (c *CryptographicKey8) AddPublicKeyValue() *PublicRSAKey1 {
 	c.PublicKeyValue = new(PublicRSAKey1)
 	return c.PublicKeyValue
 }
-

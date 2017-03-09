@@ -8,9 +8,7 @@ type FractionDispositionType9Choice struct {
 
 	// Proprietary identification of the type of fraction disposition.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (f *FractionDispositionType9Choice) SetCode(value string) {
 	f.Code = (*FractionDispositionType5Code)(&value)
@@ -20,4 +18,3 @@ func (f *FractionDispositionType9Choice) AddProprietary() *GenericIdentification
 	f.Proprietary = new(GenericIdentification20)
 	return f.Proprietary
 }
-

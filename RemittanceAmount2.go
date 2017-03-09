@@ -20,16 +20,14 @@ type RemittanceAmount2 struct {
 
 	// Amount of money remitted for the referred document.
 	RemittedAmount *ActiveOrHistoricCurrencyAndAmount `xml:"RmtdAmt,omitempty"`
-
 }
-
 
 func (r *RemittanceAmount2) SetDuePayableAmount(value, currency string) {
 	r.DuePayableAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
 
 func (r *RemittanceAmount2) AddDiscountAppliedAmount() *DiscountAmountAndType1 {
-	newValue := new (DiscountAmountAndType1)
+	newValue := new(DiscountAmountAndType1)
 	r.DiscountAppliedAmount = append(r.DiscountAppliedAmount, newValue)
 	return newValue
 }
@@ -39,13 +37,13 @@ func (r *RemittanceAmount2) SetCreditNoteAmount(value, currency string) {
 }
 
 func (r *RemittanceAmount2) AddTaxAmount() *TaxAmountAndType1 {
-	newValue := new (TaxAmountAndType1)
+	newValue := new(TaxAmountAndType1)
 	r.TaxAmount = append(r.TaxAmount, newValue)
 	return newValue
 }
 
 func (r *RemittanceAmount2) AddAdjustmentAmountAndReason() *DocumentAdjustment1 {
-	newValue := new (DocumentAdjustment1)
+	newValue := new(DocumentAdjustment1)
 	r.AdjustmentAmountAndReason = append(r.AdjustmentAmountAndReason, newValue)
 	return newValue
 }
@@ -53,4 +51,3 @@ func (r *RemittanceAmount2) AddAdjustmentAmountAndReason() *DocumentAdjustment1 
 func (r *RemittanceAmount2) SetRemittedAmount(value, currency string) {
 	r.RemittedAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

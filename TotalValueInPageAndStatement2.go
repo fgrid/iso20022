@@ -11,9 +11,7 @@ type TotalValueInPageAndStatement2 struct {
 
 	// Total book value of positions reported in this statement (a statement may comprise one or more messages).
 	TotalBookValueOfStatement *AmountAndDirection6 `xml:"TtlBookValOfStmt,omitempty"`
-
 }
-
 
 func (t *TotalValueInPageAndStatement2) AddTotalHoldingsValueOfPage() *AmountAndDirection6 {
 	t.TotalHoldingsValueOfPage = new(AmountAndDirection6)
@@ -29,4 +27,3 @@ func (t *TotalValueInPageAndStatement2) AddTotalBookValueOfStatement() *AmountAn
 	t.TotalBookValueOfStatement = new(AmountAndDirection6)
 	return t.TotalBookValueOfStatement
 }
-

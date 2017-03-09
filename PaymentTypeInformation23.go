@@ -15,9 +15,7 @@ type PaymentTypeInformation23 struct {
 	// User community specific instrument.
 	// Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.
 	LocalInstrument *LocalInstrument2Choice `xml:"LclInstrm,omitempty"`
-
 }
-
 
 func (p *PaymentTypeInformation23) SetInstructionPriority(value string) {
 	p.InstructionPriority = (*Priority2Code)(&value)
@@ -36,4 +34,3 @@ func (p *PaymentTypeInformation23) AddLocalInstrument() *LocalInstrument2Choice 
 	p.LocalInstrument = new(LocalInstrument2Choice)
 	return p.LocalInstrument
 }
-

@@ -8,9 +8,7 @@ type PublicRSAKey1 struct {
 
 	// Public exponent of the RSA key.
 	Exponent *Max5000Binary `xml:"Expnt"`
-
 }
-
 
 func (p *PublicRSAKey1) SetModulus(value string) {
 	p.Modulus = (*Max5000Binary)(&value)
@@ -19,4 +17,3 @@ func (p *PublicRSAKey1) SetModulus(value string) {
 func (p *PublicRSAKey1) SetExponent(value string) {
 	p.Exponent = (*Max5000Binary)(&value)
 }
-

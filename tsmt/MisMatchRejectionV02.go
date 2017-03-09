@@ -7,7 +7,7 @@ import (
 )
 
 type Document02200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.022.001.02 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.022.001.02 Document"`
 	Message *MisMatchRejectionV02 `xml:"MisMtchRjctn"`
 }
 
@@ -36,14 +36,12 @@ type MisMatchRejectionV02 struct {
 	// Reference to the transaction for the requesting financial institution.
 	SubmitterTransactionReference *iso20022.SimpleIdentificationInformation `xml:"SubmitrTxRef,omitempty"`
 
-	// Reference to the identification of the report that contained the difference. 
+	// Reference to the identification of the report that contained the difference.
 	DataSetMatchReportReference *iso20022.MessageIdentification1 `xml:"DataSetMtchRptRef"`
 
 	// Reason why the user cannot accept the request.
 	RejectionReason *iso20022.RejectionReason1Choice `xml:"RjctnRsn"`
-
 }
-
 
 func (m *MisMatchRejectionV02) AddRejectionIdentification() *iso20022.MessageIdentification1 {
 	m.RejectionIdentification = new(iso20022.MessageIdentification1)
@@ -69,4 +67,3 @@ func (m *MisMatchRejectionV02) AddRejectionReason() *iso20022.RejectionReason1Ch
 	m.RejectionReason = new(iso20022.RejectionReason1Choice)
 	return m.RejectionReason
 }
-

@@ -20,9 +20,7 @@ type BuyIn3 struct {
 
 	// Quantity amount non covered by the clearing member after notification (this is, new buy in amount to be executed).
 	UncoveredQuantity *FinancialInstrumentQuantity1Choice `xml:"UcvrdQty"`
-
 }
-
 
 func (b *BuyIn3) SetBuyInNotificationIdentification(value string) {
 	b.BuyInNotificationIdentification = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (b *BuyIn3) AddUncoveredQuantity() *FinancialInstrumentQuantity1Choice {
 	b.UncoveredQuantity = new(FinancialInstrumentQuantity1Choice)
 	return b.UncoveredQuantity
 }
-

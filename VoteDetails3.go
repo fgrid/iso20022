@@ -8,9 +8,7 @@ type VoteDetails3 struct {
 
 	// Indicates the vote instruction for the resolutions that may arise at the meeting but were not previously provided in the agenda.
 	VoteInstructionForMeetingResolution *VoteInstructionForMeetingResolution2Choice `xml:"VoteInstrForMtgRsltn,omitempty"`
-
 }
-
 
 func (v *VoteDetails3) AddVoteInstructionForAgendaResolution() *Vote3Choice {
 	v.VoteInstructionForAgendaResolution = new(Vote3Choice)
@@ -21,4 +19,3 @@ func (v *VoteDetails3) AddVoteInstructionForMeetingResolution() *VoteInstruction
 	v.VoteInstructionForMeetingResolution = new(VoteInstructionForMeetingResolution2Choice)
 	return v.VoteInstructionForMeetingResolution
 }
-

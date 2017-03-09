@@ -17,9 +17,7 @@ type TransferOut9 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferOut9) AddRequestedTransferDate() *DateFormat1Choice {
 	t.RequestedTransferDate = new(DateFormat1Choice)
@@ -27,7 +25,7 @@ func (t *TransferOut9) AddRequestedTransferDate() *DateFormat1Choice {
 }
 
 func (t *TransferOut9) AddTransferDetails() *Transfer20 {
-	newValue := new (Transfer20)
+	newValue := new(Transfer20)
 	t.TransferDetails = append(t.TransferDetails, newValue)
 	return newValue
 }
@@ -43,8 +41,7 @@ func (t *TransferOut9) AddSettlementDetails() *ReceiveInformation9 {
 }
 
 func (t *TransferOut9) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

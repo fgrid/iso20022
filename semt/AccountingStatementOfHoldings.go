@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.01 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.01 Document"`
 	Message *AccountingStatementOfHoldings `xml:"semt.003.001.01"`
 }
 
@@ -59,18 +59,16 @@ type AccountingStatementOfHoldings struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
 
-
 func (a *AccountingStatementOfHoldings) AddPreviousReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	a.PreviousReference = append(a.PreviousReference, newValue)
 	return newValue
 }
 
 func (a *AccountingStatementOfHoldings) AddRelatedReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	a.RelatedReference = append(a.RelatedReference, newValue)
 	return newValue
 }
@@ -91,13 +89,13 @@ func (a *AccountingStatementOfHoldings) AddAccountDetails() *iso20022.Safekeepin
 }
 
 func (a *AccountingStatementOfHoldings) AddBalanceForAccount() *iso20022.AggregateBalanceInformation2 {
-	newValue := new (iso20022.AggregateBalanceInformation2)
+	newValue := new(iso20022.AggregateBalanceInformation2)
 	a.BalanceForAccount = append(a.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (a *AccountingStatementOfHoldings) AddSubAccountDetails() *iso20022.SubAccountIdentification2 {
-	newValue := new (iso20022.SubAccountIdentification2)
+	newValue := new(iso20022.SubAccountIdentification2)
 	a.SubAccountDetails = append(a.SubAccountDetails, newValue)
 	return newValue
 }
@@ -108,8 +106,7 @@ func (a *AccountingStatementOfHoldings) AddTotalValues() *iso20022.TotalValueInP
 }
 
 func (a *AccountingStatementOfHoldings) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

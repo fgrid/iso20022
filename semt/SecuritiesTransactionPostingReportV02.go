@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.017.001.02 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:semt.017.001.02 Document"`
 	Message *SecuritiesTransactionPostingReportV02 `xml:"SctiesTxPstngRpt"`
 }
 
@@ -50,9 +50,7 @@ type SecuritiesTransactionPostingReportV02 struct {
 
 	// Details at sub-account level.
 	SubAccountDetails []*iso20022.SubAccountIdentification15 `xml:"SubAcctDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionPostingReportV02) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -75,14 +73,13 @@ func (s *SecuritiesTransactionPostingReportV02) AddSafekeepingAccount() *iso2002
 }
 
 func (s *SecuritiesTransactionPostingReportV02) AddFinancialInstrumentDetails() *iso20022.FinancialInstrumentDetails5 {
-	newValue := new (iso20022.FinancialInstrumentDetails5)
+	newValue := new(iso20022.FinancialInstrumentDetails5)
 	s.FinancialInstrumentDetails = append(s.FinancialInstrumentDetails, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTransactionPostingReportV02) AddSubAccountDetails() *iso20022.SubAccountIdentification15 {
-	newValue := new (iso20022.SubAccountIdentification15)
+	newValue := new(iso20022.SubAccountIdentification15)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
-

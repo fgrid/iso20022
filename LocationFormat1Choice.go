@@ -8,9 +8,7 @@ type LocationFormat1Choice struct {
 
 	// Indicates that the location is unknown.
 	LocationCode *PlaceType1Code `xml:"LctnCd"`
-
 }
-
 
 func (l *LocationFormat1Choice) AddAddress() *PostalAddress1 {
 	l.Address = new(PostalAddress1)
@@ -20,4 +18,3 @@ func (l *LocationFormat1Choice) AddAddress() *PostalAddress1 {
 func (l *LocationFormat1Choice) SetLocationCode(value string) {
 	l.LocationCode = (*PlaceType1Code)(&value)
 }
-

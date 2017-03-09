@@ -56,9 +56,7 @@ type Transfer19 struct {
 
 	// Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.
 	DeliveringAgentDetails *PartyIdentificationAndAccount93 `xml:"DlvrgAgtDtls,omitempty"`
-
 }
-
 
 func (t *Transfer19) SetTransferReference(value string) {
 	t.TransferReference = (*Max35Text)(&value)
@@ -105,7 +103,7 @@ func (t *Transfer19) AddQuantity() *Quantity13Choice {
 }
 
 func (t *Transfer19) AddUnitsDetails() *Unit3 {
-	newValue := new (Unit3)
+	newValue := new(Unit3)
 	t.UnitsDetails = append(t.UnitsDetails, newValue)
 	return newValue
 }
@@ -139,4 +137,3 @@ func (t *Transfer19) AddDeliveringAgentDetails() *PartyIdentificationAndAccount9
 	t.DeliveringAgentDetails = new(PartyIdentificationAndAccount93)
 	return t.DeliveringAgentDetails
 }
-

@@ -8,9 +8,7 @@ type FinancingInformationAndStatus1 struct {
 
 	// Specifies detailed information about single invoice/instalment financing result, such as result of request (financed or not financed), amount, percentage applied.
 	InvoiceFinancingDetails []*InvoiceFinancingDetails1 `xml:"InvcFincgDtls"`
-
 }
-
 
 func (f *FinancingInformationAndStatus1) AddFinancingAllowedSummary() *FinancingAllowedSummary1 {
 	f.FinancingAllowedSummary = new(FinancingAllowedSummary1)
@@ -18,8 +16,7 @@ func (f *FinancingInformationAndStatus1) AddFinancingAllowedSummary() *Financing
 }
 
 func (f *FinancingInformationAndStatus1) AddInvoiceFinancingDetails() *InvoiceFinancingDetails1 {
-	newValue := new (InvoiceFinancingDetails1)
+	newValue := new(InvoiceFinancingDetails1)
 	f.InvoiceFinancingDetails = append(f.InvoiceFinancingDetails, newValue)
 	return newValue
 }
-

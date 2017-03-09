@@ -8,9 +8,7 @@ type NumberAndSumOfTransactions1 struct {
 
 	// Total of all individual entries included in the report.
 	Sum *DecimalNumber `xml:"Sum,omitempty"`
-
 }
-
 
 func (n *NumberAndSumOfTransactions1) SetNumberOfEntries(value string) {
 	n.NumberOfEntries = (*Max15NumericText)(&value)
@@ -19,4 +17,3 @@ func (n *NumberAndSumOfTransactions1) SetNumberOfEntries(value string) {
 func (n *NumberAndSumOfTransactions1) SetSum(value string) {
 	n.Sum = (*DecimalNumber)(&value)
 }
-

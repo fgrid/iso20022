@@ -8,9 +8,7 @@ type CollateralBalance1 struct {
 
 	// Collateral currently held by party B.
 	HeldByPartyB *ActiveCurrencyAndAmount `xml:"HeldByPtyB"`
-
 }
-
 
 func (c *CollateralBalance1) SetHeldByPartyA(value, currency string) {
 	c.HeldByPartyA = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (c *CollateralBalance1) SetHeldByPartyA(value, currency string) {
 func (c *CollateralBalance1) SetHeldByPartyB(value, currency string) {
 	c.HeldByPartyB = NewActiveCurrencyAndAmount(value, currency)
 }
-

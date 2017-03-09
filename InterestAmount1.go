@@ -50,9 +50,7 @@ type InterestAmount1 struct {
 
 	// Additional references linked to the updated interest payement request.
 	ReferenceDetails *Reference20 `xml:"RefDtls,omitempty"`
-
 }
-
 
 func (i *InterestAmount1) SetInterestRequestSequence(value string) {
 	i.InterestRequestSequence = (*InterestRequestSequence1Code)(&value)
@@ -123,4 +121,3 @@ func (i *InterestAmount1) AddReferenceDetails() *Reference20 {
 	i.ReferenceDetails = new(Reference20)
 	return i.ReferenceDetails
 }
-

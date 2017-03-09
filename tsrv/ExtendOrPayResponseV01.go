@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.015.001.01 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.015.001.01 Document"`
 	Message *ExtendOrPayResponseV01 `xml:"XtndOrPayRspn"`
 }
 
@@ -24,9 +24,7 @@ type ExtendOrPayResponseV01 struct {
 
 	// Digital signature of the response.
 	DigitalSignature *iso20022.PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (e *ExtendOrPayResponseV01) AddExtendOrPayResponseDetails() *iso20022.ExtendOrPayQuery2 {
 	e.ExtendOrPayResponseDetails = new(iso20022.ExtendOrPayQuery2)
@@ -37,4 +35,3 @@ func (e *ExtendOrPayResponseV01) AddDigitalSignature() *iso20022.PartyAndSignatu
 	e.DigitalSignature = new(iso20022.PartyAndSignature2)
 	return e.DigitalSignature
 }
-

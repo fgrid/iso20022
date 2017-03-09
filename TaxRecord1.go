@@ -29,9 +29,7 @@ type TaxRecord1 struct {
 
 	// Further details of the tax record.
 	AdditionalInformation *Max140Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TaxRecord1) SetType(value string) {
 	t.Type = (*Max35Text)(&value)
@@ -70,4 +68,3 @@ func (t *TaxRecord1) AddTaxAmount() *TaxAmount1 {
 func (t *TaxRecord1) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max140Text)(&value)
 }
-

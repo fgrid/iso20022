@@ -3,7 +3,7 @@ package iso20022
 // Currency control registered contract amendment details.
 type RegisteredContract1 struct {
 
-	// Unique and unambiguous identification of the  contract registration amendment. 
+	// Unique and unambiguous identification of the  contract registration amendment.
 	ContractRegistrationAmendmentIdentification *Max35Text `xml:"CtrctRegnAmdmntId"`
 
 	// Party registering the currency control contract.
@@ -17,9 +17,7 @@ type RegisteredContract1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (r *RegisteredContract1) SetContractRegistrationAmendmentIdentification(value string) {
 	r.ContractRegistrationAmendmentIdentification = (*Max35Text)(&value)
@@ -36,14 +34,13 @@ func (r *RegisteredContract1) AddRegistrationAgent() *BranchAndFinancialInstitut
 }
 
 func (r *RegisteredContract1) AddRegisteredContractAmendment() *RegisteredContract3 {
-	newValue := new (RegisteredContract3)
+	newValue := new(RegisteredContract3)
 	r.RegisteredContractAmendment = append(r.RegisteredContractAmendment, newValue)
 	return newValue
 }
 
 func (r *RegisteredContract1) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	r.SupplementaryData = append(r.SupplementaryData, newValue)
 	return newValue
 }
-

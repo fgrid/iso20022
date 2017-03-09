@@ -38,9 +38,7 @@ type TradeContract1 struct {
 
 	// Documents provided as attachments to the trade contract.
 	Attachment []*DocumentGeneralInformation3 `xml:"Attchmnt,omitempty"`
-
 }
-
 
 func (t *TradeContract1) AddContractDocumentIdentification() *DocumentIdentification22 {
 	t.ContractDocumentIdentification = new(DocumentIdentification22)
@@ -52,13 +50,13 @@ func (t *TradeContract1) SetAmount(value, currency string) {
 }
 
 func (t *TradeContract1) AddBuyer() *TradeParty2 {
-	newValue := new (TradeParty2)
+	newValue := new(TradeParty2)
 	t.Buyer = append(t.Buyer, newValue)
 	return newValue
 }
 
 func (t *TradeContract1) AddSeller() *TradeParty2 {
-	newValue := new (TradeParty2)
+	newValue := new(TradeParty2)
 	t.Seller = append(t.Seller, newValue)
 	return newValue
 }
@@ -95,8 +93,7 @@ func (t *TradeContract1) AddShipmentSchedule() *ShipmentSchedule2Choice {
 }
 
 func (t *TradeContract1) AddAttachment() *DocumentGeneralInformation3 {
-	newValue := new (DocumentGeneralInformation3)
+	newValue := new(DocumentGeneralInformation3)
 	t.Attachment = append(t.Attachment, newValue)
 	return newValue
 }
-

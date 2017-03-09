@@ -20,9 +20,7 @@ type InvestmentFundOrder3 struct {
 
 	// Financial instrument information of the individual order confirmation for which the status is requested.
 	FinancialInstrumentDetails *FinancialInstrument10 `xml:"FinInstrmDtls,omitempty"`
-
 }
-
 
 func (i *InvestmentFundOrder3) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -49,4 +47,3 @@ func (i *InvestmentFundOrder3) AddFinancialInstrumentDetails() *FinancialInstrum
 	i.FinancialInstrumentDetails = new(FinancialInstrument10)
 	return i.FinancialInstrumentDetails
 }
-

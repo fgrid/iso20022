@@ -41,9 +41,7 @@ type EstimatedFundCashForecast1 struct {
 
 	// Net cash movements to a fund as a result of investment funds transactions.
 	EstimatedNetCashForecastDetails []*NetCashForecast1 `xml:"EstmtdNetCshFcstDtls,omitempty"`
-
 }
-
 
 func (e *EstimatedFundCashForecast1) AddTradeDateTime() *DateAndDateTimeChoice {
 	e.TradeDateTime = new(DateAndDateTimeChoice)
@@ -91,20 +89,19 @@ func (e *EstimatedFundCashForecast1) SetExceptionalNetCashFlowIndicator(value st
 }
 
 func (e *EstimatedFundCashForecast1) AddEstimatedCashInForecastDetails() *CashInForecast2 {
-	newValue := new (CashInForecast2)
+	newValue := new(CashInForecast2)
 	e.EstimatedCashInForecastDetails = append(e.EstimatedCashInForecastDetails, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast1) AddEstimatedCashOutForecastDetails() *CashOutForecast2 {
-	newValue := new (CashOutForecast2)
+	newValue := new(CashOutForecast2)
 	e.EstimatedCashOutForecastDetails = append(e.EstimatedCashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast1) AddEstimatedNetCashForecastDetails() *NetCashForecast1 {
-	newValue := new (NetCashForecast1)
+	newValue := new(NetCashForecast1)
 	e.EstimatedNetCashForecastDetails = append(e.EstimatedNetCashForecastDetails, newValue)
 	return newValue
 }
-

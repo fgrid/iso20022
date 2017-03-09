@@ -17,9 +17,7 @@ type Agreement4 struct {
 
 	// Specifies the underlying master agreement.
 	AgreementFramework *AgreementFramework1Choice `xml:"AgrmtFrmwk,omitempty"`
-
 }
-
 
 func (a *Agreement4) SetAgreementDetails(value string) {
 	a.AgreementDetails = (*Max140Text)(&value)
@@ -41,4 +39,3 @@ func (a *Agreement4) AddAgreementFramework() *AgreementFramework1Choice {
 	a.AgreementFramework = new(AgreementFramework1Choice)
 	return a.AgreementFramework
 }
-

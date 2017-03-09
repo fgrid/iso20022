@@ -24,9 +24,7 @@ type InterestRecord1 struct {
 
 	// Provides details on the tax applied to charges.
 	Tax *TaxCharges2 `xml:"Tax,omitempty"`
-
 }
-
 
 func (i *InterestRecord1) SetAmount(value, currency string) {
 	i.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -59,4 +57,3 @@ func (i *InterestRecord1) AddTax() *TaxCharges2 {
 	i.Tax = new(TaxCharges2)
 	return i.Tax
 }
-

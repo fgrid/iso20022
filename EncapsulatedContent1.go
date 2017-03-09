@@ -8,9 +8,7 @@ type EncapsulatedContent1 struct {
 
 	// Actual data to authenticate.
 	Content *Max10000Binary `xml:"Cntt,omitempty"`
-
 }
-
 
 func (e *EncapsulatedContent1) SetContentType(value string) {
 	e.ContentType = (*ContentType1Code)(&value)
@@ -19,4 +17,3 @@ func (e *EncapsulatedContent1) SetContentType(value string) {
 func (e *EncapsulatedContent1) SetContent(value string) {
 	e.Content = (*Max10000Binary)(&value)
 }
-

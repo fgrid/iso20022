@@ -14,9 +14,7 @@ type Transfer3 struct {
 
 	// Indicates whether the transfer results in a change of beneficial owner.
 	OwnAccountTransferIndicator *YesNoIndicator `xml:"OwnAcctTrfInd"`
-
 }
-
 
 func (t *Transfer3) SetTransferReference(value string) {
 	t.TransferReference = (*Max35Text)(&value)
@@ -35,4 +33,3 @@ func (t *Transfer3) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 func (t *Transfer3) SetOwnAccountTransferIndicator(value string) {
 	t.OwnAccountTransferIndicator = (*YesNoIndicator)(&value)
 }
-

@@ -12,9 +12,7 @@ type GroupHeader59 struct {
 
 	// Identification of the party that is sending the message, when different from the account owner.
 	MessageSender *Party12Choice `xml:"MsgSndr,omitempty"`
-
 }
-
 
 func (g *GroupHeader59) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -28,4 +26,3 @@ func (g *GroupHeader59) AddMessageSender() *Party12Choice {
 	g.MessageSender = new(Party12Choice)
 	return g.MessageSender
 }
-

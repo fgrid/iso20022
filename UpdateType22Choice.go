@@ -11,9 +11,7 @@ type UpdateType22Choice struct {
 
 	// Modification of information in the securities transaction.
 	Modification *SecuritiesSettlementTransactionDetails25 `xml:"Mod"`
-
 }
-
 
 func (u *UpdateType22Choice) AddAddition() *SecuritiesSettlementTransactionDetails23 {
 	u.Addition = new(SecuritiesSettlementTransactionDetails23)
@@ -29,4 +27,3 @@ func (u *UpdateType22Choice) AddModification() *SecuritiesSettlementTransactionD
 	u.Modification = new(SecuritiesSettlementTransactionDetails25)
 	return u.Modification
 }
-

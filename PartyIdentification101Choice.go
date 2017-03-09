@@ -11,9 +11,7 @@ type PartyIdentification101Choice struct {
 
 	// Identification of a party with its name and address in free text.
 	NameAndAddress *NameAndAddress13 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PartyIdentification101Choice) SetBIC(value string) {
 	p.BIC = (*AnyBICIdentifier)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification101Choice) AddNameAndAddress() *NameAndAddress13 {
 	p.NameAndAddress = new(NameAndAddress13)
 	return p.NameAndAddress
 }
-

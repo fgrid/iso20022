@@ -17,9 +17,7 @@ type MatchingStatus9Choice struct {
 
 	// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts,omitempty"`
-
 }
-
 
 func (m *MatchingStatus9Choice) AddMatched() *ProprietaryReason1 {
 	m.Matched = new(ProprietaryReason1)
@@ -45,4 +43,3 @@ func (m *MatchingStatus9Choice) AddProprietaryStatus() *ProprietaryStatusAndReas
 	m.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return m.ProprietaryStatus
 }
-

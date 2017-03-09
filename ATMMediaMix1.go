@@ -11,9 +11,7 @@ type ATMMediaMix1 struct {
 
 	// Unit value.
 	UnitValue *ImpliedCurrencyAndAmount `xml:"UnitVal"`
-
 }
-
 
 func (a *ATMMediaMix1) SetCashUnitNumber(value string) {
 	a.CashUnitNumber = (*Number)(&value)
@@ -26,4 +24,3 @@ func (a *ATMMediaMix1) SetNumber(value string) {
 func (a *ATMMediaMix1) SetUnitValue(value, currency string) {
 	a.UnitValue = NewImpliedCurrencyAndAmount(value, currency)
 }
-

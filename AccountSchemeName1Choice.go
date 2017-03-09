@@ -8,9 +8,7 @@ type AccountSchemeName1Choice struct {
 
 	// Name of the identification scheme, in a free text form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (a *AccountSchemeName1Choice) SetCode(value string) {
 	a.Code = (*ExternalAccountIdentification1Code)(&value)
@@ -19,4 +17,3 @@ func (a *AccountSchemeName1Choice) SetCode(value string) {
 func (a *AccountSchemeName1Choice) SetProprietary(value string) {
 	a.Proprietary = (*Max35Text)(&value)
 }
-

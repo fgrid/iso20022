@@ -8,9 +8,7 @@ type AddressOrParty1Choice struct {
 
 	// New beneficiary.
 	NewBeneficiary *NameAndAddress10 `xml:"NewBnfcry"`
-
 }
-
 
 func (a *AddressOrParty1Choice) AddNewAddress() *PostalAddress6 {
 	a.NewAddress = new(PostalAddress6)
@@ -21,4 +19,3 @@ func (a *AddressOrParty1Choice) AddNewBeneficiary() *NameAndAddress10 {
 	a.NewBeneficiary = new(NameAndAddress10)
 	return a.NewBeneficiary
 }
-

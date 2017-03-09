@@ -8,9 +8,7 @@ type Account9 struct {
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
 	AccountServicer *PartyIdentification10Choice `xml:"AcctSvcr,omitempty"`
-
 }
-
 
 func (a *Account9) AddIdentification() *AccountIdentification1 {
 	a.Identification = new(AccountIdentification1)
@@ -21,4 +19,3 @@ func (a *Account9) AddAccountServicer() *PartyIdentification10Choice {
 	a.AccountServicer = new(PartyIdentification10Choice)
 	return a.AccountServicer
 }
-

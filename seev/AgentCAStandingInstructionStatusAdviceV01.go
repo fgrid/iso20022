@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.027.001.01 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:seev.027.001.01 Document"`
 	Message *AgentCAStandingInstructionStatusAdviceV01 `xml:"AgtCAStgInstrStsAdvc"`
 }
 
@@ -30,7 +30,7 @@ type AgentCAStandingInstructionStatusAdviceV01 struct {
 	AgentCAStandingInstructionRequestIdentification *iso20022.DocumentIdentification8 `xml:"AgtCAStgInstrReqId"`
 
 	// Identification of the linked Agent CA Standing Instruction  Cancellation Request for which a status is given.
-	// 
+	//
 	AgentCAStandingInstructionCancellationRequestIdentification *iso20022.DocumentIdentification8 `xml:"AgtCAStgInstrCxlReqId"`
 
 	// General information about the standing instruction.
@@ -41,9 +41,7 @@ type AgentCAStandingInstructionStatusAdviceV01 struct {
 
 	// Provides information about the status of a standing instruction cancellation request.
 	StandingInstructionCancellationRequestStatus *iso20022.StandingInstructionCancellationStatus1Choice `xml:"StgInstrCxlReqSts"`
-
 }
-
 
 func (a *AgentCAStandingInstructionStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -74,4 +72,3 @@ func (a *AgentCAStandingInstructionStatusAdviceV01) AddStandingInstructionCancel
 	a.StandingInstructionCancellationRequestStatus = new(iso20022.StandingInstructionCancellationStatus1Choice)
 	return a.StandingInstructionCancellationRequestStatus
 }
-

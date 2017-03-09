@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.015.001.03 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:setr.015.001.03 Document"`
 	Message *SwitchOrderConfirmationV03 `xml:"SwtchOrdrConfV03"`
 }
 
@@ -25,10 +25,10 @@ func (d *Document01500103) AddMessage() *SwitchOrderConfirmationV03 {
 // If Switch Confirmation Order Details\Investment Account is used, then the Investment Account Details sequences in Subscription Leg Details and Redemption Leg Details are not allowed.
 // If the SwitchOrderConfirmation Details sequence is present more than once, then the redemption leg details and subscription leg details sequences may only be present once.
 // If SwitchOrderConfirmationDetails\InvestmentAccount is used, then the InvestmentAccountDetails sequences in SubscriptionLegDetails and RedemptionLegDetails are not allowed. This functionality is to be used by institutions that set up two accounts per investor, rather than one investment account.
-// 
+//
 type SwitchOrderConfirmationV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -48,9 +48,7 @@ type SwitchOrderConfirmationV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SwitchOrderConfirmationV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -63,7 +61,7 @@ func (s *SwitchOrderConfirmationV03) AddPoolReference() *iso20022.AdditionalRefe
 }
 
 func (s *SwitchOrderConfirmationV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -74,7 +72,7 @@ func (s *SwitchOrderConfirmationV03) AddRelatedReference() *iso20022.AdditionalR
 }
 
 func (s *SwitchOrderConfirmationV03) AddSwitchExecutionDetails() *iso20022.SwitchExecution4 {
-	newValue := new (iso20022.SwitchExecution4)
+	newValue := new(iso20022.SwitchExecution4)
 	s.SwitchExecutionDetails = append(s.SwitchExecutionDetails, newValue)
 	return newValue
 }
@@ -85,8 +83,7 @@ func (s *SwitchOrderConfirmationV03) AddCopyDetails() *iso20022.CopyInformation2
 }
 
 func (s *SwitchOrderConfirmationV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

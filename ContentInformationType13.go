@@ -11,9 +11,7 @@ type ContentInformationType13 struct {
 
 	// Data protected by a digital signatures.
 	SignedData *SignedData4 `xml:"SgndData,omitempty"`
-
 }
-
 
 func (c *ContentInformationType13) SetContentType(value string) {
 	c.ContentType = (*ContentType2Code)(&value)
@@ -28,4 +26,3 @@ func (c *ContentInformationType13) AddSignedData() *SignedData4 {
 	c.SignedData = new(SignedData4)
 	return c.SignedData
 }
-

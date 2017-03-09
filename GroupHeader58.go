@@ -15,7 +15,7 @@ type GroupHeader58 struct {
 	MessageRecipient *PartyIdentification43 `xml:"MsgRcpt,omitempty"`
 
 	// Provides details on the page number of the message.
-	// 
+	//
 	// Usage: The pagination of the message is only allowed when agreed between the parties.
 	MessagePagination *Pagination `xml:"MsgPgntn,omitempty"`
 
@@ -24,9 +24,7 @@ type GroupHeader58 struct {
 
 	// Further details of the message.
 	AdditionalInformation *Max500Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (g *GroupHeader58) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -54,4 +52,3 @@ func (g *GroupHeader58) AddOriginalBusinessQuery() *OriginalBusinessQuery1 {
 func (g *GroupHeader58) SetAdditionalInformation(value string) {
 	g.AdditionalInformation = (*Max500Text)(&value)
 }
-

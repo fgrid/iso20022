@@ -11,9 +11,7 @@ type InvestmentFundOrder5 struct {
 
 	// Unique and unambiguous identifier for an order cancellation, as assigned by the instructing party.
 	CancellationReference *Max35Text `xml:"CxlRef,omitempty"`
-
 }
-
 
 func (i *InvestmentFundOrder5) SetOrderReference(value string) {
 	i.OrderReference = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (i *InvestmentFundOrder5) SetClientReference(value string) {
 func (i *InvestmentFundOrder5) SetCancellationReference(value string) {
 	i.CancellationReference = (*Max35Text)(&value)
 }
-

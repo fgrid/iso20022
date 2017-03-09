@@ -8,9 +8,7 @@ type PersonIdentificationType3Choice struct {
 
 	// Person identification expressed as a proprietary code.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (p *PersonIdentificationType3Choice) SetCode(value string) {
 	p.Code = (*PersonIdentificationType3Code)(&value)
@@ -20,4 +18,3 @@ func (p *PersonIdentificationType3Choice) AddProprietary() *GenericIdentificatio
 	p.Proprietary = new(GenericIdentification13)
 	return p.Proprietary
 }
-

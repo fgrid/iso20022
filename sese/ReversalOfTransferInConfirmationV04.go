@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.008.001.04 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:sese.008.001.04 Document"`
 	Message *ReversalOfTransferInConfirmationV04 `xml:"RvslOfTrfInConf"`
 }
 
@@ -25,10 +25,10 @@ func (d *Document00800104) AddMessage() *ReversalOfTransferInConfirmationV04 {
 // - all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.
 // The message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.
 // The message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.
-// 
+//
 type ReversalOfTransferInConfirmationV04 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.
@@ -39,9 +39,7 @@ type ReversalOfTransferInConfirmationV04 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *ReversalOfTransferInConfirmationV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -49,7 +47,7 @@ func (r *ReversalOfTransferInConfirmationV04) AddMessageIdentification() *iso200
 }
 
 func (r *ReversalOfTransferInConfirmationV04) AddReferences() *iso20022.References11 {
-	newValue := new (iso20022.References11)
+	newValue := new(iso20022.References11)
 	r.References = append(r.References, newValue)
 	return newValue
 }
@@ -63,4 +61,3 @@ func (r *ReversalOfTransferInConfirmationV04) AddCopyDetails() *iso20022.CopyInf
 	r.CopyDetails = new(iso20022.CopyInformation2)
 	return r.CopyDetails
 }
-

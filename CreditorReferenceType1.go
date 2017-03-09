@@ -11,9 +11,7 @@ type CreditorReferenceType1 struct {
 
 	// Identification of the issuer of the credit reference type.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (c *CreditorReferenceType1) SetCode(value string) {
 	c.Code = (*DocumentType3Code)(&value)
@@ -26,4 +24,3 @@ func (c *CreditorReferenceType1) SetProprietary(value string) {
 func (c *CreditorReferenceType1) SetIssuer(value string) {
 	c.Issuer = (*Max35Text)(&value)
 }
-

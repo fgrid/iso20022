@@ -11,9 +11,7 @@ type Tax12 struct {
 
 	// Amount of money resulting from the calculation of the tax.
 	Amount *CurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (t *Tax12) SetType(value string) {
 	t.Type = (*TaxType9Code)(&value)
@@ -26,4 +24,3 @@ func (t *Tax12) SetOtherTaxType(value string) {
 func (t *Tax12) SetAmount(value, currency string) {
 	t.Amount = NewCurrencyAndAmount(value, currency)
 }
-

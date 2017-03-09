@@ -23,9 +23,7 @@ type CorporateActionInformation1 struct {
 
 	// Identification of the underlying financial instrument, ie, the financial instrument affected by the corporate action event.
 	UnderlyingSecurity *FinancialInstrumentDescription3 `xml:"UndrlygScty"`
-
 }
-
 
 func (c *CorporateActionInformation1) AddAgentIdentification() *PartyIdentification2Choice {
 	c.AgentIdentification = new(PartyIdentification2Choice)
@@ -59,4 +57,3 @@ func (c *CorporateActionInformation1) AddUnderlyingSecurity() *FinancialInstrume
 	c.UnderlyingSecurity = new(FinancialInstrumentDescription3)
 	return c.UnderlyingSecurity
 }
-

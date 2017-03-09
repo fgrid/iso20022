@@ -8,9 +8,7 @@ type PaymentInstrument11 struct {
 
 	// Choice of payment instruments.
 	PaymentInstrument *PaymentInstrument17Choice `xml:"PmtInstrm"`
-
 }
-
 
 func (p *PaymentInstrument11) SetSettlementCurrency(value string) {
 	p.SettlementCurrency = (*ActiveCurrencyCode)(&value)
@@ -20,4 +18,3 @@ func (p *PaymentInstrument11) AddPaymentInstrument() *PaymentInstrument17Choice 
 	p.PaymentInstrument = new(PaymentInstrument17Choice)
 	return p.PaymentInstrument
 }
-

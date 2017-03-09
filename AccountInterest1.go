@@ -14,9 +14,7 @@ type AccountInterest1 struct {
 
 	// Underlying reason for the interest, eg, yearly credit interest on a savings account.
 	Reason *Max35Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (a *AccountInterest1) AddType() *InterestType1Choice {
 	a.Type = new(InterestType1Choice)
@@ -24,7 +22,7 @@ func (a *AccountInterest1) AddType() *InterestType1Choice {
 }
 
 func (a *AccountInterest1) AddRate() *Rate1 {
-	newValue := new (Rate1)
+	newValue := new(Rate1)
 	a.Rate = append(a.Rate, newValue)
 	return newValue
 }
@@ -37,4 +35,3 @@ func (a *AccountInterest1) AddFromToDate() *DateTimePeriodDetails {
 func (a *AccountInterest1) SetReason(value string) {
 	a.Reason = (*Max35Text)(&value)
 }
-

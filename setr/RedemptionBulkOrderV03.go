@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.001.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:setr.001.001.03 Document"`
 	Message *RedemptionBulkOrderV03 `xml:"RedBlkOrdrV03"`
 }
 
@@ -25,7 +25,7 @@ func (d *Document00100103) AddMessage() *RedemptionBulkOrderV03 {
 // If there are redemption orders for different financial instruments but for the same account, then the RedemptionOrder must be used.
 type RedemptionBulkOrderV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -45,9 +45,7 @@ type RedemptionBulkOrderV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkOrderV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -60,7 +58,7 @@ func (r *RedemptionBulkOrderV03) AddPoolReference() *iso20022.AdditionalReferenc
 }
 
 func (r *RedemptionBulkOrderV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	r.PreviousReference = append(r.PreviousReference, newValue)
 	return newValue
 }
@@ -71,7 +69,7 @@ func (r *RedemptionBulkOrderV03) AddBulkOrderDetails() *iso20022.RedemptionBulkO
 }
 
 func (r *RedemptionBulkOrderV03) AddRelatedPartyDetails() *iso20022.Intermediary8 {
-	newValue := new (iso20022.Intermediary8)
+	newValue := new(iso20022.Intermediary8)
 	r.RelatedPartyDetails = append(r.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -82,8 +80,7 @@ func (r *RedemptionBulkOrderV03) AddCopyDetails() *iso20022.CopyInformation2 {
 }
 
 func (r *RedemptionBulkOrderV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

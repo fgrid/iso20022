@@ -74,9 +74,7 @@ type CorporateActionRate4 struct {
 
 	// Rate applicable to the event announced, for example, redemption rate for a redemption event.
 	ApplicableRate *PercentageRate `xml:"AplblRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate4) AddChargesFees() *RateAndAmountFormat5Choice {
 	c.ChargesFees = new(RateAndAmountFormat5Choice)
@@ -97,7 +95,7 @@ func (c *CorporateActionRate4) AddFullyFrankedRate() *RateAndAmountFormat5Choice
 }
 
 func (c *CorporateActionRate4) AddGrossDividendRate() *GrossDividendRateFormat2Choice {
-	newValue := new (GrossDividendRateFormat2Choice)
+	newValue := new(GrossDividendRateFormat2Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
@@ -112,13 +110,13 @@ func (c *CorporateActionRate4) AddIndexFactor() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate4) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat2Choice {
-	newValue := new (InterestRateUsedForPaymentFormat2Choice)
+	newValue := new(InterestRateUsedForPaymentFormat2Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate4) AddNetDividendRate() *NetDividendRateFormat2Choice {
-	newValue := new (NetDividendRateFormat2Choice)
+	newValue := new(NetDividendRateFormat2Choice)
 	c.NetDividendRate = append(c.NetDividendRate, newValue)
 	return newValue
 }
@@ -145,13 +143,13 @@ func (c *CorporateActionRate4) SetSolicitationFeeRate(value string) {
 }
 
 func (c *CorporateActionRate4) AddTaxCreditRate() *TaxCreditRateFormat2Choice {
-	newValue := new (TaxCreditRateFormat2Choice)
+	newValue := new(TaxCreditRateFormat2Choice)
 	c.TaxCreditRate = append(c.TaxCreditRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate4) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	c.TaxRelatedRate = append(c.TaxRelatedRate, newValue)
 	return newValue
 }
@@ -190,4 +188,3 @@ func (c *CorporateActionRate4) AddAdditionalTax() *RateAndAmountFormat5Choice {
 func (c *CorporateActionRate4) SetApplicableRate(value string) {
 	c.ApplicableRate = (*PercentageRate)(&value)
 }
-

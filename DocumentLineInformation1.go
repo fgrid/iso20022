@@ -1,7 +1,7 @@
 package iso20022
 
 // Provides document line information.
-	// 
+//
 type DocumentLineInformation1 struct {
 
 	// Provides identification of the document line.
@@ -12,12 +12,10 @@ type DocumentLineInformation1 struct {
 
 	// Provides details on the amounts of the document line.
 	Amount *RemittanceAmount3 `xml:"Amt,omitempty"`
-
 }
 
-
 func (d *DocumentLineInformation1) AddIdentification() *DocumentLineIdentification1 {
-	newValue := new (DocumentLineIdentification1)
+	newValue := new(DocumentLineIdentification1)
 	d.Identification = append(d.Identification, newValue)
 	return newValue
 }
@@ -30,4 +28,3 @@ func (d *DocumentLineInformation1) AddAmount() *RemittanceAmount3 {
 	d.Amount = new(RemittanceAmount3)
 	return d.Amount
 }
-

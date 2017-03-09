@@ -12,9 +12,7 @@ type ForeignExchangeTerms19 struct {
 	// Factor used for the conversion of an amount from one currency into another. This reflects the price at which one currency was bought with another currency.
 	// Usage: ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).
 	ExchangeRate *BaseOneRate `xml:"XchgRate"`
-
 }
-
 
 func (f *ForeignExchangeTerms19) SetUnitCurrency(value string) {
 	f.UnitCurrency = (*ActiveCurrencyCode)(&value)
@@ -27,4 +25,3 @@ func (f *ForeignExchangeTerms19) SetQuotedCurrency(value string) {
 func (f *ForeignExchangeTerms19) SetExchangeRate(value string) {
 	f.ExchangeRate = (*BaseOneRate)(&value)
 }
-

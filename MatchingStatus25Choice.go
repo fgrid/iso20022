@@ -11,9 +11,7 @@ type MatchingStatus25Choice struct {
 
 	// Proprietary status.
 	Proprietary *ProprietaryStatusAndReason6 `xml:"Prtry"`
-
 }
-
 
 func (m *MatchingStatus25Choice) AddMatched() *ProprietaryReason4 {
 	m.Matched = new(ProprietaryReason4)
@@ -29,4 +27,3 @@ func (m *MatchingStatus25Choice) AddProprietary() *ProprietaryStatusAndReason6 {
 	m.Proprietary = new(ProprietaryStatusAndReason6)
 	return m.Proprietary
 }
-

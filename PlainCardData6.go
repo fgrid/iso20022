@@ -20,9 +20,7 @@ type PlainCardData6 struct {
 
 	// Magnetic track or equivalent payment card data.
 	TrackData []*TrackData1 `xml:"TrckData,omitempty"`
-
 }
-
 
 func (p *PlainCardData6) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -45,8 +43,7 @@ func (p *PlainCardData6) SetServiceCode(value string) {
 }
 
 func (p *PlainCardData6) AddTrackData() *TrackData1 {
-	newValue := new (TrackData1)
+	newValue := new(TrackData1)
 	p.TrackData = append(p.TrackData, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type OtherTypeOfCollateral2 struct {
 
 	// Quantity of other collateral.
 	Quantity *FinancialInstrumentQuantity1Choice `xml:"Qty,omitempty"`
-
 }
-
 
 func (o *OtherTypeOfCollateral2) SetDescription(value string) {
 	o.Description = (*Max140Text)(&value)
@@ -20,4 +18,3 @@ func (o *OtherTypeOfCollateral2) AddQuantity() *FinancialInstrumentQuantity1Choi
 	o.Quantity = new(FinancialInstrumentQuantity1Choice)
 	return o.Quantity
 }
-

@@ -8,9 +8,7 @@ type ProcessingPosition1Choice struct {
 
 	// Processing position expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (p *ProcessingPosition1Choice) SetCode(value string) {
 	p.Code = (*ProcessingPosition3Code)(&value)
@@ -20,4 +18,3 @@ func (p *ProcessingPosition1Choice) AddProprietary() *GenericIdentification20 {
 	p.Proprietary = new(GenericIdentification20)
 	return p.Proprietary
 }
-

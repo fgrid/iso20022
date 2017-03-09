@@ -14,9 +14,7 @@ type ElectionAdviceFunction1 struct {
 
 	// Identification of the Agent Corporate Action Election Amendment Request by which the CSD request the authorisation to amend an election.
 	AgentCAElectionAmendmentRequestIdentification *DocumentIdentification8 `xml:"AgtCAElctnAmdmntReqId,omitempty"`
-
 }
-
 
 func (e *ElectionAdviceFunction1) SetElectionType(value string) {
 	e.ElectionType = (*ElectionType1Code)(&value)
@@ -36,4 +34,3 @@ func (e *ElectionAdviceFunction1) AddAgentCAElectionAmendmentRequestIdentificati
 	e.AgentCAElectionAmendmentRequestIdentification = new(DocumentIdentification8)
 	return e.AgentCAElectionAmendmentRequestIdentification
 }
-

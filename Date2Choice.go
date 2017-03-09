@@ -8,9 +8,7 @@ type Date2Choice struct {
 
 	// Date is determined using a data source scheme and a code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (d *Date2Choice) SetCode(value string) {
 	d.Code = (*DateType2Code)(&value)
@@ -20,4 +18,3 @@ func (d *Date2Choice) AddProprietary() *GenericIdentification38 {
 	d.Proprietary = new(GenericIdentification38)
 	return d.Proprietary
 }
-

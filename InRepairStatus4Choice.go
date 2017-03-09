@@ -11,9 +11,7 @@ type InRepairStatus4Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (i *InRepairStatus4Choice) SetReason(value string) {
 	i.Reason = (*Max350Text)(&value)
@@ -27,4 +25,3 @@ func (i *InRepairStatus4Choice) AddDataSourceScheme() *GenericIdentification1 {
 func (i *InRepairStatus4Choice) SetNoSpecifiedReason(value string) {
 	i.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

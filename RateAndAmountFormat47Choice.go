@@ -14,9 +14,7 @@ type RateAndAmountFormat47Choice struct {
 
 	// Value is expressed as a rate type and a percentage rate.
 	RateTypeAndRate *RateTypeAndPercentageRate9 `xml:"RateTpAndRate"`
-
 }
-
 
 func (r *RateAndAmountFormat47Choice) SetRate(value string) {
 	r.Rate = (*PercentageRate)(&value)
@@ -34,4 +32,3 @@ func (r *RateAndAmountFormat47Choice) AddRateTypeAndRate() *RateTypeAndPercentag
 	r.RateTypeAndRate = new(RateTypeAndPercentageRate9)
 	return r.RateTypeAndRate
 }
-

@@ -32,9 +32,7 @@ type CryptographicKey6 struct {
 
 	// Chip card protection of the key.
 	ICCRelatedData *Max5000Binary `xml:"ICCRltdData,omitempty"`
-
 }
-
 
 func (c *CryptographicKey6) SetName(value string) {
 	c.Name = (*Max140Text)(&value)
@@ -76,4 +74,3 @@ func (c *CryptographicKey6) AddCertificate(value string) {
 func (c *CryptographicKey6) SetICCRelatedData(value string) {
 	c.ICCRelatedData = (*Max5000Binary)(&value)
 }
-

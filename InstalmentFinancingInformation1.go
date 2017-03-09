@@ -11,9 +11,7 @@ type InstalmentFinancingInformation1 struct {
 
 	// Information about the financing result of one instalment.
 	InstalmentFinancingResult *FinancingResult1 `xml:"InstlmtFincgRslt"`
-
 }
-
 
 func (i *InstalmentFinancingInformation1) SetInstalmentSequenceIdentification(value string) {
 	i.InstalmentSequenceIdentification = (*Max70Text)(&value)
@@ -27,4 +25,3 @@ func (i *InstalmentFinancingInformation1) AddInstalmentFinancingResult() *Financ
 	i.InstalmentFinancingResult = new(FinancingResult1)
 	return i.InstalmentFinancingResult
 }
-

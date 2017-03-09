@@ -8,9 +8,7 @@ type ATMContext3 struct {
 
 	// Service provided by the ATM inside the session.
 	Service *ATMService3 `xml:"Svc"`
-
 }
-
 
 func (a *ATMContext3) SetSessionReference(value string) {
 	a.SessionReference = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (a *ATMContext3) AddService() *ATMService3 {
 	a.Service = new(ATMService3)
 	return a.Service
 }
-

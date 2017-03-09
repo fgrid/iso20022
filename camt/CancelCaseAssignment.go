@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.032.001.01 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:camt.032.001.01 Document"`
 	Message *CancelCaseAssignment `xml:"camt.032.001.01"`
 }
 
@@ -37,9 +37,7 @@ type CancelCaseAssignment struct {
 
 	// Identifies the case.
 	Case *iso20022.Case `xml:"Case"`
-
 }
-
 
 func (c *CancelCaseAssignment) AddAssignment() *iso20022.CaseAssignment {
 	c.Assignment = new(iso20022.CaseAssignment)
@@ -50,4 +48,3 @@ func (c *CancelCaseAssignment) AddCase() *iso20022.Case {
 	c.Case = new(iso20022.Case)
 	return c.Case
 }
-

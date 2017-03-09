@@ -8,9 +8,7 @@ type NumberModification1 struct {
 
 	// Number.
 	Number *Max5NumericText `xml:"Nb"`
-
 }
-
 
 func (n *NumberModification1) SetModificationCode(value string) {
 	n.ModificationCode = (*Modification1Code)(&value)
@@ -19,4 +17,3 @@ func (n *NumberModification1) SetModificationCode(value string) {
 func (n *NumberModification1) SetNumber(value string) {
 	n.Number = (*Max5NumericText)(&value)
 }
-

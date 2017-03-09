@@ -8,9 +8,7 @@ type CreditorReferenceType2 struct {
 
 	// Entity that assigns the credit reference type.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (c *CreditorReferenceType2) AddCodeOrProprietary() *CreditorReferenceType1Choice {
 	c.CodeOrProprietary = new(CreditorReferenceType1Choice)
@@ -20,4 +18,3 @@ func (c *CreditorReferenceType2) AddCodeOrProprietary() *CreditorReferenceType1C
 func (c *CreditorReferenceType2) SetIssuer(value string) {
 	c.Issuer = (*Max35Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type ContractDocument1 struct {
 
 	// Identification of the version of the contract.
 	Version *Max6Text `xml:"Vrsn,omitempty"`
-
 }
-
 
 func (c *ContractDocument1) SetReference(value string) {
 	c.Reference = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (c *ContractDocument1) SetSignOffDate(value string) {
 func (c *ContractDocument1) SetVersion(value string) {
 	c.Version = (*Max6Text)(&value)
 }
-

@@ -20,9 +20,7 @@ type OptionData2 struct {
 
 	// Set of data defining a foreign exchange option sold.
 	Option *Option3 `xml:"Optn"`
-
 }
-
 
 func (o *OptionData2) SetTradeDate(value string) {
 	o.TradeDate = (*ISODate)(&value)
@@ -48,4 +46,3 @@ func (o *OptionData2) AddOption() *Option3 {
 	o.Option = new(Option3)
 	return o.Option
 }
-

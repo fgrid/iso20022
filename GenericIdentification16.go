@@ -11,9 +11,7 @@ type GenericIdentification16 struct {
 
 	// Party that assigns the identification.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GenericIdentification16) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (g *GenericIdentification16) AddIdentificationType() *PersonIdentificationT
 func (g *GenericIdentification16) SetIssuer(value string) {
 	g.Issuer = (*Max35Text)(&value)
 }
-

@@ -14,9 +14,7 @@ type RejectedStatus6 struct {
 
 	// Additional information about the rejected status reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *RejectedStatus6) SetReason(value string) {
 	r.Reason = (*RejectedStatusReason7Code)(&value)
@@ -34,4 +32,3 @@ func (r *RejectedStatus6) AddDataSourceScheme() *GenericIdentification1 {
 func (r *RejectedStatus6) SetAdditionalInformation(value string) {
 	r.AdditionalInformation = (*Max350Text)(&value)
 }
-

@@ -30,9 +30,7 @@ type CashOption3 struct {
 
 	// Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.
 	GenericCashPriceReceivedPerProduct *PriceFormat10Choice `xml:"GncCshPricRcvdPerPdct,omitempty"`
-
 }
-
 
 func (c *CashOption3) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -76,4 +74,3 @@ func (c *CashOption3) AddGenericCashPriceReceivedPerProduct() *PriceFormat10Choi
 	c.GenericCashPriceReceivedPerProduct = new(PriceFormat10Choice)
 	return c.GenericCashPriceReceivedPerProduct
 }
-

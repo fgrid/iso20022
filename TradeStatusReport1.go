@@ -14,9 +14,7 @@ type TradeStatusReport1 struct {
 
 	// Additional information related to the report.
 	AdditionalInformation *Max35Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TradeStatusReport1) AddOriginalMessageDetails() *OriginalMessage1 {
 	t.OriginalMessageDetails = new(OriginalMessage1)
@@ -28,7 +26,7 @@ func (t *TradeStatusReport1) SetStatus(value string) {
 }
 
 func (t *TradeStatusReport1) AddStatusReason() *StatusReasonInformation8 {
-	newValue := new (StatusReasonInformation8)
+	newValue := new(StatusReasonInformation8)
 	t.StatusReason = append(t.StatusReason, newValue)
 	return newValue
 }
@@ -36,4 +34,3 @@ func (t *TradeStatusReport1) AddStatusReason() *StatusReasonInformation8 {
 func (t *TradeStatusReport1) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max35Text)(&value)
 }
-

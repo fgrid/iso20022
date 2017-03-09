@@ -14,9 +14,7 @@ type PerformanceFactors1 struct {
 
 	// Normal performance value of the NAV.
 	NormalPerformance *DecimalNumber `xml:"NrmlPrfrmnc,omitempty"`
-
 }
-
 
 func (p *PerformanceFactors1) SetCorporateActionFactor(value string) {
 	p.CorporateActionFactor = (*DecimalNumber)(&value)
@@ -34,4 +32,3 @@ func (p *PerformanceFactors1) AddAccumulationPeriod() *DatePeriodDetails {
 func (p *PerformanceFactors1) SetNormalPerformance(value string) {
 	p.NormalPerformance = (*DecimalNumber)(&value)
 }
-

@@ -23,9 +23,7 @@ type CorporateActionPeriod2 struct {
 
 	// Period during which the price of a security is determined (for  outturn securities).
 	PriceCalculationPeriod *Period1 `xml:"PricClctnPrd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod2) AddAssentedLinePeriod() *Period1 {
 	c.AssentedLinePeriod = new(Period1)
@@ -61,4 +59,3 @@ func (c *CorporateActionPeriod2) AddPriceCalculationPeriod() *Period1 {
 	c.PriceCalculationPeriod = new(Period1)
 	return c.PriceCalculationPeriod
 }
-

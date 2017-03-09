@@ -8,9 +8,7 @@ type CashAccountType2Choice struct {
 
 	// Nature or use of the account in a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *CashAccountType2Choice) SetCode(value string) {
 	c.Code = (*ExternalCashAccountType1Code)(&value)
@@ -19,4 +17,3 @@ func (c *CashAccountType2Choice) SetCode(value string) {
 func (c *CashAccountType2Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

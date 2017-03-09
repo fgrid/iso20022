@@ -11,9 +11,7 @@ type ValidationStatusInformation1 struct {
 
 	// Further details on the validation status reason.
 	AdditionalStatusReasonInformation []*Max105Text `xml:"AddtlStsRsnInf,omitempty"`
-
 }
-
 
 func (v *ValidationStatusInformation1) SetStatus(value string) {
 	v.Status = (*TechnicalValidationStatus1Code)(&value)
@@ -27,4 +25,3 @@ func (v *ValidationStatusInformation1) AddStatusReason() *StatusReason4Choice {
 func (v *ValidationStatusInformation1) AddAdditionalStatusReasonInformation(value string) {
 	v.AdditionalStatusReasonInformation = append(v.AdditionalStatusReasonInformation, (*Max105Text)(&value))
 }
-

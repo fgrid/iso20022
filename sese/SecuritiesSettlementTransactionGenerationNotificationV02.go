@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.001.02 Document"`
+	XMLName xml.Name                                                  `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.001.02 Document"`
 	Message *SecuritiesSettlementTransactionGenerationNotificationV02 `xml:"SctiesSttlmTxGnrtnNtfctn"`
 }
 
@@ -86,9 +86,7 @@ type SecuritiesSettlementTransactionGenerationNotificationV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddTransactionIdentificationDetails() *iso20022.SettlementTypeAndIdentification10 {
 	s.TransactionIdentificationDetails = new(iso20022.SettlementTypeAndIdentification10)
@@ -101,7 +99,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddNumberCoun
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddLinkages() *iso20022.Linkages7 {
-	newValue := new (iso20022.Linkages7)
+	newValue := new(iso20022.Linkages7)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -122,7 +120,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddFinancialI
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddQuantityAndAccountDetails() *iso20022.QuantityAndAccount17 {
-	newValue := new (iso20022.QuantityAndAccount17)
+	newValue := new(iso20022.QuantityAndAccount17)
 	s.QuantityAndAccountDetails = append(s.QuantityAndAccountDetails, newValue)
 	return newValue
 }
@@ -168,7 +166,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddAdditional
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddGeneratedReason() *iso20022.GeneratedReason1 {
-	newValue := new (iso20022.GeneratedReason1)
+	newValue := new(iso20022.GeneratedReason1)
 	s.GeneratedReason = append(s.GeneratedReason, newValue)
 	return newValue
 }
@@ -179,8 +177,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddStatusAndR
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

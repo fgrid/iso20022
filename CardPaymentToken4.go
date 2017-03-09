@@ -23,9 +23,7 @@ type CardPaymentToken4 struct {
 
 	// Information about the identification and verification of the cardholder.
 	TokenAssuranceData *Max500Binary `xml:"TknAssrncData,omitempty"`
-
 }
-
 
 func (c *CardPaymentToken4) SetToken(value string) {
 	c.Token = (*Min8Max28NumericText)(&value)
@@ -55,4 +53,3 @@ func (c *CardPaymentToken4) SetTokenAssuranceLevel(value string) {
 func (c *CardPaymentToken4) SetTokenAssuranceData(value string) {
 	c.TokenAssuranceData = (*Max500Binary)(&value)
 }
-

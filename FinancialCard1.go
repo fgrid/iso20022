@@ -11,9 +11,7 @@ type FinancialCard1 struct {
 
 	// Interest rate expressed as a percentage for this financial card.
 	InterestRatePercent *PercentageRate `xml:"IntrstRatePct,omitempty"`
-
 }
-
 
 func (f *FinancialCard1) AddCreditLimitAmount(value, currency string) {
 	f.CreditLimitAmount = append(f.CreditLimitAmount, NewCurrencyAndAmount(value, currency))
@@ -26,4 +24,3 @@ func (f *FinancialCard1) AddCreditAvailableAmount(value, currency string) {
 func (f *FinancialCard1) SetInterestRatePercent(value string) {
 	f.InterestRatePercent = (*PercentageRate)(&value)
 }
-

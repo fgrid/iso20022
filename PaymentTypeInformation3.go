@@ -13,15 +13,13 @@ type PaymentTypeInformation3 struct {
 	ClearingChannel *ClearingChannel2Code `xml:"ClrChanl,omitempty"`
 
 	// User community specific instrument.
-	// 
+	//
 	// Usage : When available, codes provided by local authorities should be used.
 	LocalInstrument *LocalInstrument1Choice `xml:"LclInstrm,omitempty"`
 
 	// Specifies the high level purpose of the instruction based on a set of pre-defined categories.
 	CategoryPurpose *PaymentCategoryPurpose1Code `xml:"CtgyPurp,omitempty"`
-
 }
-
 
 func (p *PaymentTypeInformation3) SetInstructionPriority(value string) {
 	p.InstructionPriority = (*Priority2Code)(&value)
@@ -44,4 +42,3 @@ func (p *PaymentTypeInformation3) AddLocalInstrument() *LocalInstrument1Choice {
 func (p *PaymentTypeInformation3) SetCategoryPurpose(value string) {
 	p.CategoryPurpose = (*PaymentCategoryPurpose1Code)(&value)
 }
-

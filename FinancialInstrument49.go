@@ -23,9 +23,7 @@ type FinancialInstrument49 struct {
 
 	// Income policy relating to a class type, that is, if income is paid out or retained in the fund.
 	DistributionPolicy *DistributionPolicy1Code `xml:"DstrbtnPlcy,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument49) AddIdentification() *SecurityIdentification23Choice {
 	f.Identification = new(SecurityIdentification23Choice)
@@ -55,4 +53,3 @@ func (f *FinancialInstrument49) SetSecuritiesForm(value string) {
 func (f *FinancialInstrument49) SetDistributionPolicy(value string) {
 	f.DistributionPolicy = (*DistributionPolicy1Code)(&value)
 }
-

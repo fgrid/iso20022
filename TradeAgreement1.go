@@ -11,9 +11,7 @@ type TradeAgreement1 struct {
 
 	// Reference common to the parties of a trade.
 	CommonReference *Max35Text `xml:"CmonRef,omitempty"`
-
 }
-
 
 func (t *TradeAgreement1) SetTradeDate(value string) {
 	t.TradeDate = (*ISODate)(&value)
@@ -26,4 +24,3 @@ func (t *TradeAgreement1) SetNotificationIdentification(value string) {
 func (t *TradeAgreement1) SetCommonReference(value string) {
 	t.CommonReference = (*Max35Text)(&value)
 }
-

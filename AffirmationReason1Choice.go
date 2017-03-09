@@ -8,12 +8,10 @@ type AffirmationReason1Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
 
-
 func (a *AffirmationReason1Choice) AddReason() *AffirmationReason1 {
-	newValue := new (AffirmationReason1)
+	newValue := new(AffirmationReason1)
 	a.Reason = append(a.Reason, newValue)
 	return newValue
 }
@@ -21,4 +19,3 @@ func (a *AffirmationReason1Choice) AddReason() *AffirmationReason1 {
 func (a *AffirmationReason1Choice) SetNoSpecifiedReason(value string) {
 	a.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

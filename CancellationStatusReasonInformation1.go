@@ -11,9 +11,7 @@ type CancellationStatusReasonInformation1 struct {
 
 	// Further details on the cancellation status reason.
 	AdditionalInformation []*Max105Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CancellationStatusReasonInformation1) AddOriginator() *PartyIdentification32 {
 	c.Originator = new(PartyIdentification32)
@@ -28,4 +26,3 @@ func (c *CancellationStatusReasonInformation1) AddReason() *CancellationStatusRe
 func (c *CancellationStatusReasonInformation1) AddAdditionalInformation(value string) {
 	c.AdditionalInformation = append(c.AdditionalInformation, (*Max105Text)(&value))
 }
-

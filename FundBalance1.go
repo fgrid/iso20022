@@ -14,9 +14,7 @@ type FundBalance1 struct {
 
 	// Total amount of cash from orders placed in cash.
 	TotalCashFromCashOrders *ActiveOrHistoricCurrencyAndAmount `xml:"TtlCshFrCshOrdrs,omitempty"`
-
 }
-
 
 func (f *FundBalance1) AddTotalUnitsFromUnitOrders() *FinancialInstrumentQuantity1 {
 	f.TotalUnitsFromUnitOrders = new(FinancialInstrumentQuantity1)
@@ -35,4 +33,3 @@ func (f *FundBalance1) SetTotalCashFromUnitOrders(value, currency string) {
 func (f *FundBalance1) SetTotalCashFromCashOrders(value, currency string) {
 	f.TotalCashFromCashOrders = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

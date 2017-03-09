@@ -41,9 +41,7 @@ type AccountParties14 struct {
 
 	// Party for which shares are to be registered.
 	RegisteredShareholderName *RegisteredShareholderName1Choice `xml:"RegdShrhldrNm,omitempty"`
-
 }
-
 
 func (a *AccountParties14) SetModificationScopeIndication(value string) {
 	a.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -108,4 +106,3 @@ func (a *AccountParties14) AddRegisteredShareholderName() *RegisteredShareholder
 	a.RegisteredShareholderName = new(RegisteredShareholderName1Choice)
 	return a.RegisteredShareholderName
 }
-

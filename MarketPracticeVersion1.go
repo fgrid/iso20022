@@ -11,9 +11,7 @@ type MarketPracticeVersion1 struct {
 
 	// Version of the market practice.
 	Number *Max35Text `xml:"Nb,omitempty"`
-
 }
-
 
 func (m *MarketPracticeVersion1) SetName(value string) {
 	m.Name = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (m *MarketPracticeVersion1) SetDate(value string) {
 func (m *MarketPracticeVersion1) SetNumber(value string) {
 	m.Number = (*Max35Text)(&value)
 }
-

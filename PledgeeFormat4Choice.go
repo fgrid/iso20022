@@ -11,9 +11,7 @@ type PledgeeFormat4Choice struct {
 
 	// Identification of the entity to which the financial instruments are pledged expressed as a proprietary type and narrative description.
 	Proprietary *GenericIdentification85 `xml:"Prtry"`
-
 }
-
 
 func (p *PledgeeFormat4Choice) AddTypeAndIdentification() *PledgeeTypeAndAnyBICIdentifier1 {
 	p.TypeAndIdentification = new(PledgeeTypeAndAnyBICIdentifier1)
@@ -29,4 +27,3 @@ func (p *PledgeeFormat4Choice) AddProprietary() *GenericIdentification85 {
 	p.Proprietary = new(GenericIdentification85)
 	return p.Proprietary
 }
-

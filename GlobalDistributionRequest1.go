@@ -23,9 +23,7 @@ type GlobalDistributionRequest1 struct {
 
 	// Provides information about the cash movement.
 	CashMovement []*CashMovement1 `xml:"CshMvmnt,omitempty"`
-
 }
-
 
 func (g *GlobalDistributionRequest1) SetPreadviceIndicator(value string) {
 	g.PreadviceIndicator = (*YesNoIndicator)(&value)
@@ -51,14 +49,13 @@ func (g *GlobalDistributionRequest1) AddPaymentDate() *DateFormat4Choice {
 }
 
 func (g *GlobalDistributionRequest1) AddSecuritiesMovement() *SecurityMovement1 {
-	newValue := new (SecurityMovement1)
+	newValue := new(SecurityMovement1)
 	g.SecuritiesMovement = append(g.SecuritiesMovement, newValue)
 	return newValue
 }
 
 func (g *GlobalDistributionRequest1) AddCashMovement() *CashMovement1 {
-	newValue := new (CashMovement1)
+	newValue := new(CashMovement1)
 	g.CashMovement = append(g.CashMovement, newValue)
 	return newValue
 }
-

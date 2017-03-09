@@ -17,9 +17,7 @@ type Document9 struct {
 
 	// Digital signature of the enclosed binary file.
 	DigitalSignature *PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (d *Document9) AddType() *UndertakingDocumentType1Choice {
 	d.Type = new(UndertakingDocumentType1Choice)
@@ -43,4 +41,3 @@ func (d *Document9) AddDigitalSignature() *PartyAndSignature2 {
 	d.DigitalSignature = new(PartyAndSignature2)
 	return d.DigitalSignature
 }
-

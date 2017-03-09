@@ -8,9 +8,7 @@ type GlobalDistributionStatus1 struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *DistributionRejectionStatus1 `xml:"RjctdSts"`
-
 }
-
 
 func (g *GlobalDistributionStatus1) AddProcessedStatus() *DistributionProcessingStatus1 {
 	g.ProcessedStatus = new(DistributionProcessingStatus1)
@@ -21,4 +19,3 @@ func (g *GlobalDistributionStatus1) AddRejectedStatus() *DistributionRejectionSt
 	g.RejectedStatus = new(DistributionRejectionStatus1)
 	return g.RejectedStatus
 }
-

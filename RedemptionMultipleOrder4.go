@@ -42,9 +42,7 @@ type RedemptionMultipleOrder4 struct {
 
 	// Date on which cash is available.
 	CashSettlementDate *ISODate `xml:"CshSttlmDt,omitempty"`
-
 }
-
 
 func (r *RedemptionMultipleOrder4) SetMasterReference(value string) {
 	r.MasterReference = (*Max35Text)(&value)
@@ -87,7 +85,7 @@ func (r *RedemptionMultipleOrder4) AddBeneficiaryDetails() *IndividualPerson12 {
 }
 
 func (r *RedemptionMultipleOrder4) AddIndividualOrderDetails() *RedemptionOrder8 {
-	newValue := new (RedemptionOrder8)
+	newValue := new(RedemptionOrder8)
 	r.IndividualOrderDetails = append(r.IndividualOrderDetails, newValue)
 	return newValue
 }
@@ -104,4 +102,3 @@ func (r *RedemptionMultipleOrder4) SetTotalSettlementAmount(value, currency stri
 func (r *RedemptionMultipleOrder4) SetCashSettlementDate(value string) {
 	r.CashSettlementDate = (*ISODate)(&value)
 }
-

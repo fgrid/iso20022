@@ -11,9 +11,7 @@ type AcquirerProtocolParameters2 struct {
 
 	// Configuration parameters of completion exchanges.
 	CompletionExchange *ExchangeConfiguration1 `xml:"CmpltnXchg,omitempty"`
-
 }
-
 
 func (a *AcquirerProtocolParameters2) SetFinancialCapture(value string) {
 	a.FinancialCapture = (*FinancialCapture1Code)(&value)
@@ -28,4 +26,3 @@ func (a *AcquirerProtocolParameters2) AddCompletionExchange() *ExchangeConfigura
 	a.CompletionExchange = new(ExchangeConfiguration1)
 	return a.CompletionExchange
 }
-

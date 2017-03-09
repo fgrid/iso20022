@@ -14,9 +14,7 @@ type ProprietaryQuantity9 struct {
 
 	// Name of the identification scheme.
 	SchemeName *Max4AlphaNumericText `xml:"SchmeNm,omitempty"`
-
 }
-
 
 func (p *ProprietaryQuantity9) SetQuantity(value string) {
 	p.Quantity = (*RestrictedFINDecimalNumber)(&value)
@@ -33,4 +31,3 @@ func (p *ProprietaryQuantity9) SetIssuer(value string) {
 func (p *ProprietaryQuantity9) SetSchemeName(value string) {
 	p.SchemeName = (*Max4AlphaNumericText)(&value)
 }
-

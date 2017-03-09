@@ -3,7 +3,7 @@ package iso20022
 // Card transaction for which the authorisation has been requested.
 type CardTransaction8 struct {
 
-	// Type of transaction being undertaken for the main service. 
+	// Type of transaction being undertaken for the main service.
 	// It correspond partially to the ISO 8583, field number 3.
 	TransactionType *CardPaymentServiceType7Code `xml:"TxTp"`
 
@@ -32,9 +32,7 @@ type CardTransaction8 struct {
 
 	// Response to the reversal.
 	TransactionResponse *ResponseType2 `xml:"TxRspn"`
-
 }
-
 
 func (c *CardTransaction8) SetTransactionType(value string) {
 	c.TransactionType = (*CardPaymentServiceType7Code)(&value)
@@ -74,4 +72,3 @@ func (c *CardTransaction8) AddTransactionResponse() *ResponseType2 {
 	c.TransactionResponse = new(ResponseType2)
 	return c.TransactionResponse
 }
-

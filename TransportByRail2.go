@@ -11,9 +11,7 @@ type TransportByRail2 struct {
 
 	// Identifies the party that is responsible for the conveyance of the goods from one place to another.
 	RailCarrierName *Max35Text `xml:"RailCrrierNm,omitempty"`
-
 }
-
 
 func (t *TransportByRail2) SetPlaceOfReceipt(value string) {
 	t.PlaceOfReceipt = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (t *TransportByRail2) SetPlaceOfDelivery(value string) {
 func (t *TransportByRail2) SetRailCarrierName(value string) {
 	t.RailCarrierName = (*Max35Text)(&value)
 }
-

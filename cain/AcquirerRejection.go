@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:cain.013.001.01 Document"`
+	XMLName xml.Name           `xml:"urn:iso:std:iso:20022:tech:xsd:cain.013.001.01 Document"`
 	Message *AcquirerRejection `xml:"AcqrrRjctn"`
 }
 
@@ -24,9 +24,7 @@ type AcquirerRejection struct {
 
 	// Information related to the reject.
 	Reject *iso20022.AcceptorRejection4 `xml:"Rjct"`
-
 }
-
 
 func (a *AcquirerRejection) AddHeader() *iso20022.Header19 {
 	a.Header = new(iso20022.Header19)
@@ -37,4 +35,3 @@ func (a *AcquirerRejection) AddReject() *iso20022.AcceptorRejection4 {
 	a.Reject = new(iso20022.AcceptorRejection4)
 	return a.Reject
 }
-

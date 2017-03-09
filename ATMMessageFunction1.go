@@ -11,9 +11,7 @@ type ATMMessageFunction1 struct {
 
 	// Codification of the type of service for the ATM manager host.
 	HostServiceCode *Max35Text `xml:"HstSvcCd,omitempty"`
-
 }
-
 
 func (a *ATMMessageFunction1) SetFunction(value string) {
 	a.Function = (*MessageFunction7Code)(&value)
@@ -26,4 +24,3 @@ func (a *ATMMessageFunction1) SetATMServiceCode(value string) {
 func (a *ATMMessageFunction1) SetHostServiceCode(value string) {
 	a.HostServiceCode = (*Max35Text)(&value)
 }
-

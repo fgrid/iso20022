@@ -7,7 +7,7 @@ import (
 )
 
 type Document05500105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.055.001.05 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:camt.055.001.05 Document"`
 	Message *CustomerPaymentCancellationRequestV05 `xml:"CstmrPmtCxlReq"`
 }
 
@@ -53,9 +53,7 @@ type CustomerPaymentCancellationRequestV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CustomerPaymentCancellationRequestV05) AddAssignment() *iso20022.CaseAssignment3 {
 	c.Assignment = new(iso20022.CaseAssignment3)
@@ -73,14 +71,13 @@ func (c *CustomerPaymentCancellationRequestV05) AddControlData() *iso20022.Contr
 }
 
 func (c *CustomerPaymentCancellationRequestV05) AddUnderlying() *iso20022.UnderlyingTransaction12 {
-	newValue := new (iso20022.UnderlyingTransaction12)
+	newValue := new(iso20022.UnderlyingTransaction12)
 	c.Underlying = append(c.Underlying, newValue)
 	return newValue
 }
 
 func (c *CustomerPaymentCancellationRequestV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

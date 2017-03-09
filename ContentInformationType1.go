@@ -20,9 +20,7 @@ type ContentInformationType1 struct {
 
 	// Data protection by encryption with a previously exchanged key identified by a name.
 	NamedKeyEncryptedData *NamedKeyEncryptedData1 `xml:"NmdKeyNcrptdData,omitempty"`
-
 }
-
 
 func (c *ContentInformationType1) SetContentType(value string) {
 	c.ContentType = (*ContentType1Code)(&value)
@@ -52,4 +50,3 @@ func (c *ContentInformationType1) AddNamedKeyEncryptedData() *NamedKeyEncryptedD
 	c.NamedKeyEncryptedData = new(NamedKeyEncryptedData1)
 	return c.NamedKeyEncryptedData
 }
-

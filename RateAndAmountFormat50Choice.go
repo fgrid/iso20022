@@ -13,11 +13,9 @@ type RateAndAmountFormat50Choice struct {
 	Amount *RestrictedFINActiveCurrencyAnd13DecimalAmount `xml:"Amt"`
 
 	// Price expressed in index points.
-	// 
+	//
 	IndexPoints *RestrictedFINDecimalNumber `xml:"IndxPts"`
-
 }
-
 
 func (r *RateAndAmountFormat50Choice) SetRate(value string) {
 	r.Rate = (*PercentageRate)(&value)
@@ -34,4 +32,3 @@ func (r *RateAndAmountFormat50Choice) SetAmount(value, currency string) {
 func (r *RateAndAmountFormat50Choice) SetIndexPoints(value string) {
 	r.IndexPoints = (*RestrictedFINDecimalNumber)(&value)
 }
-

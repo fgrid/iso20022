@@ -8,9 +8,7 @@ type CancellationStatusReason1Choice struct {
 
 	// Reason for the status, in a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *CancellationStatusReason1Choice) SetCode(value string) {
 	c.Code = (*PaymentCancellationRejection1Code)(&value)
@@ -19,4 +17,3 @@ func (c *CancellationStatusReason1Choice) SetCode(value string) {
 func (c *CancellationStatusReason1Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

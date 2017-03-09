@@ -78,7 +78,7 @@ type FinancialInstrumentAttributes36 struct {
 	// Interest rate applicable to the next interest payment period in relation to variable rate instruments.
 	NextInterestRate *PercentageRate `xml:"NxtIntrstRate,omitempty"`
 
-	// Specifies the reference rate for fixed income instruments where the 
+	// Specifies the reference rate for fixed income instruments where the
 	// price of the instrument is indexed to the price of an underlying benchmark.
 	IndexRateBasis *PercentageRate `xml:"IndxRateBsis,omitempty"`
 
@@ -126,9 +126,7 @@ type FinancialInstrumentAttributes36 struct {
 
 	// Provides additional information about the financial instrument in narrative form.
 	FinancialInstrumentAttributeAdditionalDetails *Max350Text `xml:"FinInstrmAttrAddtlDtls,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentAttributes36) AddPlaceOfListing() *MarketIdentification3Choice {
 	f.PlaceOfListing = new(MarketIdentification3Choice)
@@ -254,7 +252,7 @@ func (f *FinancialInstrumentAttributes36) AddPoolNumber() *GenericIdentification
 }
 
 func (f *FinancialInstrumentAttributes36) AddQuantityBreakdown() *QuantityBreakdown15 {
-	newValue := new (QuantityBreakdown15)
+	newValue := new(QuantityBreakdown15)
 	f.QuantityBreakdown = append(f.QuantityBreakdown, newValue)
 	return newValue
 }
@@ -307,7 +305,7 @@ func (f *FinancialInstrumentAttributes36) AddContractSize() *FinancialInstrument
 }
 
 func (f *FinancialInstrumentAttributes36) AddUnderlyingFinancialInstrumentIdentification() *SecurityIdentification14 {
-	newValue := new (SecurityIdentification14)
+	newValue := new(SecurityIdentification14)
 	f.UnderlyingFinancialInstrumentIdentification = append(f.UnderlyingFinancialInstrumentIdentification, newValue)
 	return newValue
 }
@@ -315,4 +313,3 @@ func (f *FinancialInstrumentAttributes36) AddUnderlyingFinancialInstrumentIdenti
 func (f *FinancialInstrumentAttributes36) SetFinancialInstrumentAttributeAdditionalDetails(value string) {
 	f.FinancialInstrumentAttributeAdditionalDetails = (*Max350Text)(&value)
 }
-

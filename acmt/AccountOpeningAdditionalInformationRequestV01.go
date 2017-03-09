@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.009.001.01 Document"`
+	XMLName xml.Name                                       `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.009.001.01 Document"`
 	Message *AccountOpeningAdditionalInformationRequestV01 `xml:"AcctOpngAddtlInfReq"`
 }
 
@@ -39,9 +39,7 @@ type AccountOpeningAdditionalInformationRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountOpeningAdditionalInformationRequestV01) AddReferences() *iso20022.References3 {
 	a.References = new(iso20022.References3)
@@ -49,7 +47,7 @@ func (a *AccountOpeningAdditionalInformationRequestV01) AddReferences() *iso2002
 }
 
 func (a *AccountOpeningAdditionalInformationRequestV01) AddOrganisationIdentification() *iso20022.OrganisationIdentification6 {
-	newValue := new (iso20022.OrganisationIdentification6)
+	newValue := new(iso20022.OrganisationIdentification6)
 	a.OrganisationIdentification = append(a.OrganisationIdentification, newValue)
 	return newValue
 }
@@ -70,8 +68,7 @@ func (a *AccountOpeningAdditionalInformationRequestV01) AddUnderlyingMasterAgree
 }
 
 func (a *AccountOpeningAdditionalInformationRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

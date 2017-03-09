@@ -11,9 +11,7 @@ type ATMSecurityConfiguration4 struct {
 
 	// Digital signature algorithm the security module is able to manage.
 	DigitalSignatureAlgorithm []*Algorithm14Code `xml:"DgtlSgntrAlgo,omitempty"`
-
 }
-
 
 func (a *ATMSecurityConfiguration4) SetMaximumCertificates(value string) {
 	a.MaximumCertificates = (*Number)(&value)
@@ -26,4 +24,3 @@ func (a *ATMSecurityConfiguration4) SetMaximumSignatures(value string) {
 func (a *ATMSecurityConfiguration4) AddDigitalSignatureAlgorithm(value string) {
 	a.DigitalSignatureAlgorithm = append(a.DigitalSignatureAlgorithm, (*Algorithm14Code)(&value))
 }
-

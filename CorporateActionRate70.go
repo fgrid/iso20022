@@ -32,18 +32,16 @@ type CorporateActionRate70 struct {
 
 	// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments, for example, in the context of the EU Savings directive.
 	TaxableIncomePerDividendShare []*RateTypeAndAmountAndStatus26 `xml:"TaxblIncmPerDvddShr,omitempty"`
-
 }
 
-
 func (c *CorporateActionRate70) AddGrossDividendRate() *GrossDividendRateFormat21Choice {
-	newValue := new (GrossDividendRateFormat21Choice)
+	newValue := new(GrossDividendRateFormat21Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate70) AddNetDividendRate() *NetDividendRateFormat23Choice {
-	newValue := new (NetDividendRateFormat23Choice)
+	newValue := new(NetDividendRateFormat23Choice)
 	c.NetDividendRate = append(c.NetDividendRate, newValue)
 	return newValue
 }
@@ -54,7 +52,7 @@ func (c *CorporateActionRate70) AddIndexFactor() *RateAndAmountFormat39Choice {
 }
 
 func (c *CorporateActionRate70) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat7Choice {
-	newValue := new (InterestRateUsedForPaymentFormat7Choice)
+	newValue := new(InterestRateUsedForPaymentFormat7Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
@@ -68,13 +66,13 @@ func (c *CorporateActionRate70) SetProrationRate(value string) {
 }
 
 func (c *CorporateActionRate70) AddWithholdingTaxRate() *RateAndAmountFormat40Choice {
-	newValue := new (RateAndAmountFormat40Choice)
+	newValue := new(RateAndAmountFormat40Choice)
 	c.WithholdingTaxRate = append(c.WithholdingTaxRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate70) AddSecondLevelTax() *RateAndAmountFormat40Choice {
-	newValue := new (RateAndAmountFormat40Choice)
+	newValue := new(RateAndAmountFormat40Choice)
 	c.SecondLevelTax = append(c.SecondLevelTax, newValue)
 	return newValue
 }
@@ -85,8 +83,7 @@ func (c *CorporateActionRate70) AddAdditionalTax() *RateAndAmountFormat39Choice 
 }
 
 func (c *CorporateActionRate70) AddTaxableIncomePerDividendShare() *RateTypeAndAmountAndStatus26 {
-	newValue := new (RateTypeAndAmountAndStatus26)
+	newValue := new(RateTypeAndAmountAndStatus26)
 	c.TaxableIncomePerDividendShare = append(c.TaxableIncomePerDividendShare, newValue)
 	return newValue
 }
-

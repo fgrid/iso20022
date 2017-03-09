@@ -17,16 +17,14 @@ type CardPaymentDataSetTransaction10 struct {
 
 	// Transaction information to be captured.
 	Transaction *CardPaymentTransaction45 `xml:"Tx"`
-
 }
-
 
 func (c *CardPaymentDataSetTransaction10) SetTransactionSequenceCounter(value string) {
 	c.TransactionSequenceCounter = (*Max9NumericText)(&value)
 }
 
 func (c *CardPaymentDataSetTransaction10) AddTraceability() *Traceability2 {
-	newValue := new (Traceability2)
+	newValue := new(Traceability2)
 	c.Traceability = append(c.Traceability, newValue)
 	return newValue
 }
@@ -45,4 +43,3 @@ func (c *CardPaymentDataSetTransaction10) AddTransaction() *CardPaymentTransacti
 	c.Transaction = new(CardPaymentTransaction45)
 	return c.Transaction
 }
-

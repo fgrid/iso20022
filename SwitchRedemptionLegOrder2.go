@@ -41,9 +41,7 @@ type SwitchRedemptionLegOrder2 struct {
 
 	// Information related to physical delivery of the securities.
 	PhysicalDeliveryDetails *DeliveryParameters3 `xml:"PhysDlvryDtls,omitempty"`
-
 }
-
 
 func (s *SwitchRedemptionLegOrder2) SetLegIdentification(value string) {
 	s.LegIdentification = (*Max35Text)(&value)
@@ -76,19 +74,19 @@ func (s *SwitchRedemptionLegOrder2) SetRequestedNAVCurrency(value string) {
 }
 
 func (s *SwitchRedemptionLegOrder2) AddChargeDetails() *Charge8 {
-	newValue := new (Charge8)
+	newValue := new(Charge8)
 	s.ChargeDetails = append(s.ChargeDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchRedemptionLegOrder2) AddCommissionDetails() *Commission6 {
-	newValue := new (Commission6)
+	newValue := new(Commission6)
 	s.CommissionDetails = append(s.CommissionDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchRedemptionLegOrder2) AddTaxDetails() *Tax6 {
-	newValue := new (Tax6)
+	newValue := new(Tax6)
 	s.TaxDetails = append(s.TaxDetails, newValue)
 	return newValue
 }
@@ -106,4 +104,3 @@ func (s *SwitchRedemptionLegOrder2) AddPhysicalDeliveryDetails() *DeliveryParame
 	s.PhysicalDeliveryDetails = new(DeliveryParameters3)
 	return s.PhysicalDeliveryDetails
 }
-

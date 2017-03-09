@@ -11,9 +11,7 @@ type BalanceFormat1Choice struct {
 
 	// Provide not eligible balance information in different formats.
 	NotEligibleBalance *SignedQuantityFormat2 `xml:"NotElgblBal"`
-
 }
-
 
 func (b *BalanceFormat1Choice) AddBalance() *SignedQuantityFormat1 {
 	b.Balance = new(SignedQuantityFormat1)
@@ -29,4 +27,3 @@ func (b *BalanceFormat1Choice) AddNotEligibleBalance() *SignedQuantityFormat2 {
 	b.NotEligibleBalance = new(SignedQuantityFormat2)
 	return b.NotEligibleBalance
 }
-

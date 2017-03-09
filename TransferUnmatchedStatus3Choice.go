@@ -14,9 +14,7 @@ type TransferUnmatchedStatus3Choice struct {
 
 	// Proprietary identification of the reason for the unmatched status.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (t *TransferUnmatchedStatus3Choice) SetNoSpecifiedReason(value string) {
 	t.NoSpecifiedReason = (*NoReasonCode)(&value)
@@ -34,4 +32,3 @@ func (t *TransferUnmatchedStatus3Choice) AddDataSourceScheme() *GenericIdentific
 	t.DataSourceScheme = new(GenericIdentification1)
 	return t.DataSourceScheme
 }
-

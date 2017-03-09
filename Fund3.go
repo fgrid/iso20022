@@ -29,9 +29,7 @@ type Fund3 struct {
 
 	// Estimated consolidated net cash flow expressed as a percentage of the previous total NAV for the fund/sub fund.
 	EstimatedPercentageOfFundTotalNAV *PercentageRate `xml:"EstmtdPctgOfFndTtlNAV,omitempty"`
-
 }
-
 
 func (f *Fund3) SetName(value string) {
 	f.Name = (*Max350Text)(&value)
@@ -71,4 +69,3 @@ func (f *Fund3) AddPreviousTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 func (f *Fund3) SetEstimatedPercentageOfFundTotalNAV(value string) {
 	f.EstimatedPercentageOfFundTotalNAV = (*PercentageRate)(&value)
 }
-

@@ -14,9 +14,7 @@ type CorporateActionElection1 struct {
 
 	// Remaining instructed securities quantity after the amendment of the election.
 	RemainingQuantity *UnitOrFaceAmount1Choice `xml:"RmngQty"`
-
 }
-
 
 func (c *CorporateActionElection1) AddOptionType() *CorporateActionOption1FormatChoice {
 	c.OptionType = new(CorporateActionOption1FormatChoice)
@@ -36,4 +34,3 @@ func (c *CorporateActionElection1) AddRemainingQuantity() *UnitOrFaceAmount1Choi
 	c.RemainingQuantity = new(UnitOrFaceAmount1Choice)
 	return c.RemainingQuantity
 }
-

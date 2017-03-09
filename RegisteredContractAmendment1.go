@@ -17,9 +17,7 @@ type RegisteredContractAmendment1 struct {
 
 	// Further details on the amendment.
 	AdditionalInformation *Max1025Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *RegisteredContractAmendment1) SetAmendmentDate(value string) {
 	r.AmendmentDate = (*ISODate)(&value)
@@ -41,4 +39,3 @@ func (r *RegisteredContractAmendment1) SetAmendmentReason(value string) {
 func (r *RegisteredContractAmendment1) SetAdditionalInformation(value string) {
 	r.AdditionalInformation = (*Max1025Text)(&value)
 }
-

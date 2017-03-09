@@ -8,9 +8,7 @@ type CorporateActionProcessingStatus1Choice struct {
 
 	// Indicates that the message is for information only, that is processing of client's instruction will not be supported by the Account Servicer.
 	ForInformationOnlyIndicator *YesNoIndicator `xml:"ForInfOnlyInd"`
-
 }
-
 
 func (c *CorporateActionProcessingStatus1Choice) AddEventStatus() *CorporateActionEventStatus1 {
 	c.EventStatus = new(CorporateActionEventStatus1)
@@ -20,4 +18,3 @@ func (c *CorporateActionProcessingStatus1Choice) AddEventStatus() *CorporateActi
 func (c *CorporateActionProcessingStatus1Choice) SetForInformationOnlyIndicator(value string) {
 	c.ForInformationOnlyIndicator = (*YesNoIndicator)(&value)
 }
-

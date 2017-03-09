@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.011.001.04 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:pain.011.001.04 Document"`
 	Message *MandateCancellationRequestV04 `xml:"MndtCxlReq"`
 }
 
@@ -35,9 +35,7 @@ type MandateCancellationRequestV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MandateCancellationRequestV04) AddGroupHeader() *iso20022.GroupHeader47 {
 	m.GroupHeader = new(iso20022.GroupHeader47)
@@ -45,14 +43,13 @@ func (m *MandateCancellationRequestV04) AddGroupHeader() *iso20022.GroupHeader47
 }
 
 func (m *MandateCancellationRequestV04) AddUnderlyingCancellationDetails() *iso20022.MandateCancellation4 {
-	newValue := new (iso20022.MandateCancellation4)
+	newValue := new(iso20022.MandateCancellation4)
 	m.UnderlyingCancellationDetails = append(m.UnderlyingCancellationDetails, newValue)
 	return newValue
 }
 
 func (m *MandateCancellationRequestV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type CorporateAction13 struct {
 
 	// Specifies the type of lottery announced.
 	LotteryType *LotteryTypeFormat1Choice `xml:"LtryTp,omitempty"`
-
 }
-
 
 func (c *CorporateAction13) AddDateDetails() *CorporateActionDate30 {
 	c.DateDetails = new(CorporateActionDate30)
@@ -29,4 +27,3 @@ func (c *CorporateAction13) AddLotteryType() *LotteryTypeFormat1Choice {
 	c.LotteryType = new(LotteryTypeFormat1Choice)
 	return c.LotteryType
 }
-

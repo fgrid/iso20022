@@ -7,37 +7,37 @@ type SecuredMarketTransaction3 struct {
 	ReportedTransactionStatus *TransactionOperationType1Code `xml:"RptdTxSts"`
 
 	// Unique and unambiguous legal entity identification of  the branch of the reporting agent in which the transaction has been booked.
-	// 
-	// Usage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify. 
+	//
+	// Usage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify.
 	// Where the transaction has been booked by the head office or the reporting agent cannot be identified by a unique branch-specific LEI, the reporting agent must provide the LEI of the head office.
 	BranchIdentification *LEIIdentifier `xml:"BrnchId,omitempty"`
 
 	// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.
 	UniqueTransactionIdentifier *Max105Text `xml:"UnqTxIdr,omitempty"`
 
-	// Internal unique transaction identifier used by the reporting agent for each transaction. 
+	// Internal unique transaction identifier used by the reporting agent for each transaction.
 	ProprietaryTransactionIdentification *Max105Text `xml:"PrtryTxId"`
 
 	// Internal unique proprietary transaction identifier as assigned by the counterparty of the reporting agent for each transaction.
 	CounterpartyProprietaryTransactionIdentification *Max105Text `xml:"CtrPtyPrtryTxId,omitempty"`
 
-	// Identification of the counterparty of the reporting agent for the reported transaction. 
+	// Identification of the counterparty of the reporting agent for the reported transaction.
 	CounterpartyIdentification *CounterpartyIdentification2Choice `xml:"CtrPtyId"`
 
 	// Identification of the tri-party agent, when the transaction has been performed via tri-party agent.
 	TripartyAgentIdentification *LEIIdentifier `xml:"TrptyAgtId,omitempty"`
 
 	// Date and time on which the parties entered into the reported transaction.
-	// 
+	//
 	// Usage: when time is available, it must be reported.
-	// 
-	// It is to be reported with only the date when the time of the transaction is not available. 
-	// 
-	// The reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. 
+	//
+	// It is to be reported with only the date when the time of the transaction is not available.
+	//
+	// The reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent.
 	TradeDate *DateAndDateTimeChoice `xml:"TradDt"`
 
 	// Date on which the amount of money is initially exchanged versus the asset as contractually agreed.
-	// 
+	//
 	// Usage:
 	// In the case of open basis repurchase transactions, this is the date on which the rollover settles (even if no exchange of an amount of money takes place).
 	// In the case of a settlement failure in which settlement takes place on a date different than initially agreed, no transactional amendment needs to be reported.
@@ -56,12 +56,12 @@ type SecuredMarketTransaction3 struct {
 	RateType *InterestRateType1Code `xml:"RateTp"`
 
 	// Interest rate expressed in accordance with the local money market convention at which the repurchase agreement has been concluded and at which the cash lent is remunerated.
-	// 
+	//
 	// Usage:
-	// When the remuneration for securities lending transactions is represented by a fee amount, the fee amount will be translated into a deal rate per annum based on the ratio between the fee amount and the transaction nominal amount times number of days based on relevant money market convention divided by the number of days between the settlement date and the maturity of the transaction. 
-	// 
+	// When the remuneration for securities lending transactions is represented by a fee amount, the fee amount will be translated into a deal rate per annum based on the ratio between the fee amount and the transaction nominal amount times number of days based on relevant money market convention divided by the number of days between the settlement date and the maturity of the transaction.
+	//
 	// Only actual values, as opposed to estimated or default values, will be reported for this variable.
-	// 
+	//
 	// This value can be either positive or negative irrespective of whether the cash is borrowed or lent. It represents the contractually agreed remuneration rate on the transaction nominal amount regardless of the transaction sign (that whether the transaction type is reported as borrowed or lent).
 	DealRate *Rate2 `xml:"DealRate,omitempty"`
 
@@ -76,9 +76,7 @@ type SecuredMarketTransaction3 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuredMarketTransaction3) SetReportedTransactionStatus(value string) {
 	s.ReportedTransactionStatus = (*TransactionOperationType1Code)(&value)
@@ -154,8 +152,7 @@ func (s *SecuredMarketTransaction3) AddCollateral() *Collateral14 {
 }
 
 func (s *SecuredMarketTransaction3) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

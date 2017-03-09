@@ -11,9 +11,7 @@ type PaymentInstrument7Choice struct {
 
 	// Part of the investment account to or from which cash entries are made.
 	AccountDetails *InvestmentAccount15 `xml:"AcctDtls"`
-
 }
-
 
 func (p *PaymentInstrument7Choice) AddCreditTransferDetails() *CreditTransfer3 {
 	p.CreditTransferDetails = new(CreditTransfer3)
@@ -29,4 +27,3 @@ func (p *PaymentInstrument7Choice) AddAccountDetails() *InvestmentAccount15 {
 	p.AccountDetails = new(InvestmentAccount15)
 	return p.AccountDetails
 }
-

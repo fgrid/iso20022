@@ -26,9 +26,7 @@ type OrderStatusAndReason7 struct {
 
 	// Party that initiates the status of the order.
 	StatusInitiator *PartyIdentification2Choice `xml:"StsInitr,omitempty"`
-
 }
-
 
 func (o *OrderStatusAndReason7) SetMasterReference(value string) {
 	o.MasterReference = (*Max35Text)(&value)
@@ -49,7 +47,7 @@ func (o *OrderStatusAndReason7) AddConditionallyAccepted() *ConditionallyAccepte
 }
 
 func (o *OrderStatusAndReason7) AddRejected() *RejectedStatus6 {
-	newValue := new (RejectedStatus6)
+	newValue := new(RejectedStatus6)
 	o.Rejected = append(o.Rejected, newValue)
 	return newValue
 }
@@ -68,4 +66,3 @@ func (o *OrderStatusAndReason7) AddStatusInitiator() *PartyIdentification2Choice
 	o.StatusInitiator = new(PartyIdentification2Choice)
 	return o.StatusInitiator
 }
-

@@ -20,9 +20,7 @@ type OriginalNotification3 struct {
 
 	// Identifies the original notification item and provides the status.
 	OriginalNotificationReference []*OriginalNotificationReference2 `xml:"OrgnlNtfctnRef,omitempty"`
-
 }
-
 
 func (o *OriginalNotification3) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -45,8 +43,7 @@ func (o *OriginalNotification3) SetAdditionalStatusInformation(value string) {
 }
 
 func (o *OriginalNotification3) AddOriginalNotificationReference() *OriginalNotificationReference2 {
-	newValue := new (OriginalNotificationReference2)
+	newValue := new(OriginalNotificationReference2)
 	o.OriginalNotificationReference = append(o.OriginalNotificationReference, newValue)
 	return newValue
 }
-

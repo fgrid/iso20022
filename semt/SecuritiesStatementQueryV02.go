@@ -7,7 +7,7 @@ import (
 )
 
 type Document02100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.021.001.02 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:semt.021.001.02 Document"`
 	Message *SecuritiesStatementQueryV02 `xml:"SctiesStmtQry"`
 }
 
@@ -52,9 +52,7 @@ type SecuritiesStatementQueryV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesStatementQueryV02) AddStatementRequested() *iso20022.DocumentNumber1 {
 	s.StatementRequested = new(iso20022.DocumentNumber1)
@@ -77,14 +75,13 @@ func (s *SecuritiesStatementQueryV02) AddSafekeepingAccount() *iso20022.Securiti
 }
 
 func (s *SecuritiesStatementQueryV02) AddAdditionalQueryParameters() *iso20022.AdditionalQueryParameters3 {
-	newValue := new (iso20022.AdditionalQueryParameters3)
+	newValue := new(iso20022.AdditionalQueryParameters3)
 	s.AdditionalQueryParameters = append(s.AdditionalQueryParameters, newValue)
 	return newValue
 }
 
 func (s *SecuritiesStatementQueryV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

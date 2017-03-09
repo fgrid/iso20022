@@ -32,9 +32,7 @@ type IntraPositionMovementDetails1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementDetails1) AddIdentification() *References5Choice {
 	i.Identification = new(References5Choice)
@@ -81,8 +79,7 @@ func (i *IntraPositionMovementDetails1) SetInstructionProcessingAdditionalDetail
 }
 
 func (i *IntraPositionMovementDetails1) AddExtension() *Extension2 {
-	newValue := new (Extension2)
+	newValue := new(Extension2)
 	i.Extension = append(i.Extension, newValue)
 	return newValue
 }
-

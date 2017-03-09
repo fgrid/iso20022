@@ -8,9 +8,7 @@ type PendingStatusReason7 struct {
 
 	// Provides additional information about the processed instruction.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (p *PendingStatusReason7) AddReasonCode() *PendingReason24Choice {
 	p.ReasonCode = new(PendingReason24Choice)
@@ -20,4 +18,3 @@ func (p *PendingStatusReason7) AddReasonCode() *PendingReason24Choice {
 func (p *PendingStatusReason7) SetAdditionalReasonInformation(value string) {
 	p.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

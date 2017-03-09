@@ -50,16 +50,14 @@ type ReconciliationList1 struct {
 
 	// Validation status of the list.
 	ValidationStatusInformation *ValidationStatusInformation1 `xml:"VldtnStsInf,omitempty"`
-
 }
-
 
 func (r *ReconciliationList1) SetDate(value string) {
 	r.Date = (*ISODate)(&value)
 }
 
 func (r *ReconciliationList1) AddRelatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	r.RelatedDocument = append(r.RelatedDocument, newValue)
 	return newValue
 }
@@ -103,7 +101,7 @@ func (r *ReconciliationList1) SetPaymentAmount(value, currency string) {
 }
 
 func (r *ReconciliationList1) AddItem() *FinancialItem1 {
-	newValue := new (FinancialItem1)
+	newValue := new(FinancialItem1)
 	r.Item = append(r.Item, newValue)
 	return newValue
 }
@@ -117,7 +115,7 @@ func (r *ReconciliationList1) SetControlSum(value string) {
 }
 
 func (r *ReconciliationList1) AddAssociatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	r.AssociatedDocument = append(r.AssociatedDocument, newValue)
 	return newValue
 }
@@ -130,4 +128,3 @@ func (r *ReconciliationList1) AddValidationStatusInformation() *ValidationStatus
 	r.ValidationStatusInformation = new(ValidationStatusInformation1)
 	return r.ValidationStatusInformation
 }
-

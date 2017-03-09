@@ -17,9 +17,7 @@ type PriceFormat22Choice struct {
 
 	// Price expressed as a ratio: amount price per amount
 	AmountPricePerAmount *AmountPricePerAmount2 `xml:"AmtPricPerAmt"`
-
 }
-
 
 func (p *PriceFormat22Choice) AddPercentagePrice() *PercentagePrice1 {
 	p.PercentagePrice = new(PercentagePrice1)
@@ -44,4 +42,3 @@ func (p *PriceFormat22Choice) AddAmountPricePerAmount() *AmountPricePerAmount2 {
 	p.AmountPricePerAmount = new(AmountPricePerAmount2)
 	return p.AmountPricePerAmount
 }
-

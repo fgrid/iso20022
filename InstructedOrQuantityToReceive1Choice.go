@@ -8,9 +8,7 @@ type InstructedOrQuantityToReceive1Choice struct {
 
 	// Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.
 	QuantityToReceive *Quantity5Choice `xml:"QtyToRcv"`
-
 }
-
 
 func (i *InstructedOrQuantityToReceive1Choice) AddInstructedQuantity() *Quantity5Choice {
 	i.InstructedQuantity = new(Quantity5Choice)
@@ -21,4 +19,3 @@ func (i *InstructedOrQuantityToReceive1Choice) AddQuantityToReceive() *Quantity5
 	i.QuantityToReceive = new(Quantity5Choice)
 	return i.QuantityToReceive
 }
-

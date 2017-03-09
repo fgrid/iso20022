@@ -59,9 +59,7 @@ type AggregateBalanceInformation31 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AggregateBalanceInformation31) AddFinancialInstrumentIdentification() *SecurityIdentification19 {
 	a.FinancialInstrumentIdentification = new(SecurityIdentification19)
@@ -98,13 +96,13 @@ func (a *AggregateBalanceInformation31) SetCorporateActionOptionType(value strin
 }
 
 func (a *AggregateBalanceInformation31) AddPriceDetails() *PriceInformation12 {
-	newValue := new (PriceInformation12)
+	newValue := new(PriceInformation12)
 	a.PriceDetails = append(a.PriceDetails, newValue)
 	return newValue
 }
 
 func (a *AggregateBalanceInformation31) AddForeignExchangeDetails() *ForeignExchangeTerms22 {
-	newValue := new (ForeignExchangeTerms22)
+	newValue := new(ForeignExchangeTerms22)
 	a.ForeignExchangeDetails = append(a.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -129,25 +127,25 @@ func (a *AggregateBalanceInformation31) AddAlternateReportingCurrencyAmounts() *
 }
 
 func (a *AggregateBalanceInformation31) AddQuantityBreakdown() *QuantityBreakdown28 {
-	newValue := new (QuantityBreakdown28)
+	newValue := new(QuantityBreakdown28)
 	a.QuantityBreakdown = append(a.QuantityBreakdown, newValue)
 	return newValue
 }
 
 func (a *AggregateBalanceInformation31) AddBalanceBreakdown() *SubBalanceInformation14 {
-	newValue := new (SubBalanceInformation14)
+	newValue := new(SubBalanceInformation14)
 	a.BalanceBreakdown = append(a.BalanceBreakdown, newValue)
 	return newValue
 }
 
 func (a *AggregateBalanceInformation31) AddAdditionalBalanceBreakdown() *AdditionalBalanceInformation14 {
-	newValue := new (AdditionalBalanceInformation14)
+	newValue := new(AdditionalBalanceInformation14)
 	a.AdditionalBalanceBreakdown = append(a.AdditionalBalanceBreakdown, newValue)
 	return newValue
 }
 
 func (a *AggregateBalanceInformation31) AddBalanceAtSafekeepingPlace() *AggregateBalancePerSafekeepingPlace29 {
-	newValue := new (AggregateBalancePerSafekeepingPlace29)
+	newValue := new(AggregateBalancePerSafekeepingPlace29)
 	a.BalanceAtSafekeepingPlace = append(a.BalanceAtSafekeepingPlace, newValue)
 	return newValue
 }
@@ -157,8 +155,7 @@ func (a *AggregateBalanceInformation31) SetHoldingAdditionalDetails(value string
 }
 
 func (a *AggregateBalanceInformation31) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

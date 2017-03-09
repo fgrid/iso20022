@@ -17,9 +17,7 @@ type PartyIdentification45 struct {
 
 	// Contact defined for this party.
 	ContactDetails []*Contacts3 `xml:"CtctDtls,omitempty"`
-
 }
-
 
 func (p *PartyIdentification45) AddIdentification() *Party8Choice {
 	p.Identification = new(Party8Choice)
@@ -40,8 +38,7 @@ func (p *PartyIdentification45) SetCountryOfResidence(value string) {
 }
 
 func (p *PartyIdentification45) AddContactDetails() *Contacts3 {
-	newValue := new (Contacts3)
+	newValue := new(Contacts3)
 	p.ContactDetails = append(p.ContactDetails, newValue)
 	return newValue
 }
-

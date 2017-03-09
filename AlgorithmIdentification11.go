@@ -8,9 +8,7 @@ type AlgorithmIdentification11 struct {
 
 	// Parameters of the encryption algorithm.
 	Parameter *Parameter4 `xml:"Param,omitempty"`
-
 }
-
 
 func (a *AlgorithmIdentification11) SetAlgorithm(value string) {
 	a.Algorithm = (*Algorithm7Code)(&value)
@@ -20,4 +18,3 @@ func (a *AlgorithmIdentification11) AddParameter() *Parameter4 {
 	a.Parameter = new(Parameter4)
 	return a.Parameter
 }
-

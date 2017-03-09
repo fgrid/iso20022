@@ -26,9 +26,7 @@ type CorporateActionInformation2 struct {
 
 	// Identification of the secondary underlying financial instrument, ie, the non-principal financial instrument affected by the corporate action event.
 	OtherUnderlyingSecurity []*FinancialInstrumentDescription3 `xml:"OthrUndrlygScty,omitempty"`
-
 }
-
 
 func (c *CorporateActionInformation2) AddAgentIdentification() *PartyIdentification2Choice {
 	c.AgentIdentification = new(PartyIdentification2Choice)
@@ -64,8 +62,7 @@ func (c *CorporateActionInformation2) AddUnderlyingSecurity() *FinancialInstrume
 }
 
 func (c *CorporateActionInformation2) AddOtherUnderlyingSecurity() *FinancialInstrumentDescription3 {
-	newValue := new (FinancialInstrumentDescription3)
+	newValue := new(FinancialInstrumentDescription3)
 	c.OtherUnderlyingSecurity = append(c.OtherUnderlyingSecurity, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.005.001.04 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.005.001.04 Document"`
 	Message *RequestForAccountManagementStatusReportV04 `xml:"ReqForAcctMgmtStsRpt"`
 }
 
@@ -22,14 +22,12 @@ func (d *Document00500104) AddMessage() *RequestForAccountManagementStatusReport
 // The RequestForAccountManagementStatusReport message is used to request the processing status of a previously sent AccountOpeningInstruction message or AccountModificationInstruction message for which a AccountDetailsConfirmation message has not yet been received.
 type RequestForAccountManagementStatusReportV04 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Identifies the account for which the status of the account management instruction is requested.
 	RequestDetails *iso20022.AccountManagementMessageReference3 `xml:"ReqDtls"`
-
 }
-
 
 func (r *RequestForAccountManagementStatusReportV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -40,4 +38,3 @@ func (r *RequestForAccountManagementStatusReportV04) AddRequestDetails() *iso200
 	r.RequestDetails = new(iso20022.AccountManagementMessageReference3)
 	return r.RequestDetails
 }
-

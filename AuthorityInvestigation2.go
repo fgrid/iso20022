@@ -14,9 +14,7 @@ type AuthorityInvestigation2 struct {
 
 	// Additional information, in free text form, to complement the requested information.
 	AdditionalInformation *Max500Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *AuthorityInvestigation2) AddType() *AuthorityRequestType1 {
 	a.Type = new(AuthorityRequestType1)
@@ -36,4 +34,3 @@ func (a *AuthorityInvestigation2) AddAdditionalInvestigatedParties() *Investigat
 func (a *AuthorityInvestigation2) SetAdditionalInformation(value string) {
 	a.AdditionalInformation = (*Max500Text)(&value)
 }
-

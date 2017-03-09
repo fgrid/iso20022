@@ -29,9 +29,7 @@ type CancellationStatusAndReason2 struct {
 
 	// Party that initiates the status.
 	StatusInitiator *PartyIdentification2Choice `xml:"StsInitr,omitempty"`
-
 }
-
 
 func (c *CancellationStatusAndReason2) SetMasterReference(value string) {
 	c.MasterReference = (*Max35Text)(&value)
@@ -73,4 +71,3 @@ func (c *CancellationStatusAndReason2) AddStatusInitiator() *PartyIdentification
 	c.StatusInitiator = new(PartyIdentification2Choice)
 	return c.StatusInitiator
 }
-

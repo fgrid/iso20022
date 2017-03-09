@@ -11,9 +11,7 @@ type IndividualMovementStatus1 struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *DistributionRejectionStatus1 `xml:"RjctdSts"`
-
 }
-
 
 func (i *IndividualMovementStatus1) SetMovementIdentification(value string) {
 	i.MovementIdentification = (*Max35Text)(&value)
@@ -28,4 +26,3 @@ func (i *IndividualMovementStatus1) AddRejectedStatus() *DistributionRejectionSt
 	i.RejectedStatus = new(DistributionRejectionStatus1)
 	return i.RejectedStatus
 }
-

@@ -11,9 +11,7 @@ type InterestRateUsedForPaymentFormat9Choice struct {
 
 	// Specifies different formats for interest rate used for payment.
 	RateTypeAndAmountAndRateStatus *RateTypeAndAmountAndStatus32 `xml:"RateTpAndAmtAndRateSts"`
-
 }
-
 
 func (i *InterestRateUsedForPaymentFormat9Choice) SetRate(value string) {
 	i.Rate = (*PercentageRate)(&value)
@@ -27,4 +25,3 @@ func (i *InterestRateUsedForPaymentFormat9Choice) AddRateTypeAndAmountAndRateSta
 	i.RateTypeAndAmountAndRateStatus = new(RateTypeAndAmountAndStatus32)
 	return i.RateTypeAndAmountAndRateStatus
 }
-

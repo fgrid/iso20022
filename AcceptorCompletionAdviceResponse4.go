@@ -14,9 +14,7 @@ type AcceptorCompletionAdviceResponse4 struct {
 
 	// Additional information incorporated as an extension to the message.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AcceptorCompletionAdviceResponse4) AddEnvironment() *CardPaymentEnvironment33 {
 	a.Environment = new(CardPaymentEnvironment33)
@@ -34,8 +32,7 @@ func (a *AcceptorCompletionAdviceResponse4) AddTMSTrigger() *TMSTrigger1 {
 }
 
 func (a *AcceptorCompletionAdviceResponse4) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -14,9 +14,7 @@ type DocumentToSend1 struct {
 
 	// Communication means used to send information.
 	ExtendedMethodOfTransmission *Extended350Code `xml:"XtndedMtdOfTrnsmssn"`
-
 }
-
 
 func (d *DocumentToSend1) SetType(value string) {
 	d.Type = (*Max140Text)(&value)
@@ -34,4 +32,3 @@ func (d *DocumentToSend1) SetMethodOfTransmission(value string) {
 func (d *DocumentToSend1) SetExtendedMethodOfTransmission(value string) {
 	d.ExtendedMethodOfTransmission = (*Extended350Code)(&value)
 }
-

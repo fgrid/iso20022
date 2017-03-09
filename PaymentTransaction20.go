@@ -11,9 +11,7 @@ type PaymentTransaction20 struct {
 
 	// Choice between cash-in or cash-out.
 	CashInOrOut *CashInOrOut4Choice `xml:"CshInOrOut"`
-
 }
-
 
 func (p *PaymentTransaction20) SetSettlementAmount(value, currency string) {
 	p.SettlementAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -27,4 +25,3 @@ func (p *PaymentTransaction20) AddCashInOrOut() *CashInOrOut4Choice {
 	p.CashInOrOut = new(CashInOrOut4Choice)
 	return p.CashInOrOut
 }
-

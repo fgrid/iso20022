@@ -17,9 +17,7 @@ type PointOfInteraction4 struct {
 
 	// Data related to a component of the POI (Point Of Interaction) performing the transaction.
 	Component []*PointOfInteractionComponent5 `xml:"Cmpnt,omitempty"`
-
 }
-
 
 func (p *PointOfInteraction4) AddIdentification() *GenericIdentification32 {
 	p.Identification = new(GenericIdentification32)
@@ -40,8 +38,7 @@ func (p *PointOfInteraction4) AddCapabilities() *PointOfInteractionCapabilities3
 }
 
 func (p *PointOfInteraction4) AddComponent() *PointOfInteractionComponent5 {
-	newValue := new (PointOfInteractionComponent5)
+	newValue := new(PointOfInteractionComponent5)
 	p.Component = append(p.Component, newValue)
 	return newValue
 }
-

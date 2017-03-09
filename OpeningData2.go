@@ -26,9 +26,7 @@ type OpeningData2 struct {
 
 	// Set of parameters used to calculate the valuation rate to be applied to a non-deliverable agreement.
 	ValuationConditions *NonDeliverableForwardValuationConditions2 `xml:"ValtnConds"`
-
 }
-
 
 func (o *OpeningData2) SetTradeDate(value string) {
 	o.TradeDate = (*ISODate)(&value)
@@ -64,4 +62,3 @@ func (o *OpeningData2) AddValuationConditions() *NonDeliverableForwardValuationC
 	o.ValuationConditions = new(NonDeliverableForwardValuationConditions2)
 	return o.ValuationConditions
 }
-

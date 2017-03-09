@@ -39,9 +39,7 @@ type CardAccount6 struct {
 
 	// Deposit limits for the account.
 	DepositLimits *ATMTransactionAmounts5 `xml:"DpstLmts,omitempty"`
-
 }
-
 
 func (c *CardAccount6) SetAccountType(value string) {
 	c.AccountType = (*CardAccountType2Code)(&value)
@@ -95,4 +93,3 @@ func (c *CardAccount6) AddDepositLimits() *ATMTransactionAmounts5 {
 	c.DepositLimits = new(ATMTransactionAmounts5)
 	return c.DepositLimits
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document04000104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.040.001.04 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:camt.040.001.04 Document"`
 	Message *FundEstimatedCashForecastReportV04 `xml:"FndEstmtdCshFcstRpt"`
 }
 
@@ -54,11 +54,9 @@ type FundEstimatedCashForecastReportV04 struct {
 	// Estimated net cash as a result of the cash-in and cash-out flows.
 	ConsolidatedNetCashForecast *iso20022.NetCashForecast3 `xml:"CnsltdNetCshFcst,omitempty"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundEstimatedCashForecastReportV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	f.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -71,13 +69,13 @@ func (f *FundEstimatedCashForecastReportV04) AddPoolReference() *iso20022.Additi
 }
 
 func (f *FundEstimatedCashForecastReportV04) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.PreviousReference = append(f.PreviousReference, newValue)
 	return newValue
 }
 
 func (f *FundEstimatedCashForecastReportV04) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
@@ -88,13 +86,13 @@ func (f *FundEstimatedCashForecastReportV04) AddMessagePagination() *iso20022.Pa
 }
 
 func (f *FundEstimatedCashForecastReportV04) AddFundOrSubFundDetails() *iso20022.Fund1 {
-	newValue := new (iso20022.Fund1)
+	newValue := new(iso20022.Fund1)
 	f.FundOrSubFundDetails = append(f.FundOrSubFundDetails, newValue)
 	return newValue
 }
 
 func (f *FundEstimatedCashForecastReportV04) AddEstimatedFundCashForecastDetails() *iso20022.EstimatedFundCashForecast6 {
-	newValue := new (iso20022.EstimatedFundCashForecast6)
+	newValue := new(iso20022.EstimatedFundCashForecast6)
 	f.EstimatedFundCashForecastDetails = append(f.EstimatedFundCashForecastDetails, newValue)
 	return newValue
 }
@@ -105,8 +103,7 @@ func (f *FundEstimatedCashForecastReportV04) AddConsolidatedNetCashForecast() *i
 }
 
 func (f *FundEstimatedCashForecastReportV04) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

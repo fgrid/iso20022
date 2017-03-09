@@ -8,9 +8,7 @@ type ReferredDocumentType1Choice struct {
 
 	// Proprietary identification of the type of the remittance document.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (r *ReferredDocumentType1Choice) SetCode(value string) {
 	r.Code = (*DocumentType5Code)(&value)
@@ -19,4 +17,3 @@ func (r *ReferredDocumentType1Choice) SetCode(value string) {
 func (r *ReferredDocumentType1Choice) SetProprietary(value string) {
 	r.Proprietary = (*Max35Text)(&value)
 }
-

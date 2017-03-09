@@ -33,7 +33,7 @@ type OtherCollateral6 struct {
 	// Party that issues the bank guarantee or letter of / documentary credit.
 	Issuer *PartyIdentification100Choice `xml:"Issr,omitempty"`
 
-	// Quantity blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral. 
+	// Quantity blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral.
 	BlockedQuantity *FinancialInstrumentQuantity1Choice `xml:"BlckdQty,omitempty"`
 
 	// Valuation date of the other collateral when it was taken as collateral.
@@ -56,9 +56,7 @@ type OtherCollateral6 struct {
 
 	// Account to or from which a securities entry is made.
 	SafekeepingAccount *SecuritiesAccount19 `xml:"SfkpgAcct,omitempty"`
-
 }
-
 
 func (o *OtherCollateral6) SetAssetNumber(value string) {
 	o.AssetNumber = (*Max35Text)(&value)
@@ -139,4 +137,3 @@ func (o *OtherCollateral6) AddSafekeepingAccount() *SecuritiesAccount19 {
 	o.SafekeepingAccount = new(SecuritiesAccount19)
 	return o.SafekeepingAccount
 }
-

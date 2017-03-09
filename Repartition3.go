@@ -11,9 +11,7 @@ type Repartition3 struct {
 
 	// When a fund has multiple currencies within same ISIN, this indicates the currency of the savings or withdrawal plan.
 	CurrencyOfPlan *CurrencyCode `xml:"CcyOfPlan,omitempty"`
-
 }
-
 
 func (r *Repartition3) AddQuantity() *UnitsOrAmountOrPercentage1Choice {
 	r.Quantity = new(UnitsOrAmountOrPercentage1Choice)
@@ -28,4 +26,3 @@ func (r *Repartition3) AddFinancialInstrument() *FinancialInstrument29 {
 func (r *Repartition3) SetCurrencyOfPlan(value string) {
 	r.CurrencyOfPlan = (*CurrencyCode)(&value)
 }
-

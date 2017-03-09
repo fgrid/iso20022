@@ -53,9 +53,7 @@ type FinancialItemParameters1 struct {
 
 	// Identification of the geographical environment of the trade market.
 	TradeMarket *TradeMarket1Choice `xml:"TradMkt,omitempty"`
-
 }
-
 
 func (f *FinancialItemParameters1) SetIdentifier(value string) {
 	f.Identifier = (*Max35Text)(&value)
@@ -66,7 +64,7 @@ func (f *FinancialItemParameters1) SetIssueDate(value string) {
 }
 
 func (f *FinancialItemParameters1) AddRelatedItem() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.RelatedItem = append(f.RelatedItem, newValue)
 	return newValue
 }
@@ -110,7 +108,7 @@ func (f *FinancialItemParameters1) AddBuyerFinancialAgent() *QualifiedPartyIdent
 }
 
 func (f *FinancialItemParameters1) AddGoverningContract() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.GoverningContract = append(f.GoverningContract, newValue)
 	return newValue
 }
@@ -138,4 +136,3 @@ func (f *FinancialItemParameters1) AddTradeMarket() *TradeMarket1Choice {
 	f.TradeMarket = new(TradeMarket1Choice)
 	return f.TradeMarket
 }
-

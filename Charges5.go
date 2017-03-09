@@ -17,9 +17,7 @@ type Charges5 struct {
 
 	// Type of charges. For example: transaction charges, financing charges, deferred payment, interests.
 	Type *Max35Text `xml:"Tp,omitempty"`
-
 }
-
 
 func (c *Charges5) SetChargesPayer(value string) {
 	c.ChargesPayer = (*BankRole1Code)(&value)
@@ -40,4 +38,3 @@ func (c *Charges5) SetPercentage(value string) {
 func (c *Charges5) SetType(value string) {
 	c.Type = (*Max35Text)(&value)
 }
-

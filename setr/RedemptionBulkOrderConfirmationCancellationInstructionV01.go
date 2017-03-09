@@ -7,7 +7,7 @@ import (
 )
 
 type Document05300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.053.001.01 Document"`
+	XMLName xml.Name                                                   `xml:"urn:iso:std:iso:20022:tech:xsd:setr.053.001.01 Document"`
 	Message *RedemptionBulkOrderConfirmationCancellationInstructionV01 `xml:"RedBlkOrdrConfCxlInstrV01"`
 }
 
@@ -35,7 +35,7 @@ func (d *Document05300101) AddMessage() *RedemptionBulkOrderConfirmationCancella
 // The message identification of the RedemptionBulkOrderConfirmation message in which the individual order confirmation was conveyed may also be quoted in PreviousReference.
 type RedemptionBulkOrderConfirmationCancellationInstructionV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -55,9 +55,7 @@ type RedemptionBulkOrderConfirmationCancellationInstructionV01 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkOrderConfirmationCancellationInstructionV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -70,7 +68,7 @@ func (r *RedemptionBulkOrderConfirmationCancellationInstructionV01) AddPoolRefer
 }
 
 func (r *RedemptionBulkOrderConfirmationCancellationInstructionV01) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	r.PreviousReference = append(r.PreviousReference, newValue)
 	return newValue
 }
@@ -94,4 +92,3 @@ func (r *RedemptionBulkOrderConfirmationCancellationInstructionV01) AddCopyDetai
 	r.CopyDetails = new(iso20022.CopyInformation2)
 	return r.CopyDetails
 }
-

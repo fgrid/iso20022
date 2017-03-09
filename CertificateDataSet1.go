@@ -50,9 +50,7 @@ type CertificateDataSet1 struct {
 
 	// Additional and important information that could not be captured by structured fields.
 	AdditionalInformation []*Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CertificateDataSet1) AddDataSetIdentification() *DocumentIdentification1 {
 	c.DataSetIdentification = new(DocumentIdentification1)
@@ -64,7 +62,7 @@ func (c *CertificateDataSet1) SetCertificateType(value string) {
 }
 
 func (c *CertificateDataSet1) AddLineItem() *LineItemAndPOIdentification1 {
-	newValue := new (LineItemAndPOIdentification1)
+	newValue := new(LineItemAndPOIdentification1)
 	c.LineItem = append(c.LineItem, newValue)
 	return newValue
 }
@@ -128,4 +126,3 @@ func (c *CertificateDataSet1) AddManufacturer() *PartyIdentification26 {
 func (c *CertificateDataSet1) AddAdditionalInformation(value string) {
 	c.AdditionalInformation = append(c.AdditionalInformation, (*Max350Text)(&value))
 }
-

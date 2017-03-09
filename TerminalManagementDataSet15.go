@@ -11,9 +11,7 @@ type TerminalManagementDataSet15 struct {
 
 	// Content of the management plan.
 	Content *ManagementPlanContent4 `xml:"Cntt,omitempty"`
-
 }
-
 
 func (t *TerminalManagementDataSet15) AddIdentification() *DataSetIdentification4 {
 	t.Identification = new(DataSetIdentification4)
@@ -28,4 +26,3 @@ func (t *TerminalManagementDataSet15) AddContent() *ManagementPlanContent4 {
 	t.Content = new(ManagementPlanContent4)
 	return t.Content
 }
-

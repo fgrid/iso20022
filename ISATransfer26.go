@@ -6,7 +6,7 @@ type ISATransfer26 struct {
 	// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
 	MasterReference *Max35Text `xml:"MstrRef,omitempty"`
 
-	// Identification of the confirmation assigned by the transferor to the transfer. 
+	// Identification of the confirmation assigned by the transferor to the transfer.
 	TransferConfirmationIdentification *Max35Text `xml:"TrfConfId"`
 
 	// Identification assigned to the transfer of asset, typically assigned by the transferee.
@@ -35,9 +35,7 @@ type ISATransfer26 struct {
 
 	// Specifies the underlying assets for the ISA or portfolio.
 	FinancialInstrumentAssetForTransfer []*FinancialInstrument48 `xml:"FinInstrmAsstForTrf,omitempty"`
-
 }
-
 
 func (i *ISATransfer26) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -83,8 +81,7 @@ func (i *ISATransfer26) SetAllOtherCash(value string) {
 }
 
 func (i *ISATransfer26) AddFinancialInstrumentAssetForTransfer() *FinancialInstrument48 {
-	newValue := new (FinancialInstrument48)
+	newValue := new(FinancialInstrument48)
 	i.FinancialInstrumentAssetForTransfer = append(i.FinancialInstrumentAssetForTransfer, newValue)
 	return newValue
 }
-

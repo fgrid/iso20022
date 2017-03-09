@@ -12,8 +12,8 @@ type CorporateActionOption1 struct {
 	// Specifies the status of the option.
 	OptionAvailabilityStatus *CorporateActionEventStatus2FormatChoice `xml:"OptnAvlbtySts"`
 
-	// Whether or not certification is required from the account owner. 
-	// Yes: certification required 
+	// Whether or not certification is required from the account owner.
+	// Yes: certification required
 	// No: no certification required
 	CertificationIndicator *YesNoIndicator `xml:"CertfctnInd,omitempty"`
 
@@ -73,9 +73,7 @@ type CorporateActionOption1 struct {
 
 	// Provides additional information.
 	CorporateActionAdditionalInformation *CorporateActionNarrative1 `xml:"CorpActnAddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionOption1) SetOptionNumber(value string) {
 	c.OptionNumber = (*Exact3NumericText)(&value)
@@ -115,7 +113,7 @@ func (c *CorporateActionOption1) AddAgentCashAccountIdentification() *AccountIde
 }
 
 func (c *CorporateActionOption1) AddOfferType() *OfferType1FormatChoice {
-	newValue := new (OfferType1FormatChoice)
+	newValue := new(OfferType1FormatChoice)
 	c.OfferType = append(c.OfferType, newValue)
 	return newValue
 }
@@ -154,19 +152,19 @@ func (c *CorporateActionOption1) AddPeriodDetails() *CorporateActionPeriod2 {
 }
 
 func (c *CorporateActionOption1) AddSecuritiesMovementDetails() *SecurityOption1 {
-	newValue := new (SecurityOption1)
+	newValue := new(SecurityOption1)
 	c.SecuritiesMovementDetails = append(c.SecuritiesMovementDetails, newValue)
 	return newValue
 }
 
 func (c *CorporateActionOption1) AddCashMovementDetails() *CashOption1 {
-	newValue := new (CashOption1)
+	newValue := new(CashOption1)
 	c.CashMovementDetails = append(c.CashMovementDetails, newValue)
 	return newValue
 }
 
 func (c *CorporateActionOption1) AddCorporateActionOtherAgentDetails() *CorporateActionAgent1 {
-	newValue := new (CorporateActionAgent1)
+	newValue := new(CorporateActionAgent1)
 	c.CorporateActionOtherAgentDetails = append(c.CorporateActionOtherAgentDetails, newValue)
 	return newValue
 }
@@ -181,7 +179,7 @@ func (c *CorporateActionOption1) SetRedemptionChargesAppliedIndicator(value stri
 }
 
 func (c *CorporateActionOption1) AddOptionFeatures() *OptionFeatures1FormatChoice {
-	newValue := new (OptionFeatures1FormatChoice)
+	newValue := new(OptionFeatures1FormatChoice)
 	c.OptionFeatures = append(c.OptionFeatures, newValue)
 	return newValue
 }
@@ -190,4 +188,3 @@ func (c *CorporateActionOption1) AddCorporateActionAdditionalInformation() *Corp
 	c.CorporateActionAdditionalInformation = new(CorporateActionNarrative1)
 	return c.CorporateActionAdditionalInformation
 }
-

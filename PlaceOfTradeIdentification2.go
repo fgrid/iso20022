@@ -8,9 +8,7 @@ type PlaceOfTradeIdentification2 struct {
 
 	// Legal entity identification as an alternate identification for a place of trade.
 	LEI *LEIIdentifier `xml:"LEI,omitempty"`
-
 }
-
 
 func (p *PlaceOfTradeIdentification2) AddMarketTypeAndIdentification() *MarketIdentification90 {
 	p.MarketTypeAndIdentification = new(MarketIdentification90)
@@ -20,4 +18,3 @@ func (p *PlaceOfTradeIdentification2) AddMarketTypeAndIdentification() *MarketId
 func (p *PlaceOfTradeIdentification2) SetLEI(value string) {
 	p.LEI = (*LEIIdentifier)(&value)
 }
-

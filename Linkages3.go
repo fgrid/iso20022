@@ -11,9 +11,7 @@ type Linkages3 struct {
 
 	// Reference to the linked transaction.
 	Reference *References6Choice `xml:"Ref"`
-
 }
-
 
 func (l *Linkages3) AddProcessingPosition() *ProcessingPosition2Choice {
 	l.ProcessingPosition = new(ProcessingPosition2Choice)
@@ -29,4 +27,3 @@ func (l *Linkages3) AddReference() *References6Choice {
 	l.Reference = new(References6Choice)
 	return l.Reference
 }
-

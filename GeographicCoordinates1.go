@@ -9,9 +9,7 @@ type GeographicCoordinates1 struct {
 	// Angular measurement of the distance of a location on the earth east or west of the Greenwich observatory.
 	// The longitude is measured in degrees, minutes and seconds, following by 'E' for the east and 'W' for the west (for example 2°17'40" E for the Eiffel Tower longitude).
 	Longitude *Max16Text `xml:"Long"`
-
 }
-
 
 func (g *GeographicCoordinates1) SetLatitude(value string) {
 	g.Latitude = (*Max16Text)(&value)
@@ -20,4 +18,3 @@ func (g *GeographicCoordinates1) SetLatitude(value string) {
 func (g *GeographicCoordinates1) SetLongitude(value string) {
 	g.Longitude = (*Max16Text)(&value)
 }
-

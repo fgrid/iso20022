@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.016.001.02 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:setr.016.001.02 Document"`
 	Message *OrderInstructionStatusReportV02 `xml:"setr.016.001.02"`
 }
 
@@ -50,18 +50,16 @@ type OrderInstructionStatusReportV02 struct {
 
 	// Status report details of the individual orders of a bulk or multiple order that was previously received.
 	IndividualOrderDetailsReport []*iso20022.IndividualOrderStatusAndReason1 `xml:"IndvOrdrDtlsRpt"`
-
 }
 
-
 func (o *OrderInstructionStatusReportV02) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.OtherReference = append(o.OtherReference, newValue)
 	return newValue
 }
 
 func (o *OrderInstructionStatusReportV02) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.RelatedReference = append(o.RelatedReference, newValue)
 	return newValue
 }
@@ -77,8 +75,7 @@ func (o *OrderInstructionStatusReportV02) AddOrderDetailsReport() *iso20022.Orde
 }
 
 func (o *OrderInstructionStatusReportV02) AddIndividualOrderDetailsReport() *iso20022.IndividualOrderStatusAndReason1 {
-	newValue := new (iso20022.IndividualOrderStatusAndReason1)
+	newValue := new(iso20022.IndividualOrderStatusAndReason1)
 	o.IndividualOrderDetailsReport = append(o.IndividualOrderDetailsReport, newValue)
 	return newValue
 }
-

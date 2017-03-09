@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.004.001.03 Document"`
+	XMLName xml.Name            `xml:"urn:iso:std:iso:20022:tech:xsd:setr.004.001.03 Document"`
 	Message *RedemptionOrderV03 `xml:"RedOrdrV03"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document00400103) AddMessage() *RedemptionOrderV03 {
 // If there are redemption orders for the same financial instrument but for different accounts, then the RedemptionBulkOrder message must be used.
 type RedemptionOrderV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -44,9 +44,7 @@ type RedemptionOrderV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RedemptionOrderV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -59,7 +57,7 @@ func (r *RedemptionOrderV03) AddPoolReference() *iso20022.AdditionalReference3 {
 }
 
 func (r *RedemptionOrderV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	r.PreviousReference = append(r.PreviousReference, newValue)
 	return newValue
 }
@@ -70,7 +68,7 @@ func (r *RedemptionOrderV03) AddMultipleOrderDetails() *iso20022.RedemptionMulti
 }
 
 func (r *RedemptionOrderV03) AddRelatedPartyDetails() *iso20022.Intermediary8 {
-	newValue := new (iso20022.Intermediary8)
+	newValue := new(iso20022.Intermediary8)
 	r.RelatedPartyDetails = append(r.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -81,8 +79,7 @@ func (r *RedemptionOrderV03) AddCopyDetails() *iso20022.CopyInformation2 {
 }
 
 func (r *RedemptionOrderV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

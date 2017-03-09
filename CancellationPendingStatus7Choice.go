@@ -11,9 +11,7 @@ type CancellationPendingStatus7Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (c *CancellationPendingStatus7Choice) SetReason(value string) {
 	c.Reason = (*Max350Text)(&value)
@@ -27,4 +25,3 @@ func (c *CancellationPendingStatus7Choice) AddDataSourceScheme() *GenericIdentif
 func (c *CancellationPendingStatus7Choice) SetNoSpecifiedReason(value string) {
 	c.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

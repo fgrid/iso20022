@@ -14,9 +14,7 @@ type CancellationProcessingStatus6Choice struct {
 
 	// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts,omitempty"`
-
 }
-
 
 func (c *CancellationProcessingStatus6Choice) AddCancellationPending() *CancellationReason11Choice {
 	c.CancellationPending = new(CancellationReason11Choice)
@@ -37,4 +35,3 @@ func (c *CancellationProcessingStatus6Choice) AddProprietaryStatus() *Proprietar
 	c.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return c.ProprietaryStatus
 }
-

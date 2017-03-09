@@ -9,9 +9,7 @@ type MandateTypeInformation1 struct {
 	// User community specific instrument.
 	// Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.
 	LocalInstrument *LocalInstrument2Choice `xml:"LclInstrm,omitempty"`
-
 }
-
 
 func (m *MandateTypeInformation1) AddServiceLevel() *ServiceLevel8Choice {
 	m.ServiceLevel = new(ServiceLevel8Choice)
@@ -22,4 +20,3 @@ func (m *MandateTypeInformation1) AddLocalInstrument() *LocalInstrument2Choice {
 	m.LocalInstrument = new(LocalInstrument2Choice)
 	return m.LocalInstrument
 }
-

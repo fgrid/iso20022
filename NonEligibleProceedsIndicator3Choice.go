@@ -8,9 +8,7 @@ type NonEligibleProceedsIndicator3Choice struct {
 
 	// Proprietary identification to specify information regarding the non eligibility of the outturn resources.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (n *NonEligibleProceedsIndicator3Choice) SetCode(value string) {
 	n.Code = (*NonEligibleProceedsIndicator1Code)(&value)
@@ -20,4 +18,3 @@ func (n *NonEligibleProceedsIndicator3Choice) AddProprietary() *GenericIdentific
 	n.Proprietary = new(GenericIdentification30)
 	return n.Proprietary
 }
-

@@ -8,9 +8,7 @@ type CashInOrOut6Choice struct {
 
 	// Payment instrument for the cash-out flow.
 	CashOutPaymentInstrument *PaymentInstrument11Choice `xml:"CshOutPmtInstrm"`
-
 }
-
 
 func (c *CashInOrOut6Choice) AddCashInPaymentInstrument() *PaymentInstrument12Choice {
 	c.CashInPaymentInstrument = new(PaymentInstrument12Choice)
@@ -21,4 +19,3 @@ func (c *CashInOrOut6Choice) AddCashOutPaymentInstrument() *PaymentInstrument11C
 	c.CashOutPaymentInstrument = new(PaymentInstrument11Choice)
 	return c.CashOutPaymentInstrument
 }
-

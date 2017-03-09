@@ -38,9 +38,7 @@ type AccountParties13 struct {
 
 	// Party that registers its name with the issuer and the name used for the registration.
 	RegisteredShareholderName *RegisteredShareholderName1Choice `xml:"RegdShrhldrNm,omitempty"`
-
 }
-
 
 func (a *AccountParties13) AddPrincipalAccountParty() *AccountParties8Choice {
 	a.PrincipalAccountParty = new(AccountParties8Choice)
@@ -48,25 +46,25 @@ func (a *AccountParties13) AddPrincipalAccountParty() *AccountParties8Choice {
 }
 
 func (a *AccountParties13) AddSecondaryOwner() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.SecondaryOwner = append(a.SecondaryOwner, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddBeneficiary() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.Beneficiary = append(a.Beneficiary, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddPowerOfAttorney() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.PowerOfAttorney = append(a.PowerOfAttorney, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddLegalGuardian() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.LegalGuardian = append(a.LegalGuardian, newValue)
 	return newValue
 }
@@ -77,31 +75,31 @@ func (a *AccountParties13) AddCustodianForMinor() *InvestmentAccountOwnershipInf
 }
 
 func (a *AccountParties13) AddSuccessorOnDeath() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.SuccessorOnDeath = append(a.SuccessorOnDeath, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddAdministrator() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.Administrator = append(a.Administrator, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddOtherParty() *ExtendedParty9 {
-	newValue := new (ExtendedParty9)
+	newValue := new(ExtendedParty9)
 	a.OtherParty = append(a.OtherParty, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddGranter() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.Granter = append(a.Granter, newValue)
 	return newValue
 }
 
 func (a *AccountParties13) AddSettlor() *InvestmentAccountOwnershipInformation12 {
-	newValue := new (InvestmentAccountOwnershipInformation12)
+	newValue := new(InvestmentAccountOwnershipInformation12)
 	a.Settlor = append(a.Settlor, newValue)
 	return newValue
 }
@@ -110,4 +108,3 @@ func (a *AccountParties13) AddRegisteredShareholderName() *RegisteredShareholder
 	a.RegisteredShareholderName = new(RegisteredShareholderName1Choice)
 	return a.RegisteredShareholderName
 }
-

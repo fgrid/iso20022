@@ -11,9 +11,7 @@ type SubBalanceQuantity3Choice struct {
 
 	// Quantity of securities in the sub-balance and whether the balance is available.
 	QuantityAndAvailability *QuantityAndAvailability1 `xml:"QtyAndAvlbty"`
-
 }
-
 
 func (s *SubBalanceQuantity3Choice) AddQuantity() *FinancialInstrumentQuantity1Choice {
 	s.Quantity = new(FinancialInstrumentQuantity1Choice)
@@ -29,4 +27,3 @@ func (s *SubBalanceQuantity3Choice) AddQuantityAndAvailability() *QuantityAndAva
 	s.QuantityAndAvailability = new(QuantityAndAvailability1)
 	return s.QuantityAndAvailability
 }
-

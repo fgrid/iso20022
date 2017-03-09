@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.018.001.02 Document"`
+	XMLName xml.Name                                      `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.018.001.02 Document"`
 	Message *AccountMandateMaintenanceAmendmentRequestV02 `xml:"AcctMndtMntncAmdmntReq"`
 }
 
@@ -16,11 +16,11 @@ func (d *Document01800102) AddMessage() *AccountMandateMaintenanceAmendmentReque
 	return d.Message
 }
 
-// The AccountMandateMaintenanceAmendmentRequest message is sent from an organisation to a financial institution as part of the account maintenance process. It is sent in response to a request from the financial institution to send additional information. Usage: this update is only about mandate information. 
-// If modification codes are not used: the organisation will specify under the “Mandate” and “Group” tags the complete information as it should be in the financial institution’s records after processing the update request. 
+// The AccountMandateMaintenanceAmendmentRequest message is sent from an organisation to a financial institution as part of the account maintenance process. It is sent in response to a request from the financial institution to send additional information. Usage: this update is only about mandate information.
+// If modification codes are not used: the organisation will specify under the “Mandate” and “Group” tags the complete information as it should be in the financial institution’s records after processing the update request.
 // If modification codes are used (in that case, they must be used everywhere): the organisation will specify under the “Mandate” and “Group” tags which elements must be added, deleted, modified, or if they are unchanged.
 // It is not possible to update the account characteristics or organisation information with this message.
-// 
+//
 type AccountMandateMaintenanceAmendmentRequestV02 struct {
 
 	// Set of elements for the identification of the message and related references.
@@ -38,8 +38,8 @@ type AccountMandateMaintenanceAmendmentRequestV02 struct {
 	// Unique and unambiguous identification of the account between the account owner and the account servicer.
 	AccountIdentification []*iso20022.AccountForAction1 `xml:"AcctId"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification5 `xml:"AcctSvcrId"`
 
 	// Identification of the organisation requesting the change.
@@ -56,9 +56,7 @@ type AccountMandateMaintenanceAmendmentRequestV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AccountMandateMaintenanceAmendmentRequestV02) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -81,7 +79,7 @@ func (a *AccountMandateMaintenanceAmendmentRequestV02) AddUnderlyingMasterAgreem
 }
 
 func (a *AccountMandateMaintenanceAmendmentRequestV02) AddAccountIdentification() *iso20022.AccountForAction1 {
-	newValue := new (iso20022.AccountForAction1)
+	newValue := new(iso20022.AccountForAction1)
 	a.AccountIdentification = append(a.AccountIdentification, newValue)
 	return newValue
 }
@@ -97,26 +95,25 @@ func (a *AccountMandateMaintenanceAmendmentRequestV02) AddOrganisationIdentifica
 }
 
 func (a *AccountMandateMaintenanceAmendmentRequestV02) AddMandate() *iso20022.OperationMandate3 {
-	newValue := new (iso20022.OperationMandate3)
+	newValue := new(iso20022.OperationMandate3)
 	a.Mandate = append(a.Mandate, newValue)
 	return newValue
 }
 
 func (a *AccountMandateMaintenanceAmendmentRequestV02) AddGroup() *iso20022.Group2 {
-	newValue := new (iso20022.Group2)
+	newValue := new(iso20022.Group2)
 	a.Group = append(a.Group, newValue)
 	return newValue
 }
 
 func (a *AccountMandateMaintenanceAmendmentRequestV02) AddDigitalSignature() *iso20022.PartyAndSignature2 {
-	newValue := new (iso20022.PartyAndSignature2)
+	newValue := new(iso20022.PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
 
 func (a *AccountMandateMaintenanceAmendmentRequestV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.021.001.01 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:semt.021.001.01 Document"`
 	Message *SecuritiesStatementQueryV01 `xml:"SctiesStmtQry"`
 }
 
@@ -60,9 +60,7 @@ type SecuritiesStatementQueryV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesStatementQueryV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -90,7 +88,7 @@ func (s *SecuritiesStatementQueryV01) AddSafekeepingAccount() *iso20022.Securiti
 }
 
 func (s *SecuritiesStatementQueryV01) AddAdditionalQueryParameters() *iso20022.AdditionalQueryParameters1 {
-	newValue := new (iso20022.AdditionalQueryParameters1)
+	newValue := new(iso20022.AdditionalQueryParameters1)
 	s.AdditionalQueryParameters = append(s.AdditionalQueryParameters, newValue)
 	return newValue
 }
@@ -106,8 +104,7 @@ func (s *SecuritiesStatementQueryV01) AddMessageRecipient() *iso20022.PartyIdent
 }
 
 func (s *SecuritiesStatementQueryV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

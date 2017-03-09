@@ -26,9 +26,7 @@ type BalanceAdjustment1 struct {
 
 	// Earnings credit adjustment, debit or credit, resulting from this adjustment’s effect on the average collected balance. If the amount would reduce the credit due then the amount should be negatively signed.
 	EarningsAdjustmentAmount *AmountAndDirection34 `xml:"EarngsAdjstmntAmt,omitempty"`
-
 }
-
 
 func (b *BalanceAdjustment1) SetType(value string) {
 	b.Type = (*BalanceAdjustmentType1Code)(&value)
@@ -64,4 +62,3 @@ func (b *BalanceAdjustment1) AddEarningsAdjustmentAmount() *AmountAndDirection34
 	b.EarningsAdjustmentAmount = new(AmountAndDirection34)
 	return b.EarningsAdjustmentAmount
 }
-

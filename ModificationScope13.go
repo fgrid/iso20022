@@ -8,9 +8,7 @@ type ModificationScope13 struct {
 
 	// Information related to the account to be modified.
 	FundDetails *FinancialInstrument29 `xml:"FndDtls"`
-
 }
-
 
 func (m *ModificationScope13) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification2Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope13) AddFundDetails() *FinancialInstrument29 {
 	m.FundDetails = new(FinancialInstrument29)
 	return m.FundDetails
 }
-

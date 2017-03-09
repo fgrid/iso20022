@@ -11,9 +11,7 @@ type AmountAndCurrencyExchangeDetails2 struct {
 
 	// Reports on currency exchange information.
 	CurrencyExchange *CurrencyExchange3 `xml:"CcyXchg,omitempty"`
-
 }
-
 
 func (a *AmountAndCurrencyExchangeDetails2) SetType(value string) {
 	a.Type = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (a *AmountAndCurrencyExchangeDetails2) AddCurrencyExchange() *CurrencyExcha
 	a.CurrencyExchange = new(CurrencyExchange3)
 	return a.CurrencyExchange
 }
-

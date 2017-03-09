@@ -23,9 +23,7 @@ type RedemptionMultipleExecution2 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	BulkCashSettlementDetails *PaymentTransaction15 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionMultipleExecution2) AddBeneficiaryDetails() *IndividualPerson2 {
 	r.BeneficiaryDetails = new(IndividualPerson2)
@@ -51,7 +49,7 @@ func (r *RedemptionMultipleExecution2) AddInvestmentAccountDetails() *Investment
 }
 
 func (r *RedemptionMultipleExecution2) AddIndividualExecutionDetails() *RedemptionExecution4 {
-	newValue := new (RedemptionExecution4)
+	newValue := new(RedemptionExecution4)
 	r.IndividualExecutionDetails = append(r.IndividualExecutionDetails, newValue)
 	return newValue
 }
@@ -60,4 +58,3 @@ func (r *RedemptionMultipleExecution2) AddBulkCashSettlementDetails() *PaymentTr
 	r.BulkCashSettlementDetails = new(PaymentTransaction15)
 	return r.BulkCashSettlementDetails
 }
-

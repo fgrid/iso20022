@@ -12,9 +12,7 @@ type AcceptorAuthorisationResponse3 struct {
 	// Authorisation response from the acquirer.
 	// Authorisation of a card payment transaction between an acceptor and an acquirer.
 	TransactionResponse *CardPaymentTransaction24 `xml:"TxRspn"`
-
 }
-
 
 func (a *AcceptorAuthorisationResponse3) AddEnvironment() *CardPaymentEnvironment21 {
 	a.Environment = new(CardPaymentEnvironment21)
@@ -30,4 +28,3 @@ func (a *AcceptorAuthorisationResponse3) AddTransactionResponse() *CardPaymentTr
 	a.TransactionResponse = new(CardPaymentTransaction24)
 	return a.TransactionResponse
 }
-

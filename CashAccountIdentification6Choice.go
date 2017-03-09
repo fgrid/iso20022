@@ -8,9 +8,7 @@ type CashAccountIdentification6Choice struct {
 
 	// Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.
 	Proprietary *RestrictedFINX2Max34Text `xml:"Prtry"`
-
 }
-
 
 func (c *CashAccountIdentification6Choice) SetIBAN(value string) {
 	c.IBAN = (*IBAN2007Identifier)(&value)
@@ -19,4 +17,3 @@ func (c *CashAccountIdentification6Choice) SetIBAN(value string) {
 func (c *CashAccountIdentification6Choice) SetProprietary(value string) {
 	c.Proprietary = (*RestrictedFINX2Max34Text)(&value)
 }
-

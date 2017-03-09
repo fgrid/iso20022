@@ -62,9 +62,7 @@ type CurrencyConversion1 struct {
 
 	// Card scheme declaration (disclaimer) to present to the cardholder.
 	DeclarationDetails *Max2048Text `xml:"DclrtnDtls,omitempty"`
-
 }
-
 
 func (c *CurrencyConversion1) SetCurrencyConversionIdentification(value string) {
 	c.CurrencyConversionIdentification = (*Max35Text)(&value)
@@ -135,13 +133,13 @@ func (c *CurrencyConversion1) SetOriginalAmount(value, currency string) {
 }
 
 func (c *CurrencyConversion1) AddCommissionDetails() *Commission19 {
-	newValue := new (Commission19)
+	newValue := new(Commission19)
 	c.CommissionDetails = append(c.CommissionDetails, newValue)
 	return newValue
 }
 
 func (c *CurrencyConversion1) AddMarkUpDetails() *Commission18 {
-	newValue := new (Commission18)
+	newValue := new(Commission18)
 	c.MarkUpDetails = append(c.MarkUpDetails, newValue)
 	return newValue
 }
@@ -149,4 +147,3 @@ func (c *CurrencyConversion1) AddMarkUpDetails() *Commission18 {
 func (c *CurrencyConversion1) SetDeclarationDetails(value string) {
 	c.DeclarationDetails = (*Max2048Text)(&value)
 }
-

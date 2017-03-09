@@ -11,9 +11,7 @@ type ATMCommandParameters1Choice struct {
 
 	// Parameters to be used by the configuration update command.
 	RequiredConfigurationParameter *ATMConfigurationParameter1 `xml:"ReqrdCfgtnParam"`
-
 }
-
 
 func (a *ATMCommandParameters1Choice) SetATMRequiredGlobalStatus(value string) {
 	a.ATMRequiredGlobalStatus = (*ATMStatus1Code)(&value)
@@ -27,4 +25,3 @@ func (a *ATMCommandParameters1Choice) AddRequiredConfigurationParameter() *ATMCo
 	a.RequiredConfigurationParameter = new(ATMConfigurationParameter1)
 	return a.RequiredConfigurationParameter
 }
-

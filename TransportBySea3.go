@@ -11,9 +11,7 @@ type TransportBySea3 struct {
 
 	// Identifies the party that is responsible for the conveyance of the goods from one place to another.
 	SeaCarrierName *Max35Text `xml:"SeaCrrierNm,omitempty"`
-
 }
-
 
 func (t *TransportBySea3) AddPortOfLoading(value string) {
 	t.PortOfLoading = append(t.PortOfLoading, (*Max35Text)(&value))
@@ -26,4 +24,3 @@ func (t *TransportBySea3) AddPortOfDischarge(value string) {
 func (t *TransportBySea3) SetSeaCarrierName(value string) {
 	t.SeaCarrierName = (*Max35Text)(&value)
 }
-

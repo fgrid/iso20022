@@ -14,9 +14,7 @@ type PartyIdentificationAndAccount146 struct {
 
 	// Unambiguous identification of the transaction for the party identified.
 	ProcessingIdentification *RestrictedFINXMax16Text `xml:"PrcgId,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount146) AddIdentification() *PartyIdentification104Choice {
 	p.Identification = new(PartyIdentification104Choice)
@@ -35,4 +33,3 @@ func (p *PartyIdentificationAndAccount146) AddSafekeepingAccount() *SecuritiesAc
 func (p *PartyIdentificationAndAccount146) SetProcessingIdentification(value string) {
 	p.ProcessingIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

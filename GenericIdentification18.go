@@ -11,9 +11,7 @@ type GenericIdentification18 struct {
 
 	// Entity that assigns the identification.
 	Issuer *Max4AlphaNumericText `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GenericIdentification18) SetIdentification(value string) {
 	g.Identification = (*RestrictedFINXMax30Text)(&value)
@@ -26,4 +24,3 @@ func (g *GenericIdentification18) SetSchemeName(value string) {
 func (g *GenericIdentification18) SetIssuer(value string) {
 	g.Issuer = (*Max4AlphaNumericText)(&value)
 }
-

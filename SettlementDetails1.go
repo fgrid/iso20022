@@ -86,9 +86,7 @@ type SettlementDetails1 struct {
 
 	// Specifies whether securities should be included in the pool of securities eligible for collateral purposes.
 	EligibleForCollateral *YesNoIndicator `xml:"ElgblForColl,omitempty"`
-
 }
-
 
 func (s *SettlementDetails1) SetHoldIndicator(value string) {
 	s.HoldIndicator = (*YesNoIndicator)(&value)
@@ -105,7 +103,7 @@ func (s *SettlementDetails1) AddSecuritiesTransactionType() *SecuritiesTransacti
 }
 
 func (s *SettlementDetails1) AddSettlementTransactionCondition() *SettlementTransactionCondition1Choice {
-	newValue := new (SettlementTransactionCondition1Choice)
+	newValue := new(SettlementTransactionCondition1Choice)
 	s.SettlementTransactionCondition = append(s.SettlementTransactionCondition, newValue)
 	return newValue
 }
@@ -226,4 +224,3 @@ func (s *SettlementDetails1) AddModificationCancellationAllowed() *ModificationC
 func (s *SettlementDetails1) SetEligibleForCollateral(value string) {
 	s.EligibleForCollateral = (*YesNoIndicator)(&value)
 }
-

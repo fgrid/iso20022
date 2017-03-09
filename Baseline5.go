@@ -71,9 +71,7 @@ type Baseline5 struct {
 
 	// Specifies that IntentToPayNotice message(s) are expected as part of this transaction.
 	IntentToPayExpected *YesNoIndicator `xml:"InttToPayXpctd"`
-
 }
-
 
 func (b *Baseline5) AddSubmitterBaselineIdentification() *DocumentIdentification1 {
 	b.SubmitterBaselineIdentification = new(DocumentIdentification1)
@@ -110,13 +108,13 @@ func (b *Baseline5) AddSellerBank() *BICIdentification1 {
 }
 
 func (b *Baseline5) AddBuyerSideSubmittingBank() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	b.BuyerSideSubmittingBank = append(b.BuyerSideSubmittingBank, newValue)
 	return newValue
 }
 
 func (b *Baseline5) AddSellerSideSubmittingBank() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	b.SellerSideSubmittingBank = append(b.SellerSideSubmittingBank, newValue)
 	return newValue
 }
@@ -142,7 +140,7 @@ func (b *Baseline5) AddGoods() *LineItem13 {
 }
 
 func (b *Baseline5) AddPaymentTerms() *PaymentTerms5 {
-	newValue := new (PaymentTerms5)
+	newValue := new(PaymentTerms5)
 	b.PaymentTerms = append(b.PaymentTerms, newValue)
 	return newValue
 }
@@ -153,7 +151,7 @@ func (b *Baseline5) AddSettlementTerms() *SettlementTerms3 {
 }
 
 func (b *Baseline5) AddPaymentObligation() *PaymentObligation2 {
-	newValue := new (PaymentObligation2)
+	newValue := new(PaymentObligation2)
 	b.PaymentObligation = append(b.PaymentObligation, newValue)
 	return newValue
 }
@@ -178,13 +176,13 @@ func (b *Baseline5) AddInsuranceDataSetRequired() *RequiredSubmission3 {
 }
 
 func (b *Baseline5) AddCertificateDataSetRequired() *RequiredSubmission4 {
-	newValue := new (RequiredSubmission4)
+	newValue := new(RequiredSubmission4)
 	b.CertificateDataSetRequired = append(b.CertificateDataSetRequired, newValue)
 	return newValue
 }
 
 func (b *Baseline5) AddOtherCertificateDataSetRequired() *RequiredSubmission6 {
-	newValue := new (RequiredSubmission6)
+	newValue := new(RequiredSubmission6)
 	b.OtherCertificateDataSetRequired = append(b.OtherCertificateDataSetRequired, newValue)
 	return newValue
 }
@@ -192,4 +190,3 @@ func (b *Baseline5) AddOtherCertificateDataSetRequired() *RequiredSubmission6 {
 func (b *Baseline5) SetIntentToPayExpected(value string) {
 	b.IntentToPayExpected = (*YesNoIndicator)(&value)
 }
-

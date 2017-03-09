@@ -11,9 +11,7 @@ type BalanceType7Choice struct {
 
 	// Account identification.
 	Account *AccountIdentification5 `xml:"Acct"`
-
 }
-
 
 func (b *BalanceType7Choice) SetCode(value string) {
 	b.Code = (*FinancialAssetBalanceType1Code)(&value)
@@ -28,4 +26,3 @@ func (b *BalanceType7Choice) AddAccount() *AccountIdentification5 {
 	b.Account = new(AccountIdentification5)
 	return b.Account
 }
-

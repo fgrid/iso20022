@@ -8,9 +8,7 @@ type CustomerConductClassification1Choice struct {
 
 	// Conduct type expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (c *CustomerConductClassification1Choice) SetCode(value string) {
 	c.Code = (*ConductClassification1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CustomerConductClassification1Choice) AddProprietary() *GenericIdentifi
 	c.Proprietary = new(GenericIdentification47)
 	return c.Proprietary
 }
-

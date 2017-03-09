@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.006.001.02 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:seev.006.001.02 Document"`
 	Message *MeetingInstructionStatusV02 `xml:"MtgInstrSts"`
 }
 
@@ -43,7 +43,7 @@ type MeetingInstructionStatusV02 struct {
 	// Party reporting the status.
 	ReportingParty *iso20022.PartyIdentification9Choice `xml:"RptgPty"`
 
-	// Identifies the securities for which the meeting is organised. 
+	// Identifies the securities for which the meeting is organised.
 	SecurityIdentification *iso20022.SecurityIdentification3 `xml:"SctyId"`
 
 	// Status applying to the instruction request received. The instruction is identified by the InstructionIdentification.
@@ -51,9 +51,7 @@ type MeetingInstructionStatusV02 struct {
 
 	// Status applying to the instruction cancellation request received. The instruction cancellation is identified by the InstructionCancellationIdentification.
 	CancellationStatus *iso20022.CancellationStatus1Choice `xml:"CxlSts"`
-
 }
-
 
 func (m *MeetingInstructionStatusV02) AddMeetingInstructionStatusIdentification() *iso20022.MessageIdentification1 {
 	m.MeetingInstructionStatusIdentification = new(iso20022.MessageIdentification1)
@@ -94,4 +92,3 @@ func (m *MeetingInstructionStatusV02) AddCancellationStatus() *iso20022.Cancella
 	m.CancellationStatus = new(iso20022.CancellationStatus1Choice)
 	return m.CancellationStatus
 }
-

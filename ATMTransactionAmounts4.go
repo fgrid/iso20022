@@ -17,9 +17,7 @@ type ATMTransactionAmounts4 struct {
 
 	// Remaining monthly amount of the customer totals for withdrawals on the account.
 	MonthlyBalance *DetailedAmount4 `xml:"MnthlyBal,omitempty"`
-
 }
-
 
 func (a *ATMTransactionAmounts4) SetDisplayFlag(value string) {
 	a.DisplayFlag = (*TrueFalseIndicator)(&value)
@@ -43,4 +41,3 @@ func (a *ATMTransactionAmounts4) AddMonthlyBalance() *DetailedAmount4 {
 	a.MonthlyBalance = new(DetailedAmount4)
 	return a.MonthlyBalance
 }
-

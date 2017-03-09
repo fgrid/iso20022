@@ -14,9 +14,7 @@ type AccountRole1 struct {
 
 	// End date related to the role.
 	EndDate *ISODate `xml:"EndDt,omitempty"`
-
 }
-
 
 func (a *AccountRole1) AddParty() *PartyIdentification41 {
 	a.Party = new(PartyIdentification41)
@@ -35,4 +33,3 @@ func (a *AccountRole1) SetStartDate(value string) {
 func (a *AccountRole1) SetEndDate(value string) {
 	a.EndDate = (*ISODate)(&value)
 }
-

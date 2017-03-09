@@ -41,9 +41,7 @@ type PartyProfileInformation3 struct {
 
 	// Specifies the type of due diligence checks carried out on the investor. For definitions of ordinary, simple and enhanced know your customer checks, local market regulations should be consulted.
 	KnowYourCustomerCheckType *KYCCheckType1Choice `xml:"KnowYourCstmrChckTp,omitempty"`
-
 }
-
 
 func (p *PartyProfileInformation3) SetCertificationIndicator(value string) {
 	p.CertificationIndicator = (*YesNoIndicator)(&value)
@@ -100,4 +98,3 @@ func (p *PartyProfileInformation3) AddKnowYourCustomerCheckType() *KYCCheckType1
 	p.KnowYourCustomerCheckType = new(KYCCheckType1Choice)
 	return p.KnowYourCustomerCheckType
 }
-

@@ -11,9 +11,7 @@ type ShipmentDateRange2 struct {
 
 	// Latest date whereby the goods must be shipped.
 	LatestShipmentDate *ISODate `xml:"LatstShipmntDt,omitempty"`
-
 }
-
 
 func (s *ShipmentDateRange2) SetSubQuantityValue(value string) {
 	s.SubQuantityValue = (*DecimalNumber)(&value)
@@ -26,4 +24,3 @@ func (s *ShipmentDateRange2) SetEarliestShipmentDate(value string) {
 func (s *ShipmentDateRange2) SetLatestShipmentDate(value string) {
 	s.LatestShipmentDate = (*ISODate)(&value)
 }
-

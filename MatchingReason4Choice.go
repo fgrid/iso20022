@@ -8,12 +8,10 @@ type MatchingReason4Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
 
-
 func (m *MatchingReason4Choice) AddReason() *AllegementMatchingReason1 {
-	newValue := new (AllegementMatchingReason1)
+	newValue := new(AllegementMatchingReason1)
 	m.Reason = append(m.Reason, newValue)
 	return newValue
 }
@@ -21,4 +19,3 @@ func (m *MatchingReason4Choice) AddReason() *AllegementMatchingReason1 {
 func (m *MatchingReason4Choice) SetNoSpecifiedReason(value string) {
 	m.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

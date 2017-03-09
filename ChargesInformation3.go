@@ -23,9 +23,7 @@ type ChargesInformation3 struct {
 
 	// Specifies tax details applied to charges.
 	Tax *TaxCharges1 `xml:"Tax,omitempty"`
-
 }
-
 
 func (c *ChargesInformation3) SetTotalChargesAndTaxAmount(value, currency string) {
 	c.TotalChargesAndTaxAmount = NewCurrencyAndAmount(value, currency)
@@ -57,4 +55,3 @@ func (c *ChargesInformation3) AddTax() *TaxCharges1 {
 	c.Tax = new(TaxCharges1)
 	return c.Tax
 }
-

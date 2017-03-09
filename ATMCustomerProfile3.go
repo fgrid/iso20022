@@ -14,9 +14,7 @@ type ATMCustomerProfile3 struct {
 
 	// Services allowed for the customer's profile.
 	AllowedServices []*ATMService7 `xml:"AllwdSvcs,omitempty"`
-
 }
-
 
 func (a *ATMCustomerProfile3) SetProfileReference(value string) {
 	a.ProfileReference = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (a *ATMCustomerProfile3) SetProfileDescription(value string) {
 }
 
 func (a *ATMCustomerProfile3) AddAllowedServices() *ATMService7 {
-	newValue := new (ATMService7)
+	newValue := new(ATMService7)
 	a.AllowedServices = append(a.AllowedServices, newValue)
 	return newValue
 }
-

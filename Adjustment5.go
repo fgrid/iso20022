@@ -8,9 +8,7 @@ type Adjustment5 struct {
 
 	// Specifies the monetary amount of the adjustment.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (a *Adjustment5) SetDirection(value string) {
 	a.Direction = (*AdjustmentDirection1Code)(&value)
@@ -19,4 +17,3 @@ func (a *Adjustment5) SetDirection(value string) {
 func (a *Adjustment5) SetAmount(value, currency string) {
 	a.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

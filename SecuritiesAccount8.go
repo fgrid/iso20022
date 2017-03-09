@@ -26,9 +26,7 @@ type SecuritiesAccount8 struct {
 
 	// Specifies if the stamp duty is applicable.
 	StampDuty *StampDutyType1FormatChoice `xml:"StmpDty,omitempty"`
-
 }
-
 
 func (s *SecuritiesAccount8) SetCreditDebitIndicator(value string) {
 	s.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -65,4 +63,3 @@ func (s *SecuritiesAccount8) AddStampDuty() *StampDutyType1FormatChoice {
 	s.StampDuty = new(StampDutyType1FormatChoice)
 	return s.StampDuty
 }
-

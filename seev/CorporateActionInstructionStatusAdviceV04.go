@@ -7,7 +7,7 @@ import (
 )
 
 type Document03400104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.034.001.04 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:seev.034.001.04 Document"`
 	Message *CorporateActionInstructionStatusAdviceV04 `xml:"CorpActnInstrStsAdvc"`
 }
 
@@ -49,9 +49,7 @@ type CorporateActionInstructionStatusAdviceV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionStatusAdviceV04) AddInstructionIdentification() *iso20022.DocumentIdentification9 {
 	c.InstructionIdentification = new(iso20022.DocumentIdentification9)
@@ -59,7 +57,7 @@ func (c *CorporateActionInstructionStatusAdviceV04) AddInstructionIdentification
 }
 
 func (c *CorporateActionInstructionStatusAdviceV04) AddOtherDocumentIdentification() *iso20022.DocumentIdentification14 {
-	newValue := new (iso20022.DocumentIdentification14)
+	newValue := new(iso20022.DocumentIdentification14)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -70,7 +68,7 @@ func (c *CorporateActionInstructionStatusAdviceV04) AddCorporateActionGeneralInf
 }
 
 func (c *CorporateActionInstructionStatusAdviceV04) AddInstructionProcessingStatus() *iso20022.InstructionProcessingStatus12Choice {
-	newValue := new (iso20022.InstructionProcessingStatus12Choice)
+	newValue := new(iso20022.InstructionProcessingStatus12Choice)
 	c.InstructionProcessingStatus = append(c.InstructionProcessingStatus, newValue)
 	return newValue
 }
@@ -86,8 +84,7 @@ func (c *CorporateActionInstructionStatusAdviceV04) AddAdditionalInformation() *
 }
 
 func (c *CorporateActionInstructionStatusAdviceV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type CentralCounterPartyEligibility3Choice struct {
 
 	// Central counterparty eligibility information expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (c *CentralCounterPartyEligibility3Choice) SetIndicator(value string) {
 	c.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (c *CentralCounterPartyEligibility3Choice) AddProprietary() *GenericIdentif
 	c.Proprietary = new(GenericIdentification38)
 	return c.Proprietary
 }
-

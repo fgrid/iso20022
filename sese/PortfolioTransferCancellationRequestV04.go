@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.014.001.04 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:sese.014.001.04 Document"`
 	Message *PortfolioTransferCancellationRequestV04 `xml:"PrtflTrfCxlReq"`
 }
 
@@ -39,9 +39,7 @@ type PortfolioTransferCancellationRequestV04 struct {
 
 	// Choice between cancellation by transfer details or reference.
 	Cancellation *iso20022.Cancellation3Choice `xml:"Cxl"`
-
 }
-
 
 func (p *PortfolioTransferCancellationRequestV04) AddMessageReference() *iso20022.MessageIdentification1 {
 	p.MessageReference = new(iso20022.MessageIdentification1)
@@ -67,4 +65,3 @@ func (p *PortfolioTransferCancellationRequestV04) AddCancellation() *iso20022.Ca
 	p.Cancellation = new(iso20022.Cancellation3Choice)
 	return p.Cancellation
 }
-

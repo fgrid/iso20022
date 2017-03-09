@@ -11,9 +11,7 @@ type ConfirmationRejectedStatus1 struct {
 
 	// Proprietary identification of the reason for a rejected status.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (c *ConfirmationRejectedStatus1) SetReason(value string) {
 	c.Reason = (*RejectedConfirmationStatusReason1Code)(&value)
@@ -27,4 +25,3 @@ func (c *ConfirmationRejectedStatus1) AddDataSourceScheme() *GenericIdentificati
 	c.DataSourceScheme = new(GenericIdentification1)
 	return c.DataSourceScheme
 }
-

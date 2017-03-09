@@ -20,9 +20,7 @@ type PlainCardData9 struct {
 
 	// Track issued from the magnetic stripe card or from the ICC if the magnetic stripe was not read. The track value might be provided by a payment token.
 	TrackData []*TrackData1 `xml:"TrckData,omitempty"`
-
 }
-
 
 func (p *PlainCardData9) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -45,8 +43,7 @@ func (p *PlainCardData9) SetServiceCode(value string) {
 }
 
 func (p *PlainCardData9) AddTrackData() *TrackData1 {
-	newValue := new (TrackData1)
+	newValue := new(TrackData1)
 	p.TrackData = append(p.TrackData, newValue)
 	return newValue
 }
-

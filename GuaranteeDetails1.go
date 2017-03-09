@@ -26,9 +26,7 @@ type GuaranteeDetails1 struct {
 
 	// Additional information related to the demand.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (g *GuaranteeDetails1) AddIssuer() *QualifiedPartyIdentification1 {
 	g.Issuer = new(QualifiedPartyIdentification1)
@@ -44,25 +42,25 @@ func (g *GuaranteeDetails1) SetDescription(value string) {
 }
 
 func (g *GuaranteeDetails1) AddGuaranteedAmount() *AmountAndPeriod1 {
-	newValue := new (AmountAndPeriod1)
+	newValue := new(AmountAndPeriod1)
 	g.GuaranteedAmount = append(g.GuaranteedAmount, newValue)
 	return newValue
 }
 
 func (g *GuaranteeDetails1) AddExcess() *AmountAndPeriod1 {
-	newValue := new (AmountAndPeriod1)
+	newValue := new(AmountAndPeriod1)
 	g.Excess = append(g.Excess, newValue)
 	return newValue
 }
 
 func (g *GuaranteeDetails1) AddCoveredPercentage() *PercentageAndPeriod1 {
-	newValue := new (PercentageAndPeriod1)
+	newValue := new(PercentageAndPeriod1)
 	g.CoveredPercentage = append(g.CoveredPercentage, newValue)
 	return newValue
 }
 
 func (g *GuaranteeDetails1) AddAssociatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	g.AssociatedDocument = append(g.AssociatedDocument, newValue)
 	return newValue
 }
@@ -70,4 +68,3 @@ func (g *GuaranteeDetails1) AddAssociatedDocument() *QualifiedDocumentInformatio
 func (g *GuaranteeDetails1) AddAdditionalInformation(value string) {
 	g.AdditionalInformation = append(g.AdditionalInformation, (*Max2000Text)(&value))
 }
-

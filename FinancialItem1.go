@@ -1,7 +1,7 @@
 package iso20022
 
 // Specifies information about a financing relation between two parties represented by a document, for example invoice, credit.
-	// The component may include an external document describing details of the underlying trade object using an external schema.
+// The component may include an external document describing details of the underlying trade object using an external schema.
 type FinancialItem1 struct {
 
 	// Parameters identifying the context of the item.
@@ -36,9 +36,7 @@ type FinancialItem1 struct {
 
 	// Structured proprietary information concerning details of the financial item.
 	ProprietaryDetails *SupplementaryData1 `xml:"PrtryDtls,omitempty"`
-
 }
-
 
 func (f *FinancialItem1) AddItemContext() *FinancialItemParameters1 {
 	f.ItemContext = new(FinancialItemParameters1)
@@ -46,7 +44,7 @@ func (f *FinancialItem1) AddItemContext() *FinancialItemParameters1 {
 }
 
 func (f *FinancialItem1) AddFinancialDocumentReference() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.FinancialDocumentReference = append(f.FinancialDocumentReference, newValue)
 	return newValue
 }
@@ -65,7 +63,7 @@ func (f *FinancialItem1) SetDueAmount(value, currency string) {
 }
 
 func (f *FinancialItem1) AddInstalmentInformation() *Instalment2 {
-	newValue := new (Instalment2)
+	newValue := new(Instalment2)
 	f.InstalmentInformation = append(f.InstalmentInformation, newValue)
 	return newValue
 }
@@ -75,7 +73,7 @@ func (f *FinancialItem1) SetAdditionalInformation(value string) {
 }
 
 func (f *FinancialItem1) AddAssociatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.AssociatedDocument = append(f.AssociatedDocument, newValue)
 	return newValue
 }
@@ -94,4 +92,3 @@ func (f *FinancialItem1) AddProprietaryDetails() *SupplementaryData1 {
 	f.ProprietaryDetails = new(SupplementaryData1)
 	return f.ProprietaryDetails
 }
-

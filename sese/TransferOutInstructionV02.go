@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.001.001.02 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:sese.001.001.02 Document"`
 	Message *TransferOutInstructionV02 `xml:"TrfOutInstrV02"`
 }
 
@@ -52,9 +52,7 @@ type TransferOutInstructionV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferOutInstructionV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -102,8 +100,7 @@ func (t *TransferOutInstructionV02) AddCopyDetails() *iso20022.CopyInformation2 
 }
 
 func (t *TransferOutInstructionV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

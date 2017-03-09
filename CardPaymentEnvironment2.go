@@ -18,9 +18,7 @@ type CardPaymentEnvironment2 struct {
 
 	// Cardholder involved in the card payment.
 	Cardholder *Cardholder2 `xml:"Crdhldr,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment2) AddAcquirer() *Acquirer1 {
 	c.Acquirer = new(Acquirer1)
@@ -46,4 +44,3 @@ func (c *CardPaymentEnvironment2) AddCardholder() *Cardholder2 {
 	c.Cardholder = new(Cardholder2)
 	return c.Cardholder
 }
-

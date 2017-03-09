@@ -11,9 +11,7 @@ type DateTimePeriodChoice struct {
 
 	// Range of time between a start date and time and an end date and time.
 	DateTimeRange *DateTimePeriodDetails `xml:"DtTmRg"`
-
 }
-
 
 func (d *DateTimePeriodChoice) SetFromDateTime(value string) {
 	d.FromDateTime = (*ISODateTime)(&value)
@@ -27,4 +25,3 @@ func (d *DateTimePeriodChoice) AddDateTimeRange() *DateTimePeriodDetails {
 	d.DateTimeRange = new(DateTimePeriodDetails)
 	return d.DateTimeRange
 }
-

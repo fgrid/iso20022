@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.018.001.05 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.018.001.05 Document"`
 	Message *FullPushThroughReportV05 `xml:"FullPushThrghRpt"`
 }
 
@@ -26,7 +26,7 @@ func (d *Document01800105) AddMessage() *FullPushThroughReportV05 {
 // - the details of a BaselineAmendmentRequest message that it has obtained.
 type FullPushThroughReportV05 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Unique identification assigned by the matching application to the transaction.
@@ -48,16 +48,16 @@ type FullPushThroughReportV05 struct {
 	// Specifies the commercial details of the underlying transaction.
 	PushedThroughBaseline *iso20022.Baseline5 `xml:"PushdThrghBaseln"`
 
-	// Person to be contacted in the organisation of the buyer. 
+	// Person to be contacted in the organisation of the buyer.
 	BuyerContactPerson []*iso20022.ContactIdentification1 `xml:"BuyrCtctPrsn,omitempty"`
 
-	// Person to be contacted in the organisation of the seller. 
+	// Person to be contacted in the organisation of the seller.
 	SellerContactPerson []*iso20022.ContactIdentification1 `xml:"SellrCtctPrsn,omitempty"`
 
-	// Person to be contacted in the buyer's bank. 
+	// Person to be contacted in the buyer's bank.
 	BuyerBankContactPerson []*iso20022.ContactIdentification1 `xml:"BuyrBkCtctPrsn,omitempty"`
 
-	// Person to be contacted in the seller's bank. 
+	// Person to be contacted in the seller's bank.
 	SellerBankContactPerson []*iso20022.ContactIdentification1 `xml:"SellrBkCtctPrsn,omitempty"`
 
 	// Person to be contacted in another bank than the seller or buyer's bank.
@@ -65,9 +65,7 @@ type FullPushThroughReportV05 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (f *FullPushThroughReportV05) AddReportIdentification() *iso20022.MessageIdentification1 {
 	f.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -90,7 +88,7 @@ func (f *FullPushThroughReportV05) AddTransactionStatus() *iso20022.TransactionS
 }
 
 func (f *FullPushThroughReportV05) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	f.UserTransactionReference = append(f.UserTransactionReference, newValue)
 	return newValue
 }
@@ -106,31 +104,31 @@ func (f *FullPushThroughReportV05) AddPushedThroughBaseline() *iso20022.Baseline
 }
 
 func (f *FullPushThroughReportV05) AddBuyerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	f.BuyerContactPerson = append(f.BuyerContactPerson, newValue)
 	return newValue
 }
 
 func (f *FullPushThroughReportV05) AddSellerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	f.SellerContactPerson = append(f.SellerContactPerson, newValue)
 	return newValue
 }
 
 func (f *FullPushThroughReportV05) AddBuyerBankContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	f.BuyerBankContactPerson = append(f.BuyerBankContactPerson, newValue)
 	return newValue
 }
 
 func (f *FullPushThroughReportV05) AddSellerBankContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	f.SellerBankContactPerson = append(f.SellerBankContactPerson, newValue)
 	return newValue
 }
 
 func (f *FullPushThroughReportV05) AddOtherBankContactPerson() *iso20022.ContactIdentification3 {
-	newValue := new (iso20022.ContactIdentification3)
+	newValue := new(iso20022.ContactIdentification3)
 	f.OtherBankContactPerson = append(f.OtherBankContactPerson, newValue)
 	return newValue
 }
@@ -139,4 +137,3 @@ func (f *FullPushThroughReportV05) AddRequestForAction() *iso20022.PendingActivi
 	f.RequestForAction = new(iso20022.PendingActivity2)
 	return f.RequestForAction
 }
-

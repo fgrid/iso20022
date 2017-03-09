@@ -8,9 +8,7 @@ type PointOfInteractionComponentStatus1 struct {
 
 	// Current status of the component.
 	Status *POIComponentStatus1Code `xml:"Sts,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionComponentStatus1) SetVersionNumber(value string) {
 	p.VersionNumber = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *PointOfInteractionComponentStatus1) SetVersionNumber(value string) {
 func (p *PointOfInteractionComponentStatus1) SetStatus(value string) {
 	p.Status = (*POIComponentStatus1Code)(&value)
 }
-

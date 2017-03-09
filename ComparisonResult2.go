@@ -20,9 +20,7 @@ type ComparisonResult2 struct {
 
 	// Addition of a new element.
 	Addition *Addition2 `xml:"Addtn"`
-
 }
-
 
 func (c *ComparisonResult2) SetElementSequenceNumber(value string) {
 	c.ElementSequenceNumber = (*Number)(&value)
@@ -50,4 +48,3 @@ func (c *ComparisonResult2) AddAddition() *Addition2 {
 	c.Addition = new(Addition2)
 	return c.Addition
 }
-

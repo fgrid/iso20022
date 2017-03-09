@@ -8,9 +8,7 @@ type DateTimePeriodDetails struct {
 
 	// Date and time at which the range ends.
 	ToDateTime *ISODateTime `xml:"ToDtTm"`
-
 }
-
 
 func (d *DateTimePeriodDetails) SetFromDateTime(value string) {
 	d.FromDateTime = (*ISODateTime)(&value)
@@ -19,4 +17,3 @@ func (d *DateTimePeriodDetails) SetFromDateTime(value string) {
 func (d *DateTimePeriodDetails) SetToDateTime(value string) {
 	d.ToDateTime = (*ISODateTime)(&value)
 }
-

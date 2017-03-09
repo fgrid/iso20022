@@ -8,9 +8,7 @@ type Limit2 struct {
 
 	// Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries.
 	CreditDebitIndicator *FloorLimitType1Code `xml:"CdtDbtInd"`
-
 }
-
 
 func (l *Limit2) SetAmount(value, currency string) {
 	l.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (l *Limit2) SetAmount(value, currency string) {
 func (l *Limit2) SetCreditDebitIndicator(value string) {
 	l.CreditDebitIndicator = (*FloorLimitType1Code)(&value)
 }
-

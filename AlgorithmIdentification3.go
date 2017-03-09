@@ -8,9 +8,7 @@ type AlgorithmIdentification3 struct {
 
 	// Parameters associated to the algorithm.
 	Parameter *Parameter1 `xml:"Param,omitempty"`
-
 }
-
 
 func (a *AlgorithmIdentification3) SetAlgorithm(value string) {
 	a.Algorithm = (*Algorithm3Code)(&value)
@@ -20,4 +18,3 @@ func (a *AlgorithmIdentification3) AddParameter() *Parameter1 {
 	a.Parameter = new(Parameter1)
 	return a.Parameter
 }
-

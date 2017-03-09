@@ -8,9 +8,7 @@ type AccountManagementConfirmation1 struct {
 
 	// Unique and unambiguous identifier of the account opening or modification instruction at application level.
 	AccountApplicationIdentification *Max35Text `xml:"AcctApplId,omitempty"`
-
 }
-
 
 func (a *AccountManagementConfirmation1) SetConfirmationType(value string) {
 	a.ConfirmationType = (*AccountManagementType2Code)(&value)
@@ -19,4 +17,3 @@ func (a *AccountManagementConfirmation1) SetConfirmationType(value string) {
 func (a *AccountManagementConfirmation1) SetAccountApplicationIdentification(value string) {
 	a.AccountApplicationIdentification = (*Max35Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type CorporateAction1 struct {
 
 	// Proprietary corporate action event information.
 	Proprietary *Max35Text `xml:"Prtry,omitempty"`
-
 }
-
 
 func (c *CorporateAction1) SetCode(value string) {
 	c.Code = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (c *CorporateAction1) SetNumber(value string) {
 func (c *CorporateAction1) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

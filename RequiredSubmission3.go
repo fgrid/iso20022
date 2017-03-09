@@ -23,12 +23,10 @@ type RequiredSubmission3 struct {
 
 	// Specifies if the assured (insured) party must be matched as part of the validation of the data set.
 	MatchAssuredParty *AssuredType1Code `xml:"MtchAssrdPty,omitempty"`
-
 }
 
-
 func (r *RequiredSubmission3) AddSubmitter() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.Submitter = append(r.Submitter, newValue)
 	return newValue
 }
@@ -57,4 +55,3 @@ func (r *RequiredSubmission3) AddClausesRequired(value string) {
 func (r *RequiredSubmission3) SetMatchAssuredParty(value string) {
 	r.MatchAssuredParty = (*AssuredType1Code)(&value)
 }
-

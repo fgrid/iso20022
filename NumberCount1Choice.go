@@ -8,9 +8,7 @@ type NumberCount1Choice struct {
 
 	// Total numbers of settlement transactions, receipts and deliveries, and the concerned settlement transaction number.
 	TotalNumber *TotalNumber1 `xml:"TtlNb"`
-
 }
-
 
 func (n *NumberCount1Choice) SetCurrentInstructionNumber(value string) {
 	n.CurrentInstructionNumber = (*Exact3NumericText)(&value)
@@ -20,4 +18,3 @@ func (n *NumberCount1Choice) AddTotalNumber() *TotalNumber1 {
 	n.TotalNumber = new(TotalNumber1)
 	return n.TotalNumber
 }
-

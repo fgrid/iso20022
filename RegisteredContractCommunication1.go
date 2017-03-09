@@ -8,9 +8,7 @@ type RegisteredContractCommunication1 struct {
 
 	// Date of the exchange.
 	Date *ISODate `xml:"Dt"`
-
 }
-
 
 func (r *RegisteredContractCommunication1) SetMethod(value string) {
 	r.Method = (*CommunicationMethod4Code)(&value)
@@ -19,4 +17,3 @@ func (r *RegisteredContractCommunication1) SetMethod(value string) {
 func (r *RegisteredContractCommunication1) SetDate(value string) {
 	r.Date = (*ISODate)(&value)
 }
-

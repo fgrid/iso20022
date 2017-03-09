@@ -14,9 +14,7 @@ type PostalAddress3 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	NameAndAddress *NameAndAddress4 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PostalAddress3) SetAddressType(value string) {
 	p.AddressType = (*AddressType1Code)(&value)
@@ -34,4 +32,3 @@ func (p *PostalAddress3) AddNameAndAddress() *NameAndAddress4 {
 	p.NameAndAddress = new(NameAndAddress4)
 	return p.NameAndAddress
 }
-

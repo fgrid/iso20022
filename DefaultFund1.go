@@ -14,9 +14,7 @@ type DefaultFund1 struct {
 
 	// Additional amount that the clearing member will have to provide to cover a risk increase. This results from a risk management decision depending on central counterparty specific criteria.
 	IncreaseCoverageAmount *ActiveCurrencyAndAmount `xml:"IncrCvrgAmt,omitempty"`
-
 }
-
 
 func (d *DefaultFund1) AddDefaultFundAccount() *AccountIdentification4Choice {
 	d.DefaultFundAccount = new(AccountIdentification4Choice)
@@ -28,7 +26,7 @@ func (d *DefaultFund1) SetTotalDefaultFundAmount(value, currency string) {
 }
 
 func (d *DefaultFund1) AddContribution() *Contribution1 {
-	newValue := new (Contribution1)
+	newValue := new(Contribution1)
 	d.Contribution = append(d.Contribution, newValue)
 	return newValue
 }
@@ -36,4 +34,3 @@ func (d *DefaultFund1) AddContribution() *Contribution1 {
 func (d *DefaultFund1) SetIncreaseCoverageAmount(value, currency string) {
 	d.IncreaseCoverageAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

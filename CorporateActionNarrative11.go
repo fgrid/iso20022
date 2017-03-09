@@ -32,9 +32,7 @@ type CorporateActionNarrative11 struct {
 
 	// Provides additional information on the basket or index underlying a security, for example a warrant.
 	BasketOrIndexInformation *UpdatedAdditionalInformation2 `xml:"BsktOrIndxInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative11) AddAdditionalText() *UpdatedAdditionalInformation2 {
 	c.AdditionalText = new(UpdatedAdditionalInformation2)
@@ -85,4 +83,3 @@ func (c *CorporateActionNarrative11) AddBasketOrIndexInformation() *UpdatedAddit
 	c.BasketOrIndexInformation = new(UpdatedAdditionalInformation2)
 	return c.BasketOrIndexInformation
 }
-

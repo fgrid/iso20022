@@ -11,9 +11,7 @@ type CounterpartySideTransactionReporting1 struct {
 
 	// Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI). This is the UTI from the Counterparty Side party.
 	CounterpartySideUniqueTransactionIdentifier []*UniqueTransactionIdentifier2 `xml:"CtrPtySdUnqTxIdr,omitempty"`
-
 }
-
 
 func (c *CounterpartySideTransactionReporting1) SetReportingJurisdiction(value string) {
 	c.ReportingJurisdiction = (*Max35Text)(&value)
@@ -25,8 +23,7 @@ func (c *CounterpartySideTransactionReporting1) AddReportingParty() *PartyIdenti
 }
 
 func (c *CounterpartySideTransactionReporting1) AddCounterpartySideUniqueTransactionIdentifier() *UniqueTransactionIdentifier2 {
-	newValue := new (UniqueTransactionIdentifier2)
+	newValue := new(UniqueTransactionIdentifier2)
 	c.CounterpartySideUniqueTransactionIdentifier = append(c.CounterpartySideUniqueTransactionIdentifier, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type AccountType2Choice struct {
 
 	// Type of account expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (a *AccountType2Choice) SetCode(value string) {
 	a.Code = (*FundCashAccount4Code)(&value)
@@ -20,4 +18,3 @@ func (a *AccountType2Choice) AddProprietary() *GenericIdentification47 {
 	a.Proprietary = new(GenericIdentification47)
 	return a.Proprietary
 }
-

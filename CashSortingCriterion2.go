@@ -8,9 +8,7 @@ type CashSortingCriterion2 struct {
 
 	// Parameter for which the cash movements are reported.
 	ForecastBreakdownDetails []*ForecastParameter2 `xml:"FcstBrkdwnDtls"`
-
 }
-
 
 func (c *CashSortingCriterion2) AddSortingCriterionType() *SortCriteria1Choice {
 	c.SortingCriterionType = new(SortCriteria1Choice)
@@ -18,8 +16,7 @@ func (c *CashSortingCriterion2) AddSortingCriterionType() *SortCriteria1Choice {
 }
 
 func (c *CashSortingCriterion2) AddForecastBreakdownDetails() *ForecastParameter2 {
-	newValue := new (ForecastParameter2)
+	newValue := new(ForecastParameter2)
 	c.ForecastBreakdownDetails = append(c.ForecastBreakdownDetails, newValue)
 	return newValue
 }
-

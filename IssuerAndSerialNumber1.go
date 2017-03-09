@@ -8,9 +8,7 @@ type IssuerAndSerialNumber1 struct {
 
 	// Certificate serial number (see X.509).
 	SerialNumber *Max35Binary `xml:"SrlNb"`
-
 }
-
 
 func (i *IssuerAndSerialNumber1) AddIssuer() *CertificateIssuer1 {
 	i.Issuer = new(CertificateIssuer1)
@@ -20,4 +18,3 @@ func (i *IssuerAndSerialNumber1) AddIssuer() *CertificateIssuer1 {
 func (i *IssuerAndSerialNumber1) SetSerialNumber(value string) {
 	i.SerialNumber = (*Max35Binary)(&value)
 }
-

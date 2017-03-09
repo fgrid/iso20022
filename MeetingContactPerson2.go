@@ -11,9 +11,7 @@ type MeetingContactPerson2 struct {
 
 	// Identification of the financial market, as stipulated in the norm ISO 10383 'Codes for exchanges and market identifications'.
 	PlaceOfListing *MICIdentifier `xml:"PlcOfListg,omitempty"`
-
 }
-
 
 func (m *MeetingContactPerson2) AddContactPerson() *ContactIdentification1 {
 	m.ContactPerson = new(ContactIdentification1)
@@ -28,4 +26,3 @@ func (m *MeetingContactPerson2) AddEmployingParty() *PartyIdentification40Choice
 func (m *MeetingContactPerson2) SetPlaceOfListing(value string) {
 	m.PlaceOfListing = (*MICIdentifier)(&value)
 }
-

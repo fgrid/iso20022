@@ -17,9 +17,7 @@ type ATMSecurityContext1 struct {
 
 	// Random value from the host provided during a previous exchange.
 	HostChallenge *Max140Binary `xml:"HstChllng,omitempty"`
-
 }
-
 
 func (a *ATMSecurityContext1) SetCurrentSecurityScheme(value string) {
 	a.CurrentSecurityScheme = (*ATMSecurityScheme1Code)(&value)
@@ -35,7 +33,7 @@ func (a *ATMSecurityContext1) AddSecurityDevice() *ATMSecurityDevice1 {
 }
 
 func (a *ATMSecurityContext1) AddKey() *CryptographicKey7 {
-	newValue := new (CryptographicKey7)
+	newValue := new(CryptographicKey7)
 	a.Key = append(a.Key, newValue)
 	return newValue
 }
@@ -43,4 +41,3 @@ func (a *ATMSecurityContext1) AddKey() *CryptographicKey7 {
 func (a *ATMSecurityContext1) SetHostChallenge(value string) {
 	a.HostChallenge = (*Max140Binary)(&value)
 }
-

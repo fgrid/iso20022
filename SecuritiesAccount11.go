@@ -14,9 +14,7 @@ type SecuritiesAccount11 struct {
 
 	// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
 	Designation *Max35Text `xml:"Dsgnt,omitempty"`
-
 }
-
 
 func (s *SecuritiesAccount11) SetIdentification(value string) {
 	s.Identification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (s *SecuritiesAccount11) SetName(value string) {
 func (s *SecuritiesAccount11) SetDesignation(value string) {
 	s.Designation = (*Max35Text)(&value)
 }
-

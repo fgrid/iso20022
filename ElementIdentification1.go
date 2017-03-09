@@ -14,9 +14,7 @@ type ElementIdentification1 struct {
 
 	// Content of the element
 	ElementValue *Max140Text `xml:"ElmtVal,omitempty"`
-
 }
-
 
 func (e *ElementIdentification1) SetDocumentIndex(value string) {
 	e.DocumentIndex = (*Max3NumericText)(&value)
@@ -33,4 +31,3 @@ func (e *ElementIdentification1) SetElementName(value string) {
 func (e *ElementIdentification1) SetElementValue(value string) {
 	e.ElementValue = (*Max140Text)(&value)
 }
-

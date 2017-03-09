@@ -17,9 +17,7 @@ type EntitlementAdvice1 struct {
 
 	// Provides information about the entitlement and the entitled account.
 	AccountAndDistributionDetails []*Entitlement1 `xml:"AcctAndDstrbtnDtls"`
-
 }
-
 
 func (e *EntitlementAdvice1) AddOptionType() *CorporateActionOption1FormatChoice {
 	e.OptionType = new(CorporateActionOption1FormatChoice)
@@ -41,8 +39,7 @@ func (e *EntitlementAdvice1) AddPaymentDate() *DateFormat4Choice {
 }
 
 func (e *EntitlementAdvice1) AddAccountAndDistributionDetails() *Entitlement1 {
-	newValue := new (Entitlement1)
+	newValue := new(Entitlement1)
 	e.AccountAndDistributionDetails = append(e.AccountAndDistributionDetails, newValue)
 	return newValue
 }
-

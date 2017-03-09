@@ -7,7 +7,7 @@ import (
 )
 
 type Document06000102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.060.001.02 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.060.001.02 Document"`
 	Message *AccountReportingRequestV02 `xml:"AcctRptgReq"`
 }
 
@@ -27,9 +27,7 @@ type AccountReportingRequestV02 struct {
 
 	// Set of elements used to provide further details on the reporting request.
 	ReportingRequest []*iso20022.ReportingRequest2 `xml:"RptgReq"`
-
 }
-
 
 func (a *AccountReportingRequestV02) AddGroupHeader() *iso20022.GroupHeader43 {
 	a.GroupHeader = new(iso20022.GroupHeader43)
@@ -37,8 +35,7 @@ func (a *AccountReportingRequestV02) AddGroupHeader() *iso20022.GroupHeader43 {
 }
 
 func (a *AccountReportingRequestV02) AddReportingRequest() *iso20022.ReportingRequest2 {
-	newValue := new (iso20022.ReportingRequest2)
+	newValue := new(iso20022.ReportingRequest2)
 	a.ReportingRequest = append(a.ReportingRequest, newValue)
 	return newValue
 }
-

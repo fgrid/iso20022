@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.010.001.01 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:pain.010.001.01 Document"`
 	Message *MandateAmendmentRequestV01 `xml:"MndtAmdmntReq"`
 }
 
@@ -19,7 +19,7 @@ func (d *Document01000101) AddMessage() *MandateAmendmentRequestV01 {
 // Scope
 // The MandateAmendmentRequest message is sent by the initiator of the request to his agent and/or counterparty. The initiator can both be the debtor or the creditor (or where appropriate the debtor agent).
 // The MandateAmendmentRequest message is forwarded by the agent of the initiator to the agent of the counterparty.
-// A MandateAmendmentRequest message is used to request the amendment of specific information in an existing mandate. 
+// A MandateAmendmentRequest message is used to request the amendment of specific information in an existing mandate.
 // The MandateAmendmentRequest message must reflect the new data of the element(s) to be amended and at a minimum a unique reference to the existing mandate. If accepted, this MandateAmendmentRequest message together with the MandateAcceptanceReport message confirming the acceptance will be considered as a valid amendment on an existing mandate, agreed upon by all parties. The amended mandate will from then on be considered the valid mandate.
 // Usage
 // The MandateAmendmentRequest message can contain only one request to amend one specific mandate.
@@ -34,9 +34,7 @@ type MandateAmendmentRequestV01 struct {
 
 	// Set of elements used to provide details on the amendment request.
 	UnderlyingAmendmentDetails *iso20022.MandateAmendment1 `xml:"UndrlygAmdmntDtls"`
-
 }
-
 
 func (m *MandateAmendmentRequestV01) AddGroupHeader() *iso20022.GroupHeader31 {
 	m.GroupHeader = new(iso20022.GroupHeader31)
@@ -47,4 +45,3 @@ func (m *MandateAmendmentRequestV01) AddUnderlyingAmendmentDetails() *iso20022.M
 	m.UnderlyingAmendmentDetails = new(iso20022.MandateAmendment1)
 	return m.UnderlyingAmendmentDetails
 }
-

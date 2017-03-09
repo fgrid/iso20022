@@ -23,9 +23,7 @@ type TransactionTypeAndAdditionalParameters14 struct {
 
 	// Collective reference identifying a set of messages.
 	PoolIdentification *RestrictedFINXMax16Text `xml:"PoolId,omitempty"`
-
 }
-
 
 func (t *TransactionTypeAndAdditionalParameters14) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -55,4 +53,3 @@ func (t *TransactionTypeAndAdditionalParameters14) SetCommonIdentification(value
 func (t *TransactionTypeAndAdditionalParameters14) SetPoolIdentification(value string) {
 	t.PoolIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

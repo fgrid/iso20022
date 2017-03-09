@@ -23,9 +23,7 @@ type Collateral12 struct {
 
 	// Collateral type is other than securities or cash for example letter of credit.
 	OtherCollateral []*OtherCollateral5 `xml:"OthrColl,omitempty"`
-
 }
-
 
 func (c *Collateral12) SetMarginCallRequestIdentification(value string) {
 	c.MarginCallRequestIdentification = (*Max35Text)(&value)
@@ -44,20 +42,19 @@ func (c *Collateral12) SetCollateralProposalResponseIdentification(value string)
 }
 
 func (c *Collateral12) AddSecuritiesCollateral() *SecuritiesCollateral5 {
-	newValue := new (SecuritiesCollateral5)
+	newValue := new(SecuritiesCollateral5)
 	c.SecuritiesCollateral = append(c.SecuritiesCollateral, newValue)
 	return newValue
 }
 
 func (c *Collateral12) AddCashCollateral() *CashCollateral3 {
-	newValue := new (CashCollateral3)
+	newValue := new(CashCollateral3)
 	c.CashCollateral = append(c.CashCollateral, newValue)
 	return newValue
 }
 
 func (c *Collateral12) AddOtherCollateral() *OtherCollateral5 {
-	newValue := new (OtherCollateral5)
+	newValue := new(OtherCollateral5)
 	c.OtherCollateral = append(c.OtherCollateral, newValue)
 	return newValue
 }
-

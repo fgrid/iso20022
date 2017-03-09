@@ -11,9 +11,7 @@ type AcquirerFinancialInitiation1 struct {
 
 	// Card transaction for which the financial authorisation has been requested.
 	Transaction *CardTransaction5 `xml:"Tx"`
-
 }
-
 
 func (a *AcquirerFinancialInitiation1) AddEnvironment() *CardTransactionEnvironment1 {
 	a.Environment = new(CardTransactionEnvironment1)
@@ -29,4 +27,3 @@ func (a *AcquirerFinancialInitiation1) AddTransaction() *CardTransaction5 {
 	a.Transaction = new(CardTransaction5)
 	return a.Transaction
 }
-

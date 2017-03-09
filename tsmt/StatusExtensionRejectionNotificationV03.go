@@ -7,7 +7,7 @@ import (
 )
 
 type Document03400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.034.001.03 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.034.001.03 Document"`
 	Message *StatusExtensionRejectionNotificationV03 `xml:"StsXtnsnRjctnNtfctn"`
 }
 
@@ -29,10 +29,10 @@ type StatusExtensionRejectionNotificationV03 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction that is not extended.
@@ -46,9 +46,7 @@ type StatusExtensionRejectionNotificationV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (s *StatusExtensionRejectionNotificationV03) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	s.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -71,7 +69,7 @@ func (s *StatusExtensionRejectionNotificationV03) AddNonExtendedStatus() *iso200
 }
 
 func (s *StatusExtensionRejectionNotificationV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	s.UserTransactionReference = append(s.UserTransactionReference, newValue)
 	return newValue
 }
@@ -85,4 +83,3 @@ func (s *StatusExtensionRejectionNotificationV03) AddRequestForAction() *iso2002
 	s.RequestForAction = new(iso20022.PendingActivity2)
 	return s.RequestForAction
 }
-

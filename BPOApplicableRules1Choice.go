@@ -8,9 +8,7 @@ type BPOApplicableRules1Choice struct {
 
 	// Applicable rules are not URBPO and are specified here with version.
 	OtherRulesAndVersion *Max35Text `xml:"OthrRulesAndVrsn"`
-
 }
-
 
 func (b *BPOApplicableRules1Choice) SetURBPOVersion(value string) {
 	b.URBPOVersion = (*DecimalNumber)(&value)
@@ -19,4 +17,3 @@ func (b *BPOApplicableRules1Choice) SetURBPOVersion(value string) {
 func (b *BPOApplicableRules1Choice) SetOtherRulesAndVersion(value string) {
 	b.OtherRulesAndVersion = (*Max35Text)(&value)
 }
-

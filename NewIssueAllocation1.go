@@ -14,9 +14,7 @@ type NewIssueAllocation1 struct {
 
 	// Conditions applicable when the investor is not covered by the "de minimis" exemption.
 	DeMinimusNotApplicable *DeMinimusNotApplicable1 `xml:"DeMnmsNotAplbl,omitempty"`
-
 }
-
 
 func (n *NewIssueAllocation1) SetRestricted(value string) {
 	n.Restricted = (*YesNoIndicator)(&value)
@@ -35,4 +33,3 @@ func (n *NewIssueAllocation1) AddDeMinimusNotApplicable() *DeMinimusNotApplicabl
 	n.DeMinimusNotApplicable = new(DeMinimusNotApplicable1)
 	return n.DeMinimusNotApplicable
 }
-

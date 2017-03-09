@@ -8,9 +8,7 @@ type FailingReason10Choice struct {
 
 	// Specifies the reason why the instruction has a failing settlement status.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (f *FailingReason10Choice) SetCode(value string) {
 	f.Code = (*FailingReason3Code)(&value)
@@ -20,4 +18,3 @@ func (f *FailingReason10Choice) AddProprietary() *GenericIdentification47 {
 	f.Proprietary = new(GenericIdentification47)
 	return f.Proprietary
 }
-

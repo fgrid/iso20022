@@ -11,9 +11,7 @@ type DeliverInformation1 struct {
 
 	// Parameters of a physical delivery.
 	PhysicalTransferDetails *DeliveryParameters2 `xml:"PhysTrfDtls,omitempty"`
-
 }
-
 
 func (d *DeliverInformation1) AddSettlementPartiesDetails() *DeliveringPartiesAndAccount1 {
 	d.SettlementPartiesDetails = new(DeliveringPartiesAndAccount1)
@@ -28,4 +26,3 @@ func (d *DeliverInformation1) AddPhysicalTransferDetails() *DeliveryParameters2 
 	d.PhysicalTransferDetails = new(DeliveryParameters2)
 	return d.PhysicalTransferDetails
 }
-

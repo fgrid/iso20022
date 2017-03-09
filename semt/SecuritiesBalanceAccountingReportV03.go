@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.03 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.03 Document"`
 	Message *SecuritiesBalanceAccountingReportV03 `xml:"SctiesBalAcctgRpt"`
 }
 
@@ -77,9 +77,7 @@ type SecuritiesBalanceAccountingReportV03 struct {
 
 	// Party that is the final destination of the message, if other than the receiver.
 	MessageRecipient *iso20022.PartyIdentification10Choice `xml:"MsgRcpt,omitempty"`
-
 }
-
 
 func (s *SecuritiesBalanceAccountingReportV03) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -112,19 +110,19 @@ func (s *SecuritiesBalanceAccountingReportV03) AddSafekeepingAccount() *iso20022
 }
 
 func (s *SecuritiesBalanceAccountingReportV03) AddIntermediaryInformation() *iso20022.Intermediary2 {
-	newValue := new (iso20022.Intermediary2)
+	newValue := new(iso20022.Intermediary2)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceAccountingReportV03) AddBalanceForAccount() *iso20022.AggregateBalanceInformation8 {
-	newValue := new (iso20022.AggregateBalanceInformation8)
+	newValue := new(iso20022.AggregateBalanceInformation8)
 	s.BalanceForAccount = append(s.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceAccountingReportV03) AddSubAccountDetails() *iso20022.SubAccountIdentification10 {
-	newValue := new (iso20022.SubAccountIdentification10)
+	newValue := new(iso20022.SubAccountIdentification10)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
@@ -148,4 +146,3 @@ func (s *SecuritiesBalanceAccountingReportV03) AddMessageRecipient() *iso20022.P
 	s.MessageRecipient = new(iso20022.PartyIdentification10Choice)
 	return s.MessageRecipient
 }
-

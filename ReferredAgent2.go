@@ -8,9 +8,7 @@ type ReferredAgent2 struct {
 
 	// Placement agent that referred the investor.
 	ReferredPlacementAgent *PartyIdentification70Choice `xml:"RfrdPlcmntAgt,omitempty"`
-
 }
-
 
 func (r *ReferredAgent2) SetReferred(value string) {
 	r.Referred = (*Referred1Code)(&value)
@@ -20,4 +18,3 @@ func (r *ReferredAgent2) AddReferredPlacementAgent() *PartyIdentification70Choic
 	r.ReferredPlacementAgent = new(PartyIdentification70Choice)
 	return r.ReferredPlacementAgent
 }
-

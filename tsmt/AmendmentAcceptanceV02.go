@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.005.001.02 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.005.001.02 Document"`
 	Message *AmendmentAcceptanceV02 `xml:"AmdmntAccptnc"`
 }
 
@@ -40,9 +40,7 @@ type AmendmentAcceptanceV02 struct {
 
 	// Sequence number of the accepted baseline amendment.
 	AcceptedAmendmentNumber *iso20022.Count1 `xml:"AccptdAmdmntNb"`
-
 }
-
 
 func (a *AmendmentAcceptanceV02) AddAcceptanceIdentification() *iso20022.MessageIdentification1 {
 	a.AcceptanceIdentification = new(iso20022.MessageIdentification1)
@@ -68,4 +66,3 @@ func (a *AmendmentAcceptanceV02) AddAcceptedAmendmentNumber() *iso20022.Count1 {
 	a.AcceptedAmendmentNumber = new(iso20022.Count1)
 	return a.AcceptedAmendmentNumber
 }
-

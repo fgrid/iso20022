@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.03 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.03 Document"`
 	Message *SecuritiesBalanceCustodyReportV03 `xml:"SctiesBalCtdyRpt"`
 }
 
@@ -49,7 +49,7 @@ type SecuritiesBalanceCustodyReportV03 struct {
 	AccountOwner *iso20022.PartyIdentification13Choice `xml:"AcctOwnr,omitempty"`
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
-	// 
+	//
 	AccountServicer *iso20022.PartyIdentification10Choice `xml:"AcctSvcr,omitempty"`
 
 	// Account to or from which a securities entry is made.
@@ -72,9 +72,7 @@ type SecuritiesBalanceCustodyReportV03 struct {
 
 	// Party that is the final destination of the message, if other than the receiver.
 	MessageRecipient *iso20022.PartyIdentification10Choice `xml:"MsgRcpt,omitempty"`
-
 }
-
 
 func (s *SecuritiesBalanceCustodyReportV03) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -107,19 +105,19 @@ func (s *SecuritiesBalanceCustodyReportV03) AddSafekeepingAccount() *iso20022.Se
 }
 
 func (s *SecuritiesBalanceCustodyReportV03) AddIntermediaryInformation() *iso20022.Intermediary2 {
-	newValue := new (iso20022.Intermediary2)
+	newValue := new(iso20022.Intermediary2)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceCustodyReportV03) AddBalanceForAccount() *iso20022.AggregateBalanceInformation9 {
-	newValue := new (iso20022.AggregateBalanceInformation9)
+	newValue := new(iso20022.AggregateBalanceInformation9)
 	s.BalanceForAccount = append(s.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceCustodyReportV03) AddSubAccountDetails() *iso20022.SubAccountIdentification11 {
-	newValue := new (iso20022.SubAccountIdentification11)
+	newValue := new(iso20022.SubAccountIdentification11)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
@@ -138,4 +136,3 @@ func (s *SecuritiesBalanceCustodyReportV03) AddMessageRecipient() *iso20022.Part
 	s.MessageRecipient = new(iso20022.PartyIdentification10Choice)
 	return s.MessageRecipient
 }
-

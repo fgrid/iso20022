@@ -20,9 +20,7 @@ type LineItemAllowanceCharge1 struct {
 
 	// Reason, expressed as text, for this allowance charge.
 	Reason *DiscountOrChargeType1Choice `xml:"Rsn,omitempty"`
-
 }
-
 
 func (l *LineItemAllowanceCharge1) SetChargeIndicator(value string) {
 	l.ChargeIndicator = (*YesNoIndicator)(&value)
@@ -49,4 +47,3 @@ func (l *LineItemAllowanceCharge1) AddReason() *DiscountOrChargeType1Choice {
 	l.Reason = new(DiscountOrChargeType1Choice)
 	return l.Reason
 }
-

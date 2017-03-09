@@ -7,7 +7,7 @@ import (
 )
 
 type Document03100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.031.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:camt.031.001.03 Document"`
 	Message *RejectInvestigationV03 `xml:"RjctInvstgtn"`
 }
 
@@ -43,9 +43,7 @@ type RejectInvestigationV03 struct {
 
 	// Specifies the reason for the rejection of an investigation.
 	Justification *iso20022.InvestigationRejectionJustification1 `xml:"Justfn"`
-
 }
-
 
 func (r *RejectInvestigationV03) AddAssignment() *iso20022.CaseAssignment2 {
 	r.Assignment = new(iso20022.CaseAssignment2)
@@ -61,4 +59,3 @@ func (r *RejectInvestigationV03) AddJustification() *iso20022.InvestigationRejec
 	r.Justification = new(iso20022.InvestigationRejectionJustification1)
 	return r.Justification
 }
-

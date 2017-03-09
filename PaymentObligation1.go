@@ -32,9 +32,7 @@ type PaymentObligation1 struct {
 
 	// Instruction between two clearing agents stipulating the cash transfer characteristics between the two parties.
 	SettlementTerms *SettlementTerms2 `xml:"SttlmTerms,omitempty"`
-
 }
-
 
 func (p *PaymentObligation1) AddObligorBank() *BICIdentification1 {
 	p.ObligorBank = new(BICIdentification1)
@@ -71,7 +69,7 @@ func (p *PaymentObligation1) SetApplicableLaw(value string) {
 }
 
 func (p *PaymentObligation1) AddPaymentTerms() *PaymentTerms2 {
-	newValue := new (PaymentTerms2)
+	newValue := new(PaymentTerms2)
 	p.PaymentTerms = append(p.PaymentTerms, newValue)
 	return newValue
 }
@@ -80,4 +78,3 @@ func (p *PaymentObligation1) AddSettlementTerms() *SettlementTerms2 {
 	p.SettlementTerms = new(SettlementTerms2)
 	return p.SettlementTerms
 }
-

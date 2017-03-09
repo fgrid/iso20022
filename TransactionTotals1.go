@@ -20,9 +20,7 @@ type TransactionTotals1 struct {
 
 	// Total amount of a collection of transactions.
 	CumulativeAmount *ImpliedCurrencyAndAmount `xml:"CmltvAmt"`
-
 }
-
 
 func (t *TransactionTotals1) SetPOIGroupIdentification(value string) {
 	t.POIGroupIdentification = (*Max35Text)(&value)
@@ -47,4 +45,3 @@ func (t *TransactionTotals1) SetTotalNumber(value string) {
 func (t *TransactionTotals1) SetCumulativeAmount(value, currency string) {
 	t.CumulativeAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

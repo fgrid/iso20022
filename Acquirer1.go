@@ -8,9 +8,7 @@ type Acquirer1 struct {
 
 	// Version of the payment acquirer parameters of the POI.
 	ParametersVersion *ISODateTime `xml:"ParamsVrsn"`
-
 }
-
 
 func (a *Acquirer1) AddIdentification() *GenericIdentification32 {
 	a.Identification = new(GenericIdentification32)
@@ -20,4 +18,3 @@ func (a *Acquirer1) AddIdentification() *GenericIdentification32 {
 func (a *Acquirer1) SetParametersVersion(value string) {
 	a.ParametersVersion = (*ISODateTime)(&value)
 }
-

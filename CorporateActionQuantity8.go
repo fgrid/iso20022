@@ -20,9 +20,7 @@ type CorporateActionQuantity8 struct {
 
 	// Amount used when the called amount is not met by running the lottery with the base denomination.
 	IncrementalDenomination *FinancialInstrumentQuantity22Choice `xml:"IncrmtlDnmtn,omitempty"`
-
 }
-
 
 func (c *CorporateActionQuantity8) AddMaximumQuantity() *FinancialInstrumentQuantity21Choice {
 	c.MaximumQuantity = new(FinancialInstrumentQuantity21Choice)
@@ -53,4 +51,3 @@ func (c *CorporateActionQuantity8) AddIncrementalDenomination() *FinancialInstru
 	c.IncrementalDenomination = new(FinancialInstrumentQuantity22Choice)
 	return c.IncrementalDenomination
 }
-

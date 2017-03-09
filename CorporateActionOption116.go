@@ -35,9 +35,7 @@ type CorporateActionOption116 struct {
 
 	// Quantity of securities that has been assigned the status indicated.
 	StatusQuantity *Quantity6Choice `xml:"StsQty"`
-
 }
-
 
 func (c *CorporateActionOption116) AddOptionNumber() *OptionNumber1Choice {
 	c.OptionNumber = new(OptionNumber1Choice)
@@ -92,4 +90,3 @@ func (c *CorporateActionOption116) AddStatusQuantity() *Quantity6Choice {
 	c.StatusQuantity = new(Quantity6Choice)
 	return c.StatusQuantity
 }
-

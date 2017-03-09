@@ -14,9 +14,7 @@ type BinaryFile1 struct {
 
 	// Binary object included in this attached binary file.
 	IncludedBinaryObject *Max100KBinary `xml:"InclBinryObjct,omitempty"`
-
 }
-
 
 func (b *BinaryFile1) SetMIMEType(value string) {
 	b.MIMEType = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (b *BinaryFile1) SetCharacterSet(value string) {
 func (b *BinaryFile1) SetIncludedBinaryObject(value string) {
 	b.IncludedBinaryObject = (*Max100KBinary)(&value)
 }
-

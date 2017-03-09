@@ -6,7 +6,7 @@ type DebitAuthorisationConfirmation2 struct {
 	// Code expressing the decision taken by the account owner relative to the request for debit authorization.
 	DebitAuthorisation *YesNoIndicator `xml:"DbtAuthstn"`
 
-	// Amount of money authorised for debit. 
+	// Amount of money authorised for debit.
 	// Usage: The party approving the debit may want to authorise the amount less charges and may only be prepared to approve the debit for value today rather than the original value date.
 	AmountToDebit *ActiveCurrencyAndAmount `xml:"AmtToDbt,omitempty"`
 
@@ -15,9 +15,7 @@ type DebitAuthorisationConfirmation2 struct {
 
 	// Specifies the reason for the debit authorisation request.
 	Reason *Max140Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (d *DebitAuthorisationConfirmation2) SetDebitAuthorisation(value string) {
 	d.DebitAuthorisation = (*YesNoIndicator)(&value)
@@ -34,4 +32,3 @@ func (d *DebitAuthorisationConfirmation2) SetValueDateToDebit(value string) {
 func (d *DebitAuthorisationConfirmation2) SetReason(value string) {
 	d.Reason = (*Max140Text)(&value)
 }
-

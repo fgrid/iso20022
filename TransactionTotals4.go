@@ -11,9 +11,7 @@ type TransactionTotals4 struct {
 
 	// Additional count which may be utilised for reconciliation.
 	TotalNumber *TransactionTotals6 `xml:"TtlNb,omitempty"`
-
 }
-
 
 func (t *TransactionTotals4) AddTotalCredit() *TransactionTotals5 {
 	t.TotalCredit = new(TransactionTotals5)
@@ -29,4 +27,3 @@ func (t *TransactionTotals4) AddTotalNumber() *TransactionTotals6 {
 	t.TotalNumber = new(TransactionTotals6)
 	return t.TotalNumber
 }
-

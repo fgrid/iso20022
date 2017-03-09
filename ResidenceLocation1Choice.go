@@ -8,9 +8,7 @@ type ResidenceLocation1Choice struct {
 
 	// Specifies the account owner's resident geographical region or area.
 	Area *Max35Text `xml:"Area"`
-
 }
-
 
 func (r *ResidenceLocation1Choice) SetCountry(value string) {
 	r.Country = (*CountryCode)(&value)
@@ -19,4 +17,3 @@ func (r *ResidenceLocation1Choice) SetCountry(value string) {
 func (r *ResidenceLocation1Choice) SetArea(value string) {
 	r.Area = (*Max35Text)(&value)
 }
-

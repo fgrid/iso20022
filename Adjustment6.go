@@ -11,9 +11,7 @@ type Adjustment6 struct {
 
 	// Specifies the monetary amount of the adjustment.
 	Amount *CurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (a *Adjustment6) AddType() *AdjustmentType1Choice {
 	a.Type = new(AdjustmentType1Choice)
@@ -27,4 +25,3 @@ func (a *Adjustment6) SetDirection(value string) {
 func (a *Adjustment6) SetAmount(value, currency string) {
 	a.Amount = NewCurrencyAndAmount(value, currency)
 }
-

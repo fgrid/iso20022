@@ -122,9 +122,7 @@ type SecuritiesFinancing10 struct {
 
 	// Indicates whether the trade is executed ex coupon.
 	ExCoupon *YesNoIndicator `xml:"ExCpn,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancing10) SetRateChangeDate(value string) {
 	s.RateChangeDate = (*ISODateTime)(&value)
@@ -310,4 +308,3 @@ func (s *SecuritiesFinancing10) SetPeriodicPayment(value string) {
 func (s *SecuritiesFinancing10) SetExCoupon(value string) {
 	s.ExCoupon = (*YesNoIndicator)(&value)
 }
-

@@ -17,9 +17,7 @@ type BatchInformation2 struct {
 
 	// Indicates whether the batch entry is a credit or a debit entry.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd,omitempty"`
-
 }
-
 
 func (b *BatchInformation2) SetMessageIdentification(value string) {
 	b.MessageIdentification = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (b *BatchInformation2) SetTotalAmount(value, currency string) {
 func (b *BatchInformation2) SetCreditDebitIndicator(value string) {
 	b.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

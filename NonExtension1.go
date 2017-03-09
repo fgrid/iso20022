@@ -3,7 +3,7 @@ package iso20022
 // Non-extension information.
 type NonExtension1 struct {
 
-	// Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent. 
+	// Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent.
 	NotificationPeriod *Number `xml:"NtfctnPrd,omitempty"`
 
 	// Method by which the notice of non-extension is intended to be delivered.
@@ -17,9 +17,7 @@ type NonExtension1 struct {
 
 	// Address of party to whom the notice of non-extension is intended to be delivered.
 	NotificationRecipientAddress *PostalAddress6 `xml:"NtfctnRcptAdr,omitempty"`
-
 }
-
 
 func (n *NonExtension1) SetNotificationPeriod(value string) {
 	n.NotificationPeriod = (*Number)(&value)
@@ -43,4 +41,3 @@ func (n *NonExtension1) AddNotificationRecipientAddress() *PostalAddress6 {
 	n.NotificationRecipientAddress = new(PostalAddress6)
 	return n.NotificationRecipientAddress
 }
-

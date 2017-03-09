@@ -11,9 +11,7 @@ type SettlementAllowanceCharge1 struct {
 
 	// Reason, expressed as text, for this allowance or charge.
 	Reason *DiscountOrChargeType1Choice `xml:"Rsn,omitempty"`
-
 }
-
 
 func (s *SettlementAllowanceCharge1) SetAllowanceChargeIndicator(value string) {
 	s.AllowanceChargeIndicator = (*YesNoIndicator)(&value)
@@ -27,4 +25,3 @@ func (s *SettlementAllowanceCharge1) AddReason() *DiscountOrChargeType1Choice {
 	s.Reason = new(DiscountOrChargeType1Choice)
 	return s.Reason
 }
-

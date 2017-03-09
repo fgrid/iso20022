@@ -14,9 +14,7 @@ type CorporateActionNotification1 struct {
 
 	// Specifies the status of the details of the event.
 	ProcessingStatus *ProcessingStatus1FormatChoice `xml:"PrcgSts"`
-
 }
-
 
 func (c *CorporateActionNotification1) AddAnnouncementDate() *DateFormat4Choice {
 	c.AnnouncementDate = new(DateFormat4Choice)
@@ -37,4 +35,3 @@ func (c *CorporateActionNotification1) AddProcessingStatus() *ProcessingStatus1F
 	c.ProcessingStatus = new(ProcessingStatus1FormatChoice)
 	return c.ProcessingStatus
 }
-

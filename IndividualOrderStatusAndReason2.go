@@ -50,9 +50,7 @@ type IndividualOrderStatusAndReason2 struct {
 
 	// Information that has been added to the original order.
 	NewDetails *ExpectedExecutionDetails2 `xml:"NewDtls,omitempty"`
-
 }
-
 
 func (i *IndividualOrderStatusAndReason2) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -89,7 +87,7 @@ func (i *IndividualOrderStatusAndReason2) AddConditionallyAccepted() *Conditiona
 }
 
 func (i *IndividualOrderStatusAndReason2) AddRejected() *RejectedStatus6 {
-	newValue := new (RejectedStatus6)
+	newValue := new(RejectedStatus6)
 	i.Rejected = append(i.Rejected, newValue)
 	return newValue
 }
@@ -128,4 +126,3 @@ func (i *IndividualOrderStatusAndReason2) AddNewDetails() *ExpectedExecutionDeta
 	i.NewDetails = new(ExpectedExecutionDetails2)
 	return i.NewDetails
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.008.001.02 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:sese.008.001.02 Document"`
 	Message *ReversalOfTransferInConfirmationV02 `xml:"RvslOfTrfInConfV02"`
 }
 
@@ -28,7 +28,7 @@ func (d *Document00800102) AddMessage() *ReversalOfTransferInConfirmationV02 {
 // It is also possible to request a reversal of a TransferInConfirmation by quoting its message reference (MessageIdentification) in PreviousReference.
 type ReversalOfTransferInConfirmationV02 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message that was previously sent.
@@ -48,9 +48,7 @@ type ReversalOfTransferInConfirmationV02 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *ReversalOfTransferInConfirmationV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -86,4 +84,3 @@ func (r *ReversalOfTransferInConfirmationV02) AddCopyDetails() *iso20022.CopyInf
 	r.CopyDetails = new(iso20022.CopyInformation2)
 	return r.CopyDetails
 }
-

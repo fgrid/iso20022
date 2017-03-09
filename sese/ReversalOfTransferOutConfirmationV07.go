@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400107 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.004.001.07 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:sese.004.001.07 Document"`
 	Message *ReversalOfTransferOutConfirmationV07 `xml:"RvslOfTrfOutConf"`
 }
 
@@ -26,7 +26,7 @@ func (d *Document00400107) AddMessage() *ReversalOfTransferOutConfirmationV07 {
 // The message identification of the TransferOutConfirmation message in which the transfer out confirmation was conveyed may also be quoted in PreviousReference. The message identification of the TransferOutInstruction message in which the transfer out instruction was conveyed may also be quoted in RelatedReference.
 type ReversalOfTransferOutConfirmationV07 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.
@@ -40,9 +40,7 @@ type ReversalOfTransferOutConfirmationV07 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation4 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *ReversalOfTransferOutConfirmationV07) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -50,7 +48,7 @@ func (r *ReversalOfTransferOutConfirmationV07) AddMessageIdentification() *iso20
 }
 
 func (r *ReversalOfTransferOutConfirmationV07) AddReferences() *iso20022.References20 {
-	newValue := new (iso20022.References20)
+	newValue := new(iso20022.References20)
 	r.References = append(r.References, newValue)
 	return newValue
 }
@@ -69,4 +67,3 @@ func (r *ReversalOfTransferOutConfirmationV07) AddCopyDetails() *iso20022.CopyIn
 	r.CopyDetails = new(iso20022.CopyInformation4)
 	return r.CopyDetails
 }
-

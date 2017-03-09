@@ -13,7 +13,7 @@ type CashAccount4 struct {
 	AccountServicer *PartyIdentification2Choice `xml:"AcctSvcr,omitempty"`
 
 	// Information identifying a specific branch of a financial institution.
-	// 
+	//
 	// Usage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
 	AccountServicerBranch *BranchData `xml:"AcctSvcrBrnch,omitempty"`
 
@@ -22,9 +22,7 @@ type CashAccount4 struct {
 
 	// Purpose of the account/source fund type. This is typically linked to an investment product, eg, wrapper, PEP, ISA.
 	ExtendedInvestmentAccountType *Extended350Code `xml:"XtndedInvstmtAcctTp,omitempty"`
-
 }
-
 
 func (c *CashAccount4) AddIdentification() *AccountIdentificationAndName3 {
 	c.Identification = new(AccountIdentificationAndName3)
@@ -53,4 +51,3 @@ func (c *CashAccount4) SetInvestmentAccountType(value string) {
 func (c *CashAccount4) SetExtendedInvestmentAccountType(value string) {
 	c.ExtendedInvestmentAccountType = (*Extended350Code)(&value)
 }
-

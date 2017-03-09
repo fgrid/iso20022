@@ -8,9 +8,7 @@ type DeMinimus1Choice struct {
 
 	// Conditions applicable when the investor is not covered by the "de minimis" exemption.
 	DeMinimusNotApplicable *DeMinimusNotApplicable1 `xml:"DeMnmsNotAplbl"`
-
 }
-
 
 func (d *DeMinimus1Choice) AddDeMinimusApplicable() *DeMinimusApplicable1 {
 	d.DeMinimusApplicable = new(DeMinimusApplicable1)
@@ -21,4 +19,3 @@ func (d *DeMinimus1Choice) AddDeMinimusNotApplicable() *DeMinimusNotApplicable1 
 	d.DeMinimusNotApplicable = new(DeMinimusNotApplicable1)
 	return d.DeMinimusNotApplicable
 }
-

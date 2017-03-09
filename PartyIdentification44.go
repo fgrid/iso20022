@@ -8,9 +8,7 @@ type PartyIdentification44 struct {
 
 	// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 	AlternativeIdentifier []*Max35Text `xml:"AltrntvIdr,omitempty"`
-
 }
-
 
 func (p *PartyIdentification44) SetAnyBIC(value string) {
 	p.AnyBIC = (*AnyBICIdentifier)(&value)
@@ -19,4 +17,3 @@ func (p *PartyIdentification44) SetAnyBIC(value string) {
 func (p *PartyIdentification44) AddAlternativeIdentifier(value string) {
 	p.AlternativeIdentifier = append(p.AlternativeIdentifier, (*Max35Text)(&value))
 }
-

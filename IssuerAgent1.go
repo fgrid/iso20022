@@ -8,9 +8,7 @@ type IssuerAgent1 struct {
 
 	// Specifies the role of the Issuer agent.
 	Role *AgentRole1Code `xml:"Role,omitempty"`
-
 }
-
 
 func (i *IssuerAgent1) AddIdentification() *PartyIdentification9Choice {
 	i.Identification = new(PartyIdentification9Choice)
@@ -20,4 +18,3 @@ func (i *IssuerAgent1) AddIdentification() *PartyIdentification9Choice {
 func (i *IssuerAgent1) SetRole(value string) {
 	i.Role = (*AgentRole1Code)(&value)
 }
-

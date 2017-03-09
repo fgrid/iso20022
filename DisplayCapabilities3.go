@@ -17,9 +17,7 @@ type DisplayCapabilities3 struct {
 
 	// Available language for the message. Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
 	AvailableLanguage []*LanguageCode `xml:"AvlblLang,omitempty"`
-
 }
-
 
 func (d *DisplayCapabilities3) SetDestination(value string) {
 	d.Destination = (*UserInterface1Code)(&value)
@@ -40,4 +38,3 @@ func (d *DisplayCapabilities3) SetLineWidth(value string) {
 func (d *DisplayCapabilities3) AddAvailableLanguage(value string) {
 	d.AvailableLanguage = append(d.AvailableLanguage, (*LanguageCode)(&value))
 }
-

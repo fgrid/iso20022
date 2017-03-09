@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:caaa.016.001.02 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:caaa.016.001.02 Document"`
 	Message *AcceptorCurrencyConversionRequestV02 `xml:"AccptrCcyConvsReq"`
 }
 
@@ -17,7 +17,7 @@ func (d *Document01600102) AddMessage() *AcceptorCurrencyConversionRequestV02 {
 }
 
 // The AcceptorCurrencyConversionRequest message is sent by the card acceptor to the currency conversion service provider to request if the cardholder is able to pay in the currency of its card.
-// 
+//
 type AcceptorCurrencyConversionRequestV02 struct {
 
 	// Currency Conversion request message management information.
@@ -28,9 +28,7 @@ type AcceptorCurrencyConversionRequestV02 struct {
 
 	// Trailer of the message containing a MAC.
 	SecurityTrailer *iso20022.ContentInformationType11 `xml:"SctyTrlr"`
-
 }
-
 
 func (a *AcceptorCurrencyConversionRequestV02) AddHeader() *iso20022.Header10 {
 	a.Header = new(iso20022.Header10)
@@ -46,4 +44,3 @@ func (a *AcceptorCurrencyConversionRequestV02) AddSecurityTrailer() *iso20022.Co
 	a.SecurityTrailer = new(iso20022.ContentInformationType11)
 	return a.SecurityTrailer
 }
-

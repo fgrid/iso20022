@@ -11,9 +11,7 @@ type PartyIdentification68Choice struct {
 
 	// Nation with its own government, occupying a particular territory.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PartyIdentification68Choice) SetBIC(value string) {
 	p.BIC = (*AnyBICIdentifier)(&value)
@@ -27,4 +25,3 @@ func (p *PartyIdentification68Choice) AddNameAndAddress() *NameAndAddress13 {
 func (p *PartyIdentification68Choice) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

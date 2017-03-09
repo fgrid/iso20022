@@ -17,9 +17,7 @@ type ATMTransactionAmounts3 struct {
 
 	// Maximum amount value in the currency of the limit.
 	MaximumAmount *ImpliedCurrencyAndAmount `xml:"MaxAmt,omitempty"`
-
 }
-
 
 func (a *ATMTransactionAmounts3) SetType(value string) {
 	a.Type = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (a *ATMTransactionAmounts3) SetMinimumAmount(value, currency string) {
 func (a *ATMTransactionAmounts3) SetMaximumAmount(value, currency string) {
 	a.MaximumAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

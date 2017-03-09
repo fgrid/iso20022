@@ -17,9 +17,7 @@ type CollateralAmount1 struct {
 
 	// Specifies the amount of money paid for the provision of financial services.
 	FeesAndCommissions *ActiveCurrencyAndAmount `xml:"FeesAndComssns,omitempty"`
-
 }
-
 
 func (c *CollateralAmount1) SetCollateralAmount(value, currency string) {
 	c.CollateralAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -40,4 +38,3 @@ func (c *CollateralAmount1) SetAccruedInterestAmount(value, currency string) {
 func (c *CollateralAmount1) SetFeesAndCommissions(value, currency string) {
 	c.FeesAndCommissions = NewActiveCurrencyAndAmount(value, currency)
 }
-

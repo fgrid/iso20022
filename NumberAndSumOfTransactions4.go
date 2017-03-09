@@ -11,9 +11,7 @@ type NumberAndSumOfTransactions4 struct {
 
 	// Resulting debit or credit amount of the netted amounts for all debit and credit entries.
 	TotalNetEntry *AmountAndDirection35 `xml:"TtlNetNtry,omitempty"`
-
 }
-
 
 func (n *NumberAndSumOfTransactions4) SetNumberOfEntries(value string) {
 	n.NumberOfEntries = (*Max15NumericText)(&value)
@@ -27,4 +25,3 @@ func (n *NumberAndSumOfTransactions4) AddTotalNetEntry() *AmountAndDirection35 {
 	n.TotalNetEntry = new(AmountAndDirection35)
 	return n.TotalNetEntry
 }
-

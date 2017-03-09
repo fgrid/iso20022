@@ -16,9 +16,7 @@ type DetailedAmount8 struct {
 
 	// Text to display on the cardholder or to print on the cardholder bank statement.
 	Label *Max140Text `xml:"Labl,omitempty"`
-
 }
-
 
 func (d *DetailedAmount8) SetAmount(value, currency string) {
 	d.Amount = NewImpliedCurrencyAndAmount(value, currency)
@@ -35,4 +33,3 @@ func (d *DetailedAmount8) SetQuotationDate(value string) {
 func (d *DetailedAmount8) SetLabel(value string) {
 	d.Label = (*Max140Text)(&value)
 }
-

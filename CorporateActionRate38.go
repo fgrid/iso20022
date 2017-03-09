@@ -35,18 +35,16 @@ type CorporateActionRate38 struct {
 
 	// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments, for example, in the context of the EU Savings directive.
 	TaxableIncomePerDividendShare []*RateTypeAndAmountAndStatus11 `xml:"TaxblIncmPerDvddShr,omitempty"`
-
 }
 
-
 func (c *CorporateActionRate38) AddGrossDividendRate() *GrossDividendRateFormat10Choice {
-	newValue := new (GrossDividendRateFormat10Choice)
+	newValue := new(GrossDividendRateFormat10Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate38) AddNetDividendRate() *NetDividendRateFormat12Choice {
-	newValue := new (NetDividendRateFormat12Choice)
+	newValue := new(NetDividendRateFormat12Choice)
 	c.NetDividendRate = append(c.NetDividendRate, newValue)
 	return newValue
 }
@@ -57,7 +55,7 @@ func (c *CorporateActionRate38) AddIndexFactor() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate38) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat2Choice {
-	newValue := new (InterestRateUsedForPaymentFormat2Choice)
+	newValue := new(InterestRateUsedForPaymentFormat2Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
@@ -71,7 +69,7 @@ func (c *CorporateActionRate38) SetProrationRate(value string) {
 }
 
 func (c *CorporateActionRate38) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	c.TaxRelatedRate = append(c.TaxRelatedRate, newValue)
 	return newValue
 }
@@ -91,8 +89,7 @@ func (c *CorporateActionRate38) AddWithholdingOfForeignTax() *RateAndAmountForma
 }
 
 func (c *CorporateActionRate38) AddTaxableIncomePerDividendShare() *RateTypeAndAmountAndStatus11 {
-	newValue := new (RateTypeAndAmountAndStatus11)
+	newValue := new(RateTypeAndAmountAndStatus11)
 	c.TaxableIncomePerDividendShare = append(c.TaxableIncomePerDividendShare, newValue)
 	return newValue
 }
-

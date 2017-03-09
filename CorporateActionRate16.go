@@ -26,9 +26,7 @@ type CorporateActionRate16 struct {
 
 	// Rate of discount for securities purchased through a reinvestment scheme as compared to the current market price of security.
 	ReinvestmentDiscountRateToMarket *RateFormat6Choice `xml:"RinvstmtDscntRateToMkt,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate16) AddInterest() *RateAndAmountFormat14Choice {
 	c.Interest = new(RateAndAmountFormat14Choice)
@@ -69,4 +67,3 @@ func (c *CorporateActionRate16) AddReinvestmentDiscountRateToMarket() *RateForma
 	c.ReinvestmentDiscountRateToMarket = new(RateFormat6Choice)
 	return c.ReinvestmentDiscountRateToMarket
 }
-

@@ -23,9 +23,7 @@ type ForeignExchangeTerms26 struct {
 
 	// Party that proposes a  foreign exchange rate.
 	QuotingInstitution *PartyIdentification70Choice `xml:"QtgInstn,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTerms26) SetToAmount(value, currency string) {
 	f.ToAmount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -55,4 +53,3 @@ func (f *ForeignExchangeTerms26) AddQuotingInstitution() *PartyIdentification70C
 	f.QuotingInstitution = new(PartyIdentification70Choice)
 	return f.QuotingInstitution
 }
-

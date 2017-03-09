@@ -11,7 +11,7 @@ type GroupHeader72 struct {
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
 
 	// User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.
-	// 
+	//
 	// Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.
 	// The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
 	Authorisation []*Authorisation1Choice `xml:"Authstn,omitempty"`
@@ -45,9 +45,7 @@ type GroupHeader72 struct {
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
 	// Usage: The instructed agent is the party receiving the return message and not the party that received the original instruction that is being returned.
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader72) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -58,7 +56,7 @@ func (g *GroupHeader72) SetCreationDateTime(value string) {
 }
 
 func (g *GroupHeader72) AddAuthorisation() *Authorisation1Choice {
-	newValue := new (Authorisation1Choice)
+	newValue := new(Authorisation1Choice)
 	g.Authorisation = append(g.Authorisation, newValue)
 	return newValue
 }
@@ -101,4 +99,3 @@ func (g *GroupHeader72) AddInstructedAgent() *BranchAndFinancialInstitutionIdent
 	g.InstructedAgent = new(BranchAndFinancialInstitutionIdentification5)
 	return g.InstructedAgent
 }
-

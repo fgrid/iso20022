@@ -35,18 +35,16 @@ type CorporateActionRate26 struct {
 
 	// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.
 	TaxableIncomePerDividendShare []*RateTypeAndAmountAndStatus11 `xml:"TaxblIncmPerDvddShr,omitempty"`
-
 }
 
-
 func (c *CorporateActionRate26) AddGrossDividendRate() *GrossDividendRateFormat2Choice {
-	newValue := new (GrossDividendRateFormat2Choice)
+	newValue := new(GrossDividendRateFormat2Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate26) AddNetDividendRate() *NetDividendRateFormat7Choice {
-	newValue := new (NetDividendRateFormat7Choice)
+	newValue := new(NetDividendRateFormat7Choice)
 	c.NetDividendRate = append(c.NetDividendRate, newValue)
 	return newValue
 }
@@ -57,7 +55,7 @@ func (c *CorporateActionRate26) AddIndexFactor() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate26) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat2Choice {
-	newValue := new (InterestRateUsedForPaymentFormat2Choice)
+	newValue := new(InterestRateUsedForPaymentFormat2Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
@@ -71,7 +69,7 @@ func (c *CorporateActionRate26) SetProrationRate(value string) {
 }
 
 func (c *CorporateActionRate26) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	c.TaxRelatedRate = append(c.TaxRelatedRate, newValue)
 	return newValue
 }
@@ -91,8 +89,7 @@ func (c *CorporateActionRate26) AddWithholdingOfForeignTax() *RateAndAmountForma
 }
 
 func (c *CorporateActionRate26) AddTaxableIncomePerDividendShare() *RateTypeAndAmountAndStatus11 {
-	newValue := new (RateTypeAndAmountAndStatus11)
+	newValue := new(RateTypeAndAmountAndStatus11)
 	c.TaxableIncomePerDividendShare = append(c.TaxableIncomePerDividendShare, newValue)
 	return newValue
 }
-

@@ -23,9 +23,7 @@ type ReportData5 struct {
 
 	// Specifies the requested amount in multiple currencies.
 	AccountValue *Value `xml:"AcctVal,omitempty"`
-
 }
-
 
 func (r *ReportData5) SetMessageIdentification(value string) {
 	r.MessageIdentification = (*Max35Text)(&value)
@@ -44,7 +42,7 @@ func (r *ReportData5) SetType(value string) {
 }
 
 func (r *ReportData5) AddPayInCallAmount() *PayInCallItem {
-	newValue := new (PayInCallItem)
+	newValue := new(PayInCallItem)
 	r.PayInCallAmount = append(r.PayInCallAmount, newValue)
 	return newValue
 }
@@ -57,4 +55,3 @@ func (r *ReportData5) AddAccountValue() *Value {
 	r.AccountValue = new(Value)
 	return r.AccountValue
 }
-

@@ -14,9 +14,7 @@ type FailedMovement1 struct {
 
 	// The reason for the settlement failure.
 	Reason *FailedSettlementReason1FormatChoice `xml:"Rsn"`
-
 }
-
 
 func (f *FailedMovement1) SetCashAmount(value, currency string) {
 	f.CashAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -36,4 +34,3 @@ func (f *FailedMovement1) AddReason() *FailedSettlementReason1FormatChoice {
 	f.Reason = new(FailedSettlementReason1FormatChoice)
 	return f.Reason
 }
-

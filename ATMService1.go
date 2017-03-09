@@ -11,9 +11,7 @@ type ATMService1 struct {
 
 	// Describes the type of transaction selected by the customer.
 	ServiceType *ATMServiceType1Code `xml:"SvcTp"`
-
 }
-
 
 func (a *ATMService1) SetServiceReference(value string) {
 	a.ServiceReference = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (a *ATMService1) SetATMServiceCode(value string) {
 func (a *ATMService1) SetServiceType(value string) {
 	a.ServiceType = (*ATMServiceType1Code)(&value)
 }
-

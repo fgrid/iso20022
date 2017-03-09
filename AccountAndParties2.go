@@ -11,9 +11,7 @@ type AccountAndParties2 struct {
 
 	// Additional information.
 	AdditionalInformation []*Max256Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *AccountAndParties2) AddAccount() *CustomerAccount1 {
 	a.Account = new(CustomerAccount1)
@@ -21,7 +19,7 @@ func (a *AccountAndParties2) AddAccount() *CustomerAccount1 {
 }
 
 func (a *AccountAndParties2) AddRole() *AccountRole1 {
-	newValue := new (AccountRole1)
+	newValue := new(AccountRole1)
 	a.Role = append(a.Role, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (a *AccountAndParties2) AddRole() *AccountRole1 {
 func (a *AccountAndParties2) AddAdditionalInformation(value string) {
 	a.AdditionalInformation = append(a.AdditionalInformation, (*Max256Text)(&value))
 }
-

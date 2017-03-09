@@ -17,9 +17,7 @@ type CashParties18 struct {
 
 	// Financial institution through which the transaction must pass to reach the account with institution.
 	Intermediary *PartyIdentificationAndAccount80 `xml:"Intrmy,omitempty"`
-
 }
-
 
 func (c *CashParties18) AddDebtor() *PartyIdentificationAndAccount80 {
 	c.Debtor = new(PartyIdentificationAndAccount80)
@@ -45,4 +43,3 @@ func (c *CashParties18) AddIntermediary() *PartyIdentificationAndAccount80 {
 	c.Intermediary = new(PartyIdentificationAndAccount80)
 	return c.Intermediary
 }
-

@@ -14,12 +14,10 @@ type TransferIn8 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
 
-
 func (t *TransferIn8) AddTransferDetails() *Transfer25 {
-	newValue := new (Transfer25)
+	newValue := new(Transfer25)
 	t.TransferDetails = append(t.TransferDetails, newValue)
 	return newValue
 }
@@ -35,8 +33,7 @@ func (t *TransferIn8) AddSettlementDetails() *DeliverInformation11 {
 }
 
 func (t *TransferIn8) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

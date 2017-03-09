@@ -8,9 +8,7 @@ type Equalisation1 struct {
 
 	// Rate used for calculation of the equalisation.
 	Rate *PercentageRate `xml:"Rate,omitempty"`
-
 }
-
 
 func (e *Equalisation1) SetAmount(value, currency string) {
 	e.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (e *Equalisation1) SetAmount(value, currency string) {
 func (e *Equalisation1) SetRate(value string) {
 	e.Rate = (*PercentageRate)(&value)
 }
-

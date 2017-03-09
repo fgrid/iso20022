@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.001.001.01 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.001.001.01 Document"`
 	Message *InvoiceFinancingRequestV01 `xml:"InvcFincgReq"`
 }
 
@@ -38,9 +38,7 @@ type InvoiceFinancingRequestV01 struct {
 
 	// Set of characteristics that unambiguously identify the single invoice financing request related to the entire invoice or a specific instalment of the invoice settlement, such as actors involved, invoice totals or payment method.
 	InvoiceRequestInformation []*iso20022.InvoiceRequestInformation1 `xml:"InvcReqInf"`
-
 }
-
 
 func (i *InvoiceFinancingRequestV01) AddRequestGroupInformation() *iso20022.RequestGroupInformation1 {
 	i.RequestGroupInformation = new(iso20022.RequestGroupInformation1)
@@ -48,8 +46,7 @@ func (i *InvoiceFinancingRequestV01) AddRequestGroupInformation() *iso20022.Requ
 }
 
 func (i *InvoiceFinancingRequestV01) AddInvoiceRequestInformation() *iso20022.InvoiceRequestInformation1 {
-	newValue := new (iso20022.InvoiceRequestInformation1)
+	newValue := new(iso20022.InvoiceRequestInformation1)
 	i.InvoiceRequestInformation = append(i.InvoiceRequestInformation, newValue)
 	return newValue
 }
-

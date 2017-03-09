@@ -68,9 +68,7 @@ type VoteParameters4 struct {
 
 	// Indicates whether the previously sent instructions becomes invalid after a market deadline extension.
 	PreviousInstructionInvalidityIndicator *YesNoIndicator `xml:"PrvsInstrInvldtyInd,omitempty"`
-
 }
-
 
 func (v *VoteParameters4) SetSecuritiesQuantityRequiredToVote(value string) {
 	v.SecuritiesQuantityRequiredToVote = (*DecimalNumber)(&value)
@@ -174,4 +172,3 @@ func (v *VoteParameters4) SetAdditionalVotingRequirements(value string) {
 func (v *VoteParameters4) SetPreviousInstructionInvalidityIndicator(value string) {
 	v.PreviousInstructionInvalidityIndicator = (*YesNoIndicator)(&value)
 }
-

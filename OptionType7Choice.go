@@ -8,9 +8,7 @@ type OptionType7Choice struct {
 
 	// Option type expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (o *OptionType7Choice) SetCode(value string) {
 	o.Code = (*OptionType1Code)(&value)
@@ -20,4 +18,3 @@ func (o *OptionType7Choice) AddProprietary() *GenericIdentification47 {
 	o.Proprietary = new(GenericIdentification47)
 	return o.Proprietary
 }
-

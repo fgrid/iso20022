@@ -11,9 +11,7 @@ type RejectedStatusReason9Choice struct {
 
 	// Proprietary identification of the reason for the rejected status.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (r *RejectedStatusReason9Choice) SetReason(value string) {
 	r.Reason = (*RejectedStatusReason9Code)(&value)
@@ -27,4 +25,3 @@ func (r *RejectedStatusReason9Choice) AddDataSourceScheme() *GenericIdentificati
 	r.DataSourceScheme = new(GenericIdentification1)
 	return r.DataSourceScheme
 }
-

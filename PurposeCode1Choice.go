@@ -8,9 +8,7 @@ type PurposeCode1Choice struct {
 
 	// Account type is defined using a data source scheme.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (p *PurposeCode1Choice) SetCode(value string) {
 	p.Code = (*SecuritiesAccountPurposeType1Code)(&value)
@@ -20,4 +18,3 @@ func (p *PurposeCode1Choice) AddProprietary() *GenericIdentification13 {
 	p.Proprietary = new(GenericIdentification13)
 	return p.Proprietary
 }
-

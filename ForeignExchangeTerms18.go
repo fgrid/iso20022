@@ -15,9 +15,7 @@ type ForeignExchangeTerms18 struct {
 
 	// Amount following a foreign exchange conversion.
 	ConvertedAmount *ActiveCurrencyAndAmount `xml:"ConvtdAmt"`
-
 }
-
 
 func (f *ForeignExchangeTerms18) SetUnitCurrency(value string) {
 	f.UnitCurrency = (*ActiveCurrencyCode)(&value)
@@ -34,4 +32,3 @@ func (f *ForeignExchangeTerms18) SetExchangeRate(value string) {
 func (f *ForeignExchangeTerms18) SetConvertedAmount(value, currency string) {
 	f.ConvertedAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

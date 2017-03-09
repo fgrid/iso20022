@@ -26,9 +26,7 @@ type Statement7 struct {
 
 	// Sequential number of the statement.
 	ReportNumber *Max5NumericText `xml:"RptNb,omitempty"`
-
 }
-
 
 func (s *Statement7) SetReference(value string) {
 	s.Reference = (*Max35Text)(&value)
@@ -66,4 +64,3 @@ func (s *Statement7) AddStatementBasis() *StatementBasisCodeAndDSSCodeChoice {
 func (s *Statement7) SetReportNumber(value string) {
 	s.ReportNumber = (*Max5NumericText)(&value)
 }
-

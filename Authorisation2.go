@@ -11,9 +11,7 @@ type Authorisation2 struct {
 
 	// Specifies the maximum amount for each  bulk submission.
 	MaximumAmountByBulkSubmission *FixedAmountOrUnlimited1Choice `xml:"MaxAmtByBlkSubmissn,omitempty"`
-
 }
-
 
 func (a *Authorisation2) AddMaximumAmountByTransaction() *FixedAmountOrUnlimited1Choice {
 	a.MaximumAmountByTransaction = new(FixedAmountOrUnlimited1Choice)
@@ -21,7 +19,7 @@ func (a *Authorisation2) AddMaximumAmountByTransaction() *FixedAmountOrUnlimited
 }
 
 func (a *Authorisation2) AddMaximumAmountByPeriod() *MaximumAmountByPeriod1 {
-	newValue := new (MaximumAmountByPeriod1)
+	newValue := new(MaximumAmountByPeriod1)
 	a.MaximumAmountByPeriod = append(a.MaximumAmountByPeriod, newValue)
 	return newValue
 }
@@ -30,4 +28,3 @@ func (a *Authorisation2) AddMaximumAmountByBulkSubmission() *FixedAmountOrUnlimi
 	a.MaximumAmountByBulkSubmission = new(FixedAmountOrUnlimited1Choice)
 	return a.MaximumAmountByBulkSubmission
 }
-

@@ -49,7 +49,7 @@ type CorporateAction2 struct {
 	OfferType []*OfferType1FormatChoice `xml:"OfferTp,omitempty"`
 
 	// Indicates whether there is restrictions apply to the CA event or not.
-	// 
+	//
 	// Yes = There is restrictions.
 	// No = There is no restrictions.
 	RestrictionIndicator *YesNoIndicator `xml:"RstrctnInd,omitempty"`
@@ -123,12 +123,10 @@ type CorporateAction2 struct {
 
 	// Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.
 	DistributionType *DistributionType1FormatChoice `xml:"DstrbtnTp,omitempty"`
-
 }
 
-
 func (c *CorporateAction2) AddEventStage() *CorporateActionEventStage1FormatChoice {
-	newValue := new (CorporateActionEventStage1FormatChoice)
+	newValue := new(CorporateActionEventStage1FormatChoice)
 	c.EventStage = append(c.EventStage, newValue)
 	return newValue
 }
@@ -193,13 +191,13 @@ func (c *CorporateAction2) AddBaseDenomination() *UnitOrFaceAmount1Choice {
 }
 
 func (c *CorporateAction2) AddChangeType() *CorporateActionChangeType1FormatChoice {
-	newValue := new (CorporateActionChangeType1FormatChoice)
+	newValue := new(CorporateActionChangeType1FormatChoice)
 	c.ChangeType = append(c.ChangeType, newValue)
 	return newValue
 }
 
 func (c *CorporateAction2) AddOfferType() *OfferType1FormatChoice {
-	newValue := new (OfferType1FormatChoice)
+	newValue := new(OfferType1FormatChoice)
 	c.OfferType = append(c.OfferType, newValue)
 	return newValue
 }
@@ -255,7 +253,7 @@ func (c *CorporateAction2) AddDateDetails() *CorporateActionDate2 {
 }
 
 func (c *CorporateAction2) AddPriceDetails() *CorporateActionPrice2 {
-	newValue := new (CorporateActionPrice2)
+	newValue := new(CorporateActionPrice2)
 	c.PriceDetails = append(c.PriceDetails, newValue)
 	return newValue
 }
@@ -314,4 +312,3 @@ func (c *CorporateAction2) AddDistributionType() *DistributionType1FormatChoice 
 	c.DistributionType = new(DistributionType1FormatChoice)
 	return c.DistributionType
 }
-

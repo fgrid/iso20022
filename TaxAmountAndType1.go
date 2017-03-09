@@ -8,9 +8,7 @@ type TaxAmountAndType1 struct {
 
 	// Amount of money, which has been typed.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (t *TaxAmountAndType1) AddType() *TaxAmountType1Choice {
 	t.Type = new(TaxAmountType1Choice)
@@ -20,4 +18,3 @@ func (t *TaxAmountAndType1) AddType() *TaxAmountType1Choice {
 func (t *TaxAmountAndType1) SetAmount(value, currency string) {
 	t.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

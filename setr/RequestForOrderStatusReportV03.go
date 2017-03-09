@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.018.001.03 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:setr.018.001.03 Document"`
 	Message *RequestForOrderStatusReportV03 `xml:"ReqForOrdrStsRptV03"`
 }
 
@@ -32,7 +32,7 @@ func (d *Document01800103) AddMessage() *RequestForOrderStatusReportV03 {
 // The RequestForOrderStatusReport message may not be used to request the status of an investment account, a transfer or the status of a financial instrument.
 type RequestForOrderStatusReportV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Information to identify the order(s) for which the status is requested.
@@ -40,9 +40,7 @@ type RequestForOrderStatusReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RequestForOrderStatusReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -50,14 +48,13 @@ func (r *RequestForOrderStatusReportV03) AddMessageIdentification() *iso20022.Me
 }
 
 func (r *RequestForOrderStatusReportV03) AddRequestDetails() *iso20022.MessageAndBusinessReference4 {
-	newValue := new (iso20022.MessageAndBusinessReference4)
+	newValue := new(iso20022.MessageAndBusinessReference4)
 	r.RequestDetails = append(r.RequestDetails, newValue)
 	return newValue
 }
 
 func (r *RequestForOrderStatusReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

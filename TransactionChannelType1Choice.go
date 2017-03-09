@@ -8,9 +8,7 @@ type TransactionChannelType1Choice struct {
 
 	// Type of transaction channel expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (t *TransactionChannelType1Choice) SetCode(value string) {
 	t.Code = (*TransactionChannel2Code)(&value)
@@ -20,4 +18,3 @@ func (t *TransactionChannelType1Choice) AddProprietary() *GenericIdentification4
 	t.Proprietary = new(GenericIdentification47)
 	return t.Proprietary
 }
-

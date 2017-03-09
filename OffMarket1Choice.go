@@ -8,9 +8,7 @@ type OffMarket1Choice struct {
 
 	// Provides the BIC code of the systematic internaliser.
 	SystematicInternaliser *AnyBICIdentifier `xml:"SystmtcIntlr"`
-
 }
-
 
 func (o *OffMarket1Choice) SetOffMarketIndicator(value string) {
 	o.OffMarketIndicator = (*OffMarket1Code)(&value)
@@ -19,4 +17,3 @@ func (o *OffMarket1Choice) SetOffMarketIndicator(value string) {
 func (o *OffMarket1Choice) SetSystematicInternaliser(value string) {
 	o.SystematicInternaliser = (*AnyBICIdentifier)(&value)
 }
-

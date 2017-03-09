@@ -8,9 +8,7 @@ type BalanceQuantity10Choice struct {
 
 	// Total quantity of financial instruments of the balance.
 	Proprietary *GenericIdentification144 `xml:"Prtry"`
-
 }
-
 
 func (b *BalanceQuantity10Choice) AddQuantity() *Quantity10Choice {
 	b.Quantity = new(Quantity10Choice)
@@ -21,4 +19,3 @@ func (b *BalanceQuantity10Choice) AddProprietary() *GenericIdentification144 {
 	b.Proprietary = new(GenericIdentification144)
 	return b.Proprietary
 }
-

@@ -14,9 +14,7 @@ type Linkages38 struct {
 
 	// Quantity of financial instruments of the linked transaction to be paired-off or turned.
 	LinkedQuantity *PairedOrTurnedQuantity3Choice `xml:"LkdQty,omitempty"`
-
 }
-
 
 func (l *Linkages38) AddProcessingPosition() *ProcessingPosition7Choice {
 	l.ProcessingPosition = new(ProcessingPosition7Choice)
@@ -37,4 +35,3 @@ func (l *Linkages38) AddLinkedQuantity() *PairedOrTurnedQuantity3Choice {
 	l.LinkedQuantity = new(PairedOrTurnedQuantity3Choice)
 	return l.LinkedQuantity
 }
-

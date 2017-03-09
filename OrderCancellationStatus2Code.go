@@ -1,0 +1,3 @@
+package iso20022
+
+type OrderCancellationStatus2Code string

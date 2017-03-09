@@ -17,9 +17,7 @@ type RejectionReason2 struct {
 
 	// Additional information related to the rejection and meant to allow for the precise identification of the rejection reason. This could include a copy of the rejected message in part or in full.
 	AdditionalData *Max20000Text `xml:"AddtlData,omitempty"`
-
 }
-
 
 func (r *RejectionReason2) SetRejectingPartyReason(value string) {
 	r.RejectingPartyReason = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (r *RejectionReason2) SetReasonDescription(value string) {
 func (r *RejectionReason2) SetAdditionalData(value string) {
 	r.AdditionalData = (*Max20000Text)(&value)
 }
-

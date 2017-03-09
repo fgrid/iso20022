@@ -26,9 +26,7 @@ type CancellationRequestInformation1 struct {
 
 	// Financial institution of financing requestor to which an invoice financing cancellation request is addressed.
 	FirstAgent *FinancialInstitutionIdentification6 `xml:"FrstAgt,omitempty"`
-
 }
-
 
 func (c *CancellationRequestInformation1) SetOriginalGroupIdentification(value string) {
 	c.OriginalGroupIdentification = (*Max35Text)(&value)
@@ -64,4 +62,3 @@ func (c *CancellationRequestInformation1) AddFirstAgent() *FinancialInstitutionI
 	c.FirstAgent = new(FinancialInstitutionIdentification6)
 	return c.FirstAgent
 }
-

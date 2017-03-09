@@ -29,7 +29,7 @@ type PaymentTransaction34 struct {
 	ReturnedInterbankSettlementAmount *ActiveCurrencyAndAmount `xml:"RtrdIntrBkSttlmAmt"`
 
 	// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-	// 
+	//
 	// Usage: the InterbankSettlementDate is the interbank settlement date of the return message, and not of the original instruction.
 	InterbankSettlementDate *ISODate `xml:"IntrBkSttlmDt,omitempty"`
 
@@ -43,7 +43,7 @@ type PaymentTransaction34 struct {
 	CompensationAmount *ActiveOrHistoricCurrencyAndAmount `xml:"CompstnAmt,omitempty"`
 
 	// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
-	// 
+	//
 	// Usage: The ChargeBearer applies to the return message, not to the original instruction.
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
@@ -51,12 +51,12 @@ type PaymentTransaction34 struct {
 	ChargesInformation []*Charges2 `xml:"ChrgsInf,omitempty"`
 
 	// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructing agent is the party sending the return message and not the party that sent the original instruction that is being returned.
 	InstructingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstgAgt,omitempty"`
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructed agent is the party receiving the return message and not the party that received the original instruction that is being returned.
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
@@ -65,9 +65,7 @@ type PaymentTransaction34 struct {
 
 	// Key elements used to identify the original transaction that is being referred to.
 	OriginalTransactionReference *OriginalTransactionReference16 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction34) SetReturnIdentification(value string) {
 	p.ReturnIdentification = (*Max35Text)(&value)
@@ -123,7 +121,7 @@ func (p *PaymentTransaction34) SetChargeBearer(value string) {
 }
 
 func (p *PaymentTransaction34) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -139,7 +137,7 @@ func (p *PaymentTransaction34) AddInstructedAgent() *BranchAndFinancialInstituti
 }
 
 func (p *PaymentTransaction34) AddReturnReasonInformation() *PaymentReturnReason1 {
-	newValue := new (PaymentReturnReason1)
+	newValue := new(PaymentReturnReason1)
 	p.ReturnReasonInformation = append(p.ReturnReasonInformation, newValue)
 	return newValue
 }
@@ -148,4 +146,3 @@ func (p *PaymentTransaction34) AddOriginalTransactionReference() *OriginalTransa
 	p.OriginalTransactionReference = new(OriginalTransactionReference16)
 	return p.OriginalTransactionReference
 }
-

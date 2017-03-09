@@ -14,9 +14,7 @@ type PartyIdentificationAndAccount31 struct {
 
 	// Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).
 	ClearingAccount *SecuritiesAccount18 `xml:"ClrAcct,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount31) AddIdentification() *PartyIdentification33Choice {
 	p.Identification = new(PartyIdentification33Choice)
@@ -37,4 +35,3 @@ func (p *PartyIdentificationAndAccount31) AddClearingAccount() *SecuritiesAccoun
 	p.ClearingAccount = new(SecuritiesAccount18)
 	return p.ClearingAccount
 }
-

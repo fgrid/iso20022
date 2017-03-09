@@ -14,9 +14,7 @@ type AuthorisationResult6 struct {
 
 	// Acquirer has requested a contact to the maintenance host.
 	TMSTrigger *TMSTrigger1 `xml:"TMSTrggr,omitempty"`
-
 }
-
 
 func (a *AuthorisationResult6) AddAuthorisationEntity() *GenericIdentification70 {
 	a.AuthorisationEntity = new(GenericIdentification70)
@@ -36,4 +34,3 @@ func (a *AuthorisationResult6) AddTMSTrigger() *TMSTrigger1 {
 	a.TMSTrigger = new(TMSTrigger1)
 	return a.TMSTrigger
 }
-

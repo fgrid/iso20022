@@ -23,9 +23,7 @@ type CorporateActionNarrative21 struct {
 
 	// Provides information required for the certification/breakdown.
 	CertificationBreakdown []*Max350Text `xml:"CertfctnBrkdwn,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative21) AddAdditionalText(value string) {
 	c.AdditionalText = append(c.AdditionalText, (*Max350Text)(&value))
@@ -54,4 +52,3 @@ func (c *CorporateActionNarrative21) AddBasketOrIndexInformation(value string) {
 func (c *CorporateActionNarrative21) AddCertificationBreakdown(value string) {
 	c.CertificationBreakdown = append(c.CertificationBreakdown, (*Max350Text)(&value))
 }
-

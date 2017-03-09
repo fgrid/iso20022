@@ -8,9 +8,7 @@ type MeetingTypeClassification1Choice struct {
 
 	// Specifies the reason for cancelling a meeting in free text form.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (m *MeetingTypeClassification1Choice) SetCode(value string) {
 	m.Code = (*MeetingTypeClassification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *MeetingTypeClassification1Choice) AddProprietary() *GenericIdentificati
 	m.Proprietary = new(GenericIdentification13)
 	return m.Proprietary
 }
-

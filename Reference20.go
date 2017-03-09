@@ -8,9 +8,7 @@ type Reference20 struct {
 
 	// Provides the reference to the interest payment response.
 	InterestPaymentResponseIdentification *Max35Text `xml:"IntrstPmtRspnId,omitempty"`
-
 }
-
 
 func (r *Reference20) SetInterestPaymentRequestIdentification(value string) {
 	r.InterestPaymentRequestIdentification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (r *Reference20) SetInterestPaymentRequestIdentification(value string) {
 func (r *Reference20) SetInterestPaymentResponseIdentification(value string) {
 	r.InterestPaymentResponseIdentification = (*Max35Text)(&value)
 }
-

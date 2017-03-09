@@ -11,9 +11,7 @@ type SecuritiesAccount24 struct {
 
 	// Description of the account.
 	Name *Max70Text `xml:"Nm,omitempty"`
-
 }
-
 
 func (s *SecuritiesAccount24) SetIdentification(value string) {
 	s.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (s *SecuritiesAccount24) AddType() *GenericIdentification30 {
 func (s *SecuritiesAccount24) SetName(value string) {
 	s.Name = (*Max70Text)(&value)
 }
-

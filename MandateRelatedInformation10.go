@@ -29,9 +29,7 @@ type MandateRelatedInformation10 struct {
 
 	// Reason for the direct debit mandate to allow the user to distinguish between different mandates for the same creditor.
 	Reason *MandateSetupReason1Choice `xml:"Rsn,omitempty"`
-
 }
-
 
 func (m *MandateRelatedInformation10) SetMandateIdentification(value string) {
 	m.MandateIdentification = (*Max35Text)(&value)
@@ -71,4 +69,3 @@ func (m *MandateRelatedInformation10) AddReason() *MandateSetupReason1Choice {
 	m.Reason = new(MandateSetupReason1Choice)
 	return m.Reason
 }
-

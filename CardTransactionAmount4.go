@@ -15,9 +15,7 @@ type CardTransactionAmount4 struct {
 
 	// Details of the TransactionAmount, for informational purposes only, except for cash back which is mandatory for a payment transaction with cashback. The transaction amount is not necessarly the sum of all the detailed amount values.
 	DetailedAmount []*DetailedAmount9 `xml:"DtldAmt,omitempty"`
-
 }
-
 
 func (c *CardTransactionAmount4) SetTotalAmount(value, currency string) {
 	c.TotalAmount = NewCurrencyAndAmount(value, currency)
@@ -34,8 +32,7 @@ func (c *CardTransactionAmount4) AddReconciliationTransactionAmount() *DetailedA
 }
 
 func (c *CardTransactionAmount4) AddDetailedAmount() *DetailedAmount9 {
-	newValue := new (DetailedAmount9)
+	newValue := new(DetailedAmount9)
 	c.DetailedAmount = append(c.DetailedAmount, newValue)
 	return newValue
 }
-

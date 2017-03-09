@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:cain.006.001.01 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:cain.006.001.01 Document"`
 	Message *AcquirerReversalResponse `xml:"AcqrrRvslRspn"`
 }
 
@@ -27,9 +27,7 @@ type AcquirerReversalResponse struct {
 
 	// Trailer of the message containing a MAC.
 	SecurityTrailer *iso20022.ContentInformationType15 `xml:"SctyTrlr,omitempty"`
-
 }
-
 
 func (a *AcquirerReversalResponse) AddHeader() *iso20022.Header18 {
 	a.Header = new(iso20022.Header18)
@@ -45,4 +43,3 @@ func (a *AcquirerReversalResponse) AddSecurityTrailer() *iso20022.ContentInforma
 	a.SecurityTrailer = new(iso20022.ContentInformationType15)
 	return a.SecurityTrailer
 }
-

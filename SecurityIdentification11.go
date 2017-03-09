@@ -8,9 +8,7 @@ type SecurityIdentification11 struct {
 
 	// Textual description of a security instrument.
 	Description *Max140Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (s *SecurityIdentification11) AddIdentification() *SecurityIdentification11Choice {
 	s.Identification = new(SecurityIdentification11Choice)
@@ -20,4 +18,3 @@ func (s *SecurityIdentification11) AddIdentification() *SecurityIdentification11
 func (s *SecurityIdentification11) SetDescription(value string) {
 	s.Description = (*Max140Text)(&value)
 }
-

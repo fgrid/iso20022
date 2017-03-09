@@ -8,9 +8,7 @@ type CancellationCompleteReason1Choice struct {
 
 	// Cancelled complete reason expressed as a proprietary code.
 	Proprietary *GenericIdentification36 `xml:"Prtry"`
-
 }
-
 
 func (c *CancellationCompleteReason1Choice) SetCode(value string) {
 	c.Code = (*CancelledStatusReason1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CancellationCompleteReason1Choice) AddProprietary() *GenericIdentificat
 	c.Proprietary = new(GenericIdentification36)
 	return c.Proprietary
 }
-

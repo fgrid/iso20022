@@ -11,9 +11,7 @@ type Role2Choice struct {
 
 	// Role of the party in the activity.
 	Text *Max350Text `xml:"Txt"`
-
 }
-
 
 func (r *Role2Choice) SetCode(value string) {
 	r.Code = (*InvestmentFundRole2Code)(&value)
@@ -27,4 +25,3 @@ func (r *Role2Choice) AddProprietary() *GenericIdentification20 {
 func (r *Role2Choice) SetText(value string) {
 	r.Text = (*Max350Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type Unit4 struct {
 
 	// Information about the units to be transferred.
 	UnitDetails []*Unit5 `xml:"UnitDtls,omitempty"`
-
 }
-
 
 func (u *Unit4) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 	u.TotalUnitsNumber = new(FinancialInstrumentQuantity1)
@@ -18,8 +16,7 @@ func (u *Unit4) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 }
 
 func (u *Unit4) AddUnitDetails() *Unit5 {
-	newValue := new (Unit5)
+	newValue := new(Unit5)
 	u.UnitDetails = append(u.UnitDetails, newValue)
 	return newValue
 }
-

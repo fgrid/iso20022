@@ -8,17 +8,14 @@ type PendingProcessingStatus12Choice struct {
 
 	// Specifies the reason of the pending processing status.
 	Reason []*PendingProcessingReason9 `xml:"Rsn"`
-
 }
-
 
 func (p *PendingProcessingStatus12Choice) SetNoSpecifiedReason(value string) {
 	p.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (p *PendingProcessingStatus12Choice) AddReason() *PendingProcessingReason9 {
-	newValue := new (PendingProcessingReason9)
+	newValue := new(PendingProcessingReason9)
 	p.Reason = append(p.Reason, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:cain.001.001.01 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:cain.001.001.01 Document"`
 	Message *AcquirerAuthorisationInitiation `xml:"AcqrrAuthstnInitn"`
 }
 
@@ -28,9 +28,7 @@ type AcquirerAuthorisationInitiation struct {
 	// Trailer of the message containing a MAC.
 	// It corresponds patially to ISO 8583 field number 53, completed by the field number 64 or 128.
 	SecurityTrailer *iso20022.ContentInformationType15 `xml:"SctyTrlr,omitempty"`
-
 }
-
 
 func (a *AcquirerAuthorisationInitiation) AddHeader() *iso20022.Header17 {
 	a.Header = new(iso20022.Header17)
@@ -46,4 +44,3 @@ func (a *AcquirerAuthorisationInitiation) AddSecurityTrailer() *iso20022.Content
 	a.SecurityTrailer = new(iso20022.ContentInformationType15)
 	return a.SecurityTrailer
 }
-

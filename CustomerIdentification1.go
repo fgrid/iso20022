@@ -8,9 +8,7 @@ type CustomerIdentification1 struct {
 
 	// Specifies the authority request related to the identified investigation party.
 	AuthorityRequest []*AuthorityInvestigation2 `xml:"AuthrtyReq"`
-
 }
-
 
 func (c *CustomerIdentification1) AddParty() *PartyIdentification43 {
 	c.Party = new(PartyIdentification43)
@@ -18,8 +16,7 @@ func (c *CustomerIdentification1) AddParty() *PartyIdentification43 {
 }
 
 func (c *CustomerIdentification1) AddAuthorityRequest() *AuthorityInvestigation2 {
-	newValue := new (AuthorityInvestigation2)
+	newValue := new(AuthorityInvestigation2)
 	c.AuthorityRequest = append(c.AuthorityRequest, newValue)
 	return newValue
 }
-

@@ -44,9 +44,7 @@ type PartyProfileInformation4 struct {
 
 	// Specifies whether a customer has been checked in a Know Your Customer (KYC) database.
 	KnowYourCustomerDatabaseCheck *DataBaseCheck1 `xml:"KnowYourCstmrDBChck,omitempty"`
-
 }
-
 
 func (p *PartyProfileInformation4) SetCertificationIndicator(value string) {
 	p.CertificationIndicator = (*YesNoIndicator)(&value)
@@ -108,4 +106,3 @@ func (p *PartyProfileInformation4) AddKnowYourCustomerDatabaseCheck() *DataBaseC
 	p.KnowYourCustomerDatabaseCheck = new(DataBaseCheck1)
 	return p.KnowYourCustomerDatabaseCheck
 }
-

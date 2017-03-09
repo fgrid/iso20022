@@ -26,9 +26,7 @@ type TotalTaxes3 struct {
 
 	// Information related to a specific tax.
 	TaxDetails []*Tax14 `xml:"TaxDtls,omitempty"`
-
 }
-
 
 func (t *TotalTaxes3) SetTotalAmountOfTaxes(value, currency string) {
 	t.TotalAmountOfTaxes = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -59,8 +57,7 @@ func (t *TotalTaxes3) SetPercentageOfDebtClaim(value string) {
 }
 
 func (t *TotalTaxes3) AddTaxDetails() *Tax14 {
-	newValue := new (Tax14)
+	newValue := new(Tax14)
 	t.TaxDetails = append(t.TaxDetails, newValue)
 	return newValue
 }
-

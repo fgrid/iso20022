@@ -29,9 +29,7 @@ type Tax15 struct {
 
 	// Reason for a tax exemption.
 	ExtendedExemptionReason *Extended350Code `xml:"XtndedXmptnRsn,omitempty"`
-
 }
-
 
 func (t *Tax15) SetType(value string) {
 	t.Type = (*TaxType13Code)(&value)
@@ -69,4 +67,3 @@ func (t *Tax15) SetExemptionReason(value string) {
 func (t *Tax15) SetExtendedExemptionReason(value string) {
 	t.ExtendedExemptionReason = (*Extended350Code)(&value)
 }
-

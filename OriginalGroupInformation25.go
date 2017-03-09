@@ -26,9 +26,7 @@ type OriginalGroupInformation25 struct {
 
 	// Detailed information on the number of transactions for each identical transaction status.
 	NumberOfTransactionsPerStatus []*NumberOfTransactionsPerStatus3 `xml:"NbOfTxsPerSts,omitempty"`
-
 }
-
 
 func (o *OriginalGroupInformation25) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -55,14 +53,13 @@ func (o *OriginalGroupInformation25) SetGroupStatus(value string) {
 }
 
 func (o *OriginalGroupInformation25) AddStatusReasonInformation() *StatusReasonInformation9 {
-	newValue := new (StatusReasonInformation9)
+	newValue := new(StatusReasonInformation9)
 	o.StatusReasonInformation = append(o.StatusReasonInformation, newValue)
 	return newValue
 }
 
 func (o *OriginalGroupInformation25) AddNumberOfTransactionsPerStatus() *NumberOfTransactionsPerStatus3 {
-	newValue := new (NumberOfTransactionsPerStatus3)
+	newValue := new(NumberOfTransactionsPerStatus3)
 	o.NumberOfTransactionsPerStatus = append(o.NumberOfTransactionsPerStatus, newValue)
 	return newValue
 }
-

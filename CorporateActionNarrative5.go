@@ -23,9 +23,7 @@ type CorporateActionNarrative5 struct {
 
 	// Provides a disclaimer relative to the information provided in the message. It may be ignored for automated processing.
 	Disclaimer *UpdatedAdditionalInformation1 `xml:"Dsclmr,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative5) AddAdditionalText() *UpdatedAdditionalInformation3 {
 	c.AdditionalText = new(UpdatedAdditionalInformation3)
@@ -61,4 +59,3 @@ func (c *CorporateActionNarrative5) AddDisclaimer() *UpdatedAdditionalInformatio
 	c.Disclaimer = new(UpdatedAdditionalInformation1)
 	return c.Disclaimer
 }
-

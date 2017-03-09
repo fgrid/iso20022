@@ -8,9 +8,7 @@ type VariationMarginDispute1 struct {
 
 	// Specifies the type of dispute that is to be resolved regarding the disputed collateral amount.
 	ResolutionTypeDetails []*DisputeResolutionType2Choice `xml:"RsltnTpDtls,omitempty"`
-
 }
-
 
 func (v *VariationMarginDispute1) AddDisputeDetails() *Dispute1 {
 	v.DisputeDetails = new(Dispute1)
@@ -18,8 +16,7 @@ func (v *VariationMarginDispute1) AddDisputeDetails() *Dispute1 {
 }
 
 func (v *VariationMarginDispute1) AddResolutionTypeDetails() *DisputeResolutionType2Choice {
-	newValue := new (DisputeResolutionType2Choice)
+	newValue := new(DisputeResolutionType2Choice)
 	v.ResolutionTypeDetails = append(v.ResolutionTypeDetails, newValue)
 	return newValue
 }
-

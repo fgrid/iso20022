@@ -38,9 +38,7 @@ type Cheque7 struct {
 
 	// Signature to be used by the cheque servicer on a specific cheque to be printed.
 	Signature []*Max70Text `xml:"Sgntr,omitempty"`
-
 }
-
 
 func (c *Cheque7) SetChequeType(value string) {
 	c.ChequeType = (*ChequeType2Code)(&value)
@@ -92,4 +90,3 @@ func (c *Cheque7) SetPrintLocation(value string) {
 func (c *Cheque7) AddSignature(value string) {
 	c.Signature = append(c.Signature, (*Max70Text)(&value))
 }
-

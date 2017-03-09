@@ -40,9 +40,7 @@ type FundProcessingPassport1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundProcessingPassport1) AddUpdatedDate() *UpdatedDate {
 	f.UpdatedDate = new(UpdatedDate)
@@ -90,20 +88,19 @@ func (f *FundProcessingPassport1) AddRedemptionProcessingCharacteristics() *Proc
 }
 
 func (f *FundProcessingPassport1) AddSettlementDetails() *CashAccount22 {
-	newValue := new (CashAccount22)
+	newValue := new(CashAccount22)
 	f.SettlementDetails = append(f.SettlementDetails, newValue)
 	return newValue
 }
 
 func (f *FundProcessingPassport1) AddLocalMarketAnnex() *LocalMarketAnnex2 {
-	newValue := new (LocalMarketAnnex2)
+	newValue := new(LocalMarketAnnex2)
 	f.LocalMarketAnnex = append(f.LocalMarketAnnex, newValue)
 	return newValue
 }
 
 func (f *FundProcessingPassport1) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

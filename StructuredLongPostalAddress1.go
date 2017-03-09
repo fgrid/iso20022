@@ -38,9 +38,7 @@ type StructuredLongPostalAddress1 struct {
 
 	// Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
 	PostOfficeBox *Max16Text `xml:"POB,omitempty"`
-
 }
-
 
 func (s *StructuredLongPostalAddress1) SetBuildingName(value string) {
 	s.BuildingName = (*Max35Text)(&value)
@@ -89,4 +87,3 @@ func (s *StructuredLongPostalAddress1) SetPostCodeIdentification(value string) {
 func (s *StructuredLongPostalAddress1) SetPostOfficeBox(value string) {
 	s.PostOfficeBox = (*Max16Text)(&value)
 }
-

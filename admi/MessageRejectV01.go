@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:admi.002.001.01 Document"`
 	Message *MessageRejectV01 `xml:"admi.002.001.01"`
 }
 
@@ -27,9 +27,7 @@ type MessageRejectV01 struct {
 
 	// General information about the reason of the message rejection.
 	Reason *iso20022.RejectionReason2 `xml:"Rsn"`
-
 }
-
 
 func (m *MessageRejectV01) AddRelatedReference() *iso20022.MessageReference {
 	m.RelatedReference = new(iso20022.MessageReference)
@@ -40,4 +38,3 @@ func (m *MessageRejectV01) AddReason() *iso20022.RejectionReason2 {
 	m.Reason = new(iso20022.RejectionReason2)
 	return m.Reason
 }
-

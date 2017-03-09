@@ -14,9 +14,7 @@ type DetailedAmount12 struct {
 
 	// Amount of the donation.
 	Donation []*DetailedAmount13 `xml:"Dontn,omitempty"`
-
 }
-
 
 func (d *DetailedAmount12) SetAmountToDispense(value, currency string) {
 	d.AmountToDispense = NewImpliedCurrencyAndAmount(value, currency)
@@ -27,14 +25,13 @@ func (d *DetailedAmount12) SetCurrency(value string) {
 }
 
 func (d *DetailedAmount12) AddFees() *DetailedAmount13 {
-	newValue := new (DetailedAmount13)
+	newValue := new(DetailedAmount13)
 	d.Fees = append(d.Fees, newValue)
 	return newValue
 }
 
 func (d *DetailedAmount12) AddDonation() *DetailedAmount13 {
-	newValue := new (DetailedAmount13)
+	newValue := new(DetailedAmount13)
 	d.Donation = append(d.Donation, newValue)
 	return newValue
 }
-

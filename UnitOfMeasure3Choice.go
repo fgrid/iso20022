@@ -8,9 +8,7 @@ type UnitOfMeasure3Choice struct {
 
 	// Identifies the unit of measure not present in the code list.
 	OtherUnitOfMeasure *Max35Text `xml:"OthrUnitOfMeasr"`
-
 }
-
 
 func (u *UnitOfMeasure3Choice) SetUnitOfMeasureCode(value string) {
 	u.UnitOfMeasureCode = (*UnitOfMeasure4Code)(&value)
@@ -19,4 +17,3 @@ func (u *UnitOfMeasure3Choice) SetUnitOfMeasureCode(value string) {
 func (u *UnitOfMeasure3Choice) SetOtherUnitOfMeasure(value string) {
 	u.OtherUnitOfMeasure = (*Max35Text)(&value)
 }
-

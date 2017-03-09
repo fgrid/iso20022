@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.003.001.06 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.003.001.06 Document"`
 	Message *AccountModificationInstructionV06 `xml:"AcctModInstr"`
 }
 
@@ -35,7 +35,7 @@ type AccountModificationInstructionV06 struct {
 	// Reference to a linked message that was previously sent.
 	PreviousReference *iso20022.AdditionalReference6 `xml:"PrvsRef,omitempty"`
 
-	// Information about the modification instruction. 
+	// Information about the modification instruction.
 	InstructionDetails *iso20022.InvestmentAccountModification2 `xml:"InstrDtls,omitempty"`
 
 	// Identifies the account for which the information is modified.
@@ -66,7 +66,7 @@ type AccountModificationInstructionV06 struct {
 	ModifiedCashSettlement []*iso20022.CashSettlement2 `xml:"ModfdCshSttlm,omitempty"`
 
 	// Information related to documents to be added, deleted or updated.
-	// 
+	//
 	ModifiedServiceLevelAgreement []*iso20022.ModificationScope31 `xml:"ModfdSvcLvlAgrmt,omitempty"`
 
 	// Additional information concerning limitations and restrictions on the account to be inserted, updated or deleted.
@@ -77,9 +77,7 @@ type AccountModificationInstructionV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountModificationInstructionV06) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -107,13 +105,13 @@ func (a *AccountModificationInstructionV06) AddModifiedInvestmentAccount() *iso2
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedAccountParties() *iso20022.AccountParties14 {
-	newValue := new (iso20022.AccountParties14)
+	newValue := new(iso20022.AccountParties14)
 	a.ModifiedAccountParties = append(a.ModifiedAccountParties, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedIntermediaries() *iso20022.ModificationScope26 {
-	newValue := new (iso20022.ModificationScope26)
+	newValue := new(iso20022.ModificationScope26)
 	a.ModifiedIntermediaries = append(a.ModifiedIntermediaries, newValue)
 	return newValue
 }
@@ -129,31 +127,31 @@ func (a *AccountModificationInstructionV06) AddModifiedIssueAllocation() *iso200
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedSavingsInvestmentPlan() *iso20022.ModificationScope28 {
-	newValue := new (iso20022.ModificationScope28)
+	newValue := new(iso20022.ModificationScope28)
 	a.ModifiedSavingsInvestmentPlan = append(a.ModifiedSavingsInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedWithdrawalInvestmentPlan() *iso20022.ModificationScope28 {
-	newValue := new (iso20022.ModificationScope28)
+	newValue := new(iso20022.ModificationScope28)
 	a.ModifiedWithdrawalInvestmentPlan = append(a.ModifiedWithdrawalInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedCashSettlement() *iso20022.CashSettlement2 {
-	newValue := new (iso20022.CashSettlement2)
+	newValue := new(iso20022.CashSettlement2)
 	a.ModifiedCashSettlement = append(a.ModifiedCashSettlement, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedServiceLevelAgreement() *iso20022.ModificationScope31 {
-	newValue := new (iso20022.ModificationScope31)
+	newValue := new(iso20022.ModificationScope31)
 	a.ModifiedServiceLevelAgreement = append(a.ModifiedServiceLevelAgreement, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV06) AddModifiedAdditionalInformation() *iso20022.ModificationScope30 {
-	newValue := new (iso20022.ModificationScope30)
+	newValue := new(iso20022.ModificationScope30)
 	a.ModifiedAdditionalInformation = append(a.ModifiedAdditionalInformation, newValue)
 	return newValue
 }
@@ -164,8 +162,7 @@ func (a *AccountModificationInstructionV06) AddMarketPracticeVersion() *iso20022
 }
 
 func (a *AccountModificationInstructionV06) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

@@ -14,9 +14,7 @@ type TaxParty3 struct {
 
 	// Specification of the tax exemption reason.
 	TaxExemptionReason []*TaxExemptionReasonFormatChoice `xml:"TaxXmptnRsn,omitempty"`
-
 }
-
 
 func (t *TaxParty3) SetTaxIdentification(value string) {
 	t.TaxIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (t *TaxParty3) SetRegistrationIdentification(value string) {
 }
 
 func (t *TaxParty3) AddTaxExemptionReason() *TaxExemptionReasonFormatChoice {
-	newValue := new (TaxExemptionReasonFormatChoice)
+	newValue := new(TaxExemptionReasonFormatChoice)
 	t.TaxExemptionReason = append(t.TaxExemptionReason, newValue)
 	return newValue
 }
-

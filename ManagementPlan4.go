@@ -11,9 +11,7 @@ type ManagementPlan4 struct {
 
 	// Data set related to the sequence of actions to be performed by a point of interaction (POI).
 	DataSet *TerminalManagementDataSet15 `xml:"DataSet"`
-
 }
-
 
 func (m *ManagementPlan4) AddPOIIdentification() *GenericIdentification71 {
 	m.POIIdentification = new(GenericIdentification71)
@@ -29,4 +27,3 @@ func (m *ManagementPlan4) AddDataSet() *TerminalManagementDataSet15 {
 	m.DataSet = new(TerminalManagementDataSet15)
 	return m.DataSet
 }
-

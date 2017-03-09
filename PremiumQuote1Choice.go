@@ -14,9 +14,7 @@ type PremiumQuote1Choice struct {
 
 	// Premium calculation is based on points of the put amount.
 	PointsOfPutAmount *BaseOneRate `xml:"PtsOfPutAmt"`
-
 }
-
 
 func (p *PremiumQuote1Choice) SetPercentageOfCallAmount(value string) {
 	p.PercentageOfCallAmount = (*PercentageRate)(&value)
@@ -33,4 +31,3 @@ func (p *PremiumQuote1Choice) SetPointsOfCallAmount(value string) {
 func (p *PremiumQuote1Choice) SetPointsOfPutAmount(value string) {
 	p.PointsOfPutAmount = (*BaseOneRate)(&value)
 }
-

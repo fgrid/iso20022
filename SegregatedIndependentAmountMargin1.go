@@ -11,9 +11,7 @@ type SegregatedIndependentAmountMargin1 struct {
 
 	// Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.
 	RoundingMethod *RoundingMethod1Code `xml:"RndgMtd,omitempty"`
-
 }
-
 
 func (s *SegregatedIndependentAmountMargin1) SetMinimumTransferAmount(value, currency string) {
 	s.MinimumTransferAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (s *SegregatedIndependentAmountMargin1) SetRoundingAmount(value, currency s
 func (s *SegregatedIndependentAmountMargin1) SetRoundingMethod(value string) {
 	s.RoundingMethod = (*RoundingMethod1Code)(&value)
 }
-

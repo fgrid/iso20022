@@ -72,9 +72,7 @@ type SwitchExecution4 struct {
 
 	// Specifies whether the order execution confirmation is late.
 	LateReport *LateReport1Code `xml:"LateRpt,omitempty"`
-
 }
-
 
 func (s *SwitchExecution4) SetMasterReference(value string) {
 	s.MasterReference = (*Max35Text)(&value)
@@ -110,7 +108,7 @@ func (s *SwitchExecution4) SetTotalSubscriptionAmount(value, currency string) {
 }
 
 func (s *SwitchExecution4) AddRelatedPartyDetails() *Intermediary9 {
-	newValue := new (Intermediary9)
+	newValue := new(Intermediary9)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -144,13 +142,13 @@ func (s *SwitchExecution4) SetBestExecution(value string) {
 }
 
 func (s *SwitchExecution4) AddRedemptionLegDetails() *SwitchRedemptionLegExecution3 {
-	newValue := new (SwitchRedemptionLegExecution3)
+	newValue := new(SwitchRedemptionLegExecution3)
 	s.RedemptionLegDetails = append(s.RedemptionLegDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchExecution4) AddSubscriptionLegDetails() *SwitchSubscriptionLegExecution3 {
-	newValue := new (SwitchSubscriptionLegExecution3)
+	newValue := new(SwitchSubscriptionLegExecution3)
 	s.SubscriptionLegDetails = append(s.SubscriptionLegDetails, newValue)
 	return newValue
 }
@@ -161,7 +159,7 @@ func (s *SwitchExecution4) AddCashSettlementDetails() *PaymentTransaction26 {
 }
 
 func (s *SwitchExecution4) AddForeignExchangeDetails() *ForeignExchangeTerms7 {
-	newValue := new (ForeignExchangeTerms7)
+	newValue := new(ForeignExchangeTerms7)
 	s.ForeignExchangeDetails = append(s.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -177,4 +175,3 @@ func (s *SwitchExecution4) SetNegotiatedTrade(value string) {
 func (s *SwitchExecution4) SetLateReport(value string) {
 	s.LateReport = (*LateReport1Code)(&value)
 }
-

@@ -8,9 +8,7 @@ type DateAndDateTime1Choice struct {
 
 	// Numeric representation of time of the day and the day of the month and year.
 	DateTime *ISODateTime `xml:"DtTm"`
-
 }
-
 
 func (d *DateAndDateTime1Choice) SetDate(value string) {
 	d.Date = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (d *DateAndDateTime1Choice) SetDate(value string) {
 func (d *DateAndDateTime1Choice) SetDateTime(value string) {
 	d.DateTime = (*ISODateTime)(&value)
 }
-

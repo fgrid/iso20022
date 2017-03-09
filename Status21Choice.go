@@ -14,9 +14,7 @@ type Status21Choice struct {
 
 	// Status of the transfer cancellation is pending.
 	Pending *TransferCancellationPendingStatus1 `xml:"Pdg"`
-
 }
-
 
 func (s *Status21Choice) AddStatus() *TransferCancellationStatus2 {
 	s.Status = new(TransferCancellationStatus2)
@@ -37,4 +35,3 @@ func (s *Status21Choice) AddPending() *TransferCancellationPendingStatus1 {
 	s.Pending = new(TransferCancellationPendingStatus1)
 	return s.Pending
 }
-

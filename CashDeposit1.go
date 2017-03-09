@@ -11,9 +11,7 @@ type CashDeposit1 struct {
 
 	// Specifies the total amount of money in the cash deposit, that is the note denomination times the number of notes.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (c *CashDeposit1) SetNoteDenomination(value, currency string) {
 	c.NoteDenomination = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (c *CashDeposit1) SetNumberOfNotes(value string) {
 func (c *CashDeposit1) SetAmount(value, currency string) {
 	c.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

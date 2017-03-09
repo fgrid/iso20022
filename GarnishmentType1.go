@@ -8,9 +8,7 @@ type GarnishmentType1 struct {
 
 	// Identification of the issuer of the garnishment type.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GarnishmentType1) AddCodeOrProprietary() *GarnishmentType1Choice {
 	g.CodeOrProprietary = new(GarnishmentType1Choice)
@@ -20,4 +18,3 @@ func (g *GarnishmentType1) AddCodeOrProprietary() *GarnishmentType1Choice {
 func (g *GarnishmentType1) SetIssuer(value string) {
 	g.Issuer = (*Max35Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type MerchantConfigurationParameters1 struct {
 
 	// Merchant parameters.
 	Parameters *Max10000Binary `xml:"Params"`
-
 }
-
 
 func (m *MerchantConfigurationParameters1) SetMerchantIdentification(value string) {
 	m.MerchantIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (m *MerchantConfigurationParameters1) SetVersion(value string) {
 func (m *MerchantConfigurationParameters1) SetParameters(value string) {
 	m.Parameters = (*Max10000Binary)(&value)
 }
-

@@ -14,9 +14,7 @@ type SubscriptionInformation1 struct {
 
 	// Total amount subscribed in the current tax year.
 	TotalAmountYearToDate *ActiveCurrencyAndAmount `xml:"TtlAmtYrToDt"`
-
 }
-
 
 func (s *SubscriptionInformation1) SetDateOfFirstSubscription(value string) {
 	s.DateOfFirstSubscription = (*ISODate)(&value)
@@ -33,4 +31,3 @@ func (s *SubscriptionInformation1) SetCashComponent(value, currency string) {
 func (s *SubscriptionInformation1) SetTotalAmountYearToDate(value, currency string) {
 	s.TotalAmountYearToDate = NewActiveCurrencyAndAmount(value, currency)
 }
-

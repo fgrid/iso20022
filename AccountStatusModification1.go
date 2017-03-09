@@ -8,9 +8,7 @@ type AccountStatusModification1 struct {
 
 	// Status of the account
 	Status *AccountStatus3Code `xml:"Sts"`
-
 }
-
 
 func (a *AccountStatusModification1) SetModificationCode(value string) {
 	a.ModificationCode = (*Modification1Code)(&value)
@@ -19,4 +17,3 @@ func (a *AccountStatusModification1) SetModificationCode(value string) {
 func (a *AccountStatusModification1) SetStatus(value string) {
 	a.Status = (*AccountStatus3Code)(&value)
 }
-

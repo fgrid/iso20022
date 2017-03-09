@@ -11,9 +11,7 @@ type AcceptorCancellationAdviceResponse4 struct {
 
 	// Instructions for contacting the terminal management host.
 	TMSTrigger *TMSTrigger1 `xml:"TMSTrggr,omitempty"`
-
 }
-
 
 func (a *AcceptorCancellationAdviceResponse4) AddEnvironment() *CardPaymentEnvironment33 {
 	a.Environment = new(CardPaymentEnvironment33)
@@ -29,4 +27,3 @@ func (a *AcceptorCancellationAdviceResponse4) AddTMSTrigger() *TMSTrigger1 {
 	a.TMSTrigger = new(TMSTrigger1)
 	return a.TMSTrigger
 }
-

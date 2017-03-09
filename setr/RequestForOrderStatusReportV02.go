@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.018.001.02 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:setr.018.001.02 Document"`
 	Message *RequestForOrderStatusReportV02 `xml:"setr.018.001.02"`
 }
 
@@ -30,13 +30,10 @@ type RequestForOrderStatusReportV02 struct {
 
 	// Information to identify the order(s) for which the status is requested.
 	RequestDetails []*iso20022.MessageAndBusinessReference2 `xml:"ReqDtls"`
-
 }
 
-
 func (r *RequestForOrderStatusReportV02) AddRequestDetails() *iso20022.MessageAndBusinessReference2 {
-	newValue := new (iso20022.MessageAndBusinessReference2)
+	newValue := new(iso20022.MessageAndBusinessReference2)
 	r.RequestDetails = append(r.RequestDetails, newValue)
 	return newValue
 }
-

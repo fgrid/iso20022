@@ -11,9 +11,7 @@ type Organisation23 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	PostalAddress []*PostalAddress21 `xml:"PstlAdr"`
-
 }
-
 
 func (o *Organisation23) SetName(value string) {
 	o.Name = (*Max350Text)(&value)
@@ -24,8 +22,7 @@ func (o *Organisation23) SetShortName(value string) {
 }
 
 func (o *Organisation23) AddPostalAddress() *PostalAddress21 {
-	newValue := new (PostalAddress21)
+	newValue := new(PostalAddress21)
 	o.PostalAddress = append(o.PostalAddress, newValue)
 	return newValue
 }
-

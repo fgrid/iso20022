@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.005.001.03 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:seev.005.001.03 Document"`
 	Message *MeetingInstructionCancellationRequestV03 `xml:"MtgInstrCxlReq"`
 }
 
@@ -39,9 +39,7 @@ type MeetingInstructionCancellationRequestV03 struct {
 
 	// Identifies the account and instructed positions for which the instruction cancellation request applies.
 	InstructedPosition []*iso20022.SafekeepingAccount4 `xml:"InstdPos,omitempty"`
-
 }
-
 
 func (m *MeetingInstructionCancellationRequestV03) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -69,8 +67,7 @@ func (m *MeetingInstructionCancellationRequestV03) AddSecurityIdentification() *
 }
 
 func (m *MeetingInstructionCancellationRequestV03) AddInstructedPosition() *iso20022.SafekeepingAccount4 {
-	newValue := new (iso20022.SafekeepingAccount4)
+	newValue := new(iso20022.SafekeepingAccount4)
 	m.InstructedPosition = append(m.InstructedPosition, newValue)
 	return newValue
 }
-

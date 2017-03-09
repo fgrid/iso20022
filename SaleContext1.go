@@ -20,9 +20,7 @@ type SaleContext1 struct {
 
 	// Additional information associated with the sale transaction.
 	AdditionalSaleData *Max70Text `xml:"AddtlSaleData,omitempty"`
-
 }
-
 
 func (s *SaleContext1) SetSaleIdentification(value string) {
 	s.SaleIdentification = (*Max35Text)(&value)
@@ -47,4 +45,3 @@ func (s *SaleContext1) SetShiftNumber(value string) {
 func (s *SaleContext1) SetAdditionalSaleData(value string) {
 	s.AdditionalSaleData = (*Max70Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type DeniedReason8Choice struct {
 
 	// Specifies the reason why the request was denied.
 	Proprietary *GenericIdentification40 `xml:"Prtry"`
-
 }
-
 
 func (d *DeniedReason8Choice) SetCode(value string) {
 	d.Code = (*DeniedReason7Code)(&value)
@@ -20,4 +18,3 @@ func (d *DeniedReason8Choice) AddProprietary() *GenericIdentification40 {
 	d.Proprietary = new(GenericIdentification40)
 	return d.Proprietary
 }
-

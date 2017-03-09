@@ -33,11 +33,9 @@ type CorporateActionRate78 struct {
 	// For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the capital or principal repayment and the scheduled capital repayment.
 	RealisedLoss *RateAndAmountFormat43Choice `xml:"RealsdLoss,omitempty"`
 
-	// Dividend or interest rate declared by the issuer. 
+	// Dividend or interest rate declared by the issuer.
 	DeclaredRate *RateAndAmountFormat43Choice `xml:"DclrdRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate78) AddInterest() *RateAndAmountFormat46Choice {
 	c.Interest = new(RateAndAmountFormat46Choice)
@@ -93,4 +91,3 @@ func (c *CorporateActionRate78) AddDeclaredRate() *RateAndAmountFormat43Choice {
 	c.DeclaredRate = new(RateAndAmountFormat43Choice)
 	return c.DeclaredRate
 }
-

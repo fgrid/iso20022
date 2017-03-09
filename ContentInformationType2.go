@@ -8,9 +8,7 @@ type ContentInformationType2 struct {
 
 	// Data protection by encryption, with a session key.
 	EnvelopedData *EnvelopedData1 `xml:"EnvlpdData"`
-
 }
-
 
 func (c *ContentInformationType2) SetContentType(value string) {
 	c.ContentType = (*ContentType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *ContentInformationType2) AddEnvelopedData() *EnvelopedData1 {
 	c.EnvelopedData = new(EnvelopedData1)
 	return c.EnvelopedData
 }
-

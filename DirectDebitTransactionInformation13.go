@@ -57,9 +57,7 @@ type DirectDebitTransactionInformation13 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation13) AddPaymentIdentification() *PaymentIdentification1 {
 	d.PaymentIdentification = new(PaymentIdentification1)
@@ -124,7 +122,7 @@ func (d *DirectDebitTransactionInformation13) AddPurpose() *Purpose2Choice {
 }
 
 func (d *DirectDebitTransactionInformation13) AddRegulatoryReporting() *RegulatoryReporting3 {
-	newValue := new (RegulatoryReporting3)
+	newValue := new(RegulatoryReporting3)
 	d.RegulatoryReporting = append(d.RegulatoryReporting, newValue)
 	return newValue
 }
@@ -135,7 +133,7 @@ func (d *DirectDebitTransactionInformation13) AddTax() *TaxInformation3 {
 }
 
 func (d *DirectDebitTransactionInformation13) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	d.RelatedRemittanceInformation = append(d.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -146,8 +144,7 @@ func (d *DirectDebitTransactionInformation13) AddRemittanceInformation() *Remitt
 }
 
 func (d *DirectDebitTransactionInformation13) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	d.SupplementaryData = append(d.SupplementaryData, newValue)
 	return newValue
 }
-

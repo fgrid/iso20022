@@ -32,9 +32,7 @@ type FinancialInstrument34 struct {
 
 	// Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.
 	DeliveringAgentDetails *PartyIdentificationAndAccount93 `xml:"DlvrgAgtDtls,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument34) AddIdentification() *SecurityIdentification3Choice {
 	f.Identification = new(SecurityIdentification3Choice)
@@ -81,4 +79,3 @@ func (f *FinancialInstrument34) AddDeliveringAgentDetails() *PartyIdentification
 	f.DeliveringAgentDetails = new(PartyIdentificationAndAccount93)
 	return f.DeliveringAgentDetails
 }
-

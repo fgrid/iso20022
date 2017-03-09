@@ -14,9 +14,7 @@ type TransactionTypeAndAdditionalParameters9 struct {
 
 	// Settlement transaction has already been sent on the market. It is sent by an account owner to an account servicer for reconciliation purposes.
 	ReconciliationIndicator *YesNoIndicator `xml:"RcncltnInd,omitempty"`
-
 }
-
 
 func (t *TransactionTypeAndAdditionalParameters9) SetSecuritiesFinancingTransactionType(value string) {
 	t.SecuritiesFinancingTransactionType = (*SecuritiesFinancingTransactionType1Code)(&value)
@@ -33,4 +31,3 @@ func (t *TransactionTypeAndAdditionalParameters9) SetCommonIdentification(value 
 func (t *TransactionTypeAndAdditionalParameters9) SetReconciliationIndicator(value string) {
 	t.ReconciliationIndicator = (*YesNoIndicator)(&value)
 }
-

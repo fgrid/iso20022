@@ -7,7 +7,7 @@ import (
 )
 
 type Document03100107 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.031.001.07 Document"`
+	XMLName xml.Name                                                  `xml:"urn:iso:std:iso:20022:tech:xsd:sese.031.001.07 Document"`
 	Message *SecuritiesSettlementConditionModificationStatusAdviceV07 `xml:"SctiesSttlmCondModStsAdvc"`
 }
 
@@ -22,7 +22,7 @@ func (d *Document03100107) AddMessage() *SecuritiesSettlementConditionModificati
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // A SecuritiesSettlementConditionsModificationRequest may contain requests on multiple transactions. However, one SecuritiesSettlementConditionsModificationStatusAdvice must be sent per transaction modified unless the SecuritiesSettlementConditionsModificationRequest is rejected as a whole.
 // The message may also be used to:
@@ -49,9 +49,7 @@ type SecuritiesSettlementConditionModificationStatusAdviceV07 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementConditionModificationStatusAdviceV07) AddRequestReference() *iso20022.Identification14 {
 	s.RequestReference = new(iso20022.Identification14)
@@ -79,8 +77,7 @@ func (s *SecuritiesSettlementConditionModificationStatusAdviceV07) AddProcessing
 }
 
 func (s *SecuritiesSettlementConditionModificationStatusAdviceV07) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

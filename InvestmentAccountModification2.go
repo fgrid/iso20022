@@ -17,9 +17,7 @@ type InvestmentAccountModification2 struct {
 
 	// Account to which the account opening is related.
 	ExistingAccountIdentification *Max35Text `xml:"ExstgAcctId,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountModification2) SetModificationReason(value string) {
 	i.ModificationReason = (*Max350Text)(&value)
@@ -41,4 +39,3 @@ func (i *InvestmentAccountModification2) AddCounterpartyReference() *AdditionalR
 func (i *InvestmentAccountModification2) SetExistingAccountIdentification(value string) {
 	i.ExistingAccountIdentification = (*Max35Text)(&value)
 }
-

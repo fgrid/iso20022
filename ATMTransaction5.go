@@ -32,9 +32,7 @@ type ATMTransaction5 struct {
 
 	// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.
 	ICCRelatedData *Max10000Binary `xml:"ICCRltdData,omitempty"`
-
 }
-
 
 func (a *ATMTransaction5) AddTransactionIdentification() *TransactionIdentifier1 {
 	a.TransactionIdentification = new(TransactionIdentifier1)
@@ -77,4 +75,3 @@ func (a *ATMTransaction5) AddAuthorisationResult() *AuthorisationResult9 {
 func (a *ATMTransaction5) SetICCRelatedData(value string) {
 	a.ICCRelatedData = (*Max10000Binary)(&value)
 }
-

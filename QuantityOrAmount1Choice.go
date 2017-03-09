@@ -8,9 +8,7 @@ type QuantityOrAmount1Choice struct {
 
 	// Quantity is expressed as an amount.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (q *QuantityOrAmount1Choice) AddQuantity() *FinancialInstrumentQuantityChoice {
 	q.Quantity = new(FinancialInstrumentQuantityChoice)
@@ -20,4 +18,3 @@ func (q *QuantityOrAmount1Choice) AddQuantity() *FinancialInstrumentQuantityChoi
 func (q *QuantityOrAmount1Choice) SetAmount(value, currency string) {
 	q.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

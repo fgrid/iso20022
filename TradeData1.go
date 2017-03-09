@@ -38,9 +38,7 @@ type TradeData1 struct {
 
 	// Specifies the product for which the status of the confirmation is reported.
 	ProductType *Max4AlphaNumericText `xml:"PdctTp,omitempty"`
-
 }
-
 
 func (t *TradeData1) SetNotificationIdentification(value string) {
 	t.NotificationIdentification = (*Max35Text)(&value)
@@ -89,4 +87,3 @@ func (t *TradeData1) SetPreviousStatusTime(value string) {
 func (t *TradeData1) SetProductType(value string) {
 	t.ProductType = (*Max4AlphaNumericText)(&value)
 }
-

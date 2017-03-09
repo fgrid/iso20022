@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.001.001.03 Document"`
+	XMLName xml.Name            `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.001.001.03 Document"`
 	Message *AcknowledgementV03 `xml:"Ack"`
 }
 
@@ -30,13 +30,13 @@ type AcknowledgementV03 struct {
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId,omitempty"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction by means of a code.
 	TransactionStatus *iso20022.TransactionStatus4 `xml:"TxSts,omitempty"`
 
-	// Reference to the transaction for the financial institution that is the sender of the acknowledged message. 
+	// Reference to the transaction for the financial institution that is the sender of the acknowledged message.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
 	// Reference to the identification of the acknowledged message.
@@ -44,9 +44,7 @@ type AcknowledgementV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (a *AcknowledgementV03) AddAcknowledgementIdentification() *iso20022.MessageIdentification1 {
 	a.AcknowledgementIdentification = new(iso20022.MessageIdentification1)
@@ -69,7 +67,7 @@ func (a *AcknowledgementV03) AddTransactionStatus() *iso20022.TransactionStatus4
 }
 
 func (a *AcknowledgementV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	a.UserTransactionReference = append(a.UserTransactionReference, newValue)
 	return newValue
 }
@@ -83,4 +81,3 @@ func (a *AcknowledgementV03) AddRequestForAction() *iso20022.PendingActivity2 {
 	a.RequestForAction = new(iso20022.PendingActivity2)
 	return a.RequestForAction
 }
-

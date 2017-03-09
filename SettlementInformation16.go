@@ -13,7 +13,7 @@ type SettlementInformation16 struct {
 	ClearingSystem *ClearingSystemIdentification3Choice `xml:"ClrSys,omitempty"`
 
 	// Agent through which the instructing agent will reimburse the instructed agent.
-	// 
+	//
 	// Usage: If InstructingAgent and InstructedAgent have the same reimbursement agent, then only InstructingReimbursementAgent must be used.
 	InstructingReimbursementAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstgRmbrsmntAgt,omitempty"`
 
@@ -34,9 +34,7 @@ type SettlementInformation16 struct {
 
 	// Unambiguous identification of the account of the third reimbursement agent account at its servicing agent in the payment chain.
 	ThirdReimbursementAgentAccount *CashAccount16 `xml:"ThrdRmbrsmntAgtAcct,omitempty"`
-
 }
-
 
 func (s *SettlementInformation16) SetSettlementMethod(value string) {
 	s.SettlementMethod = (*SettlementMethod1Code)(&value)
@@ -81,4 +79,3 @@ func (s *SettlementInformation16) AddThirdReimbursementAgentAccount() *CashAccou
 	s.ThirdReimbursementAgentAccount = new(CashAccount16)
 	return s.ThirdReimbursementAgentAccount
 }
-

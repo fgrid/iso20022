@@ -17,9 +17,7 @@ type Charge29 struct {
 
 	// Party entitled to the amount of money resulting from a charge.
 	RecipientIdentification *PartyIdentification70Choice `xml:"RcptId,omitempty"`
-
 }
-
 
 func (c *Charge29) AddType() *ChargeType4Choice {
 	c.Type = new(ChargeType4Choice)
@@ -43,4 +41,3 @@ func (c *Charge29) AddRecipientIdentification() *PartyIdentification70Choice {
 	c.RecipientIdentification = new(PartyIdentification70Choice)
 	return c.RecipientIdentification
 }
-

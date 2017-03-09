@@ -17,9 +17,7 @@ type SecurityDate2 struct {
 
 	// Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.
 	PariPassuDate *DateFormat6Choice `xml:"PrpssDt,omitempty"`
-
 }
-
 
 func (s *SecurityDate2) AddPaymentDate() *DateFormat6Choice {
 	s.PaymentDate = new(DateFormat6Choice)
@@ -45,4 +43,3 @@ func (s *SecurityDate2) AddPariPassuDate() *DateFormat6Choice {
 	s.PariPassuDate = new(DateFormat6Choice)
 	return s.PariPassuDate
 }
-

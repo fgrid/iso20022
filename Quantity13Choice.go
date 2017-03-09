@@ -8,9 +8,7 @@ type Quantity13Choice struct {
 
 	// Total quantity of securities to be settled.
 	PortfolioTransferOutRate *PercentageRate `xml:"PrtflTrfOutRate"`
-
 }
-
 
 func (q *Quantity13Choice) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 	q.TotalUnitsNumber = new(FinancialInstrumentQuantity1)
@@ -20,4 +18,3 @@ func (q *Quantity13Choice) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 func (q *Quantity13Choice) SetPortfolioTransferOutRate(value string) {
 	q.PortfolioTransferOutRate = (*PercentageRate)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document03600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.036.001.03 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.036.001.03 Document"`
 	Message *StatusExtensionRequestNotificationV03 `xml:"StsXtnsnReqNtfctn"`
 }
 
@@ -28,16 +28,16 @@ type StatusExtensionRequestNotificationV03 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Reference to the transaction for each financial institution which is a party to the transaction.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
-	// Identifies the status for which an extension of the validity period has been requested. 
+	// Identifies the status for which an extension of the validity period has been requested.
 	StatusToBeExtended *iso20022.TransactionStatus5 `xml:"StsToBeXtnded"`
 
 	// Party that has requested the status extension.
@@ -45,9 +45,7 @@ type StatusExtensionRequestNotificationV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (s *StatusExtensionRequestNotificationV03) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	s.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -65,7 +63,7 @@ func (s *StatusExtensionRequestNotificationV03) AddEstablishedBaselineIdentifica
 }
 
 func (s *StatusExtensionRequestNotificationV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	s.UserTransactionReference = append(s.UserTransactionReference, newValue)
 	return newValue
 }
@@ -84,4 +82,3 @@ func (s *StatusExtensionRequestNotificationV03) AddRequestForAction() *iso20022.
 	s.RequestForAction = new(iso20022.PendingActivity2)
 	return s.RequestForAction
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.018.001.05 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:sese.018.001.05 Document"`
 	Message *AccountHoldingInformationV05 `xml:"AcctHldgInf"`
 }
 
@@ -70,11 +70,9 @@ type AccountHoldingInformationV05 struct {
 	// Identifies the market practice to which the message conforms.
 	MarketPracticeVersion *iso20022.MarketPracticeVersion1 `xml:"MktPrctcVrsn,omitempty"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountHoldingInformationV05) AddMessageReference() *iso20022.MessageIdentification1 {
 	a.MessageReference = new(iso20022.MessageIdentification1)
@@ -111,7 +109,7 @@ func (a *AccountHoldingInformationV05) AddSecondaryIndividualInvestor() *iso2002
 }
 
 func (a *AccountHoldingInformationV05) AddOtherIndividualInvestor() *iso20022.IndividualPerson8 {
-	newValue := new (iso20022.IndividualPerson8)
+	newValue := new(iso20022.IndividualPerson8)
 	a.OtherIndividualInvestor = append(a.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -127,7 +125,7 @@ func (a *AccountHoldingInformationV05) AddSecondaryCorporateInvestor() *iso20022
 }
 
 func (a *AccountHoldingInformationV05) AddOtherCorporateInvestor() *iso20022.Organisation21 {
-	newValue := new (iso20022.Organisation21)
+	newValue := new(iso20022.Organisation21)
 	a.OtherCorporateInvestor = append(a.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -148,7 +146,7 @@ func (a *AccountHoldingInformationV05) AddTransferee() *iso20022.PartyIdentifica
 }
 
 func (a *AccountHoldingInformationV05) AddProductTransfer() *iso20022.ISATransfer23 {
-	newValue := new (iso20022.ISATransfer23)
+	newValue := new(iso20022.ISATransfer23)
 	a.ProductTransfer = append(a.ProductTransfer, newValue)
 	return newValue
 }
@@ -159,8 +157,7 @@ func (a *AccountHoldingInformationV05) AddMarketPracticeVersion() *iso20022.Mark
 }
 
 func (a *AccountHoldingInformationV05) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

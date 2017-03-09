@@ -8,9 +8,7 @@ type CollateralAccountIdentificationType1Choice struct {
 
 	// Specifies the collateral account expressed as a proprietary code.
 	Proprietary *GenericIdentification29 `xml:"Prtry"`
-
 }
-
 
 func (c *CollateralAccountIdentificationType1Choice) SetType(value string) {
 	c.Type = (*CollateralAccountType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CollateralAccountIdentificationType1Choice) AddProprietary() *GenericId
 	c.Proprietary = new(GenericIdentification29)
 	return c.Proprietary
 }
-

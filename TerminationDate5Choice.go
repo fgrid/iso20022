@@ -8,9 +8,7 @@ type TerminationDate5Choice struct {
 
 	// Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.
 	Code *DateCode32Choice `xml:"Cd"`
-
 }
-
 
 func (t *TerminationDate5Choice) AddDate() *DateAndDateTimeChoice {
 	t.Date = new(DateAndDateTimeChoice)
@@ -21,4 +19,3 @@ func (t *TerminationDate5Choice) AddCode() *DateCode32Choice {
 	t.Code = new(DateCode32Choice)
 	return t.Code
 }
-

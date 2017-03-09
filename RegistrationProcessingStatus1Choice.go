@@ -8,9 +8,7 @@ type RegistrationProcessingStatus1Choice struct {
 
 	// Provides the status of the registration processing.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (r *RegistrationProcessingStatus1Choice) SetCode(value string) {
 	r.Code = (*RegistrationProcessingStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (r *RegistrationProcessingStatus1Choice) AddProprietary() *GenericIdentific
 	r.Proprietary = new(GenericIdentification20)
 	return r.Proprietary
 }
-

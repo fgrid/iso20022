@@ -14,9 +14,7 @@ type RegulatoryReportingNotification1 struct {
 
 	// Certificate against which all currency control transactions are registered.
 	TransactionCertificate []*TransactionCertificate1 `xml:"TxCert"`
-
 }
-
 
 func (r *RegulatoryReportingNotification1) SetTransactionNotificationIdentification(value string) {
 	r.TransactionNotificationIdentification = (*Max35Text)(&value)
@@ -33,8 +31,7 @@ func (r *RegulatoryReportingNotification1) AddAccountServicer() *BranchAndFinanc
 }
 
 func (r *RegulatoryReportingNotification1) AddTransactionCertificate() *TransactionCertificate1 {
-	newValue := new (TransactionCertificate1)
+	newValue := new(TransactionCertificate1)
 	r.TransactionCertificate = append(r.TransactionCertificate, newValue)
 	return newValue
 }
-

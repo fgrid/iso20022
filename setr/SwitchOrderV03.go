@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.013.001.03 Document"`
+	XMLName xml.Name        `xml:"urn:iso:std:iso:20022:tech:xsd:setr.013.001.03 Document"`
 	Message *SwitchOrderV03 `xml:"SwtchOrdrV03"`
 }
 
@@ -26,23 +26,23 @@ func (d *Document01300103) AddMessage() *SwitchOrderV03 {
 // - instruct a switch transaction for one investment account, or,
 // - instruct a switch transaction for separate accounts at the redemption and subscription leg levels.
 // The message caters for a switch from one financial instrument to another financial instrument (within the same fund family), many to one, many to many and one to many.
-// The message caters for switch transactions that result in an additional cash payment from the investor or a transaction that results in a net payment to the investor. Not all institutions or funds permit this type of switch and acceptance is therefore not automatic. 
+// The message caters for switch transactions that result in an additional cash payment from the investor or a transaction that results in a net payment to the investor. Not all institutions or funds permit this type of switch and acceptance is therefore not automatic.
 // There is no limitation on the number of switch legs in a switch message. The number allowed is defined by the fund prospectus or by the service level agreement (SLA) in place between the two parties. However, if the SwitchOrderDetails sequence is present more than once, then the RedemptionLegDetails and SubscriptionLegDetails sequences may only be present once.
 // If SwitchOrderDetails\InvestmentAccount is used, then the InvestmentAccountDetails sequences in SubscriptionLegDetails and RedemptionLegDetails are not allowed. This functionality is to be used by institutions that set up two accounts per investor, rather than one investment account.
-// There is no switch driver type in the message to indicate whether the switch is buy or sell driven. A driver is not needed since it is possible to indicate the total subscription amount or the total redemption amount. Only one of these two amounts should be used. 
+// There is no switch driver type in the message to indicate whether the switch is buy or sell driven. A driver is not needed since it is possible to indicate the total subscription amount or the total redemption amount. Only one of these two amounts should be used.
 // The subscription quantity can be expressed in one of the following ways:
-// - Amount: the monetary value (either GROSS or NET) of the financial instrument to be subscribed to, eg, the subscription of EUR 1,000 of financial instrument ISIN LU1234567890 or 
-// - Unit: the number of units of the financial instrument to be subscribed to, eg, the subscription of 10 units of financial instrument ISIN LU1234567890 or 
+// - Amount: the monetary value (either GROSS or NET) of the financial instrument to be subscribed to, eg, the subscription of EUR 1,000 of financial instrument ISIN LU1234567890 or
+// - Unit: the number of units of the financial instrument to be subscribed to, eg, the subscription of 10 units of financial instrument ISIN LU1234567890 or
 // - Percentage of the total redemption amount: when the switch transaction is redemption driven, it is the part of the redemption amount that must be switched to a specific financial instrument, for example, the subscription quantity of financial instrument ISIN LU1234567890 represents 50% of the redemption amount of the financial instrument ISIN LU4444444444.
 // The redemption quantity can be expressed in one of the following ways:
-// - Amount: the monetary value (either GROSS or NET) of the financial instrument to be redeemed, eg, the redemption of EUR 1,000 of financial instrument ISIN LU1234567890, or 
+// - Amount: the monetary value (either GROSS or NET) of the financial instrument to be redeemed, eg, the redemption of EUR 1,000 of financial instrument ISIN LU1234567890, or
 // - Unit: the number of units of financial instrument to be redeemed, eg, the redemption of 10 units of financial instrument ISIN LU1234567890, or
 // - Rate: the part of the portfolio to be redeemed, eg, the redemption of 10% of the holdings in financial instrument ISIN LU1234567890, or
 // - Percentage of the total subscription amount: when the switch transaction is subscription driven, it is the part of the subscription amount that must be the result of the redemption of a specific financial instrument, for example, the redemption quantity in financial instrument ABC represents 50% of the subscription amount of the financial instrument ISIN LU4444444444
-// 
+//
 type SwitchOrderV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -62,9 +62,7 @@ type SwitchOrderV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SwitchOrderV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -77,7 +75,7 @@ func (s *SwitchOrderV03) AddPoolReference() *iso20022.AdditionalReference3 {
 }
 
 func (s *SwitchOrderV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -88,7 +86,7 @@ func (s *SwitchOrderV03) AddMessagePagination() *iso20022.Pagination {
 }
 
 func (s *SwitchOrderV03) AddSwitchOrderDetails() *iso20022.SwitchOrder4 {
-	newValue := new (iso20022.SwitchOrder4)
+	newValue := new(iso20022.SwitchOrder4)
 	s.SwitchOrderDetails = append(s.SwitchOrderDetails, newValue)
 	return newValue
 }
@@ -99,8 +97,7 @@ func (s *SwitchOrderV03) AddCopyDetails() *iso20022.CopyInformation2 {
 }
 
 func (s *SwitchOrderV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

@@ -29,9 +29,7 @@ type UnitPrice10 struct {
 
 	// Specifies the reason why the price is different from the current market price.
 	PriceDifferenceReason *Max350Text `xml:"PricDiffRsn,omitempty"`
-
 }
-
 
 func (u *UnitPrice10) SetType(value string) {
 	u.Type = (*TypeOfPrice10Code)(&value)
@@ -69,4 +67,3 @@ func (u *UnitPrice10) SetExtendedTaxableIncomePerShareCalculated(value string) {
 func (u *UnitPrice10) SetPriceDifferenceReason(value string) {
 	u.PriceDifferenceReason = (*Max350Text)(&value)
 }
-

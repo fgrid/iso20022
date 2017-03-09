@@ -14,9 +14,7 @@ type PointOfInteractionComponentIdentification1 struct {
 
 	// Serial number identifying an occurrence of an hardware component.
 	SerialNumber *Max35Text `xml:"SrlNb,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionComponentIdentification1) SetItemNumber(value string) {
 	p.ItemNumber = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (p *PointOfInteractionComponentIdentification1) SetIdentification(value str
 func (p *PointOfInteractionComponentIdentification1) SetSerialNumber(value string) {
 	p.SerialNumber = (*Max35Text)(&value)
 }
-

@@ -14,9 +14,7 @@ type AdditionalBalanceInformation9 struct {
 
 	// Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.
 	QuantityBreakdown []*QuantityBreakdown13 `xml:"QtyBrkdwn,omitempty"`
-
 }
-
 
 func (a *AdditionalBalanceInformation9) AddSubBalanceType() *SubBalanceType6Choice {
 	a.SubBalanceType = new(SubBalanceType6Choice)
@@ -33,8 +31,7 @@ func (a *AdditionalBalanceInformation9) SetSubBalanceAdditionalDetails(value str
 }
 
 func (a *AdditionalBalanceInformation9) AddQuantityBreakdown() *QuantityBreakdown13 {
-	newValue := new (QuantityBreakdown13)
+	newValue := new(QuantityBreakdown13)
 	a.QuantityBreakdown = append(a.QuantityBreakdown, newValue)
 	return newValue
 }
-

@@ -20,9 +20,7 @@ type LoanContractTranche1 struct {
 
 	// Indicates whether this tranche is the last tranche of the full report.
 	LastTrancheIndicator *YesNoIndicator `xml:"LastTrchInd,omitempty"`
-
 }
-
 
 func (l *LoanContractTranche1) SetTrancheNumber(value string) {
 	l.TrancheNumber = (*Number)(&value)
@@ -47,4 +45,3 @@ func (l *LoanContractTranche1) SetDurationCode(value string) {
 func (l *LoanContractTranche1) SetLastTrancheIndicator(value string) {
 	l.LastTrancheIndicator = (*YesNoIndicator)(&value)
 }
-

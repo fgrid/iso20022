@@ -11,9 +11,7 @@ type CorporateActionNotification5 struct {
 
 	// Indicates whether the eligible balance is final except for a voluntary corporate action event where it can represent the current eligible balance when communicated before expiration date of that event.
 	EligibleBalanceIndicator *YesNoIndicator `xml:"ElgblBalInd,omitempty"`
-
 }
-
 
 func (c *CorporateActionNotification5) SetNotificationType(value string) {
 	c.NotificationType = (*CorporateActionNotificationType1Code)(&value)
@@ -27,4 +25,3 @@ func (c *CorporateActionNotification5) AddProcessingStatus() *CorporateActionPro
 func (c *CorporateActionNotification5) SetEligibleBalanceIndicator(value string) {
 	c.EligibleBalanceIndicator = (*YesNoIndicator)(&value)
 }
-

@@ -91,9 +91,7 @@ type RedemptionOrder7 struct {
 
 	// Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.
 	Equalisation *Equalisation1 `xml:"Equlstn,omitempty"`
-
 }
-
 
 func (r *RedemptionOrder7) SetOrderReference(value string) {
 	r.OrderReference = (*Max35Text)(&value)
@@ -109,7 +107,7 @@ func (r *RedemptionOrder7) AddInvestmentAccountDetails() *InvestmentAccount21 {
 }
 
 func (r *RedemptionOrder7) AddOrderType() *FundOrderType2 {
-	newValue := new (FundOrderType2)
+	newValue := new(FundOrderType2)
 	r.OrderType = append(r.OrderType, newValue)
 	return newValue
 }
@@ -166,19 +164,19 @@ func (r *RedemptionOrder7) SetGroup1Or2Units(value string) {
 }
 
 func (r *RedemptionOrder7) AddChargeDetails() *Charge17 {
-	newValue := new (Charge17)
+	newValue := new(Charge17)
 	r.ChargeDetails = append(r.ChargeDetails, newValue)
 	return newValue
 }
 
 func (r *RedemptionOrder7) AddCommissionDetails() *Commission10 {
-	newValue := new (Commission10)
+	newValue := new(Commission10)
 	r.CommissionDetails = append(r.CommissionDetails, newValue)
 	return newValue
 }
 
 func (r *RedemptionOrder7) AddTaxDetails() *Tax16 {
-	newValue := new (Tax16)
+	newValue := new(Tax16)
 	r.TaxDetails = append(r.TaxDetails, newValue)
 	return newValue
 }
@@ -207,7 +205,7 @@ func (r *RedemptionOrder7) SetNonStandardSettlementInformation(value string) {
 }
 
 func (r *RedemptionOrder7) AddStaffClientBreakdown() *InvestmentFundsOrderBreakdown1 {
-	newValue := new (InvestmentFundsOrderBreakdown1)
+	newValue := new(InvestmentFundsOrderBreakdown1)
 	r.StaffClientBreakdown = append(r.StaffClientBreakdown, newValue)
 	return newValue
 }
@@ -221,7 +219,7 @@ func (r *RedemptionOrder7) SetNegotiatedTrade(value string) {
 }
 
 func (r *RedemptionOrder7) AddRelatedPartyDetails() *Intermediary8 {
-	newValue := new (Intermediary8)
+	newValue := new(Intermediary8)
 	r.RelatedPartyDetails = append(r.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -230,4 +228,3 @@ func (r *RedemptionOrder7) AddEqualisation() *Equalisation1 {
 	r.Equalisation = new(Equalisation1)
 	return r.Equalisation
 }
-

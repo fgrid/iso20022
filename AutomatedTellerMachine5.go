@@ -29,9 +29,7 @@ type AutomatedTellerMachine5 struct {
 
 	// Mechanism used to protect the message of the ATM protocol.
 	MessageProtection *MessageProtection1Code `xml:"MsgPrtcn,omitempty"`
-
 }
-
 
 func (a *AutomatedTellerMachine5) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -70,4 +68,3 @@ func (a *AutomatedTellerMachine5) AddOutOfServiceDevice(value string) {
 func (a *AutomatedTellerMachine5) SetMessageProtection(value string) {
 	a.MessageProtection = (*MessageProtection1Code)(&value)
 }
-

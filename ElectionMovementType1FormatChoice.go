@@ -8,9 +8,7 @@ type ElectionMovementType1FormatChoice struct {
 
 	// Proprietary code to  express the effect on the holdings of electing a Corporate Action option.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (e *ElectionMovementType1FormatChoice) SetCode(value string) {
 	e.Code = (*ElectionMovementType1Code)(&value)
@@ -20,4 +18,3 @@ func (e *ElectionMovementType1FormatChoice) AddProprietary() *GenericIdentificat
 	e.Proprietary = new(GenericIdentification13)
 	return e.Proprietary
 }
-

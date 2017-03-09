@@ -7,7 +7,7 @@ import (
 )
 
 type Document03500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.035.001.01 Document"`
+	XMLName xml.Name                                     `xml:"urn:iso:std:iso:20022:tech:xsd:seev.035.001.01 Document"`
 	Message *CorporateActionMovementPreliminaryAdviceV01 `xml:"CorpActnMvmntPrlimryAdvc"`
 }
 
@@ -84,26 +84,24 @@ type CorporateActionMovementPreliminaryAdviceV01 struct {
 	// Party/agent responsible for maintaining the register of a security.
 	Registrar *iso20022.PartyIdentification10Choice `xml:"Regar,omitempty"`
 
-	// A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. 
+	// A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.
 	ResellingAgent []*iso20022.PartyIdentification10Choice `xml:"RsellngAgt,omitempty"`
 
 	// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
 	PhysicalSecuritiesAgent *iso20022.PartyIdentification10Choice `xml:"PhysSctiesAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. 
+	// A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person.
 	DropAgent *iso20022.PartyIdentification10Choice `xml:"DrpAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change. 
+	// A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change.
 	SolicitationAgent []*iso20022.PartyIdentification10Choice `xml:"SlctnAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. 
+	// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
 	InformationAgent *iso20022.PartyIdentification10Choice `xml:"InfAgt,omitempty"`
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	c.Identification = new(iso20022.DocumentIdentification11)
@@ -136,13 +134,13 @@ func (c *CorporateActionMovementPreliminaryAdviceV01) AddInstructionIdentificati
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddOtherDocumentIdentification() *iso20022.DocumentIdentification13 {
-	newValue := new (iso20022.DocumentIdentification13)
+	newValue := new(iso20022.DocumentIdentification13)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddEventsLinkage() *iso20022.CorporateActionEventReference1 {
-	newValue := new (iso20022.CorporateActionEventReference1)
+	newValue := new(iso20022.CorporateActionEventReference1)
 	c.EventsLinkage = append(c.EventsLinkage, newValue)
 	return newValue
 }
@@ -163,7 +161,7 @@ func (c *CorporateActionMovementPreliminaryAdviceV01) AddAccountDetails() *iso20
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddCorporateActionMovementDetails() *iso20022.CorporateActionOption10 {
-	newValue := new (iso20022.CorporateActionOption10)
+	newValue := new(iso20022.CorporateActionOption10)
 	c.CorporateActionMovementDetails = append(c.CorporateActionMovementDetails, newValue)
 	return newValue
 }
@@ -184,19 +182,19 @@ func (c *CorporateActionMovementPreliminaryAdviceV01) AddMessageRecipient() *iso
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddIssuerAgent() *iso20022.PartyIdentification10Choice {
-	newValue := new (iso20022.PartyIdentification10Choice)
+	newValue := new(iso20022.PartyIdentification10Choice)
 	c.IssuerAgent = append(c.IssuerAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddPayingAgent() *iso20022.PartyIdentification10Choice {
-	newValue := new (iso20022.PartyIdentification10Choice)
+	newValue := new(iso20022.PartyIdentification10Choice)
 	c.PayingAgent = append(c.PayingAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddSubPayingAgent() *iso20022.PartyIdentification10Choice {
-	newValue := new (iso20022.PartyIdentification10Choice)
+	newValue := new(iso20022.PartyIdentification10Choice)
 	c.SubPayingAgent = append(c.SubPayingAgent, newValue)
 	return newValue
 }
@@ -207,7 +205,7 @@ func (c *CorporateActionMovementPreliminaryAdviceV01) AddRegistrar() *iso20022.P
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddResellingAgent() *iso20022.PartyIdentification10Choice {
-	newValue := new (iso20022.PartyIdentification10Choice)
+	newValue := new(iso20022.PartyIdentification10Choice)
 	c.ResellingAgent = append(c.ResellingAgent, newValue)
 	return newValue
 }
@@ -223,7 +221,7 @@ func (c *CorporateActionMovementPreliminaryAdviceV01) AddDropAgent() *iso20022.P
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddSolicitationAgent() *iso20022.PartyIdentification10Choice {
-	newValue := new (iso20022.PartyIdentification10Choice)
+	newValue := new(iso20022.PartyIdentification10Choice)
 	c.SolicitationAgent = append(c.SolicitationAgent, newValue)
 	return newValue
 }
@@ -234,8 +232,7 @@ func (c *CorporateActionMovementPreliminaryAdviceV01) AddInformationAgent() *iso
 }
 
 func (c *CorporateActionMovementPreliminaryAdviceV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

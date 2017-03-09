@@ -24,7 +24,7 @@ type Amendment1 struct {
 	// Requested increase or decrease to the amount of for the undertaking.
 	UndertakingAmountAdjustment *UndertakingAmount2 `xml:"UdrtkgAmtAdjstmnt,omitempty"`
 
-	// Requested new expiry terms for the undertaking. 
+	// Requested new expiry terms for the undertaking.
 	NewExpiryDetails *ExpiryDetails1 `xml:"NewXpryDtls,omitempty"`
 
 	// Requested new beneficiary of the undertaking.
@@ -47,9 +47,7 @@ type Amendment1 struct {
 
 	// Additional information related to the proposed amendment.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *Amendment1) SetSequenceNumber(value string) {
 	a.SequenceNumber = (*Max4AlphaNumericText)(&value)
@@ -95,7 +93,7 @@ func (a *Amendment1) AddNewBeneficiary() *PartyIdentification43 {
 }
 
 func (a *Amendment1) AddNewUndertakingTermsAndConditions() *Narrative1 {
-	newValue := new (Narrative1)
+	newValue := new(Narrative1)
 	a.NewUndertakingTermsAndConditions = append(a.NewUndertakingTermsAndConditions, newValue)
 	return newValue
 }
@@ -115,7 +113,7 @@ func (a *Amendment1) AddDeliveryChannel() *CommunicationChannel1 {
 }
 
 func (a *Amendment1) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	a.EnclosedFile = append(a.EnclosedFile, newValue)
 	return newValue
 }
@@ -123,4 +121,3 @@ func (a *Amendment1) AddEnclosedFile() *Document9 {
 func (a *Amendment1) AddAdditionalInformation(value string) {
 	a.AdditionalInformation = append(a.AdditionalInformation, (*Max2000Text)(&value))
 }
-

@@ -8,9 +8,7 @@ type ConsentReason5 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *RestrictedFINXMax210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (c *ConsentReason5) AddCode() *ConsentOrRejectionReason5Choice {
 	c.Code = new(ConsentOrRejectionReason5Choice)
@@ -20,4 +18,3 @@ func (c *ConsentReason5) AddCode() *ConsentOrRejectionReason5Choice {
 func (c *ConsentReason5) SetAdditionalReasonInformation(value string) {
 	c.AdditionalReasonInformation = (*RestrictedFINXMax210Text)(&value)
 }
-

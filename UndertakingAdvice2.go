@@ -6,7 +6,7 @@ type UndertakingAdvice2 struct {
 	// Unique and unambiguous identifier assigned by the applicant to the undertaking.
 	ApplicantReferenceNumber *Max35Text `xml:"ApplcntRefNb"`
 
-	// Party obligated to reimburse the issuer. 
+	// Party obligated to reimburse the issuer.
 	Obligor *PartyIdentification43 `xml:"Oblgr,omitempty"`
 
 	// Contents of the related UndertakingIssuance message.
@@ -20,9 +20,7 @@ type UndertakingAdvice2 struct {
 
 	// Additional information related to the undertaking notification.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (u *UndertakingAdvice2) SetApplicantReferenceNumber(value string) {
 	u.ApplicantReferenceNumber = (*Max35Text)(&value)
@@ -43,7 +41,7 @@ func (u *UndertakingAdvice2) SetOriginalIssuedMedium(value string) {
 }
 
 func (u *UndertakingAdvice2) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	u.EnclosedFile = append(u.EnclosedFile, newValue)
 	return newValue
 }
@@ -51,4 +49,3 @@ func (u *UndertakingAdvice2) AddEnclosedFile() *Document9 {
 func (u *UndertakingAdvice2) AddAdditionalInformation(value string) {
 	u.AdditionalInformation = append(u.AdditionalInformation, (*Max2000Text)(&value))
 }
-

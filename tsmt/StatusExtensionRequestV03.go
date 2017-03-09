@@ -7,7 +7,7 @@ import (
 )
 
 type Document03500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.035.001.03 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.035.001.03 Document"`
 	Message *StatusExtensionRequestV03 `xml:"StsXtnsnReq"`
 }
 
@@ -29,17 +29,15 @@ type StatusExtensionRequestV03 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
 	// Reference to the transaction for the requesting financial institution.
 	SubmitterTransactionReference *iso20022.SimpleIdentificationInformation `xml:"SubmitrTxRef,omitempty"`
 
-	// Identifies the status of the transaction by means of a code. 
+	// Identifies the status of the transaction by means of a code.
 	StatusToBeExtended *iso20022.TransactionStatus5 `xml:"StsToBeXtnded"`
-
 }
-
 
 func (s *StatusExtensionRequestV03) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	s.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -60,4 +58,3 @@ func (s *StatusExtensionRequestV03) AddStatusToBeExtended() *iso20022.Transactio
 	s.StatusToBeExtended = new(iso20022.TransactionStatus5)
 	return s.StatusToBeExtended
 }
-

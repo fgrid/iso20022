@@ -30,9 +30,7 @@ type InvoiceHeader1 struct {
 
 	// Note included in this invoice document.
 	IncludedNote []*AdditionalInformation6 `xml:"InclNote,omitempty"`
-
 }
-
 
 func (i *InvoiceHeader1) SetIdentification(value string) {
 	i.Identification = (*Max35Text)(&value)
@@ -68,8 +66,7 @@ func (i *InvoiceHeader1) SetDocumentPurpose(value string) {
 }
 
 func (i *InvoiceHeader1) AddIncludedNote() *AdditionalInformation6 {
-	newValue := new (AdditionalInformation6)
+	newValue := new(AdditionalInformation6)
 	i.IncludedNote = append(i.IncludedNote, newValue)
 	return newValue
 }
-

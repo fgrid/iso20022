@@ -17,9 +17,7 @@ type ProprietaryQuantity3 struct {
 
 	// Name of the identification scheme.
 	SchemeName *Max35Text `xml:"SchmeNm,omitempty"`
-
 }
-
 
 func (p *ProprietaryQuantity3) SetShortLongPosition(value string) {
 	p.ShortLongPosition = (*ShortLong1Code)(&value)
@@ -40,4 +38,3 @@ func (p *ProprietaryQuantity3) SetIssuer(value string) {
 func (p *ProprietaryQuantity3) SetSchemeName(value string) {
 	p.SchemeName = (*Max35Text)(&value)
 }
-

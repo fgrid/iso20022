@@ -11,9 +11,7 @@ type CommunicationCharacteristics1 struct {
 
 	// Communication hardware is activated.
 	Active *TrueFalseIndicator `xml:"Actv"`
-
 }
-
 
 func (c *CommunicationCharacteristics1) SetCommunicationType(value string) {
 	c.CommunicationType = (*POICommunicationType1Code)(&value)
@@ -26,4 +24,3 @@ func (c *CommunicationCharacteristics1) SetRemoteParty(value string) {
 func (c *CommunicationCharacteristics1) SetActive(value string) {
 	c.Active = (*TrueFalseIndicator)(&value)
 }
-

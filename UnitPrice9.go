@@ -14,9 +14,7 @@ type UnitPrice9 struct {
 
 	// Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.
 	Factor *Max15NumericText `xml:"Fctr,omitempty"`
-
 }
-
 
 func (u *UnitPrice9) SetUnitOfMeasureCode(value string) {
 	u.UnitOfMeasureCode = (*UnitOfMeasure4Code)(&value)
@@ -33,4 +31,3 @@ func (u *UnitPrice9) SetAmount(value, currency string) {
 func (u *UnitPrice9) SetFactor(value string) {
 	u.Factor = (*Max15NumericText)(&value)
 }
-

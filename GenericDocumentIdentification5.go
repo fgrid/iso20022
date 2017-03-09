@@ -8,9 +8,7 @@ type GenericDocumentIdentification5 struct {
 
 	// Identification of the document.
 	Identification *RestrictedFINXMax16Text `xml:"Id"`
-
 }
-
 
 func (g *GenericDocumentIdentification5) AddMessageNumber() *DocumentNumber6Choice {
 	g.MessageNumber = new(DocumentNumber6Choice)
@@ -20,4 +18,3 @@ func (g *GenericDocumentIdentification5) AddMessageNumber() *DocumentNumber6Choi
 func (g *GenericDocumentIdentification5) SetIdentification(value string) {
 	g.Identification = (*RestrictedFINXMax16Text)(&value)
 }
-

@@ -17,9 +17,7 @@ type TransactionDetails13 struct {
 
 	// Identifies the details of the transaction.
 	TransactionDetails *TransactionDetails10 `xml:"TxDtls,omitempty"`
-
 }
-
 
 func (t *TransactionDetails13) AddAccountServicerTransactionIdentification() *SettlementTypeAndIdentification3 {
 	t.AccountServicerTransactionIdentification = new(SettlementTypeAndIdentification3)
@@ -45,4 +43,3 @@ func (t *TransactionDetails13) AddTransactionDetails() *TransactionDetails10 {
 	t.TransactionDetails = new(TransactionDetails10)
 	return t.TransactionDetails
 }
-

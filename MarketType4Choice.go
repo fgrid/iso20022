@@ -8,9 +8,7 @@ type MarketType4Choice struct {
 
 	// Market type expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (m *MarketType4Choice) SetCode(value string) {
 	m.Code = (*MarketType4Code)(&value)
@@ -20,4 +18,3 @@ func (m *MarketType4Choice) AddProprietary() *GenericIdentification20 {
 	m.Proprietary = new(GenericIdentification20)
 	return m.Proprietary
 }
-

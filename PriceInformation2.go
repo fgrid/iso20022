@@ -23,9 +23,7 @@ type PriceInformation2 struct {
 
 	// Indicates whether the price is expressed as a yield. The absence of Yielded means it is not applicable.
 	Yielded *YesNoIndicator `xml:"Yldd,omitempty"`
-
 }
-
 
 func (p *PriceInformation2) AddValue() *PriceRateOrAmountOrUnknownChoice {
 	p.Value = new(PriceRateOrAmountOrUnknownChoice)
@@ -57,4 +55,3 @@ func (p *PriceInformation2) AddQuotationDate() *DateAndDateTimeChoice {
 func (p *PriceInformation2) SetYielded(value string) {
 	p.Yielded = (*YesNoIndicator)(&value)
 }
-

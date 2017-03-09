@@ -8,9 +8,7 @@ type ModificationScope11 struct {
 
 	// Detailed information about the party profile information.
 	InvestorProfileValidation *PartyProfileInformation1 `xml:"InvstrPrflVldtn"`
-
 }
-
 
 func (m *ModificationScope11) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification2Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope11) AddInvestorProfileValidation() *PartyProfileInform
 	m.InvestorProfileValidation = new(PartyProfileInformation1)
 	return m.InvestorProfileValidation
 }
-

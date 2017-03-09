@@ -8,9 +8,7 @@ type SpreadRate1 struct {
 
 	// Specifies if the spreadf is expressed as an amount or a rate.
 	RateOrAmount *AmountOrRate1Choice `xml:"RateOrAmt"`
-
 }
-
 
 func (s *SpreadRate1) SetSign(value string) {
 	s.Sign = (*PlusOrMinusIndicator)(&value)
@@ -20,4 +18,3 @@ func (s *SpreadRate1) AddRateOrAmount() *AmountOrRate1Choice {
 	s.RateOrAmount = new(AmountOrRate1Choice)
 	return s.RateOrAmount
 }
-

@@ -14,9 +14,7 @@ type Cheque3 struct {
 
 	// Account owner that issues a cheque ordering the drawee bank to pay a specific amount, upon demand, to the payee.
 	DrawerIdentification *PartyIdentification2Choice `xml:"DrwrId,omitempty"`
-
 }
-
 
 func (c *Cheque3) SetNumber(value string) {
 	c.Number = (*Max35Text)(&value)
@@ -36,4 +34,3 @@ func (c *Cheque3) AddDrawerIdentification() *PartyIdentification2Choice {
 	c.DrawerIdentification = new(PartyIdentification2Choice)
 	return c.DrawerIdentification
 }
-

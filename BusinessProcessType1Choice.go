@@ -8,9 +8,7 @@ type BusinessProcessType1Choice struct {
 
 	// Type of business process expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (b *BusinessProcessType1Choice) SetCode(value string) {
 	b.Code = (*BusinessProcessType1Code)(&value)
@@ -20,4 +18,3 @@ func (b *BusinessProcessType1Choice) AddProprietary() *GenericIdentification38 {
 	b.Proprietary = new(GenericIdentification38)
 	return b.Proprietary
 }
-

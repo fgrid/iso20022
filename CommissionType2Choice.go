@@ -8,9 +8,7 @@ type CommissionType2Choice struct {
 
 	// Commission type expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (c *CommissionType2Choice) SetCode(value string) {
 	c.Code = (*CommissionType9Code)(&value)
@@ -20,4 +18,3 @@ func (c *CommissionType2Choice) AddProprietary() *GenericIdentification38 {
 	c.Proprietary = new(GenericIdentification38)
 	return c.Proprietary
 }
-

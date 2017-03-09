@@ -26,7 +26,7 @@ type CreditTransferTransaction9 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt1,omitempty"`
 
@@ -34,7 +34,7 @@ type CreditTransferTransaction9 struct {
 	IntermediaryAgent1Account *CashAccount24 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt2,omitempty"`
 
@@ -42,7 +42,7 @@ type CreditTransferTransaction9 struct {
 	IntermediaryAgent2Account *CashAccount24 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt3,omitempty"`
 
@@ -72,9 +72,7 @@ type CreditTransferTransaction9 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CreditTransferTransaction9) SetCreditIdentification(value string) {
 	c.CreditIdentification = (*Max35Text)(&value)
@@ -163,20 +161,19 @@ func (c *CreditTransferTransaction9) AddUltimateCreditor() *BranchAndFinancialIn
 }
 
 func (c *CreditTransferTransaction9) AddInstructionForCreditorAgent() *InstructionForCreditorAgent2 {
-	newValue := new (InstructionForCreditorAgent2)
+	newValue := new(InstructionForCreditorAgent2)
 	c.InstructionForCreditorAgent = append(c.InstructionForCreditorAgent, newValue)
 	return newValue
 }
 
 func (c *CreditTransferTransaction9) AddDirectDebitTransactionInformation() *DirectDebitTransactionInformation15 {
-	newValue := new (DirectDebitTransactionInformation15)
+	newValue := new(DirectDebitTransactionInformation15)
 	c.DirectDebitTransactionInformation = append(c.DirectDebitTransactionInformation, newValue)
 	return newValue
 }
 
 func (c *CreditTransferTransaction9) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

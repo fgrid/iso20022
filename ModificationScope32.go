@@ -8,9 +8,7 @@ type ModificationScope32 struct {
 
 	// Information used to determine fees and types of operations that can be carried out on the account.
 	InvestorProfile *InvestorProfile1 `xml:"InvstrPrfl"`
-
 }
-
 
 func (m *ModificationScope32) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope32) AddInvestorProfile() *InvestorProfile1 {
 	m.InvestorProfile = new(InvestorProfile1)
 	return m.InvestorProfile
 }
-

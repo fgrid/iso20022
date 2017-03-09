@@ -7,7 +7,7 @@ import (
 )
 
 type Document03100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.031.001.03 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.031.001.03 Document"`
 	Message *StatusExtensionRequestAcceptanceV03 `xml:"StsXtnsnReqAccptnc"`
 }
 
@@ -30,7 +30,7 @@ type StatusExtensionRequestAcceptanceV03 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
 	// Reference to the transaction for the requesting financial institution.
@@ -38,9 +38,7 @@ type StatusExtensionRequestAcceptanceV03 struct {
 
 	// Identifies the status for which the user accepts an extension of the validity period..
 	ExtendedStatus *iso20022.TransactionStatus4 `xml:"XtndedSts"`
-
 }
-
 
 func (s *StatusExtensionRequestAcceptanceV03) AddAcceptanceIdentification() *iso20022.MessageIdentification1 {
 	s.AcceptanceIdentification = new(iso20022.MessageIdentification1)
@@ -61,4 +59,3 @@ func (s *StatusExtensionRequestAcceptanceV03) AddExtendedStatus() *iso20022.Tran
 	s.ExtendedStatus = new(iso20022.TransactionStatus4)
 	return s.ExtendedStatus
 }
-

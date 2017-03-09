@@ -8,9 +8,7 @@ type RateName2 struct {
 
 	// Rate Name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
 	RateName *RestrictedFINXMax24Text `xml:"RateNm"`
-
 }
-
 
 func (r *RateName2) SetIssuer(value string) {
 	r.Issuer = (*RestrictedFINXMax8Text)(&value)
@@ -19,4 +17,3 @@ func (r *RateName2) SetIssuer(value string) {
 func (r *RateName2) SetRateName(value string) {
 	r.RateName = (*RestrictedFINXMax24Text)(&value)
 }
-

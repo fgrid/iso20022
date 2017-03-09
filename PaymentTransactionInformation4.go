@@ -10,7 +10,7 @@ type PaymentTransactionInformation4 struct {
 	OriginalPaymentInformationIdentification *Max35Text `xml:"OrgnlPmtInfId,omitempty"`
 
 	// Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.
-	// 
+	//
 	// Usage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction.
 	OriginalInstructionIdentification *Max35Text `xml:"OrgnlInstrId,omitempty"`
 
@@ -24,7 +24,7 @@ type PaymentTransactionInformation4 struct {
 	ReversedInstructedAmount *CurrencyAndAmount `xml:"RvsdInstdAmt,omitempty"`
 
 	// Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.
-	// 
+	//
 	// Usage: The ChargeBearer applies to the reversal message, not to the original instruction.
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
@@ -33,9 +33,7 @@ type PaymentTransactionInformation4 struct {
 
 	// Set of key elements of the original transaction being referred to.
 	OriginalTransactionReference *OriginalTransactionReference1 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransactionInformation4) SetReversalIdentification(value string) {
 	p.ReversalIdentification = (*Max35Text)(&value)
@@ -66,7 +64,7 @@ func (p *PaymentTransactionInformation4) SetChargeBearer(value string) {
 }
 
 func (p *PaymentTransactionInformation4) AddReversalReasonInformation() *ReversalReasonInformation1 {
-	newValue := new (ReversalReasonInformation1)
+	newValue := new(ReversalReasonInformation1)
 	p.ReversalReasonInformation = append(p.ReversalReasonInformation, newValue)
 	return newValue
 }
@@ -75,4 +73,3 @@ func (p *PaymentTransactionInformation4) AddOriginalTransactionReference() *Orig
 	p.OriginalTransactionReference = new(OriginalTransactionReference1)
 	return p.OriginalTransactionReference
 }
-

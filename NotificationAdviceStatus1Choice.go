@@ -8,9 +8,7 @@ type NotificationAdviceStatus1Choice struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *NotificationRejectionReason1 `xml:"RjctdSts"`
-
 }
-
 
 func (n *NotificationAdviceStatus1Choice) AddProcessedStatus() *NotificationProcessingStatus1 {
 	n.ProcessedStatus = new(NotificationProcessingStatus1)
@@ -21,4 +19,3 @@ func (n *NotificationAdviceStatus1Choice) AddRejectedStatus() *NotificationRejec
 	n.RejectedStatus = new(NotificationRejectionReason1)
 	return n.RejectedStatus
 }
-

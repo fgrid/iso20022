@@ -7,7 +7,7 @@ import (
 )
 
 type Document03600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.036.001.02 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:camt.036.001.02 Document"`
 	Message *DebitAuthorisationResponseV02 `xml:"DbtAuthstnRspn"`
 }
 
@@ -34,9 +34,7 @@ type DebitAuthorisationResponseV02 struct {
 
 	// Indicates if the debit authorisation is granted or not.
 	Confirmation *iso20022.DebitAuthorisationConfirmation2 `xml:"Conf"`
-
 }
-
 
 func (d *DebitAuthorisationResponseV02) AddAssignment() *iso20022.CaseAssignment2 {
 	d.Assignment = new(iso20022.CaseAssignment2)
@@ -52,4 +50,3 @@ func (d *DebitAuthorisationResponseV02) AddConfirmation() *iso20022.DebitAuthori
 	d.Confirmation = new(iso20022.DebitAuthorisationConfirmation2)
 	return d.Confirmation
 }
-

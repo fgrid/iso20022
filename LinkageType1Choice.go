@@ -8,9 +8,7 @@ type LinkageType1Choice struct {
 
 	// Linkage type expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (l *LinkageType1Choice) SetCode(value string) {
 	l.Code = (*LinkageType1Code)(&value)
@@ -20,4 +18,3 @@ func (l *LinkageType1Choice) AddProprietary() *GenericIdentification20 {
 	l.Proprietary = new(GenericIdentification20)
 	return l.Proprietary
 }
-

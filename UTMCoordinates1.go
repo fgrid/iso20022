@@ -11,9 +11,7 @@ type UTMCoordinates1 struct {
 
 	// Y-coordinate of the Universal Transverse Mercator coordinate system (for example 5 411 920m for Eiffel Tower Y-coordinate).
 	UTMNorthward *Number `xml:"UTMNrthwrd"`
-
 }
-
 
 func (u *UTMCoordinates1) SetUTMZone(value string) {
 	u.UTMZone = (*Max16Text)(&value)
@@ -26,4 +24,3 @@ func (u *UTMCoordinates1) SetUTMEastward(value string) {
 func (u *UTMCoordinates1) SetUTMNorthward(value string) {
 	u.UTMNorthward = (*Number)(&value)
 }
-

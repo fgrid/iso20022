@@ -17,9 +17,7 @@ type AutomatedTellerMachine2 struct {
 
 	// Location of the ATM.
 	Location *PostalAddress17 `xml:"Lctn,omitempty"`
-
 }
-
 
 func (a *AutomatedTellerMachine2) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -41,4 +39,3 @@ func (a *AutomatedTellerMachine2) AddLocation() *PostalAddress17 {
 	a.Location = new(PostalAddress17)
 	return a.Location
 }
-

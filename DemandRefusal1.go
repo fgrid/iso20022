@@ -29,9 +29,7 @@ type DemandRefusal1 struct {
 
 	// Additional information related to the notification.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (d *DemandRefusal1) AddUndertakingIdentification() *Undertaking9 {
 	d.UndertakingIdentification = new(Undertaking9)
@@ -60,7 +58,7 @@ func (d *DemandRefusal1) SetStatus(value string) {
 }
 
 func (d *DemandRefusal1) AddDiscrepancy() *Discrepancy1 {
-	newValue := new (Discrepancy1)
+	newValue := new(Discrepancy1)
 	d.Discrepancy = append(d.Discrepancy, newValue)
 	return newValue
 }
@@ -72,4 +70,3 @@ func (d *DemandRefusal1) AddDispositionOfDocuments(value string) {
 func (d *DemandRefusal1) AddAdditionalInformation(value string) {
 	d.AdditionalInformation = append(d.AdditionalInformation, (*Max2000Text)(&value))
 }
-

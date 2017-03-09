@@ -8,9 +8,7 @@ type TaxExemptionReason1 struct {
 
 	// Additional information about the type of tax.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TaxExemptionReason1) SetStructured(value string) {
 	t.Structured = (*TaxExemptReason2Code)(&value)
@@ -19,4 +17,3 @@ func (t *TaxExemptionReason1) SetStructured(value string) {
 func (t *TaxExemptionReason1) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max350Text)(&value)
 }
-

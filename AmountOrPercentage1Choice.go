@@ -8,9 +8,7 @@ type AmountOrPercentage1Choice struct {
 
 	// Details related to an amount percentage.
 	PercentageAmount *Percentage1 `xml:"PctgAmt"`
-
 }
-
 
 func (a *AmountOrPercentage1Choice) AddDefinedAmount() *UndertakingAmount4 {
 	a.DefinedAmount = new(UndertakingAmount4)
@@ -21,4 +19,3 @@ func (a *AmountOrPercentage1Choice) AddPercentageAmount() *Percentage1 {
 	a.PercentageAmount = new(Percentage1)
 	return a.PercentageAmount
 }
-

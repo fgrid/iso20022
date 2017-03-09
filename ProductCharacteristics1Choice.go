@@ -8,9 +8,7 @@ type ProductCharacteristics1Choice struct {
 
 	// Specifies the type of product characteristic not present in the code list.
 	OtherProductCharacteristics *GenericIdentification4 `xml:"OthrPdctChrtcs"`
-
 }
-
 
 func (p *ProductCharacteristics1Choice) AddStructuredProductCharacteristics() *ProductCharacteristics1 {
 	p.StructuredProductCharacteristics = new(ProductCharacteristics1)
@@ -21,4 +19,3 @@ func (p *ProductCharacteristics1Choice) AddOtherProductCharacteristics() *Generi
 	p.OtherProductCharacteristics = new(GenericIdentification4)
 	return p.OtherProductCharacteristics
 }
-

@@ -8,9 +8,7 @@ type ProprietaryBankTransactionCodeStructure1 struct {
 
 	// Identification of the issuer of the proprietary bank transaction code.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (p *ProprietaryBankTransactionCodeStructure1) SetCode(value string) {
 	p.Code = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *ProprietaryBankTransactionCodeStructure1) SetCode(value string) {
 func (p *ProprietaryBankTransactionCodeStructure1) SetIssuer(value string) {
 	p.Issuer = (*Max35Text)(&value)
 }
-

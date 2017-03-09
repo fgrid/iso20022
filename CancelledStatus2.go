@@ -14,9 +14,7 @@ type CancelledStatus2 struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (c *CancelledStatus2) SetReason(value string) {
 	c.Reason = (*CancelledStatusReason2Code)(&value)
@@ -34,4 +32,3 @@ func (c *CancelledStatus2) AddDataSourceScheme() *GenericIdentification1 {
 func (c *CancelledStatus2) SetNoSpecifiedReason(value string) {
 	c.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

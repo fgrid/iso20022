@@ -110,9 +110,7 @@ type CorporateActionAmounts3 struct {
 
 	// Amount relating to the underlying security for which income is distributed.
 	IncomePortion *ActiveCurrencyAndAmount `xml:"IncmPrtn,omitempty"`
-
 }
-
 
 func (c *CorporateActionAmounts3) SetGrossCashAmount(value, currency string) {
 	c.GrossCashAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -257,4 +255,3 @@ func (c *CorporateActionAmounts3) SetAccruedInterestAmount(value, currency strin
 func (c *CorporateActionAmounts3) SetIncomePortion(value, currency string) {
 	c.IncomePortion = NewActiveCurrencyAndAmount(value, currency)
 }
-

@@ -11,9 +11,7 @@ type PartyIdentificationAndAccount125 struct {
 
 	// Place where settlement of the securities takes place.
 	PlaceOfSettlement *PartyIdentification70Choice `xml:"PlcOfSttlm"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount125) AddPartyIdentification() *PartyIdentification70Choice {
 	p.PartyIdentification = new(PartyIdentification70Choice)
@@ -28,4 +26,3 @@ func (p *PartyIdentificationAndAccount125) AddPlaceOfSettlement() *PartyIdentifi
 	p.PlaceOfSettlement = new(PartyIdentification70Choice)
 	return p.PlaceOfSettlement
 }
-

@@ -14,9 +14,7 @@ type ReportLine6 struct {
 
 	// Specifies how the net amount to be paid is related to different purchase orders.
 	BreakdownByPurchaseOrder []*ReportLine7 `xml:"BrkdwnByPurchsOrdr"`
-
 }
-
 
 func (r *ReportLine6) AddCommercialDocumentReference() *InvoiceIdentification1 {
 	r.CommercialDocumentReference = new(InvoiceIdentification1)
@@ -24,7 +22,7 @@ func (r *ReportLine6) AddCommercialDocumentReference() *InvoiceIdentification1 {
 }
 
 func (r *ReportLine6) AddAdjustment() *Adjustment6 {
-	newValue := new (Adjustment6)
+	newValue := new(Adjustment6)
 	r.Adjustment = append(r.Adjustment, newValue)
 	return newValue
 }
@@ -34,8 +32,7 @@ func (r *ReportLine6) SetNetAmount(value, currency string) {
 }
 
 func (r *ReportLine6) AddBreakdownByPurchaseOrder() *ReportLine7 {
-	newValue := new (ReportLine7)
+	newValue := new(ReportLine7)
 	r.BreakdownByPurchaseOrder = append(r.BreakdownByPurchaseOrder, newValue)
 	return newValue
 }
-

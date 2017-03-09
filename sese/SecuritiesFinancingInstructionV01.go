@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.01 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.01 Document"`
 	Message *SecuritiesFinancingInstructionV01 `xml:"SctiesFincgInstr"`
 }
 
@@ -93,9 +93,7 @@ type SecuritiesFinancingInstructionV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingInstructionV01) AddIdentification() *iso20022.TransactionAndDocumentIdentification1 {
 	s.Identification = new(iso20022.TransactionAndDocumentIdentification1)
@@ -113,7 +111,7 @@ func (s *SecuritiesFinancingInstructionV01) AddNumberCounts() *iso20022.NumberCo
 }
 
 func (s *SecuritiesFinancingInstructionV01) AddLinkages() *iso20022.Linkages1 {
-	newValue := new (iso20022.Linkages1)
+	newValue := new(iso20022.Linkages1)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -194,8 +192,7 @@ func (s *SecuritiesFinancingInstructionV01) AddMessageRecipient() *iso20022.Part
 }
 
 func (s *SecuritiesFinancingInstructionV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

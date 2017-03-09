@@ -11,9 +11,7 @@ type MarginCallResult2Choice struct {
 
 	// Provides the summation of the call amounts for the segregated independent amount only.
 	SegregatedIndependentAmount *Result1 `xml:"SgrtdIndpdntAmt"`
-
 }
-
 
 func (m *MarginCallResult2Choice) AddMarginCallResultDetails() *MarginCallResult2 {
 	m.MarginCallResultDetails = new(MarginCallResult2)
@@ -29,4 +27,3 @@ func (m *MarginCallResult2Choice) AddSegregatedIndependentAmount() *Result1 {
 	m.SegregatedIndependentAmount = new(Result1)
 	return m.SegregatedIndependentAmount
 }
-

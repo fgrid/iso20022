@@ -14,9 +14,7 @@ type CorporateActionElection2 struct {
 
 	// The reason for the amendment request.
 	Reason *Max350Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionElection2) AddOptionType() *CorporateActionOption1FormatChoice {
 	c.OptionType = new(CorporateActionOption1FormatChoice)
@@ -35,4 +33,3 @@ func (c *CorporateActionElection2) AddNewInstructedQuantity() *UnitOrFaceAmount1
 func (c *CorporateActionElection2) SetReason(value string) {
 	c.Reason = (*Max350Text)(&value)
 }
-

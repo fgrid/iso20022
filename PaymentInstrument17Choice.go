@@ -17,12 +17,10 @@ type PaymentInstrument17Choice struct {
 
 	// Indicates whether the payment is done via draft.
 	BankersDraft *YesNoIndicator `xml:"BkrsDrft"`
-
 }
 
-
 func (p *PaymentInstrument17Choice) AddCashAccountDetails() *CashAccount26 {
-	newValue := new (CashAccount26)
+	newValue := new(CashAccount26)
 	p.CashAccountDetails = append(p.CashAccountDetails, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (p *PaymentInstrument17Choice) SetCheque(value string) {
 func (p *PaymentInstrument17Choice) SetBankersDraft(value string) {
 	p.BankersDraft = (*YesNoIndicator)(&value)
 }
-

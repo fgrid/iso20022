@@ -11,9 +11,7 @@ type DisplayCapabilities1 struct {
 
 	// Number of columns of the display component.
 	LineWidth *Max3NumericText `xml:"LineWidth"`
-
 }
-
 
 func (d *DisplayCapabilities1) SetDisplayType(value string) {
 	d.DisplayType = (*UserInterface2Code)(&value)
@@ -26,4 +24,3 @@ func (d *DisplayCapabilities1) SetNumberOfLines(value string) {
 func (d *DisplayCapabilities1) SetLineWidth(value string) {
 	d.LineWidth = (*Max3NumericText)(&value)
 }
-

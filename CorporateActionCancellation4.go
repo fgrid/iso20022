@@ -11,9 +11,7 @@ type CorporateActionCancellation4 struct {
 
 	// Specifies the status of the details of the event.
 	ProcessingStatus *CorporateActionEventStatus1 `xml:"PrcgSts"`
-
 }
-
 
 func (c *CorporateActionCancellation4) SetCancellationReasonCode(value string) {
 	c.CancellationReasonCode = (*CorporateActionCancellationReason1Code)(&value)
@@ -27,4 +25,3 @@ func (c *CorporateActionCancellation4) AddProcessingStatus() *CorporateActionEve
 	c.ProcessingStatus = new(CorporateActionEventStatus1)
 	return c.ProcessingStatus
 }
-

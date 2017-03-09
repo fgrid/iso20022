@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.024.001.05 Document"`
+	XMLName xml.Name                                        `xml:"urn:iso:std:iso:20022:tech:xsd:sese.024.001.05 Document"`
 	Message *SecuritiesSettlementTransactionStatusAdviceV05 `xml:"SctiesSttlmTxStsAdvc"`
 }
 
@@ -23,14 +23,14 @@ func (d *Document02400105) AddMessage() *SecuritiesSettlementTransactionStatusAd
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesSettlementTransactionStatusAdviceV05 struct {
@@ -55,9 +55,7 @@ type SecuritiesSettlementTransactionStatusAdviceV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionStatusAdviceV05) AddTransactionIdentification() *iso20022.TransactionIdentifications16 {
 	s.TransactionIdentification = new(iso20022.TransactionIdentifications16)
@@ -90,8 +88,7 @@ func (s *SecuritiesSettlementTransactionStatusAdviceV05) AddTransactionDetails()
 }
 
 func (s *SecuritiesSettlementTransactionStatusAdviceV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

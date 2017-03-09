@@ -8,9 +8,7 @@ type UndertakingIssuanceMessage struct {
 
 	// Digital signature of the issued undertaking.
 	DigitalSignature *PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (u *UndertakingIssuanceMessage) AddUndertakingDetails() *Undertaking3 {
 	u.UndertakingDetails = new(Undertaking3)
@@ -21,4 +19,3 @@ func (u *UndertakingIssuanceMessage) AddDigitalSignature() *PartyAndSignature2 {
 	u.DigitalSignature = new(PartyAndSignature2)
 	return u.DigitalSignature
 }
-

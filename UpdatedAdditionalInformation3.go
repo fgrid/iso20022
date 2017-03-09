@@ -11,9 +11,7 @@ type UpdatedAdditionalInformation3 struct {
 
 	// Provides additional textual information.
 	AdditionalInformation *Max350Text `xml:"AddtlInf"`
-
 }
-
 
 func (u *UpdatedAdditionalInformation3) SetUpdateDescription(value string) {
 	u.UpdateDescription = (*Max140Text)(&value)
@@ -26,4 +24,3 @@ func (u *UpdatedAdditionalInformation3) SetUpdateDate(value string) {
 func (u *UpdatedAdditionalInformation3) SetAdditionalInformation(value string) {
 	u.AdditionalInformation = (*Max350Text)(&value)
 }
-

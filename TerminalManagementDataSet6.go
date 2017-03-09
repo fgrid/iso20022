@@ -11,9 +11,7 @@ type TerminalManagementDataSet6 struct {
 
 	// Content of the acceptor parameters.
 	Content *AcceptorConfigurationContent2 `xml:"Cntt"`
-
 }
-
 
 func (t *TerminalManagementDataSet6) AddIdentification() *DataSetIdentification3 {
 	t.Identification = new(DataSetIdentification3)
@@ -28,4 +26,3 @@ func (t *TerminalManagementDataSet6) AddContent() *AcceptorConfigurationContent2
 	t.Content = new(AcceptorConfigurationContent2)
 	return t.Content
 }
-

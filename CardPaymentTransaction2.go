@@ -17,9 +17,7 @@ type CardPaymentTransaction2 struct {
 
 	// Detail of the transaction transported.
 	TransactionDetails *CardPaymentTransactionDetails2 `xml:"TxDtls"`
-
 }
-
 
 func (c *CardPaymentTransaction2) AddTransactionIdentification() *TransactionIdentifier1 {
 	c.TransactionIdentification = new(TransactionIdentifier1)
@@ -42,4 +40,3 @@ func (c *CardPaymentTransaction2) AddTransactionDetails() *CardPaymentTransactio
 	c.TransactionDetails = new(CardPaymentTransactionDetails2)
 	return c.TransactionDetails
 }
-

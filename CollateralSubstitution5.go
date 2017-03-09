@@ -26,9 +26,7 @@ type CollateralSubstitution5 struct {
 
 	// Provides details on the identification of previously sent and/or received message(s), in case of updated substitution request.
 	LinkedReferences *Reference17 `xml:"LkdRefs,omitempty"`
-
 }
-
 
 func (c *CollateralSubstitution5) SetCollateralSubstitutionSequence(value string) {
 	c.CollateralSubstitutionSequence = (*CollateralSubstitutionSequence1Code)(&value)
@@ -47,19 +45,19 @@ func (c *CollateralSubstitution5) SetStandardSettlementInstructions(value string
 }
 
 func (c *CollateralSubstitution5) AddSecuritiesCollateral() *SecuritiesCollateral7 {
-	newValue := new (SecuritiesCollateral7)
+	newValue := new(SecuritiesCollateral7)
 	c.SecuritiesCollateral = append(c.SecuritiesCollateral, newValue)
 	return newValue
 }
 
 func (c *CollateralSubstitution5) AddCashCollateral() *CashCollateral5 {
-	newValue := new (CashCollateral5)
+	newValue := new(CashCollateral5)
 	c.CashCollateral = append(c.CashCollateral, newValue)
 	return newValue
 }
 
 func (c *CollateralSubstitution5) AddOtherCollateral() *OtherCollateral7 {
-	newValue := new (OtherCollateral7)
+	newValue := new(OtherCollateral7)
 	c.OtherCollateral = append(c.OtherCollateral, newValue)
 	return newValue
 }
@@ -68,4 +66,3 @@ func (c *CollateralSubstitution5) AddLinkedReferences() *Reference17 {
 	c.LinkedReferences = new(Reference17)
 	return c.LinkedReferences
 }
-

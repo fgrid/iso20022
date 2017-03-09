@@ -12,9 +12,7 @@ type CorrectiveGroupInformation1 struct {
 
 	// Date and time at which the message was created.
 	CreationDateTime *ISODateTime `xml:"CreDtTm,omitempty"`
-
 }
-
 
 func (c *CorrectiveGroupInformation1) SetMessageIdentification(value string) {
 	c.MessageIdentification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (c *CorrectiveGroupInformation1) SetMessageNameIdentification(value string)
 func (c *CorrectiveGroupInformation1) SetCreationDateTime(value string) {
 	c.CreationDateTime = (*ISODateTime)(&value)
 }
-

@@ -8,9 +8,7 @@ type AlgorithmIdentification13 struct {
 
 	// Parameters associated to the encryption algorithm.
 	Parameter *Parameter6 `xml:"Param,omitempty"`
-
 }
-
 
 func (a *AlgorithmIdentification13) SetAlgorithm(value string) {
 	a.Algorithm = (*Algorithm13Code)(&value)
@@ -20,4 +18,3 @@ func (a *AlgorithmIdentification13) AddParameter() *Parameter6 {
 	a.Parameter = new(Parameter6)
 	return a.Parameter
 }
-

@@ -14,9 +14,7 @@ type NumberAndSumOfTransactions3 struct {
 
 	// Indicates whether the total net entry amount is a credit or a debit amount.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd,omitempty"`
-
 }
-
 
 func (n *NumberAndSumOfTransactions3) SetNumberOfEntries(value string) {
 	n.NumberOfEntries = (*Max15NumericText)(&value)
@@ -33,4 +31,3 @@ func (n *NumberAndSumOfTransactions3) SetTotalNetEntryAmount(value string) {
 func (n *NumberAndSumOfTransactions3) SetCreditDebitIndicator(value string) {
 	n.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

@@ -38,9 +38,7 @@ type SettlementObligation5 struct {
 
 	// Provides the references of the underlying trade leg(s) and/or the reference to the related net position message.
 	References *Reference19 `xml:"Refs,omitempty"`
-
 }
-
 
 func (s *SettlementObligation5) SetRelatedSettlementObligationIdentification(value string) {
 	s.RelatedSettlementObligationIdentification = (*Max35Text)(&value)
@@ -94,4 +92,3 @@ func (s *SettlementObligation5) AddReferences() *Reference19 {
 	s.References = new(Reference19)
 	return s.References
 }
-

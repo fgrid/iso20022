@@ -11,9 +11,7 @@ type PlainCardData12 struct {
 
 	// Expiry date of the card or the payment token expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
 	ExpiryDate *Max10Text `xml:"XpryDt,omitempty"`
-
 }
-
 
 func (p *PlainCardData12) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -26,4 +24,3 @@ func (p *PlainCardData12) SetCardSequenceNumber(value string) {
 func (p *PlainCardData12) SetExpiryDate(value string) {
 	p.ExpiryDate = (*Max10Text)(&value)
 }
-

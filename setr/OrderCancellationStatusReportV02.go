@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.017.001.02 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:setr.017.001.02 Document"`
 	Message *OrderCancellationStatusReportV02 `xml:"setr.017.001.02"`
 }
 
@@ -35,18 +35,16 @@ type OrderCancellationStatusReportV02 struct {
 
 	// Status report details of a bulk or multiple or switch order cancellation instruction that was previously received.
 	CancellationStatusReport *iso20022.OrderStatusAndReason4 `xml:"CxlStsRpt"`
-
 }
 
-
 func (o *OrderCancellationStatusReportV02) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.RelatedReference = append(o.RelatedReference, newValue)
 	return newValue
 }
 
 func (o *OrderCancellationStatusReportV02) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.OtherReference = append(o.OtherReference, newValue)
 	return newValue
 }
@@ -55,4 +53,3 @@ func (o *OrderCancellationStatusReportV02) AddCancellationStatusReport() *iso200
 	o.CancellationStatusReport = new(iso20022.OrderStatusAndReason4)
 	return o.CancellationStatusReport
 }
-

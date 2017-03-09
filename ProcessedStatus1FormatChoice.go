@@ -8,9 +8,7 @@ type ProcessedStatus1FormatChoice struct {
 
 	// Proprietary code to  express the processing status of the notification advice.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (p *ProcessedStatus1FormatChoice) SetCode(value string) {
 	p.Code = (*ProcessedStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (p *ProcessedStatus1FormatChoice) AddProprietary() *GenericIdentification13
 	p.Proprietary = new(GenericIdentification13)
 	return p.Proprietary
 }
-

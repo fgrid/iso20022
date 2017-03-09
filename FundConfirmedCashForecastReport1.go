@@ -8,19 +8,16 @@ type FundConfirmedCashForecastReport1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
 
-
 func (f *FundConfirmedCashForecastReport1) AddFundCashForecastDetails() *FundCashForecast1 {
-	newValue := new (FundCashForecast1)
+	newValue := new(FundCashForecast1)
 	f.FundCashForecastDetails = append(f.FundCashForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundConfirmedCashForecastReport1) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

@@ -23,9 +23,7 @@ type VariationMargin3 struct {
 
 	// Haircut applied to the absolute value of the participants net positions. Calculation depends on a participants credit rating.
 	FailsHaircut *Amount2 `xml:"FlsHrcut,omitempty"`
-
 }
-
 
 func (v *VariationMargin3) AddFinancialInstrumentIdentification() *SecurityIdentification14 {
 	v.FinancialInstrumentIdentification = new(SecurityIdentification14)
@@ -33,7 +31,7 @@ func (v *VariationMargin3) AddFinancialInstrumentIdentification() *SecurityIdent
 }
 
 func (v *VariationMargin3) AddTotalVariationMargin() *TotalVariationMargin1 {
-	newValue := new (TotalVariationMargin1)
+	newValue := new(TotalVariationMargin1)
 	v.TotalVariationMargin = append(v.TotalVariationMargin, newValue)
 	return newValue
 }
@@ -44,19 +42,19 @@ func (v *VariationMargin3) AddTotalMarkToMarket() *Amount2 {
 }
 
 func (v *VariationMargin3) AddMarkToMarketNetted() *Amount2 {
-	newValue := new (Amount2)
+	newValue := new(Amount2)
 	v.MarkToMarketNetted = append(v.MarkToMarketNetted, newValue)
 	return newValue
 }
 
 func (v *VariationMargin3) AddMarkToMarketGross() *Amount2 {
-	newValue := new (Amount2)
+	newValue := new(Amount2)
 	v.MarkToMarketGross = append(v.MarkToMarketGross, newValue)
 	return newValue
 }
 
 func (v *VariationMargin3) AddMarkToMarketFails() *Amount2 {
-	newValue := new (Amount2)
+	newValue := new(Amount2)
 	v.MarkToMarketFails = append(v.MarkToMarketFails, newValue)
 	return newValue
 }
@@ -65,4 +63,3 @@ func (v *VariationMargin3) AddFailsHaircut() *Amount2 {
 	v.FailsHaircut = new(Amount2)
 	return v.FailsHaircut
 }
-

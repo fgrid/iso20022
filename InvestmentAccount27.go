@@ -77,9 +77,7 @@ type InvestmentAccount27 struct {
 
 	// Part of the investment account to or from which securities entries are made.
 	SecuritiesAccount []*SecuritiesAccount4 `xml:"SctiesAcct,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount27) AddIdentification() *AccountIdentification1 {
 	i.Identification = new(AccountIdentification1)
@@ -173,20 +171,19 @@ func (i *InvestmentAccount27) AddAccountServicer() *PartyIdentification2Choice {
 }
 
 func (i *InvestmentAccount27) AddFundsDetails() *FinancialInstrument10 {
-	newValue := new (FinancialInstrument10)
+	newValue := new(FinancialInstrument10)
 	i.FundsDetails = append(i.FundsDetails, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccount27) AddCashAccount() *CashAccount12 {
-	newValue := new (CashAccount12)
+	newValue := new(CashAccount12)
 	i.CashAccount = append(i.CashAccount, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccount27) AddSecuritiesAccount() *SecuritiesAccount4 {
-	newValue := new (SecuritiesAccount4)
+	newValue := new(SecuritiesAccount4)
 	i.SecuritiesAccount = append(i.SecuritiesAccount, newValue)
 	return newValue
 }
-

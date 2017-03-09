@@ -15,9 +15,7 @@ type ForeignExchangeTerms13 struct {
 
 	// Counter value of a foreign exchange conversion.
 	ResultingAmount *ActiveCurrencyAndAmount `xml:"RsltgAmt,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTerms13) SetUnitCurrency(value string) {
 	f.UnitCurrency = (*ActiveCurrencyCode)(&value)
@@ -34,4 +32,3 @@ func (f *ForeignExchangeTerms13) SetExchangeRate(value string) {
 func (f *ForeignExchangeTerms13) SetResultingAmount(value, currency string) {
 	f.ResultingAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

@@ -14,9 +14,7 @@ type Commission9 struct {
 
 	// Commission expressed as a percentage.
 	Rate *PercentageRate `xml:"Rate"`
-
 }
-
 
 func (c *Commission9) SetType(value string) {
 	c.Type = (*CommissionType6Code)(&value)
@@ -33,4 +31,3 @@ func (c *Commission9) SetAmount(value, currency string) {
 func (c *Commission9) SetRate(value string) {
 	c.Rate = (*PercentageRate)(&value)
 }
-

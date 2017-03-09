@@ -8,9 +8,7 @@ type CorporateActionPrice63 struct {
 
 	// Amount of money required per over-subscribed equity as defined by the issuer.
 	OverSubscriptionDepositPrice *PriceFormat52Choice `xml:"OverSbcptDpstPric,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice63) AddCashInLieuOfSharePrice() *PriceFormat52Choice {
 	c.CashInLieuOfSharePrice = new(PriceFormat52Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionPrice63) AddOverSubscriptionDepositPrice() *PriceFormat5
 	c.OverSubscriptionDepositPrice = new(PriceFormat52Choice)
 	return c.OverSubscriptionDepositPrice
 }
-

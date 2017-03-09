@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.006.001.01 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:pain.006.001.01 Document"`
 	Message *PaymentCancellationRequestV01 `xml:"pain.006.001.01"`
 }
 
@@ -34,9 +34,7 @@ type PaymentCancellationRequestV01 struct {
 
 	// Information concerning the original transactions, to which the cancellation request message refers.
 	TransactionInformation []*iso20022.PaymentTransactionInformation3 `xml:"TxInf,omitempty"`
-
 }
-
 
 func (p *PaymentCancellationRequestV01) AddGroupHeader() *iso20022.GroupHeader7 {
 	p.GroupHeader = new(iso20022.GroupHeader7)
@@ -49,8 +47,7 @@ func (p *PaymentCancellationRequestV01) AddOriginalGroupInformation() *iso20022.
 }
 
 func (p *PaymentCancellationRequestV01) AddTransactionInformation() *iso20022.PaymentTransactionInformation3 {
-	newValue := new (iso20022.PaymentTransactionInformation3)
+	newValue := new(iso20022.PaymentTransactionInformation3)
 	p.TransactionInformation = append(p.TransactionInformation, newValue)
 	return newValue
 }
-

@@ -12,7 +12,7 @@ type CashCollateral4 struct {
 	// Specifies whether the deposit is fixed term or call/notice.
 	DepositType *DepositType1Code `xml:"DpstTp,omitempty"`
 
-	// Amount blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral. 
+	// Amount blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral.
 	BlockedAmount *ActiveCurrencyAndAmount `xml:"BlckdAmt,omitempty"`
 
 	// Planned final repayment date at the time of issuance.
@@ -29,9 +29,7 @@ type CashCollateral4 struct {
 
 	// Haircut or valuation factor on the collateral expressed as a percentage.
 	Haircut *PercentageRate `xml:"Hrcut,omitempty"`
-
 }
-
 
 func (c *CashCollateral4) SetAssetNumber(value string) {
 	c.AssetNumber = (*Max35Text)(&value)
@@ -68,4 +66,3 @@ func (c *CashCollateral4) SetCollateralValue(value, currency string) {
 func (c *CashCollateral4) SetHaircut(value string) {
 	c.Haircut = (*PercentageRate)(&value)
 }
-

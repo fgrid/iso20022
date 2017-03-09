@@ -35,9 +35,7 @@ type InvestmentRestrictions2 struct {
 
 	// Indicates whether registered investors are able to transfer some or all of their holdings to third parties.
 	HoldingTransferable *HoldingTransferable1Code `xml:"HldgTrfbl"`
-
 }
-
 
 func (i *InvestmentRestrictions2) SetMinimumInitialSubscriptionAmount(value, currency string) {
 	i.MinimumInitialSubscriptionAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -82,4 +80,3 @@ func (i *InvestmentRestrictions2) SetMinimumHoldingPeriod(value string) {
 func (i *InvestmentRestrictions2) SetHoldingTransferable(value string) {
 	i.HoldingTransferable = (*HoldingTransferable1Code)(&value)
 }
-

@@ -38,9 +38,7 @@ type Organisation6 struct {
 
 	// Potential sender of a message related to the life cyle of an account.
 	Sender []*PartyIdentification40 `xml:"Sndr,omitempty"`
-
 }
-
 
 func (o *Organisation6) SetFullLegalName(value string) {
 	o.FullLegalName = (*Max350Text)(&value)
@@ -79,7 +77,7 @@ func (o *Organisation6) AddOrganisationIdentification() *OrganisationIdentificat
 }
 
 func (o *Organisation6) AddRepresentativeOfficer() *PartyIdentification40 {
-	newValue := new (PartyIdentification40)
+	newValue := new(PartyIdentification40)
 	o.RepresentativeOfficer = append(o.RepresentativeOfficer, newValue)
 	return newValue
 }
@@ -90,14 +88,13 @@ func (o *Organisation6) AddTreasuryManager() *PartyIdentification40 {
 }
 
 func (o *Organisation6) AddMainMandateHolder() *PartyIdentification40 {
-	newValue := new (PartyIdentification40)
+	newValue := new(PartyIdentification40)
 	o.MainMandateHolder = append(o.MainMandateHolder, newValue)
 	return newValue
 }
 
 func (o *Organisation6) AddSender() *PartyIdentification40 {
-	newValue := new (PartyIdentification40)
+	newValue := new(PartyIdentification40)
 	o.Sender = append(o.Sender, newValue)
 	return newValue
 }
-

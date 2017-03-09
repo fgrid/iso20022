@@ -53,9 +53,7 @@ type CorporateActionBalanceDetails31 struct {
 
 	// Balance that has not been affected by the process run through the event.
 	UnaffectedBalance *BalanceFormat5Choice `xml:"UafctdBal,omitempty"`
-
 }
-
 
 func (c *CorporateActionBalanceDetails31) AddConfirmedBalance() *BalanceFormat5Choice {
 	c.ConfirmedBalance = new(BalanceFormat5Choice)
@@ -93,13 +91,13 @@ func (c *CorporateActionBalanceDetails31) AddOnLoanBalance() *BalanceFormat5Choi
 }
 
 func (c *CorporateActionBalanceDetails31) AddPendingDeliveryBalance() *BalanceFormat6Choice {
-	newValue := new (BalanceFormat6Choice)
+	newValue := new(BalanceFormat6Choice)
 	c.PendingDeliveryBalance = append(c.PendingDeliveryBalance, newValue)
 	return newValue
 }
 
 func (c *CorporateActionBalanceDetails31) AddPendingReceiptBalance() *BalanceFormat6Choice {
-	newValue := new (BalanceFormat6Choice)
+	newValue := new(BalanceFormat6Choice)
 	c.PendingReceiptBalance = append(c.PendingReceiptBalance, newValue)
 	return newValue
 }
@@ -110,7 +108,7 @@ func (c *CorporateActionBalanceDetails31) AddOutForRegistrationBalance() *Balanc
 }
 
 func (c *CorporateActionBalanceDetails31) AddSettlementPositionBalance() *BalanceFormat6Choice {
-	newValue := new (BalanceFormat6Choice)
+	newValue := new(BalanceFormat6Choice)
 	c.SettlementPositionBalance = append(c.SettlementPositionBalance, newValue)
 	return newValue
 }
@@ -144,4 +142,3 @@ func (c *CorporateActionBalanceDetails31) AddUnaffectedBalance() *BalanceFormat5
 	c.UnaffectedBalance = new(BalanceFormat5Choice)
 	return c.UnaffectedBalance
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.011.001.03 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:sese.011.001.03 Document"`
 	Message *TransferInstructionStatusReportV03 `xml:"TrfInstrStsRpt"`
 }
 
@@ -37,7 +37,7 @@ func (d *Document01100103) AddMessage() *TransferInstructionStatusReportV03 {
 // - a cancellation pending status and the reason for the status.
 type TransferInstructionStatusReportV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Unambiguous identification of the transfer allocated by the counterparty.
@@ -54,9 +54,7 @@ type TransferInstructionStatusReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferInstructionStatusReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -69,13 +67,13 @@ func (t *TransferInstructionStatusReportV03) AddCounterpartyReference() *iso2002
 }
 
 func (t *TransferInstructionStatusReportV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	t.RelatedReference = append(t.RelatedReference, newValue)
 	return newValue
 }
 
 func (t *TransferInstructionStatusReportV03) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	t.OtherReference = append(t.OtherReference, newValue)
 	return newValue
 }
@@ -86,8 +84,7 @@ func (t *TransferInstructionStatusReportV03) AddStatusReport() *iso20022.Transfe
 }
 
 func (t *TransferInstructionStatusReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

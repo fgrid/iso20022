@@ -26,9 +26,7 @@ type ContactDetails3 struct {
 
 	// Preferred method used to reach the technical contact.
 	PreferredMethod *PreferredContactMethod1Code `xml:"PrefrdMtd,omitempty"`
-
 }
-
 
 func (c *ContactDetails3) SetNamePrefix(value string) {
 	c.NamePrefix = (*NamePrefix1Code)(&value)
@@ -55,7 +53,7 @@ func (c *ContactDetails3) SetEmailAddress(value string) {
 }
 
 func (c *ContactDetails3) AddOther() *OtherContact1 {
-	newValue := new (OtherContact1)
+	newValue := new(OtherContact1)
 	c.Other = append(c.Other, newValue)
 	return newValue
 }
@@ -63,4 +61,3 @@ func (c *ContactDetails3) AddOther() *OtherContact1 {
 func (c *ContactDetails3) SetPreferredMethod(value string) {
 	c.PreferredMethod = (*PreferredContactMethod1Code)(&value)
 }
-

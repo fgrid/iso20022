@@ -71,9 +71,7 @@ type ClearingSystemMemberIdentification2Choice struct {
 
 	// Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.
 	OtherClearingCodeIdentification *Max35Text `xml:"OthrClrCdId"`
-
 }
-
 
 func (c *ClearingSystemMemberIdentification2Choice) SetCHIPSUniversalIdentification(value string) {
 	c.CHIPSUniversalIdentification = (*CHIPSUniversalIdentifier)(&value)
@@ -166,4 +164,3 @@ func (c *ClearingSystemMemberIdentification2Choice) SetPolishNationalClearingCod
 func (c *ClearingSystemMemberIdentification2Choice) SetOtherClearingCodeIdentification(value string) {
 	c.OtherClearingCodeIdentification = (*Max35Text)(&value)
 }
-

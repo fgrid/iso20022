@@ -8,9 +8,7 @@ type RateStatus3Choice struct {
 
 	// Proprietary identification of the status of the rate.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (r *RateStatus3Choice) SetCode(value string) {
 	r.Code = (*RateStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (r *RateStatus3Choice) AddProprietary() *GenericIdentification30 {
 	r.Proprietary = new(GenericIdentification30)
 	return r.Proprietary
 }
-

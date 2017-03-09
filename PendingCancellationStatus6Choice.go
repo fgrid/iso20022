@@ -8,17 +8,14 @@ type PendingCancellationStatus6Choice struct {
 
 	// Reason for the pending cancellation status.
 	Reason []*PendingCancellationStatusReason6 `xml:"Rsn"`
-
 }
-
 
 func (p *PendingCancellationStatus6Choice) SetNotSpecifiedReason(value string) {
 	p.NotSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (p *PendingCancellationStatus6Choice) AddReason() *PendingCancellationStatusReason6 {
-	newValue := new (PendingCancellationStatusReason6)
+	newValue := new(PendingCancellationStatusReason6)
 	p.Reason = append(p.Reason, newValue)
 	return newValue
 }
-

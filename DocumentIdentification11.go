@@ -11,9 +11,7 @@ type DocumentIdentification11 struct {
 
 	// Specifies if this document is a copy, a duplicate, or a duplicate of a copy.
 	CopyDuplicate *CopyDuplicate1Code `xml:"CpyDplct,omitempty"`
-
 }
-
 
 func (d *DocumentIdentification11) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (d *DocumentIdentification11) AddCreationDateTime() *DateAndDateTimeChoice 
 func (d *DocumentIdentification11) SetCopyDuplicate(value string) {
 	d.CopyDuplicate = (*CopyDuplicate1Code)(&value)
 }
-

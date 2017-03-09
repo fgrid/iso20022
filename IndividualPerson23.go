@@ -71,9 +71,7 @@ type IndividualPerson23 struct {
 
 	// Specifies if due diligence checks on the political exposure of the investor have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)
 	PoliticallyExposedPersonType *PoliticalExposureType1Choice `xml:"PltclyXpsdPrsnTp,omitempty"`
-
 }
-
 
 func (i *IndividualPerson23) AddNamePrefix() *NamePrefix1Choice {
 	i.NamePrefix = new(NamePrefix1Choice)
@@ -134,13 +132,13 @@ func (i *IndividualPerson23) AddCountryAndResidentialStatus() *CountryAndResiden
 }
 
 func (i *IndividualPerson23) AddPostalAddress() *PostalAddress3 {
-	newValue := new (PostalAddress3)
+	newValue := new(PostalAddress3)
 	i.PostalAddress = append(i.PostalAddress, newValue)
 	return newValue
 }
 
 func (i *IndividualPerson23) AddCitizenship() *CitizenshipInformation {
-	newValue := new (CitizenshipInformation)
+	newValue := new(CitizenshipInformation)
 	i.Citizenship = append(i.Citizenship, newValue)
 	return newValue
 }
@@ -164,7 +162,7 @@ func (i *IndividualPerson23) AddSecondaryCommunicationAddress() *CommunicationAd
 }
 
 func (i *IndividualPerson23) AddOtherIdentification() *GenericIdentification55 {
-	newValue := new (GenericIdentification55)
+	newValue := new(GenericIdentification55)
 	i.OtherIdentification = append(i.OtherIdentification, newValue)
 	return newValue
 }
@@ -178,4 +176,3 @@ func (i *IndividualPerson23) AddPoliticallyExposedPersonType() *PoliticalExposur
 	i.PoliticallyExposedPersonType = new(PoliticalExposureType1Choice)
 	return i.PoliticallyExposedPersonType
 }
-

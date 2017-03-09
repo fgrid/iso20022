@@ -8,9 +8,7 @@ type QuantityBreakdown5 struct {
 
 	// Quantity of financial instruments that is part of the lot described.
 	LotQuantity *FinancialInstrumentQuantity1Choice `xml:"LotQty,omitempty"`
-
 }
-
 
 func (q *QuantityBreakdown5) AddLotNumber() *Number2Choice {
 	q.LotNumber = new(Number2Choice)
@@ -21,4 +19,3 @@ func (q *QuantityBreakdown5) AddLotQuantity() *FinancialInstrumentQuantity1Choic
 	q.LotQuantity = new(FinancialInstrumentQuantity1Choice)
 	return q.LotQuantity
 }
-

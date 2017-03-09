@@ -98,9 +98,7 @@ type TradeLeg9 struct {
 
 	// Principal amount of a trade (price multiplied by quantity).
 	GrossAmount *AmountAndDirection21 `xml:"GrssAmt,omitempty"`
-
 }
-
 
 func (t *TradeLeg9) AddMarginAccount() *SecuritiesAccount19 {
 	t.MarginAccount = new(SecuritiesAccount19)
@@ -247,4 +245,3 @@ func (t *TradeLeg9) AddGrossAmount() *AmountAndDirection21 {
 	t.GrossAmount = new(AmountAndDirection21)
 	return t.GrossAmount
 }
-

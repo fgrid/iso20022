@@ -8,9 +8,7 @@ type AmountAndDirection35 struct {
 
 	// Indicates whether the amount is a credit or a debit amount.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd"`
-
 }
-
 
 func (a *AmountAndDirection35) SetAmount(value string) {
 	a.Amount = (*NonNegativeDecimalNumber)(&value)
@@ -19,4 +17,3 @@ func (a *AmountAndDirection35) SetAmount(value string) {
 func (a *AmountAndDirection35) SetCreditDebitIndicator(value string) {
 	a.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

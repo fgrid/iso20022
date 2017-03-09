@@ -11,9 +11,7 @@ type Demand3 struct {
 
 	// Amount and currency of the demand.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (d *Demand3) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (d *Demand3) SetSubmissionDateTime(value string) {
 func (d *Demand3) SetAmount(value, currency string) {
 	d.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

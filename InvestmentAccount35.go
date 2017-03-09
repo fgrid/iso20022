@@ -77,9 +77,7 @@ type InvestmentAccount35 struct {
 
 	// Date the investor signs the open account form.
 	AccountSignatureDateTime *DateAndDateTimeChoice `xml:"AcctSgntrDtTm,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount35) AddIdentification() *AccountIdentification1 {
 	i.Identification = new(AccountIdentification1)
@@ -162,19 +160,19 @@ func (i *InvestmentAccount35) AddAccountServicer() *PartyIdentification2Choice {
 }
 
 func (i *InvestmentAccount35) AddFundsDetails() *FinancialInstrument29 {
-	newValue := new (FinancialInstrument29)
+	newValue := new(FinancialInstrument29)
 	i.FundsDetails = append(i.FundsDetails, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccount35) AddCashAccount() *CashAccount12 {
-	newValue := new (CashAccount12)
+	newValue := new(CashAccount12)
 	i.CashAccount = append(i.CashAccount, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccount35) AddSecuritiesAccount() *SecuritiesAccount4 {
-	newValue := new (SecuritiesAccount4)
+	newValue := new(SecuritiesAccount4)
 	i.SecuritiesAccount = append(i.SecuritiesAccount, newValue)
 	return newValue
 }
@@ -197,4 +195,3 @@ func (i *InvestmentAccount35) AddAccountSignatureDateTime() *DateAndDateTimeChoi
 	i.AccountSignatureDateTime = new(DateAndDateTimeChoice)
 	return i.AccountSignatureDateTime
 }
-

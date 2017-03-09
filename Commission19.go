@@ -8,9 +8,7 @@ type Commission19 struct {
 
 	// Additional information about the type of commission.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *Commission19) SetAmount(value, currency string) {
 	c.Amount = NewImpliedCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (c *Commission19) SetAmount(value, currency string) {
 func (c *Commission19) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

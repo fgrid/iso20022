@@ -17,9 +17,7 @@ type PartyIdentification5Choice struct {
 
 	// Number assigned by a national registration authority to an entity.
 	NationalRegistrationNumber *Max35Text `xml:"NtlRegnNb"`
-
 }
-
 
 func (p *PartyIdentification5Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -42,4 +40,3 @@ func (p *PartyIdentification5Choice) SetTaxIdentificationNumber(value string) {
 func (p *PartyIdentification5Choice) SetNationalRegistrationNumber(value string) {
 	p.NationalRegistrationNumber = (*Max35Text)(&value)
 }
-

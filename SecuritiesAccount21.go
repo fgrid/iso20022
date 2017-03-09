@@ -17,9 +17,7 @@ type SecuritiesAccount21 struct {
 
 	// Foreign exchange rate applied between the reporting and base currencies. It is assumed the valuation date is the same as the report date.
 	ForeignExchangeRate *BaseOneRate `xml:"FXRate,omitempty"`
-
 }
-
 
 func (s *SecuritiesAccount21) AddAccount() *AccountIdentification5 {
 	s.Account = new(AccountIdentification5)
@@ -42,4 +40,3 @@ func (s *SecuritiesAccount21) SetReportingCurrency(value string) {
 func (s *SecuritiesAccount21) SetForeignExchangeRate(value string) {
 	s.ForeignExchangeRate = (*BaseOneRate)(&value)
 }
-

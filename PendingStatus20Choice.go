@@ -8,9 +8,7 @@ type PendingStatus20Choice struct {
 
 	// Allegement is under investigation.
 	UnderInvestigation *NoSpecifiedReason1 `xml:"UdrInvstgtn"`
-
 }
-
 
 func (p *PendingStatus20Choice) AddForwarded() *NoSpecifiedReason1 {
 	p.Forwarded = new(NoSpecifiedReason1)
@@ -21,4 +19,3 @@ func (p *PendingStatus20Choice) AddUnderInvestigation() *NoSpecifiedReason1 {
 	p.UnderInvestigation = new(NoSpecifiedReason1)
 	return p.UnderInvestigation
 }
-

@@ -14,9 +14,7 @@ type HoldingBalance7 struct {
 
 	// Date of the entitlement.
 	Date *ISODate `xml:"Dt,omitempty"`
-
 }
-
 
 func (h *HoldingBalance7) AddBalance() *UnitOrFaceAmount1Choice {
 	h.Balance = new(UnitOrFaceAmount1Choice)
@@ -35,4 +33,3 @@ func (h *HoldingBalance7) AddSafekeepingPlace() *SafekeepingPlaceFormat2Choice {
 func (h *HoldingBalance7) SetDate(value string) {
 	h.Date = (*ISODate)(&value)
 }
-

@@ -8,9 +8,7 @@ type ChargeTypeFormat3Choice struct {
 
 	// Proprietary code for specifying the type of charge.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *ChargeTypeFormat3Choice) SetCode(value string) {
 	c.Code = (*ChargeType17Code)(&value)
@@ -20,4 +18,3 @@ func (c *ChargeTypeFormat3Choice) AddProprietary() *GenericIdentification13 {
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

@@ -11,9 +11,7 @@ type ServiceTaxDesignation1 struct {
 
 	// Provides free form explanations of the various tax codes used within the statement.
 	TaxReason []*TaxReason1 `xml:"TaxRsn,omitempty"`
-
 }
-
 
 func (s *ServiceTaxDesignation1) SetCode(value string) {
 	s.Code = (*ServiceTaxDesignation1Code)(&value)
@@ -24,8 +22,7 @@ func (s *ServiceTaxDesignation1) SetRegion(value string) {
 }
 
 func (s *ServiceTaxDesignation1) AddTaxReason() *TaxReason1 {
-	newValue := new (TaxReason1)
+	newValue := new(TaxReason1)
 	s.TaxReason = append(s.TaxReason, newValue)
 	return newValue
 }
-

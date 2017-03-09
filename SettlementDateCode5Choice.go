@@ -8,9 +8,7 @@ type SettlementDateCode5Choice struct {
 
 	// Settlement date expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlementDateCode5Choice) SetCode(value string) {
 	s.Code = (*SettlementDate5Code)(&value)
@@ -20,4 +18,3 @@ func (s *SettlementDateCode5Choice) AddProprietary() *GenericIdentification38 {
 	s.Proprietary = new(GenericIdentification38)
 	return s.Proprietary
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.005.001.02 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:reda.005.001.02 Document"`
 	Message *InvestmentFundReportRequestV02 `xml:"InvstmtFndRptReq"`
 }
 
@@ -34,9 +34,7 @@ type InvestmentFundReportRequestV02 struct {
 
 	// Parameters for which the fund processing passport report is requested.
 	FundProcessingPassportReport []*iso20022.FundParameters3Choice `xml:"FPPRpt"`
-
 }
-
 
 func (i *InvestmentFundReportRequestV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	i.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -54,8 +52,7 @@ func (i *InvestmentFundReportRequestV02) AddRelatedReference() *iso20022.Additio
 }
 
 func (i *InvestmentFundReportRequestV02) AddFundProcessingPassportReport() *iso20022.FundParameters3Choice {
-	newValue := new (iso20022.FundParameters3Choice)
+	newValue := new(iso20022.FundParameters3Choice)
 	i.FundProcessingPassportReport = append(i.FundProcessingPassportReport, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type PaymentDirection2Choice struct {
 
 	// Payment direction expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (p *PaymentDirection2Choice) SetIndicator(value string) {
 	p.Indicator = (*PaymentDirectionIndicator)(&value)
@@ -20,4 +18,3 @@ func (p *PaymentDirection2Choice) AddProprietary() *GenericIdentification20 {
 	p.Proprietary = new(GenericIdentification20)
 	return p.Proprietary
 }
-

@@ -23,9 +23,7 @@ type CorporateActionGeneralInformation37 struct {
 
 	// Security concerned by the corporate action.
 	UnderlyingSecurity *FinancialInstrumentAttributes33 `xml:"UndrlygScty"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation37) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*Max35Text)(&value)
@@ -58,4 +56,3 @@ func (c *CorporateActionGeneralInformation37) AddUnderlyingSecurity() *Financial
 	c.UnderlyingSecurity = new(FinancialInstrumentAttributes33)
 	return c.UnderlyingSecurity
 }
-

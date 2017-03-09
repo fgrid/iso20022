@@ -8,9 +8,7 @@ type CancellationReason13 struct {
 
 	// Provides the corporate action event identification of the event that triggered the cancellation.
 	CorporateActionEventIdentification *Max35Text `xml:"CorpActnEvtId,omitempty"`
-
 }
-
 
 func (c *CancellationReason13) AddCode() *CancellationReason19Choice {
 	c.Code = new(CancellationReason19Choice)
@@ -20,4 +18,3 @@ func (c *CancellationReason13) AddCode() *CancellationReason19Choice {
 func (c *CancellationReason13) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*Max35Text)(&value)
 }
-

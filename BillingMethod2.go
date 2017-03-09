@@ -9,13 +9,11 @@ type BillingMethod2 struct {
 	// Provides for the regional taxes on the service. Up to three regional taxes may be defined for the same service.
 	ServiceTax *BillingServicesAmount1 `xml:"SvcTax"`
 
-	// Provides for the specific tax identification within the same tax region. 
-	// 
+	// Provides for the specific tax identification within the same tax region.
+	//
 	// Usage: This element allows for a maximum of three regional taxes on the same service.
 	TaxIdentification []*BillingServicesTax1 `xml:"TaxId"`
-
 }
-
 
 func (b *BillingMethod2) AddServiceChargeHostAmount() *AmountAndDirection34 {
 	b.ServiceChargeHostAmount = new(AmountAndDirection34)
@@ -28,8 +26,7 @@ func (b *BillingMethod2) AddServiceTax() *BillingServicesAmount1 {
 }
 
 func (b *BillingMethod2) AddTaxIdentification() *BillingServicesTax1 {
-	newValue := new (BillingServicesTax1)
+	newValue := new(BillingServicesTax1)
 	b.TaxIdentification = append(b.TaxIdentification, newValue)
 	return newValue
 }
-

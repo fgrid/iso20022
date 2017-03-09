@@ -29,9 +29,7 @@ type Option3 struct {
 
 	// Specifies the amount of the premium of a foreign exchange option trade and its settlement place.
 	Premium *PremiumAmount2 `xml:"Prm"`
-
 }
-
 
 func (o *Option3) AddOptionAmounts() *AmountsAndValueDate2 {
 	o.OptionAmounts = new(AmountsAndValueDate2)
@@ -71,4 +69,3 @@ func (o *Option3) AddPremium() *PremiumAmount2 {
 	o.Premium = new(PremiumAmount2)
 	return o.Premium
 }
-

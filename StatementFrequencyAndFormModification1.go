@@ -8,9 +8,7 @@ type StatementFrequencyAndFormModification1 struct {
 
 	// Specifies the statement frequency, format, delivery address.
 	StatementFrequencyAndForm *StatementFrequencyAndForm1 `xml:"StmtFrqcyAndForm"`
-
 }
-
 
 func (s *StatementFrequencyAndFormModification1) SetModificationCode(value string) {
 	s.ModificationCode = (*Modification1Code)(&value)
@@ -20,4 +18,3 @@ func (s *StatementFrequencyAndFormModification1) AddStatementFrequencyAndForm() 
 	s.StatementFrequencyAndForm = new(StatementFrequencyAndForm1)
 	return s.StatementFrequencyAndForm
 }
-

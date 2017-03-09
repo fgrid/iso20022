@@ -27,9 +27,7 @@ type Cardholder7 struct {
 
 	// Identifies personal data related to the cardholder.
 	PersonalData *Max70Text `xml:"PrsnlData,omitempty"`
-
 }
-
 
 func (c *Cardholder7) AddIdentification() *PersonIdentification7 {
 	c.Identification = new(PersonIdentification7)
@@ -55,13 +53,13 @@ func (c *Cardholder7) AddShippingAddress() *PostalAddress13 {
 }
 
 func (c *Cardholder7) AddAuthentication() *CardholderAuthentication6 {
-	newValue := new (CardholderAuthentication6)
+	newValue := new(CardholderAuthentication6)
 	c.Authentication = append(c.Authentication, newValue)
 	return newValue
 }
 
 func (c *Cardholder7) AddTransactionVerificationResult() *TransactionVerificationResult3 {
-	newValue := new (TransactionVerificationResult3)
+	newValue := new(TransactionVerificationResult3)
 	c.TransactionVerificationResult = append(c.TransactionVerificationResult, newValue)
 	return newValue
 }
@@ -69,4 +67,3 @@ func (c *Cardholder7) AddTransactionVerificationResult() *TransactionVerificatio
 func (c *Cardholder7) SetPersonalData(value string) {
 	c.PersonalData = (*Max70Text)(&value)
 }
-

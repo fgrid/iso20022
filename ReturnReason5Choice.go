@@ -8,9 +8,7 @@ type ReturnReason5Choice struct {
 
 	// Reason for the return, in a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (r *ReturnReason5Choice) SetCode(value string) {
 	r.Code = (*ExternalReturnReason1Code)(&value)
@@ -19,4 +17,3 @@ func (r *ReturnReason5Choice) SetCode(value string) {
 func (r *ReturnReason5Choice) SetProprietary(value string) {
 	r.Proprietary = (*Max35Text)(&value)
 }
-

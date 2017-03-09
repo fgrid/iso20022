@@ -32,9 +32,7 @@ type OriginalGroupInformation24 struct {
 
 	// Detailed information on the number of transactions for each identical cancellation status.
 	NumberOfTransactionsPerCancellationStatus []*NumberOfTransactionsPerStatus1 `xml:"NbOfTxsPerCxlSts,omitempty"`
-
 }
-
 
 func (o *OriginalGroupInformation24) SetOriginalGroupCancellationIdentification(value string) {
 	o.OriginalGroupCancellationIdentification = (*Max35Text)(&value)
@@ -70,14 +68,13 @@ func (o *OriginalGroupInformation24) SetGroupCancellationStatus(value string) {
 }
 
 func (o *OriginalGroupInformation24) AddCancellationStatusReasonInformation() *CancellationStatusReasonInformation1 {
-	newValue := new (CancellationStatusReasonInformation1)
+	newValue := new(CancellationStatusReasonInformation1)
 	o.CancellationStatusReasonInformation = append(o.CancellationStatusReasonInformation, newValue)
 	return newValue
 }
 
 func (o *OriginalGroupInformation24) AddNumberOfTransactionsPerCancellationStatus() *NumberOfTransactionsPerStatus1 {
-	newValue := new (NumberOfTransactionsPerStatus1)
+	newValue := new(NumberOfTransactionsPerStatus1)
 	o.NumberOfTransactionsPerCancellationStatus = append(o.NumberOfTransactionsPerCancellationStatus, newValue)
 	return newValue
 }
-

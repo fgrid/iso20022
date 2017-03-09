@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.007.001.04 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:seev.007.001.04 Document"`
 	Message *MeetingVoteExecutionConfirmationV04 `xml:"MtgVoteExctnConf"`
 }
 
@@ -35,7 +35,7 @@ type MeetingVoteExecutionConfirmationV04 struct {
 	// Party confirming the votes.
 	ReportingParty *iso20022.PartyIdentification9Choice `xml:"RptgPty"`
 
-	// Identifies the securities for which the meeting is organised. 
+	// Identifies the securities for which the meeting is organised.
 	SecurityIdentification *iso20022.SecurityIdentification11 `xml:"SctyId"`
 
 	// Specifies how a party has voted for each agenda item.
@@ -43,9 +43,7 @@ type MeetingVoteExecutionConfirmationV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (m *MeetingVoteExecutionConfirmationV04) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -73,14 +71,13 @@ func (m *MeetingVoteExecutionConfirmationV04) AddSecurityIdentification() *iso20
 }
 
 func (m *MeetingVoteExecutionConfirmationV04) AddVoteInstructions() *iso20022.DetailedInstructionStatus9 {
-	newValue := new (iso20022.DetailedInstructionStatus9)
+	newValue := new(iso20022.DetailedInstructionStatus9)
 	m.VoteInstructions = append(m.VoteInstructions, newValue)
 	return newValue
 }
 
 func (m *MeetingVoteExecutionConfirmationV04) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	m.Extension = append(m.Extension, newValue)
 	return newValue
 }
-

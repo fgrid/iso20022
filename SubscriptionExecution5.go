@@ -130,9 +130,7 @@ type SubscriptionExecution5 struct {
 
 	// Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.
 	Equalisation *Equalisation1 `xml:"Equlstn,omitempty"`
-
 }
-
 
 func (s *SubscriptionExecution5) SetOrderReference(value string) {
 	s.OrderReference = (*Max35Text)(&value)
@@ -147,7 +145,7 @@ func (s *SubscriptionExecution5) SetDealReference(value string) {
 }
 
 func (s *SubscriptionExecution5) AddOrderType() *FundOrderType3 {
-	newValue := new (FundOrderType3)
+	newValue := new(FundOrderType3)
 	s.OrderType = append(s.OrderType, newValue)
 	return newValue
 }
@@ -190,7 +188,7 @@ func (s *SubscriptionExecution5) AddDealingPriceDetails() *UnitPrice10 {
 }
 
 func (s *SubscriptionExecution5) AddInformativePriceDetails() *UnitPrice10 {
-	newValue := new (UnitPrice10)
+	newValue := new(UnitPrice10)
 	s.InformativePriceDetails = append(s.InformativePriceDetails, newValue)
 	return newValue
 }
@@ -225,7 +223,7 @@ func (s *SubscriptionExecution5) AddInterimProfitAmount() *ProfitAndLoss1Choice 
 }
 
 func (s *SubscriptionExecution5) AddForeignExchangeDetails() *ForeignExchangeTerms7 {
-	newValue := new (ForeignExchangeTerms7)
+	newValue := new(ForeignExchangeTerms7)
 	s.ForeignExchangeDetails = append(s.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -272,7 +270,7 @@ func (s *SubscriptionExecution5) AddPhysicalDeliveryDetails() *DeliveryParameter
 }
 
 func (s *SubscriptionExecution5) AddStaffClientBreakdown() *InvestmentFundsOrderBreakdown1 {
-	newValue := new (InvestmentFundsOrderBreakdown1)
+	newValue := new(InvestmentFundsOrderBreakdown1)
 	s.StaffClientBreakdown = append(s.StaffClientBreakdown, newValue)
 	return newValue
 }
@@ -315,7 +313,7 @@ func (s *SubscriptionExecution5) SetPartialSettlementOfCash(value string) {
 }
 
 func (s *SubscriptionExecution5) AddRelatedPartyDetails() *Intermediary9 {
-	newValue := new (Intermediary9)
+	newValue := new(Intermediary9)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -324,4 +322,3 @@ func (s *SubscriptionExecution5) AddEqualisation() *Equalisation1 {
 	s.Equalisation = new(Equalisation1)
 	return s.Equalisation
 }
-

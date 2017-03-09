@@ -20,9 +20,7 @@ type ConfirmationPartyDetails2 struct {
 
 	// Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).
 	TradingPartyCapacity *TradingPartyCapacity1Choice `xml:"TradgPtyCpcty,omitempty"`
-
 }
-
 
 func (c *ConfirmationPartyDetails2) AddIdentification() *PartyIdentification32Choice {
 	c.Identification = new(PartyIdentification32Choice)
@@ -52,4 +50,3 @@ func (c *ConfirmationPartyDetails2) AddTradingPartyCapacity() *TradingPartyCapac
 	c.TradingPartyCapacity = new(TradingPartyCapacity1Choice)
 	return c.TradingPartyCapacity
 }
-

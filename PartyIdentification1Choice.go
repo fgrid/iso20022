@@ -11,9 +11,7 @@ type PartyIdentification1Choice struct {
 
 	// Name by which a party is known and which is usually used to identify that party.
 	NameAndAddress *NameAndAddress2 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PartyIdentification1Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification1Choice) AddNameAndAddress() *NameAndAddress2 {
 	p.NameAndAddress = new(NameAndAddress2)
 	return p.NameAndAddress
 }
-

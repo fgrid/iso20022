@@ -8,9 +8,7 @@ type StatusAndReason18 struct {
 
 	// Details of the transactions reported.
 	Transaction []*Transaction35 `xml:"Tx,omitempty"`
-
 }
-
 
 func (s *StatusAndReason18) AddStatusAndReason() *Status15Choice {
 	s.StatusAndReason = new(Status15Choice)
@@ -18,8 +16,7 @@ func (s *StatusAndReason18) AddStatusAndReason() *Status15Choice {
 }
 
 func (s *StatusAndReason18) AddTransaction() *Transaction35 {
-	newValue := new (Transaction35)
+	newValue := new(Transaction35)
 	s.Transaction = append(s.Transaction, newValue)
 	return newValue
 }
-

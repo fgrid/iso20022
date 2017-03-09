@@ -14,9 +14,7 @@ type TaxType struct {
 
 	// Amount of money resulting from the calculation of the tax.
 	Amount *CurrencyAndAmount `xml:"Amt,omitempty"`
-
 }
-
 
 func (t *TaxType) SetCategoryDescription(value string) {
 	t.CategoryDescription = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (t *TaxType) SetTaxableBaseAmount(value, currency string) {
 func (t *TaxType) SetAmount(value, currency string) {
 	t.Amount = NewCurrencyAndAmount(value, currency)
 }
-

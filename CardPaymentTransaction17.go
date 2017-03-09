@@ -26,9 +26,7 @@ type CardPaymentTransaction17 struct {
 
 	// Result of the original transaction.
 	TransactionResult *CardPaymentTransactionResult1 `xml:"TxRslt,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransaction17) AddTransactionIdentification() *TransactionIdentifier1 {
 	c.TransactionIdentification = new(TransactionIdentifier1)
@@ -64,4 +62,3 @@ func (c *CardPaymentTransaction17) AddTransactionResult() *CardPaymentTransactio
 	c.TransactionResult = new(CardPaymentTransactionResult1)
 	return c.TransactionResult
 }
-

@@ -14,9 +14,7 @@ type TradeTransactionStatusAndReason1 struct {
 
 	// Indicates that the report is rejected and provides a reason why.
 	Rejected []*RejectedStatusReason9Choice `xml:"Rjctd"`
-
 }
-
 
 func (t *TradeTransactionStatusAndReason1) SetRelatedReference(value string) {
 	t.RelatedReference = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (t *TradeTransactionStatusAndReason1) SetStatus(value string) {
 }
 
 func (t *TradeTransactionStatusAndReason1) AddRejected() *RejectedStatusReason9Choice {
-	newValue := new (RejectedStatusReason9Choice)
+	newValue := new(RejectedStatusReason9Choice)
 	t.Rejected = append(t.Rejected, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type ModificationScope8 struct {
 
 	// Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.
 	InvestmentPlan *InvestmentPlan5 `xml:"InvstmtPlan"`
-
 }
-
 
 func (m *ModificationScope8) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope8) AddInvestmentPlan() *InvestmentPlan5 {
 	m.InvestmentPlan = new(InvestmentPlan5)
 	return m.InvestmentPlan
 }
-

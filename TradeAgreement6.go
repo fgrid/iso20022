@@ -23,9 +23,7 @@ type TradeAgreement6 struct {
 
 	// Specifies the applicable Incoterm and associated location.
 	Incoterms *Incoterms3 `xml:"Incotrms,omitempty"`
-
 }
-
 
 func (t *TradeAgreement6) AddBuyer() *TradeParty1 {
 	t.Buyer = new(TradeParty1)
@@ -53,7 +51,7 @@ func (t *TradeAgreement6) AddBuyerOrderIdentificationDocument() *DocumentIdentif
 }
 
 func (t *TradeAgreement6) AddAdditionalReferenceDocument() *DocumentGeneralInformation2 {
-	newValue := new (DocumentGeneralInformation2)
+	newValue := new(DocumentGeneralInformation2)
 	t.AdditionalReferenceDocument = append(t.AdditionalReferenceDocument, newValue)
 	return newValue
 }
@@ -62,4 +60,3 @@ func (t *TradeAgreement6) AddIncoterms() *Incoterms3 {
 	t.Incoterms = new(Incoterms3)
 	return t.Incoterms
 }
-

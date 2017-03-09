@@ -11,9 +11,7 @@ type ReportStatusAndReason1 struct {
 
 	// Indicates that the report is rejected and provides a reason why.
 	Rejected []*RejectedStatusReason9Choice `xml:"Rjctd"`
-
 }
-
 
 func (r *ReportStatusAndReason1) SetRelatedReference(value string) {
 	r.RelatedReference = (*Max35Text)(&value)
@@ -24,8 +22,7 @@ func (r *ReportStatusAndReason1) SetStatus(value string) {
 }
 
 func (r *ReportStatusAndReason1) AddRejected() *RejectedStatusReason9Choice {
-	newValue := new (RejectedStatusReason9Choice)
+	newValue := new(RejectedStatusReason9Choice)
 	r.Rejected = append(r.Rejected, newValue)
 	return newValue
 }
-

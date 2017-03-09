@@ -11,9 +11,7 @@ type TransferCancellationCompleteStatusAndReason1 struct {
 
 	// Proprietary identification of the reason for the transfer cancellation complete status.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (t *TransferCancellationCompleteStatusAndReason1) SetReason(value string) {
 	t.Reason = (*CancelledStatusReason1Code)(&value)
@@ -27,4 +25,3 @@ func (t *TransferCancellationCompleteStatusAndReason1) AddDataSourceScheme() *Ge
 	t.DataSourceScheme = new(GenericIdentification1)
 	return t.DataSourceScheme
 }
-

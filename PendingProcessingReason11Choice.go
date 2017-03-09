@@ -8,9 +8,7 @@ type PendingProcessingReason11Choice struct {
 
 	// Specifies the reason why the instruction has a pending processing status.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (p *PendingProcessingReason11Choice) SetCode(value string) {
 	p.Code = (*PendingProcessingReason1Code)(&value)
@@ -20,4 +18,3 @@ func (p *PendingProcessingReason11Choice) AddProprietary() *GenericIdentificatio
 	p.Proprietary = new(GenericIdentification30)
 	return p.Proprietary
 }
-

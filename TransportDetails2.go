@@ -26,18 +26,16 @@ type TransportDetails2 struct {
 
 	// Charges related to the conveyance of goods.
 	FreightCharges *Charge13 `xml:"FrghtChrgs,omitempty"`
-
 }
 
-
 func (t *TransportDetails2) AddTransportDocumentReference() *DocumentIdentification7 {
-	newValue := new (DocumentIdentification7)
+	newValue := new(DocumentIdentification7)
 	t.TransportDocumentReference = append(t.TransportDocumentReference, newValue)
 	return newValue
 }
 
 func (t *TransportDetails2) AddTransportedGoods() *TransportedGoods1 {
-	newValue := new (TransportedGoods1)
+	newValue := new(TransportedGoods1)
 	t.TransportedGoods = append(t.TransportedGoods, newValue)
 	return newValue
 }
@@ -69,4 +67,3 @@ func (t *TransportDetails2) AddFreightCharges() *Charge13 {
 	t.FreightCharges = new(Charge13)
 	return t.FreightCharges
 }
-

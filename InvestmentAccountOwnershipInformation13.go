@@ -3,7 +3,7 @@ package iso20022
 // Characteristics of the ownership of an investment account.
 type InvestmentAccountOwnershipInformation13 struct {
 
-	// Information about the organisation or individual person. 
+	// Information about the organisation or individual person.
 	Party *Party30Choice `xml:"Pty"`
 
 	// Status of an identity check to prevent money laundering. This includes the counter-terrorism check.
@@ -51,7 +51,7 @@ type InvestmentAccountOwnershipInformation13 struct {
 	// Method used for postal mailing.
 	MailType *MailType1Choice `xml:"MailTp,omitempty"`
 
-	// Country and residential status of the organisation or individual person. 
+	// Country and residential status of the organisation or individual person.
 	CountryAndResidentialStatus *CountryAndResidentialStatusType2 `xml:"CtryAndResdtlSts,omitempty"`
 
 	// Annual wealth of the individual person or share capital value of the legal entity and date on which the annual wealth of the individual person was registered or declared or the date the  stock value of the organisation was registered.
@@ -83,9 +83,7 @@ type InvestmentAccountOwnershipInformation13 struct {
 
 	// Additional information concerning limitations and restrictions on the account party.
 	AdditionalInformation []*AccountRestrictions1 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOwnershipInformation13) AddParty() *Party30Choice {
 	i.Party = new(Party30Choice)
@@ -98,7 +96,7 @@ func (i *InvestmentAccountOwnershipInformation13) AddMoneyLaunderingCheck() *Mon
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddModifiedInvestorProfileValidation() *ModificationScope27 {
-	newValue := new (ModificationScope27)
+	newValue := new(ModificationScope27)
 	i.ModifiedInvestorProfileValidation = append(i.ModifiedInvestorProfileValidation, newValue)
 	return newValue
 }
@@ -125,25 +123,25 @@ func (i *InvestmentAccountOwnershipInformation13) AddMiFIDClassification() *MiFI
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddNotification() *Notification2 {
-	newValue := new (Notification2)
+	newValue := new(Notification2)
 	i.Notification = append(i.Notification, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddFATCAFormType() *FATCAForm1Choice {
-	newValue := new (FATCAForm1Choice)
+	newValue := new(FATCAForm1Choice)
 	i.FATCAFormType = append(i.FATCAFormType, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddFATCAStatus() *FATCAStatus2 {
-	newValue := new (FATCAStatus2)
+	newValue := new(FATCAStatus2)
 	i.FATCAStatus = append(i.FATCAStatus, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddOtherIdentification() *GenericIdentification82 {
-	newValue := new (GenericIdentification82)
+	newValue := new(GenericIdentification82)
 	i.OtherIdentification = append(i.OtherIdentification, newValue)
 	return newValue
 }
@@ -154,7 +152,7 @@ func (i *InvestmentAccountOwnershipInformation13) AddTaxExemption() *TaxExemptio
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddTaxReporting() *TaxReporting1 {
-	newValue := new (TaxReporting1)
+	newValue := new(TaxReporting1)
 	i.TaxReporting = append(i.TaxReporting, newValue)
 	return newValue
 }
@@ -198,13 +196,13 @@ func (i *InvestmentAccountOwnershipInformation13) SetElectronicMailingServiceRef
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddPrimaryCommunicationAddress() *CommunicationAddress6 {
-	newValue := new (CommunicationAddress6)
+	newValue := new(CommunicationAddress6)
 	i.PrimaryCommunicationAddress = append(i.PrimaryCommunicationAddress, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddSecondaryCommunicationAddress() *CommunicationAddress6 {
-	newValue := new (CommunicationAddress6)
+	newValue := new(CommunicationAddress6)
 	i.SecondaryCommunicationAddress = append(i.SecondaryCommunicationAddress, newValue)
 	return newValue
 }
@@ -220,8 +218,7 @@ func (i *InvestmentAccountOwnershipInformation13) AddAccountingStatus() *Account
 }
 
 func (i *InvestmentAccountOwnershipInformation13) AddAdditionalInformation() *AccountRestrictions1 {
-	newValue := new (AccountRestrictions1)
+	newValue := new(AccountRestrictions1)
 	i.AdditionalInformation = append(i.AdditionalInformation, newValue)
 	return newValue
 }
-

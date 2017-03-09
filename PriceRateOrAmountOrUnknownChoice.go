@@ -11,9 +11,7 @@ type PriceRateOrAmountOrUnknownChoice struct {
 
 	// Indicates whether the market price is unknown.
 	UnknownIndicator *YesNoIndicator `xml:"UknwnInd"`
-
 }
-
 
 func (p *PriceRateOrAmountOrUnknownChoice) SetRate(value string) {
 	p.Rate = (*PercentageRate)(&value)
@@ -26,4 +24,3 @@ func (p *PriceRateOrAmountOrUnknownChoice) SetAmount(value, currency string) {
 func (p *PriceRateOrAmountOrUnknownChoice) SetUnknownIndicator(value string) {
 	p.UnknownIndicator = (*YesNoIndicator)(&value)
 }
-

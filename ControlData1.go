@@ -8,9 +8,7 @@ type ControlData1 struct {
 
 	// Total of all individual amounts included in the message, irrespective of currencies.
 	ControlSum *DecimalNumber `xml:"CtrlSum,omitempty"`
-
 }
-
 
 func (c *ControlData1) SetNumberOfTransactions(value string) {
 	c.NumberOfTransactions = (*Max15NumericText)(&value)
@@ -19,4 +17,3 @@ func (c *ControlData1) SetNumberOfTransactions(value string) {
 func (c *ControlData1) SetControlSum(value string) {
 	c.ControlSum = (*DecimalNumber)(&value)
 }
-

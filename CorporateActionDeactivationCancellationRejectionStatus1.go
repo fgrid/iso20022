@@ -8,12 +8,10 @@ type CorporateActionDeactivationCancellationRejectionStatus1 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
 
-
 func (c *CorporateActionDeactivationCancellationRejectionStatus1) AddReason() *RejectionReason7FormatChoice {
-	newValue := new (RejectionReason7FormatChoice)
+	newValue := new(RejectionReason7FormatChoice)
 	c.Reason = append(c.Reason, newValue)
 	return newValue
 }
@@ -21,4 +19,3 @@ func (c *CorporateActionDeactivationCancellationRejectionStatus1) AddReason() *R
 func (c *CorporateActionDeactivationCancellationRejectionStatus1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

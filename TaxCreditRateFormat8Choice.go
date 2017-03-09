@@ -14,9 +14,7 @@ type TaxCreditRateFormat8Choice struct {
 
 	// Value of the rate not specified.
 	NotSpecifiedRate *RateValueType7Code `xml:"NotSpcfdRate"`
-
 }
-
 
 func (t *TaxCreditRateFormat8Choice) SetRate(value string) {
 	t.Rate = (*PercentageRate)(&value)
@@ -34,4 +32,3 @@ func (t *TaxCreditRateFormat8Choice) AddRateTypeAndAmountAndRateStatus() *RateTy
 func (t *TaxCreditRateFormat8Choice) SetNotSpecifiedRate(value string) {
 	t.NotSpecifiedRate = (*RateValueType7Code)(&value)
 }
-

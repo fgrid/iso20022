@@ -14,9 +14,7 @@ type ExchangeRate1 struct {
 
 	// Unique and unambiguous reference to the foreign exchange contract agreed between the initiating party/creditor and the debtor agent.
 	ContractIdentification *Max35Text `xml:"CtrctId,omitempty"`
-
 }
-
 
 func (e *ExchangeRate1) SetUnitCurrency(value string) {
 	e.UnitCurrency = (*ActiveOrHistoricCurrencyCode)(&value)
@@ -33,4 +31,3 @@ func (e *ExchangeRate1) SetRateType(value string) {
 func (e *ExchangeRate1) SetContractIdentification(value string) {
 	e.ContractIdentification = (*Max35Text)(&value)
 }
-

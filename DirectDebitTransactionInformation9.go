@@ -54,9 +54,7 @@ type DirectDebitTransactionInformation9 struct {
 
 	// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
 	RemittanceInformation *RemittanceInformation5 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation9) AddPaymentIdentification() *PaymentIdentification1 {
 	d.PaymentIdentification = new(PaymentIdentification1)
@@ -121,7 +119,7 @@ func (d *DirectDebitTransactionInformation9) AddPurpose() *Purpose2Choice {
 }
 
 func (d *DirectDebitTransactionInformation9) AddRegulatoryReporting() *RegulatoryReporting3 {
-	newValue := new (RegulatoryReporting3)
+	newValue := new(RegulatoryReporting3)
 	d.RegulatoryReporting = append(d.RegulatoryReporting, newValue)
 	return newValue
 }
@@ -132,7 +130,7 @@ func (d *DirectDebitTransactionInformation9) AddTax() *TaxInformation3 {
 }
 
 func (d *DirectDebitTransactionInformation9) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	d.RelatedRemittanceInformation = append(d.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -141,4 +139,3 @@ func (d *DirectDebitTransactionInformation9) AddRemittanceInformation() *Remitta
 	d.RemittanceInformation = new(RemittanceInformation5)
 	return d.RemittanceInformation
 }
-

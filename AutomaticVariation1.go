@@ -14,9 +14,7 @@ type AutomaticVariation1 struct {
 
 	// Additional information related to the variation.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *AutomaticVariation1) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -27,7 +25,7 @@ func (a *AutomaticVariation1) SetType(value string) {
 }
 
 func (a *AutomaticVariation1) AddAmountAndTrigger() *AmountAndTrigger1 {
-	newValue := new (AmountAndTrigger1)
+	newValue := new(AmountAndTrigger1)
 	a.AmountAndTrigger = append(a.AmountAndTrigger, newValue)
 	return newValue
 }
@@ -35,4 +33,3 @@ func (a *AutomaticVariation1) AddAmountAndTrigger() *AmountAndTrigger1 {
 func (a *AutomaticVariation1) AddAdditionalInformation(value string) {
 	a.AdditionalInformation = append(a.AdditionalInformation, (*Max2000Text)(&value))
 }
-

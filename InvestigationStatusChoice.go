@@ -18,9 +18,7 @@ type InvestigationStatusChoice struct {
 	// If yes, it means the cancellation of the assignment is confirmed.
 	// If no, it means the cancellation of the assignment is rejected and the investigation process will continue.
 	AssignmentCancellationConfirmation *YesNoIndicator `xml:"AssgnmtCxlConf"`
-
 }
-
 
 func (i *InvestigationStatusChoice) SetConfirmation(value string) {
 	i.Confirmation = (*InvestigationExecutionConfirmation1Code)(&value)
@@ -43,4 +41,3 @@ func (i *InvestigationStatusChoice) AddDuplicateOf() *Case {
 func (i *InvestigationStatusChoice) SetAssignmentCancellationConfirmation(value string) {
 	i.AssignmentCancellationConfirmation = (*YesNoIndicator)(&value)
 }
-

@@ -14,9 +14,7 @@ type PaymentReturnReason2 struct {
 
 	// Further details on the return reason.
 	AdditionalInformation []*Max105Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PaymentReturnReason2) AddOriginalBankTransactionCode() *BankTransactionCodeStructure4 {
 	p.OriginalBankTransactionCode = new(BankTransactionCodeStructure4)
@@ -36,4 +34,3 @@ func (p *PaymentReturnReason2) AddReason() *ReturnReason5Choice {
 func (p *PaymentReturnReason2) AddAdditionalInformation(value string) {
 	p.AdditionalInformation = append(p.AdditionalInformation, (*Max105Text)(&value))
 }
-

@@ -8,9 +8,7 @@ type OptionNumber1Choice struct {
 
 	// Code identifying special corporate action option numbers.
 	Code *OptionNumber1Code `xml:"Cd"`
-
 }
-
 
 func (o *OptionNumber1Choice) SetNumber(value string) {
 	o.Number = (*Exact3NumericText)(&value)
@@ -19,4 +17,3 @@ func (o *OptionNumber1Choice) SetNumber(value string) {
 func (o *OptionNumber1Choice) SetCode(value string) {
 	o.Code = (*OptionNumber1Code)(&value)
 }
-

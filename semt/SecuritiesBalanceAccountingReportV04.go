@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.04 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.04 Document"`
 	Message *SecuritiesBalanceAccountingReportV04 `xml:"SctiesBalAcctgRpt"`
 }
 
@@ -68,9 +68,7 @@ type SecuritiesBalanceAccountingReportV04 struct {
 
 	// Total valuation amounts provided in another currency than the base currency of the account.
 	AlternateReportingCurrencyTotalAmounts *iso20022.TotalValueInPageAndStatement2 `xml:"AltrnRptgCcyTtlAmts,omitempty"`
-
 }
-
 
 func (s *SecuritiesBalanceAccountingReportV04) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -98,19 +96,19 @@ func (s *SecuritiesBalanceAccountingReportV04) AddSafekeepingAccount() *iso20022
 }
 
 func (s *SecuritiesBalanceAccountingReportV04) AddIntermediaryInformation() *iso20022.Intermediary21 {
-	newValue := new (iso20022.Intermediary21)
+	newValue := new(iso20022.Intermediary21)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceAccountingReportV04) AddBalanceForAccount() *iso20022.AggregateBalanceInformation13 {
-	newValue := new (iso20022.AggregateBalanceInformation13)
+	newValue := new(iso20022.AggregateBalanceInformation13)
 	s.BalanceForAccount = append(s.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceAccountingReportV04) AddSubAccountDetails() *iso20022.SubAccountIdentification16 {
-	newValue := new (iso20022.SubAccountIdentification16)
+	newValue := new(iso20022.SubAccountIdentification16)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
@@ -124,4 +122,3 @@ func (s *SecuritiesBalanceAccountingReportV04) AddAlternateReportingCurrencyTota
 	s.AlternateReportingCurrencyTotalAmounts = new(iso20022.TotalValueInPageAndStatement2)
 	return s.AlternateReportingCurrencyTotalAmounts
 }
-

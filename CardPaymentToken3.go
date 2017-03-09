@@ -11,9 +11,7 @@ type CardPaymentToken3 struct {
 
 	// Level of confidence resulting of the identification and authentication of the cardholder performed and the entity that performed it.
 	TokenAssuranceLevel *Number `xml:"TknAssrncLvl,omitempty"`
-
 }
-
 
 func (c *CardPaymentToken3) AddTokenCharacteristic(value string) {
 	c.TokenCharacteristic = append(c.TokenCharacteristic, (*Max35Text)(&value))
@@ -27,4 +25,3 @@ func (c *CardPaymentToken3) AddTokenRequestor() *PaymentTokenIdentifiers1 {
 func (c *CardPaymentToken3) SetTokenAssuranceLevel(value string) {
 	c.TokenAssuranceLevel = (*Number)(&value)
 }
-

@@ -20,16 +20,14 @@ type CorporateActionStandingInstructionGeneralInformation1 struct {
 
 	// Identification of the underlying financial instrument, ie, the financial instrument affected by the corporate action event.
 	UnderlyingSecurity *FinancialInstrumentDescription3 `xml:"UndrlygScty,omitempty"`
-
 }
-
 
 func (c *CorporateActionStandingInstructionGeneralInformation1) SetStandingInstructionType(value string) {
 	c.StandingInstructionType = (*StandingInstructionType1Code)(&value)
 }
 
 func (c *CorporateActionStandingInstructionGeneralInformation1) AddEventType() *CorporateActionEventType2FormatChoice {
-	newValue := new (CorporateActionEventType2FormatChoice)
+	newValue := new(CorporateActionEventType2FormatChoice)
 	c.EventType = append(c.EventType, newValue)
 	return newValue
 }
@@ -44,7 +42,7 @@ func (c *CorporateActionStandingInstructionGeneralInformation1) SetClientStandin
 }
 
 func (c *CorporateActionStandingInstructionGeneralInformation1) AddAccountDetails() *IncludedAccount1 {
-	newValue := new (IncludedAccount1)
+	newValue := new(IncludedAccount1)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
@@ -53,4 +51,3 @@ func (c *CorporateActionStandingInstructionGeneralInformation1) AddUnderlyingSec
 	c.UnderlyingSecurity = new(FinancialInstrumentDescription3)
 	return c.UnderlyingSecurity
 }
-

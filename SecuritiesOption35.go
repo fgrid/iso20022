@@ -38,9 +38,7 @@ type SecuritiesOption35 struct {
 
 	// Identifies the chain of delivering settlement parties.
 	DeliveringSettlementParties *SettlementParties24 `xml:"DlvrgSttlmPties,omitempty"`
-
 }
-
 
 func (s *SecuritiesOption35) AddFinancialInstrumentIdentification() *SecurityIdentification14 {
 	s.FinancialInstrumentIdentification = new(SecurityIdentification14)
@@ -99,4 +97,3 @@ func (s *SecuritiesOption35) AddDeliveringSettlementParties() *SettlementParties
 	s.DeliveringSettlementParties = new(SettlementParties24)
 	return s.DeliveringSettlementParties
 }
-

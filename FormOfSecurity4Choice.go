@@ -8,9 +8,7 @@ type FormOfSecurity4Choice struct {
 
 	// Form of the security expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (f *FormOfSecurity4Choice) SetCode(value string) {
 	f.Code = (*FormOfSecurity1Code)(&value)
@@ -20,4 +18,3 @@ func (f *FormOfSecurity4Choice) AddProprietary() *GenericIdentification38 {
 	f.Proprietary = new(GenericIdentification38)
 	return f.Proprietary
 }
-

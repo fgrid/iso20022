@@ -17,9 +17,7 @@ type AccountInterest3 struct {
 
 	// Provides details on the tax applied to charges.
 	Tax *TaxCharges2 `xml:"Tax,omitempty"`
-
 }
-
 
 func (a *AccountInterest3) AddType() *InterestType1Choice {
 	a.Type = new(InterestType1Choice)
@@ -27,7 +25,7 @@ func (a *AccountInterest3) AddType() *InterestType1Choice {
 }
 
 func (a *AccountInterest3) AddRate() *Rate3 {
-	newValue := new (Rate3)
+	newValue := new(Rate3)
 	a.Rate = append(a.Rate, newValue)
 	return newValue
 }
@@ -45,4 +43,3 @@ func (a *AccountInterest3) AddTax() *TaxCharges2 {
 	a.Tax = new(TaxCharges2)
 	return a.Tax
 }
-

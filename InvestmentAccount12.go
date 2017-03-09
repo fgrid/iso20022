@@ -17,9 +17,7 @@ type InvestmentAccount12 struct {
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
 	AccountServicer *PartyIdentification1Choice `xml:"AcctSvcr,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount12) AddIdentification() *AccountIdentification1 {
 	i.Identification = new(AccountIdentification1)
@@ -35,7 +33,7 @@ func (i *InvestmentAccount12) SetDesignation(value string) {
 }
 
 func (i *InvestmentAccount12) AddIntermediaryInformation() *Intermediary1 {
-	newValue := new (Intermediary1)
+	newValue := new(Intermediary1)
 	i.IntermediaryInformation = append(i.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (i *InvestmentAccount12) AddAccountServicer() *PartyIdentification1Choice {
 	i.AccountServicer = new(PartyIdentification1Choice)
 	return i.AccountServicer
 }
-

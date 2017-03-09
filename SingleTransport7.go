@@ -14,31 +14,28 @@ type SingleTransport7 struct {
 
 	// Information related to the transportation of goods by rail.
 	TransportByRail []*TransportByRail5 `xml:"TrnsprtByRail,omitempty"`
-
 }
 
-
 func (s *SingleTransport7) AddTransportByAir() *TransportByAir5 {
-	newValue := new (TransportByAir5)
+	newValue := new(TransportByAir5)
 	s.TransportByAir = append(s.TransportByAir, newValue)
 	return newValue
 }
 
 func (s *SingleTransport7) AddTransportBySea() *TransportBySea6 {
-	newValue := new (TransportBySea6)
+	newValue := new(TransportBySea6)
 	s.TransportBySea = append(s.TransportBySea, newValue)
 	return newValue
 }
 
 func (s *SingleTransport7) AddTransportByRoad() *TransportByRoad5 {
-	newValue := new (TransportByRoad5)
+	newValue := new(TransportByRoad5)
 	s.TransportByRoad = append(s.TransportByRoad, newValue)
 	return newValue
 }
 
 func (s *SingleTransport7) AddTransportByRail() *TransportByRail5 {
-	newValue := new (TransportByRail5)
+	newValue := new(TransportByRail5)
 	s.TransportByRail = append(s.TransportByRail, newValue)
 	return newValue
 }
-

@@ -20,9 +20,7 @@ type UnitPrice5 struct {
 
 	// Specifies whether the fund calculates a taxable interest per share (TIS).
 	TaxableIncomePerShareCalculated *TaxableIncomePerShareCalculated1 `xml:"TaxblIncmPerShrClctd,omitempty"`
-
 }
-
 
 func (u *UnitPrice5) AddType() *PriceType1 {
 	u.Type = new(PriceType1)
@@ -51,4 +49,3 @@ func (u *UnitPrice5) AddTaxableIncomePerShareCalculated() *TaxableIncomePerShare
 	u.TaxableIncomePerShareCalculated = new(TaxableIncomePerShareCalculated1)
 	return u.TaxableIncomePerShareCalculated
 }
-

@@ -38,9 +38,7 @@ type FundCashForecast2 struct {
 
 	// Net cash movements per financial instrument.
 	NetCashForecastDetails []*NetCashForecast1 `xml:"NetCshFcstDtls,omitempty"`
-
 }
-
 
 func (f *FundCashForecast2) AddTradeDateTime() *DateAndDateTimeChoice {
 	f.TradeDateTime = new(DateAndDateTimeChoice)
@@ -88,14 +86,13 @@ func (f *FundCashForecast2) SetExceptionalNetCashFlowIndicator(value string) {
 }
 
 func (f *FundCashForecast2) AddSortingCriteriaDetails() *CashSortingCriterion2 {
-	newValue := new (CashSortingCriterion2)
+	newValue := new(CashSortingCriterion2)
 	f.SortingCriteriaDetails = append(f.SortingCriteriaDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast2) AddNetCashForecastDetails() *NetCashForecast1 {
-	newValue := new (NetCashForecast1)
+	newValue := new(NetCashForecast1)
 	f.NetCashForecastDetails = append(f.NetCashForecastDetails, newValue)
 	return newValue
 }
-

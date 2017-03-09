@@ -8,9 +8,7 @@ type TaxExemptionReason1Choice struct {
 
 	// Tax exemption reason expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (t *TaxExemptionReason1Choice) SetCode(value string) {
 	t.Code = (*TaxExemptReason1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TaxExemptionReason1Choice) AddProprietary() *GenericIdentification47 {
 	t.Proprietary = new(GenericIdentification47)
 	return t.Proprietary
 }
-

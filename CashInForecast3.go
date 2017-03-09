@@ -17,9 +17,7 @@ type CashInForecast3 struct {
 
 	// Breakdown of cash in amounts, eg, by transaction and order type.
 	CashInBreakdownDetails []*FundCashInBreakdown2 `xml:"CshInBrkdwnDtls,omitempty"`
-
 }
-
 
 func (c *CashInForecast3) SetCashSettlementDate(value string) {
 	c.CashSettlementDate = (*ISODate)(&value)
@@ -39,8 +37,7 @@ func (c *CashInForecast3) SetExceptionalCashFlowIndicator(value string) {
 }
 
 func (c *CashInForecast3) AddCashInBreakdownDetails() *FundCashInBreakdown2 {
-	newValue := new (FundCashInBreakdown2)
+	newValue := new(FundCashInBreakdown2)
 	c.CashInBreakdownDetails = append(c.CashInBreakdownDetails, newValue)
 	return newValue
 }
-

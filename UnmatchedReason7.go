@@ -8,9 +8,7 @@ type UnmatchedReason7 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (u *UnmatchedReason7) AddCode() *UnmatchedReason10Choice {
 	u.Code = new(UnmatchedReason10Choice)
@@ -20,4 +18,3 @@ func (u *UnmatchedReason7) AddCode() *UnmatchedReason10Choice {
 func (u *UnmatchedReason7) SetAdditionalReasonInformation(value string) {
 	u.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

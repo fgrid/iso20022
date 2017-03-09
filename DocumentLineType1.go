@@ -8,9 +8,7 @@ type DocumentLineType1 struct {
 
 	// Identification of the issuer of the reference document line identificationtype.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (d *DocumentLineType1) AddCodeOrProprietary() *DocumentLineType1Choice {
 	d.CodeOrProprietary = new(DocumentLineType1Choice)
@@ -20,4 +18,3 @@ func (d *DocumentLineType1) AddCodeOrProprietary() *DocumentLineType1Choice {
 func (d *DocumentLineType1) SetIssuer(value string) {
 	d.Issuer = (*Max35Text)(&value)
 }
-

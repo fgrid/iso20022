@@ -14,9 +14,7 @@ type PaymentInstructionExtract struct {
 
 	// Value date of the payment.
 	ValueDate *ISODateTime `xml:"ValDt,omitempty"`
-
 }
-
 
 func (p *PaymentInstructionExtract) SetAssignerInstructionIdentification(value string) {
 	p.AssignerInstructionIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (p *PaymentInstructionExtract) SetCurrencyAmount(value, currency string) {
 func (p *PaymentInstructionExtract) SetValueDate(value string) {
 	p.ValueDate = (*ISODateTime)(&value)
 }
-

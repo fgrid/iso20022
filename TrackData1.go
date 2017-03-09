@@ -8,9 +8,7 @@ type TrackData1 struct {
 
 	// Card track content or equivalent.
 	TrackValue *Max140Text `xml:"TrckVal"`
-
 }
-
 
 func (t *TrackData1) SetTrackNumber(value string) {
 	t.TrackNumber = (*Exact1NumericText)(&value)
@@ -19,4 +17,3 @@ func (t *TrackData1) SetTrackNumber(value string) {
 func (t *TrackData1) SetTrackValue(value string) {
 	t.TrackValue = (*Max140Text)(&value)
 }
-

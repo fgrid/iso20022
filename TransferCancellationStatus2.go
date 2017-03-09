@@ -8,9 +8,7 @@ type TransferCancellationStatus2 struct {
 
 	// Reason for the status.
 	Reason *Max350Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (t *TransferCancellationStatus2) SetStatus(value string) {
 	t.Status = (*CancellationStatus2Code)(&value)
@@ -19,4 +17,3 @@ func (t *TransferCancellationStatus2) SetStatus(value string) {
 func (t *TransferCancellationStatus2) SetReason(value string) {
 	t.Reason = (*Max350Text)(&value)
 }
-

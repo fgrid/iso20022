@@ -7,11 +7,11 @@ type AccountNotification7 struct {
 	Identification *Max35Text `xml:"Id"`
 
 	// Provides details on the page number of the notification.
-	// 
+	//
 	// Usage: The pagination of the notification is only allowed when agreed between the parties.
 	NotificationPagination *Pagination `xml:"NtfctnPgntn,omitempty"`
 
-	// Sequential number of the notification, as assigned by the account servicer. 
+	// Sequential number of the notification, as assigned by the account servicer.
 	// Usage: The sequential number is increased incrementally for each notification sent electronically.
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
@@ -48,9 +48,7 @@ type AccountNotification7 struct {
 
 	// Further details of the account notification.
 	AdditionalNotificationInformation *Max500Text `xml:"AddtlNtfctnInf,omitempty"`
-
 }
-
 
 func (a *AccountNotification7) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -98,7 +96,7 @@ func (a *AccountNotification7) AddRelatedAccount() *CashAccount24 {
 }
 
 func (a *AccountNotification7) AddInterest() *AccountInterest2 {
-	newValue := new (AccountInterest2)
+	newValue := new(AccountInterest2)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
@@ -109,7 +107,7 @@ func (a *AccountNotification7) AddTransactionsSummary() *TotalTransactions4 {
 }
 
 func (a *AccountNotification7) AddEntry() *ReportEntry4 {
-	newValue := new (ReportEntry4)
+	newValue := new(ReportEntry4)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -117,4 +115,3 @@ func (a *AccountNotification7) AddEntry() *ReportEntry4 {
 func (a *AccountNotification7) SetAdditionalNotificationInformation(value string) {
 	a.AdditionalNotificationInformation = (*Max500Text)(&value)
 }
-

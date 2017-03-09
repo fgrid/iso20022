@@ -8,9 +8,7 @@ type AdditionalBusinessProcessFormat7Choice struct {
 
 	// Proprietary identification of the additional business process "tax refund" linked to a corporate action event.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (a *AdditionalBusinessProcessFormat7Choice) SetCode(value string) {
 	a.Code = (*AdditionalBusinessProcess4Code)(&value)
@@ -20,4 +18,3 @@ func (a *AdditionalBusinessProcessFormat7Choice) AddProprietary() *GenericIdenti
 	a.Proprietary = new(GenericIdentification20)
 	return a.Proprietary
 }
-

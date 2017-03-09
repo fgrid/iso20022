@@ -17,9 +17,7 @@ type AuthorisationResult1 struct {
 
 	// Instructs the point of interaction (POI) how to contact the host to initiate the maintenance of the terminal.
 	TMSTrigger *TMSTrigger1 `xml:"TMSTrggr,omitempty"`
-
 }
-
 
 func (a *AuthorisationResult1) AddAuthorisationEntity() *GenericIdentification33 {
 	a.AuthorisationEntity = new(GenericIdentification33)
@@ -43,4 +41,3 @@ func (a *AuthorisationResult1) AddTMSTrigger() *TMSTrigger1 {
 	a.TMSTrigger = new(TMSTrigger1)
 	return a.TMSTrigger
 }
-

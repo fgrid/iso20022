@@ -20,9 +20,7 @@ type ThirdPartyRights1 struct {
 
 	// Description of the third party right.
 	Description *Max350Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (t *ThirdPartyRights1) SetType(value string) {
 	t.Type = (*Max35Text)(&value)
@@ -48,4 +46,3 @@ func (t *ThirdPartyRights1) SetAmount(value, currency string) {
 func (t *ThirdPartyRights1) SetDescription(value string) {
 	t.Description = (*Max350Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type OriginalAndCurrentQuantities7 struct {
 
 	// Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.
 	AmortisedValue *RestrictedFINImpliedCurrencyAndAmount `xml:"AmtsdVal"`
-
 }
-
 
 func (o *OriginalAndCurrentQuantities7) SetShortLongPosition(value string) {
 	o.ShortLongPosition = (*ShortLong1Code)(&value)
@@ -26,4 +24,3 @@ func (o *OriginalAndCurrentQuantities7) SetFaceAmount(value, currency string) {
 func (o *OriginalAndCurrentQuantities7) SetAmortisedValue(value, currency string) {
 	o.AmortisedValue = NewRestrictedFINImpliedCurrencyAndAmount(value, currency)
 }
-

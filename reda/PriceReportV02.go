@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.001.001.02 Document"`
+	XMLName xml.Name        `xml:"urn:iso:std:iso:20022:tech:xsd:reda.001.001.02 Document"`
 	Message *PriceReportV02 `xml:"reda.001.001.02"`
 }
 
@@ -41,9 +41,7 @@ type PriceReportV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PriceReportV02) AddPoolReference() *iso20022.AdditionalReference3 {
 	p.PoolReference = new(iso20022.AdditionalReference3)
@@ -51,7 +49,7 @@ func (p *PriceReportV02) AddPoolReference() *iso20022.AdditionalReference3 {
 }
 
 func (p *PriceReportV02) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	p.PreviousReference = append(p.PreviousReference, newValue)
 	return newValue
 }
@@ -62,14 +60,13 @@ func (p *PriceReportV02) AddRelatedReference() *iso20022.AdditionalReference3 {
 }
 
 func (p *PriceReportV02) AddPriceValuationDetails() *iso20022.PriceValuation2 {
-	newValue := new (iso20022.PriceValuation2)
+	newValue := new(iso20022.PriceValuation2)
 	p.PriceValuationDetails = append(p.PriceValuationDetails, newValue)
 	return newValue
 }
 
 func (p *PriceReportV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

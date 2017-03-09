@@ -11,9 +11,7 @@ type Intermediary4 struct {
 
 	// Function performed by the intermediary.
 	Role *Max35Text `xml:"Role,omitempty"`
-
 }
-
 
 func (i *Intermediary4) AddIdentification() *PartyIdentification2Choice {
 	i.Identification = new(PartyIdentification2Choice)
@@ -28,4 +26,3 @@ func (i *Intermediary4) AddAccount() *Account2 {
 func (i *Intermediary4) SetRole(value string) {
 	i.Role = (*Max35Text)(&value)
 }
-

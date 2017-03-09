@@ -7,7 +7,7 @@ type AccountStatement4 struct {
 	Identification *Max35Text `xml:"Id"`
 
 	// Provides details on the page number of the statement.
-	// 
+	//
 	// Usage: The pagination of the statement is only allowed when agreed between the parties.
 	StatementPagination *Pagination `xml:"StmtPgntn,omitempty"`
 
@@ -16,7 +16,7 @@ type AccountStatement4 struct {
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
 	// Legal sequential number of the statement, as assigned by the account servicer. It is increased incrementally for each statement sent.
-	// 
+	//
 	// Usage: Where a paper statement is a legal requirement, it may have a number different from the electronic sequential number. Paper statements could for instance only be sent if movement on the account has taken place, whereas electronic statements could be sent at the end of each reporting period, regardless of whether movements have taken place or not.
 	LegalSequenceNumber *Number `xml:"LglSeqNb,omitempty"`
 
@@ -53,9 +53,7 @@ type AccountStatement4 struct {
 
 	// Further details of the account statement.
 	AdditionalStatementInformation *Max500Text `xml:"AddtlStmtInf,omitempty"`
-
 }
-
 
 func (a *AccountStatement4) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -103,13 +101,13 @@ func (a *AccountStatement4) AddRelatedAccount() *CashAccount24 {
 }
 
 func (a *AccountStatement4) AddInterest() *AccountInterest2 {
-	newValue := new (AccountInterest2)
+	newValue := new(AccountInterest2)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountStatement4) AddBalance() *CashBalance3 {
-	newValue := new (CashBalance3)
+	newValue := new(CashBalance3)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -120,7 +118,7 @@ func (a *AccountStatement4) AddTransactionsSummary() *TotalTransactions4 {
 }
 
 func (a *AccountStatement4) AddEntry() *ReportEntry4 {
-	newValue := new (ReportEntry4)
+	newValue := new(ReportEntry4)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -128,4 +126,3 @@ func (a *AccountStatement4) AddEntry() *ReportEntry4 {
 func (a *AccountStatement4) SetAdditionalStatementInformation(value string) {
 	a.AdditionalStatementInformation = (*Max500Text)(&value)
 }
-

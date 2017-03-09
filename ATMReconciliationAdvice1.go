@@ -14,9 +14,7 @@ type ATMReconciliationAdvice1 struct {
 
 	// Information about the reconciliation request.
 	Transaction *ATMTransaction11 `xml:"Tx"`
-
 }
-
 
 func (a *ATMReconciliationAdvice1) AddEnvironment() *ATMEnvironment10 {
 	a.Environment = new(ATMEnvironment10)
@@ -24,7 +22,7 @@ func (a *ATMReconciliationAdvice1) AddEnvironment() *ATMEnvironment10 {
 }
 
 func (a *ATMReconciliationAdvice1) AddCommandResult() *ATMCommand5 {
-	newValue := new (ATMCommand5)
+	newValue := new(ATMCommand5)
 	a.CommandResult = append(a.CommandResult, newValue)
 	return newValue
 }
@@ -38,4 +36,3 @@ func (a *ATMReconciliationAdvice1) AddTransaction() *ATMTransaction11 {
 	a.Transaction = new(ATMTransaction11)
 	return a.Transaction
 }
-

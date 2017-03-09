@@ -7,7 +7,7 @@ import (
 )
 
 type Document04500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.045.001.03 Document"`
+	XMLName xml.Name                                                `xml:"urn:iso:std:iso:20022:tech:xsd:camt.045.001.03 Document"`
 	Message *FundDetailedConfirmedCashForecastReportCancellationV03 `xml:"FndDtldConfdCshFcstRptCxl"`
 }
 
@@ -40,9 +40,7 @@ type FundDetailedConfirmedCashForecastReportCancellationV03 struct {
 
 	// The FundDetailedConfirmedCashForecastReport to be cancelled.
 	CashForecastReportToBeCancelled *iso20022.FundDetailedConfirmedCashForecastReport3 `xml:"CshFcstRptToBeCanc,omitempty"`
-
 }
-
 
 func (f *FundDetailedConfirmedCashForecastReportCancellationV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	f.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -60,7 +58,7 @@ func (f *FundDetailedConfirmedCashForecastReportCancellationV03) AddPreviousRefe
 }
 
 func (f *FundDetailedConfirmedCashForecastReportCancellationV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
@@ -74,4 +72,3 @@ func (f *FundDetailedConfirmedCashForecastReportCancellationV03) AddCashForecast
 	f.CashForecastReportToBeCancelled = new(iso20022.FundDetailedConfirmedCashForecastReport3)
 	return f.CashForecastReportToBeCancelled
 }
-

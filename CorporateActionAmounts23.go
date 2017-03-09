@@ -134,9 +134,7 @@ type CorporateActionAmounts23 struct {
 
 	// Portion of the fund distribution amount which represents the average accrued income included in the purchase price for units bought during the account period.
 	EqualisationAmount *ActiveCurrencyAndAmount `xml:"EqulstnAmt,omitempty"`
-
 }
-
 
 func (c *CorporateActionAmounts23) SetPostingAmount(value, currency string) {
 	c.PostingAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -313,4 +311,3 @@ func (c *CorporateActionAmounts23) SetAccruedInterestAmount(value, currency stri
 func (c *CorporateActionAmounts23) SetEqualisationAmount(value, currency string) {
 	c.EqualisationAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

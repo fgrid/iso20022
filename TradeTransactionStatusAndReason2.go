@@ -14,9 +14,7 @@ type TradeTransactionStatusAndReason2 struct {
 
 	// Indicates that the cancellation is rejected and provides a reason why.
 	Rejected []*RejectedCancellationStatusReason1Choice `xml:"Rjctd"`
-
 }
-
 
 func (t *TradeTransactionStatusAndReason2) SetRelatedReference(value string) {
 	t.RelatedReference = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (t *TradeTransactionStatusAndReason2) SetStatus(value string) {
 }
 
 func (t *TradeTransactionStatusAndReason2) AddRejected() *RejectedCancellationStatusReason1Choice {
-	newValue := new (RejectedCancellationStatusReason1Choice)
+	newValue := new(RejectedCancellationStatusReason1Choice)
 	t.Rejected = append(t.Rejected, newValue)
 	return newValue
 }
-

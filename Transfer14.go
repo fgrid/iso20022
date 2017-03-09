@@ -35,9 +35,7 @@ type Transfer14 struct {
 
 	// Additional specific settlement information for non-regulated traded funds.
 	NonStandardSettlementInformation *Max350Text `xml:"NonStdSttlmInf,omitempty"`
-
 }
-
 
 func (t *Transfer14) AddEffectiveTransferDate() *DateAndDateTimeChoice {
 	t.EffectiveTransferDate = new(DateAndDateTimeChoice)
@@ -64,7 +62,7 @@ func (t *Transfer14) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 }
 
 func (t *Transfer14) AddUnitsDetails() *Unit3 {
-	newValue := new (Unit3)
+	newValue := new(Unit3)
 	t.UnitsDetails = append(t.UnitsDetails, newValue)
 	return newValue
 }
@@ -88,4 +86,3 @@ func (t *Transfer14) SetOwnAccountTransferIndicator(value string) {
 func (t *Transfer14) SetNonStandardSettlementInformation(value string) {
 	t.NonStandardSettlementInformation = (*Max350Text)(&value)
 }
-

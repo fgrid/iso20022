@@ -11,9 +11,7 @@ type RepoCallRequestStatus5Choice struct {
 
 	// Proprietary status.
 	Proprietary *ProprietaryStatusAndReason1 `xml:"Prtry"`
-
 }
-
 
 func (r *RepoCallRequestStatus5Choice) AddAcknowledgedAccepted() *AcknowledgedAcceptedStatus10Choice {
 	r.AcknowledgedAccepted = new(AcknowledgedAcceptedStatus10Choice)
@@ -29,4 +27,3 @@ func (r *RepoCallRequestStatus5Choice) AddProprietary() *ProprietaryStatusAndRea
 	r.Proprietary = new(ProprietaryStatusAndReason1)
 	return r.Proprietary
 }
-

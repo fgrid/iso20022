@@ -25,7 +25,7 @@ type SecuritiesTradeDetails63 struct {
 	LateDeliveryDate *DateAndDateTimeChoice `xml:"LateDlvryDt,omitempty"`
 
 	// Specifies the price of the traded financial instrument.
-	// This is the deal price of the individual trade transaction. 
+	// This is the deal price of the individual trade transaction.
 	// If there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).
 	DealPrice *Price3 `xml:"DealPric,omitempty"`
 
@@ -64,9 +64,7 @@ type SecuritiesTradeDetails63 struct {
 
 	// Provides additional settlement processing information which can not be included within the structured fields of the message.
 	SettlementInstructionProcessingAdditionalDetails *RestrictedFINXMax350Text `xml:"SttlmInstrPrcgAddtlDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails63) AddTradeIdentification(value string) {
 	s.TradeIdentification = append(s.TradeIdentification, (*RestrictedFINXMax16Text)(&value))
@@ -116,13 +114,13 @@ func (s *SecuritiesTradeDetails63) AddOpeningClosing() *OpeningClosing4Choice {
 }
 
 func (s *SecuritiesTradeDetails63) AddReporting() *Reporting9Choice {
-	newValue := new (Reporting9Choice)
+	newValue := new(Reporting9Choice)
 	s.Reporting = append(s.Reporting, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTradeDetails63) AddTradeTransactionCondition() *TradeTransactionCondition6Choice {
-	newValue := new (TradeTransactionCondition6Choice)
+	newValue := new(TradeTransactionCondition6Choice)
 	s.TradeTransactionCondition = append(s.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -164,4 +162,3 @@ func (s *SecuritiesTradeDetails63) SetFXAdditionalDetails(value string) {
 func (s *SecuritiesTradeDetails63) SetSettlementInstructionProcessingAdditionalDetails(value string) {
 	s.SettlementInstructionProcessingAdditionalDetails = (*RestrictedFINXMax350Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document05100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.051.001.01 Document"`
+	XMLName xml.Name                                               `xml:"urn:iso:std:iso:20022:tech:xsd:setr.051.001.01 Document"`
 	Message *RedemptionOrderConfirmationCancellationInstructionV01 `xml:"RedOrdrConfCxlInstrV01"`
 }
 
@@ -36,7 +36,7 @@ func (d *Document05100101) AddMessage() *RedemptionOrderConfirmationCancellation
 // The rejection or acceptance of a RedemptionOrderConfirmationCancellationInstruction is made using an OrderConfirmationStatusReport message.
 type RedemptionOrderConfirmationCancellationInstructionV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -56,9 +56,7 @@ type RedemptionOrderConfirmationCancellationInstructionV01 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionOrderConfirmationCancellationInstructionV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -71,7 +69,7 @@ func (r *RedemptionOrderConfirmationCancellationInstructionV01) AddPoolReference
 }
 
 func (r *RedemptionOrderConfirmationCancellationInstructionV01) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	r.PreviousReference = append(r.PreviousReference, newValue)
 	return newValue
 }
@@ -95,4 +93,3 @@ func (r *RedemptionOrderConfirmationCancellationInstructionV01) AddCopyDetails()
 	r.CopyDetails = new(iso20022.CopyInformation2)
 	return r.CopyDetails
 }
-

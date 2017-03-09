@@ -8,9 +8,7 @@ type RoundingParameters1 struct {
 
 	// Rounding direction applied to fractional numbers, eg, round up.
 	RoundingDirection *RoundingDirection1Code `xml:"RndgDrctn"`
-
 }
-
 
 func (r *RoundingParameters1) SetRoundingModulus(value string) {
 	r.RoundingModulus = (*DecimalNumber)(&value)
@@ -19,4 +17,3 @@ func (r *RoundingParameters1) SetRoundingModulus(value string) {
 func (r *RoundingParameters1) SetRoundingDirection(value string) {
 	r.RoundingDirection = (*RoundingDirection1Code)(&value)
 }
-

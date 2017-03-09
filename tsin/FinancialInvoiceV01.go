@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.004.001.01 Document"`
+	XMLName xml.Name             `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.004.001.01 Document"`
 	Message *FinancialInvoiceV01 `xml:"FinInvc"`
 }
 
@@ -34,17 +34,15 @@ type FinancialInvoiceV01 struct {
 	TradeDelivery *iso20022.TradeDelivery1 `xml:"TradDlvry"`
 
 	// Settlement information that enables the financial reconciliation and payment of this invoice.
-	// 
+	//
 	TradeSettlement *iso20022.TradeSettlement1 `xml:"TradSttlm"`
 
 	// Unit of information in this invoice showning the related  provision of products and/or services and monetary summations reported as a discrete line item.
-	// 
-	// 
-	// 
+	//
+	//
+	//
 	LineItem []*iso20022.LineItem10 `xml:"LineItm,omitempty"`
-
 }
-
 
 func (f *FinancialInvoiceV01) AddInvoiceHeader() *iso20022.InvoiceHeader1 {
 	f.InvoiceHeader = new(iso20022.InvoiceHeader1)
@@ -67,8 +65,7 @@ func (f *FinancialInvoiceV01) AddTradeSettlement() *iso20022.TradeSettlement1 {
 }
 
 func (f *FinancialInvoiceV01) AddLineItem() *iso20022.LineItem10 {
-	newValue := new (iso20022.LineItem10)
+	newValue := new(iso20022.LineItem10)
 	f.LineItem = append(f.LineItem, newValue)
 	return newValue
 }
-

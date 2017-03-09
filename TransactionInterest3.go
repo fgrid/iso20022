@@ -8,17 +8,14 @@ type TransactionInterest3 struct {
 
 	// Individual interest record.
 	Record []*InterestRecord1 `xml:"Rcrd,omitempty"`
-
 }
-
 
 func (t *TransactionInterest3) SetTotalInterestAndTaxAmount(value, currency string) {
 	t.TotalInterestAndTaxAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
 
 func (t *TransactionInterest3) AddRecord() *InterestRecord1 {
-	newValue := new (InterestRecord1)
+	newValue := new(InterestRecord1)
 	t.Record = append(t.Record, newValue)
 	return newValue
 }
-

@@ -81,7 +81,7 @@ type InvestmentAccount50 struct {
 	// Date the investor or account owner signs the open account form.
 	AccountSignatureDateTime *DateAndDateTimeChoice `xml:"AcctSgntrDtTm,omitempty"`
 
-	// Specifies the means by which the investor or account owner submits the open account form. 
+	// Specifies the means by which the investor or account owner submits the open account form.
 	TransactionChannelType *TransactionChannelType1Choice `xml:"TxChanlTp,omitempty"`
 
 	// Specifies the category of the account.
@@ -122,9 +122,7 @@ type InvestmentAccount50 struct {
 
 	// Fiscal year, when not the same as the calendar year.
 	FiscalYear *FiscalYear1Choice `xml:"FsclYr,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount50) SetIdentification(value string) {
 	i.Identification = (*Max35Text)(&value)
@@ -181,7 +179,7 @@ func (i *InvestmentAccount50) SetIncomePreference(value string) {
 }
 
 func (i *InvestmentAccount50) AddReinvestmentDetails() *Reinvestment2 {
-	newValue := new (Reinvestment2)
+	newValue := new(Reinvestment2)
 	i.ReinvestmentDetails = append(i.ReinvestmentDetails, newValue)
 	return newValue
 }
@@ -191,7 +189,7 @@ func (i *InvestmentAccount50) SetTaxWithholdingMethod(value string) {
 }
 
 func (i *InvestmentAccount50) AddTaxReporting() *TaxReporting1 {
-	newValue := new (TaxReporting1)
+	newValue := new(TaxReporting1)
 	i.TaxReporting = append(i.TaxReporting, newValue)
 	return newValue
 }
@@ -214,7 +212,7 @@ func (i *InvestmentAccount50) SetFundFamilyName(value string) {
 }
 
 func (i *InvestmentAccount50) AddFinancialInstrumentDetails() *FinancialInstrument51 {
-	newValue := new (FinancialInstrument51)
+	newValue := new(FinancialInstrument51)
 	i.FinancialInstrumentDetails = append(i.FinancialInstrumentDetails, newValue)
 	return newValue
 }
@@ -230,7 +228,7 @@ func (i *InvestmentAccount50) AddAccountServicer() *PartyIdentification70Choice 
 }
 
 func (i *InvestmentAccount50) AddBlockedStatus() *Blocked2 {
-	newValue := new (Blocked2)
+	newValue := new(Blocked2)
 	i.BlockedStatus = append(i.BlockedStatus, newValue)
 	return newValue
 }
@@ -306,7 +304,7 @@ func (i *InvestmentAccount50) AddLiability() *Liability1Choice {
 }
 
 func (i *InvestmentAccount50) AddInvestorProfile() *InvestorProfile1 {
-	newValue := new (InvestorProfile1)
+	newValue := new(InvestorProfile1)
 	i.InvestorProfile = append(i.InvestorProfile, newValue)
 	return newValue
 }
@@ -315,4 +313,3 @@ func (i *InvestmentAccount50) AddFiscalYear() *FiscalYear1Choice {
 	i.FiscalYear = new(FiscalYear1Choice)
 	return i.FiscalYear
 }
-

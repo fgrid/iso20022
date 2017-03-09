@@ -6,7 +6,7 @@ type NotificationItem3 struct {
 	// Unique identification, as assigned by the account owner, to unambiguously identify the expected credit entry.
 	Identification *Max35Text `xml:"Id"`
 
-	// Unique identification, as assigned by the debtor, to unambiguously identify the underlying transaction to the creditor. 
+	// Unique identification, as assigned by the debtor, to unambiguously identify the underlying transaction to the creditor.
 	// Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.
 	EndToEndIdentification *Max35Text `xml:"EndToEndId,omitempty"`
 
@@ -47,9 +47,7 @@ type NotificationItem3 struct {
 
 	// Structured information that enables the reconciliation of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.
 	RemittanceInformation *RemittanceInformation6 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (n *NotificationItem3) SetIdentification(value string) {
 	n.Identification = (*Max35Text)(&value)
@@ -116,4 +114,3 @@ func (n *NotificationItem3) AddRemittanceInformation() *RemittanceInformation6 {
 	n.RemittanceInformation = new(RemittanceInformation6)
 	return n.RemittanceInformation
 }
-

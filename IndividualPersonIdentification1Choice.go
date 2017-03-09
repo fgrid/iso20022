@@ -8,9 +8,7 @@ type IndividualPersonIdentification1Choice struct {
 
 	// Name of the person that owns the account.
 	PersonName *IndividualPerson30 `xml:"PrsnNm"`
-
 }
-
 
 func (i *IndividualPersonIdentification1Choice) AddIdentificationNumber() *GenericIdentification81 {
 	i.IdentificationNumber = new(GenericIdentification81)
@@ -21,4 +19,3 @@ func (i *IndividualPersonIdentification1Choice) AddPersonName() *IndividualPerso
 	i.PersonName = new(IndividualPerson30)
 	return i.PersonName
 }
-

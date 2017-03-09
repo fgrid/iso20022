@@ -8,9 +8,7 @@ type PercentagePrice1 struct {
 
 	// Specifies the value of price.
 	PriceValue *PercentageRate `xml:"PricVal"`
-
 }
-
 
 func (p *PercentagePrice1) SetPercentagePriceType(value string) {
 	p.PercentagePriceType = (*PriceRateType3Code)(&value)
@@ -19,4 +17,3 @@ func (p *PercentagePrice1) SetPercentagePriceType(value string) {
 func (p *PercentagePrice1) SetPriceValue(value string) {
 	p.PriceValue = (*PercentageRate)(&value)
 }
-

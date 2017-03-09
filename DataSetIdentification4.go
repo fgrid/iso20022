@@ -14,9 +14,7 @@ type DataSetIdentification4 struct {
 
 	// Date and time of creation of the data set.
 	CreationDateTime *ISODateTime `xml:"CreDtTm,omitempty"`
-
 }
-
 
 func (d *DataSetIdentification4) SetName(value string) {
 	d.Name = (*Max256Text)(&value)
@@ -33,4 +31,3 @@ func (d *DataSetIdentification4) SetVersion(value string) {
 func (d *DataSetIdentification4) SetCreationDateTime(value string) {
 	d.CreationDateTime = (*ISODateTime)(&value)
 }
-

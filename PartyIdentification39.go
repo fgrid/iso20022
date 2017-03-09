@@ -8,9 +8,7 @@ type PartyIdentification39 struct {
 
 	// Ancillary identification information about the party.
 	AdditionalIdentificationInformation *PartyAdditionalIdentification2Choice `xml:"AddtlIdInf,omitempty"`
-
 }
-
 
 func (p *PartyIdentification39) AddIdentification() *PartyIdentification9Choice {
 	p.Identification = new(PartyIdentification9Choice)
@@ -21,4 +19,3 @@ func (p *PartyIdentification39) AddAdditionalIdentificationInformation() *PartyA
 	p.AdditionalIdentificationInformation = new(PartyAdditionalIdentification2Choice)
 	return p.AdditionalIdentificationInformation
 }
-

@@ -11,9 +11,7 @@ type GenericIdentification10 struct {
 
 	// Specifies the nature of the identification.
 	ExtendedIdentificationType *Extended350Code `xml:"XtndedIdTp"`
-
 }
-
 
 func (g *GenericIdentification10) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (g *GenericIdentification10) SetIdentificationType(value string) {
 func (g *GenericIdentification10) SetExtendedIdentificationType(value string) {
 	g.ExtendedIdentificationType = (*Extended350Code)(&value)
 }
-

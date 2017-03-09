@@ -8,9 +8,7 @@ type AutomaticBorrowing7Choice struct {
 
 	// Condition for automatic borrowing expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (a *AutomaticBorrowing7Choice) SetCode(value string) {
 	a.Code = (*AutoBorrowing2Code)(&value)
@@ -20,4 +18,3 @@ func (a *AutomaticBorrowing7Choice) AddProprietary() *GenericIdentification30 {
 	a.Proprietary = new(GenericIdentification30)
 	return a.Proprietary
 }
-

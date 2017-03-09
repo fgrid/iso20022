@@ -8,9 +8,7 @@ type CollateralProposal5 struct {
 
 	// Provides details about the proposal for the segregated independent amount.
 	SegregatedIndependentAmount *CollateralMovement7 `xml:"SgrtdIndpdntAmt,omitempty"`
-
 }
-
 
 func (c *CollateralProposal5) AddVariationMargin() *CollateralMovement7 {
 	c.VariationMargin = new(CollateralMovement7)
@@ -21,4 +19,3 @@ func (c *CollateralProposal5) AddSegregatedIndependentAmount() *CollateralMoveme
 	c.SegregatedIndependentAmount = new(CollateralMovement7)
 	return c.SegregatedIndependentAmount
 }
-

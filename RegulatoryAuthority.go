@@ -8,9 +8,7 @@ type RegulatoryAuthority struct {
 
 	// Country of the entity requiring the regulatory reporting information.
 	AuthorityCountry *CountryCode `xml:"AuthrtyCtry,omitempty"`
-
 }
-
 
 func (r *RegulatoryAuthority) SetAuthorityName(value string) {
 	r.AuthorityName = (*Max70Text)(&value)
@@ -19,4 +17,3 @@ func (r *RegulatoryAuthority) SetAuthorityName(value string) {
 func (r *RegulatoryAuthority) SetAuthorityCountry(value string) {
 	r.AuthorityCountry = (*CountryCode)(&value)
 }
-

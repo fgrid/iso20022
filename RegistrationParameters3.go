@@ -14,9 +14,7 @@ type RegistrationParameters3 struct {
 
 	// Unique and unambiguous identifier of a certificate assigned by the issuer.
 	CertificateNumber []*SecuritiesCertificate3 `xml:"CertNb,omitempty"`
-
 }
-
 
 func (r *RegistrationParameters3) SetCertificationIdentification(value string) {
 	r.CertificationIdentification = (*Max35Text)(&value)
@@ -32,8 +30,7 @@ func (r *RegistrationParameters3) SetRegistrarAccount(value string) {
 }
 
 func (r *RegistrationParameters3) AddCertificateNumber() *SecuritiesCertificate3 {
-	newValue := new (SecuritiesCertificate3)
+	newValue := new(SecuritiesCertificate3)
 	r.CertificateNumber = append(r.CertificateNumber, newValue)
 	return newValue
 }
-

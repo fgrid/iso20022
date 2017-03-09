@@ -14,9 +14,7 @@ type SubAccountIdentification3 struct {
 
 	// Net position of a segregated holding, in a single security, within the overall position held in a securities account.
 	BalanceForSubAccount []*AggregateBalanceInformation3 `xml:"BalForSubAcct,omitempty"`
-
 }
-
 
 func (s *SubAccountIdentification3) AddIdentification() *AccountIdentificationFormatChoice {
 	s.Identification = new(AccountIdentificationFormatChoice)
@@ -32,8 +30,7 @@ func (s *SubAccountIdentification3) SetActivityIndicator(value string) {
 }
 
 func (s *SubAccountIdentification3) AddBalanceForSubAccount() *AggregateBalanceInformation3 {
-	newValue := new (AggregateBalanceInformation3)
+	newValue := new(AggregateBalanceInformation3)
 	s.BalanceForSubAccount = append(s.BalanceForSubAccount, newValue)
 	return newValue
 }
-

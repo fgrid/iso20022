@@ -20,9 +20,7 @@ type TransactionInterest2 struct {
 
 	// Specifies the reason for the interest.
 	Reason *Max35Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (t *TransactionInterest2) SetAmount(value, currency string) {
 	t.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -38,7 +36,7 @@ func (t *TransactionInterest2) AddType() *InterestType1Choice {
 }
 
 func (t *TransactionInterest2) AddRate() *Rate3 {
-	newValue := new (Rate3)
+	newValue := new(Rate3)
 	t.Rate = append(t.Rate, newValue)
 	return newValue
 }
@@ -51,4 +49,3 @@ func (t *TransactionInterest2) AddFromToDate() *DateTimePeriodDetails {
 func (t *TransactionInterest2) SetReason(value string) {
 	t.Reason = (*Max35Text)(&value)
 }
-

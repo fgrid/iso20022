@@ -8,9 +8,7 @@ type AmountPriceType1FormatChoice struct {
 
 	// Proprietary code to express the amount price type.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (a *AmountPriceType1FormatChoice) SetCode(value string) {
 	a.Code = (*AmountPriceType1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AmountPriceType1FormatChoice) AddProprietary() *GenericIdentification13
 	a.Proprietary = new(GenericIdentification13)
 	return a.Proprietary
 }
-

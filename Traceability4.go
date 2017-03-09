@@ -14,9 +14,7 @@ type Traceability4 struct {
 
 	// Date and time of the outgoing exchange for relaying or processing.
 	TraceDateTimeOut *ISODateTime `xml:"TracDtTmOut"`
-
 }
-
 
 func (t *Traceability4) AddRelayIdentification() *GenericIdentification77 {
 	t.RelayIdentification = new(GenericIdentification77)
@@ -34,4 +32,3 @@ func (t *Traceability4) SetTraceDateTimeIn(value string) {
 func (t *Traceability4) SetTraceDateTimeOut(value string) {
 	t.TraceDateTimeOut = (*ISODateTime)(&value)
 }
-

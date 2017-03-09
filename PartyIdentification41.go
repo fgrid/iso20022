@@ -17,9 +17,7 @@ type PartyIdentification41 struct {
 
 	// Set of elements used to indicate how to contact the party.
 	ContactDetails *ContactDetails2 `xml:"CtctDtls,omitempty"`
-
 }
-
 
 func (p *PartyIdentification41) SetName(value string) {
 	p.Name = (*Max140Text)(&value)
@@ -43,4 +41,3 @@ func (p *PartyIdentification41) AddContactDetails() *ContactDetails2 {
 	p.ContactDetails = new(ContactDetails2)
 	return p.ContactDetails
 }
-

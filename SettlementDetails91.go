@@ -53,12 +53,10 @@ type SettlementDetails91 struct {
 
 	// Specifies whether partial settlement is allowed.
 	PartialSettlementIndicator *SettlementTransactionCondition5Code `xml:"PrtlSttlmInd,omitempty"`
-
 }
 
-
 func (s *SettlementDetails91) AddSettlementTransactionCondition() *SettlementTransactionCondition16Choice {
-	newValue := new (SettlementTransactionCondition16Choice)
+	newValue := new(SettlementTransactionCondition16Choice)
 	s.SettlementTransactionCondition = append(s.SettlementTransactionCondition, newValue)
 	return newValue
 }
@@ -141,4 +139,3 @@ func (s *SettlementDetails91) AddLetterOfGuarantee() *LetterOfGuarantee4Choice {
 func (s *SettlementDetails91) SetPartialSettlementIndicator(value string) {
 	s.PartialSettlementIndicator = (*SettlementTransactionCondition5Code)(&value)
 }
-

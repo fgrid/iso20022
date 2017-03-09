@@ -11,9 +11,7 @@ type OtherParties26 struct {
 
 	// Institution to which a trade must be reported.
 	TradeRegulator *PartyIdentification100 `xml:"TradRgltr,omitempty"`
-
 }
-
 
 func (o *OtherParties26) AddInvestor() *PartyIdentification99 {
 	o.Investor = new(PartyIdentification99)
@@ -29,4 +27,3 @@ func (o *OtherParties26) AddTradeRegulator() *PartyIdentification100 {
 	o.TradeRegulator = new(PartyIdentification100)
 	return o.TradeRegulator
 }
-

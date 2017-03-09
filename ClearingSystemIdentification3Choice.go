@@ -8,9 +8,7 @@ type ClearingSystemIdentification3Choice struct {
 
 	// Clearing system identification in a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *ClearingSystemIdentification3Choice) SetCode(value string) {
 	c.Code = (*ExternalCashClearingSystem1Code)(&value)
@@ -19,4 +17,3 @@ func (c *ClearingSystemIdentification3Choice) SetCode(value string) {
 func (c *ClearingSystemIdentification3Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

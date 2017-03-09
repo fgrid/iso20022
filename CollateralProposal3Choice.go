@@ -8,9 +8,7 @@ type CollateralProposal3Choice struct {
 
 	// Provides details about the proposal for the segregated independent amount.
 	SegregatedIndependentAmount *CollateralMovement5 `xml:"SgrtdIndpdntAmt"`
-
 }
-
 
 func (c *CollateralProposal3Choice) AddCollateralProposalDetails() *CollateralProposal4 {
 	c.CollateralProposalDetails = new(CollateralProposal4)
@@ -21,4 +19,3 @@ func (c *CollateralProposal3Choice) AddSegregatedIndependentAmount() *Collateral
 	c.SegregatedIndependentAmount = new(CollateralMovement5)
 	return c.SegregatedIndependentAmount
 }
-

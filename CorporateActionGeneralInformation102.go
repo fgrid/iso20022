@@ -11,9 +11,7 @@ type CorporateActionGeneralInformation102 struct {
 
 	// Specifies the type of narrative related to the message.
 	NarrativeType *CorporateActionNarrative4Choice `xml:"NrrtvTp,omitempty"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation102) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -27,4 +25,3 @@ func (c *CorporateActionGeneralInformation102) AddNarrativeType() *CorporateActi
 	c.NarrativeType = new(CorporateActionNarrative4Choice)
 	return c.NarrativeType
 }
-

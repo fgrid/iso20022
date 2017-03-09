@@ -13,22 +13,20 @@ type CertificateIdentification1 struct {
 	PaymentInformationIdentification *Max35Text `xml:"PmtInfId,omitempty"`
 
 	// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.
-	// 
+	//
 	// Usage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.
 	InstructionIdentification *Max35Text `xml:"InstrId,omitempty"`
 
 	// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.
-	// 
+	//
 	// Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.
-	// 
+	//
 	// Usage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.
 	EndToEndIdentification *Max35Text `xml:"EndToEndId,omitempty"`
 
 	// Proprietary reference related to the underlying transaction.
 	Proprietary *ProprietaryReference1 `xml:"Prtry,omitempty"`
-
 }
-
 
 func (c *CertificateIdentification1) SetMessageIdentification(value string) {
 	c.MessageIdentification = (*Max35Text)(&value)
@@ -54,4 +52,3 @@ func (c *CertificateIdentification1) AddProprietary() *ProprietaryReference1 {
 	c.Proprietary = new(ProprietaryReference1)
 	return c.Proprietary
 }
-

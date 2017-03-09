@@ -33,9 +33,7 @@ type CashOption2 struct {
 
 	// Provides information about the tax voucher related to a cash movement.
 	TaxVoucherDetails *TaxVoucher2 `xml:"TaxVchrDtls,omitempty"`
-
 }
-
 
 func (c *CashOption2) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -84,4 +82,3 @@ func (c *CashOption2) AddTaxVoucherDetails() *TaxVoucher2 {
 	c.TaxVoucherDetails = new(TaxVoucher2)
 	return c.TaxVoucherDetails
 }
-

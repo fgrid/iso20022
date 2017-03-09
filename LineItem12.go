@@ -35,9 +35,7 @@ type LineItem12 struct {
 
 	// Specifies the applicable Incoterm and associated location.
 	Incoterms *Incoterms4 `xml:"Incotrms,omitempty"`
-
 }
-
 
 func (l *LineItem12) AddPurchaseOrderReference() *DocumentIdentification7 {
 	l.PurchaseOrderReference = new(DocumentIdentification7)
@@ -49,7 +47,7 @@ func (l *LineItem12) SetFinalSubmission(value string) {
 }
 
 func (l *LineItem12) AddCommercialLineItems() *LineItemDetails11 {
-	newValue := new (LineItemDetails11)
+	newValue := new(LineItemDetails11)
 	l.CommercialLineItems = append(l.CommercialLineItems, newValue)
 	return newValue
 }
@@ -59,7 +57,7 @@ func (l *LineItem12) SetLineItemsTotalAmount(value, currency string) {
 }
 
 func (l *LineItem12) AddAdjustment() *Adjustment6 {
-	newValue := new (Adjustment6)
+	newValue := new(Adjustment6)
 	l.Adjustment = append(l.Adjustment, newValue)
 	return newValue
 }
@@ -70,7 +68,7 @@ func (l *LineItem12) AddFreightCharges() *Charge25 {
 }
 
 func (l *LineItem12) AddTax() *Tax22 {
-	newValue := new (Tax22)
+	newValue := new(Tax22)
 	l.Tax = append(l.Tax, newValue)
 	return newValue
 }
@@ -80,13 +78,13 @@ func (l *LineItem12) SetTotalNetAmount(value, currency string) {
 }
 
 func (l *LineItem12) AddBuyerDefinedInformation() *UserDefinedInformation1 {
-	newValue := new (UserDefinedInformation1)
+	newValue := new(UserDefinedInformation1)
 	l.BuyerDefinedInformation = append(l.BuyerDefinedInformation, newValue)
 	return newValue
 }
 
 func (l *LineItem12) AddSellerDefinedInformation() *UserDefinedInformation1 {
-	newValue := new (UserDefinedInformation1)
+	newValue := new(UserDefinedInformation1)
 	l.SellerDefinedInformation = append(l.SellerDefinedInformation, newValue)
 	return newValue
 }
@@ -95,4 +93,3 @@ func (l *LineItem12) AddIncoterms() *Incoterms4 {
 	l.Incoterms = new(Incoterms4)
 	return l.Incoterms
 }
-

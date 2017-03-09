@@ -7,7 +7,7 @@ import (
 )
 
 type Document02900106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.06 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.06 Document"`
 	Message *ResolutionOfInvestigationV06 `xml:"RsltnOfInvstgtn"`
 }
 
@@ -64,9 +64,7 @@ type ResolutionOfInvestigationV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (r *ResolutionOfInvestigationV06) AddAssignment() *iso20022.CaseAssignment3 {
 	r.Assignment = new(iso20022.CaseAssignment3)
@@ -84,7 +82,7 @@ func (r *ResolutionOfInvestigationV06) AddStatus() *iso20022.InvestigationStatus
 }
 
 func (r *ResolutionOfInvestigationV06) AddCancellationDetails() *iso20022.UnderlyingTransaction14 {
-	newValue := new (iso20022.UnderlyingTransaction14)
+	newValue := new(iso20022.UnderlyingTransaction14)
 	r.CancellationDetails = append(r.CancellationDetails, newValue)
 	return newValue
 }
@@ -105,8 +103,7 @@ func (r *ResolutionOfInvestigationV06) AddResolutionRelatedInformation() *iso200
 }
 
 func (r *ResolutionOfInvestigationV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	r.SupplementaryData = append(r.SupplementaryData, newValue)
 	return newValue
 }
-

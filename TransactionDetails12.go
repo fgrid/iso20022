@@ -11,9 +11,7 @@ type TransactionDetails12 struct {
 
 	// Account to or from which a securities entry is made.
 	SafekeepingAccount *SecuritiesAccount13 `xml:"SfkpgAcct"`
-
 }
-
 
 func (t *TransactionDetails12) AddReference() *References3Choice {
 	t.Reference = new(References3Choice)
@@ -29,4 +27,3 @@ func (t *TransactionDetails12) AddSafekeepingAccount() *SecuritiesAccount13 {
 	t.SafekeepingAccount = new(SecuritiesAccount13)
 	return t.SafekeepingAccount
 }
-

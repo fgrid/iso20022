@@ -8,9 +8,7 @@ type ShipmentSchedule2Choice struct {
 
 	// Specifies a shipment schedule, ie, quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.
 	ShipmentSubSchedule []*ShipmentDateRange2 `xml:"ShipmntSubSchdl"`
-
 }
-
 
 func (s *ShipmentSchedule2Choice) AddShipmentDateRange() *ShipmentDateRange1 {
 	s.ShipmentDateRange = new(ShipmentDateRange1)
@@ -18,8 +16,7 @@ func (s *ShipmentSchedule2Choice) AddShipmentDateRange() *ShipmentDateRange1 {
 }
 
 func (s *ShipmentSchedule2Choice) AddShipmentSubSchedule() *ShipmentDateRange2 {
-	newValue := new (ShipmentDateRange2)
+	newValue := new(ShipmentDateRange2)
 	s.ShipmentSubSchedule = append(s.ShipmentSubSchedule, newValue)
 	return newValue
 }
-

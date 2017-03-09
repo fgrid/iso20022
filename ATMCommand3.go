@@ -8,9 +8,7 @@ type ATMCommand3 struct {
 
 	// Identification of the entity issuing the command.
 	CommandIdentification *ATMCommandIdentification1 `xml:"CmdId,omitempty"`
-
 }
-
 
 func (a *ATMCommand3) SetType(value string) {
 	a.Type = (*ATMCommand2Code)(&value)
@@ -20,4 +18,3 @@ func (a *ATMCommand3) AddCommandIdentification() *ATMCommandIdentification1 {
 	a.CommandIdentification = new(ATMCommandIdentification1)
 	return a.CommandIdentification
 }
-

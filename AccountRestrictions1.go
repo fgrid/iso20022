@@ -6,7 +6,7 @@ type AccountRestrictions1 struct {
 	// Restrictions and/or limitations on the account or account party.
 	Limitation *Max350Text `xml:"Lmttn,omitempty"`
 
-	// Additional information. 
+	// Additional information.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
 
 	// Information or instructions for the by-passing of validations in the account registration process.
@@ -23,9 +23,7 @@ type AccountRestrictions1 struct {
 
 	// Period of the restriction.
 	Period *DateTimePeriodDetails1 `xml:"Prd,omitempty"`
-
 }
-
 
 func (a *AccountRestrictions1) SetLimitation(value string) {
 	a.Limitation = (*Max350Text)(&value)
@@ -57,4 +55,3 @@ func (a *AccountRestrictions1) AddPeriod() *DateTimePeriodDetails1 {
 	a.Period = new(DateTimePeriodDetails1)
 	return a.Period
 }
-

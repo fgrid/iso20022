@@ -11,9 +11,7 @@ type NetworkParameters2 struct {
 
 	// Delay between two contacts of the server..
 	Delay *ISOTime `xml:"Dely,omitempty"`
-
 }
-
 
 func (n *NetworkParameters2) SetAddress(value string) {
 	n.Address = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (n *NetworkParameters2) SetPortNumber(value string) {
 func (n *NetworkParameters2) SetDelay(value string) {
 	n.Delay = (*ISOTime)(&value)
 }
-

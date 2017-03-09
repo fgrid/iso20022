@@ -11,9 +11,7 @@ type CashParties28 struct {
 
 	// Party that has reimbursed the account owner with funds to which they were legally entitled.
 	MarketClaimCounterparty *PartyIdentificationAndAccount120 `xml:"MktClmCtrPty,omitempty"`
-
 }
-
 
 func (c *CashParties28) AddCreditor() *PartyIdentificationAndAccount120 {
 	c.Creditor = new(PartyIdentificationAndAccount120)
@@ -29,4 +27,3 @@ func (c *CashParties28) AddMarketClaimCounterparty() *PartyIdentificationAndAcco
 	c.MarketClaimCounterparty = new(PartyIdentificationAndAccount120)
 	return c.MarketClaimCounterparty
 }
-

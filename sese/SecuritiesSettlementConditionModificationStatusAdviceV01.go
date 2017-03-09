@@ -7,7 +7,7 @@ import (
 )
 
 type Document03100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.031.001.01 Document"`
+	XMLName xml.Name                                                  `xml:"urn:iso:std:iso:20022:tech:xsd:sese.031.001.01 Document"`
 	Message *SecuritiesSettlementConditionModificationStatusAdviceV01 `xml:"SctiesSttlmCondModStsAdvc"`
 }
 
@@ -18,19 +18,19 @@ func (d *Document03100101) AddMessage() *SecuritiesSettlementConditionModificati
 
 // Scope
 // An account servicer sends a SecuritiesSettlementConditionsModificationStatusAdvice to an account owner to advise the status of a modification request previously instructed by the account owner.
-// The account servicer/owner relationship may be:
+// The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// Usage
-// A SecuritiesSettlementConditionsModificatioRequest may contain requests on multiple transactions. However, one SecuritiesSettlementConditionsModificationStatusAdvice must be sent per transaction modified unless the SecuritiesSettlementConditionsModificationRequest is rejected as a whole.			
-// The message may also be used to: 
-// - re-send a message previously sent (the sub-function of the message is Duplicate) 
-// - provide a third party with a copy of a message for information (the sub-function of the message is Copy) 
+// Usage
+// A SecuritiesSettlementConditionsModificatioRequest may contain requests on multiple transactions. However, one SecuritiesSettlementConditionsModificationStatusAdvice must be sent per transaction modified unless the SecuritiesSettlementConditionsModificationRequest is rejected as a whole.
+// The message may also be used to:
+// - re-send a message previously sent (the sub-function of the message is Duplicate)
+// - provide a third party with a copy of a message for information (the sub-function of the message is Copy)
 // - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
-// 
+//
 type SecuritiesSettlementConditionModificationStatusAdviceV01 struct {
 
 	// Information that unambiguously identifies a SecuritiesSettlementConditionModificationStatusAdvice message as known by the account servicer.
@@ -59,9 +59,7 @@ type SecuritiesSettlementConditionModificationStatusAdviceV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementConditionModificationStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -104,8 +102,7 @@ func (s *SecuritiesSettlementConditionModificationStatusAdviceV01) AddMessageRec
 }
 
 func (s *SecuritiesSettlementConditionModificationStatusAdviceV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

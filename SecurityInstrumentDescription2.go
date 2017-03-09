@@ -26,9 +26,7 @@ type SecurityInstrumentDescription2 struct {
 
 	// Indicates the ratio or multiplying factor used to convert one contract into a quantity. In the case of an equity or a bond, the price multiplier is 1.
 	Multiplier *BaseOneRate `xml:"Mltplr,omitempty"`
-
 }
-
 
 func (s *SecurityInstrumentDescription2) SetDescription(value string) {
 	s.Description = (*Max350Text)(&value)
@@ -63,4 +61,3 @@ func (s *SecurityInstrumentDescription2) AddStrikePrice() *PriceRateOrAmountChoi
 func (s *SecurityInstrumentDescription2) SetMultiplier(value string) {
 	s.Multiplier = (*BaseOneRate)(&value)
 }
-

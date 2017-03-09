@@ -7,7 +7,7 @@ import (
 )
 
 type Document04100106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.041.001.06 Document"`
+	XMLName xml.Name                                                      `xml:"urn:iso:std:iso:20022:tech:xsd:seev.041.001.06 Document"`
 	Message *CorporateActionInstructionCancellationRequestStatusAdviceV06 `xml:"CorpActnInstrCxlReqStsAdvc"`
 }
 
@@ -17,7 +17,7 @@ func (d *Document04100106) AddMessage() *CorporateActionInstructionCancellationR
 }
 
 // Scope
-// An account servicer sends the CorporateActionInstructionCancellationRequestStatusAdvice message to an account owner or its designated agent to report status of a previously received CorporateActionInstructionCancellationRequest message sent by the account owner. This will include the acknowledgement/rejection of a request to cancel an outstanding instruction. 
+// An account servicer sends the CorporateActionInstructionCancellationRequestStatusAdvice message to an account owner or its designated agent to report status of a previously received CorporateActionInstructionCancellationRequest message sent by the account owner. This will include the acknowledgement/rejection of a request to cancel an outstanding instruction.
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent (the sub-function of the message is Duplicate),
@@ -46,9 +46,7 @@ type CorporateActionInstructionCancellationRequestStatusAdviceV06 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddInstructionCancellationRequestIdentification() *iso20022.DocumentIdentification9 {
 	c.InstructionCancellationRequestIdentification = new(iso20022.DocumentIdentification9)
@@ -56,7 +54,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddInstru
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddOtherDocumentIdentification() *iso20022.DocumentIdentification33 {
-	newValue := new (iso20022.DocumentIdentification33)
+	newValue := new(iso20022.DocumentIdentification33)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -67,7 +65,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddCorpor
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddInstructionCancellationRequestStatus() *iso20022.InstructionCancellationRequestStatus9Choice {
-	newValue := new (iso20022.InstructionCancellationRequestStatus9Choice)
+	newValue := new(iso20022.InstructionCancellationRequestStatus9Choice)
 	c.InstructionCancellationRequestStatus = append(c.InstructionCancellationRequestStatus, newValue)
 	return newValue
 }
@@ -83,8 +81,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddAdditi
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

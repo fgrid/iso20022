@@ -8,9 +8,7 @@ type ProductCategory1Choice struct {
 
 	// Specifies the type of product category not present in the code list.
 	OtherProductCategory *GenericIdentification4 `xml:"OthrPdctCtgy"`
-
 }
-
 
 func (p *ProductCategory1Choice) AddStructuredProductCategory() *ProductCategory1 {
 	p.StructuredProductCategory = new(ProductCategory1)
@@ -21,4 +19,3 @@ func (p *ProductCategory1Choice) AddOtherProductCategory() *GenericIdentificatio
 	p.OtherProductCategory = new(GenericIdentification4)
 	return p.OtherProductCategory
 }
-

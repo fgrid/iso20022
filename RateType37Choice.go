@@ -8,9 +8,7 @@ type RateType37Choice struct {
 
 	// Proprietary identification of the type of tax rate.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (r *RateType37Choice) SetCode(value string) {
 	r.Code = (*RateType3Code)(&value)
@@ -20,4 +18,3 @@ func (r *RateType37Choice) AddProprietary() *GenericIdentification30 {
 	r.Proprietary = new(GenericIdentification30)
 	return r.Proprietary
 }
-

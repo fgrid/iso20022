@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:catm.004.001.03 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:catm.004.001.03 Document"`
 	Message *TerminalManagementRejectionV03 `xml:"TermnlMgmtRjctn"`
 }
 
@@ -24,9 +24,7 @@ type TerminalManagementRejectionV03 struct {
 
 	// Information related to the reject.
 	Reject *iso20022.AcceptorRejection3 `xml:"Rjct"`
-
 }
-
 
 func (t *TerminalManagementRejectionV03) AddHeader() *iso20022.Header15 {
 	t.Header = new(iso20022.Header15)
@@ -37,4 +35,3 @@ func (t *TerminalManagementRejectionV03) AddReject() *iso20022.AcceptorRejection
 	t.Reject = new(iso20022.AcceptorRejection3)
 	return t.Reject
 }
-

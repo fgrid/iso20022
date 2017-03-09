@@ -11,9 +11,7 @@ type UnitsOrAmountOrPercentage1Choice struct {
 
 	// Percentage of cash amount.
 	Percentage *PercentageRate `xml:"Pctg"`
-
 }
-
 
 func (u *UnitsOrAmountOrPercentage1Choice) SetAmount(value, currency string) {
 	u.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (u *UnitsOrAmountOrPercentage1Choice) SetUnit(value string) {
 func (u *UnitsOrAmountOrPercentage1Choice) SetPercentage(value string) {
 	u.Percentage = (*PercentageRate)(&value)
 }
-

@@ -17,9 +17,7 @@ type ExchangeConfiguration4 struct {
 
 	// Timing condition for periodic exchanges.
 	TimeCondition *ProcessTiming3 `xml:"TmCond,omitempty"`
-
 }
-
 
 func (e *ExchangeConfiguration4) AddExchangePolicy(value string) {
 	e.ExchangePolicy = append(e.ExchangePolicy, (*ExchangePolicy1Code)(&value))
@@ -42,4 +40,3 @@ func (e *ExchangeConfiguration4) AddTimeCondition() *ProcessTiming3 {
 	e.TimeCondition = new(ProcessTiming3)
 	return e.TimeCondition
 }
-

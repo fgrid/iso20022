@@ -11,9 +11,7 @@ type Account15 struct {
 
 	// Institution that maintains the records where the account is held.
 	Servicer *PartyIdentification2Choice `xml:"Svcr"`
-
 }
-
 
 func (a *Account15) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (a *Account15) AddServicer() *PartyIdentification2Choice {
 	a.Servicer = new(PartyIdentification2Choice)
 	return a.Servicer
 }
-

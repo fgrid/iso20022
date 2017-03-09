@@ -11,9 +11,7 @@ type SettlementDetails102 struct {
 
 	// Indicates the collateral ownership.
 	CollateralOwnership *CollateralOwnership2 `xml:"CollOwnrsh"`
-
 }
-
 
 func (s *SettlementDetails102) SetTradeDate(value string) {
 	s.TradeDate = (*ISODateTime)(&value)
@@ -28,4 +26,3 @@ func (s *SettlementDetails102) AddCollateralOwnership() *CollateralOwnership2 {
 	s.CollateralOwnership = new(CollateralOwnership2)
 	return s.CollateralOwnership
 }
-

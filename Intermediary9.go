@@ -20,9 +20,7 @@ type Intermediary9 struct {
 
 	// Function performed by the intermediary.
 	ExtendedRole *Extended350Code `xml:"XtndedRole,omitempty"`
-
 }
-
 
 func (i *Intermediary9) AddIdentification() *PartyIdentification2Choice {
 	i.Identification = new(PartyIdentification2Choice)
@@ -49,4 +47,3 @@ func (i *Intermediary9) SetRole(value string) {
 func (i *Intermediary9) SetExtendedRole(value string) {
 	i.ExtendedRole = (*Extended350Code)(&value)
 }
-

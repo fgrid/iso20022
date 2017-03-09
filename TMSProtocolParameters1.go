@@ -29,9 +29,7 @@ type TMSProtocolParameters1 struct {
 
 	// New identification of the recipient party to set in TMS messages with this terminal manager
 	RecipientPartyIdentification *Max35Text `xml:"RcptPtyId,omitempty"`
-
 }
-
 
 func (t *TMSProtocolParameters1) AddTerminalManagerIdentification() *GenericIdentification71 {
 	t.TerminalManagerIdentification = new(GenericIdentification71)
@@ -56,7 +54,7 @@ func (t *TMSProtocolParameters1) AddHostAddress() *NetworkParameters3 {
 }
 
 func (t *TMSProtocolParameters1) AddHostKey() *KEKIdentifier2 {
-	newValue := new (KEKIdentifier2)
+	newValue := new(KEKIdentifier2)
 	t.HostKey = append(t.HostKey, newValue)
 	return newValue
 }
@@ -72,4 +70,3 @@ func (t *TMSProtocolParameters1) SetInitiatingPartyIdentification(value string) 
 func (t *TMSProtocolParameters1) SetRecipientPartyIdentification(value string) {
 	t.RecipientPartyIdentification = (*Max35Text)(&value)
 }
-

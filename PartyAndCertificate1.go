@@ -14,9 +14,7 @@ type PartyAndCertificate1 struct {
 
 	// Authorisation granted to a mandate holder.
 	Authorisation *Authorisation1 `xml:"Authstn"`
-
 }
-
 
 func (p *PartyAndCertificate1) AddParty() *PartyIdentification41 {
 	p.Party = new(PartyIdentification41)
@@ -35,4 +33,3 @@ func (p *PartyAndCertificate1) AddAuthorisation() *Authorisation1 {
 	p.Authorisation = new(Authorisation1)
 	return p.Authorisation
 }
-

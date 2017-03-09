@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.003.001.03 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:reda.003.001.03 Document"`
 	Message *PriceReportCorrectionV03 `xml:"PricRptCrrctnV03"`
 }
 
@@ -23,7 +23,7 @@ func (d *Document00300103) AddMessage() *PriceReportCorrectionV03 {
 // If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport sent.
 type PriceReportCorrectionV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -37,9 +37,7 @@ type PriceReportCorrectionV03 struct {
 
 	// Information related to the correction of a price of a financial instrument.
 	PriceCorrectionDetails []*iso20022.PriceCorrection3 `xml:"PricCrrctnDtls"`
-
 }
-
 
 func (p *PriceReportCorrectionV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	p.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -62,8 +60,7 @@ func (p *PriceReportCorrectionV03) AddMessagePagination() *iso20022.Pagination {
 }
 
 func (p *PriceReportCorrectionV03) AddPriceCorrectionDetails() *iso20022.PriceCorrection3 {
-	newValue := new (iso20022.PriceCorrection3)
+	newValue := new(iso20022.PriceCorrection3)
 	p.PriceCorrectionDetails = append(p.PriceCorrectionDetails, newValue)
 	return newValue
 }
-

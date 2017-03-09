@@ -8,9 +8,7 @@ type ReplacementProcessingStatus8Choice struct {
 
 	// Provides the processing status of the replacement request.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (r *ReplacementProcessingStatus8Choice) SetCode(value string) {
 	r.Code = (*ReplacementProcessingStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (r *ReplacementProcessingStatus8Choice) AddProprietary() *GenericIdentifica
 	r.Proprietary = new(GenericIdentification30)
 	return r.Proprietary
 }
-

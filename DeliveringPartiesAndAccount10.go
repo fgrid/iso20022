@@ -11,9 +11,7 @@ type DeliveringPartiesAndAccount10 struct {
 
 	// Party that, in a settlement chain interacts with the party 1.
 	Party2 *PartyIdentificationAndAccount77 `xml:"Pty2,omitempty"`
-
 }
-
 
 func (d *DeliveringPartiesAndAccount10) AddDepository() *PartyIdentification34Choice {
 	d.Depository = new(PartyIdentification34Choice)
@@ -29,4 +27,3 @@ func (d *DeliveringPartiesAndAccount10) AddParty2() *PartyIdentificationAndAccou
 	d.Party2 = new(PartyIdentificationAndAccount77)
 	return d.Party2
 }
-

@@ -71,9 +71,7 @@ type MeetingNotice2 struct {
 
 	// Date on which a company publishes the results of its meeting.
 	ResultPublicationDate *DateFormat3Choice `xml:"RsltPblctnDt,omitempty"`
-
 }
-
 
 func (m *MeetingNotice2) SetMeetingIdentification(value string) {
 	m.MeetingIdentification = (*Max35Text)(&value)
@@ -167,7 +165,7 @@ func (m *MeetingNotice2) AddProxy() *ProxyAppointmentInformation1 {
 }
 
 func (m *MeetingNotice2) AddContactPersonDetails() *MeetingContactPerson1 {
-	newValue := new (MeetingContactPerson1)
+	newValue := new(MeetingContactPerson1)
 	m.ContactPersonDetails = append(m.ContactPersonDetails, newValue)
 	return newValue
 }
@@ -176,4 +174,3 @@ func (m *MeetingNotice2) AddResultPublicationDate() *DateFormat3Choice {
 	m.ResultPublicationDate = new(DateFormat3Choice)
 	return m.ResultPublicationDate
 }
-

@@ -11,9 +11,7 @@ type CorporateActionOption6 struct {
 
 	// Specifies whether the quantity of financial instrument is a quantity of securities instructed or a quantity to receive.
 	InstructedOrQuantityToReceive *InstructedOrQuantityToReceive1Choice `xml:"InstdOrQtyToRcv"`
-
 }
-
 
 func (c *CorporateActionOption6) AddOptionNumber() *OptionNumber1Choice {
 	c.OptionNumber = new(OptionNumber1Choice)
@@ -29,4 +27,3 @@ func (c *CorporateActionOption6) AddInstructedOrQuantityToReceive() *InstructedO
 	c.InstructedOrQuantityToReceive = new(InstructedOrQuantityToReceive1Choice)
 	return c.InstructedOrQuantityToReceive
 }
-

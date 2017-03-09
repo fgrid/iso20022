@@ -8,9 +8,7 @@ type MainFundOrderDeskLocation1 struct {
 
 	// Offset of the reporting time before or after 00:00 hour UTC.
 	TimeZoneOffSet *UTCOffset1 `xml:"TmZoneOffSet"`
-
 }
-
 
 func (m *MainFundOrderDeskLocation1) SetCountry(value string) {
 	m.Country = (*CountryCode)(&value)
@@ -20,4 +18,3 @@ func (m *MainFundOrderDeskLocation1) AddTimeZoneOffSet() *UTCOffset1 {
 	m.TimeZoneOffSet = new(UTCOffset1)
 	return m.TimeZoneOffSet
 }
-

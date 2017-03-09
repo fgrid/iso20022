@@ -14,9 +14,7 @@ type UndertakingConfirmation1 struct {
 
 	// Confirmation of the undertaking or amendment of the confirmed undertaking.
 	Confirmation []*Max2000Text `xml:"Conf,omitempty"`
-
 }
-
 
 func (u *UndertakingConfirmation1) AddConfirmer() *PartyIdentification43 {
 	u.Confirmer = new(PartyIdentification43)
@@ -35,4 +33,3 @@ func (u *UndertakingConfirmation1) AddDate() *DateAndDateTimeChoice {
 func (u *UndertakingConfirmation1) AddConfirmation(value string) {
 	u.Confirmation = append(u.Confirmation, (*Max2000Text)(&value))
 }
-

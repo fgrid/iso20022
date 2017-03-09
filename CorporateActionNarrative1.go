@@ -24,9 +24,7 @@ type CorporateActionNarrative1 struct {
 	// Provides additional information or specifies in more detail the content of a
 	// message.
 	AdditionalText *Max350Text `xml:"AddtlTxt,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative1) SetInformationConditions(value string) {
 	c.InformationConditions = (*Max350Text)(&value)
@@ -56,4 +54,3 @@ func (c *CorporateActionNarrative1) SetURLAddress(value string) {
 func (c *CorporateActionNarrative1) SetAdditionalText(value string) {
 	c.AdditionalText = (*Max350Text)(&value)
 }
-

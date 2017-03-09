@@ -8,9 +8,7 @@ type SecuritiesOption52 struct {
 
 	// Quantity of securities to which this instruction applies.
 	InstructedQuantity *Quantity20Choice `xml:"InstdQty"`
-
 }
-
 
 func (s *SecuritiesOption52) AddConditionalQuantity() *FinancialInstrumentQuantity1Choice {
 	s.ConditionalQuantity = new(FinancialInstrumentQuantity1Choice)
@@ -21,4 +19,3 @@ func (s *SecuritiesOption52) AddInstructedQuantity() *Quantity20Choice {
 	s.InstructedQuantity = new(Quantity20Choice)
 	return s.InstructedQuantity
 }
-

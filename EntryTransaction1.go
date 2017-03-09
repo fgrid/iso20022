@@ -7,12 +7,12 @@ type EntryTransaction1 struct {
 	References *TransactionReferences1 `xml:"Refs,omitempty"`
 
 	// Set of elements providing details information on the original amount.
-	// 
+	//
 	// Usage: This component (on transaction level) should be used in case booking is for a single transaction and the original amount is different from the entry amount.  It can also be used in case individual original amounts are provided in case of a batch or aggregate booking.
 	AmountDetails *AmountAndCurrencyExchange2 `xml:"AmtDtls,omitempty"`
 
-	// Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. 
-	// 
+	// Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest.
+	//
 	// Usage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.
 	// Example : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability1 `xml:"Avlbty,omitempty"`
@@ -21,12 +21,12 @@ type EntryTransaction1 struct {
 	BankTransactionCode *BankTransactionCodeStructure1 `xml:"BkTxCd,omitempty"`
 
 	// Provides information on the charges included in the entry amount.
-	// 
+	//
 	// Usage : This component (on transaction level) can be used in case the booking is for a single transaction, and charges are included in the entry amount.  It can also be used in case individual charge amounts are applied to individual transactions in case of a batch or aggregate amount booking.
 	Charges []*ChargesInformation3 `xml:"Chrgs,omitempty"`
 
 	// Set of elements providing details on the interest amount included in the entry amount.
-	// 
+	//
 	// Usage : This component (on transaction level) can be used in case the booking is for a single transaction, and interest amount is included in the entry amount.  It can also be used in case individual interest amounts are applied to individual transactions in case of a batch or aggregate amount booking.
 	Interest []*TransactionInterest1 `xml:"Intrst,omitempty"`
 
@@ -36,8 +36,8 @@ type EntryTransaction1 struct {
 	// Set of elements identifying the agents related to the underlying transaction.
 	RelatedAgents *TransactionAgents1 `xml:"RltdAgts,omitempty"`
 
-	// Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor.  
-	// 
+	// Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor.
+	//
 	// Usage: purpose is used by the end-customers, ie originating party, initiating party, debtor, creditor, final party, to provide information concerning the nature of the payment transaction. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
 	Purpose *Purpose1Choice `xml:"Purp,omitempty"`
 
@@ -73,9 +73,7 @@ type EntryTransaction1 struct {
 
 	// Further details on the transaction details.
 	AdditionalTransactionInformation *Max500Text `xml:"AddtlTxInf,omitempty"`
-
 }
-
 
 func (e *EntryTransaction1) AddReferences() *TransactionReferences1 {
 	e.References = new(TransactionReferences1)
@@ -88,7 +86,7 @@ func (e *EntryTransaction1) AddAmountDetails() *AmountAndCurrencyExchange2 {
 }
 
 func (e *EntryTransaction1) AddAvailability() *CashBalanceAvailability1 {
-	newValue := new (CashBalanceAvailability1)
+	newValue := new(CashBalanceAvailability1)
 	e.Availability = append(e.Availability, newValue)
 	return newValue
 }
@@ -99,13 +97,13 @@ func (e *EntryTransaction1) AddBankTransactionCode() *BankTransactionCodeStructu
 }
 
 func (e *EntryTransaction1) AddCharges() *ChargesInformation3 {
-	newValue := new (ChargesInformation3)
+	newValue := new(ChargesInformation3)
 	e.Charges = append(e.Charges, newValue)
 	return newValue
 }
 
 func (e *EntryTransaction1) AddInterest() *TransactionInterest1 {
-	newValue := new (TransactionInterest1)
+	newValue := new(TransactionInterest1)
 	e.Interest = append(e.Interest, newValue)
 	return newValue
 }
@@ -126,7 +124,7 @@ func (e *EntryTransaction1) AddPurpose() *Purpose1Choice {
 }
 
 func (e *EntryTransaction1) AddRelatedRemittanceInformation() *RemittanceLocation1 {
-	newValue := new (RemittanceLocation1)
+	newValue := new(RemittanceLocation1)
 	e.RelatedRemittanceInformation = append(e.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -147,7 +145,7 @@ func (e *EntryTransaction1) AddRelatedPrice() *TransactionPrice1Choice {
 }
 
 func (e *EntryTransaction1) AddRelatedQuantities() *TransactionQuantities1Choice {
-	newValue := new (TransactionQuantities1Choice)
+	newValue := new(TransactionQuantities1Choice)
 	e.RelatedQuantities = append(e.RelatedQuantities, newValue)
 	return newValue
 }
@@ -180,4 +178,3 @@ func (e *EntryTransaction1) AddSafekeepingAccount() *CashAccount7 {
 func (e *EntryTransaction1) SetAdditionalTransactionInformation(value string) {
 	e.AdditionalTransactionInformation = (*Max500Text)(&value)
 }
-

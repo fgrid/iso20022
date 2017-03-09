@@ -8,9 +8,7 @@ type TradeMarket1Choice struct {
 
 	// Trade market expressed as proprietary identification.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (t *TradeMarket1Choice) SetCode(value string) {
 	t.Code = (*ExternalTradeMarket1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TradeMarket1Choice) AddProprietary() *GenericIdentification20 {
 	t.Proprietary = new(GenericIdentification20)
 	return t.Proprietary
 }
-

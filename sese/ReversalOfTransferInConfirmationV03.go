@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.008.001.03 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:sese.008.001.03 Document"`
 	Message *ReversalOfTransferInConfirmationV03 `xml:"RvslOfTrfInConf"`
 }
 
@@ -28,7 +28,7 @@ func (d *Document00800103) AddMessage() *ReversalOfTransferInConfirmationV03 {
 // It is also possible to request a reversal of a TransferInConfirmation by quoting its message reference (MessageIdentification) in PreviousReference.
 type ReversalOfTransferInConfirmationV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.
@@ -42,9 +42,7 @@ type ReversalOfTransferInConfirmationV03 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *ReversalOfTransferInConfirmationV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -52,7 +50,7 @@ func (r *ReversalOfTransferInConfirmationV03) AddMessageIdentification() *iso200
 }
 
 func (r *ReversalOfTransferInConfirmationV03) AddReferences() *iso20022.References11 {
-	newValue := new (iso20022.References11)
+	newValue := new(iso20022.References11)
 	r.References = append(r.References, newValue)
 	return newValue
 }
@@ -71,4 +69,3 @@ func (r *ReversalOfTransferInConfirmationV03) AddCopyDetails() *iso20022.CopyInf
 	r.CopyDetails = new(iso20022.CopyInformation2)
 	return r.CopyDetails
 }
-

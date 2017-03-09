@@ -8,9 +8,7 @@ type InvestmentAccount15 struct {
 
 	// Account type.
 	Type *CashAccountType1 `xml:"Tp,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount15) AddAccountIdentification() *AccountIdentification1 {
 	i.AccountIdentification = new(AccountIdentification1)
@@ -21,4 +19,3 @@ func (i *InvestmentAccount15) AddType() *CashAccountType1 {
 	i.Type = new(CashAccountType1)
 	return i.Type
 }
-

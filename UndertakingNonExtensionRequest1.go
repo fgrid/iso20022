@@ -8,9 +8,7 @@ type UndertakingNonExtensionRequest1 struct {
 
 	// Details related to the identification of the undertaking.
 	UndertakingIdentification *Undertaking9 `xml:"UdrtkgId"`
-
 }
-
 
 func (u *UndertakingNonExtensionRequest1) AddRequestingParty() *PartyIdentification43 {
 	u.RequestingParty = new(PartyIdentification43)
@@ -21,4 +19,3 @@ func (u *UndertakingNonExtensionRequest1) AddUndertakingIdentification() *Undert
 	u.UndertakingIdentification = new(Undertaking9)
 	return u.UndertakingIdentification
 }
-

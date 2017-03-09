@@ -8,9 +8,7 @@ type Proposal4 struct {
 
 	// Provides details about the proposal for the variation margin and the segregated independent amount, or the segregated independent amount only.
 	CollateralProposal *CollateralProposal4Choice `xml:"CollPrpsl"`
-
 }
-
 
 func (p *Proposal4) SetCollateralProposalType(value string) {
 	p.CollateralProposalType = (*ProposalType1Code)(&value)
@@ -20,4 +18,3 @@ func (p *Proposal4) AddCollateralProposal() *CollateralProposal4Choice {
 	p.CollateralProposal = new(CollateralProposal4Choice)
 	return p.CollateralProposal
 }
-

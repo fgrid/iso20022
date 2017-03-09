@@ -8,12 +8,10 @@ type RequiredSubmission5 struct {
 
 	// Specifies the type of the certificate.
 	CertificateType *TradeCertificateType2Code `xml:"CertTp"`
-
 }
 
-
 func (r *RequiredSubmission5) AddSubmitter() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.Submitter = append(r.Submitter, newValue)
 	return newValue
 }
@@ -21,4 +19,3 @@ func (r *RequiredSubmission5) AddSubmitter() *BICIdentification1 {
 func (r *RequiredSubmission5) SetCertificateType(value string) {
 	r.CertificateType = (*TradeCertificateType2Code)(&value)
 }
-

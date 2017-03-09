@@ -17,9 +17,7 @@ type AmountAndDirection48 struct {
 
 	// Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.
 	ValueDate *DateAndDateTimeChoice `xml:"ValDt,omitempty"`
-
 }
-
 
 func (a *AmountAndDirection48) SetAmount(value, currency string) {
 	a.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -42,4 +40,3 @@ func (a *AmountAndDirection48) AddValueDate() *DateAndDateTimeChoice {
 	a.ValueDate = new(DateAndDateTimeChoice)
 	return a.ValueDate
 }
-

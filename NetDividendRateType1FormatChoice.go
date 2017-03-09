@@ -8,9 +8,7 @@ type NetDividendRateType1FormatChoice struct {
 
 	// Proprietary code to  express the type of net dividend rate.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (n *NetDividendRateType1FormatChoice) SetCode(value string) {
 	n.Code = (*NetDividendRateType1Code)(&value)
@@ -20,4 +18,3 @@ func (n *NetDividendRateType1FormatChoice) AddProprietary() *GenericIdentificati
 	n.Proprietary = new(GenericIdentification13)
 	return n.Proprietary
 }
-

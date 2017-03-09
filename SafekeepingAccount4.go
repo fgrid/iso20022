@@ -17,9 +17,7 @@ type SafekeepingAccount4 struct {
 
 	// Owner of the voting rights.
 	RightsHolder []*PartyIdentification9Choice `xml:"RghtsHldr,omitempty"`
-
 }
-
 
 func (s *SafekeepingAccount4) SetAccountIdentification(value string) {
 	s.AccountIdentification = (*Max35Text)(&value)
@@ -36,14 +34,13 @@ func (s *SafekeepingAccount4) AddSubAccountDetails() *SubAccount2 {
 }
 
 func (s *SafekeepingAccount4) AddInstructedBalance() *HoldingBalance5 {
-	newValue := new (HoldingBalance5)
+	newValue := new(HoldingBalance5)
 	s.InstructedBalance = append(s.InstructedBalance, newValue)
 	return newValue
 }
 
 func (s *SafekeepingAccount4) AddRightsHolder() *PartyIdentification9Choice {
-	newValue := new (PartyIdentification9Choice)
+	newValue := new(PartyIdentification9Choice)
 	s.RightsHolder = append(s.RightsHolder, newValue)
 	return newValue
 }
-

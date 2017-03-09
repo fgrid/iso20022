@@ -11,9 +11,7 @@ type Case struct {
 
 	// Set to yes if the case was closed and needs to be re-opened.
 	ReopenCaseIndication *YesNoIndicator `xml:"ReopCaseIndctn,omitempty"`
-
 }
-
 
 func (c *Case) SetIdentification(value string) {
 	c.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (c *Case) SetCreator(value string) {
 func (c *Case) SetReopenCaseIndication(value string) {
 	c.ReopenCaseIndication = (*YesNoIndicator)(&value)
 }
-

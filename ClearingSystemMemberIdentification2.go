@@ -8,9 +8,7 @@ type ClearingSystemMemberIdentification2 struct {
 
 	// Identification of a member of a clearing system.
 	MemberIdentification *Max35Text `xml:"MmbId"`
-
 }
-
 
 func (c *ClearingSystemMemberIdentification2) AddClearingSystemIdentification() *ClearingSystemIdentification2Choice {
 	c.ClearingSystemIdentification = new(ClearingSystemIdentification2Choice)
@@ -20,4 +18,3 @@ func (c *ClearingSystemMemberIdentification2) AddClearingSystemIdentification() 
 func (c *ClearingSystemMemberIdentification2) SetMemberIdentification(value string) {
 	c.MemberIdentification = (*Max35Text)(&value)
 }
-

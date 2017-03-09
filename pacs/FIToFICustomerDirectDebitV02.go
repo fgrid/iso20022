@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.003.001.02 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.003.001.02 Document"`
 	Message *FIToFICustomerDirectDebitV02 `xml:"FIToFICstmrDrctDbt"`
 }
 
@@ -31,9 +31,7 @@ type FIToFICustomerDirectDebitV02 struct {
 
 	// Set of elements providing information specific to the individual direct debit(s).
 	DirectDebitTransactionInformation []*iso20022.DirectDebitTransactionInformation10 `xml:"DrctDbtTxInf"`
-
 }
-
 
 func (f *FIToFICustomerDirectDebitV02) AddGroupHeader() *iso20022.GroupHeader34 {
 	f.GroupHeader = new(iso20022.GroupHeader34)
@@ -41,8 +39,7 @@ func (f *FIToFICustomerDirectDebitV02) AddGroupHeader() *iso20022.GroupHeader34 
 }
 
 func (f *FIToFICustomerDirectDebitV02) AddDirectDebitTransactionInformation() *iso20022.DirectDebitTransactionInformation10 {
-	newValue := new (iso20022.DirectDebitTransactionInformation10)
+	newValue := new(iso20022.DirectDebitTransactionInformation10)
 	f.DirectDebitTransactionInformation = append(f.DirectDebitTransactionInformation, newValue)
 	return newValue
 }
-

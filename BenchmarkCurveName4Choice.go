@@ -11,9 +11,7 @@ type BenchmarkCurveName4Choice struct {
 
 	// Where no identifier exists, standardized name of the index, including its term (such as ‘EURIBOR6M’, ‘LIBOR3M’).
 	Name *Max25Text `xml:"Nm"`
-
 }
-
 
 func (b *BenchmarkCurveName4Choice) SetISIN(value string) {
 	b.ISIN = (*ISINOct2015Identifier)(&value)
@@ -26,4 +24,3 @@ func (b *BenchmarkCurveName4Choice) SetIndex(value string) {
 func (b *BenchmarkCurveName4Choice) SetName(value string) {
 	b.Name = (*Max25Text)(&value)
 }
-

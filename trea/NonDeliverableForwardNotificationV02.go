@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.007.001.02 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:trea.007.001.02 Document"`
 	Message *NonDeliverableForwardNotificationV02 `xml:"NDFNtfctnV02"`
 }
 
@@ -39,9 +39,7 @@ type NonDeliverableForwardNotificationV02 struct {
 
 	// Provides information on the settlement of a trade.
 	SettlementData *iso20022.SettlementData2 `xml:"SttlmData,omitempty"`
-
 }
-
 
 func (n *NonDeliverableForwardNotificationV02) AddTradingSideIdentification() *iso20022.TradePartyIdentification3 {
 	n.TradingSideIdentification = new(iso20022.TradePartyIdentification3)
@@ -72,4 +70,3 @@ func (n *NonDeliverableForwardNotificationV02) AddSettlementData() *iso20022.Set
 	n.SettlementData = new(iso20022.SettlementData2)
 	return n.SettlementData
 }
-

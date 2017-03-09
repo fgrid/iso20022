@@ -8,9 +8,7 @@ type UnitPrice4 struct {
 
 	// Value of the price, eg, as a currency and value.
 	Value *PriceValue1 `xml:"Val"`
-
 }
-
 
 func (u *UnitPrice4) SetType(value string) {
 	u.Type = (*TypeOfPrice8Code)(&value)
@@ -20,4 +18,3 @@ func (u *UnitPrice4) AddValue() *PriceValue1 {
 	u.Value = new(PriceValue1)
 	return u.Value
 }
-

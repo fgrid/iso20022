@@ -29,9 +29,7 @@ type OrganisationIdentification2 struct {
 
 	// Unique and unambiguous identifier for an organisation that is allocated by an institution.
 	ProprietaryIdentification *GenericIdentification3 `xml:"PrtryId,omitempty"`
-
 }
-
 
 func (o *OrganisationIdentification2) SetBIC(value string) {
 	o.BIC = (*BICIdentifier)(&value)
@@ -69,4 +67,3 @@ func (o *OrganisationIdentification2) AddProprietaryIdentification() *GenericIde
 	o.ProprietaryIdentification = new(GenericIdentification3)
 	return o.ProprietaryIdentification
 }
-

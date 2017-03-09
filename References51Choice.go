@@ -17,9 +17,7 @@ type References51Choice struct {
 
 	// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
 	ProcessorTransactionIdentification *RestrictedFINXMax16Text `xml:"PrcrTxId"`
-
 }
-
 
 func (r *References51Choice) SetAccountOwnerTransactionIdentification(value string) {
 	r.AccountOwnerTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -40,4 +38,3 @@ func (r *References51Choice) SetMarketInfrastructureTransactionIdentification(va
 func (r *References51Choice) SetProcessorTransactionIdentification(value string) {
 	r.ProcessorTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

@@ -14,9 +14,7 @@ type ReportHeader4 struct {
 
 	// Date and time at which the message was created.
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
-
 }
-
 
 func (r *ReportHeader4) SetIdentification(value string) {
 	r.Identification = (*Max35Text)(&value)
@@ -35,4 +33,3 @@ func (r *ReportHeader4) AddTo() *Party12Choice {
 func (r *ReportHeader4) SetCreationDateTime(value string) {
 	r.CreationDateTime = (*ISODateTime)(&value)
 }
-

@@ -8,9 +8,7 @@ type Vote3 struct {
 
 	// Specifies the different instructions which can be used to vote.
 	VoteOption *VoteInstruction2Code `xml:"VoteOptn"`
-
 }
-
 
 func (v *Vote3) SetIssuerLabel(value string) {
 	v.IssuerLabel = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (v *Vote3) SetIssuerLabel(value string) {
 func (v *Vote3) SetVoteOption(value string) {
 	v.VoteOption = (*VoteInstruction2Code)(&value)
 }
-

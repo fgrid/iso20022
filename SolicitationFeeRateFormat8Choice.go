@@ -11,9 +11,7 @@ type SolicitationFeeRateFormat8Choice struct {
 
 	// Cash amount.
 	Amount *ActiveCurrencyAnd13DecimalAmount `xml:"Amt"`
-
 }
-
 
 func (s *SolicitationFeeRateFormat8Choice) SetRate(value string) {
 	s.Rate = (*PercentageRate)(&value)
@@ -27,4 +25,3 @@ func (s *SolicitationFeeRateFormat8Choice) AddAmountToQuantity() *AmountAndQuant
 func (s *SolicitationFeeRateFormat8Choice) SetAmount(value, currency string) {
 	s.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

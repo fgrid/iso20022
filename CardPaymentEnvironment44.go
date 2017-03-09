@@ -18,9 +18,7 @@ type CardPaymentEnvironment44 struct {
 	// Language selected for the cardholder interface during the transaction.
 	// Reference: ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
 	CardholderLanguage *LanguageCode `xml:"CrdhldrLang,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment44) AddAcquirerIdentification() *GenericIdentification53 {
 	c.AcquirerIdentification = new(GenericIdentification53)
@@ -45,4 +43,3 @@ func (c *CardPaymentEnvironment44) AddCard() *PaymentCard9 {
 func (c *CardPaymentEnvironment44) SetCardholderLanguage(value string) {
 	c.CardholderLanguage = (*LanguageCode)(&value)
 }
-

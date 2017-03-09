@@ -72,7 +72,7 @@ type OtherAmounts16 struct {
 	// Cost of the securities. May be requested in some countries for tax purposes.
 	BookValue *AmountAndDirection29 `xml:"BookVal,omitempty"`
 
-	// Amount of unpaid interest (on bonds which have defaulted and have subsequently 
+	// Amount of unpaid interest (on bonds which have defaulted and have subsequently
 	// restructured), which is capitalized and added to the original principal amount of the bond.
 	AccruedCapitalisationAmount *AmountAndDirection29 `xml:"AcrdCptlstnAmt,omitempty"`
 
@@ -123,9 +123,7 @@ type OtherAmounts16 struct {
 
 	// Specifies that the odd-lot differential or equivalent fee has been paid by such customer in connection with the execution of an order for an odd-lot number of shares or units (or principal amount) of a security and the fact that the amount of any such differential or fee will be furnished upon oral or written request.
 	OddLotFee *YesNoIndicator `xml:"OddLotFee,omitempty"`
-
 }
-
 
 func (o *OtherAmounts16) AddChargesFees() *AmountAndDirection29 {
 	o.ChargesFees = new(AmountAndDirection29)
@@ -324,4 +322,3 @@ func (o *OtherAmounts16) AddDifferenceInPrice() *AmountAndDirection29 {
 func (o *OtherAmounts16) SetOddLotFee(value string) {
 	o.OddLotFee = (*YesNoIndicator)(&value)
 }
-

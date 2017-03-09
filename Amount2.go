@@ -8,9 +8,7 @@ type Amount2 struct {
 
 	// Amount expressed in the reporting currency.
 	ReportingAmount *ImpliedCurrencyAndAmount `xml:"RptgAmt"`
-
 }
-
 
 func (a *Amount2) SetOriginalCurrencyAmount(value, currency string) {
 	a.OriginalCurrencyAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (a *Amount2) SetOriginalCurrencyAmount(value, currency string) {
 func (a *Amount2) SetReportingAmount(value, currency string) {
 	a.ReportingAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

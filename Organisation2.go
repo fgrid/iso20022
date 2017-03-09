@@ -35,9 +35,7 @@ type Organisation2 struct {
 
 	// Communication device number or electronic address used for communication.
 	SecondaryCommunicationAddress *CommunicationAddress3 `xml:"ScndryComAdr,omitempty"`
-
 }
-
 
 func (o *Organisation2) SetName(value string) {
 	o.Name = (*Max140Text)(&value)
@@ -73,7 +71,7 @@ func (o *Organisation2) SetNationalRegistrationNumber(value string) {
 }
 
 func (o *Organisation2) AddPostalAddress() *PostalAddress3 {
-	newValue := new (PostalAddress3)
+	newValue := new(PostalAddress3)
 	o.PostalAddress = append(o.PostalAddress, newValue)
 	return newValue
 }
@@ -87,4 +85,3 @@ func (o *Organisation2) AddSecondaryCommunicationAddress() *CommunicationAddress
 	o.SecondaryCommunicationAddress = new(CommunicationAddress3)
 	return o.SecondaryCommunicationAddress
 }
-

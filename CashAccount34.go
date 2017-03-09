@@ -8,9 +8,7 @@ type CashAccount34 struct {
 
 	// Institution that maintains the records where the account is held.
 	AccountServicer *FinancialInstitutionIdentification7Choice `xml:"AcctSvcr,omitempty"`
-
 }
-
 
 func (c *CashAccount34) AddIdentification() *AccountIdentificationAndName5 {
 	c.Identification = new(AccountIdentificationAndName5)
@@ -21,4 +19,3 @@ func (c *CashAccount34) AddAccountServicer() *FinancialInstitutionIdentification
 	c.AccountServicer = new(FinancialInstitutionIdentification7Choice)
 	return c.AccountServicer
 }
-

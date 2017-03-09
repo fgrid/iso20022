@@ -8,9 +8,7 @@ type AlternateSecurityIdentification2 struct {
 
 	// Unique and unambiguous identifier of a security.
 	Identification *Max35Text `xml:"Id"`
-
 }
-
 
 func (a *AlternateSecurityIdentification2) SetType(value string) {
 	a.Type = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (a *AlternateSecurityIdentification2) SetType(value string) {
 func (a *AlternateSecurityIdentification2) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
 }
-

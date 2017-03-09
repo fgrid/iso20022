@@ -23,9 +23,7 @@ type OriginalPaymentInstruction12 struct {
 
 	// Provides information on the original transactions to which the status report message refers.
 	TransactionInformationAndStatus []*PaymentTransaction57 `xml:"TxInfAndSts,omitempty"`
-
 }
-
 
 func (o *OriginalPaymentInstruction12) SetOriginalPaymentInformationIdentification(value string) {
 	o.OriginalPaymentInformationIdentification = (*Max35Text)(&value)
@@ -44,20 +42,19 @@ func (o *OriginalPaymentInstruction12) SetPaymentInformationStatus(value string)
 }
 
 func (o *OriginalPaymentInstruction12) AddStatusReasonInformation() *StatusReasonInformation9 {
-	newValue := new (StatusReasonInformation9)
+	newValue := new(StatusReasonInformation9)
 	o.StatusReasonInformation = append(o.StatusReasonInformation, newValue)
 	return newValue
 }
 
 func (o *OriginalPaymentInstruction12) AddNumberOfTransactionsPerStatus() *NumberOfTransactionsPerStatus3 {
-	newValue := new (NumberOfTransactionsPerStatus3)
+	newValue := new(NumberOfTransactionsPerStatus3)
 	o.NumberOfTransactionsPerStatus = append(o.NumberOfTransactionsPerStatus, newValue)
 	return newValue
 }
 
 func (o *OriginalPaymentInstruction12) AddTransactionInformationAndStatus() *PaymentTransaction57 {
-	newValue := new (PaymentTransaction57)
+	newValue := new(PaymentTransaction57)
 	o.TransactionInformationAndStatus = append(o.TransactionInformationAndStatus, newValue)
 	return newValue
 }
-

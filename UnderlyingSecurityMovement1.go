@@ -11,9 +11,7 @@ type UnderlyingSecurityMovement1 struct {
 
 	// Provides information about the debited/credited securities account.
 	AccountDetails []*SecuritiesAccount8 `xml:"AcctDtls"`
-
 }
-
 
 func (u *UnderlyingSecurityMovement1) AddSecurityIdentification() *SecurityIdentification7 {
 	u.SecurityIdentification = new(SecurityIdentification7)
@@ -26,8 +24,7 @@ func (u *UnderlyingSecurityMovement1) AddSecuritiesQuantity() *UnitOrFaceAmount1
 }
 
 func (u *UnderlyingSecurityMovement1) AddAccountDetails() *SecuritiesAccount8 {
-	newValue := new (SecuritiesAccount8)
+	newValue := new(SecuritiesAccount8)
 	u.AccountDetails = append(u.AccountDetails, newValue)
 	return newValue
 }
-

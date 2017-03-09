@@ -17,9 +17,7 @@ type RatioFormat2Choice struct {
 
 	// The value of the ratio is not specified.
 	NotSpecifiedRate *RateType12FormatChoice `xml:"NotSpcfdRate"`
-
 }
-
 
 func (r *RatioFormat2Choice) AddQuantityToQuantity() *QuantityToQuantityRatio1 {
 	r.QuantityToQuantity = new(QuantityToQuantityRatio1)
@@ -45,4 +43,3 @@ func (r *RatioFormat2Choice) AddNotSpecifiedRate() *RateType12FormatChoice {
 	r.NotSpecifiedRate = new(RateType12FormatChoice)
 	return r.NotSpecifiedRate
 }
-

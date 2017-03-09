@@ -7,7 +7,7 @@ import (
 )
 
 type Document02200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.022.001.01 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.022.001.01 Document"`
 	Message *IdentificationModificationAdviceV01 `xml:"IdModAdvc"`
 }
 
@@ -33,9 +33,7 @@ type IdentificationModificationAdviceV01 struct {
 
 	// Information concerning the identification data that is advised to be modified.
 	Modification []*iso20022.IdentificationModification1 `xml:"Mod"`
-
 }
-
 
 func (i *IdentificationModificationAdviceV01) AddAssignment() *iso20022.IdentificationAssignment1 {
 	i.Assignment = new(iso20022.IdentificationAssignment1)
@@ -48,8 +46,7 @@ func (i *IdentificationModificationAdviceV01) AddOriginalTransactionReference() 
 }
 
 func (i *IdentificationModificationAdviceV01) AddModification() *iso20022.IdentificationModification1 {
-	newValue := new (iso20022.IdentificationModification1)
+	newValue := new(iso20022.IdentificationModification1)
 	i.Modification = append(i.Modification, newValue)
 	return newValue
 }
-

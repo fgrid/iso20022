@@ -29,9 +29,7 @@ type DeliverInformation8 struct {
 
 	// Parameters of a physical delivery.
 	PhysicalTransferDetails *DeliveryParameters4 `xml:"PhysTrfDtls,omitempty"`
-
 }
-
 
 func (d *DeliverInformation8) SetSettlementAmount(value, currency string) {
 	d.SettlementAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -51,19 +49,19 @@ func (d *DeliverInformation8) AddSettlementPartiesDetails() *DeliveringPartiesAn
 }
 
 func (d *DeliverInformation8) AddChargeDetails() *Charge20 {
-	newValue := new (Charge20)
+	newValue := new(Charge20)
 	d.ChargeDetails = append(d.ChargeDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation8) AddCommissionDetails() *Commission12 {
-	newValue := new (Commission12)
+	newValue := new(Commission12)
 	d.CommissionDetails = append(d.CommissionDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation8) AddTaxDetails() *Tax15 {
-	newValue := new (Tax15)
+	newValue := new(Tax15)
 	d.TaxDetails = append(d.TaxDetails, newValue)
 	return newValue
 }
@@ -76,4 +74,3 @@ func (d *DeliverInformation8) AddPhysicalTransferDetails() *DeliveryParameters4 
 	d.PhysicalTransferDetails = new(DeliveryParameters4)
 	return d.PhysicalTransferDetails
 }
-

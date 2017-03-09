@@ -8,9 +8,7 @@ type ConversionTypeFormat3Choice struct {
 
 	// Proprietary identification of the type of conversion.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (c *ConversionTypeFormat3Choice) SetCode(value string) {
 	c.Code = (*ConversionType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *ConversionTypeFormat3Choice) AddProprietary() *GenericIdentification30 
 	c.Proprietary = new(GenericIdentification30)
 	return c.Proprietary
 }
-

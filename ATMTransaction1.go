@@ -38,9 +38,7 @@ type ATMTransaction1 struct {
 
 	// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.
 	ICCRelatedData *Max10000Binary `xml:"ICCRltdData,omitempty"`
-
 }
-
 
 func (a *ATMTransaction1) SetCashDispensed(value string) {
 	a.CashDispensed = (*TrueFalseIndicator)(&value)
@@ -85,7 +83,7 @@ func (a *ATMTransaction1) SetSelectedMixType(value string) {
 }
 
 func (a *ATMTransaction1) AddSelectedMix() *ATMMediaMix1 {
-	newValue := new (ATMMediaMix1)
+	newValue := new(ATMMediaMix1)
 	a.SelectedMix = append(a.SelectedMix, newValue)
 	return newValue
 }
@@ -97,4 +95,3 @@ func (a *ATMTransaction1) SetRequestedReceipt(value string) {
 func (a *ATMTransaction1) SetICCRelatedData(value string) {
 	a.ICCRelatedData = (*Max10000Binary)(&value)
 }
-

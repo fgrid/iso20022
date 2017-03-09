@@ -20,9 +20,7 @@ type YieldCalculation2 struct {
 
 	// Included as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day.
 	CalculationDate *ISODate `xml:"ClctnDt,omitempty"`
-
 }
-
 
 func (y *YieldCalculation2) SetValue(value string) {
 	y.Value = (*PercentageRate)(&value)
@@ -49,4 +47,3 @@ func (y *YieldCalculation2) AddValuePeriod() *DateTimePeriodChoice {
 func (y *YieldCalculation2) SetCalculationDate(value string) {
 	y.CalculationDate = (*ISODate)(&value)
 }
-

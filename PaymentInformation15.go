@@ -8,9 +8,7 @@ type PaymentInformation15 struct {
 
 	// Unambiguous identification of the account used for payment settlement.
 	PaymentAccount *CashAccount7 `xml:"PmtAcct,omitempty"`
-
 }
-
 
 func (p *PaymentInformation15) SetPaymentMethod(value string) {
 	p.PaymentMethod = (*PaymentMethod4Code)(&value)
@@ -20,4 +18,3 @@ func (p *PaymentInformation15) AddPaymentAccount() *CashAccount7 {
 	p.PaymentAccount = new(CashAccount7)
 	return p.PaymentAccount
 }
-

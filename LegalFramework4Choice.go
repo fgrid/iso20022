@@ -8,9 +8,7 @@ type LegalFramework4Choice struct {
 
 	// Legal framework expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (l *LegalFramework4Choice) SetCode(value string) {
 	l.Code = (*LegalFramework1Code)(&value)
@@ -20,4 +18,3 @@ func (l *LegalFramework4Choice) AddProprietary() *GenericIdentification47 {
 	l.Proprietary = new(GenericIdentification47)
 	return l.Proprietary
 }
-

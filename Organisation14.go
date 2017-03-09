@@ -8,9 +8,7 @@ type Organisation14 struct {
 
 	// Unique and unambiguous way of identifying an organisation.
 	OrganisationIdentification *OrganisationIdentification8 `xml:"OrgId"`
-
 }
-
 
 func (o *Organisation14) SetFullLegalName(value string) {
 	o.FullLegalName = (*Max350Text)(&value)
@@ -20,4 +18,3 @@ func (o *Organisation14) AddOrganisationIdentification() *OrganisationIdentifica
 	o.OrganisationIdentification = new(OrganisationIdentification8)
 	return o.OrganisationIdentification
 }
-

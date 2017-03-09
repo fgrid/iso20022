@@ -11,16 +11,14 @@ type RemittanceLocation3 struct {
 
 	// Identifies the underlying transaction.
 	References *TransactionReferences4 `xml:"Refs"`
-
 }
-
 
 func (r *RemittanceLocation3) SetRemittanceIdentification(value string) {
 	r.RemittanceIdentification = (*Max35Text)(&value)
 }
 
 func (r *RemittanceLocation3) AddRemittanceLocationDetails() *RemittanceLocationDetails1 {
-	newValue := new (RemittanceLocationDetails1)
+	newValue := new(RemittanceLocationDetails1)
 	r.RemittanceLocationDetails = append(r.RemittanceLocationDetails, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (r *RemittanceLocation3) AddReferences() *TransactionReferences4 {
 	r.References = new(TransactionReferences4)
 	return r.References
 }
-

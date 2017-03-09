@@ -62,9 +62,7 @@ type TransactionDetails7 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransactionDetails7) AddTransactionActivity() *TransactionActivity1Choice {
 	t.TransactionActivity = new(TransactionActivity1Choice)
@@ -158,8 +156,7 @@ func (t *TransactionDetails7) SetTransactionAdditionalDetails(value string) {
 }
 
 func (t *TransactionDetails7) AddExtension() *Extension2 {
-	newValue := new (Extension2)
+	newValue := new(Extension2)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

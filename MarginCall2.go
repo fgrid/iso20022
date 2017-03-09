@@ -26,9 +26,7 @@ type MarginCall2 struct {
 
 	// Provides details about the type of collateral that will be either delivered to party B by party A or recalled to party B from party A.
 	ExpectedCollateralDueToB *ExpectedCollateral2Choice `xml:"XpctdCollDueToB,omitempty"`
-
 }
-
 
 func (m *MarginCall2) AddCollateralAccountIdentification() *CollateralAccount2 {
 	m.CollateralAccountIdentification = new(CollateralAccount2)
@@ -69,4 +67,3 @@ func (m *MarginCall2) AddExpectedCollateralDueToB() *ExpectedCollateral2Choice {
 	m.ExpectedCollateralDueToB = new(ExpectedCollateral2Choice)
 	return m.ExpectedCollateralDueToB
 }
-

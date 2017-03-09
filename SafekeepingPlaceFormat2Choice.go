@@ -14,9 +14,7 @@ type SafekeepingPlaceFormat2Choice struct {
 
 	// Place of safekeeping expressed with a propriety identification scheme.
 	Proprietary *GenericIdentification21 `xml:"Prtry"`
-
 }
-
 
 func (s *SafekeepingPlaceFormat2Choice) AddIdentification() *SafekeepingPlaceTypeAndText2 {
 	s.Identification = new(SafekeepingPlaceTypeAndText2)
@@ -36,4 +34,3 @@ func (s *SafekeepingPlaceFormat2Choice) AddProprietary() *GenericIdentification2
 	s.Proprietary = new(GenericIdentification21)
 	return s.Proprietary
 }
-

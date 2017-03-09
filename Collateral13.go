@@ -11,9 +11,7 @@ type Collateral13 struct {
 
 	// Provides additionnal information about the collateral valuation that has been posted.
 	CollateralValuation []*CollateralValuation5 `xml:"CollValtn,omitempty"`
-
 }
-
 
 func (c *Collateral13) AddAccountIdentification() *CollateralAccount2 {
 	c.AccountIdentification = new(CollateralAccount2)
@@ -26,8 +24,7 @@ func (c *Collateral13) AddReportSummary() *Summary1 {
 }
 
 func (c *Collateral13) AddCollateralValuation() *CollateralValuation5 {
-	newValue := new (CollateralValuation5)
+	newValue := new(CollateralValuation5)
 	c.CollateralValuation = append(c.CollateralValuation, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type SecuritiesCertificate4 struct {
 
 	// Short textual description of the scheme.
 	SchemeName *Max35Text `xml:"SchmeNm,omitempty"`
-
 }
-
 
 func (s *SecuritiesCertificate4) SetNumber(value string) {
 	s.Number = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (s *SecuritiesCertificate4) SetIssuer(value string) {
 func (s *SecuritiesCertificate4) SetSchemeName(value string) {
 	s.SchemeName = (*Max35Text)(&value)
 }
-

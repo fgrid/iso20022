@@ -7,7 +7,7 @@ import (
 )
 
 type Document02600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.026.001.03 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:camt.026.001.03 Document"`
 	Message *UnableToApplyV03 `xml:"UblToApply"`
 }
 
@@ -57,9 +57,7 @@ type UnableToApplyV03 struct {
 
 	// Explains the reason why the case creator is unable to apply the instruction.
 	Justification *iso20022.UnableToApplyJustification2Choice `xml:"Justfn"`
-
 }
-
 
 func (u *UnableToApplyV03) AddAssignment() *iso20022.CaseAssignment2 {
 	u.Assignment = new(iso20022.CaseAssignment2)
@@ -80,4 +78,3 @@ func (u *UnableToApplyV03) AddJustification() *iso20022.UnableToApplyJustificati
 	u.Justification = new(iso20022.UnableToApplyJustification2Choice)
 	return u.Justification
 }
-

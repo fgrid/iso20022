@@ -14,9 +14,7 @@ type AccountIdentification5Choice struct {
 
 	// Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.
 	DepositoryAccount *Max35Text `xml:"DpstryAcct"`
-
 }
-
 
 func (a *AccountIdentification5Choice) SetIBAN(value string) {
 	a.IBAN = (*IBANIdentifier)(&value)
@@ -33,4 +31,3 @@ func (a *AccountIdentification5Choice) SetDomesticAccount(value string) {
 func (a *AccountIdentification5Choice) SetDepositoryAccount(value string) {
 	a.DepositoryAccount = (*Max35Text)(&value)
 }
-

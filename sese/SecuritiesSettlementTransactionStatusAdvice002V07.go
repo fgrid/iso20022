@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400207 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.024.002.07 Document"`
+	XMLName xml.Name                                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.024.002.07 Document"`
 	Message *SecuritiesSettlementTransactionStatusAdvice002V07 `xml:"SctiesSttlmTxStsAdvc"`
 }
 
@@ -23,7 +23,7 @@ func (d *Document02400207) AddMessage() *SecuritiesSettlementTransactionStatusAd
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -55,9 +55,7 @@ type SecuritiesSettlementTransactionStatusAdvice002V07 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionStatusAdvice002V07) AddTransactionIdentification() *iso20022.TransactionIdentifications38 {
 	s.TransactionIdentification = new(iso20022.TransactionIdentifications38)
@@ -95,8 +93,7 @@ func (s *SecuritiesSettlementTransactionStatusAdvice002V07) AddTransactionDetail
 }
 
 func (s *SecuritiesSettlementTransactionStatusAdvice002V07) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

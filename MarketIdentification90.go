@@ -8,9 +8,7 @@ type MarketIdentification90 struct {
 
 	// Nature of a market in which transactions take place.
 	Type *MarketType16Choice `xml:"Tp"`
-
 }
-
 
 func (m *MarketIdentification90) AddIdentification() *MarketIdentification2Choice {
 	m.Identification = new(MarketIdentification2Choice)
@@ -21,4 +19,3 @@ func (m *MarketIdentification90) AddType() *MarketType16Choice {
 	m.Type = new(MarketType16Choice)
 	return m.Type
 }
-

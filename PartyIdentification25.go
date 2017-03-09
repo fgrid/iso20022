@@ -11,9 +11,7 @@ type PartyIdentification25 struct {
 
 	// Identification of a non-financial institution.
 	BEI *BEIIdentifier `xml:"BEI,omitempty"`
-
 }
-
 
 func (p *PartyIdentification25) SetName(value string) {
 	p.Name = (*Max70Text)(&value)
@@ -27,4 +25,3 @@ func (p *PartyIdentification25) AddProprietaryIdentification() *GenericIdentific
 func (p *PartyIdentification25) SetBEI(value string) {
 	p.BEI = (*BEIIdentifier)(&value)
 }
-

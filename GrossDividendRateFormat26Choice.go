@@ -14,9 +14,7 @@ type GrossDividendRateFormat26Choice struct {
 
 	// Value of the rate not specified.
 	NotSpecifiedRate *RateType13Code `xml:"NotSpcfdRate"`
-
 }
-
 
 func (g *GrossDividendRateFormat26Choice) SetAmount(value, currency string) {
 	g.Amount = NewRestrictedFINActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -35,4 +33,3 @@ func (g *GrossDividendRateFormat26Choice) AddRateTypeAndAmountAndRateStatus() *R
 func (g *GrossDividendRateFormat26Choice) SetNotSpecifiedRate(value string) {
 	g.NotSpecifiedRate = (*RateType13Code)(&value)
 }
-

@@ -20,9 +20,7 @@ type InterestStatement3 struct {
 
 	// Provides the details of the interest calculation.
 	InterestCalculation []*InterestCalculation3 `xml:"IntrstClctn,omitempty"`
-
 }
-
 
 func (i *InterestStatement3) AddInterestPeriod() *DatePeriodDetails {
 	i.InterestPeriod = new(DatePeriodDetails)
@@ -46,8 +44,7 @@ func (i *InterestStatement3) SetInterestPaymentRequestIdentification(value strin
 }
 
 func (i *InterestStatement3) AddInterestCalculation() *InterestCalculation3 {
-	newValue := new (InterestCalculation3)
+	newValue := new(InterestCalculation3)
 	i.InterestCalculation = append(i.InterestCalculation, newValue)
 	return newValue
 }
-

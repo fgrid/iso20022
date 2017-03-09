@@ -29,13 +29,13 @@ type PaymentTransaction51 struct {
 	ReversedInterbankSettlementAmount *ActiveCurrencyAndAmount `xml:"RvsdIntrBkSttlmAmt"`
 
 	// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-	// 
+	//
 	// Usage: The InterbankSettlementDate is the interbank settlement date of the reversal message, and not of the original instruction.
 	InterbankSettlementDate *ISODate `xml:"IntrBkSttlmDt,omitempty"`
 
 	// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
-	// 
-	// 
+	//
+	//
 	// Usage: the SettlementPriority is the settlement priority of the reversal message, and not of the original instruction.
 	SettlementPriority *Priority3Code `xml:"SttlmPrty,omitempty"`
 
@@ -50,7 +50,7 @@ type PaymentTransaction51 struct {
 	CompensationAmount *ActiveOrHistoricCurrencyAndAmount `xml:"CompstnAmt,omitempty"`
 
 	// Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.
-	// 
+	//
 	// Usage: The ChargeBearer applies to the reversal message, not to the original instruction.
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
@@ -58,12 +58,12 @@ type PaymentTransaction51 struct {
 	ChargesInformation []*Charges2 `xml:"ChrgsInf,omitempty"`
 
 	// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed.
 	InstructingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstgAgt,omitempty"`
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructed agent is the party receiving the reversal message and not the party that received the original instruction that is being reversed.
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
@@ -75,9 +75,7 @@ type PaymentTransaction51 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction51) SetReversalIdentification(value string) {
 	p.ReversalIdentification = (*Max35Text)(&value)
@@ -137,7 +135,7 @@ func (p *PaymentTransaction51) SetChargeBearer(value string) {
 }
 
 func (p *PaymentTransaction51) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -153,7 +151,7 @@ func (p *PaymentTransaction51) AddInstructedAgent() *BranchAndFinancialInstituti
 }
 
 func (p *PaymentTransaction51) AddReversalReasonInformation() *PaymentReversalReason7 {
-	newValue := new (PaymentReversalReason7)
+	newValue := new(PaymentReversalReason7)
 	p.ReversalReasonInformation = append(p.ReversalReasonInformation, newValue)
 	return newValue
 }
@@ -164,8 +162,7 @@ func (p *PaymentTransaction51) AddOriginalTransactionReference() *OriginalTransa
 }
 
 func (p *PaymentTransaction51) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	p.SupplementaryData = append(p.SupplementaryData, newValue)
 	return newValue
 }
-

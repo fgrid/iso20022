@@ -11,9 +11,7 @@ type CorporateActionPeriod11 struct {
 
 	// Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity.
 	ParallelTradingPeriod *Period4 `xml:"ParllTradgPrd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod11) AddPriceCalculationPeriod() *Period4 {
 	c.PriceCalculationPeriod = new(Period4)
@@ -29,4 +27,3 @@ func (c *CorporateActionPeriod11) AddParallelTradingPeriod() *Period4 {
 	c.ParallelTradingPeriod = new(Period4)
 	return c.ParallelTradingPeriod
 }
-

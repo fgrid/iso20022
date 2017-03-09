@@ -8,9 +8,7 @@ type ProprietaryAgent2 struct {
 
 	// Organisation established primarily to provide financial services.
 	Agent *BranchAndFinancialInstitutionIdentification4 `xml:"Agt"`
-
 }
-
 
 func (p *ProprietaryAgent2) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (p *ProprietaryAgent2) AddAgent() *BranchAndFinancialInstitutionIdentificat
 	p.Agent = new(BranchAndFinancialInstitutionIdentification4)
 	return p.Agent
 }
-

@@ -17,9 +17,7 @@ type MandateOccurrences2 struct {
 
 	// Date of the final collection of a direct debit as per the mandate.
 	FinalCollectionDate *ISODate `xml:"FnlColltnDt,omitempty"`
-
 }
-
 
 func (m *MandateOccurrences2) SetSequenceType(value string) {
 	m.SequenceType = (*SequenceType2Code)(&value)
@@ -41,4 +39,3 @@ func (m *MandateOccurrences2) SetFirstCollectionDate(value string) {
 func (m *MandateOccurrences2) SetFinalCollectionDate(value string) {
 	m.FinalCollectionDate = (*ISODate)(&value)
 }
-

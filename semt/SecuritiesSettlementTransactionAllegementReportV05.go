@@ -7,7 +7,7 @@ import (
 )
 
 type Document01900105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.019.001.05 Document"`
+	XMLName xml.Name                                            `xml:"urn:iso:std:iso:20022:tech:xsd:semt.019.001.05 Document"`
 	Message *SecuritiesSettlementTransactionAllegementReportV05 `xml:"SctiesSttlmTxAllgmtRpt"`
 }
 
@@ -22,7 +22,7 @@ func (d *Document01900105) AddMessage() *SecuritiesSettlementTransactionAllegeme
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -45,9 +45,7 @@ type SecuritiesSettlementTransactionAllegementReportV05 struct {
 
 	// Details of the allegement.
 	AllegementDetails []*iso20022.SecuritiesTradeDetails49 `xml:"AllgmtDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionAllegementReportV05) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -70,8 +68,7 @@ func (s *SecuritiesSettlementTransactionAllegementReportV05) AddSafekeepingAccou
 }
 
 func (s *SecuritiesSettlementTransactionAllegementReportV05) AddAllegementDetails() *iso20022.SecuritiesTradeDetails49 {
-	newValue := new (iso20022.SecuritiesTradeDetails49)
+	newValue := new(iso20022.SecuritiesTradeDetails49)
 	s.AllegementDetails = append(s.AllegementDetails, newValue)
 	return newValue
 }
-

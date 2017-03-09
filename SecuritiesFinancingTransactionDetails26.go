@@ -111,9 +111,7 @@ type SecuritiesFinancingTransactionDetails26 struct {
 
 	// Provides additional settlement processing information which can not be included within the structured fields of the message.
 	SettlementInstructionProcessingAdditionalDetails *Max350Text `xml:"SttlmInstrPrcgAddtlDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingTransactionDetails26) SetSecuritiesFinancingTradeIdentification(value string) {
 	s.SecuritiesFinancingTradeIdentification = (*Max35Text)(&value)
@@ -284,4 +282,3 @@ func (s *SecuritiesFinancingTransactionDetails26) AddInvestor() *PartyIdentifica
 func (s *SecuritiesFinancingTransactionDetails26) SetSettlementInstructionProcessingAdditionalDetails(value string) {
 	s.SettlementInstructionProcessingAdditionalDetails = (*Max350Text)(&value)
 }
-

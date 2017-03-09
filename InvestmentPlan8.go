@@ -36,7 +36,7 @@ type InvestmentPlan8 struct {
 	// Cash settlement standing instruction associated to the investment plan and to be either inserted or deleted.
 	ModifiedCashSettlement []*InvestmentFundCashSettlementInformation8 `xml:"ModfdCshSttlm,omitempty"`
 
-	// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. 
+	// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account.
 	ContractReference *Max35Text `xml:"CtrctRef,omitempty"`
 
 	// Reference of the previous contract to which this savings or withdrawal plan is related.
@@ -50,9 +50,7 @@ type InvestmentPlan8 struct {
 
 	// Specifies the type of insurance contract to which the savings investment plan is linked.
 	InsuranceCover *InsuranceType1Choice `xml:"InsrncCover,omitempty"`
-
 }
-
 
 func (i *InvestmentPlan8) AddFrequency() *Frequency20Choice {
 	i.Frequency = new(Frequency20Choice)
@@ -93,13 +91,13 @@ func (i *InvestmentPlan8) SetRoundingDirection(value string) {
 }
 
 func (i *InvestmentPlan8) AddSecurityDetails() *Repartition2 {
-	newValue := new (Repartition2)
+	newValue := new(Repartition2)
 	i.SecurityDetails = append(i.SecurityDetails, newValue)
 	return newValue
 }
 
 func (i *InvestmentPlan8) AddModifiedCashSettlement() *InvestmentFundCashSettlementInformation8 {
-	newValue := new (InvestmentFundCashSettlementInformation8)
+	newValue := new(InvestmentFundCashSettlementInformation8)
 	i.ModifiedCashSettlement = append(i.ModifiedCashSettlement, newValue)
 	return newValue
 }
@@ -124,4 +122,3 @@ func (i *InvestmentPlan8) AddInsuranceCover() *InsuranceType1Choice {
 	i.InsuranceCover = new(InsuranceType1Choice)
 	return i.InsuranceCover
 }
-

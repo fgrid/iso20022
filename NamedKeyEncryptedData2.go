@@ -11,9 +11,7 @@ type NamedKeyEncryptedData2 struct {
 
 	// Encrypted data with an encryption key.
 	EncryptedContent *EncryptedContent2 `xml:"NcrptdCntt"`
-
 }
-
 
 func (n *NamedKeyEncryptedData2) SetVersion(value string) {
 	n.Version = (*Number)(&value)
@@ -27,4 +25,3 @@ func (n *NamedKeyEncryptedData2) AddEncryptedContent() *EncryptedContent2 {
 	n.EncryptedContent = new(EncryptedContent2)
 	return n.EncryptedContent
 }
-

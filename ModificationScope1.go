@@ -8,9 +8,7 @@ type ModificationScope1 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	PostalAddress *PostalAddress3 `xml:"PstlAdr"`
-
 }
-
 
 func (m *ModificationScope1) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope1) AddPostalAddress() *PostalAddress3 {
 	m.PostalAddress = new(PostalAddress3)
 	return m.PostalAddress
 }
-

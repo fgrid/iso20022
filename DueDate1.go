@@ -8,9 +8,7 @@ type DueDate1 struct {
 
 	// Specifies the reason why the authority needs the information on due date.
 	AdditionalInformation *Max140Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (d *DueDate1) SetDueDate(value string) {
 	d.DueDate = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (d *DueDate1) SetDueDate(value string) {
 func (d *DueDate1) SetAdditionalInformation(value string) {
 	d.AdditionalInformation = (*Max140Text)(&value)
 }
-

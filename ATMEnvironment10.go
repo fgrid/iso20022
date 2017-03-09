@@ -14,9 +14,7 @@ type ATMEnvironment10 struct {
 
 	// ATM information.
 	ATM *AutomatedTellerMachine8 `xml:"ATM"`
-
 }
-
 
 func (a *ATMEnvironment10) AddAcquirer() *Acquirer7 {
 	a.Acquirer = new(Acquirer7)
@@ -36,4 +34,3 @@ func (a *ATMEnvironment10) AddATM() *AutomatedTellerMachine8 {
 	a.ATM = new(AutomatedTellerMachine8)
 	return a.ATM
 }
-

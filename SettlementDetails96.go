@@ -53,9 +53,7 @@ type SettlementDetails96 struct {
 
 	// Specifies whether securities were requested to be included in the pool of securities eligible for collateral purposes.
 	EligibleForCollateral *YesNoIndicator `xml:"ElgblForColl,omitempty"`
-
 }
-
 
 func (s *SettlementDetails96) AddPriority() *PriorityNumeric4Choice {
 	s.Priority = new(PriorityNumeric4Choice)
@@ -63,7 +61,7 @@ func (s *SettlementDetails96) AddPriority() *PriorityNumeric4Choice {
 }
 
 func (s *SettlementDetails96) AddSettlementTransactionCondition() *SettlementTransactionCondition18Choice {
-	newValue := new (SettlementTransactionCondition18Choice)
+	newValue := new(SettlementTransactionCondition18Choice)
 	s.SettlementTransactionCondition = append(s.SettlementTransactionCondition, newValue)
 	return newValue
 }
@@ -140,4 +138,3 @@ func (s *SettlementDetails96) SetPartialSettlementIndicator(value string) {
 func (s *SettlementDetails96) SetEligibleForCollateral(value string) {
 	s.EligibleForCollateral = (*YesNoIndicator)(&value)
 }
-

@@ -17,9 +17,7 @@ type Statement16 struct {
 
 	// Type of balance on which the statement is prepared.
 	StatementType *StatementType2Choice `xml:"StmtTp,omitempty"`
-
 }
-
 
 func (s *Statement16) AddStatementDateOrPeriod() *DateAndPeriod1Choice {
 	s.StatementDateOrPeriod = new(DateAndPeriod1Choice)
@@ -45,4 +43,3 @@ func (s *Statement16) AddStatementType() *StatementType2Choice {
 	s.StatementType = new(StatementType2Choice)
 	return s.StatementType
 }
-

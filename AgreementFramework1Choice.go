@@ -8,9 +8,7 @@ type AgreementFramework1Choice struct {
 
 	// Proprietary identification to specify the type of collateral agreement.
 	ProprietaryIdentification *GenericIdentification30 `xml:"PrtryId"`
-
 }
-
 
 func (a *AgreementFramework1Choice) SetAgreementFramework(value string) {
 	a.AgreementFramework = (*AgreementFramework1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AgreementFramework1Choice) AddProprietaryIdentification() *GenericIdent
 	a.ProprietaryIdentification = new(GenericIdentification30)
 	return a.ProprietaryIdentification
 }
-

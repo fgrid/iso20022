@@ -20,9 +20,7 @@ type CardPaymentDataSet10 struct {
 
 	// Set of transaction to Process.
 	Transaction []*CardPaymentDataSetTransaction3Choice `xml:"Tx"`
-
 }
-
 
 func (c *CardPaymentDataSet10) AddDataSetIdentification() *DataSetIdentification1 {
 	c.DataSetIdentification = new(DataSetIdentification1)
@@ -30,7 +28,7 @@ func (c *CardPaymentDataSet10) AddDataSetIdentification() *DataSetIdentification
 }
 
 func (c *CardPaymentDataSet10) AddTraceability() *Traceability2 {
-	newValue := new (Traceability2)
+	newValue := new(Traceability2)
 	c.Traceability = append(c.Traceability, newValue)
 	return newValue
 }
@@ -41,7 +39,7 @@ func (c *CardPaymentDataSet10) AddDataSetInitiator() *GenericIdentification53 {
 }
 
 func (c *CardPaymentDataSet10) AddTransactionTotals() *TransactionTotals3 {
-	newValue := new (TransactionTotals3)
+	newValue := new(TransactionTotals3)
 	c.TransactionTotals = append(c.TransactionTotals, newValue)
 	return newValue
 }
@@ -52,8 +50,7 @@ func (c *CardPaymentDataSet10) AddCommonData() *CommonData4 {
 }
 
 func (c *CardPaymentDataSet10) AddTransaction() *CardPaymentDataSetTransaction3Choice {
-	newValue := new (CardPaymentDataSetTransaction3Choice)
+	newValue := new(CardPaymentDataSetTransaction3Choice)
 	c.Transaction = append(c.Transaction, newValue)
 	return newValue
 }
-

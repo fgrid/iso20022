@@ -11,7 +11,7 @@ type AccountStatement2 struct {
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
 	// Legal sequential number of the statement, as assigned by the account servicer. It is increased incrementally for each statement sent.
-	// 
+	//
 	// Usage: Where a paper statement is a legal requirement, it may have a number different from the electronic sequential number. Paper statements could for instance only be sent if movement on the account has taken place, whereas electronic statements could be sent at the end of each reporting period, regardless of whether movements have taken place or not.
 	LegalSequenceNumber *Number `xml:"LglSeqNb,omitempty"`
 
@@ -48,9 +48,7 @@ type AccountStatement2 struct {
 
 	// Further details of the account statement.
 	AdditionalStatementInformation *Max500Text `xml:"AddtlStmtInf,omitempty"`
-
 }
-
 
 func (a *AccountStatement2) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -93,13 +91,13 @@ func (a *AccountStatement2) AddRelatedAccount() *CashAccount16 {
 }
 
 func (a *AccountStatement2) AddInterest() *AccountInterest2 {
-	newValue := new (AccountInterest2)
+	newValue := new(AccountInterest2)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountStatement2) AddBalance() *CashBalance3 {
-	newValue := new (CashBalance3)
+	newValue := new(CashBalance3)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -110,7 +108,7 @@ func (a *AccountStatement2) AddTransactionsSummary() *TotalTransactions2 {
 }
 
 func (a *AccountStatement2) AddEntry() *ReportEntry2 {
-	newValue := new (ReportEntry2)
+	newValue := new(ReportEntry2)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -118,4 +116,3 @@ func (a *AccountStatement2) AddEntry() *ReportEntry2 {
 func (a *AccountStatement2) SetAdditionalStatementInformation(value string) {
 	a.AdditionalStatementInformation = (*Max500Text)(&value)
 }
-

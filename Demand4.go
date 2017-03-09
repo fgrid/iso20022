@@ -8,9 +8,7 @@ type Demand4 struct {
 
 	// Amount and currency of the demand.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (d *Demand4) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (d *Demand4) SetIdentification(value string) {
 func (d *Demand4) SetAmount(value, currency string) {
 	d.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

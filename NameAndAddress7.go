@@ -8,9 +8,7 @@ type NameAndAddress7 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	PostalAddress *PostalAddress1 `xml:"PstlAdr"`
-
 }
-
 
 func (n *NameAndAddress7) SetName(value string) {
 	n.Name = (*Max70Text)(&value)
@@ -20,4 +18,3 @@ func (n *NameAndAddress7) AddPostalAddress() *PostalAddress1 {
 	n.PostalAddress = new(PostalAddress1)
 	return n.PostalAddress
 }
-

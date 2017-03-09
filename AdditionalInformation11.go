@@ -38,9 +38,7 @@ type AdditionalInformation11 struct {
 
 	// Provides details on the processing status of the transaction.
 	ProcessingStatus *ProcessingStatus56Choice `xml:"PrcgSts,omitempty"`
-
 }
-
 
 func (a *AdditionalInformation11) SetAccountOwnerTransactionIdentification(value string) {
 	a.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -100,4 +98,3 @@ func (a *AdditionalInformation11) AddProcessingStatus() *ProcessingStatus56Choic
 	a.ProcessingStatus = new(ProcessingStatus56Choice)
 	return a.ProcessingStatus
 }
-

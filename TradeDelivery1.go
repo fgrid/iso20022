@@ -23,9 +23,7 @@ type TradeDelivery1 struct {
 
 	// Physical consolidation of goods for transport.
 	Consignment []*Consignment2 `xml:"Consgnmt,omitempty"`
-
 }
-
 
 func (t *TradeDelivery1) AddDeliveryPeriod() *Period1 {
 	t.DeliveryPeriod = new(Period1)
@@ -57,8 +55,7 @@ func (t *TradeDelivery1) AddDeliveryNote() *DocumentIdentification22 {
 }
 
 func (t *TradeDelivery1) AddConsignment() *Consignment2 {
-	newValue := new (Consignment2)
+	newValue := new(Consignment2)
 	t.Consignment = append(t.Consignment, newValue)
 	return newValue
 }
-

@@ -12,9 +12,7 @@ type CorporateActionPreliminaryAdviceType1 struct {
 	// Indicates whether the movement preliminary advice is sent after entitlement date.
 	// Value is Yes (true) if sent after entitlement date and No (false) if sent before entitlement date.
 	EligibilityIndicator *YesNoIndicator `xml:"ElgbltyInd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPreliminaryAdviceType1) SetType(value string) {
 	c.Type = (*CorporateActionPreliminaryAdviceType1Code)(&value)
@@ -28,4 +26,3 @@ func (c *CorporateActionPreliminaryAdviceType1) AddProcessingStatus() *Corporate
 func (c *CorporateActionPreliminaryAdviceType1) SetEligibilityIndicator(value string) {
 	c.EligibilityIndicator = (*YesNoIndicator)(&value)
 }
-

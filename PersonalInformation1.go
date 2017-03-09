@@ -11,9 +11,7 @@ type PersonalInformation1 struct {
 
 	// Name of the partner of the individual person.
 	NameOfPartner *Max35Text `xml:"NmOfPrtnr,omitempty"`
-
 }
-
 
 func (p *PersonalInformation1) SetNameOfFather(value string) {
 	p.NameOfFather = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (p *PersonalInformation1) SetMaidenNameOfMother(value string) {
 func (p *PersonalInformation1) SetNameOfPartner(value string) {
 	p.NameOfPartner = (*Max35Text)(&value)
 }
-

@@ -17,9 +17,7 @@ type InvestmentFundCashSettlementInformation5 struct {
 
 	// Instrument that has or represents monetary value and is used to process a payment instruction for an interest payment.
 	InterestPaymentInstrument *PaymentInstrument10 `xml:"IntrstPmtInstrm,omitempty"`
-
 }
-
 
 func (i *InvestmentFundCashSettlementInformation5) AddSubscriptionPaymentInstrument() *PaymentInstrument11 {
 	i.SubscriptionPaymentInstrument = new(PaymentInstrument11)
@@ -45,4 +43,3 @@ func (i *InvestmentFundCashSettlementInformation5) AddInterestPaymentInstrument(
 	i.InterestPaymentInstrument = new(PaymentInstrument10)
 	return i.InterestPaymentInstrument
 }
-

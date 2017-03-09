@@ -8,9 +8,7 @@ type Narrative1 struct {
 
 	// Narrative text.
 	Text []*Max20000Text `xml:"Txt"`
-
 }
-
 
 func (n *Narrative1) AddType() *NarrativeType1Choice {
 	n.Type = new(NarrativeType1Choice)
@@ -20,4 +18,3 @@ func (n *Narrative1) AddType() *NarrativeType1Choice {
 func (n *Narrative1) AddText(value string) {
 	n.Text = append(n.Text, (*Max20000Text)(&value))
 }
-

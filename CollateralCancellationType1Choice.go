@@ -8,9 +8,7 @@ type CollateralCancellationType1Choice struct {
 
 	// Provides the cancellation reason using a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (c *CollateralCancellationType1Choice) SetCode(value string) {
 	c.Code = (*CollateralManagementCancellationReason1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CollateralCancellationType1Choice) AddProprietary() *GenericIdentificat
 	c.Proprietary = new(GenericIdentification30)
 	return c.Proprietary
 }
-

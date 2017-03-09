@@ -11,9 +11,7 @@ type FinancialInstrument15 struct {
 
 	// Provides details of the underlying financial instrument for which the transaction report is being sent. If there is more than one underlying financial instrument then it is the dominant/ultimate instrument that should be identified here.
 	UnderlyingInstrumentIdentification *SecurityIdentification6Choice `xml:"UndrlygInstrmId,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument15) AddIdentification() *SecurityIdentification6Choice {
 	f.Identification = new(SecurityIdentification6Choice)
@@ -29,4 +27,3 @@ func (f *FinancialInstrument15) AddUnderlyingInstrumentIdentification() *Securit
 	f.UnderlyingInstrumentIdentification = new(SecurityIdentification6Choice)
 	return f.UnderlyingInstrumentIdentification
 }
-

@@ -11,9 +11,7 @@ type TransactionIdentifications4 struct {
 
 	// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).
 	AccountOwnerTransactionIdentification *References4Choice `xml:"AcctOwnrTxId"`
-
 }
-
 
 func (t *TransactionIdentifications4) SetAccountServicerTransactionIdentification(value string) {
 	t.AccountServicerTransactionIdentification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (t *TransactionIdentifications4) AddAccountOwnerTransactionIdentification()
 	t.AccountOwnerTransactionIdentification = new(References4Choice)
 	return t.AccountOwnerTransactionIdentification
 }
-

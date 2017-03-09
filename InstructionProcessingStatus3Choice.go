@@ -26,9 +26,7 @@ type InstructionProcessingStatus3Choice struct {
 
 	// Modification request from your counterparty for this transaction is pending waiting for your cancellation request or your consent.
 	ModificationRequested *NoSpecifiedReason1 `xml:"ModReqd"`
-
 }
-
 
 func (i *InstructionProcessingStatus3Choice) AddPendingProcessing() *PendingProcessingStatus1Choice {
 	i.PendingProcessing = new(PendingProcessingStatus1Choice)
@@ -69,4 +67,3 @@ func (i *InstructionProcessingStatus3Choice) AddModificationRequested() *NoSpeci
 	i.ModificationRequested = new(NoSpecifiedReason1)
 	return i.ModificationRequested
 }
-

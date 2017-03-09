@@ -26,9 +26,7 @@ type CorporateActionElection3 struct {
 
 	// Provides information about the securities movement resulting from the election instruction.
 	SecuritiesMovementDetails []*CorporateActionSecuritiesMovement2 `xml:"SctiesMvmntDtls,omitempty"`
-
 }
-
 
 func (c *CorporateActionElection3) AddAccountDetails() *SecuritiesAccount7 {
 	c.AccountDetails = new(SecuritiesAccount7)
@@ -59,14 +57,13 @@ func (c *CorporateActionElection3) SetProposedRate(value string) {
 }
 
 func (c *CorporateActionElection3) AddCashMovementDetails() *CorporateActionCashMovements2 {
-	newValue := new (CorporateActionCashMovements2)
+	newValue := new(CorporateActionCashMovements2)
 	c.CashMovementDetails = append(c.CashMovementDetails, newValue)
 	return newValue
 }
 
 func (c *CorporateActionElection3) AddSecuritiesMovementDetails() *CorporateActionSecuritiesMovement2 {
-	newValue := new (CorporateActionSecuritiesMovement2)
+	newValue := new(CorporateActionSecuritiesMovement2)
 	c.SecuritiesMovementDetails = append(c.SecuritiesMovementDetails, newValue)
 	return newValue
 }
-

@@ -8,17 +8,14 @@ type ISATransfer20 struct {
 
 	// Provides information related to the asset(s) transferred.
 	ProductTransfer []*ISATransfer18 `xml:"PdctTrf"`
-
 }
-
 
 func (i *ISATransfer20) SetCancellationReference(value string) {
 	i.CancellationReference = (*Max35Text)(&value)
 }
 
 func (i *ISATransfer20) AddProductTransfer() *ISATransfer18 {
-	newValue := new (ISATransfer18)
+	newValue := new(ISATransfer18)
 	i.ProductTransfer = append(i.ProductTransfer, newValue)
 	return newValue
 }
-

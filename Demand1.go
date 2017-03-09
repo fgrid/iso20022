@@ -38,9 +38,7 @@ type Demand1 struct {
 
 	// Additional information related to the demand.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (d *Demand1) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -73,7 +71,7 @@ func (d *Demand1) SetConfirmerReferenceNumber(value string) {
 }
 
 func (d *Demand1) AddSettlementAccount() *CashAccount27 {
-	newValue := new (CashAccount27)
+	newValue := new(CashAccount27)
 	d.SettlementAccount = append(d.SettlementAccount, newValue)
 	return newValue
 }
@@ -95,4 +93,3 @@ func (d *Demand1) AddDemandDocumentation() *DemandDocumentation1 {
 func (d *Demand1) AddAdditionalInformation(value string) {
 	d.AdditionalInformation = append(d.AdditionalInformation, (*Max2000Text)(&value))
 }
-

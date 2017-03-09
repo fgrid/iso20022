@@ -17,9 +17,7 @@ type BalanceFormat6Choice struct {
 
 	// Number of units of a fund that were purchased part way throughout a distribution period, for example Group II Units in the U.K.
 	PartWayPeriodUnits *SignedQuantityFormat6 `xml:"PartWayPrdUnits"`
-
 }
-
 
 func (b *BalanceFormat6Choice) AddBalance() *SignedQuantityFormat7 {
 	b.Balance = new(SignedQuantityFormat7)
@@ -45,4 +43,3 @@ func (b *BalanceFormat6Choice) AddPartWayPeriodUnits() *SignedQuantityFormat6 {
 	b.PartWayPeriodUnits = new(SignedQuantityFormat6)
 	return b.PartWayPeriodUnits
 }
-

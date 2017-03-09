@@ -17,9 +17,7 @@ type SecuritiesAccount6 struct {
 
 	// Provides information required for the registration of the security.
 	RegistrationDetails *Max350Text `xml:"RegnDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesAccount6) AddSecurityIdentification() *SecurityIdentification7 {
 	s.SecurityIdentification = new(SecurityIdentification7)
@@ -43,4 +41,3 @@ func (s *SecuritiesAccount6) AddSafekeepingPlace() *PartyIdentification2Choice {
 func (s *SecuritiesAccount6) SetRegistrationDetails(value string) {
 	s.RegistrationDetails = (*Max350Text)(&value)
 }
-

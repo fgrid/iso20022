@@ -23,9 +23,7 @@ type CorporateActionGeneralInformation39 struct {
 
 	// Type of intermediates securities distribution.
 	IntermediateSecuritiesDistributionType *IntermediateSecuritiesDistributionTypeFormat6Choice `xml:"IntrmdtSctiesDstrbtnTp,omitempty"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation39) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*Max35Text)(&value)
@@ -58,4 +56,3 @@ func (c *CorporateActionGeneralInformation39) AddIntermediateSecuritiesDistribut
 	c.IntermediateSecuritiesDistributionType = new(IntermediateSecuritiesDistributionTypeFormat6Choice)
 	return c.IntermediateSecuritiesDistributionType
 }
-

@@ -55,7 +55,7 @@ type CreditTransferTransactionInformation11 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification4 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification4 `xml:"IntrmyAgt1,omitempty"`
 
@@ -63,7 +63,7 @@ type CreditTransferTransactionInformation11 struct {
 	IntermediaryAgent1Account *CashAccount16 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification4 `xml:"IntrmyAgt2,omitempty"`
 
@@ -71,7 +71,7 @@ type CreditTransferTransactionInformation11 struct {
 	IntermediaryAgent2Account *CashAccount16 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification4 `xml:"IntrmyAgt3,omitempty"`
 
@@ -115,8 +115,8 @@ type CreditTransferTransactionInformation11 struct {
 	// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
 	InstructionForCreditorAgent []*InstructionForCreditorAgent1 `xml:"InstrForCdtrAgt,omitempty"`
 
-	// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. 
-	// 
+	// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent.
+	//
 	// Usage: The next agent may not be the creditor agent.
 	// The instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.
 	InstructionForNextAgent []*InstructionForNextAgent1 `xml:"InstrForNxtAgt,omitempty"`
@@ -133,9 +133,7 @@ type CreditTransferTransactionInformation11 struct {
 
 	// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
 	RemittanceInformation *RemittanceInformation5 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (c *CreditTransferTransactionInformation11) AddPaymentIdentification() *PaymentIdentification3 {
 	c.PaymentIdentification = new(PaymentIdentification3)
@@ -190,7 +188,7 @@ func (c *CreditTransferTransactionInformation11) SetChargeBearer(value string) {
 }
 
 func (c *CreditTransferTransactionInformation11) AddChargesInformation() *ChargesInformation5 {
-	newValue := new (ChargesInformation5)
+	newValue := new(ChargesInformation5)
 	c.ChargesInformation = append(c.ChargesInformation, newValue)
 	return newValue
 }
@@ -301,13 +299,13 @@ func (c *CreditTransferTransactionInformation11) AddUltimateCreditor() *PartyIde
 }
 
 func (c *CreditTransferTransactionInformation11) AddInstructionForCreditorAgent() *InstructionForCreditorAgent1 {
-	newValue := new (InstructionForCreditorAgent1)
+	newValue := new(InstructionForCreditorAgent1)
 	c.InstructionForCreditorAgent = append(c.InstructionForCreditorAgent, newValue)
 	return newValue
 }
 
 func (c *CreditTransferTransactionInformation11) AddInstructionForNextAgent() *InstructionForNextAgent1 {
-	newValue := new (InstructionForNextAgent1)
+	newValue := new(InstructionForNextAgent1)
 	c.InstructionForNextAgent = append(c.InstructionForNextAgent, newValue)
 	return newValue
 }
@@ -318,13 +316,13 @@ func (c *CreditTransferTransactionInformation11) AddPurpose() *Purpose2Choice {
 }
 
 func (c *CreditTransferTransactionInformation11) AddRegulatoryReporting() *RegulatoryReporting3 {
-	newValue := new (RegulatoryReporting3)
+	newValue := new(RegulatoryReporting3)
 	c.RegulatoryReporting = append(c.RegulatoryReporting, newValue)
 	return newValue
 }
 
 func (c *CreditTransferTransactionInformation11) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	c.RelatedRemittanceInformation = append(c.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -333,4 +331,3 @@ func (c *CreditTransferTransactionInformation11) AddRemittanceInformation() *Rem
 	c.RemittanceInformation = new(RemittanceInformation5)
 	return c.RemittanceInformation
 }
-

@@ -14,9 +14,7 @@ type TaxAmount1 struct {
 
 	// Set of elements used to provide details on the tax period and amount.
 	Details []*TaxRecordDetails1 `xml:"Dtls,omitempty"`
-
 }
-
 
 func (t *TaxAmount1) SetRate(value string) {
 	t.Rate = (*PercentageRate)(&value)
@@ -31,8 +29,7 @@ func (t *TaxAmount1) SetTotalAmount(value, currency string) {
 }
 
 func (t *TaxAmount1) AddDetails() *TaxRecordDetails1 {
-	newValue := new (TaxRecordDetails1)
+	newValue := new(TaxRecordDetails1)
 	t.Details = append(t.Details, newValue)
 	return newValue
 }
-

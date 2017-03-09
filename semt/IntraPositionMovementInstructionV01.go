@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.013.001.01 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:semt.013.001.01 Document"`
 	Message *IntraPositionMovementInstructionV01 `xml:"IntraPosMvmntInstr"`
 }
 
@@ -68,9 +68,7 @@ type IntraPositionMovementInstructionV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementInstructionV01) AddIdentification() *iso20022.TransactionAndDocumentIdentification1 {
 	i.Identification = new(iso20022.TransactionAndDocumentIdentification1)
@@ -128,8 +126,7 @@ func (i *IntraPositionMovementInstructionV01) AddMessageRecipient() *iso20022.Pa
 }
 
 func (i *IntraPositionMovementInstructionV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	i.Extension = append(i.Extension, newValue)
 	return newValue
 }
-

@@ -38,9 +38,7 @@ type LineItemDetails9 struct {
 
 	// Total amount of the line item after adjustments have been applied.
 	TotalAmount *CurrencyAndAmount `xml:"TtlAmt"`
-
 }
-
 
 func (l *LineItemDetails9) SetLineItemIdentification(value string) {
 	l.LineItemIdentification = (*Max70Text)(&value)
@@ -61,19 +59,19 @@ func (l *LineItemDetails9) SetProductName(value string) {
 }
 
 func (l *LineItemDetails9) AddProductIdentifier() *ProductIdentifier2Choice {
-	newValue := new (ProductIdentifier2Choice)
+	newValue := new(ProductIdentifier2Choice)
 	l.ProductIdentifier = append(l.ProductIdentifier, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails9) AddProductCharacteristics() *ProductCharacteristics1Choice {
-	newValue := new (ProductCharacteristics1Choice)
+	newValue := new(ProductCharacteristics1Choice)
 	l.ProductCharacteristics = append(l.ProductCharacteristics, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails9) AddProductCategory() *ProductCategory1Choice {
-	newValue := new (ProductCategory1Choice)
+	newValue := new(ProductCategory1Choice)
 	l.ProductCategory = append(l.ProductCategory, newValue)
 	return newValue
 }
@@ -83,7 +81,7 @@ func (l *LineItemDetails9) SetProductOrigin(value string) {
 }
 
 func (l *LineItemDetails9) AddAdjustment() *Adjustment4 {
-	newValue := new (Adjustment4)
+	newValue := new(Adjustment4)
 	l.Adjustment = append(l.Adjustment, newValue)
 	return newValue
 }
@@ -94,7 +92,7 @@ func (l *LineItemDetails9) AddFreightCharges() *Charge13 {
 }
 
 func (l *LineItemDetails9) AddTax() *Tax12 {
-	newValue := new (Tax12)
+	newValue := new(Tax12)
 	l.Tax = append(l.Tax, newValue)
 	return newValue
 }
@@ -102,4 +100,3 @@ func (l *LineItemDetails9) AddTax() *Tax12 {
 func (l *LineItemDetails9) SetTotalAmount(value, currency string) {
 	l.TotalAmount = NewCurrencyAndAmount(value, currency)
 }
-

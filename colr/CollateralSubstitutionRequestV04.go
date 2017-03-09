@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.010.001.04 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:colr.010.001.04 Document"`
 	Message *CollateralSubstitutionRequestV04 `xml:"CollSbstitnReq"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document01000104) AddMessage() *CollateralSubstitutionRequestV04 {
 
 // Scope
 // The CollateralSubstitutionRequest message is sent by either the collateral giver or its collateral manager to the collateral taker or its collateral manager. It is used to request a substitution of collateral by specifying the collateral to be returned and proposing the new type(s) of collateral to be delivered. Note: There are cases where the collateral taker can initiate the CollateralSubstitutionRequest message, for example in case of breach in the concentration limit.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The CollateralSubstitutionRequest message can be sent by either the collateral giver or collateral taker in order to substitute collateral that is already held by the other party.
 type CollateralSubstitutionRequestV04 struct {
@@ -42,9 +42,7 @@ type CollateralSubstitutionRequestV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CollateralSubstitutionRequestV04) SetTransactionIdentification(value string) {
 	c.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -71,8 +69,7 @@ func (c *CollateralSubstitutionRequestV04) AddCollateralSubstitutionDeliver() *i
 }
 
 func (c *CollateralSubstitutionRequestV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

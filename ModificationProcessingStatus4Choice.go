@@ -23,9 +23,7 @@ type ModificationProcessingStatus4Choice struct {
 
 	// Proprietary status.
 	Proprietary *ProprietaryStatusAndReason1 `xml:"Prtry"`
-
 }
-
 
 func (m *ModificationProcessingStatus4Choice) AddAcknowledgedAccepted() *AcknowledgedAcceptedStatus14Choice {
 	m.AcknowledgedAccepted = new(AcknowledgedAcceptedStatus14Choice)
@@ -61,4 +59,3 @@ func (m *ModificationProcessingStatus4Choice) AddProprietary() *ProprietaryStatu
 	m.Proprietary = new(ProprietaryStatusAndReason1)
 	return m.Proprietary
 }
-

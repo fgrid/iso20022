@@ -47,9 +47,7 @@ type SecurityIdentification23Choice struct {
 
 	// Proprietary identification of a security assigned by an institution or organisation.
 	OtherProprietaryIdentification *AlternateSecurityIdentification7 `xml:"OthrPrtryId"`
-
 }
-
 
 func (s *SecurityIdentification23Choice) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -111,4 +109,3 @@ func (s *SecurityIdentification23Choice) AddOtherProprietaryIdentification() *Al
 	s.OtherProprietaryIdentification = new(AlternateSecurityIdentification7)
 	return s.OtherProprietaryIdentification
 }
-

@@ -38,9 +38,7 @@ type PriceValuation2 struct {
 
 	// Information related to the price variations of an investment fund class.
 	ValuationStatistics []*ValuationStatistics2 `xml:"ValtnSttstcs,omitempty"`
-
 }
-
 
 func (p *PriceValuation2) SetIdentification(value string) {
 	p.Identification = (*Max35Text)(&value)
@@ -89,14 +87,13 @@ func (p *PriceValuation2) SetSuspendedIndicator(value string) {
 }
 
 func (p *PriceValuation2) AddPriceDetails() *UnitPrice6 {
-	newValue := new (UnitPrice6)
+	newValue := new(UnitPrice6)
 	p.PriceDetails = append(p.PriceDetails, newValue)
 	return newValue
 }
 
 func (p *PriceValuation2) AddValuationStatistics() *ValuationStatistics2 {
-	newValue := new (ValuationStatistics2)
+	newValue := new(ValuationStatistics2)
 	p.ValuationStatistics = append(p.ValuationStatistics, newValue)
 	return newValue
 }
-

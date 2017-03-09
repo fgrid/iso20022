@@ -14,9 +14,7 @@ type InterestPaymentDateRange2 struct {
 
 	// Further details on the interest payments.
 	AdditionalInformation *Max1025Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *InterestPaymentDateRange2) SetInterestScheduleIdentification(value string) {
 	i.InterestScheduleIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (i *InterestPaymentDateRange2) SetDueDate(value string) {
 func (i *InterestPaymentDateRange2) SetAdditionalInformation(value string) {
 	i.AdditionalInformation = (*Max1025Text)(&value)
 }
-

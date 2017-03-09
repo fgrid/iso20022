@@ -8,9 +8,7 @@ type DateFormat1 struct {
 
 	// Specifies whether an event for which a date is provided occurs typically at the "beginning of day" or at the "end of day".
 	DateMode *DateMode1Code `xml:"DtMd,omitempty"`
-
 }
-
 
 func (d *DateFormat1) AddDate() *DateFormat3Choice {
 	d.Date = new(DateFormat3Choice)
@@ -20,4 +18,3 @@ func (d *DateFormat1) AddDate() *DateFormat3Choice {
 func (d *DateFormat1) SetDateMode(value string) {
 	d.DateMode = (*DateMode1Code)(&value)
 }
-

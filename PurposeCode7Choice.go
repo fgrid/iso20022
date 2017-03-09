@@ -8,9 +8,7 @@ type PurposeCode7Choice struct {
 
 	// Securities account purpose as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (p *PurposeCode7Choice) SetCode(value string) {
 	p.Code = (*SecuritiesAccountPurposeType1Code)(&value)
@@ -20,4 +18,3 @@ func (p *PurposeCode7Choice) AddProprietary() *GenericIdentification30 {
 	p.Proprietary = new(GenericIdentification30)
 	return p.Proprietary
 }
-

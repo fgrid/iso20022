@@ -14,9 +14,7 @@ type DeliveringPartiesAndAccount11 struct {
 
 	// Identifies the securities settlement system to be used.
 	SecuritiesSettlementSystem *Max35Text `xml:"SctiesSttlmSys,omitempty"`
-
 }
-
 
 func (d *DeliveringPartiesAndAccount11) AddDepository() *PartyIdentification34Choice {
 	d.Depository = new(PartyIdentification34Choice)
@@ -36,4 +34,3 @@ func (d *DeliveringPartiesAndAccount11) AddParty2() *PartyIdentificationAndAccou
 func (d *DeliveringPartiesAndAccount11) SetSecuritiesSettlementSystem(value string) {
 	d.SecuritiesSettlementSystem = (*Max35Text)(&value)
 }
-

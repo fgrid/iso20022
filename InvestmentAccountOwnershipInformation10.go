@@ -3,7 +3,7 @@ package iso20022
 // Characteristics of the ownership of an investment account.
 type InvestmentAccountOwnershipInformation10 struct {
 
-	// Information about the organisation or individual person. 
+	// Information about the organisation or individual person.
 	Party *Party23Choice `xml:"Pty"`
 
 	// Status of an identity check to prevent money laundering. This includes the counter-terrorism check.
@@ -35,9 +35,7 @@ type InvestmentAccountOwnershipInformation10 struct {
 
 	// Foreign Account Tax Compliance Act (FATCA) status of the investor.
 	FATCAStatus []*FATCAStatus1 `xml:"FATCASts,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOwnershipInformation10) AddParty() *Party23Choice {
 	i.Party = new(Party23Choice)
@@ -50,7 +48,7 @@ func (i *InvestmentAccountOwnershipInformation10) AddMoneyLaunderingCheck() *Mon
 }
 
 func (i *InvestmentAccountOwnershipInformation10) AddInvestorProfileValidation() *PartyProfileInformation4 {
-	newValue := new (PartyProfileInformation4)
+	newValue := new(PartyProfileInformation4)
 	i.InvestorProfileValidation = append(i.InvestorProfileValidation, newValue)
 	return newValue
 }
@@ -81,14 +79,13 @@ func (i *InvestmentAccountOwnershipInformation10) SetInformationDistribution(val
 }
 
 func (i *InvestmentAccountOwnershipInformation10) AddFATCAFormType() *FATCAForm1Choice {
-	newValue := new (FATCAForm1Choice)
+	newValue := new(FATCAForm1Choice)
 	i.FATCAFormType = append(i.FATCAFormType, newValue)
 	return newValue
 }
 
 func (i *InvestmentAccountOwnershipInformation10) AddFATCAStatus() *FATCAStatus1 {
-	newValue := new (FATCAStatus1)
+	newValue := new(FATCAStatus1)
 	i.FATCAStatus = append(i.FATCAStatus, newValue)
 	return newValue
 }
-

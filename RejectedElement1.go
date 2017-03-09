@@ -8,9 +8,7 @@ type RejectedElement1 struct {
 
 	// Reason for rejecting an individual element.
 	IndividualRejectionReason *Max140Text `xml:"IndvRjctnRsn"`
-
 }
-
 
 func (r *RejectedElement1) SetElementSequenceNumber(value string) {
 	r.ElementSequenceNumber = (*Number)(&value)
@@ -19,4 +17,3 @@ func (r *RejectedElement1) SetElementSequenceNumber(value string) {
 func (r *RejectedElement1) SetIndividualRejectionReason(value string) {
 	r.IndividualRejectionReason = (*Max140Text)(&value)
 }
-

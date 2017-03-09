@@ -14,9 +14,7 @@ type AutoExtend1Choice struct {
 
 	// Auto extension end date.
 	Date *ISODate `xml:"Dt"`
-
 }
-
 
 func (a *AutoExtend1Choice) SetDays(value string) {
 	a.Days = (*Number)(&value)
@@ -33,4 +31,3 @@ func (a *AutoExtend1Choice) SetYears(value string) {
 func (a *AutoExtend1Choice) SetDate(value string) {
 	a.Date = (*ISODate)(&value)
 }
-

@@ -8,9 +8,7 @@ type BeneficiaryCertificationType12Choice struct {
 
 	// Beneficial owner certification type expressed in a proprietary form.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (b *BeneficiaryCertificationType12Choice) SetCode(value string) {
 	b.Code = (*BeneficiaryCertificationType4Code)(&value)
@@ -20,4 +18,3 @@ func (b *BeneficiaryCertificationType12Choice) AddProprietary() *GenericIdentifi
 	b.Proprietary = new(GenericIdentification47)
 	return b.Proprietary
 }
-

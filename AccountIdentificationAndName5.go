@@ -8,9 +8,7 @@ type AccountIdentificationAndName5 struct {
 
 	// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.
 	Name *Max35Text `xml:"Nm,omitempty"`
-
 }
-
 
 func (a *AccountIdentificationAndName5) AddIdentification() *AccountIdentification4Choice {
 	a.Identification = new(AccountIdentification4Choice)
@@ -20,4 +18,3 @@ func (a *AccountIdentificationAndName5) AddIdentification() *AccountIdentificati
 func (a *AccountIdentificationAndName5) SetName(value string) {
 	a.Name = (*Max35Text)(&value)
 }
-

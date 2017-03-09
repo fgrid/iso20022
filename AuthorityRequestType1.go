@@ -8,9 +8,7 @@ type AuthorityRequestType1 struct {
 
 	// Specifies the message name.
 	MessageName *Max140Text `xml:"MsgNm,omitempty"`
-
 }
-
 
 func (a *AuthorityRequestType1) SetMessageNameIdentification(value string) {
 	a.MessageNameIdentification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (a *AuthorityRequestType1) SetMessageNameIdentification(value string) {
 func (a *AuthorityRequestType1) SetMessageName(value string) {
 	a.MessageName = (*Max140Text)(&value)
 }
-

@@ -17,9 +17,7 @@ type CardTransaction14 struct {
 
 	// Response to the key exchange request.
 	TransactionResponse *ResponseType2 `xml:"TxRspn"`
-
 }
-
 
 func (c *CardTransaction14) SetKeyExchangeType(value string) {
 	c.KeyExchangeType = (*CardServiceType3Code)(&value)
@@ -30,13 +28,13 @@ func (c *CardTransaction14) SetInitiatorDateTime(value string) {
 }
 
 func (c *CardTransaction14) AddKeyVerification() *KEKIdentifier3 {
-	newValue := new (KEKIdentifier3)
+	newValue := new(KEKIdentifier3)
 	c.KeyVerification = append(c.KeyVerification, newValue)
 	return newValue
 }
 
 func (c *CardTransaction14) AddKey() *CryptographicKey6 {
-	newValue := new (CryptographicKey6)
+	newValue := new(CryptographicKey6)
 	c.Key = append(c.Key, newValue)
 	return newValue
 }
@@ -45,4 +43,3 @@ func (c *CardTransaction14) AddTransactionResponse() *ResponseType2 {
 	c.TransactionResponse = new(ResponseType2)
 	return c.TransactionResponse
 }
-

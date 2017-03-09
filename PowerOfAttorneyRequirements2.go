@@ -8,9 +8,7 @@ type PowerOfAttorneyRequirements2 struct {
 
 	// Specifies the documents needed to obtain a valid power of attorney.
 	OtherDocumentation *Max350Text `xml:"OthrDcmnttn,omitempty"`
-
 }
-
 
 func (p *PowerOfAttorneyRequirements2) AddLegalRequirement(value string) {
 	p.LegalRequirement = append(p.LegalRequirement, (*PowerOfAttorneyLegalisation1Code)(&value))
@@ -19,4 +17,3 @@ func (p *PowerOfAttorneyRequirements2) AddLegalRequirement(value string) {
 func (p *PowerOfAttorneyRequirements2) SetOtherDocumentation(value string) {
 	p.OtherDocumentation = (*Max350Text)(&value)
 }
-

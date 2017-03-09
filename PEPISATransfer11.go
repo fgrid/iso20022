@@ -38,9 +38,7 @@ type PEPISATransfer11 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PEPISATransfer11) AddPrimaryIndividualInvestor() *IndividualPerson8 {
 	p.PrimaryIndividualInvestor = new(IndividualPerson8)
@@ -53,7 +51,7 @@ func (p *PEPISATransfer11) AddSecondaryIndividualInvestor() *IndividualPerson8 {
 }
 
 func (p *PEPISATransfer11) AddOtherIndividualInvestor() *IndividualPerson8 {
-	newValue := new (IndividualPerson8)
+	newValue := new(IndividualPerson8)
 	p.OtherIndividualInvestor = append(p.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -69,7 +67,7 @@ func (p *PEPISATransfer11) AddSecondaryCorporateInvestor() *Organisation4 {
 }
 
 func (p *PEPISATransfer11) AddOtherCorporateInvestor() *Organisation4 {
-	newValue := new (Organisation4)
+	newValue := new(Organisation4)
 	p.OtherCorporateInvestor = append(p.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -95,14 +93,13 @@ func (p *PEPISATransfer11) AddCashAccount() *CashAccount11 {
 }
 
 func (p *PEPISATransfer11) AddProductTransfer() *ISATransfer3 {
-	newValue := new (ISATransfer3)
+	newValue := new(ISATransfer3)
 	p.ProductTransfer = append(p.ProductTransfer, newValue)
 	return newValue
 }
 
 func (p *PEPISATransfer11) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

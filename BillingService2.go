@@ -26,9 +26,7 @@ type BillingService2 struct {
 
 	// Provides tax related values for  tax calculation methods A, B or D.
 	TaxCalculation *BillingMethod1Choice `xml:"TaxClctn,omitempty"`
-
 }
-
 
 func (b *BillingService2) AddServiceDetail() *BillingServiceParameters3 {
 	b.ServiceDetail = new(BillingServiceParameters3)
@@ -68,4 +66,3 @@ func (b *BillingService2) AddTaxCalculation() *BillingMethod1Choice {
 	b.TaxCalculation = new(BillingMethod1Choice)
 	return b.TaxCalculation
 }
-

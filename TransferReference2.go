@@ -14,9 +14,7 @@ type TransferReference2 struct {
 
 	// Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.
 	TransferConfirmationReference *Max35Text `xml:"TrfConfRef,omitempty"`
-
 }
-
 
 func (t *TransferReference2) SetMasterReference(value string) {
 	t.MasterReference = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (t *TransferReference2) SetClientReference(value string) {
 func (t *TransferReference2) SetTransferConfirmationReference(value string) {
 	t.TransferConfirmationReference = (*Max35Text)(&value)
 }
-

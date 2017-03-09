@@ -8,9 +8,7 @@ type Action4 struct {
 
 	// Message to be displayed to the cardholder or the cashier.
 	MessageToPresent *ActionMessage2 `xml:"MsgToPres,omitempty"`
-
 }
-
 
 func (a *Action4) SetActionType(value string) {
 	a.ActionType = (*ActionType5Code)(&value)
@@ -20,4 +18,3 @@ func (a *Action4) AddMessageToPresent() *ActionMessage2 {
 	a.MessageToPresent = new(ActionMessage2)
 	return a.MessageToPresent
 }
-

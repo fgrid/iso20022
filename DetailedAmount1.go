@@ -8,9 +8,7 @@ type DetailedAmount1 struct {
 
 	// Amount value.
 	Value *ImpliedCurrencyAndAmount `xml:"Val"`
-
 }
-
 
 func (d *DetailedAmount1) SetType(value string) {
 	d.Type = (*TypeOfAmount2Code)(&value)
@@ -19,4 +17,3 @@ func (d *DetailedAmount1) SetType(value string) {
 func (d *DetailedAmount1) SetValue(value, currency string) {
 	d.Value = NewImpliedCurrencyAndAmount(value, currency)
 }
-

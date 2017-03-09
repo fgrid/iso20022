@@ -8,9 +8,7 @@ type FinancialInstrument12 struct {
 
 	// Name of the financial instrument in free format text.
 	Name *Max350Text `xml:"Nm,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument12) AddIdentification() *SecurityIdentification3Choice {
 	f.Identification = new(SecurityIdentification3Choice)
@@ -20,4 +18,3 @@ func (f *FinancialInstrument12) AddIdentification() *SecurityIdentification3Choi
 func (f *FinancialInstrument12) SetName(value string) {
 	f.Name = (*Max350Text)(&value)
 }
-

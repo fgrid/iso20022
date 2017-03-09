@@ -20,9 +20,7 @@ type StructuredRegulatoryReporting3 struct {
 
 	// Additional details that cater for specific domestic regulatory requirements.
 	Information []*Max35Text `xml:"Inf,omitempty"`
-
 }
-
 
 func (s *StructuredRegulatoryReporting3) SetType(value string) {
 	s.Type = (*Max35Text)(&value)
@@ -47,4 +45,3 @@ func (s *StructuredRegulatoryReporting3) SetAmount(value, currency string) {
 func (s *StructuredRegulatoryReporting3) AddInformation(value string) {
 	s.Information = append(s.Information, (*Max35Text)(&value))
 }
-

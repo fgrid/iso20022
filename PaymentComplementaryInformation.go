@@ -41,9 +41,7 @@ type PaymentComplementaryInformation struct {
 
 	// Unformatted information from the sender to the receiver.
 	SenderToReceiverInformation []*Max35Text `xml:"SndrToRcvrInf,omitempty"`
-
 }
-
 
 func (p *PaymentComplementaryInformation) AddRemittanceChoice() *RemittanceInformation3Choice {
 	p.RemittanceChoice = new(RemittanceInformation3Choice)
@@ -108,4 +106,3 @@ func (p *PaymentComplementaryInformation) AddCreditorAccount() *CashAccount3 {
 func (p *PaymentComplementaryInformation) AddSenderToReceiverInformation(value string) {
 	p.SenderToReceiverInformation = append(p.SenderToReceiverInformation, (*Max35Text)(&value))
 }
-

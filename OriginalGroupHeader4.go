@@ -4,7 +4,7 @@ package iso20022
 type OriginalGroupHeader4 struct {
 
 	// Unique identification, as assigned by the assigner, to unambiguously identify the group cancellation request.
-	// 
+	//
 	// Usage: The group cancellation request identification can be used for reconciliation or to link tasks related to the cancellation request.
 	GroupCancellationIdentification *Max35Text `xml:"GrpCxlId,omitempty"`
 
@@ -31,9 +31,7 @@ type OriginalGroupHeader4 struct {
 
 	// Provides detailed information on the cancellation reason.
 	CancellationReasonInformation []*PaymentCancellationReason2 `xml:"CxlRsnInf,omitempty"`
-
 }
-
 
 func (o *OriginalGroupHeader4) SetGroupCancellationIdentification(value string) {
 	o.GroupCancellationIdentification = (*Max35Text)(&value)
@@ -69,8 +67,7 @@ func (o *OriginalGroupHeader4) SetGroupCancellation(value string) {
 }
 
 func (o *OriginalGroupHeader4) AddCancellationReasonInformation() *PaymentCancellationReason2 {
-	newValue := new (PaymentCancellationReason2)
+	newValue := new(PaymentCancellationReason2)
 	o.CancellationReasonInformation = append(o.CancellationReasonInformation, newValue)
 	return newValue
 }
-

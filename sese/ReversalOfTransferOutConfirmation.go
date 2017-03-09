@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.004.001.01 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.004.001.01 Document"`
 	Message *ReversalOfTransferOutConfirmation `xml:"sese.004.001.01"`
 }
 
@@ -34,9 +34,7 @@ type ReversalOfTransferOutConfirmation struct {
 
 	// Copy of the transfer out confirmation to reverse.
 	TransferOutConfirmationToBeReversed *iso20022.TransferOut1 `xml:"TrfOutConfToBeRvsd,omitempty"`
-
 }
-
 
 func (r *ReversalOfTransferOutConfirmation) AddPreviousReference() *iso20022.AdditionalReference2 {
 	r.PreviousReference = new(iso20022.AdditionalReference2)
@@ -57,4 +55,3 @@ func (r *ReversalOfTransferOutConfirmation) AddTransferOutConfirmationToBeRevers
 	r.TransferOutConfirmationToBeReversed = new(iso20022.TransferOut1)
 	return r.TransferOutConfirmationToBeReversed
 }
-

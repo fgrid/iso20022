@@ -8,9 +8,7 @@ type Frequency4Choice struct {
 
 	// Frequency expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (f *Frequency4Choice) SetCode(value string) {
 	f.Code = (*EventFrequency4Code)(&value)
@@ -20,4 +18,3 @@ func (f *Frequency4Choice) AddProprietary() *GenericIdentification20 {
 	f.Proprietary = new(GenericIdentification20)
 	return f.Proprietary
 }
-

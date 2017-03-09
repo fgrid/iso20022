@@ -11,9 +11,7 @@ type Location1 struct {
 
 	// Name of jurisdiction, for example, Frankfurt.
 	Text []*Max2000Text `xml:"Txt,omitempty"`
-
 }
-
 
 func (l *Location1) SetCountry(value string) {
 	l.Country = (*CountryCode)(&value)
@@ -27,4 +25,3 @@ func (l *Location1) AddCountrySubDivision() *CountrySubdivision1Choice {
 func (l *Location1) AddText(value string) {
 	l.Text = append(l.Text, (*Max2000Text)(&value))
 }
-

@@ -14,9 +14,7 @@ type CashMovement3 struct {
 
 	// Provides information about the account which is debited/credited.
 	AccountDetails []*CashAccount18 `xml:"AcctDtls"`
-
 }
-
 
 func (c *CashMovement3) AddPostingDateTime() *DateAndDateTimeChoice {
 	c.PostingDateTime = new(DateAndDateTimeChoice)
@@ -32,8 +30,7 @@ func (c *CashMovement3) SetPostingAmount(value, currency string) {
 }
 
 func (c *CashMovement3) AddAccountDetails() *CashAccount18 {
-	newValue := new (CashAccount18)
+	newValue := new(CashAccount18)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
-

@@ -29,9 +29,7 @@ type CorporateActionDate29 struct {
 
 	// Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan. This time is dependent on the reference time zone of the account servicer as specified in an SLA.
 	StockLendingDeadline *DateFormat19Choice `xml:"StockLndgDdln,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate29) AddEarlyResponseDeadline() *DateFormat19Choice {
 	c.EarlyResponseDeadline = new(DateFormat19Choice)
@@ -77,4 +75,3 @@ func (c *CorporateActionDate29) AddStockLendingDeadline() *DateFormat19Choice {
 	c.StockLendingDeadline = new(DateFormat19Choice)
 	return c.StockLendingDeadline
 }
-

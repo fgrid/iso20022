@@ -4,7 +4,7 @@ package iso20022
 type PostalAddress12 struct {
 
 	// Name of a built-up area, with defined boundaries, and a local government.
-	// 
+	//
 	TownName *Max35Text `xml:"TwnNm,omitempty"`
 
 	// Identifies a subdivision of a country eg, state, region, county.
@@ -12,9 +12,7 @@ type PostalAddress12 struct {
 
 	// Nation with its own government.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PostalAddress12) SetTownName(value string) {
 	p.TownName = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (p *PostalAddress12) SetCountrySubDivision(value string) {
 func (p *PostalAddress12) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

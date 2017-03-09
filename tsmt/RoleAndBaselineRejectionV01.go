@@ -7,7 +7,7 @@ import (
 )
 
 type Document05000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.050.001.01 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.050.001.01 Document"`
 	Message *RoleAndBaselineRejectionV01 `xml:"RoleAndBaselnRjctn"`
 }
 
@@ -30,14 +30,12 @@ type RoleAndBaselineRejectionV01 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
 	// Reason why the user cannot accept the request.
 	RejectionReason *iso20022.Reason2 `xml:"RjctnRsn,omitempty"`
-
 }
-
 
 func (r *RoleAndBaselineRejectionV01) AddRejectionIdentification() *iso20022.MessageIdentification1 {
 	r.RejectionIdentification = new(iso20022.MessageIdentification1)
@@ -58,4 +56,3 @@ func (r *RoleAndBaselineRejectionV01) AddRejectionReason() *iso20022.Reason2 {
 	r.RejectionReason = new(iso20022.Reason2)
 	return r.RejectionReason
 }
-

@@ -8,9 +8,7 @@ type ClassificationType32Choice struct {
 
 	// Proprietary classification of financial instrument.
 	AlternateClassification *GenericIdentification36 `xml:"AltrnClssfctn"`
-
 }
-
 
 func (c *ClassificationType32Choice) SetClassificationFinancialInstrument(value string) {
 	c.ClassificationFinancialInstrument = (*CFIOct2015Identifier)(&value)
@@ -20,4 +18,3 @@ func (c *ClassificationType32Choice) AddAlternateClassification() *GenericIdenti
 	c.AlternateClassification = new(GenericIdentification36)
 	return c.AlternateClassification
 }
-

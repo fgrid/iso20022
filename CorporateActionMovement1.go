@@ -28,9 +28,7 @@ type CorporateActionMovement1 struct {
 
 	// Quantity of securities in the confirmed balance, ie, the balance to which the credit of the outturned resources applies.
 	ConfirmedBalanceSecuritiesQuantity *UnitOrFaceAmount1Choice `xml:"ConfdBalSctiesQty,omitempty"`
-
 }
-
 
 func (c *CorporateActionMovement1) SetOrderType(value string) {
 	c.OrderType = (*DistributionInstructionType1Code)(&value)
@@ -66,4 +64,3 @@ func (c *CorporateActionMovement1) AddConfirmedBalanceSecuritiesQuantity() *Unit
 	c.ConfirmedBalanceSecuritiesQuantity = new(UnitOrFaceAmount1Choice)
 	return c.ConfirmedBalanceSecuritiesQuantity
 }
-

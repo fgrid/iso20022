@@ -35,9 +35,7 @@ type AccountParties7 struct {
 
 	// An other type of party.
 	OtherParty []*ExtendedParty4 `xml:"OthrPty,omitempty"`
-
 }
-
 
 func (a *AccountParties7) SetModificationScopeIndication(value string) {
 	a.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -79,20 +77,19 @@ func (a *AccountParties7) AddAdministrator() *InvestmentAccountOwnershipInformat
 }
 
 func (a *AccountParties7) AddGranter() *InvestmentAccountOwnershipInformation7 {
-	newValue := new (InvestmentAccountOwnershipInformation7)
+	newValue := new(InvestmentAccountOwnershipInformation7)
 	a.Granter = append(a.Granter, newValue)
 	return newValue
 }
 
 func (a *AccountParties7) AddSettler() *InvestmentAccountOwnershipInformation7 {
-	newValue := new (InvestmentAccountOwnershipInformation7)
+	newValue := new(InvestmentAccountOwnershipInformation7)
 	a.Settler = append(a.Settler, newValue)
 	return newValue
 }
 
 func (a *AccountParties7) AddOtherParty() *ExtendedParty4 {
-	newValue := new (ExtendedParty4)
+	newValue := new(ExtendedParty4)
 	a.OtherParty = append(a.OtherParty, newValue)
 	return newValue
 }
-

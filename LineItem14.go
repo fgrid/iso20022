@@ -29,12 +29,10 @@ type LineItem14 struct {
 
 	// Difference between the ordered and the accepted total net amount.
 	PendingTotalNetAmount *CurrencyAndAmount `xml:"PdgTtlNetAmt"`
-
 }
 
-
 func (l *LineItem14) AddLineItemDetails() *LineItemDetails12 {
-	newValue := new (LineItemDetails12)
+	newValue := new(LineItemDetails12)
 	l.LineItemDetails = append(l.LineItemDetails, newValue)
 	return newValue
 }
@@ -70,4 +68,3 @@ func (l *LineItem14) SetOutstandingTotalNetAmount(value, currency string) {
 func (l *LineItem14) SetPendingTotalNetAmount(value, currency string) {
 	l.PendingTotalNetAmount = NewCurrencyAndAmount(value, currency)
 }
-

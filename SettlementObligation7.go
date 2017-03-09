@@ -22,7 +22,7 @@ type SettlementObligation7 struct {
 	SafekeepingAccount *SecuritiesAccount19 `xml:"SfkpgAcct,omitempty"`
 
 	// Clearing organisation that will clear the trade.
-	// 
+	//
 	// Note: This field allows clearing member firm to segregate flows coming from clearing counterparty's clearing system. Indeed, clearing member firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.
 	ClearingSegment *PartyIdentification35Choice `xml:"ClrSgmt,omitempty"`
 
@@ -55,9 +55,7 @@ type SettlementObligation7 struct {
 
 	// Provides the remaining amount to be settled.
 	RemainingAmountToBeSettled *AmountAndDirection27 `xml:"RmngAmtToBeSttld,omitempty"`
-
 }
-
 
 func (s *SettlementObligation7) SetCSDTransactionIdentification(value string) {
 	s.CSDTransactionIdentification = (*Max35Text)(&value)
@@ -138,4 +136,3 @@ func (s *SettlementObligation7) AddRemainingAmountToBeSettled() *AmountAndDirect
 	s.RemainingAmountToBeSettled = new(AmountAndDirection27)
 	return s.RemainingAmountToBeSettled
 }
-

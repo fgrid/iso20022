@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300107 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.003.001.07 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:sese.003.001.07 Document"`
 	Message *TransferOutConfirmationV07 `xml:"TrfOutConf"`
 }
 
@@ -39,7 +39,7 @@ type TransferOutConfirmationV07 struct {
 	// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
 	MasterReference *iso20022.Max35Text `xml:"MstrRef,omitempty"`
 
-	// General information related to the transfer of a financial instrument. 
+	// General information related to the transfer of a financial instrument.
 	TransferDetails []*iso20022.Transfer31 `xml:"TrfDtls"`
 
 	// Information related to the account from which the financial instrument was withdrawn.
@@ -56,9 +56,7 @@ type TransferOutConfirmationV07 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferOutConfirmationV07) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -85,7 +83,7 @@ func (t *TransferOutConfirmationV07) SetMasterReference(value string) {
 }
 
 func (t *TransferOutConfirmationV07) AddTransferDetails() *iso20022.Transfer31 {
-	newValue := new (iso20022.Transfer31)
+	newValue := new(iso20022.Transfer31)
 	t.TransferDetails = append(t.TransferDetails, newValue)
 	return newValue
 }
@@ -111,8 +109,7 @@ func (t *TransferOutConfirmationV07) AddCopyDetails() *iso20022.CopyInformation4
 }
 
 func (t *TransferOutConfirmationV07) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

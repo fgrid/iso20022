@@ -17,9 +17,7 @@ type OtherParties3 struct {
 
 	// Party responsible for the administration of a tri-party collateral transaction including collateral allocation, marking to market and substitution of collateral.
 	TripartyAgent *PartyIdentification10Choice `xml:"TrptyAgt,omitempty"`
-
 }
-
 
 func (o *OtherParties3) AddInvestor() *PartyIdentification14Choice {
 	o.Investor = new(PartyIdentification14Choice)
@@ -45,4 +43,3 @@ func (o *OtherParties3) AddTripartyAgent() *PartyIdentification10Choice {
 	o.TripartyAgent = new(PartyIdentification10Choice)
 	return o.TripartyAgent
 }
-

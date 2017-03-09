@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.010.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.010.001.03 Document"`
 	Message *BaselineMatchReportV03 `xml:"BaselnMtchRpt"`
 }
 
@@ -25,14 +25,14 @@ func (d *Document01000103) AddMessage() *BaselineMatchReportV03 {
 // - the party establishing a transaction in the lodge mode, that is the sender of an InitialBaselineSubmission message including the instruction lodge. In the outlined scenario the message is used to inform about the successful establishment of a transaction in the matching application.
 type BaselineMatchReportV03 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -41,16 +41,16 @@ type BaselineMatchReportV03 struct {
 	// Reference to the transaction for each financial institution which is a party to the transaction.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
-	// Party that buys goods or services, or a financial instrument. 
+	// Party that buys goods or services, or a financial instrument.
 	Buyer *iso20022.PartyIdentification26 `xml:"Buyr"`
 
-	// Party that sells goods or services, or a financial instrument. 
+	// Party that sells goods or services, or a financial instrument.
 	Seller *iso20022.PartyIdentification26 `xml:"Sellr"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Specifies the number of matching trials for a baseline.
@@ -64,9 +64,7 @@ type BaselineMatchReportV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (b *BaselineMatchReportV03) AddReportIdentification() *iso20022.MessageIdentification1 {
 	b.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -89,7 +87,7 @@ func (b *BaselineMatchReportV03) AddTransactionStatus() *iso20022.TransactionSta
 }
 
 func (b *BaselineMatchReportV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	b.UserTransactionReference = append(b.UserTransactionReference, newValue)
 	return newValue
 }
@@ -120,7 +118,7 @@ func (b *BaselineMatchReportV03) AddBaselineEstablishmentTrials() *iso20022.Limi
 }
 
 func (b *BaselineMatchReportV03) AddComparedDocumentReference() *iso20022.DocumentIdentification4 {
-	newValue := new (iso20022.DocumentIdentification4)
+	newValue := new(iso20022.DocumentIdentification4)
 	b.ComparedDocumentReference = append(b.ComparedDocumentReference, newValue)
 	return newValue
 }
@@ -134,4 +132,3 @@ func (b *BaselineMatchReportV03) AddRequestForAction() *iso20022.PendingActivity
 	b.RequestForAction = new(iso20022.PendingActivity2)
 	return b.RequestForAction
 }
-

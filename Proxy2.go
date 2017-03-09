@@ -11,9 +11,7 @@ type Proxy2 struct {
 
 	// Indicates the vote instruction for the resolutions which are announced via the meeting agenda in advance of the meeting.
 	VoteInstructionForAgendaResolution *Vote1Choice `xml:"VoteInstrForAgndRsltn,omitempty"`
-
 }
-
 
 func (p *Proxy2) SetProxyType(value string) {
 	p.ProxyType = (*ProxyType2Code)(&value)
@@ -28,4 +26,3 @@ func (p *Proxy2) AddVoteInstructionForAgendaResolution() *Vote1Choice {
 	p.VoteInstructionForAgendaResolution = new(Vote1Choice)
 	return p.VoteInstructionForAgendaResolution
 }
-

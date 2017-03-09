@@ -14,9 +14,7 @@ type CorporateActionSecuritiesMovement1 struct {
 
 	// Provides information about the account which is debited/credited.
 	AccountDetails []*SecuritiesAccount8 `xml:"AcctDtls"`
-
 }
-
 
 func (c *CorporateActionSecuritiesMovement1) AddPostingDateTime() *DateAndDateTimeChoice {
 	c.PostingDateTime = new(DateAndDateTimeChoice)
@@ -34,8 +32,7 @@ func (c *CorporateActionSecuritiesMovement1) AddPostingQuantity() *UnitOrFaceAmo
 }
 
 func (c *CorporateActionSecuritiesMovement1) AddAccountDetails() *SecuritiesAccount8 {
-	newValue := new (SecuritiesAccount8)
+	newValue := new(SecuritiesAccount8)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
-

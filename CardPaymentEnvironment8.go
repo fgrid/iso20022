@@ -11,9 +11,7 @@ type CardPaymentEnvironment8 struct {
 
 	// Identification of the POI requesting the diagnostic.
 	POIIdentification *GenericIdentification32 `xml:"POIId"`
-
 }
-
 
 func (c *CardPaymentEnvironment8) SetAcquirerParametersVersion(value string) {
 	c.AcquirerParametersVersion = (*ISODateTime)(&value)
@@ -28,4 +26,3 @@ func (c *CardPaymentEnvironment8) AddPOIIdentification() *GenericIdentification3
 	c.POIIdentification = new(GenericIdentification32)
 	return c.POIIdentification
 }
-

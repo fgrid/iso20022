@@ -8,9 +8,7 @@ type AlternateIdentification1 struct {
 
 	// Source of the security identification.
 	IdentificationSource *IdentificationSource1Choice `xml:"IdSrc"`
-
 }
-
 
 func (a *AlternateIdentification1) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (a *AlternateIdentification1) AddIdentificationSource() *IdentificationSour
 	a.IdentificationSource = new(IdentificationSource1Choice)
 	return a.IdentificationSource
 }
-

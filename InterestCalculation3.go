@@ -35,9 +35,7 @@ type InterestCalculation3 struct {
 
 	// Specifies the total amount of money representing an interest payment.
 	AggregatedInterestAmount *ActiveCurrencyAndAmount `xml:"AggtdIntrstAmt,omitempty"`
-
 }
-
 
 func (i *InterestCalculation3) SetCalculationDate(value string) {
 	i.CalculationDate = (*ISODate)(&value)
@@ -87,4 +85,3 @@ func (i *InterestCalculation3) AddAccruedInterestAmount() *AmountAndDirection20 
 func (i *InterestCalculation3) SetAggregatedInterestAmount(value, currency string) {
 	i.AggregatedInterestAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

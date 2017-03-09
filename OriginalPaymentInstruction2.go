@@ -28,9 +28,7 @@ type OriginalPaymentInstruction2 struct {
 
 	// Provides information on the original transactions to which the reversal message refers.
 	TransactionInformation []*PaymentTransaction35 `xml:"TxInf,omitempty"`
-
 }
-
 
 func (o *OriginalPaymentInstruction2) SetReversalPaymentInformationIdentification(value string) {
 	o.ReversalPaymentInformationIdentification = (*Max35Text)(&value)
@@ -57,14 +55,13 @@ func (o *OriginalPaymentInstruction2) SetPaymentInformationReversal(value string
 }
 
 func (o *OriginalPaymentInstruction2) AddReversalReasonInformation() *PaymentReversalReason7 {
-	newValue := new (PaymentReversalReason7)
+	newValue := new(PaymentReversalReason7)
 	o.ReversalReasonInformation = append(o.ReversalReasonInformation, newValue)
 	return newValue
 }
 
 func (o *OriginalPaymentInstruction2) AddTransactionInformation() *PaymentTransaction35 {
-	newValue := new (PaymentTransaction35)
+	newValue := new(PaymentTransaction35)
 	o.TransactionInformation = append(o.TransactionInformation, newValue)
 	return newValue
 }
-

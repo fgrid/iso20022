@@ -8,9 +8,7 @@ type FATCAStatus2 struct {
 
 	// Source of the Foreign Account Tax Compliance Act (FATCA) status.
 	Source *FATCASource1Choice `xml:"Src,omitempty"`
-
 }
-
 
 func (f *FATCAStatus2) AddType() *FATCAStatus2Choice {
 	f.Type = new(FATCAStatus2Choice)
@@ -21,4 +19,3 @@ func (f *FATCAStatus2) AddSource() *FATCASource1Choice {
 	f.Source = new(FATCASource1Choice)
 	return f.Source
 }
-

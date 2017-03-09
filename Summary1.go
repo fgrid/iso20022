@@ -29,9 +29,7 @@ type Summary1 struct {
 
 	// Provides the more details on the valuation of the collateral that is posted.
 	SummaryDetails *SummaryAmounts1 `xml:"SummryDtls,omitempty"`
-
 }
-
 
 func (s *Summary1) SetExposedAmountPartyA(value, currency string) {
 	s.ExposedAmountPartyA = NewActiveCurrencyAndAmount(value, currency)
@@ -69,4 +67,3 @@ func (s *Summary1) AddSummaryDetails() *SummaryAmounts1 {
 	s.SummaryDetails = new(SummaryAmounts1)
 	return s.SummaryDetails
 }
-

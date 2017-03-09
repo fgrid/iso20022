@@ -47,9 +47,7 @@ type CorporateActionPeriod8 struct {
 
 	// Period during which the settlement activities at the co-depositories are suspended in order to stabilise the holdings at the CSD.
 	CoDepositoriesSuspensionPeriod *Period3Choice `xml:"CoDpstriesSspnsnPrd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod8) AddPriceCalculationPeriod() *Period3Choice {
 	c.PriceCalculationPeriod = new(Period3Choice)
@@ -125,4 +123,3 @@ func (c *CorporateActionPeriod8) AddCoDepositoriesSuspensionPeriod() *Period3Cho
 	c.CoDepositoriesSuspensionPeriod = new(Period3Choice)
 	return c.CoDepositoriesSuspensionPeriod
 }
-

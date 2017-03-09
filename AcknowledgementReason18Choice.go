@@ -8,9 +8,7 @@ type AcknowledgementReason18Choice struct {
 
 	// Specifies additional information about the processed instruction.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (a *AcknowledgementReason18Choice) SetCode(value string) {
 	a.Code = (*RepoCallAcknowledgementReason2Code)(&value)
@@ -20,4 +18,3 @@ func (a *AcknowledgementReason18Choice) AddProprietary() *GenericIdentification4
 	a.Proprietary = new(GenericIdentification47)
 	return a.Proprietary
 }
-

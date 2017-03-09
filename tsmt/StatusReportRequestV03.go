@@ -7,7 +7,7 @@ import (
 )
 
 type Document03800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.038.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.038.001.03 Document"`
 	Message *StatusReportRequestV03 `xml:"StsRptReq"`
 }
 
@@ -27,11 +27,9 @@ type StatusReportRequestV03 struct {
 	// Identifies the request message.
 	RequestIdentification *iso20022.MessageIdentification1 `xml:"ReqId"`
 
-	// Specifies the entities of the submitter for which the transactions have to be reported. 
+	// Specifies the entities of the submitter for which the transactions have to be reported.
 	EntitiesToBeReported []*iso20022.BICIdentification1 `xml:"NttiesToBeRptd,omitempty"`
-
 }
-
 
 func (s *StatusReportRequestV03) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	s.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -39,8 +37,7 @@ func (s *StatusReportRequestV03) AddRequestIdentification() *iso20022.MessageIde
 }
 
 func (s *StatusReportRequestV03) AddEntitiesToBeReported() *iso20022.BICIdentification1 {
-	newValue := new (iso20022.BICIdentification1)
+	newValue := new(iso20022.BICIdentification1)
 	s.EntitiesToBeReported = append(s.EntitiesToBeReported, newValue)
 	return newValue
 }
-

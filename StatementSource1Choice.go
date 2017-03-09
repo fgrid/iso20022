@@ -8,9 +8,7 @@ type StatementSource1Choice struct {
 
 	// Report source expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (s *StatementSource1Choice) SetCode(value string) {
 	s.Code = (*StatementSource1Code)(&value)
@@ -20,4 +18,3 @@ func (s *StatementSource1Choice) AddProprietary() *GenericIdentification30 {
 	s.Proprietary = new(GenericIdentification30)
 	return s.Proprietary
 }
-

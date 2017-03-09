@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.015.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:seev.015.001.01 Document"`
 	Message *AgentCAElectionStatusAdviceV01 `xml:"AgtCAElctnStsAdvc"`
 }
 
@@ -51,9 +51,7 @@ type AgentCAElectionStatusAdviceV01 struct {
 
 	// Status of the amendment request sent by the CSD.
 	ElectionAmendmentRequestStatus *iso20022.ElectionAmendmentStatus1Choice `xml:"ElctnAmdmntReqSts"`
-
 }
-
 
 func (a *AgentCAElectionStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -94,4 +92,3 @@ func (a *AgentCAElectionStatusAdviceV01) AddElectionAmendmentRequestStatus() *is
 	a.ElectionAmendmentRequestStatus = new(iso20022.ElectionAmendmentStatus1Choice)
 	return a.ElectionAmendmentRequestStatus
 }
-

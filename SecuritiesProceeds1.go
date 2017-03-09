@@ -14,9 +14,7 @@ type SecuritiesProceeds1 struct {
 
 	// Provides reconciliation information.
 	ReconciliationDetails *Max350Text `xml:"RcncltnDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesProceeds1) AddSecurityIdentification() *SecurityIdentification7 {
 	s.SecurityIdentification = new(SecurityIdentification7)
@@ -29,7 +27,7 @@ func (s *SecuritiesProceeds1) AddPostingQuantity() *UnitOrFaceAmount1Choice {
 }
 
 func (s *SecuritiesProceeds1) AddAccountDetails() *SecuritiesAccount10 {
-	newValue := new (SecuritiesAccount10)
+	newValue := new(SecuritiesAccount10)
 	s.AccountDetails = append(s.AccountDetails, newValue)
 	return newValue
 }
@@ -37,4 +35,3 @@ func (s *SecuritiesProceeds1) AddAccountDetails() *SecuritiesAccount10 {
 func (s *SecuritiesProceeds1) SetReconciliationDetails(value string) {
 	s.ReconciliationDetails = (*Max350Text)(&value)
 }
-

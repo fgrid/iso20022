@@ -47,9 +47,7 @@ type AccountParties4 struct {
 
 	// An other type of party.
 	OtherParty []*ExtendedParty1 `xml:"OthrPty,omitempty"`
-
 }
-
 
 func (a *AccountParties4) SetModificationScopeIndication(value string) {
 	a.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -61,7 +59,7 @@ func (a *AccountParties4) AddPrimaryOwner() *InvestmentAccountOwnershipInformati
 }
 
 func (a *AccountParties4) AddTrustee() *InvestmentAccountOwnershipInformation4 {
-	newValue := new (InvestmentAccountOwnershipInformation4)
+	newValue := new(InvestmentAccountOwnershipInformation4)
 	a.Trustee = append(a.Trustee, newValue)
 	return newValue
 }
@@ -77,7 +75,7 @@ func (a *AccountParties4) AddNominee() *InvestmentAccountOwnershipInformation4 {
 }
 
 func (a *AccountParties4) AddJointOwner() *InvestmentAccountOwnershipInformation4 {
-	newValue := new (InvestmentAccountOwnershipInformation4)
+	newValue := new(InvestmentAccountOwnershipInformation4)
 	a.JointOwner = append(a.JointOwner, newValue)
 	return newValue
 }
@@ -113,20 +111,19 @@ func (a *AccountParties4) AddAdministrator() *InvestmentAccountOwnershipInformat
 }
 
 func (a *AccountParties4) AddGranter() *InvestmentAccountOwnershipInformation4 {
-	newValue := new (InvestmentAccountOwnershipInformation4)
+	newValue := new(InvestmentAccountOwnershipInformation4)
 	a.Granter = append(a.Granter, newValue)
 	return newValue
 }
 
 func (a *AccountParties4) AddSettler() *InvestmentAccountOwnershipInformation4 {
-	newValue := new (InvestmentAccountOwnershipInformation4)
+	newValue := new(InvestmentAccountOwnershipInformation4)
 	a.Settler = append(a.Settler, newValue)
 	return newValue
 }
 
 func (a *AccountParties4) AddOtherParty() *ExtendedParty1 {
-	newValue := new (ExtendedParty1)
+	newValue := new(ExtendedParty1)
 	a.OtherParty = append(a.OtherParty, newValue)
 	return newValue
 }
-

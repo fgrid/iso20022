@@ -8,9 +8,7 @@ type ClearingSystemIdentification1Choice struct {
 
 	// Proprietary clearing system service selected for a transaction.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *ClearingSystemIdentification1Choice) SetClearingSystemIdentification(value string) {
 	c.ClearingSystemIdentification = (*CashClearingSystem3Code)(&value)
@@ -19,4 +17,3 @@ func (c *ClearingSystemIdentification1Choice) SetClearingSystemIdentification(va
 func (c *ClearingSystemIdentification1Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

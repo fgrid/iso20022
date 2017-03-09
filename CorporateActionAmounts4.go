@@ -119,9 +119,7 @@ type CorporateActionAmounts4 struct {
 
 	// Amount of interest that has been accrued in between coupon payment periods
 	AccruedInterestAmount *ActiveCurrencyAndAmount `xml:"AcrdIntrstAmt,omitempty"`
-
 }
-
 
 func (c *CorporateActionAmounts4) SetGrossCashAmount(value, currency string) {
 	c.GrossCashAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -278,4 +276,3 @@ func (c *CorporateActionAmounts4) SetEUTaxRetentionAmount(value, currency string
 func (c *CorporateActionAmounts4) SetAccruedInterestAmount(value, currency string) {
 	c.AccruedInterestAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

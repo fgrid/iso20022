@@ -11,9 +11,7 @@ type PaymentReturnReason1 struct {
 
 	// Further details on the return reason.
 	AdditionalInformation []*Max105Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PaymentReturnReason1) AddOriginator() *PartyIdentification43 {
 	p.Originator = new(PartyIdentification43)
@@ -28,4 +26,3 @@ func (p *PaymentReturnReason1) AddReason() *ReturnReason5Choice {
 func (p *PaymentReturnReason1) AddAdditionalInformation(value string) {
 	p.AdditionalInformation = append(p.AdditionalInformation, (*Max105Text)(&value))
 }
-

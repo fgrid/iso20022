@@ -14,9 +14,7 @@ type SettlementParties29 struct {
 
 	// Ultimate institution that will receive the funds when different from the trading or counterparty side.
 	BeneficiaryInstitution *PartyIdentification73Choice `xml:"BnfcryInstn,omitempty"`
-
 }
-
 
 func (s *SettlementParties29) AddDeliveryAgent() *PartyIdentification73Choice {
 	s.DeliveryAgent = new(PartyIdentification73Choice)
@@ -37,4 +35,3 @@ func (s *SettlementParties29) AddBeneficiaryInstitution() *PartyIdentification73
 	s.BeneficiaryInstitution = new(PartyIdentification73Choice)
 	return s.BeneficiaryInstitution
 }
-

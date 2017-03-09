@@ -32,9 +32,7 @@ type ReceiveInformation6 struct {
 
 	// Parameters of a physical delivery.
 	PhysicalTransferDetails *DeliveryParameters4 `xml:"PhysTrfDtls,omitempty"`
-
 }
-
 
 func (r *ReceiveInformation6) AddEffectiveSettlementDate() *DateAndDateTimeChoice {
 	r.EffectiveSettlementDate = new(DateAndDateTimeChoice)
@@ -54,19 +52,19 @@ func (r *ReceiveInformation6) SetNetAmount(value, currency string) {
 }
 
 func (r *ReceiveInformation6) AddChargeDetails() *Charge20 {
-	newValue := new (Charge20)
+	newValue := new(Charge20)
 	r.ChargeDetails = append(r.ChargeDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation6) AddCommissionDetails() *Commission12 {
-	newValue := new (Commission12)
+	newValue := new(Commission12)
 	r.CommissionDetails = append(r.CommissionDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation6) AddTaxDetails() *Tax15 {
-	newValue := new (Tax15)
+	newValue := new(Tax15)
 	r.TaxDetails = append(r.TaxDetails, newValue)
 	return newValue
 }
@@ -84,4 +82,3 @@ func (r *ReceiveInformation6) AddPhysicalTransferDetails() *DeliveryParameters4 
 	r.PhysicalTransferDetails = new(DeliveryParameters4)
 	return r.PhysicalTransferDetails
 }
-

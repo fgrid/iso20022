@@ -17,9 +17,7 @@ type CorporateActionDate24 struct {
 
 	// Date on which the distribution is due to take place (cash and/or securities).
 	PaymentDate *DateAndDateTimeChoice `xml:"PmtDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate24) AddPostingDate() *DateAndDateTimeChoice {
 	c.PostingDate = new(DateAndDateTimeChoice)
@@ -45,4 +43,3 @@ func (c *CorporateActionDate24) AddPaymentDate() *DateAndDateTimeChoice {
 	c.PaymentDate = new(DateAndDateTimeChoice)
 	return c.PaymentDate
 }
-

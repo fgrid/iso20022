@@ -7,7 +7,7 @@ import (
 )
 
 type Document04500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.045.001.01 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.045.001.01 Document"`
 	Message *ForwardIntentToPayNotificationV01 `xml:"FwdInttToPayNtfctn"`
 }
 
@@ -30,7 +30,7 @@ type ForwardIntentToPayNotificationV01 struct {
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -39,10 +39,10 @@ type ForwardIntentToPayNotificationV01 struct {
 	// Reference to the transaction for the financial institutions involved in this transaction.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Provides the details of the intention to pay.
@@ -50,9 +50,7 @@ type ForwardIntentToPayNotificationV01 struct {
 
 	// Next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (f *ForwardIntentToPayNotificationV01) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	f.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -75,7 +73,7 @@ func (f *ForwardIntentToPayNotificationV01) AddTransactionStatus() *iso20022.Tra
 }
 
 func (f *ForwardIntentToPayNotificationV01) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	f.UserTransactionReference = append(f.UserTransactionReference, newValue)
 	return newValue
 }
@@ -99,4 +97,3 @@ func (f *ForwardIntentToPayNotificationV01) AddRequestForAction() *iso20022.Pend
 	f.RequestForAction = new(iso20022.PendingActivity2)
 	return f.RequestForAction
 }
-

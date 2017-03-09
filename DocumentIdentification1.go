@@ -11,9 +11,7 @@ type DocumentIdentification1 struct {
 
 	// Uniquely identifies the financial institution which has submitted the set of data by using a BIC.
 	Submitter *BICIdentification1 `xml:"Submitr"`
-
 }
-
 
 func (d *DocumentIdentification1) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (d *DocumentIdentification1) AddSubmitter() *BICIdentification1 {
 	d.Submitter = new(BICIdentification1)
 	return d.Submitter
 }
-

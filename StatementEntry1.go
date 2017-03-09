@@ -10,7 +10,7 @@ type StatementEntry1 struct {
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd"`
 
 	// Indicates whether the entry is the result of a reversal operation.
-	// 
+	//
 	// Usage : this element should only be present if the entry is the result of a reversal operation.
 	// If the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.
 	// If the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry.
@@ -23,15 +23,15 @@ type StatementEntry1 struct {
 	BookingDate *DateAndDateTimeChoice `xml:"BookgDt,omitempty"`
 
 	// Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).
-	// 
+	//
 	// Usage : For entries which are subject to availability/float (and for which availability information is present), value date must not be used, as the availability component identifies the number of availability days.
 	ValueDate *DateAndDateTimeChoice `xml:"ValDt,omitempty"`
 
 	// Account servicing institution's reference for the underlying transaction.
 	AccountServicerReference *Max35Text `xml:"AcctSvcrRef,omitempty"`
 
-	// Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. 
-	// 
+	// Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest.
+	//
 	// Usage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.
 	// Example : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability1 `xml:"Avlbty,omitempty"`
@@ -46,22 +46,22 @@ type StatementEntry1 struct {
 	AdditionalInformationIndicator *MessageIdentification2 `xml:"AddtlInfInd,omitempty"`
 
 	// Set of elements providing details on batched transactions.
-	// 
+	//
 	// Usage : this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches.
 	Batch []*BatchInformation1 `xml:"Btch,omitempty"`
 
 	// Set of elements providing information on the original amount.
-	// 
+	//
 	// Usage : This component (on entry level) should be used when a total original batch or aggregate amount has to be provided.  (If required, the original amounts for each individual transaction can be included in the same component on transaction details level.)
 	AmountDetails *AmountAndCurrencyExchange2 `xml:"AmtDtls,omitempty"`
 
 	// Provides information on the charges included in the entry amount.
-	// 
+	//
 	// Usage : this component is used in case of batch or aggregate bookings.
 	Charges []*ChargesInformation3 `xml:"Chrgs,omitempty"`
 
 	// Set of elements providing details on the interest amount included in the entry amount.
-	// 
+	//
 	// Usage : it is used in case of batch or aggregate bookings.
 	Interest []*TransactionInterest1 `xml:"Intrst,omitempty"`
 
@@ -70,9 +70,7 @@ type StatementEntry1 struct {
 
 	// Further details on the entry details.
 	AdditionalEntryInformation *Max500Text `xml:"AddtlNtryInf,omitempty"`
-
 }
-
 
 func (s *StatementEntry1) SetAmount(value, currency string) {
 	s.Amount = NewCurrencyAndAmount(value, currency)
@@ -105,7 +103,7 @@ func (s *StatementEntry1) SetAccountServicerReference(value string) {
 }
 
 func (s *StatementEntry1) AddAvailability() *CashBalanceAvailability1 {
-	newValue := new (CashBalanceAvailability1)
+	newValue := new(CashBalanceAvailability1)
 	s.Availability = append(s.Availability, newValue)
 	return newValue
 }
@@ -125,7 +123,7 @@ func (s *StatementEntry1) AddAdditionalInformationIndicator() *MessageIdentifica
 }
 
 func (s *StatementEntry1) AddBatch() *BatchInformation1 {
-	newValue := new (BatchInformation1)
+	newValue := new(BatchInformation1)
 	s.Batch = append(s.Batch, newValue)
 	return newValue
 }
@@ -136,19 +134,19 @@ func (s *StatementEntry1) AddAmountDetails() *AmountAndCurrencyExchange2 {
 }
 
 func (s *StatementEntry1) AddCharges() *ChargesInformation3 {
-	newValue := new (ChargesInformation3)
+	newValue := new(ChargesInformation3)
 	s.Charges = append(s.Charges, newValue)
 	return newValue
 }
 
 func (s *StatementEntry1) AddInterest() *TransactionInterest1 {
-	newValue := new (TransactionInterest1)
+	newValue := new(TransactionInterest1)
 	s.Interest = append(s.Interest, newValue)
 	return newValue
 }
 
 func (s *StatementEntry1) AddTransactionDetails() *EntryTransaction1 {
-	newValue := new (EntryTransaction1)
+	newValue := new(EntryTransaction1)
 	s.TransactionDetails = append(s.TransactionDetails, newValue)
 	return newValue
 }
@@ -156,4 +154,3 @@ func (s *StatementEntry1) AddTransactionDetails() *EntryTransaction1 {
 func (s *StatementEntry1) SetAdditionalEntryInformation(value string) {
 	s.AdditionalEntryInformation = (*Max500Text)(&value)
 }
-

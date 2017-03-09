@@ -59,7 +59,7 @@ type DirectDebitTransactionInformation14 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt1,omitempty"`
 
@@ -67,7 +67,7 @@ type DirectDebitTransactionInformation14 struct {
 	IntermediaryAgent1Account *CashAccount24 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt2,omitempty"`
 
@@ -75,7 +75,7 @@ type DirectDebitTransactionInformation14 struct {
 	IntermediaryAgent2Account *CashAccount24 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the intermediary agent 2 and the debtor agent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt3,omitempty"`
 
@@ -112,9 +112,7 @@ type DirectDebitTransactionInformation14 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation14) AddPaymentIdentification() *PaymentIdentification3 {
 	d.PaymentIdentification = new(PaymentIdentification3)
@@ -147,7 +145,7 @@ func (d *DirectDebitTransactionInformation14) SetChargeBearer(value string) {
 }
 
 func (d *DirectDebitTransactionInformation14) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	d.ChargesInformation = append(d.ChargesInformation, newValue)
 	return newValue
 }
@@ -262,13 +260,13 @@ func (d *DirectDebitTransactionInformation14) AddPurpose() *Purpose2Choice {
 }
 
 func (d *DirectDebitTransactionInformation14) AddRegulatoryReporting() *RegulatoryReporting3 {
-	newValue := new (RegulatoryReporting3)
+	newValue := new(RegulatoryReporting3)
 	d.RegulatoryReporting = append(d.RegulatoryReporting, newValue)
 	return newValue
 }
 
 func (d *DirectDebitTransactionInformation14) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	d.RelatedRemittanceInformation = append(d.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -279,8 +277,7 @@ func (d *DirectDebitTransactionInformation14) AddRemittanceInformation() *Remitt
 }
 
 func (d *DirectDebitTransactionInformation14) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	d.SupplementaryData = append(d.SupplementaryData, newValue)
 	return newValue
 }
-

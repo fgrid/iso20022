@@ -11,9 +11,7 @@ type Undertaking9 struct {
 
 	// Unique and unambiguous identifier assigned by the applicant to the undertaking.
 	ApplicantReferenceNumber *Max35Text `xml:"ApplcntRefNb,omitempty"`
-
 }
-
 
 func (u *Undertaking9) SetIdentification(value string) {
 	u.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (u *Undertaking9) AddIssuer() *PartyIdentification43 {
 func (u *Undertaking9) SetApplicantReferenceNumber(value string) {
 	u.ApplicantReferenceNumber = (*Max35Text)(&value)
 }
-

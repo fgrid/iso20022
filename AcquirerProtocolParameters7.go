@@ -53,12 +53,10 @@ type AcquirerProtocolParameters7 struct {
 
 	// Indicator to require protection of sensitive card data in messages.
 	ProtectCardData *TrueFalseIndicator `xml:"PrtctCardData"`
-
 }
 
-
 func (a *AcquirerProtocolParameters7) AddAcquirerIdentification() *GenericIdentification53 {
-	newValue := new (GenericIdentification53)
+	newValue := new(GenericIdentification53)
 	a.AcquirerIdentification = append(a.AcquirerIdentification, newValue)
 	return newValue
 }
@@ -72,7 +70,7 @@ func (a *AcquirerProtocolParameters7) AddApplicationIdentification(value string)
 }
 
 func (a *AcquirerProtocolParameters7) AddHost() *AcquirerHostConfiguration3 {
-	newValue := new (AcquirerHostConfiguration3)
+	newValue := new(AcquirerHostConfiguration3)
 	a.Host = append(a.Host, newValue)
 	return newValue
 }
@@ -125,7 +123,7 @@ func (a *AcquirerProtocolParameters7) SetBatchDigitalSignature(value string) {
 }
 
 func (a *AcquirerProtocolParameters7) AddMessageItem() *MessageItemCondition1 {
-	newValue := new (MessageItemCondition1)
+	newValue := new(MessageItemCondition1)
 	a.MessageItem = append(a.MessageItem, newValue)
 	return newValue
 }
@@ -133,4 +131,3 @@ func (a *AcquirerProtocolParameters7) AddMessageItem() *MessageItemCondition1 {
 func (a *AcquirerProtocolParameters7) SetProtectCardData(value string) {
 	a.ProtectCardData = (*TrueFalseIndicator)(&value)
 }
-

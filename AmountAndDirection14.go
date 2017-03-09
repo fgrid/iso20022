@@ -8,9 +8,7 @@ type AmountAndDirection14 struct {
 
 	// Indicates that the amount value is positive or negative.
 	Sign *PlusOrMinusIndicator `xml:"Sgn"`
-
 }
-
 
 func (a *AmountAndDirection14) SetAmount(value, currency string) {
 	a.Amount = NewRestrictedFINActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (a *AmountAndDirection14) SetAmount(value, currency string) {
 func (a *AmountAndDirection14) SetSign(value string) {
 	a.Sign = (*PlusOrMinusIndicator)(&value)
 }
-

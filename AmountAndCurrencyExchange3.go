@@ -9,7 +9,7 @@ type AmountAndCurrencyExchange3 struct {
 	// Amount of the underlying transaction.
 	TransactionAmount *AmountAndCurrencyExchangeDetails3 `xml:"TxAmt,omitempty"`
 
-	// Set of elements used to provide the countervalue amount and  currency exchange information. 
+	// Set of elements used to provide the countervalue amount and  currency exchange information.
 	// Usage: This can be either the counter amount quoted in an FX deal, or the result of the currency information applied to an instructed amount, before deduction of charges.
 	CounterValueAmount *AmountAndCurrencyExchangeDetails3 `xml:"CntrValAmt,omitempty"`
 
@@ -19,9 +19,7 @@ type AmountAndCurrencyExchange3 struct {
 
 	// Set of elements used to provide information on the original amount and currency exchange.
 	ProprietaryAmount []*AmountAndCurrencyExchangeDetails4 `xml:"PrtryAmt,omitempty"`
-
 }
-
 
 func (a *AmountAndCurrencyExchange3) AddInstructedAmount() *AmountAndCurrencyExchangeDetails3 {
 	a.InstructedAmount = new(AmountAndCurrencyExchangeDetails3)
@@ -44,8 +42,7 @@ func (a *AmountAndCurrencyExchange3) AddAnnouncedPostingAmount() *AmountAndCurre
 }
 
 func (a *AmountAndCurrencyExchange3) AddProprietaryAmount() *AmountAndCurrencyExchangeDetails4 {
-	newValue := new (AmountAndCurrencyExchangeDetails4)
+	newValue := new(AmountAndCurrencyExchangeDetails4)
 	a.ProprietaryAmount = append(a.ProprietaryAmount, newValue)
 	return newValue
 }
-

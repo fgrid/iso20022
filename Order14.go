@@ -132,9 +132,7 @@ type Order14 struct {
 
 	// Provides additional details of the trade process not included within structured fields of this message.
 	AdditionalTradeInstructionProcessingInformation *Max350Text `xml:"AddtlTradInstrPrcgInf,omitempty"`
-
 }
-
 
 func (o *Order14) AddBusinessProcessType() *BusinessProcessType1Choice {
 	o.BusinessProcessType = new(BusinessProcessType1Choice)
@@ -171,7 +169,7 @@ func (o *Order14) AddTradeTransactionType() *TradeType3Choice {
 }
 
 func (o *Order14) AddTradeTransactionCondition() *TradeTransactionCondition4Choice {
-	newValue := new (TradeTransactionCondition4Choice)
+	newValue := new(TradeTransactionCondition4Choice)
 	o.TradeTransactionCondition = append(o.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -214,7 +212,7 @@ func (o *Order14) AddNAVDate() *DateAndDateTime1Choice {
 }
 
 func (o *Order14) AddPartialFillDetails() *PartialFill1 {
-	newValue := new (PartialFill1)
+	newValue := new(PartialFill1)
 	o.PartialFillDetails = append(o.PartialFillDetails, newValue)
 	return newValue
 }
@@ -225,7 +223,7 @@ func (o *Order14) AddConfirmationQuantity() *Quantity6Choice {
 }
 
 func (o *Order14) AddQuantityBreakdown() *QuantityBreakdown11 {
-	newValue := new (QuantityBreakdown11)
+	newValue := new(QuantityBreakdown11)
 	o.QuantityBreakdown = append(o.QuantityBreakdown, newValue)
 	return newValue
 }
@@ -321,7 +319,7 @@ func (o *Order14) AddYieldType() *YieldCalculation2 {
 }
 
 func (o *Order14) AddReporting() *Reporting5Choice {
-	newValue := new (Reporting5Choice)
+	newValue := new(Reporting5Choice)
 	o.Reporting = append(o.Reporting, newValue)
 	return newValue
 }
@@ -334,4 +332,3 @@ func (o *Order14) AddAdditionalPhysicalOrRegistrationDetails() *RegistrationPara
 func (o *Order14) SetAdditionalTradeInstructionProcessingInformation(value string) {
 	o.AdditionalTradeInstructionProcessingInformation = (*Max350Text)(&value)
 }
-

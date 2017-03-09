@@ -34,9 +34,7 @@ type PaymentTransaction32 struct {
 
 	// Key elements used to identify the original transaction that is being referred to.
 	OriginalTransactionReference *OriginalTransactionReference16 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction32) SetStatusIdentification(value string) {
 	p.StatusIdentification = (*Max35Text)(&value)
@@ -55,13 +53,13 @@ func (p *PaymentTransaction32) SetTransactionStatus(value string) {
 }
 
 func (p *PaymentTransaction32) AddStatusReasonInformation() *StatusReasonInformation9 {
-	newValue := new (StatusReasonInformation9)
+	newValue := new(StatusReasonInformation9)
 	p.StatusReasonInformation = append(p.StatusReasonInformation, newValue)
 	return newValue
 }
 
 func (p *PaymentTransaction32) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -82,4 +80,3 @@ func (p *PaymentTransaction32) AddOriginalTransactionReference() *OriginalTransa
 	p.OriginalTransactionReference = new(OriginalTransactionReference16)
 	return p.OriginalTransactionReference
 }
-

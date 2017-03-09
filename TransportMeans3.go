@@ -11,9 +11,7 @@ type TransportMeans3 struct {
 
 	// Name, expressed as text, of the means of transport.
 	Name *Max35Text `xml:"Nm,omitempty"`
-
 }
-
 
 func (t *TransportMeans3) SetModeCode(value string) {
 	t.ModeCode = (*Max4Text)(&value)
@@ -26,4 +24,3 @@ func (t *TransportMeans3) SetIdentification(value string) {
 func (t *TransportMeans3) SetName(value string) {
 	t.Name = (*Max35Text)(&value)
 }
-

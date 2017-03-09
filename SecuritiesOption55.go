@@ -54,9 +54,7 @@ type SecuritiesOption55 struct {
 
 	// Identifies the chain of delivering settlement parties.
 	DeliveringSettlementParties *SettlementParties43 `xml:"DlvrgSttlmPties,omitempty"`
-
 }
-
 
 func (s *SecuritiesOption55) AddFinancialInstrumentIdentification() *SecurityIdentification20 {
 	s.FinancialInstrumentIdentification = new(SecurityIdentification20)
@@ -87,7 +85,7 @@ func (s *SecuritiesOption55) AddIncomeType() *GenericIdentification47 {
 }
 
 func (s *SecuritiesOption55) AddExemptionType() *GenericIdentification47 {
-	newValue := new (GenericIdentification47)
+	newValue := new(GenericIdentification47)
 	s.ExemptionType = append(s.ExemptionType, newValue)
 	return newValue
 }
@@ -139,4 +137,3 @@ func (s *SecuritiesOption55) AddDeliveringSettlementParties() *SettlementParties
 	s.DeliveringSettlementParties = new(SettlementParties43)
 	return s.DeliveringSettlementParties
 }
-

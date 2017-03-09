@@ -8,9 +8,7 @@ type Counterparty1Choice struct {
 
 	// Party that buys goods or services, or a financial instrument.
 	Buyer *PartyIdentificationAndAccount1 `xml:"Buyr"`
-
 }
-
 
 func (c *Counterparty1Choice) AddSeller() *PartyIdentificationAndAccount1 {
 	c.Seller = new(PartyIdentificationAndAccount1)
@@ -21,4 +19,3 @@ func (c *Counterparty1Choice) AddBuyer() *PartyIdentificationAndAccount1 {
 	c.Buyer = new(PartyIdentificationAndAccount1)
 	return c.Buyer
 }
-

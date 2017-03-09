@@ -17,16 +17,14 @@ type SignedData2 struct {
 
 	// Entity who has signed the data.
 	Signer []*Signer2 `xml:"Sgnr"`
-
 }
-
 
 func (s *SignedData2) SetVersion(value string) {
 	s.Version = (*Number)(&value)
 }
 
 func (s *SignedData2) AddDigestAlgorithm() *AlgorithmIdentification5 {
-	newValue := new (AlgorithmIdentification5)
+	newValue := new(AlgorithmIdentification5)
 	s.DigestAlgorithm = append(s.DigestAlgorithm, newValue)
 	return newValue
 }
@@ -41,8 +39,7 @@ func (s *SignedData2) AddCertificate(value string) {
 }
 
 func (s *SignedData2) AddSigner() *Signer2 {
-	newValue := new (Signer2)
+	newValue := new(Signer2)
 	s.Signer = append(s.Signer, newValue)
 	return newValue
 }
-

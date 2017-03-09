@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200206 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.002.06 Document"`
+	XMLName xml.Name                                                     `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.002.06 Document"`
 	Message *SecuritiesSettlementTransactionGenerationNotification002V06 `xml:"SctiesSttlmTxGnrtnNtfctn"`
 }
 
@@ -22,7 +22,7 @@ func (d *Document03200206) AddMessage() *SecuritiesSettlementTransactionGenerati
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -84,9 +84,7 @@ type SecuritiesSettlementTransactionGenerationNotification002V06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddTransactionIdentificationDetails() *iso20022.SettlementTypeAndIdentification24 {
 	s.TransactionIdentificationDetails = new(iso20022.SettlementTypeAndIdentification24)
@@ -99,7 +97,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddNumberC
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddLinkages() *iso20022.Linkages43 {
-	newValue := new (iso20022.Linkages43)
+	newValue := new(iso20022.Linkages43)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -120,7 +118,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddFinanci
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddQuantityAndAccountDetails() *iso20022.QuantityAndAccount47 {
-	newValue := new (iso20022.QuantityAndAccount47)
+	newValue := new(iso20022.QuantityAndAccount47)
 	s.QuantityAndAccountDetails = append(s.QuantityAndAccountDetails, newValue)
 	return newValue
 }
@@ -166,7 +164,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddAdditio
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddGeneratedReason() *iso20022.GeneratedReason6 {
-	newValue := new (iso20022.GeneratedReason6)
+	newValue := new(iso20022.GeneratedReason6)
 	s.GeneratedReason = append(s.GeneratedReason, newValue)
 	return newValue
 }
@@ -177,8 +175,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddStatusA
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotification002V06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

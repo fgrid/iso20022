@@ -8,9 +8,7 @@ type RateFormat3Choice struct {
 
 	// Value of the rate not specified.
 	NotSpecifiedRate *RateType5Code `xml:"NotSpcfdRate"`
-
 }
-
 
 func (r *RateFormat3Choice) SetRate(value string) {
 	r.Rate = (*PercentageRate)(&value)
@@ -19,4 +17,3 @@ func (r *RateFormat3Choice) SetRate(value string) {
 func (r *RateFormat3Choice) SetNotSpecifiedRate(value string) {
 	r.NotSpecifiedRate = (*RateType5Code)(&value)
 }
-

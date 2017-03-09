@@ -8,9 +8,7 @@ type AmountAndRate2 struct {
 
 	// Amount expressed as a rate.
 	Rate *PercentageRate `xml:"Rate,omitempty"`
-
 }
-
 
 func (a *AmountAndRate2) AddAmount() *AmountAndDirection30 {
 	a.Amount = new(AmountAndDirection30)
@@ -20,4 +18,3 @@ func (a *AmountAndRate2) AddAmount() *AmountAndDirection30 {
 func (a *AmountAndRate2) SetRate(value string) {
 	a.Rate = (*PercentageRate)(&value)
 }
-

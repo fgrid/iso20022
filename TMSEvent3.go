@@ -14,9 +14,7 @@ type TMSEvent3 struct {
 
 	// Additional information related to a failure.
 	AdditionalErrorInformation *Max70Text `xml:"AddtlErrInf,omitempty"`
-
 }
-
 
 func (t *TMSEvent3) SetTimeStamp(value string) {
 	t.TimeStamp = (*ISODateTime)(&value)
@@ -34,4 +32,3 @@ func (t *TMSEvent3) AddActionIdentification() *TMSActionIdentification3 {
 func (t *TMSEvent3) SetAdditionalErrorInformation(value string) {
 	t.AdditionalErrorInformation = (*Max70Text)(&value)
 }
-

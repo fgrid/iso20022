@@ -14,9 +14,7 @@ type AmountAndDirection9 struct {
 
 	// Information needed to process a currency exchange or conversion.
 	ForeignExchangeDetails *ForeignExchangeTerms11 `xml:"FXDtls,omitempty"`
-
 }
-
 
 func (a *AmountAndDirection9) SetAmount(value, currency string) {
 	a.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -34,4 +32,3 @@ func (a *AmountAndDirection9) AddForeignExchangeDetails() *ForeignExchangeTerms1
 	a.ForeignExchangeDetails = new(ForeignExchangeTerms11)
 	return a.ForeignExchangeDetails
 }
-

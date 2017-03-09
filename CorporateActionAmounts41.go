@@ -128,9 +128,7 @@ type CorporateActionAmounts41 struct {
 
 	// Amount of Transaction tax.
 	TransactionTax *RestrictedFINActiveCurrencyAndAmount `xml:"TxTax,omitempty"`
-
 }
-
 
 func (c *CorporateActionAmounts41) SetGrossCashAmount(value, currency string) {
 	c.GrossCashAmount = NewRestrictedFINActiveCurrencyAndAmount(value, currency)
@@ -299,4 +297,3 @@ func (c *CorporateActionAmounts41) SetTaxOnIncomeAmount(value, currency string) 
 func (c *CorporateActionAmounts41) SetTransactionTax(value, currency string) {
 	c.TransactionTax = NewRestrictedFINActiveCurrencyAndAmount(value, currency)
 }
-

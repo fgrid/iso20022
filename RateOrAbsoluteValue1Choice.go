@@ -8,9 +8,7 @@ type RateOrAbsoluteValue1Choice struct {
 
 	// Absolute value determined with a number.
 	AbsoluteValue *Number `xml:"AbsVal"`
-
 }
-
 
 func (r *RateOrAbsoluteValue1Choice) SetRateValue(value string) {
 	r.RateValue = (*PercentageRate)(&value)
@@ -19,4 +17,3 @@ func (r *RateOrAbsoluteValue1Choice) SetRateValue(value string) {
 func (r *RateOrAbsoluteValue1Choice) SetAbsoluteValue(value string) {
 	r.AbsoluteValue = (*Number)(&value)
 }
-

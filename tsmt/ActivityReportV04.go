@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.002.001.04 Document"`
+	XMLName xml.Name           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.002.001.04 Document"`
 	Message *ActivityReportV04 `xml:"ActvtyRpt"`
 }
 
@@ -33,9 +33,7 @@ type ActivityReportV04 struct {
 
 	// Describes the events that occurred for one transaction.
 	Report []*iso20022.ActivityReportItems3 `xml:"Rpt,omitempty"`
-
 }
-
 
 func (a *ActivityReportV04) AddReportIdentification() *iso20022.MessageIdentification1 {
 	a.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -48,8 +46,7 @@ func (a *ActivityReportV04) AddRelatedMessageReference() *iso20022.MessageIdenti
 }
 
 func (a *ActivityReportV04) AddReport() *iso20022.ActivityReportItems3 {
-	newValue := new (iso20022.ActivityReportItems3)
+	newValue := new(iso20022.ActivityReportItems3)
 	a.Report = append(a.Report, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type UnmatchedReason5 struct {
 
 	// Provides additional information about the reason in narrative form.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (u *UnmatchedReason5) AddCode() *UnmatchedReason7Choice {
 	u.Code = new(UnmatchedReason7Choice)
@@ -20,4 +18,3 @@ func (u *UnmatchedReason5) AddCode() *UnmatchedReason7Choice {
 func (u *UnmatchedReason5) SetAdditionalReasonInformation(value string) {
 	u.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

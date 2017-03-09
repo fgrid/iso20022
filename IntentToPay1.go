@@ -14,9 +14,7 @@ type IntentToPay1 struct {
 
 	// Specifies the beneficiary's account information.
 	SettlementTerms *SettlementTerms2 `xml:"SttlmTerms,omitempty"`
-
 }
-
 
 func (i *IntentToPay1) AddByPurchaseOrder() *ReportLine3 {
 	i.ByPurchaseOrder = new(ReportLine3)
@@ -36,4 +34,3 @@ func (i *IntentToPay1) AddSettlementTerms() *SettlementTerms2 {
 	i.SettlementTerms = new(SettlementTerms2)
 	return i.SettlementTerms
 }
-

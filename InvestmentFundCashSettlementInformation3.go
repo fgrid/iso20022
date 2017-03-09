@@ -14,9 +14,7 @@ type InvestmentFundCashSettlementInformation3 struct {
 
 	// Instrument that has or represents monetary value and is used to process a payment instruction for a savings plan payment.
 	SavingsPlanPaymentInstrument *PaymentInstrument8 `xml:"SvgsPlanPmtInstrm,omitempty"`
-
 }
-
 
 func (i *InvestmentFundCashSettlementInformation3) AddSubscriptionPaymentInstrument() *PaymentInstrument8 {
 	i.SubscriptionPaymentInstrument = new(PaymentInstrument8)
@@ -37,4 +35,3 @@ func (i *InvestmentFundCashSettlementInformation3) AddSavingsPlanPaymentInstrume
 	i.SavingsPlanPaymentInstrument = new(PaymentInstrument8)
 	return i.SavingsPlanPaymentInstrument
 }
-

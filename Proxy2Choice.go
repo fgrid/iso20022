@@ -8,9 +8,7 @@ type Proxy2Choice struct {
 
 	// Indicates that no proxy is allowed for a meeting.
 	ProxyNotAllowed *ProxyNotAllowedCode `xml:"PrxyNotAllwd"`
-
 }
-
 
 func (p *Proxy2Choice) AddProxy() *ProxyAppointmentInformation3 {
 	p.Proxy = new(ProxyAppointmentInformation3)
@@ -20,4 +18,3 @@ func (p *Proxy2Choice) AddProxy() *ProxyAppointmentInformation3 {
 func (p *Proxy2Choice) SetProxyNotAllowed(value string) {
 	p.ProxyNotAllowed = (*ProxyNotAllowedCode)(&value)
 }
-

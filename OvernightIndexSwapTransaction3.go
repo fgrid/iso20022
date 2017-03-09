@@ -7,30 +7,30 @@ type OvernightIndexSwapTransaction3 struct {
 	ReportedTransactionStatus *TransactionOperationType1Code `xml:"RptdTxSts"`
 
 	// Unique and unambiguous legal entity identification of  the branch of the reporting agent in which the transaction has been booked.
-	// 
-	// Usage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify. 
+	//
+	// Usage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify.
 	// Where the transaction has been booked by the head office or the reporting agent cannot be identified by a unique branch-specific LEI, the reporting agent must provide the LEI of the head office.
 	BranchIdentification *LEIIdentifier `xml:"BrnchId,omitempty"`
 
 	// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.
 	UniqueTransactionIdentifier *Max105Text `xml:"UnqTxIdr,omitempty"`
 
-	// Internal unique transaction identifier used by the reporting agent for each transaction. 
+	// Internal unique transaction identifier used by the reporting agent for each transaction.
 	ProprietaryTransactionIdentification *Max105Text `xml:"PrtryTxId"`
 
 	// Internal unique proprietary transaction identifier as assigned by the counterparty of the reporting agent for each transaction.
 	CounterpartyProprietaryTransactionIdentification *Max105Text `xml:"CtrPtyPrtryTxId,omitempty"`
 
-	// Identification of the counterparty of the reporting agent for the reported transaction. 
+	// Identification of the counterparty of the reporting agent for the reported transaction.
 	CounterpartyIdentification *CounterpartyIdentification2Choice `xml:"CtrPtyId"`
 
 	// Date and time on which the parties entered into the reported transaction.
-	// 
+	//
 	// Usage: when time is available, it must be reported.
-	// 
-	// It is to be reported with only the date when the time of the transaction is not available. 
-	// 
-	// The reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. 
+	//
+	// It is to be reported with only the date when the time of the transaction is not available.
+	//
+	// The reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent.
 	TradeDate *DateAndDateTimeChoice `xml:"TradDt"`
 
 	// Represents the date as of which the overnight rate of the floating leg is computed.
@@ -50,9 +50,7 @@ type OvernightIndexSwapTransaction3 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (o *OvernightIndexSwapTransaction3) SetReportedTransactionStatus(value string) {
 	o.ReportedTransactionStatus = (*TransactionOperationType1Code)(&value)
@@ -106,8 +104,7 @@ func (o *OvernightIndexSwapTransaction3) SetTransactionNominalAmount(value, curr
 }
 
 func (o *OvernightIndexSwapTransaction3) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	o.SupplementaryData = append(o.SupplementaryData, newValue)
 	return newValue
 }
-

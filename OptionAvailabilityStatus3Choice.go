@@ -8,9 +8,7 @@ type OptionAvailabilityStatus3Choice struct {
 
 	// Proprietary identification of the status of the option availability.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (o *OptionAvailabilityStatus3Choice) SetCode(value string) {
 	o.Code = (*OptionAvailabilityStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (o *OptionAvailabilityStatus3Choice) AddProprietary() *GenericIdentificatio
 	o.Proprietary = new(GenericIdentification30)
 	return o.Proprietary
 }
-

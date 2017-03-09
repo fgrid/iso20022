@@ -8,9 +8,7 @@ type InvestigatedParties1Choice struct {
 
 	// Specifies the investigated parties as a proprietary code.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (i *InvestigatedParties1Choice) SetCode(value string) {
 	i.Code = (*InvestigatedParties1Code)(&value)
@@ -19,4 +17,3 @@ func (i *InvestigatedParties1Choice) SetCode(value string) {
 func (i *InvestigatedParties1Choice) SetProprietary(value string) {
 	i.Proprietary = (*Max35Text)(&value)
 }
-

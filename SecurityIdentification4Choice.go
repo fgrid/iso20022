@@ -8,9 +8,7 @@ type SecurityIdentification4Choice struct {
 
 	// Proprietary identification of an underlying financial instrument.
 	Proprietary *AlternateSecurityIdentification2 `xml:"Prtry"`
-
 }
-
 
 func (s *SecurityIdentification4Choice) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -20,4 +18,3 @@ func (s *SecurityIdentification4Choice) AddProprietary() *AlternateSecurityIdent
 	s.Proprietary = new(AlternateSecurityIdentification2)
 	return s.Proprietary
 }
-

@@ -4,7 +4,7 @@ package iso20022
 type IdentificationAssignment2 struct {
 
 	// Point to point reference, as assigned by the assigner, and sent to the next party in the chain to unambiguously identify the message.
-	// 
+	//
 	// Usage: The assigner has to make sure that MessageIdentification is unique per assignee for a pre-agreed period.
 	MessageIdentification *Max35Text `xml:"MsgId"`
 
@@ -22,9 +22,7 @@ type IdentificationAssignment2 struct {
 
 	// Party that the identification assignment is assigned to. This is also the receiver of the message.
 	Assignee *Party12Choice `xml:"Assgne"`
-
 }
-
 
 func (i *IdentificationAssignment2) SetMessageIdentification(value string) {
 	i.MessageIdentification = (*Max35Text)(&value)
@@ -53,4 +51,3 @@ func (i *IdentificationAssignment2) AddAssignee() *Party12Choice {
 	i.Assignee = new(Party12Choice)
 	return i.Assignee
 }
-

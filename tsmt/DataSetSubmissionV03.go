@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.014.001.03 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.014.001.03 Document"`
 	Message *DataSetSubmissionV03 `xml:"DataSetSubmissn"`
 }
 
@@ -38,13 +38,13 @@ type DataSetSubmissionV03 struct {
 	// This reference must be used for all data sets belonging to the same submission group.
 	CommonSubmissionReference *iso20022.SimpleIdentificationInformation `xml:"CmonSubmissnRef"`
 
-	// Specifies the instruction given by the submitter. 
+	// Specifies the instruction given by the submitter.
 	Instruction *iso20022.InstructionType3 `xml:"Instr"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Commercial information that is submitted to the matching application for processing.
@@ -61,9 +61,7 @@ type DataSetSubmissionV03 struct {
 
 	// Other certificate information that is submitted to the matching application for processing.
 	OtherCertificateDataSet []*iso20022.OtherCertificateDataSet1 `xml:"OthrCertDataSet,omitempty"`
-
 }
-
 
 func (d *DataSetSubmissionV03) AddSubmissionIdentification() *iso20022.MessageIdentification1 {
 	d.SubmissionIdentification = new(iso20022.MessageIdentification1)
@@ -71,7 +69,7 @@ func (d *DataSetSubmissionV03) AddSubmissionIdentification() *iso20022.MessageId
 }
 
 func (d *DataSetSubmissionV03) AddRelatedTransactionReferences() *iso20022.DataSetSubmissionReferences3 {
-	newValue := new (iso20022.DataSetSubmissionReferences3)
+	newValue := new(iso20022.DataSetSubmissionReferences3)
 	d.RelatedTransactionReferences = append(d.RelatedTransactionReferences, newValue)
 	return newValue
 }
@@ -112,14 +110,13 @@ func (d *DataSetSubmissionV03) AddInsuranceDataSet() *iso20022.InsuranceDataSet1
 }
 
 func (d *DataSetSubmissionV03) AddCertificateDataSet() *iso20022.CertificateDataSet1 {
-	newValue := new (iso20022.CertificateDataSet1)
+	newValue := new(iso20022.CertificateDataSet1)
 	d.CertificateDataSet = append(d.CertificateDataSet, newValue)
 	return newValue
 }
 
 func (d *DataSetSubmissionV03) AddOtherCertificateDataSet() *iso20022.OtherCertificateDataSet1 {
-	newValue := new (iso20022.OtherCertificateDataSet1)
+	newValue := new(iso20022.OtherCertificateDataSet1)
 	d.OtherCertificateDataSet = append(d.OtherCertificateDataSet, newValue)
 	return newValue
 }
-

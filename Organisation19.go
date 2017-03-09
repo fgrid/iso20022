@@ -15,9 +15,7 @@ type Organisation19 struct {
 
 	// Additional card acceptor data required by a card scheme.
 	SchemeData *Max140Text `xml:"SchmeData,omitempty"`
-
 }
-
 
 func (o *Organisation19) AddIdentification() *GenericIdentification32 {
 	o.Identification = new(GenericIdentification32)
@@ -35,4 +33,3 @@ func (o *Organisation19) SetSelectedLanguage(value string) {
 func (o *Organisation19) SetSchemeData(value string) {
 	o.SchemeData = (*Max140Text)(&value)
 }
-

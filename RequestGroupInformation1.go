@@ -4,7 +4,7 @@ package iso20022
 type RequestGroupInformation1 struct {
 
 	// Point to point reference assigned by the financing requestor  to unambiguously identify the invoice financing request message.
-	// 
+	//
 	// Usage: The financing requestor has to make sure that 'GroupIdentification' is unique for a pre-agreed period.
 	GroupIdentification *Max35Text `xml:"GrpId"`
 
@@ -12,7 +12,7 @@ type RequestGroupInformation1 struct {
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
 
 	// User identification or any user key that allows to check if the financing requestor is allowed to ask for invoice financing.
-	// 
+	//
 	// Usage: the content is not of a technical nature, but reflects the organisational structure at the requesting side.
 	// The authorisation element can typically be used in case the financing requestor acts on behalf of one or more suppliers.
 	Authorisation []*Max128Text `xml:"Authstn,omitempty"`
@@ -43,9 +43,7 @@ type RequestGroupInformation1 struct {
 
 	// Additional information about the financing request.
 	AdditionalInformation []*AdditionalInformation1 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *RequestGroupInformation1) SetGroupIdentification(value string) {
 	r.GroupIdentification = (*Max35Text)(&value)
@@ -91,14 +89,13 @@ func (r *RequestGroupInformation1) AddFirstAgent() *FinancialInstitutionIdentifi
 }
 
 func (r *RequestGroupInformation1) AddAgreementClauses() *AgreementClauses1 {
-	newValue := new (AgreementClauses1)
+	newValue := new(AgreementClauses1)
 	r.AgreementClauses = append(r.AgreementClauses, newValue)
 	return newValue
 }
 
 func (r *RequestGroupInformation1) AddAdditionalInformation() *AdditionalInformation1 {
-	newValue := new (AdditionalInformation1)
+	newValue := new(AdditionalInformation1)
 	r.AdditionalInformation = append(r.AdditionalInformation, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.009.001.05 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.009.001.05 Document"`
 	Message *BaselineAmendmentRequestV05 `xml:"BaselnAmdmntReq"`
 }
 
@@ -56,9 +56,7 @@ type BaselineAmendmentRequestV05 struct {
 
 	// Person to be contacted in another bank than the seller or buyer's bank.
 	OtherBankContactPerson []*iso20022.ContactIdentification3 `xml:"OthrBkCtctPrsn,omitempty"`
-
 }
-
 
 func (b *BaselineAmendmentRequestV05) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	b.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -81,32 +79,31 @@ func (b *BaselineAmendmentRequestV05) AddBaseline() *iso20022.Baseline5 {
 }
 
 func (b *BaselineAmendmentRequestV05) AddBuyerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	b.BuyerContactPerson = append(b.BuyerContactPerson, newValue)
 	return newValue
 }
 
 func (b *BaselineAmendmentRequestV05) AddSellerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	b.SellerContactPerson = append(b.SellerContactPerson, newValue)
 	return newValue
 }
 
 func (b *BaselineAmendmentRequestV05) AddBuyerBankContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	b.BuyerBankContactPerson = append(b.BuyerBankContactPerson, newValue)
 	return newValue
 }
 
 func (b *BaselineAmendmentRequestV05) AddSellerBankContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	b.SellerBankContactPerson = append(b.SellerBankContactPerson, newValue)
 	return newValue
 }
 
 func (b *BaselineAmendmentRequestV05) AddOtherBankContactPerson() *iso20022.ContactIdentification3 {
-	newValue := new (iso20022.ContactIdentification3)
+	newValue := new(iso20022.ContactIdentification3)
 	b.OtherBankContactPerson = append(b.OtherBankContactPerson, newValue)
 	return newValue
 }
-

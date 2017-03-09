@@ -8,9 +8,7 @@ type TaxableIncomePerShareCalculated1 struct {
 
 	// Additional information about the type of tax.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TaxableIncomePerShareCalculated1) SetStructured(value string) {
 	t.Structured = (*TaxableIncomePerShareCalculated1Code)(&value)
@@ -19,4 +17,3 @@ func (t *TaxableIncomePerShareCalculated1) SetStructured(value string) {
 func (t *TaxableIncomePerShareCalculated1) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max350Text)(&value)
 }
-

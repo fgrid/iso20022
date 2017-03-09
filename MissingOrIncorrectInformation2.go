@@ -11,9 +11,7 @@ type MissingOrIncorrectInformation2 struct {
 
 	// Indicates, in a coded form, the incorrect information.
 	IncorrectInformation []*UnableToApplyIncorrectInformation3Code `xml:"IncrrctInf,omitempty"`
-
 }
-
 
 func (m *MissingOrIncorrectInformation2) SetAntiMoneyLaunderingRequest(value string) {
 	m.AntiMoneyLaunderingRequest = (*AMLIndicator)(&value)
@@ -26,4 +24,3 @@ func (m *MissingOrIncorrectInformation2) AddMissingInformation(value string) {
 func (m *MissingOrIncorrectInformation2) AddIncorrectInformation(value string) {
 	m.IncorrectInformation = append(m.IncorrectInformation, (*UnableToApplyIncorrectInformation3Code)(&value))
 }
-

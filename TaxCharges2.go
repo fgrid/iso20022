@@ -11,9 +11,7 @@ type TaxCharges2 struct {
 
 	// Amount of money resulting from the calculation of the tax.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt,omitempty"`
-
 }
-
 
 func (t *TaxCharges2) SetIdentification(value string) {
 	t.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (t *TaxCharges2) SetRate(value string) {
 func (t *TaxCharges2) SetAmount(value, currency string) {
 	t.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

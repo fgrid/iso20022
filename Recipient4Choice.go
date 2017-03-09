@@ -11,9 +11,7 @@ type Recipient4Choice struct {
 
 	// Identification of a protection key without a session key, shared and previously exchanged between the initiator and the recipient.
 	KeyIdentifier *KEKIdentifier2 `xml:"KeyIdr"`
-
 }
-
 
 func (r *Recipient4Choice) AddKeyTransport() *KeyTransport4 {
 	r.KeyTransport = new(KeyTransport4)
@@ -29,4 +27,3 @@ func (r *Recipient4Choice) AddKeyIdentifier() *KEKIdentifier2 {
 	r.KeyIdentifier = new(KEKIdentifier2)
 	return r.KeyIdentifier
 }
-

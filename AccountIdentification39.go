@@ -11,9 +11,7 @@ type AccountIdentification39 struct {
 
 	// Location where the financial instruments are/will be safekept.
 	SafekeepingPlace *SafekeepingPlaceFormat26Choice `xml:"SfkpgPlc,omitempty"`
-
 }
-
 
 func (a *AccountIdentification39) SetSafekeepingAccount(value string) {
 	a.SafekeepingAccount = (*RestrictedFINXMax35Text)(&value)
@@ -28,4 +26,3 @@ func (a *AccountIdentification39) AddSafekeepingPlace() *SafekeepingPlaceFormat2
 	a.SafekeepingPlace = new(SafekeepingPlaceFormat26Choice)
 	return a.SafekeepingPlace
 }
-

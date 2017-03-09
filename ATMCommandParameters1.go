@@ -11,9 +11,7 @@ type ATMCommandParameters1 struct {
 
 	// New status to apply on the security module of the ATM.
 	RequiredStatus *ATMStatus2Code `xml:"ReqrdSts,omitempty"`
-
 }
-
 
 func (a *ATMCommandParameters1) SetSerialNumber(value string) {
 	a.SerialNumber = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (a *ATMCommandParameters1) AddRequiredConfiguration() *ATMSecurityConfigura
 func (a *ATMCommandParameters1) SetRequiredStatus(value string) {
 	a.RequiredStatus = (*ATMStatus2Code)(&value)
 }
-

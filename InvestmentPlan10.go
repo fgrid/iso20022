@@ -36,7 +36,7 @@ type InvestmentPlan10 struct {
 	// Cash settlement standing instruction associated to the investment plan.
 	CashSettlement []*InvestmentFundCashSettlementInformation7 `xml:"CshSttlm,omitempty"`
 
-	// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. 
+	// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account.
 	ContractReference *Max35Text `xml:"CtrctRef,omitempty"`
 
 	// Reference of the previous contract to which this savings or withdrawal plan is related.
@@ -51,14 +51,12 @@ type InvestmentPlan10 struct {
 	// Specifies the type of insurance contract to which the savings investment plan is linked.
 	InsuranceCover *InsuranceType1Choice `xml:"InsrncCover,omitempty"`
 
-	// Status of the savings or withdrawal investment plan. 
+	// Status of the savings or withdrawal investment plan.
 	PlanStatus *PlanStatus1Choice `xml:"PlanSts,omitempty"`
 
 	// Role or function of the instalment manager.
 	InstalmentManagerRole *PartyRole4Choice `xml:"InstlmtMgrRole,omitempty"`
-
 }
-
 
 func (i *InvestmentPlan10) AddFrequency() *Frequency20Choice {
 	i.Frequency = new(Frequency20Choice)
@@ -99,13 +97,13 @@ func (i *InvestmentPlan10) SetRoundingDirection(value string) {
 }
 
 func (i *InvestmentPlan10) AddSecurityDetails() *Repartition3 {
-	newValue := new (Repartition3)
+	newValue := new(Repartition3)
 	i.SecurityDetails = append(i.SecurityDetails, newValue)
 	return newValue
 }
 
 func (i *InvestmentPlan10) AddCashSettlement() *InvestmentFundCashSettlementInformation7 {
-	newValue := new (InvestmentFundCashSettlementInformation7)
+	newValue := new(InvestmentFundCashSettlementInformation7)
 	i.CashSettlement = append(i.CashSettlement, newValue)
 	return newValue
 }
@@ -140,4 +138,3 @@ func (i *InvestmentPlan10) AddInstalmentManagerRole() *PartyRole4Choice {
 	i.InstalmentManagerRole = new(PartyRole4Choice)
 	return i.InstalmentManagerRole
 }
-

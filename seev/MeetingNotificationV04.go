@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.04 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.04 Document"`
 	Message *MeetingNotificationV04 `xml:"MtgNtfctn"`
 }
 
@@ -68,9 +68,7 @@ type MeetingNotificationV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (m *MeetingNotificationV04) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -93,7 +91,7 @@ func (m *MeetingNotificationV04) AddMeeting() *iso20022.MeetingNotice3 {
 }
 
 func (m *MeetingNotificationV04) AddMeetingDetails() *iso20022.Meeting3 {
-	newValue := new (iso20022.Meeting3)
+	newValue := new(iso20022.Meeting3)
 	m.MeetingDetails = append(m.MeetingDetails, newValue)
 	return newValue
 }
@@ -109,19 +107,19 @@ func (m *MeetingNotificationV04) AddIssuer() *iso20022.IssuerInformation1 {
 }
 
 func (m *MeetingNotificationV04) AddIssuerAgent() *iso20022.IssuerAgent1 {
-	newValue := new (iso20022.IssuerAgent1)
+	newValue := new(iso20022.IssuerAgent1)
 	m.IssuerAgent = append(m.IssuerAgent, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV04) AddSecurity() *iso20022.SecurityPosition6 {
-	newValue := new (iso20022.SecurityPosition6)
+	newValue := new(iso20022.SecurityPosition6)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV04) AddResolution() *iso20022.Resolution2 {
-	newValue := new (iso20022.Resolution2)
+	newValue := new(iso20022.Resolution2)
 	m.Resolution = append(m.Resolution, newValue)
 	return newValue
 }
@@ -147,8 +145,7 @@ func (m *MeetingNotificationV04) AddAdditionalInformation() *iso20022.CorporateE
 }
 
 func (m *MeetingNotificationV04) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	m.Extension = append(m.Extension, newValue)
 	return newValue
 }
-

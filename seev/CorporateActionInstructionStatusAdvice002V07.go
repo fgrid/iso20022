@@ -7,7 +7,7 @@ import (
 )
 
 type Document03400207 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.034.002.07 Document"`
+	XMLName xml.Name                                      `xml:"urn:iso:std:iso:20022:tech:xsd:seev.034.002.07 Document"`
 	Message *CorporateActionInstructionStatusAdvice002V07 `xml:"CorpActnInstrStsAdvc"`
 }
 
@@ -17,7 +17,7 @@ func (d *Document03400207) AddMessage() *CorporateActionInstructionStatusAdvice0
 }
 
 // Scope
-// An account servicer sends the CorporateActionInstructionStatusAdvice message to an account owner or its designated agent, to report status of a received corporate action election instruction.
+// An account servicer sends the CorporateActionInstructionStatusAdvice message to an account owner or its designated agent, to report status of a received corporate action election instruction.
 // This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.
 // Usage
 // The message may also be used to:
@@ -47,9 +47,7 @@ type CorporateActionInstructionStatusAdvice002V07 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionStatusAdvice002V07) AddInstructionIdentification() *iso20022.DocumentIdentification17 {
 	c.InstructionIdentification = new(iso20022.DocumentIdentification17)
@@ -57,7 +55,7 @@ func (c *CorporateActionInstructionStatusAdvice002V07) AddInstructionIdentificat
 }
 
 func (c *CorporateActionInstructionStatusAdvice002V07) AddOtherDocumentIdentification() *iso20022.DocumentIdentification34 {
-	newValue := new (iso20022.DocumentIdentification34)
+	newValue := new(iso20022.DocumentIdentification34)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -68,7 +66,7 @@ func (c *CorporateActionInstructionStatusAdvice002V07) AddCorporateActionGeneral
 }
 
 func (c *CorporateActionInstructionStatusAdvice002V07) AddInstructionProcessingStatus() *iso20022.InstructionProcessingStatus25Choice {
-	newValue := new (iso20022.InstructionProcessingStatus25Choice)
+	newValue := new(iso20022.InstructionProcessingStatus25Choice)
 	c.InstructionProcessingStatus = append(c.InstructionProcessingStatus, newValue)
 	return newValue
 }
@@ -84,8 +82,7 @@ func (c *CorporateActionInstructionStatusAdvice002V07) AddAdditionalInformation(
 }
 
 func (c *CorporateActionInstructionStatusAdvice002V07) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

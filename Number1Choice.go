@@ -8,9 +8,7 @@ type Number1Choice struct {
 
 	// Proprietary number format.
 	Proprietary *GenericIdentification7 `xml:"Prtry"`
-
 }
-
 
 func (n *Number1Choice) SetNumberIdentification(value string) {
 	n.NumberIdentification = (*Max3NumericText)(&value)
@@ -20,4 +18,3 @@ func (n *Number1Choice) AddProprietary() *GenericIdentification7 {
 	n.Proprietary = new(GenericIdentification7)
 	return n.Proprietary
 }
-

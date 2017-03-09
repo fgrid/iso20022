@@ -20,9 +20,7 @@ type NumberAndSumOfTransactionsPerBankTransactionCode1 struct {
 
 	// Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest.
 	Availability []*CashBalanceAvailability1 `xml:"Avlbty,omitempty"`
-
 }
-
 
 func (n *NumberAndSumOfTransactionsPerBankTransactionCode1) SetNumberOfEntries(value string) {
 	n.NumberOfEntries = (*Max15NumericText)(&value)
@@ -46,8 +44,7 @@ func (n *NumberAndSumOfTransactionsPerBankTransactionCode1) AddBankTransactionCo
 }
 
 func (n *NumberAndSumOfTransactionsPerBankTransactionCode1) AddAvailability() *CashBalanceAvailability1 {
-	newValue := new (CashBalanceAvailability1)
+	newValue := new(CashBalanceAvailability1)
 	n.Availability = append(n.Availability, newValue)
 	return newValue
 }
-

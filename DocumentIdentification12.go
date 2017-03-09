@@ -14,9 +14,7 @@ type DocumentIdentification12 struct {
 
 	// When used in a corporate action instruction, indicates that the current instruction is replacing a previous one that was cancelled earlier. When used in a corporate action instruction cancellation request, indicates that cancelled instruction will be replaced by a new corporate action instruction to be sent later.
 	ChangeInstructionIndicator *YesNoIndicator `xml:"ChngInstrInd,omitempty"`
-
 }
-
 
 func (d *DocumentIdentification12) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (d *DocumentIdentification12) SetCopyDuplicate(value string) {
 func (d *DocumentIdentification12) SetChangeInstructionIndicator(value string) {
 	d.ChangeInstructionIndicator = (*YesNoIndicator)(&value)
 }
-

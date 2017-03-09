@@ -8,9 +8,7 @@ type PartyIdentification24Choice struct {
 
 	// Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 "Codes for exchanges and market identifications".
 	MIC *MICIdentifier `xml:"MIC"`
-
 }
-
 
 func (p *PartyIdentification24Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -19,4 +17,3 @@ func (p *PartyIdentification24Choice) SetBICOrBEI(value string) {
 func (p *PartyIdentification24Choice) SetMIC(value string) {
 	p.MIC = (*MICIdentifier)(&value)
 }
-

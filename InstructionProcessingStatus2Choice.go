@@ -8,9 +8,7 @@ type InstructionProcessingStatus2Choice struct {
 
 	// Provides the status of an instruction.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (i *InstructionProcessingStatus2Choice) SetCode(value string) {
 	i.Code = (*InstructionProcessingStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (i *InstructionProcessingStatus2Choice) AddProprietary() *GenericIdentifica
 	i.Proprietary = new(GenericIdentification20)
 	return i.Proprietary
 }
-

@@ -14,9 +14,7 @@ type CardTransaction2 struct {
 
 	// Prepaid account for the transfer or loading of an amount of money.
 	PrePaidAccount *CashAccount24 `xml:"PrePdAcct,omitempty"`
-
 }
-
 
 func (c *CardTransaction2) AddCard() *PaymentCard4 {
 	c.Card = new(PaymentCard4)
@@ -37,4 +35,3 @@ func (c *CardTransaction2) AddPrePaidAccount() *CashAccount24 {
 	c.PrePaidAccount = new(CashAccount24)
 	return c.PrePaidAccount
 }
-

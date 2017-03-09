@@ -47,9 +47,7 @@ type CardPaymentTransactionDetails12 struct {
 
 	// Data related to an integrated circuit card application.
 	ICCRelatedData *Max10000Binary `xml:"ICCRltdData,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransactionDetails12) SetCurrency(value string) {
 	c.Currency = (*CurrencyCode)(&value)
@@ -104,7 +102,7 @@ func (c *CardPaymentTransactionDetails12) AddAggregationTransaction() *Aggregati
 }
 
 func (c *CardPaymentTransactionDetails12) AddProduct() *Product1 {
-	newValue := new (Product1)
+	newValue := new(Product1)
 	c.Product = append(c.Product, newValue)
 	return newValue
 }
@@ -117,4 +115,3 @@ func (c *CardPaymentTransactionDetails12) AddCardPaymentInvoice() *CardPaymentIn
 func (c *CardPaymentTransactionDetails12) SetICCRelatedData(value string) {
 	c.ICCRelatedData = (*Max10000Binary)(&value)
 }
-

@@ -17,9 +17,7 @@ type ActionMessage4 struct {
 
 	// Electronic signature of the message to display or print.
 	MessageContentSignature *Max35Binary `xml:"MsgCnttSgntr,omitempty"`
-
 }
-
 
 func (a *ActionMessage4) SetFormat(value string) {
 	a.Format = (*OutputFormat2Code)(&value)
@@ -40,4 +38,3 @@ func (a *ActionMessage4) SetDevice(value string) {
 func (a *ActionMessage4) SetMessageContentSignature(value string) {
 	a.MessageContentSignature = (*Max35Binary)(&value)
 }
-

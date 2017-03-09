@@ -26,9 +26,7 @@ type CorporateActionQuantity1 struct {
 
 	// Amount used when the called amount is not met by running the lottery with the base denomination.
 	IncrementalDenomination *FinancialInstrumentQuantity1Choice `xml:"IncrmtlDnmtn,omitempty"`
-
 }
-
 
 func (c *CorporateActionQuantity1) AddMinimumExercisableQuantity() *FinancialInstrumentQuantity1Choice {
 	c.MinimumExercisableQuantity = new(FinancialInstrumentQuantity1Choice)
@@ -69,4 +67,3 @@ func (c *CorporateActionQuantity1) AddIncrementalDenomination() *FinancialInstru
 	c.IncrementalDenomination = new(FinancialInstrumentQuantity1Choice)
 	return c.IncrementalDenomination
 }
-

@@ -14,9 +14,7 @@ type DetailedAmount11 struct {
 
 	// Original value of the amount.
 	OriginalAmount *AmountAndDirection41 `xml:"OrgnlAmt,omitempty"`
-
 }
-
 
 func (d *DetailedAmount11) SetType(value string) {
 	d.Type = (*TypeOfAmount7Code)(&value)
@@ -35,4 +33,3 @@ func (d *DetailedAmount11) AddOriginalAmount() *AmountAndDirection41 {
 	d.OriginalAmount = new(AmountAndDirection41)
 	return d.OriginalAmount
 }
-

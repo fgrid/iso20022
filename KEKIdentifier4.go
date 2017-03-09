@@ -11,9 +11,7 @@ type KEKIdentifier4 struct {
 
 	// Version of the cryptographic key.
 	KeyVersion *Max140Text `xml:"KeyVrsn,omitempty"`
-
 }
-
 
 func (k *KEKIdentifier4) SetName(value string) {
 	k.Name = (*Max140Text)(&value)
@@ -26,4 +24,3 @@ func (k *KEKIdentifier4) SetKeyIdentification(value string) {
 func (k *KEKIdentifier4) SetKeyVersion(value string) {
 	k.KeyVersion = (*Max140Text)(&value)
 }
-

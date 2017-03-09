@@ -11,9 +11,7 @@ type CashProceeds1 struct {
 
 	// Provides information about the debited securities account.
 	AccountDetails []*CashAccount19 `xml:"AcctDtls"`
-
 }
-
 
 func (c *CashProceeds1) SetPostingAmount(value, currency string) {
 	c.PostingAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -24,8 +22,7 @@ func (c *CashProceeds1) SetReconciliationDetails(value string) {
 }
 
 func (c *CashProceeds1) AddAccountDetails() *CashAccount19 {
-	newValue := new (CashAccount19)
+	newValue := new(CashAccount19)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
-

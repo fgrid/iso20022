@@ -8,9 +8,7 @@ type UnitsOrAmount1Choice struct {
 
 	// Number of units to be subscribed or withdrawn.
 	Unit *DecimalNumber `xml:"Unit"`
-
 }
-
 
 func (u *UnitsOrAmount1Choice) SetAmount(value, currency string) {
 	u.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (u *UnitsOrAmount1Choice) SetAmount(value, currency string) {
 func (u *UnitsOrAmount1Choice) SetUnit(value string) {
 	u.Unit = (*DecimalNumber)(&value)
 }
-

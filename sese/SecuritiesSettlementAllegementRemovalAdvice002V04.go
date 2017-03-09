@@ -7,7 +7,7 @@ import (
 )
 
 type Document02900204 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.029.002.04 Document"`
+	XMLName xml.Name                                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.029.002.04 Document"`
 	Message *SecuritiesSettlementAllegementRemovalAdvice002V04 `xml:"SctiesSttlmAllgmtRmvlAdvc"`
 }
 
@@ -22,7 +22,7 @@ func (d *Document02900204) AddMessage() *SecuritiesSettlementAllegementRemovalAd
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -48,9 +48,7 @@ type SecuritiesSettlementAllegementRemovalAdvice002V04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementAllegementRemovalAdvice002V04) AddAccountServicerTransactionIdentification() *iso20022.SettlementTypeAndIdentification22 {
 	s.AccountServicerTransactionIdentification = new(iso20022.SettlementTypeAndIdentification22)
@@ -78,8 +76,7 @@ func (s *SecuritiesSettlementAllegementRemovalAdvice002V04) AddTransactionDetail
 }
 
 func (s *SecuritiesSettlementAllegementRemovalAdvice002V04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -71,9 +71,7 @@ type FinancialInstrumentAttributes67 struct {
 
 	// Initial issue/valuation price of a resulting security under a corporate action.
 	IssuePrice *PriceFormat45Choice `xml:"IssePric,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentAttributes67) AddFinancialInstrumentIdentification() *SecurityIdentification19 {
 	f.FinancialInstrumentIdentification = new(SecurityIdentification19)
@@ -180,4 +178,3 @@ func (f *FinancialInstrumentAttributes67) AddIssuePrice() *PriceFormat45Choice {
 	f.IssuePrice = new(PriceFormat45Choice)
 	return f.IssuePrice
 }
-

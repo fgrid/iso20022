@@ -6,7 +6,7 @@ type CaseAssignment2 struct {
 	// Uniquely identifies the case assignment.
 	Identification *Max35Text `xml:"Id"`
 
-	// Party who assigns the case. 
+	// Party who assigns the case.
 	// Usage: This is also the sender of the message.
 	Assigner *Party7Choice `xml:"Assgnr"`
 
@@ -16,9 +16,7 @@ type CaseAssignment2 struct {
 
 	// Date and time at which the assignment was created.
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
-
 }
-
 
 func (c *CaseAssignment2) SetIdentification(value string) {
 	c.Identification = (*Max35Text)(&value)
@@ -37,4 +35,3 @@ func (c *CaseAssignment2) AddAssignee() *Party7Choice {
 func (c *CaseAssignment2) SetCreationDateTime(value string) {
 	c.CreationDateTime = (*ISODateTime)(&value)
 }
-

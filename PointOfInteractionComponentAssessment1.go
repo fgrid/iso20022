@@ -17,9 +17,7 @@ type PointOfInteractionComponentAssessment1 struct {
 
 	// Unique assessment number for the component.
 	Number *Max35Text `xml:"Nb"`
-
 }
-
 
 func (p *PointOfInteractionComponentAssessment1) SetType(value string) {
 	p.Type = (*POIComponentAssessment1Code)(&value)
@@ -40,4 +38,3 @@ func (p *PointOfInteractionComponentAssessment1) SetExpirationDate(value string)
 func (p *PointOfInteractionComponentAssessment1) SetNumber(value string) {
 	p.Number = (*Max35Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type AwaitingAffirmationReason1 struct {
 
 	// Provides additional information about the reason in narrative form.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (a *AwaitingAffirmationReason1) AddCode() *AwaitingAffirmationReason1Choice {
 	a.Code = new(AwaitingAffirmationReason1Choice)
@@ -20,4 +18,3 @@ func (a *AwaitingAffirmationReason1) AddCode() *AwaitingAffirmationReason1Choice
 func (a *AwaitingAffirmationReason1) SetAdditionalReasonInformation(value string) {
 	a.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

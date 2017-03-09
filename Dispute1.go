@@ -11,9 +11,7 @@ type Dispute1 struct {
 
 	// Date of dispute.
 	DisputeDate *ISODate `xml:"DsptDt"`
-
 }
-
 
 func (d *Dispute1) SetMarginCallRequestIdentification(value string) {
 	d.MarginCallRequestIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (d *Dispute1) SetDisputedAmount(value, currency string) {
 func (d *Dispute1) SetDisputeDate(value string) {
 	d.DisputeDate = (*ISODate)(&value)
 }
-

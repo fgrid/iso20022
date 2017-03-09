@@ -8,9 +8,7 @@ type IndicativeOrMarketPrice11Choice struct {
 
 	// Last reported/known price of a financial instrument in a market.
 	MarketPrice *PriceFormat57Choice `xml:"MktPric"`
-
 }
-
 
 func (i *IndicativeOrMarketPrice11Choice) AddIndicativePrice() *PriceFormat57Choice {
 	i.IndicativePrice = new(PriceFormat57Choice)
@@ -21,4 +19,3 @@ func (i *IndicativeOrMarketPrice11Choice) AddMarketPrice() *PriceFormat57Choice 
 	i.MarketPrice = new(PriceFormat57Choice)
 	return i.MarketPrice
 }
-

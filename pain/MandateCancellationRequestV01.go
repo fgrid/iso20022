@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.011.001.01 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:pain.011.001.01 Document"`
 	Message *MandateCancellationRequestV01 `xml:"MndtCxlReq"`
 }
 
@@ -32,9 +32,7 @@ type MandateCancellationRequestV01 struct {
 
 	// Set of elements used to provide details on the cancellation request.
 	UnderlyingCancellationDetails *iso20022.MandateCancellation1 `xml:"UndrlygCxlDtls"`
-
 }
-
 
 func (m *MandateCancellationRequestV01) AddGroupHeader() *iso20022.GroupHeader31 {
 	m.GroupHeader = new(iso20022.GroupHeader31)
@@ -45,4 +43,3 @@ func (m *MandateCancellationRequestV01) AddUnderlyingCancellationDetails() *iso2
 	m.UnderlyingCancellationDetails = new(iso20022.MandateCancellation1)
 	return m.UnderlyingCancellationDetails
 }
-

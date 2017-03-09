@@ -17,18 +17,16 @@ type PointOfInteractionComponentCharacteristics2 struct {
 
 	// Value for checking a cryptographic key security parameter.
 	KeyCheckValue *Max35Binary `xml:"KeyChckVal,omitempty"`
-
 }
 
-
 func (p *PointOfInteractionComponentCharacteristics2) AddMemory() *MemoryCharacteristics1 {
-	newValue := new (MemoryCharacteristics1)
+	newValue := new(MemoryCharacteristics1)
 	p.Memory = append(p.Memory, newValue)
 	return newValue
 }
 
 func (p *PointOfInteractionComponentCharacteristics2) AddCommunication() *CommunicationCharacteristics2 {
-	newValue := new (CommunicationCharacteristics2)
+	newValue := new(CommunicationCharacteristics2)
 	p.Communication = append(p.Communication, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (p *PointOfInteractionComponentCharacteristics2) SetSubscriberIdentityModul
 func (p *PointOfInteractionComponentCharacteristics2) SetKeyCheckValue(value string) {
 	p.KeyCheckValue = (*Max35Binary)(&value)
 }
-

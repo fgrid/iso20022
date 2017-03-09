@@ -8,9 +8,7 @@ type IdentificationSource5Choice struct {
 
 	// Entity that issues the proprietary identification.
 	ProprietaryIdentificationSource *Max35Text `xml:"PrtryIdSrc"`
-
 }
-
 
 func (i *IdentificationSource5Choice) SetDomesticIdentificationSource(value string) {
 	i.DomesticIdentificationSource = (*CountryCode)(&value)
@@ -19,4 +17,3 @@ func (i *IdentificationSource5Choice) SetDomesticIdentificationSource(value stri
 func (i *IdentificationSource5Choice) SetProprietaryIdentificationSource(value string) {
 	i.ProprietaryIdentificationSource = (*Max35Text)(&value)
 }
-

@@ -8,17 +8,14 @@ type MisMatchReport3 struct {
 
 	// Details of each mismatch occurrence.
 	MisMatchInformation []*ValidationResult5 `xml:"MisMtchInf,omitempty"`
-
 }
-
 
 func (m *MisMatchReport3) SetNumberOfMisMatches(value string) {
 	m.NumberOfMisMatches = (*Number)(&value)
 }
 
 func (m *MisMatchReport3) AddMisMatchInformation() *ValidationResult5 {
-	newValue := new (ValidationResult5)
+	newValue := new(ValidationResult5)
 	m.MisMatchInformation = append(m.MisMatchInformation, newValue)
 	return newValue
 }
-

@@ -20,9 +20,7 @@ type Header4 struct {
 
 	// Unique identification of the partner that is the recipient of the exchange.
 	RecipientParty *GenericIdentification35 `xml:"RcptPty,omitempty"`
-
 }
-
 
 func (h *Header4) SetDownloadTransfer(value string) {
 	h.DownloadTransfer = (*TrueFalseIndicator)(&value)
@@ -49,4 +47,3 @@ func (h *Header4) AddRecipientParty() *GenericIdentification35 {
 	h.RecipientParty = new(GenericIdentification35)
 	return h.RecipientParty
 }
-

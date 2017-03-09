@@ -8,9 +8,7 @@ type CardTransaction1Choice struct {
 
 	// Card transaction details for the individual transaction, as recorded at the POI (point of interaction).
 	Individual *CardIndividualTransaction1 `xml:"Indv"`
-
 }
-
 
 func (c *CardTransaction1Choice) AddAggregated() *CardAggregated1 {
 	c.Aggregated = new(CardAggregated1)
@@ -21,4 +19,3 @@ func (c *CardTransaction1Choice) AddIndividual() *CardIndividualTransaction1 {
 	c.Individual = new(CardIndividualTransaction1)
 	return c.Individual
 }
-

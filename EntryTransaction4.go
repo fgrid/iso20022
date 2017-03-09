@@ -13,12 +13,12 @@ type EntryTransaction4 struct {
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd"`
 
 	// Provides detailed information on the original amount.
-	// 
+	//
 	// Usage: This component (on transaction level) should be used in case booking is for a single transaction and the original amount is different from the entry amount. It can also be used in case individual original amounts are provided in case of a batch or aggregate booking.
 	AmountDetails *AmountAndCurrencyExchange3 `xml:"AmtDtls,omitempty"`
 
-	// Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest. 
-	// 
+	// Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest.
+	//
 	// Usage: This type of information is used in the US and is linked to particular instruments such as cheques.
 	// Example: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability2 `xml:"Avlbty,omitempty"`
@@ -27,12 +27,12 @@ type EntryTransaction4 struct {
 	BankTransactionCode *BankTransactionCodeStructure4 `xml:"BkTxCd,omitempty"`
 
 	// Provides information on the charges, pre-advised or included in the entry amount.
-	// 
+	//
 	// Usage: This component (on transaction level) can be used in case the booking is for a single transaction, and charges are included in the entry amount. It can also be used in case individual charge amounts are applied to individual transactions in case of a batch or aggregate amount booking.
 	Charges *Charges4 `xml:"Chrgs,omitempty"`
 
 	// Provides details of the interest amount included in the entry amount.
-	// 
+	//
 	// Usage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount.  It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking.
 	Interest *TransactionInterest3 `xml:"Intrst,omitempty"`
 
@@ -87,9 +87,7 @@ type EntryTransaction4 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (e *EntryTransaction4) AddReferences() *TransactionReferences3 {
 	e.References = new(TransactionReferences3)
@@ -110,7 +108,7 @@ func (e *EntryTransaction4) AddAmountDetails() *AmountAndCurrencyExchange3 {
 }
 
 func (e *EntryTransaction4) AddAvailability() *CashBalanceAvailability2 {
-	newValue := new (CashBalanceAvailability2)
+	newValue := new(CashBalanceAvailability2)
 	e.Availability = append(e.Availability, newValue)
 	return newValue
 }
@@ -146,7 +144,7 @@ func (e *EntryTransaction4) AddPurpose() *Purpose2Choice {
 }
 
 func (e *EntryTransaction4) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	e.RelatedRemittanceInformation = append(e.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -167,7 +165,7 @@ func (e *EntryTransaction4) AddRelatedPrice() *TransactionPrice3Choice {
 }
 
 func (e *EntryTransaction4) AddRelatedQuantities() *TransactionQuantities2Choice {
-	newValue := new (TransactionQuantities2Choice)
+	newValue := new(TransactionQuantities2Choice)
 	e.RelatedQuantities = append(e.RelatedQuantities, newValue)
 	return newValue
 }
@@ -198,7 +196,7 @@ func (e *EntryTransaction4) AddSafekeepingAccount() *SecuritiesAccount13 {
 }
 
 func (e *EntryTransaction4) AddCashDeposit() *CashDeposit1 {
-	newValue := new (CashDeposit1)
+	newValue := new(CashDeposit1)
 	e.CashDeposit = append(e.CashDeposit, newValue)
 	return newValue
 }
@@ -213,8 +211,7 @@ func (e *EntryTransaction4) SetAdditionalTransactionInformation(value string) {
 }
 
 func (e *EntryTransaction4) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	e.SupplementaryData = append(e.SupplementaryData, newValue)
 	return newValue
 }
-

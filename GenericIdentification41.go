@@ -11,9 +11,7 @@ type GenericIdentification41 struct {
 
 	// Short textual description of the scheme.
 	SchemeName *Max35Text `xml:"SchmeNm,omitempty"`
-
 }
-
 
 func (g *GenericIdentification41) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (g *GenericIdentification41) SetIssuer(value string) {
 func (g *GenericIdentification41) SetSchemeName(value string) {
 	g.SchemeName = (*Max35Text)(&value)
 }
-

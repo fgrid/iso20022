@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.008.001.02 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:auth.008.001.02 Document"`
 	Message *RegulatoryTransactionReportV02 `xml:"RgltryTxRpt"`
 }
 
@@ -29,7 +29,7 @@ type RegulatoryTransactionReportV02 struct {
 	TransactionDetails []*iso20022.TransactionDetails3 `xml:"TxDtls"`
 
 	// Identification of the firm that is legally responsible for sending the transaction report.
-	// 
+	//
 	ReportingInstitution *iso20022.PartyIdentification23Choice `xml:"RptgInstn"`
 
 	// Identifies the intermediary which is reporting on behalf on the ReportingInstitution. If there is a reporting chain, then the last party should override the previous one.
@@ -37,9 +37,7 @@ type RegulatoryTransactionReportV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RegulatoryTransactionReportV02) AddIdentification() *iso20022.DocumentIdentification8 {
 	r.Identification = new(iso20022.DocumentIdentification8)
@@ -47,7 +45,7 @@ func (r *RegulatoryTransactionReportV02) AddIdentification() *iso20022.DocumentI
 }
 
 func (r *RegulatoryTransactionReportV02) AddTransactionDetails() *iso20022.TransactionDetails3 {
-	newValue := new (iso20022.TransactionDetails3)
+	newValue := new(iso20022.TransactionDetails3)
 	r.TransactionDetails = append(r.TransactionDetails, newValue)
 	return newValue
 }
@@ -63,8 +61,7 @@ func (r *RegulatoryTransactionReportV02) AddReportingAgent() *iso20022.PartyIden
 }
 
 func (r *RegulatoryTransactionReportV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

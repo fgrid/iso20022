@@ -11,9 +11,7 @@ type GrossDividendRate1Choice struct {
 
 	// Value is expressed as an amount related to an underlying securities, eg, underlying security for which an interest is paid.
 	RateTypeAmount *GrossDividendRate2 `xml:"RateTpAmt"`
-
 }
-
 
 func (g *GrossDividendRate1Choice) AddNotSpecifiedRate() *RateValueType2FormatChoice {
 	g.NotSpecifiedRate = new(RateValueType2FormatChoice)
@@ -28,4 +26,3 @@ func (g *GrossDividendRate1Choice) AddRateTypeAmount() *GrossDividendRate2 {
 	g.RateTypeAmount = new(GrossDividendRate2)
 	return g.RateTypeAmount
 }
-

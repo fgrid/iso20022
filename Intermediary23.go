@@ -11,9 +11,7 @@ type Intermediary23 struct {
 
 	// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
 	Account *Account13 `xml:"Acct,omitempty"`
-
 }
-
 
 func (i *Intermediary23) AddIdentification() *PartyIdentification49Choice {
 	i.Identification = new(PartyIdentification49Choice)
@@ -29,4 +27,3 @@ func (i *Intermediary23) AddAccount() *Account13 {
 	i.Account = new(Account13)
 	return i.Account
 }
-

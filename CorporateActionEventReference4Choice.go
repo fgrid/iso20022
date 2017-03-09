@@ -8,9 +8,7 @@ type CorporateActionEventReference4Choice struct {
 
 	// Reference assigned by the account servicer to unambiguously identify a related corporate action event.
 	LinkedCorporateActionIdentification *RestrictedFINXMax16Text `xml:"LkdCorpActnId"`
-
 }
-
 
 func (c *CorporateActionEventReference4Choice) SetLinkedOfficialCorporateActionEventIdentification(value string) {
 	c.LinkedOfficialCorporateActionEventIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -19,4 +17,3 @@ func (c *CorporateActionEventReference4Choice) SetLinkedOfficialCorporateActionE
 func (c *CorporateActionEventReference4Choice) SetLinkedCorporateActionIdentification(value string) {
 	c.LinkedCorporateActionIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

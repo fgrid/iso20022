@@ -35,9 +35,7 @@ type AccountNotification6 struct {
 
 	// Provides details of the expected amount on the account serviced by the account servicer.
 	Item []*NotificationItem4 `xml:"Itm"`
-
 }
-
 
 func (a *AccountNotification6) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -87,8 +85,7 @@ func (a *AccountNotification6) AddIntermediaryAgent() *BranchAndFinancialInstitu
 }
 
 func (a *AccountNotification6) AddItem() *NotificationItem4 {
-	newValue := new (NotificationItem4)
+	newValue := new(NotificationItem4)
 	a.Item = append(a.Item, newValue)
 	return newValue
 }
-

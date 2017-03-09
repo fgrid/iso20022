@@ -23,9 +23,7 @@ type InvestmentFund1 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *InvestmentFund1) AddFinancialInstrumentIdentification() *SecurityIdentification14 {
 	i.FinancialInstrumentIdentification = new(SecurityIdentification14)
@@ -50,14 +48,13 @@ func (i *InvestmentFund1) AddTotalValue() *AmountAndDirection30 {
 }
 
 func (i *InvestmentFund1) AddPrice() *PriceInformation10 {
-	newValue := new (PriceInformation10)
+	newValue := new(PriceInformation10)
 	i.Price = append(i.Price, newValue)
 	return newValue
 }
 
 func (i *InvestmentFund1) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

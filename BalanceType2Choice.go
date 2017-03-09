@@ -8,9 +8,7 @@ type BalanceType2Choice struct {
 
 	// Specifies a proprietary code for the balance type.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (b *BalanceType2Choice) SetCode(value string) {
 	b.Code = (*BalanceType9Code)(&value)
@@ -19,4 +17,3 @@ func (b *BalanceType2Choice) SetCode(value string) {
 func (b *BalanceType2Choice) SetProprietary(value string) {
 	b.Proprietary = (*Max35Text)(&value)
 }
-

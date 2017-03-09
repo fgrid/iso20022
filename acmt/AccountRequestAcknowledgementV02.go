@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.010.001.02 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.010.001.02 Document"`
 	Message *AccountRequestAcknowledgementV02 `xml:"AcctReqAck"`
 }
 
@@ -31,8 +31,8 @@ type AccountRequestAcknowledgementV02 struct {
 	// Identifier for an organisation.
 	OrganisationIdentification *iso20022.OrganisationIdentification8 `xml:"OrgId"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification5 `xml:"AcctSvcrId"`
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -40,9 +40,7 @@ type AccountRequestAcknowledgementV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AccountRequestAcknowledgementV02) AddReferences() *iso20022.References5 {
 	a.References = new(iso20022.References5)
@@ -55,7 +53,7 @@ func (a *AccountRequestAcknowledgementV02) AddFrom() *iso20022.OrganisationIdent
 }
 
 func (a *AccountRequestAcknowledgementV02) AddAccountIdentification() *iso20022.AccountForAction1 {
-	newValue := new (iso20022.AccountForAction1)
+	newValue := new(iso20022.AccountForAction1)
 	a.AccountIdentification = append(a.AccountIdentification, newValue)
 	return newValue
 }
@@ -71,14 +69,13 @@ func (a *AccountRequestAcknowledgementV02) AddAccountServicerIdentification() *i
 }
 
 func (a *AccountRequestAcknowledgementV02) AddDigitalSignature() *iso20022.PartyAndSignature2 {
-	newValue := new (iso20022.PartyAndSignature2)
+	newValue := new(iso20022.PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
 
 func (a *AccountRequestAcknowledgementV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

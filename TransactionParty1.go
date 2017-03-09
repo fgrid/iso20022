@@ -29,9 +29,7 @@ type TransactionParty1 struct {
 
 	// Provides proprietary party information.
 	Proprietary []*ProprietaryParty1 `xml:"Prtry,omitempty"`
-
 }
-
 
 func (t *TransactionParty1) AddInitiatingParty() *PartyIdentification8 {
 	t.InitiatingParty = new(PartyIdentification8)
@@ -74,8 +72,7 @@ func (t *TransactionParty1) AddTradingParty() *PartyIdentification8 {
 }
 
 func (t *TransactionParty1) AddProprietary() *ProprietaryParty1 {
-	newValue := new (ProprietaryParty1)
+	newValue := new(ProprietaryParty1)
 	t.Proprietary = append(t.Proprietary, newValue)
 	return newValue
 }
-

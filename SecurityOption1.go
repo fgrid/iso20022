@@ -47,9 +47,7 @@ type SecurityOption1 struct {
 
 	// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.
 	FractionDisposition *FractionDispositionType1FormatChoice `xml:"FrctnDspstn,omitempty"`
-
 }
-
 
 func (s *SecurityOption1) AddSecurityIdentification() *FinancialInstrumentDescription3 {
 	s.SecurityIdentification = new(FinancialInstrumentDescription3)
@@ -123,4 +121,3 @@ func (s *SecurityOption1) AddFractionDisposition() *FractionDispositionType1Form
 	s.FractionDisposition = new(FractionDispositionType1FormatChoice)
 	return s.FractionDisposition
 }
-

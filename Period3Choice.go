@@ -8,9 +8,7 @@ type Period3Choice struct {
 
 	// Standard code to specify the type of period.
 	PeriodCode *DateType8Code `xml:"PrdCd"`
-
 }
-
 
 func (p *Period3Choice) AddPeriod() *Period4 {
 	p.Period = new(Period4)
@@ -20,4 +18,3 @@ func (p *Period3Choice) AddPeriod() *Period4 {
 func (p *Period3Choice) SetPeriodCode(value string) {
 	p.PeriodCode = (*DateType8Code)(&value)
 }
-

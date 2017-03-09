@@ -14,9 +14,7 @@ type References11 struct {
 
 	// Unambiguous identification of the transfer allocated by the counterparty.
 	CounterpartyReference *AdditionalReference2 `xml:"CtrPtyRef,omitempty"`
-
 }
-
 
 func (r *References11) AddPoolReference() *AdditionalReference2 {
 	r.PoolReference = new(AdditionalReference2)
@@ -37,4 +35,3 @@ func (r *References11) AddCounterpartyReference() *AdditionalReference2 {
 	r.CounterpartyReference = new(AdditionalReference2)
 	return r.CounterpartyReference
 }
-

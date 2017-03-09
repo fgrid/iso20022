@@ -35,9 +35,7 @@ type CorporateActionOption9 struct {
 
 	// Specifies whether the quantity of financial instrument is a status quantity or a quantity to receive.
 	StatusQuantityOrQuantityToReceive *StatusOrQuantityToReceive1Choice `xml:"StsQtyOrQtyToRcv,omitempty"`
-
 }
-
 
 func (c *CorporateActionOption9) AddOptionNumber() *OptionNumber1Choice {
 	c.OptionNumber = new(OptionNumber1Choice)
@@ -92,4 +90,3 @@ func (c *CorporateActionOption9) AddStatusQuantityOrQuantityToReceive() *StatusO
 	c.StatusQuantityOrQuantityToReceive = new(StatusOrQuantityToReceive1Choice)
 	return c.StatusQuantityOrQuantityToReceive
 }
-

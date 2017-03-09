@@ -29,9 +29,7 @@ type QuantityAndAccount18 struct {
 
 	// Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
 	SafekeepingPlace *SafekeepingPlaceFormat3Choice `xml:"SfkpgPlc,omitempty"`
-
 }
-
 
 func (q *QuantityAndAccount18) AddSettledQuantity() *Quantity6Choice {
 	q.SettledQuantity = new(Quantity6Choice)
@@ -77,4 +75,3 @@ func (q *QuantityAndAccount18) AddSafekeepingPlace() *SafekeepingPlaceFormat3Cho
 	q.SafekeepingPlace = new(SafekeepingPlaceFormat3Choice)
 	return q.SafekeepingPlace
 }
-

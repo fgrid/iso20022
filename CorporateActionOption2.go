@@ -8,9 +8,7 @@ type CorporateActionOption2 struct {
 
 	// Number identifying the available corporate action options.
 	OptionNumber *Exact3NumericText `xml:"OptnNb"`
-
 }
-
 
 func (c *CorporateActionOption2) AddOptionType() *CorporateActionOption1FormatChoice {
 	c.OptionType = new(CorporateActionOption1FormatChoice)
@@ -20,4 +18,3 @@ func (c *CorporateActionOption2) AddOptionType() *CorporateActionOption1FormatCh
 func (c *CorporateActionOption2) SetOptionNumber(value string) {
 	c.OptionNumber = (*Exact3NumericText)(&value)
 }
-

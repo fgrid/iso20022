@@ -44,12 +44,12 @@ type PaymentInstruction15 struct {
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
 	// Account used to process charges associated with a transaction.
-	// 
+	//
 	// Usage: Charges account should be used when charges have to be booked to an account different from the account identified in debtor's account.
 	ChargesAccount *CashAccount24 `xml:"ChrgsAcct,omitempty"`
 
 	// Agent that services a charges account.
-	// 
+	//
 	// Usage: Charges account agent should only be used when the charges account agent is different from the creditor agent.
 	ChargesAccountAgent *BranchAndFinancialInstitutionIdentification5 `xml:"ChrgsAcctAgt,omitempty"`
 
@@ -58,9 +58,7 @@ type PaymentInstruction15 struct {
 
 	// Provides information on the individual transaction(s) included in the message.
 	DirectDebitTransactionInformation []*DirectDebitTransactionInformation18 `xml:"DrctDbtTxInf"`
-
 }
-
 
 func (p *PaymentInstruction15) SetPaymentInformationIdentification(value string) {
 	p.PaymentInformationIdentification = (*Max35Text)(&value)
@@ -136,8 +134,7 @@ func (p *PaymentInstruction15) AddCreditorSchemeIdentification() *PartyIdentific
 }
 
 func (p *PaymentInstruction15) AddDirectDebitTransactionInformation() *DirectDebitTransactionInformation18 {
-	newValue := new (DirectDebitTransactionInformation18)
+	newValue := new(DirectDebitTransactionInformation18)
 	p.DirectDebitTransactionInformation = append(p.DirectDebitTransactionInformation, newValue)
 	return newValue
 }
-

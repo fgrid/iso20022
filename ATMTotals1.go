@@ -20,9 +20,7 @@ type ATMTotals1 struct {
 
 	// Total number of units for non-valued media, excluding reject cassette.
 	ATMCurrentNumber *Number `xml:"ATMCurNb,omitempty"`
-
 }
-
 
 func (a *ATMTotals1) SetMediaType(value string) {
 	a.MediaType = (*ATMMediaType1Code)(&value)
@@ -47,4 +45,3 @@ func (a *ATMTotals1) SetATMBalanceNumber(value string) {
 func (a *ATMTotals1) SetATMCurrentNumber(value string) {
 	a.ATMCurrentNumber = (*Number)(&value)
 }
-

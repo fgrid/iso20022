@@ -15,16 +15,14 @@ type StatusReportItems2 struct {
 
 	// Further description of the transaction status.
 	SubStatus *Max140Text `xml:"SubSts,omitempty"`
-
 }
-
 
 func (s *StatusReportItems2) SetTransactionIdentification(value string) {
 	s.TransactionIdentification = (*Max35Text)(&value)
 }
 
 func (s *StatusReportItems2) AddReportedEntity() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	s.ReportedEntity = append(s.ReportedEntity, newValue)
 	return newValue
 }
@@ -36,4 +34,3 @@ func (s *StatusReportItems2) SetStatus(value string) {
 func (s *StatusReportItems2) SetSubStatus(value string) {
 	s.SubStatus = (*Max140Text)(&value)
 }
-

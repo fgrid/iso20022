@@ -14,9 +14,7 @@ type References4Choice struct {
 
 	// Reference to the intra-position movement transaction requested to be cancelled as known by the account owner (or instructing party acting on its behalf).
 	IntraPositionMovementIdentification *Max35Text `xml:"IntraPosMvmntId"`
-
 }
-
 
 func (r *References4Choice) AddOtherTransactionIdentification() *GenericDocumentIdentification1 {
 	r.OtherTransactionIdentification = new(GenericDocumentIdentification1)
@@ -36,4 +34,3 @@ func (r *References4Choice) AddSecuritiesSettlementTransactionIdentification() *
 func (r *References4Choice) SetIntraPositionMovementIdentification(value string) {
 	r.IntraPositionMovementIdentification = (*Max35Text)(&value)
 }
-

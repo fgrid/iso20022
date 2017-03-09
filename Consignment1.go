@@ -11,9 +11,7 @@ type Consignment1 struct {
 
 	// Total weight of goods shipped, eg number of kg, tons.
 	TotalWeight *Quantity3 `xml:"TtlWght,omitempty"`
-
 }
-
 
 func (c *Consignment1) AddTotalQuantity() *Quantity3 {
 	c.TotalQuantity = new(Quantity3)
@@ -29,4 +27,3 @@ func (c *Consignment1) AddTotalWeight() *Quantity3 {
 	c.TotalWeight = new(Quantity3)
 	return c.TotalWeight
 }
-

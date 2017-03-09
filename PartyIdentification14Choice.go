@@ -14,9 +14,7 @@ type PartyIdentification14Choice struct {
 
 	// Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PartyIdentification14Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -35,4 +33,3 @@ func (p *PartyIdentification14Choice) AddNameAndAddress() *NameAndAddress5 {
 func (p *PartyIdentification14Choice) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

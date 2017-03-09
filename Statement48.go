@@ -29,9 +29,7 @@ type Statement48 struct {
 
 	// Period during which identification deadline has been set.
 	NotificationDeadlinePeriod *DateOrDateTimePeriodChoice `xml:"NtfctnDdlnPrd,omitempty"`
-
 }
-
 
 func (s *Statement48) SetStatementType(value string) {
 	s.StatementType = (*CorporateActionStatementType1Code)(&value)
@@ -72,4 +70,3 @@ func (s *Statement48) AddNotificationDeadlinePeriod() *DateOrDateTimePeriodChoic
 	s.NotificationDeadlinePeriod = new(DateOrDateTimePeriodChoice)
 	return s.NotificationDeadlinePeriod
 }
-

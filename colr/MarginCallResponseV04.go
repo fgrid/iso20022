@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.004.001.04 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:colr.004.001.04 Document"`
 	Message *MarginCallResponseV04 `xml:"MrgnCallRspn"`
 }
 
@@ -18,14 +18,14 @@ func (d *Document00400104) AddMessage() *MarginCallResponseV04 {
 
 // Scope
 // The MarginCallResponse message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager or vice versa. This is a response to the MarginCallRequest message. The margin call can be accepted, fully disputed or partially disputed.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // When sent by the collateral giver the MarginCallResponse message is used to:
 // - fully accept the MarginCallRequest
 // - or partially accept the MarginCallRequest.
-// 
+//
 // When sent by the collateral taker the MarginCallResponse message is used to:
 // - fully accept the recall of collateral
 // - or partially accept the recall of collateral.
@@ -57,9 +57,7 @@ type MarginCallResponseV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MarginCallResponseV04) SetTransactionIdentification(value string) {
 	m.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -101,8 +99,7 @@ func (m *MarginCallResponseV04) AddResponseDetails() *iso20022.Response1 {
 }
 
 func (m *MarginCallResponseV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

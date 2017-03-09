@@ -23,9 +23,7 @@ type TransactionDetails11 struct {
 
 	// Specifies whether an associated FX should be cancelled.
 	FXCancellation *FXCancellation1Choice `xml:"FxCxl,omitempty"`
-
 }
-
 
 func (t *TransactionDetails11) AddAccountOwnerTransactionIdentification() *References2Choice {
 	t.AccountOwnerTransactionIdentification = new(References2Choice)
@@ -59,4 +57,3 @@ func (t *TransactionDetails11) AddFXCancellation() *FXCancellation1Choice {
 	t.FXCancellation = new(FXCancellation1Choice)
 	return t.FXCancellation
 }
-

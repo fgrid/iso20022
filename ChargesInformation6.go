@@ -9,7 +9,7 @@ type ChargesInformation6 struct {
 	// Transaction charges to be paid by the charge bearer.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
 
-	// Indicates whether the charges amount is a credit or a debit amount. 
+	// Indicates whether the charges amount is a credit or a debit amount.
 	// Usage: A zero amount is considered to be a credit.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd,omitempty"`
 
@@ -27,9 +27,7 @@ type ChargesInformation6 struct {
 
 	// Set of elements used to provide details on the tax applied to charges.
 	Tax *TaxCharges2 `xml:"Tax,omitempty"`
-
 }
-
 
 func (c *ChargesInformation6) SetTotalChargesAndTaxAmount(value, currency string) {
 	c.TotalChargesAndTaxAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -65,4 +63,3 @@ func (c *ChargesInformation6) AddTax() *TaxCharges2 {
 	c.Tax = new(TaxCharges2)
 	return c.Tax
 }
-

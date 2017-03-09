@@ -26,9 +26,7 @@ type CorporateActionRate49 struct {
 
 	// Rate of financial transaction tax.
 	FinancialTransactionTaxRate *PercentageRate `xml:"FinTxTaxRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate49) AddAdditionalQuantityForSubscribedResultantSecurities() *RatioFormat3Choice {
 	c.AdditionalQuantityForSubscribedResultantSecurities = new(RatioFormat3Choice)
@@ -59,7 +57,7 @@ func (c *CorporateActionRate49) SetApplicableRate(value string) {
 }
 
 func (c *CorporateActionRate49) AddTaxCreditRate() *TaxCreditRateFormat2Choice {
-	newValue := new (TaxCreditRateFormat2Choice)
+	newValue := new(TaxCreditRateFormat2Choice)
 	c.TaxCreditRate = append(c.TaxCreditRate, newValue)
 	return newValue
 }
@@ -67,4 +65,3 @@ func (c *CorporateActionRate49) AddTaxCreditRate() *TaxCreditRateFormat2Choice {
 func (c *CorporateActionRate49) SetFinancialTransactionTaxRate(value string) {
 	c.FinancialTransactionTaxRate = (*PercentageRate)(&value)
 }
-

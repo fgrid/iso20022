@@ -41,9 +41,7 @@ type DeliverInformation14 struct {
 
 	// Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
 	ClientReference *Max35Text `xml:"ClntRef,omitempty"`
-
 }
-
 
 func (d *DeliverInformation14) SetRequestedSettlementDate(value string) {
 	d.RequestedSettlementDate = (*ISODate)(&value)
@@ -67,25 +65,25 @@ func (d *DeliverInformation14) SetNetAmount(value, currency string) {
 }
 
 func (d *DeliverInformation14) AddChargeDetails() *Charge27 {
-	newValue := new (Charge27)
+	newValue := new(Charge27)
 	d.ChargeDetails = append(d.ChargeDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation14) AddCommissionDetails() *Commission22 {
-	newValue := new (Commission22)
+	newValue := new(Commission22)
 	d.CommissionDetails = append(d.CommissionDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation14) AddTaxDetails() *Tax25 {
-	newValue := new (Tax25)
+	newValue := new(Tax25)
 	d.TaxDetails = append(d.TaxDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation14) AddForeignExchangeDetails() *ForeignExchangeTerms7 {
-	newValue := new (ForeignExchangeTerms7)
+	newValue := new(ForeignExchangeTerms7)
 	d.ForeignExchangeDetails = append(d.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -107,4 +105,3 @@ func (d *DeliverInformation14) AddPhysicalTransferDetails() *DeliveryParameters4
 func (d *DeliverInformation14) SetClientReference(value string) {
 	d.ClientReference = (*Max35Text)(&value)
 }
-

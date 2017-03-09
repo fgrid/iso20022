@@ -14,9 +14,7 @@ type SpecialCondition1 struct {
 
 	// Outgoing payment amount from other account on special conditions.
 	PaymentFromOtherAccount *ActiveCurrencyAndAmount `xml:"PmtFrOthrAcct,omitempty"`
-
 }
-
 
 func (s *SpecialCondition1) SetIncomingAmount(value, currency string) {
 	s.IncomingAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -33,4 +31,3 @@ func (s *SpecialCondition1) SetIncomingAmountToOtherAccount(value, currency stri
 func (s *SpecialCondition1) SetPaymentFromOtherAccount(value, currency string) {
 	s.PaymentFromOtherAccount = NewActiveCurrencyAndAmount(value, currency)
 }
-

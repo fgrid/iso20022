@@ -23,49 +23,46 @@ type AcceptorConfigurationContent4 struct {
 
 	// Point of interaction parameters related to the security of software application and application protocol.
 	SecurityParameters []*SecurityParameters3 `xml:"SctyParams,omitempty"`
-
 }
 
-
 func (a *AcceptorConfigurationContent4) AddTMSProtocolParameters() *TMSProtocolParameters1 {
-	newValue := new (TMSProtocolParameters1)
+	newValue := new(TMSProtocolParameters1)
 	a.TMSProtocolParameters = append(a.TMSProtocolParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent4) AddAcquirerProtocolParameters() *AcquirerProtocolParameters7 {
-	newValue := new (AcquirerProtocolParameters7)
+	newValue := new(AcquirerProtocolParameters7)
 	a.AcquirerProtocolParameters = append(a.AcquirerProtocolParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent4) AddMerchantParameters() *MerchantConfigurationParameters1 {
-	newValue := new (MerchantConfigurationParameters1)
+	newValue := new(MerchantConfigurationParameters1)
 	a.MerchantParameters = append(a.MerchantParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent4) AddTerminalParameters() *PaymentTerminalParameters2 {
-	newValue := new (PaymentTerminalParameters2)
+	newValue := new(PaymentTerminalParameters2)
 	a.TerminalParameters = append(a.TerminalParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent4) AddApplicationParameters() *ApplicationParameters4 {
-	newValue := new (ApplicationParameters4)
+	newValue := new(ApplicationParameters4)
 	a.ApplicationParameters = append(a.ApplicationParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent4) AddHostCommunicationParameters() *HostCommunicationParameter3 {
-	newValue := new (HostCommunicationParameter3)
+	newValue := new(HostCommunicationParameter3)
 	a.HostCommunicationParameters = append(a.HostCommunicationParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent4) AddSecurityParameters() *SecurityParameters3 {
-	newValue := new (SecurityParameters3)
+	newValue := new(SecurityParameters3)
 	a.SecurityParameters = append(a.SecurityParameters, newValue)
 	return newValue
 }
-

@@ -22,17 +22,17 @@ type CreditTransferTransaction10 struct {
 	UltimateDebtor *PartyIdentification43 `xml:"UltmtDbtr,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt1,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt2,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt3,omitempty"`
 
@@ -69,9 +69,7 @@ type CreditTransferTransaction10 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CreditTransferTransaction10) AddPaymentIdentification() *PaymentIdentification1 {
 	c.PaymentIdentification = new(PaymentIdentification1)
@@ -138,7 +136,7 @@ func (c *CreditTransferTransaction10) AddUltimateCreditor() *PartyIdentification
 }
 
 func (c *CreditTransferTransaction10) AddInstructionForCreditorAgent() *InstructionForCreditorAgent1 {
-	newValue := new (InstructionForCreditorAgent1)
+	newValue := new(InstructionForCreditorAgent1)
 	c.InstructionForCreditorAgent = append(c.InstructionForCreditorAgent, newValue)
 	return newValue
 }
@@ -149,7 +147,7 @@ func (c *CreditTransferTransaction10) AddPurpose() *Purpose2Choice {
 }
 
 func (c *CreditTransferTransaction10) AddRegulatoryReporting() *RegulatoryReporting3 {
-	newValue := new (RegulatoryReporting3)
+	newValue := new(RegulatoryReporting3)
 	c.RegulatoryReporting = append(c.RegulatoryReporting, newValue)
 	return newValue
 }
@@ -160,7 +158,7 @@ func (c *CreditTransferTransaction10) AddTax() *TaxInformation3 {
 }
 
 func (c *CreditTransferTransaction10) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	c.RelatedRemittanceInformation = append(c.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -171,8 +169,7 @@ func (c *CreditTransferTransaction10) AddRemittanceInformation() *RemittanceInfo
 }
 
 func (c *CreditTransferTransaction10) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

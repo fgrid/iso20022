@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.008.001.03 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.008.001.03 Document"`
 	Message *AmendmentRejectionNotificationV03 `xml:"AmdmntRjctnNtfctn"`
 }
 
@@ -29,7 +29,7 @@ type AmendmentRejectionNotificationV03 struct {
 
 	// Unique Identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
 	// Unique identification assigned by the matching application to the baseline when it is established.
@@ -50,14 +50,12 @@ type AmendmentRejectionNotificationV03 struct {
 	// Party that has rejected the amendment.
 	Initiator *iso20022.BICIdentification1 `xml:"Initr"`
 
-	// Specifies the reaons for rejecting the amendment.                                                    
+	// Specifies the reaons for rejecting the amendment.
 	RejectionReason *iso20022.RejectionReason1Choice `xml:"RjctnRsn"`
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (a *AmendmentRejectionNotificationV03) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	a.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -80,7 +78,7 @@ func (a *AmendmentRejectionNotificationV03) AddTransactionStatus() *iso20022.Tra
 }
 
 func (a *AmendmentRejectionNotificationV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	a.UserTransactionReference = append(a.UserTransactionReference, newValue)
 	return newValue
 }
@@ -109,4 +107,3 @@ func (a *AmendmentRejectionNotificationV03) AddRequestForAction() *iso20022.Pend
 	a.RequestForAction = new(iso20022.PendingActivity2)
 	return a.RequestForAction
 }
-

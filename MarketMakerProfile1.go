@@ -14,9 +14,7 @@ type MarketMakerProfile1 struct {
 
 	// Rate of discount.
 	Discount *PercentageRate `xml:"Dscnt,omitempty"`
-
 }
-
 
 func (m *MarketMakerProfile1) AddContractPeriod() *DateTimePeriodDetails1 {
 	m.ContractPeriod = new(DateTimePeriodDetails1)
@@ -34,4 +32,3 @@ func (m *MarketMakerProfile1) SetMaximumSpread(value string) {
 func (m *MarketMakerProfile1) SetDiscount(value string) {
 	m.Discount = (*PercentageRate)(&value)
 }
-

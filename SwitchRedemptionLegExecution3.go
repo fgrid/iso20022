@@ -76,9 +76,7 @@ type SwitchRedemptionLegExecution3 struct {
 
 	// Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.
 	Equalisation *Equalisation1 `xml:"Equlstn,omitempty"`
-
 }
-
 
 func (s *SwitchRedemptionLegExecution3) SetLegIdentification(value string) {
 	s.LegIdentification = (*Max35Text)(&value)
@@ -187,4 +185,3 @@ func (s *SwitchRedemptionLegExecution3) AddEqualisation() *Equalisation1 {
 	s.Equalisation = new(Equalisation1)
 	return s.Equalisation
 }
-

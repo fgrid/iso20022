@@ -14,9 +14,7 @@ type TransactionAndDocumentIdentification1 struct {
 
 	// Specifies if this document is a copy, a duplicate, or a duplicate of a copy.
 	CopyDuplicate *CopyDuplicate1Code `xml:"CpyDplct,omitempty"`
-
 }
-
 
 func (t *TransactionAndDocumentIdentification1) SetTransactionIdentification(value string) {
 	t.TransactionIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (t *TransactionAndDocumentIdentification1) AddCreationDateTime() *DateAndDa
 func (t *TransactionAndDocumentIdentification1) SetCopyDuplicate(value string) {
 	t.CopyDuplicate = (*CopyDuplicate1Code)(&value)
 }
-

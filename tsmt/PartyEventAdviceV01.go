@@ -7,7 +7,7 @@ import (
 )
 
 type Document05500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01 Document"`
+	XMLName xml.Name             `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01 Document"`
 	Message *PartyEventAdviceV01 `xml:"PtyEvtAdvc"`
 }
 
@@ -33,9 +33,7 @@ type PartyEventAdviceV01 struct {
 
 	// Referenced or related business message.
 	AttachedMessage []*iso20022.EncapsulatedBusinessMessage1 `xml:"AttchdMsg,omitempty"`
-
 }
-
 
 func (p *PartyEventAdviceV01) AddHeader() *iso20022.BusinessLetter1 {
 	p.Header = new(iso20022.BusinessLetter1)
@@ -43,7 +41,7 @@ func (p *PartyEventAdviceV01) AddHeader() *iso20022.BusinessLetter1 {
 }
 
 func (p *PartyEventAdviceV01) AddEventNotice() *iso20022.EventDescription1 {
-	newValue := new (iso20022.EventDescription1)
+	newValue := new(iso20022.EventDescription1)
 	p.EventNotice = append(p.EventNotice, newValue)
 	return newValue
 }
@@ -53,8 +51,7 @@ func (p *PartyEventAdviceV01) SetEventCount(value string) {
 }
 
 func (p *PartyEventAdviceV01) AddAttachedMessage() *iso20022.EncapsulatedBusinessMessage1 {
-	newValue := new (iso20022.EncapsulatedBusinessMessage1)
+	newValue := new(iso20022.EncapsulatedBusinessMessage1)
 	p.AttachedMessage = append(p.AttachedMessage, newValue)
 	return newValue
 }
-

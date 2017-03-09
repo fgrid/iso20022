@@ -8,9 +8,7 @@ type NotificationCancellation1 struct {
 
 	// The identification of the linked notification advice.
 	LinkedAgentCANotificationAdviceIdentification *DocumentIdentification8 `xml:"LkdAgtCANtfctnAdvcId"`
-
 }
-
 
 func (n *NotificationCancellation1) SetNotificationCancellationType(value string) {
 	n.NotificationCancellationType = (*CorporateActionNotificationType2Code)(&value)
@@ -20,4 +18,3 @@ func (n *NotificationCancellation1) AddLinkedAgentCANotificationAdviceIdentifica
 	n.LinkedAgentCANotificationAdviceIdentification = new(DocumentIdentification8)
 	return n.LinkedAgentCANotificationAdviceIdentification
 }
-

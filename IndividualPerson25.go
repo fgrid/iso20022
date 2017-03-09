@@ -17,9 +17,7 @@ type IndividualPerson25 struct {
 
 	// Organisation represented by the person, or for which the person works.
 	EmployingParty *PartyIdentification40Choice `xml:"EmplngPty,omitempty"`
-
 }
-
 
 func (i *IndividualPerson25) SetBirthName(value string) {
 	i.BirthName = (*Max35Text)(&value)
@@ -43,4 +41,3 @@ func (i *IndividualPerson25) AddEmployingParty() *PartyIdentification40Choice {
 	i.EmployingParty = new(PartyIdentification40Choice)
 	return i.EmployingParty
 }
-

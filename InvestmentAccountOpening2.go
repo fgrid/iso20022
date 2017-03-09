@@ -17,9 +17,7 @@ type InvestmentAccountOpening2 struct {
 
 	// Account to which the account opening is related.
 	ExistingAccountIdentification *Max35Text `xml:"ExstgAcctId,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOpening2) SetOpeningType(value string) {
 	i.OpeningType = (*AccountOpeningType1Code)(&value)
@@ -41,4 +39,3 @@ func (i *InvestmentAccountOpening2) AddCounterpartyReference() *AdditionalRefere
 func (i *InvestmentAccountOpening2) SetExistingAccountIdentification(value string) {
 	i.ExistingAccountIdentification = (*Max35Text)(&value)
 }
-

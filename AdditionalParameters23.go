@@ -14,9 +14,7 @@ type AdditionalParameters23 struct {
 
 	// Unique reference identifying the triparty collateral management transaction from the client's point of view.
 	ClientTripartyCollateralTransactionIdentification *Max35Text `xml:"ClntTrptyCollTxId,omitempty"`
-
 }
-
 
 func (a *AdditionalParameters23) SetPreConfirmation(value string) {
 	a.PreConfirmation = (*PreConfirmation1Code)(&value)
@@ -33,4 +31,3 @@ func (a *AdditionalParameters23) SetTripartyAgentCollateralTransactionIdentifica
 func (a *AdditionalParameters23) SetClientTripartyCollateralTransactionIdentification(value string) {
 	a.ClientTripartyCollateralTransactionIdentification = (*Max35Text)(&value)
 }
-

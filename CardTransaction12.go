@@ -17,9 +17,7 @@ type CardTransaction12 struct {
 
 	// Response to the network management request.
 	TransactionResponse *ResponseType2 `xml:"TxRspn"`
-
 }
-
 
 func (c *CardTransaction12) SetNetworkManagementType(value string) {
 	c.NetworkManagementType = (*CardServiceType2Code)(&value)
@@ -41,4 +39,3 @@ func (c *CardTransaction12) AddTransactionResponse() *ResponseType2 {
 	c.TransactionResponse = new(ResponseType2)
 	return c.TransactionResponse
 }
-

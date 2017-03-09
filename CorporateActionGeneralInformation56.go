@@ -20,9 +20,7 @@ type CorporateActionGeneralInformation56 struct {
 
 	// Identification of the security concerned by the corporate action.
 	FinancialInstrumentIdentification *SecurityIdentification14 `xml:"FinInstrmId"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation56) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (c *CorporateActionGeneralInformation56) AddFinancialInstrumentIdentificati
 	c.FinancialInstrumentIdentification = new(SecurityIdentification14)
 	return c.FinancialInstrumentIdentification
 }
-

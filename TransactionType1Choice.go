@@ -8,9 +8,7 @@ type TransactionType1Choice struct {
 
 	// Type of corporate action event.
 	CorporateActionType *CorporateAction1Choice `xml:"CorpActnTp"`
-
 }
-
 
 func (t *TransactionType1Choice) AddTransactionType() *TransactionType2Choice {
 	t.TransactionType = new(TransactionType2Choice)
@@ -21,4 +19,3 @@ func (t *TransactionType1Choice) AddCorporateActionType() *CorporateAction1Choic
 	t.CorporateActionType = new(CorporateAction1Choice)
 	return t.CorporateActionType
 }
-

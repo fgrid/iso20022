@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.009.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:seev.009.001.01 Document"`
 	Message *AgentCANotificationAdviceV01 `xml:"AgtCANtfctnAdvc"`
 }
 
@@ -51,9 +51,7 @@ type AgentCANotificationAdviceV01 struct {
 
 	// Provides additional information.
 	AdditionalInformation *iso20022.CorporateActionNarrative2 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *AgentCANotificationAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -81,13 +79,13 @@ func (a *AgentCANotificationAdviceV01) AddCorporateActionDetails() *iso20022.Cor
 }
 
 func (a *AgentCANotificationAdviceV01) AddCorporateActionOptionDetails() *iso20022.CorporateActionOption1 {
-	newValue := new (iso20022.CorporateActionOption1)
+	newValue := new(iso20022.CorporateActionOption1)
 	a.CorporateActionOptionDetails = append(a.CorporateActionOptionDetails, newValue)
 	return newValue
 }
 
 func (a *AgentCANotificationAdviceV01) AddContactDetails() *iso20022.ContactPerson1 {
-	newValue := new (iso20022.ContactPerson1)
+	newValue := new(iso20022.ContactPerson1)
 	a.ContactDetails = append(a.ContactDetails, newValue)
 	return newValue
 }
@@ -96,4 +94,3 @@ func (a *AgentCANotificationAdviceV01) AddAdditionalInformation() *iso20022.Corp
 	a.AdditionalInformation = new(iso20022.CorporateActionNarrative2)
 	return a.AdditionalInformation
 }
-

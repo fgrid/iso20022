@@ -72,7 +72,7 @@ type InvestmentAccount51 struct {
 	// Date the investor or account owner signs the open account form.
 	AccountSignatureDateTime *DateAndDateTimeChoice `xml:"AcctSgntrDtTm,omitempty"`
 
-	// Specifies the means by which the investor or account owner submits the open account form. 
+	// Specifies the means by which the investor or account owner submits the open account form.
 	TransactionChannelType *TransactionChannelType1Choice `xml:"TxChanlTp,omitempty"`
 
 	// Specifies the category of the account.
@@ -113,9 +113,7 @@ type InvestmentAccount51 struct {
 
 	// Fiscal year, when not the same as the calendar year.
 	FiscalYear *FiscalYear1Choice `xml:"FsclYr,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount51) SetName(value string) {
 	i.Name = (*Max35Text)(&value)
@@ -158,7 +156,7 @@ func (i *InvestmentAccount51) SetIncomePreference(value string) {
 }
 
 func (i *InvestmentAccount51) AddReinvestmentDetails() *Reinvestment2 {
-	newValue := new (Reinvestment2)
+	newValue := new(Reinvestment2)
 	i.ReinvestmentDetails = append(i.ReinvestmentDetails, newValue)
 	return newValue
 }
@@ -168,7 +166,7 @@ func (i *InvestmentAccount51) SetTaxWithholdingMethod(value string) {
 }
 
 func (i *InvestmentAccount51) AddTaxReporting() *TaxReporting1 {
-	newValue := new (TaxReporting1)
+	newValue := new(TaxReporting1)
 	i.TaxReporting = append(i.TaxReporting, newValue)
 	return newValue
 }
@@ -191,7 +189,7 @@ func (i *InvestmentAccount51) SetFundFamilyName(value string) {
 }
 
 func (i *InvestmentAccount51) AddModifiedFinancialInstrumentDetails() *ModificationScope29 {
-	newValue := new (ModificationScope29)
+	newValue := new(ModificationScope29)
 	i.ModifiedFinancialInstrumentDetails = append(i.ModifiedFinancialInstrumentDetails, newValue)
 	return newValue
 }
@@ -207,7 +205,7 @@ func (i *InvestmentAccount51) AddAccountServicer() *PartyIdentification70Choice 
 }
 
 func (i *InvestmentAccount51) AddBlockedStatus() *Blocked2 {
-	newValue := new (Blocked2)
+	newValue := new(Blocked2)
 	i.BlockedStatus = append(i.BlockedStatus, newValue)
 	return newValue
 }
@@ -283,7 +281,7 @@ func (i *InvestmentAccount51) AddLiability() *Liability1Choice {
 }
 
 func (i *InvestmentAccount51) AddModifiedInvestorProfile() *ModificationScope32 {
-	newValue := new (ModificationScope32)
+	newValue := new(ModificationScope32)
 	i.ModifiedInvestorProfile = append(i.ModifiedInvestorProfile, newValue)
 	return newValue
 }
@@ -292,4 +290,3 @@ func (i *InvestmentAccount51) AddFiscalYear() *FiscalYear1Choice {
 	i.FiscalYear = new(FiscalYear1Choice)
 	return i.FiscalYear
 }
-

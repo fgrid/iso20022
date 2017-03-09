@@ -8,9 +8,7 @@ type ClosingDate1Choice struct {
 
 	// Closing date is defined using a code or data source scheme.
 	Code *Date2Choice `xml:"Cd"`
-
 }
-
 
 func (c *ClosingDate1Choice) AddDate() *DateAndDateTimeChoice {
 	c.Date = new(DateAndDateTimeChoice)
@@ -21,4 +19,3 @@ func (c *ClosingDate1Choice) AddCode() *Date2Choice {
 	c.Code = new(Date2Choice)
 	return c.Code
 }
-

@@ -11,9 +11,7 @@ type CollateralProposalResponseType2 struct {
 
 	// Provides response details for each of the proposed collateral pieces.
 	Response *CollateralResponse1 `xml:"Rspn"`
-
 }
-
 
 func (c *CollateralProposalResponseType2) SetCollateralProposalIdentification(value string) {
 	c.CollateralProposalIdentification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (c *CollateralProposalResponseType2) AddResponse() *CollateralResponse1 {
 	c.Response = new(CollateralResponse1)
 	return c.Response
 }
-

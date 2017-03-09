@@ -11,9 +11,7 @@ type PaymentTransaction18 struct {
 
 	// Choice between types of payment instrument, ie, cheque, credit transfer or investment account.
 	PaymentInstrument *PaymentInstrument7Choice `xml:"PmtInstrm"`
-
 }
-
 
 func (p *PaymentTransaction18) SetSettlementAmount(value, currency string) {
 	p.SettlementAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -27,4 +25,3 @@ func (p *PaymentTransaction18) AddPaymentInstrument() *PaymentInstrument7Choice 
 	p.PaymentInstrument = new(PaymentInstrument7Choice)
 	return p.PaymentInstrument
 }
-

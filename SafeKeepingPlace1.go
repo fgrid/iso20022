@@ -8,9 +8,7 @@ type SafeKeepingPlace1 struct {
 
 	// Legal entity identification as an alternate identification for a place of safekeeping.
 	LEI *LEIIdentifier `xml:"LEI,omitempty"`
-
 }
-
 
 func (s *SafeKeepingPlace1) AddSafekeepingPlaceFormat() *SafekeepingPlaceFormat10Choice {
 	s.SafekeepingPlaceFormat = new(SafekeepingPlaceFormat10Choice)
@@ -20,4 +18,3 @@ func (s *SafeKeepingPlace1) AddSafekeepingPlaceFormat() *SafekeepingPlaceFormat1
 func (s *SafeKeepingPlace1) SetLEI(value string) {
 	s.LEI = (*LEIIdentifier)(&value)
 }
-

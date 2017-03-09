@@ -29,12 +29,10 @@ type CardPaymentTransactionDetails8 struct {
 
 	// Identification of the transaction that has to be unique for a time period.
 	TransactionReference *Max35Text `xml:"TxRef,omitempty"`
-
 }
 
-
 func (c *CardPaymentTransactionDetails8) AddAmount() *CardAmountAndCurrencyExchange1 {
-	newValue := new (CardAmountAndCurrencyExchange1)
+	newValue := new(CardAmountAndCurrencyExchange1)
 	c.Amount = append(c.Amount, newValue)
 	return newValue
 }
@@ -71,4 +69,3 @@ func (c *CardPaymentTransactionDetails8) SetAdditionalService(value string) {
 func (c *CardPaymentTransactionDetails8) SetTransactionReference(value string) {
 	c.TransactionReference = (*Max35Text)(&value)
 }
-

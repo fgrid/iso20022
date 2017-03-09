@@ -26,9 +26,7 @@ type ContactIdentification3 struct {
 
 	// Address for electronic mail (e-mail).
 	EmailAddress *Max256Text `xml:"EmailAdr,omitempty"`
-
 }
-
 
 func (c *ContactIdentification3) SetBIC(value string) {
 	c.BIC = (*BICIdentifier)(&value)
@@ -61,4 +59,3 @@ func (c *ContactIdentification3) SetFaxNumber(value string) {
 func (c *ContactIdentification3) SetEmailAddress(value string) {
 	c.EmailAddress = (*Max256Text)(&value)
 }
-

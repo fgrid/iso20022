@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.018.001.01 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.018.001.01 Document"`
 	Message *PEPOrISAOrPortfolioInformationV01 `xml:"PEPOrISAOrPrtflInfV01"`
 }
 
@@ -64,11 +64,9 @@ type PEPOrISAOrPortfolioInformationV01 struct {
 	// Provides information related to the asset(s) transferred.
 	ProductTransfer []*iso20022.PEPISATransfer6 `xml:"PdctTrf"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PEPOrISAOrPortfolioInformationV01) AddMessageReference() *iso20022.MessageIdentification1 {
 	p.MessageReference = new(iso20022.MessageIdentification1)
@@ -101,7 +99,7 @@ func (p *PEPOrISAOrPortfolioInformationV01) AddSecondaryIndividualInvestor() *is
 }
 
 func (p *PEPOrISAOrPortfolioInformationV01) AddOtherIndividualInvestor() *iso20022.IndividualPerson8 {
-	newValue := new (iso20022.IndividualPerson8)
+	newValue := new(iso20022.IndividualPerson8)
 	p.OtherIndividualInvestor = append(p.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -117,7 +115,7 @@ func (p *PEPOrISAOrPortfolioInformationV01) AddSecondaryCorporateInvestor() *iso
 }
 
 func (p *PEPOrISAOrPortfolioInformationV01) AddOtherCorporateInvestor() *iso20022.Organisation4 {
-	newValue := new (iso20022.Organisation4)
+	newValue := new(iso20022.Organisation4)
 	p.OtherCorporateInvestor = append(p.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -138,14 +136,13 @@ func (p *PEPOrISAOrPortfolioInformationV01) AddNewPlanManager() *iso20022.PartyI
 }
 
 func (p *PEPOrISAOrPortfolioInformationV01) AddProductTransfer() *iso20022.PEPISATransfer6 {
-	newValue := new (iso20022.PEPISATransfer6)
+	newValue := new(iso20022.PEPISATransfer6)
 	p.ProductTransfer = append(p.ProductTransfer, newValue)
 	return newValue
 }
 
 func (p *PEPOrISAOrPortfolioInformationV01) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document04100104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.041.001.04 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:camt.041.001.04 Document"`
 	Message *FundConfirmedCashForecastReportV04 `xml:"FndConfdCshFcstRpt"`
 }
 
@@ -57,9 +57,7 @@ type FundConfirmedCashForecastReportV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundConfirmedCashForecastReportV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	f.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -72,13 +70,13 @@ func (f *FundConfirmedCashForecastReportV04) AddPoolReference() *iso20022.Additi
 }
 
 func (f *FundConfirmedCashForecastReportV04) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.PreviousReference = append(f.PreviousReference, newValue)
 	return newValue
 }
 
 func (f *FundConfirmedCashForecastReportV04) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
@@ -89,13 +87,13 @@ func (f *FundConfirmedCashForecastReportV04) AddMessagePagination() *iso20022.Pa
 }
 
 func (f *FundConfirmedCashForecastReportV04) AddFundOrSubFundDetails() *iso20022.Fund2 {
-	newValue := new (iso20022.Fund2)
+	newValue := new(iso20022.Fund2)
 	f.FundOrSubFundDetails = append(f.FundOrSubFundDetails, newValue)
 	return newValue
 }
 
 func (f *FundConfirmedCashForecastReportV04) AddFundCashForecastDetails() *iso20022.FundCashForecast7 {
-	newValue := new (iso20022.FundCashForecast7)
+	newValue := new(iso20022.FundCashForecast7)
 	f.FundCashForecastDetails = append(f.FundCashForecastDetails, newValue)
 	return newValue
 }
@@ -106,8 +104,7 @@ func (f *FundConfirmedCashForecastReportV04) AddConsolidatedNetCashForecast() *i
 }
 
 func (f *FundConfirmedCashForecastReportV04) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

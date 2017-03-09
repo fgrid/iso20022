@@ -8,9 +8,7 @@ type AmountPrice1 struct {
 
 	// Value of the price.
 	PriceValue *ActiveCurrencyAnd13DecimalAmount `xml:"PricVal"`
-
 }
-
 
 func (a *AmountPrice1) AddAmountPriceType() *AmountPriceType1FormatChoice {
 	a.AmountPriceType = new(AmountPriceType1FormatChoice)
@@ -20,4 +18,3 @@ func (a *AmountPrice1) AddAmountPriceType() *AmountPriceType1FormatChoice {
 func (a *AmountPrice1) SetPriceValue(value, currency string) {
 	a.PriceValue = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

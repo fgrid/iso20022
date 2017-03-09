@@ -18,9 +18,7 @@ type ATMReject1 struct {
 
 	// Received message that has been rejected.
 	MessageInError *Max100KBinary `xml:"MsgInErr,omitempty"`
-
 }
-
 
 func (a *ATMReject1) SetRejectInitiatorIdentification(value string) {
 	a.RejectInitiatorIdentification = (*Max35Text)(&value)
@@ -35,7 +33,7 @@ func (a *ATMReject1) SetAdditionalInformation(value string) {
 }
 
 func (a *ATMReject1) AddCommand() *ATMCommand1 {
-	newValue := new (ATMCommand1)
+	newValue := new(ATMCommand1)
 	a.Command = append(a.Command, newValue)
 	return newValue
 }
@@ -43,4 +41,3 @@ func (a *ATMReject1) AddCommand() *ATMCommand1 {
 func (a *ATMReject1) SetMessageInError(value string) {
 	a.MessageInError = (*Max100KBinary)(&value)
 }
-

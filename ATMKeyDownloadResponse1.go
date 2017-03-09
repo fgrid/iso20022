@@ -17,9 +17,7 @@ type ATMKeyDownloadResponse1 struct {
 
 	// Maintenance command to perform on the ATM.
 	Command []*ATMCommand1 `xml:"Cmd,omitempty"`
-
 }
-
 
 func (a *ATMKeyDownloadResponse1) AddEnvironment() *ATMEnvironment7 {
 	a.Environment = new(ATMEnvironment7)
@@ -41,8 +39,7 @@ func (a *ATMKeyDownloadResponse1) AddHostSecurityParameters() *SecurityParameter
 }
 
 func (a *ATMKeyDownloadResponse1) AddCommand() *ATMCommand1 {
-	newValue := new (ATMCommand1)
+	newValue := new(ATMCommand1)
 	a.Command = append(a.Command, newValue)
 	return newValue
 }
-

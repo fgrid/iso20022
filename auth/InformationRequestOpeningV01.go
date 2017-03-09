@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.001.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:auth.001.001.01 Document"`
 	Message *InformationRequestOpeningV01 `xml:"InfReqOpng"`
 }
 
@@ -17,8 +17,8 @@ func (d *Document00100101) AddMessage() *InformationRequestOpeningV01 {
 }
 
 // This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.
-// 
-// Requests are underpinned by specific legal texts. 
+//
+// Requests are underpinned by specific legal texts.
 type InformationRequestOpeningV01 struct {
 
 	// Unique identification for the specific investigation as known by the requesting party.
@@ -41,9 +41,7 @@ type InformationRequestOpeningV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *InformationRequestOpeningV01) SetInvestigationIdentification(value string) {
 	i.InvestigationIdentification = (*iso20022.Max35Text)(&value)
@@ -74,8 +72,7 @@ func (i *InformationRequestOpeningV01) AddSearchCriteria() *iso20022.SearchCrite
 }
 
 func (i *InformationRequestOpeningV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.004.001.05 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:seev.004.001.05 Document"`
 	Message *MeetingInstructionV05 `xml:"MtgInstr"`
 }
 
@@ -36,9 +36,7 @@ type MeetingInstructionV05 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MeetingInstructionV05) AddMeetingReference() *iso20022.MeetingReference7 {
 	m.MeetingReference = new(iso20022.MeetingReference7)
@@ -51,14 +49,13 @@ func (m *MeetingInstructionV05) AddFinancialInstrumentIdentification() *iso20022
 }
 
 func (m *MeetingInstructionV05) AddInstruction() *iso20022.Instruction3 {
-	newValue := new (iso20022.Instruction3)
+	newValue := new(iso20022.Instruction3)
 	m.Instruction = append(m.Instruction, newValue)
 	return newValue
 }
 
 func (m *MeetingInstructionV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.027.001.04 Document"`
+	XMLName xml.Name            `xml:"urn:iso:std:iso:20022:tech:xsd:camt.027.001.04 Document"`
 	Message *ClaimNonReceiptV04 `xml:"ClmNonRct"`
 }
 
@@ -58,9 +58,7 @@ type ClaimNonReceiptV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *ClaimNonReceiptV04) AddAssignment() *iso20022.CaseAssignment3 {
 	c.Assignment = new(iso20022.CaseAssignment3)
@@ -83,8 +81,7 @@ func (c *ClaimNonReceiptV04) AddCoverDetails() *iso20022.MissingCover3 {
 }
 
 func (c *ClaimNonReceiptV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

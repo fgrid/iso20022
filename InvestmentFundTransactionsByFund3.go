@@ -26,9 +26,7 @@ type InvestmentFundTransactionsByFund3 struct {
 
 	// Balance of the financial instrument for this specific statement page.
 	BalanceByPage *PaginationBalance2 `xml:"BalByPg,omitempty"`
-
 }
-
 
 func (i *InvestmentFundTransactionsByFund3) AddIdentification() *SecurityIdentification3Choice {
 	i.Identification = new(SecurityIdentification3Choice)
@@ -56,7 +54,7 @@ func (i *InvestmentFundTransactionsByFund3) SetDistributionPolicy(value string) 
 }
 
 func (i *InvestmentFundTransactionsByFund3) AddTransactionDetails() *InvestmentFundTransaction4 {
-	newValue := new (InvestmentFundTransaction4)
+	newValue := new(InvestmentFundTransaction4)
 	i.TransactionDetails = append(i.TransactionDetails, newValue)
 	return newValue
 }
@@ -65,4 +63,3 @@ func (i *InvestmentFundTransactionsByFund3) AddBalanceByPage() *PaginationBalanc
 	i.BalanceByPage = new(PaginationBalance2)
 	return i.BalanceByPage
 }
-

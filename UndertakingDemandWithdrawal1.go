@@ -14,9 +14,7 @@ type UndertakingDemandWithdrawal1 struct {
 
 	// Unique and unambiguous identifier assigned by the confirmer to the undertaking.
 	ConfirmerReferenceNumber *Max35Text `xml:"CnfrmrRefNb,omitempty"`
-
 }
-
 
 func (u *UndertakingDemandWithdrawal1) AddUndertakingIdentification() *Undertaking6 {
 	u.UndertakingIdentification = new(Undertaking6)
@@ -35,4 +33,3 @@ func (u *UndertakingDemandWithdrawal1) AddDemandDetails() *Demand3 {
 func (u *UndertakingDemandWithdrawal1) SetConfirmerReferenceNumber(value string) {
 	u.ConfirmerReferenceNumber = (*Max35Text)(&value)
 }
-

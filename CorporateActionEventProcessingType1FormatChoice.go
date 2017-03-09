@@ -8,9 +8,7 @@ type CorporateActionEventProcessingType1FormatChoice struct {
 
 	// Proprietary code to  express the type of event processing.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionEventProcessingType1FormatChoice) SetCode(value string) {
 	c.Code = (*CorporateActionEventProcessingType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionEventProcessingType1FormatChoice) AddProprietary() *Gene
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

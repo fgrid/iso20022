@@ -14,9 +14,7 @@ type CurrencyDetails1 struct {
 
 	// Full name of the currency.
 	Name *Max35Text `xml:"Nm,omitempty"`
-
 }
-
 
 func (c *CurrencyDetails1) SetAlphaCode(value string) {
 	c.AlphaCode = (*CurrencyCode)(&value)
@@ -33,4 +31,3 @@ func (c *CurrencyDetails1) SetDecimal(value string) {
 func (c *CurrencyDetails1) SetName(value string) {
 	c.Name = (*Max35Text)(&value)
 }
-

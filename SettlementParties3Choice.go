@@ -8,9 +8,7 @@ type SettlementParties3Choice struct {
 
 	// Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.
 	ReceivingSettlementParties *ReceivingPartiesAndAccount10 `xml:"RcvgSttlmPties,omitempty"`
-
 }
-
 
 func (s *SettlementParties3Choice) AddDeliveringSettlementParties() *DeliveringPartiesAndAccount10 {
 	s.DeliveringSettlementParties = new(DeliveringPartiesAndAccount10)
@@ -21,4 +19,3 @@ func (s *SettlementParties3Choice) AddReceivingSettlementParties() *ReceivingPar
 	s.ReceivingSettlementParties = new(ReceivingPartiesAndAccount10)
 	return s.ReceivingSettlementParties
 }
-

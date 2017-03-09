@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.003.001.04 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:colr.003.001.04 Document"`
 	Message *MarginCallRequestV04 `xml:"MrgnCallReq"`
 }
 
@@ -19,9 +19,9 @@ func (d *Document00300104) AddMessage() *MarginCallRequestV04 {
 // Scope
 // The MarginCallRequest message is sent by the collateral taker or its collateral manager to the collateral giver or its collateral manager
 // This message is used to request new collateral at the initiation of an exposure or request additional collateral for an existing exposure. It can also be used to recall collateral upon the collateral giver or its collateral manager's request.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // When sent by the collateral taker the MarginCallRequest message is used to:
 // - request new collateral at the initiation of an exposure
@@ -63,11 +63,9 @@ type MarginCallRequestV04 struct {
 	// Allows the reporting of the margin requirements for multiple accounts and report a single margin call amount made up of the aggregate of all the individual requirement amounts.
 	MarginCallDetails []*iso20022.MarginCall2 `xml:"MrgnCallDtls,omitempty"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MarginCallRequestV04) SetTransactionIdentification(value string) {
 	m.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -119,14 +117,13 @@ func (m *MarginCallRequestV04) AddExpectedCollateralDueToB() *iso20022.ExpectedC
 }
 
 func (m *MarginCallRequestV04) AddMarginCallDetails() *iso20022.MarginCall2 {
-	newValue := new (iso20022.MarginCall2)
+	newValue := new(iso20022.MarginCall2)
 	m.MarginCallDetails = append(m.MarginCallDetails, newValue)
 	return newValue
 }
 
 func (m *MarginCallRequestV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

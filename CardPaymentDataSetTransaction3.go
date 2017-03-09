@@ -17,16 +17,14 @@ type CardPaymentDataSetTransaction3 struct {
 
 	// Card payment cancellation transaction between an acceptor and an acquirer.
 	Transaction *CardPaymentTransaction20 `xml:"Tx"`
-
 }
-
 
 func (c *CardPaymentDataSetTransaction3) SetTransactionSequenceCounter(value string) {
 	c.TransactionSequenceCounter = (*Max9NumericText)(&value)
 }
 
 func (c *CardPaymentDataSetTransaction3) AddTraceability() *Traceability1 {
-	newValue := new (Traceability1)
+	newValue := new(Traceability1)
 	c.Traceability = append(c.Traceability, newValue)
 	return newValue
 }
@@ -45,4 +43,3 @@ func (c *CardPaymentDataSetTransaction3) AddTransaction() *CardPaymentTransactio
 	c.Transaction = new(CardPaymentTransaction20)
 	return c.Transaction
 }
-

@@ -11,9 +11,7 @@ type MessageItemCondition1 struct {
 
 	// Value to be used for the message item.
 	Value []*Max140Text `xml:"Val,omitempty"`
-
 }
-
 
 func (m *MessageItemCondition1) SetItemIdentification(value string) {
 	m.ItemIdentification = (*Max140Text)(&value)
@@ -26,4 +24,3 @@ func (m *MessageItemCondition1) SetCondition(value string) {
 func (m *MessageItemCondition1) AddValue(value string) {
 	m.Value = append(m.Value, (*Max140Text)(&value))
 }
-

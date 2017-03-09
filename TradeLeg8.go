@@ -86,9 +86,7 @@ type TradeLeg8 struct {
 
 	// Account to or from which a securities entry is made.
 	SafekeepingAccount *SecuritiesAccount19 `xml:"SfkpgAcct,omitempty"`
-
 }
-
 
 func (t *TradeLeg8) SetTradeLegIdentification(value string) {
 	t.TradeLegIdentification = (*Max35Text)(&value)
@@ -214,4 +212,3 @@ func (t *TradeLeg8) AddSafekeepingAccount() *SecuritiesAccount19 {
 	t.SafekeepingAccount = new(SecuritiesAccount19)
 	return t.SafekeepingAccount
 }
-

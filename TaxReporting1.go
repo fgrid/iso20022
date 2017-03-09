@@ -20,9 +20,7 @@ type TaxReporting1 struct {
 
 	// Additional information for the reporting of tax.
 	Description *Max350Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (t *TaxReporting1) SetTaxationCountry(value string) {
 	t.TaxationCountry = (*CountryCode)(&value)
@@ -50,4 +48,3 @@ func (t *TaxReporting1) AddCashAccountDetails() *CashAccount32 {
 func (t *TaxReporting1) SetDescription(value string) {
 	t.Description = (*Max350Text)(&value)
 }
-

@@ -10,7 +10,7 @@ type PaymentTypeInformation24 struct {
 	ServiceLevel *ServiceLevel8Choice `xml:"SvcLvl,omitempty"`
 
 	// User community specific instrument.
-	// 
+	//
 	// Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.
 	LocalInstrument *LocalInstrument2Choice `xml:"LclInstrm,omitempty"`
 
@@ -20,9 +20,7 @@ type PaymentTypeInformation24 struct {
 	// Specifies the high level purpose of the instruction based on a set of pre-defined categories.
 	// Usage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.
 	CategoryPurpose *CategoryPurpose1Choice `xml:"CtgyPurp,omitempty"`
-
 }
-
 
 func (p *PaymentTypeInformation24) SetInstructionPriority(value string) {
 	p.InstructionPriority = (*Priority2Code)(&value)
@@ -46,4 +44,3 @@ func (p *PaymentTypeInformation24) AddCategoryPurpose() *CategoryPurpose1Choice 
 	p.CategoryPurpose = new(CategoryPurpose1Choice)
 	return p.CategoryPurpose
 }
-

@@ -13,7 +13,7 @@ type CurrencyExchange3 struct {
 	UnitCurrency *CurrencyCode `xml:"UnitCcy,omitempty"`
 
 	// Factor used for the conversion of an amount from one currency into another. This reflects the price at which one currency was bought with another currency.
-	// 
+	//
 	// Usage: ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).
 	ExchangeRate *BaseOneRate `xml:"XchgRate"`
 
@@ -22,9 +22,7 @@ type CurrencyExchange3 struct {
 
 	// Date and time at which an exchange rate is quoted.
 	QuotationDate *ISODateTime `xml:"QtnDt,omitempty"`
-
 }
-
 
 func (c *CurrencyExchange3) SetSourceCurrency(value string) {
 	c.SourceCurrency = (*CurrencyCode)(&value)
@@ -49,4 +47,3 @@ func (c *CurrencyExchange3) SetContractIdentification(value string) {
 func (c *CurrencyExchange3) SetQuotationDate(value string) {
 	c.QuotationDate = (*ISODateTime)(&value)
 }
-

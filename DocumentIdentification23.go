@@ -11,9 +11,7 @@ type DocumentIdentification23 struct {
 
 	// Identification of buyer order line item.
 	OrderLineIdentification *Max35Text `xml:"OrdrLineId,omitempty"`
-
 }
-
 
 func (d *DocumentIdentification23) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (d *DocumentIdentification23) SetDateOfIssue(value string) {
 func (d *DocumentIdentification23) SetOrderLineIdentification(value string) {
 	d.OrderLineIdentification = (*Max35Text)(&value)
 }
-

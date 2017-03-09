@@ -14,9 +14,7 @@ type CorporateActionGeneralInformation104 struct {
 
 	// Identification of the security concerned by the corporate action.
 	FinancialInstrumentIdentification *SecurityIdentification21 `xml:"FinInstrmId,omitempty"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation104) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -35,4 +33,3 @@ func (c *CorporateActionGeneralInformation104) AddFinancialInstrumentIdentificat
 	c.FinancialInstrumentIdentification = new(SecurityIdentification21)
 	return c.FinancialInstrumentIdentification
 }
-

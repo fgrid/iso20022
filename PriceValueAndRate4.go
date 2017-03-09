@@ -8,9 +8,7 @@ type PriceValueAndRate4 struct {
 
 	// Price expressed as a percentage.
 	Rate *PercentageRate `xml:"Rate,omitempty"`
-
 }
-
 
 func (p *PriceValueAndRate4) AddValue() *PriceAndDirection1 {
 	p.Value = new(PriceAndDirection1)
@@ -20,4 +18,3 @@ func (p *PriceValueAndRate4) AddValue() *PriceAndDirection1 {
 func (p *PriceValueAndRate4) SetRate(value string) {
 	p.Rate = (*PercentageRate)(&value)
 }
-

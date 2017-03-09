@@ -12,13 +12,13 @@ type TradeAgreement12 struct {
 	// Represents the original reference of the instruction for which the status is given, as assigned by the participant that submitted the foreign exchange trade.
 	OriginatorReference *Max35Text `xml:"OrgtrRef"`
 
-	// Reference common to both parties of the trade. 
+	// Reference common to both parties of the trade.
 	CommonReference *Max35Text `xml:"CmonRef,omitempty"`
 
 	// Specifies the reason for the cancellation or the amendment.
 	AmendOrCancelReason *Max35Text `xml:"AmdOrCclRsn,omitempty"`
 
-	// Reference to the identification of a previous event in the life of a trade which is amended or cancelled. 
+	// Reference to the identification of a previous event in the life of a trade which is amended or cancelled.
 	RelatedReference *Max35Text `xml:"RltdRef,omitempty"`
 
 	// Specifies the product for which the status of the confirmation is reported.
@@ -38,9 +38,7 @@ type TradeAgreement12 struct {
 
 	// Specifies if the FX transaction is PVP settlement. Payment versus payment (PvP) settlement arrangement allows for two currencies in a foreign exchange (FX) contract to exchange simultaneously on a central settlement platform to eliminate the settlement risk. To apply PvP, the two parties in the FX contract need to have a pre-agreement with the central settlement platform, for example, USD/MYR FX deals require both parties to have an agreement to settle via HK Interbank Clearing Ltd settlement platform.
 	PaymentVersusPaymentIndicator *YesNoIndicator `xml:"PmtVrssPmtInd,omitempty"`
-
 }
-
 
 func (t *TradeAgreement12) SetTradeDate(value string) {
 	t.TradeDate = (*ISODate)(&value)
@@ -89,4 +87,3 @@ func (t *TradeAgreement12) SetSplitTradeIndicator(value string) {
 func (t *TradeAgreement12) SetPaymentVersusPaymentIndicator(value string) {
 	t.PaymentVersusPaymentIndicator = (*YesNoIndicator)(&value)
 }
-

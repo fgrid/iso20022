@@ -14,9 +14,7 @@ type TerminalManagementDataSet7 struct {
 
 	// Transport key encrypted by the TM key encryption RSA key.
 	EncryptedKey *ContentInformationType5 `xml:"NcrptdKey,omitempty"`
-
 }
-
 
 func (t *TerminalManagementDataSet7) AddIdentification() *DataSetIdentification3 {
 	t.Identification = new(DataSetIdentification3)
@@ -35,4 +33,3 @@ func (t *TerminalManagementDataSet7) AddEncryptedKey() *ContentInformationType5 
 	t.EncryptedKey = new(ContentInformationType5)
 	return t.EncryptedKey
 }
-

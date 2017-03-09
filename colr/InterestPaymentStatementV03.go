@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.015.001.03 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:colr.015.001.03 Document"`
 	Message *InterestPaymentStatementV03 `xml:"IntrstPmtStmt"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document01500103) AddMessage() *InterestPaymentStatementV03 {
 
 // Scope
 // This message is sent by either the collateral giver or its collateral manager to the collateral taker or its collateral manager. It is used to report the interest amounts calculated based on the effective posted collateral amount, over a specific period of time agreed by both parties.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The InterestPaymentStatement message is used for reporting the interest per period on collateral held.
 type InterestPaymentStatementV03 struct {
@@ -45,9 +45,7 @@ type InterestPaymentStatementV03 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *InterestPaymentStatementV03) SetTransactionIdentification(value string) {
 	i.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -79,8 +77,7 @@ func (i *InterestPaymentStatementV03) AddInterestStatement() *iso20022.InterestS
 }
 
 func (i *InterestPaymentStatementV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document05200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.052.001.01 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:setr.052.001.01 Document"`
 	Message *RedemptionOrderConfirmationAmendmentV01 `xml:"RedOrdrConfAmdmntV01"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document05200101) AddMessage() *RedemptionOrderConfirmationAmendmentV01
 // The message identification of the RedemptionOrder message in which the individual orders were conveyed may also be quoted in RelatedReference. The message identification of the RedemptionOrderConfirmation message in which the original order confirmations were conveyed may also be quoted in PreviousReference.
 type RedemptionOrderConfirmationAmendmentV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -47,9 +47,7 @@ type RedemptionOrderConfirmationAmendmentV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RedemptionOrderConfirmationAmendmentV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -62,7 +60,7 @@ func (r *RedemptionOrderConfirmationAmendmentV01) AddPoolReference() *iso20022.A
 }
 
 func (r *RedemptionOrderConfirmationAmendmentV01) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	r.PreviousReference = append(r.PreviousReference, newValue)
 	return newValue
 }
@@ -78,7 +76,7 @@ func (r *RedemptionOrderConfirmationAmendmentV01) AddMultipleExecutionDetails() 
 }
 
 func (r *RedemptionOrderConfirmationAmendmentV01) AddRelatedPartyDetails() *iso20022.Intermediary9 {
-	newValue := new (iso20022.Intermediary9)
+	newValue := new(iso20022.Intermediary9)
 	r.RelatedPartyDetails = append(r.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -89,8 +87,7 @@ func (r *RedemptionOrderConfirmationAmendmentV01) AddCopyDetails() *iso20022.Cop
 }
 
 func (r *RedemptionOrderConfirmationAmendmentV01) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type InformationTypeFormat1Choice struct {
 
 	// Proprietary identification of the information type.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (i *InformationTypeFormat1Choice) SetCode(value string) {
 	i.Code = (*CorporateActionInformationType1Code)(&value)
@@ -20,4 +18,3 @@ func (i *InformationTypeFormat1Choice) AddProprietary() *GenericIdentification20
 	i.Proprietary = new(GenericIdentification20)
 	return i.Proprietary
 }
-

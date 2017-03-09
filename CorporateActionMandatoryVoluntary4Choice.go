@@ -8,9 +8,7 @@ type CorporateActionMandatoryVoluntary4Choice struct {
 
 	// Proprietary identification of an event.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionMandatoryVoluntary4Choice) SetCode(value string) {
 	c.Code = (*CorporateActionMandatoryVoluntary1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionMandatoryVoluntary4Choice) AddProprietary() *GenericIden
 	c.Proprietary = new(GenericIdentification47)
 	return c.Proprietary
 }
-

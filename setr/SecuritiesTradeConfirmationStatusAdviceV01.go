@@ -7,7 +7,7 @@ import (
 )
 
 type Document04400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.044.001.01 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:setr.044.001.01 Document"`
 	Message *SecuritiesTradeConfirmationStatusAdviceV01 `xml:"SctiesTradConfStsAdvc"`
 }
 
@@ -63,9 +63,7 @@ type SecuritiesTradeConfirmationStatusAdviceV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddIdentification() *iso20022.TransactiontIdentification4 {
 	s.Identification = new(iso20022.TransactiontIdentification4)
@@ -73,7 +71,7 @@ func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddIdentification() *iso200
 }
 
 func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddReferences() *iso20022.Linkages18 {
-	newValue := new (iso20022.Linkages18)
+	newValue := new(iso20022.Linkages18)
 	s.References = append(s.References, newValue)
 	return newValue
 }
@@ -114,7 +112,7 @@ func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddCounterpartyTradingDetai
 }
 
 func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddConfirmationParties() *iso20022.ConfirmationParties4 {
-	newValue := new (iso20022.ConfirmationParties4)
+	newValue := new(iso20022.ConfirmationParties4)
 	s.ConfirmationParties = append(s.ConfirmationParties, newValue)
 	return newValue
 }
@@ -130,8 +128,7 @@ func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddReceivingSettlementParti
 }
 
 func (s *SecuritiesTradeConfirmationStatusAdviceV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

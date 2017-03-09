@@ -15,12 +15,10 @@ type NetCashForecast4 struct {
 	// Specifies the direction of the cash flow from the perspective of the fund.
 	FlowDirection *FlowDirectionType1Code `xml:"FlowDrctn"`
 
-	// Additional balances for cash amounts and number of units. 
+	// Additional balances for cash amounts and number of units.
 	// In an estimated report, the total cash derived from orders placed as a number of units is an estimated cash amount and the total number of units derived from orders placed as a cash amount is an estimated number of units.
 	AdditionalBalance *FundBalance1 `xml:"AddtlBal,omitempty"`
-
 }
-
 
 func (n *NetCashForecast4) SetCashSettlementDate(value string) {
 	n.CashSettlementDate = (*ISODate)(&value)
@@ -43,4 +41,3 @@ func (n *NetCashForecast4) AddAdditionalBalance() *FundBalance1 {
 	n.AdditionalBalance = new(FundBalance1)
 	return n.AdditionalBalance
 }
-

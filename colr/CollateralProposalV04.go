@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.007.001.04 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:colr.007.001.04 Document"`
 	Message *CollateralProposalV04 `xml:"CollPrpsl"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document00700104) AddMessage() *CollateralProposalV04 {
 
 // Scope
 // The CollateralProposal message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager, to propose the collateral to be delivered. This message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. This message is used for both initial collateral proposal and subsequent counter proposals.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // This message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. The collateral proposal can include securities, cash and other types of collateral.
 type CollateralProposalV04 struct {
@@ -39,9 +39,7 @@ type CollateralProposalV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CollateralProposalV04) SetTransactionIdentification(value string) {
 	c.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -63,8 +61,7 @@ func (c *CollateralProposalV04) AddTypeAndDetails() *iso20022.Proposal4 {
 }
 
 func (c *CollateralProposalV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

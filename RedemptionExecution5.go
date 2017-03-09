@@ -127,9 +127,7 @@ type RedemptionExecution5 struct {
 
 	// Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.
 	Equalisation *Equalisation1 `xml:"Equlstn,omitempty"`
-
 }
-
 
 func (r *RedemptionExecution5) SetOrderReference(value string) {
 	r.OrderReference = (*Max35Text)(&value)
@@ -144,7 +142,7 @@ func (r *RedemptionExecution5) SetDealReference(value string) {
 }
 
 func (r *RedemptionExecution5) AddOrderType() *FundOrderType3 {
-	newValue := new (FundOrderType3)
+	newValue := new(FundOrderType3)
 	r.OrderType = append(r.OrderType, newValue)
 	return newValue
 }
@@ -203,7 +201,7 @@ func (r *RedemptionExecution5) AddDealingPriceDetails() *UnitPrice10 {
 }
 
 func (r *RedemptionExecution5) AddInformativePriceDetails() *UnitPrice10 {
-	newValue := new (UnitPrice10)
+	newValue := new(UnitPrice10)
 	r.InformativePriceDetails = append(r.InformativePriceDetails, newValue)
 	return newValue
 }
@@ -226,7 +224,7 @@ func (r *RedemptionExecution5) AddInterimProfitAmount() *ProfitAndLoss1Choice {
 }
 
 func (r *RedemptionExecution5) AddForeignExchangeDetails() *ForeignExchangeTerms7 {
-	newValue := new (ForeignExchangeTerms7)
+	newValue := new(ForeignExchangeTerms7)
 	r.ForeignExchangeDetails = append(r.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -250,7 +248,7 @@ func (r *RedemptionExecution5) AddCommissionGeneralDetails() *TotalCommissions3 
 }
 
 func (r *RedemptionExecution5) AddStaffClientBreakdown() *InvestmentFundsOrderBreakdown1 {
-	newValue := new (InvestmentFundsOrderBreakdown1)
+	newValue := new(InvestmentFundsOrderBreakdown1)
 	r.StaffClientBreakdown = append(r.StaffClientBreakdown, newValue)
 	return newValue
 }
@@ -308,7 +306,7 @@ func (r *RedemptionExecution5) SetLateReport(value string) {
 }
 
 func (r *RedemptionExecution5) AddRelatedPartyDetails() *Intermediary9 {
-	newValue := new (Intermediary9)
+	newValue := new(Intermediary9)
 	r.RelatedPartyDetails = append(r.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -317,4 +315,3 @@ func (r *RedemptionExecution5) AddEqualisation() *Equalisation1 {
 	r.Equalisation = new(Equalisation1)
 	return r.Equalisation
 }
-

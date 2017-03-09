@@ -11,9 +11,7 @@ type Amount1 struct {
 
 	// Provides additional information related to the margin call amount that has been agreed.
 	AdditionalInformation *Max210Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *Amount1) SetAgreedAmount(value, currency string) {
 	a.AgreedAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (a *Amount1) SetMarginCallRequestIdentification(value string) {
 func (a *Amount1) SetAdditionalInformation(value string) {
 	a.AdditionalInformation = (*Max210Text)(&value)
 }
-

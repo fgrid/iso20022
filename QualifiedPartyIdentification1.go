@@ -1,9 +1,9 @@
 package iso20022
 
 // Defines and associates identifications for a party as a list of other global or qualified relative identifiers.
-	// It is assumed that customers of a party can be referenced by an identifier local to the party. The party together with the local identifier can be used to reference the customer.
-	// Multiple references can be given to identify the same party.
-	// A short identification can be used for display purposes.
+// It is assumed that customers of a party can be referenced by an identifier local to the party. The party together with the local identifier can be used to reference the customer.
+// Multiple references can be given to identify the same party.
+// A short identification can be used for display purposes.
 type QualifiedPartyIdentification1 struct {
 
 	// Schema ID to be used in IDREF values.
@@ -20,16 +20,14 @@ type QualifiedPartyIdentification1 struct {
 
 	// Free form description of the party's role.
 	RoleDescription *Max256Text `xml:"RoleDesc,omitempty"`
-
 }
-
 
 func (q *QualifiedPartyIdentification1) SetIdentification(value string) {
 	q.Identification = (*ID)(&value)
 }
 
 func (q *QualifiedPartyIdentification1) AddParty() *SingleQualifiedPartyIdentification1 {
-	newValue := new (SingleQualifiedPartyIdentification1)
+	newValue := new(SingleQualifiedPartyIdentification1)
 	q.Party = append(q.Party, newValue)
 	return newValue
 }
@@ -47,4 +45,3 @@ func (q *QualifiedPartyIdentification1) AddRole() *GenericIdentification1 {
 func (q *QualifiedPartyIdentification1) SetRoleDescription(value string) {
 	q.RoleDescription = (*Max256Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type BorrowerLendingDeadline2 struct {
 
 	// Party who has borrowed stocks on loan.
 	Borrower *PartyIdentification103Choice `xml:"Brrwr"`
-
 }
-
 
 func (b *BorrowerLendingDeadline2) AddStockLendingDeadline() *DateFormat34Choice {
 	b.StockLendingDeadline = new(DateFormat34Choice)
@@ -21,4 +19,3 @@ func (b *BorrowerLendingDeadline2) AddBorrower() *PartyIdentification103Choice {
 	b.Borrower = new(PartyIdentification103Choice)
 	return b.Borrower
 }
-

@@ -8,9 +8,7 @@ type Trigger1 struct {
 
 	// Details related to the documentary event on which a variation is triggered.
 	DocumentaryEvent []*Document10 `xml:"DcmntryEvt,omitempty"`
-
 }
-
 
 func (t *Trigger1) AddDateChoice() *FixedOrRecurrentDate1Choice {
 	t.DateChoice = new(FixedOrRecurrentDate1Choice)
@@ -18,8 +16,7 @@ func (t *Trigger1) AddDateChoice() *FixedOrRecurrentDate1Choice {
 }
 
 func (t *Trigger1) AddDocumentaryEvent() *Document10 {
-	newValue := new (Document10)
+	newValue := new(Document10)
 	t.DocumentaryEvent = append(t.DocumentaryEvent, newValue)
 	return newValue
 }
-

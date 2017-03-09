@@ -17,9 +17,7 @@ type CardPaymentTransaction24 struct {
 
 	// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.
 	CurrencyConversion *CurrencyConversion1 `xml:"CcyConvs,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransaction24) AddAuthorisationResult() *AuthorisationResult1 {
 	c.AuthorisationResult = new(AuthorisationResult1)
@@ -37,7 +35,7 @@ func (c *CardPaymentTransaction24) AddBalance() *AmountAndDirection41 {
 }
 
 func (c *CardPaymentTransaction24) AddAction() *Action3 {
-	newValue := new (Action3)
+	newValue := new(Action3)
 	c.Action = append(c.Action, newValue)
 	return newValue
 }
@@ -46,4 +44,3 @@ func (c *CardPaymentTransaction24) AddCurrencyConversion() *CurrencyConversion1 
 	c.CurrencyConversion = new(CurrencyConversion1)
 	return c.CurrencyConversion
 }
-

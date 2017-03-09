@@ -8,9 +8,7 @@ type Period3 struct {
 
 	// Date and time at which the range ends.
 	EndDate *DateFormat12Choice `xml:"EndDt"`
-
 }
-
 
 func (p *Period3) AddStartDate() *DateFormat12Choice {
 	p.StartDate = new(DateFormat12Choice)
@@ -21,4 +19,3 @@ func (p *Period3) AddEndDate() *DateFormat12Choice {
 	p.EndDate = new(DateFormat12Choice)
 	return p.EndDate
 }
-

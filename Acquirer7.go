@@ -8,9 +8,7 @@ type Acquirer7 struct {
 
 	// Identification of the acquirer branch.
 	Branch *Max35Text `xml:"Brnch,omitempty"`
-
 }
-
 
 func (a *Acquirer7) SetAcquiringInstitution(value string) {
 	a.AcquiringInstitution = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (a *Acquirer7) SetAcquiringInstitution(value string) {
 func (a *Acquirer7) SetBranch(value string) {
 	a.Branch = (*Max35Text)(&value)
 }
-

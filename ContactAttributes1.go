@@ -23,9 +23,7 @@ type ContactAttributes1 struct {
 
 	// Unique and unambiguous identification of a financial institution, as assigned under a globally recognised or proprietary identification scheme.
 	Identification *BICIdentifier `xml:"Id,omitempty"`
-
 }
-
 
 func (c *ContactAttributes1) SetName(value string) {
 	c.Name = (*Max350Text)(&value)
@@ -55,4 +53,3 @@ func (c *ContactAttributes1) SetURLAddress(value string) {
 func (c *ContactAttributes1) SetIdentification(value string) {
 	c.Identification = (*BICIdentifier)(&value)
 }
-

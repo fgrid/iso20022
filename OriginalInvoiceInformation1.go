@@ -14,9 +14,7 @@ type OriginalInvoiceInformation1 struct {
 
 	// Due date for the payment of the invoice.
 	PaymentDueDate *ISODate `xml:"PmtDueDt"`
-
 }
-
 
 func (o *OriginalInvoiceInformation1) SetDocumentNumber(value string) {
 	o.DocumentNumber = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (o *OriginalInvoiceInformation1) SetIssueDate(value string) {
 func (o *OriginalInvoiceInformation1) SetPaymentDueDate(value string) {
 	o.PaymentDueDate = (*ISODate)(&value)
 }
-

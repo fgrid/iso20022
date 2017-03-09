@@ -8,9 +8,7 @@ type ATMSecurityConfiguration5 struct {
 
 	// Maximum number of digits the security module is able to accept when the cardholder enters its PIN.
 	PINLengthCapabilities *Number `xml:"PINLngthCpblties,omitempty"`
-
 }
-
 
 func (a *ATMSecurityConfiguration5) AddPINFormat(value string) {
 	a.PINFormat = append(a.PINFormat, (*PINFormat4Code)(&value))
@@ -19,4 +17,3 @@ func (a *ATMSecurityConfiguration5) AddPINFormat(value string) {
 func (a *ATMSecurityConfiguration5) SetPINLengthCapabilities(value string) {
 	a.PINLengthCapabilities = (*Number)(&value)
 }
-

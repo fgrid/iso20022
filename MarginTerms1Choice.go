@@ -8,9 +8,7 @@ type MarginTerms1Choice struct {
 
 	// Elements used to calculate the collateral margin call for the segregated independent amount.
 	SegregatedIndependentAmountMargin *SegregatedIndependentAmountMargin1 `xml:"SgrtdIndpdntAmtMrgn"`
-
 }
-
 
 func (m *MarginTerms1Choice) AddMarginDetails() *Margin1 {
 	m.MarginDetails = new(Margin1)
@@ -21,4 +19,3 @@ func (m *MarginTerms1Choice) AddSegregatedIndependentAmountMargin() *SegregatedI
 	m.SegregatedIndependentAmountMargin = new(SegregatedIndependentAmountMargin1)
 	return m.SegregatedIndependentAmountMargin
 }
-

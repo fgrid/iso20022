@@ -35,9 +35,7 @@ type TransactionDetails82 struct {
 
 	// Party, either an individual or organisation, whose assets are being invested.
 	Investor *PartyIdentification99 `xml:"Invstr,omitempty"`
-
 }
-
 
 func (t *TransactionDetails82) AddFinancialInstrumentIdentification() *SecurityIdentification19 {
 	t.FinancialInstrumentIdentification = new(SecurityIdentification19)
@@ -91,4 +89,3 @@ func (t *TransactionDetails82) AddInvestor() *PartyIdentification99 {
 	t.Investor = new(PartyIdentification99)
 	return t.Investor
 }
-

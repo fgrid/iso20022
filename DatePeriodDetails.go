@@ -8,9 +8,7 @@ type DatePeriodDetails struct {
 
 	// End date of the range.
 	ToDate *ISODate `xml:"ToDt"`
-
 }
-
 
 func (d *DatePeriodDetails) SetFromDate(value string) {
 	d.FromDate = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (d *DatePeriodDetails) SetFromDate(value string) {
 func (d *DatePeriodDetails) SetToDate(value string) {
 	d.ToDate = (*ISODate)(&value)
 }
-

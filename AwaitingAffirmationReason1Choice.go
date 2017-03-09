@@ -8,9 +8,7 @@ type AwaitingAffirmationReason1Choice struct {
 
 	// Specifies the reason why the instruction has been alleged.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (a *AwaitingAffirmationReason1Choice) SetCode(value string) {
 	a.Code = (*AwaitingAffirmationReason1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AwaitingAffirmationReason1Choice) AddProprietary() *GenericIdentificati
 	a.Proprietary = new(GenericIdentification38)
 	return a.Proprietary
 }
-

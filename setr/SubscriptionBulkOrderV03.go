@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.007.001.03 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:setr.007.001.03 Document"`
 	Message *SubscriptionBulkOrderV03 `xml:"SbcptBlkOrdrV03"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document00700103) AddMessage() *SubscriptionBulkOrderV03 {
 // If there are subscription orders for different financial instruments but for the same account, then the SubscriptionOrder must be used.
 type SubscriptionBulkOrderV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -44,9 +44,7 @@ type SubscriptionBulkOrderV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SubscriptionBulkOrderV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -59,7 +57,7 @@ func (s *SubscriptionBulkOrderV03) AddPoolReference() *iso20022.AdditionalRefere
 }
 
 func (s *SubscriptionBulkOrderV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -70,7 +68,7 @@ func (s *SubscriptionBulkOrderV03) AddBulkOrderDetails() *iso20022.SubscriptionB
 }
 
 func (s *SubscriptionBulkOrderV03) AddRelatedPartyDetails() *iso20022.Intermediary8 {
-	newValue := new (iso20022.Intermediary8)
+	newValue := new(iso20022.Intermediary8)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -81,8 +79,7 @@ func (s *SubscriptionBulkOrderV03) AddCopyDetails() *iso20022.CopyInformation2 {
 }
 
 func (s *SubscriptionBulkOrderV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

@@ -23,9 +23,7 @@ type CurrencyExchange6 struct {
 
 	// Date and time at which an exchange rate is quoted.
 	QuotationDate *ISODateTime `xml:"QtnDt,omitempty"`
-
 }
-
 
 func (c *CurrencyExchange6) SetSourceCurrency(value string) {
 	c.SourceCurrency = (*ActiveOrHistoricCurrencyCode)(&value)
@@ -54,4 +52,3 @@ func (c *CurrencyExchange6) SetComments(value string) {
 func (c *CurrencyExchange6) SetQuotationDate(value string) {
 	c.QuotationDate = (*ISODateTime)(&value)
 }
-

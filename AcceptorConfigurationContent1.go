@@ -14,12 +14,10 @@ type AcceptorConfigurationContent1 struct {
 
 	// Acceptor parameters dedicated to the communication with an acquirer host.
 	HostCommunicationParameters []*HostCommunicationParameter1 `xml:"HstComParams,omitempty"`
-
 }
 
-
 func (a *AcceptorConfigurationContent1) AddAcquirerProtocolParameters() *AcquirerProtocolParameters1 {
-	newValue := new (AcquirerProtocolParameters1)
+	newValue := new(AcquirerProtocolParameters1)
 	a.AcquirerProtocolParameters = append(a.AcquirerProtocolParameters, newValue)
 	return newValue
 }
@@ -29,14 +27,13 @@ func (a *AcceptorConfigurationContent1) AddMerchantParameters(value string) {
 }
 
 func (a *AcceptorConfigurationContent1) AddApplicationParameters() *ApplicationParameters1 {
-	newValue := new (ApplicationParameters1)
+	newValue := new(ApplicationParameters1)
 	a.ApplicationParameters = append(a.ApplicationParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent1) AddHostCommunicationParameters() *HostCommunicationParameter1 {
-	newValue := new (HostCommunicationParameter1)
+	newValue := new(HostCommunicationParameter1)
 	a.HostCommunicationParameters = append(a.HostCommunicationParameters, newValue)
 	return newValue
 }
-

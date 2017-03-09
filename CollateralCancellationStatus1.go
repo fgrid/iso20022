@@ -11,9 +11,7 @@ type CollateralCancellationStatus1 struct {
 
 	// Provides rejection reason and optionaly additional information.
 	RejectionDetails *RejectionStatus2 `xml:"RjctnDtls,omitempty"`
-
 }
-
 
 func (c *CollateralCancellationStatus1) SetCollateralStatusCode(value string) {
 	c.CollateralStatusCode = (*Status4Code)(&value)
@@ -27,4 +25,3 @@ func (c *CollateralCancellationStatus1) AddRejectionDetails() *RejectionStatus2 
 	c.RejectionDetails = new(RejectionStatus2)
 	return c.RejectionDetails
 }
-

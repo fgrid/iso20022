@@ -7,7 +7,7 @@ import (
 )
 
 type Document05900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.059.001.02 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:camt.059.001.02 Document"`
 	Message *NotificationToReceiveStatusReportV02 `xml:"NtfctnToRcvStsRpt"`
 }
 
@@ -27,9 +27,7 @@ type NotificationToReceiveStatusReportV02 struct {
 
 	// Set of elements used to identify the original notification and to provide the status.
 	OriginalNotificationAndStatus *iso20022.OriginalNotification3 `xml:"OrgnlNtfctnAndSts"`
-
 }
-
 
 func (n *NotificationToReceiveStatusReportV02) AddGroupHeader() *iso20022.GroupHeader44 {
 	n.GroupHeader = new(iso20022.GroupHeader44)
@@ -40,4 +38,3 @@ func (n *NotificationToReceiveStatusReportV02) AddOriginalNotificationAndStatus(
 	n.OriginalNotificationAndStatus = new(iso20022.OriginalNotification3)
 	return n.OriginalNotificationAndStatus
 }
-

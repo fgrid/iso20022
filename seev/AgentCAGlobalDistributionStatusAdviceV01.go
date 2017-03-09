@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.018.001.01 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:seev.018.001.01 Document"`
 	Message *AgentCAGlobalDistributionStatusAdviceV01 `xml:"AgtCAGblDstrbtnStsAdvc"`
 }
 
@@ -40,9 +40,7 @@ type AgentCAGlobalDistributionStatusAdviceV01 struct {
 
 	// Provides information about the status of an individual movement.
 	IndividualMovementStatus []*iso20022.IndividualMovementStatus1 `xml:"IndvMvmntSts"`
-
 }
-
 
 func (a *AgentCAGlobalDistributionStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -65,8 +63,7 @@ func (a *AgentCAGlobalDistributionStatusAdviceV01) AddGlobalMovementStatus() *is
 }
 
 func (a *AgentCAGlobalDistributionStatusAdviceV01) AddIndividualMovementStatus() *iso20022.IndividualMovementStatus1 {
-	newValue := new (iso20022.IndividualMovementStatus1)
+	newValue := new(iso20022.IndividualMovementStatus1)
 	a.IndividualMovementStatus = append(a.IndividualMovementStatus, newValue)
 	return newValue
 }
-

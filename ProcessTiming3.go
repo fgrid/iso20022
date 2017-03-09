@@ -17,9 +17,7 @@ type ProcessTiming3 struct {
 
 	// Maximum number of cyclic calls.
 	MaximumNumber *Number `xml:"MaxNb,omitempty"`
-
 }
-
 
 func (p *ProcessTiming3) SetWaitingTime(value string) {
 	p.WaitingTime = (*Max9NumericText)(&value)
@@ -40,4 +38,3 @@ func (p *ProcessTiming3) SetPeriod(value string) {
 func (p *ProcessTiming3) SetMaximumNumber(value string) {
 	p.MaximumNumber = (*Number)(&value)
 }
-

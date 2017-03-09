@@ -14,9 +14,7 @@ type BalanceDetails6 struct {
 
 	// Balance amount.
 	Amount *AmountAndDirection31 `xml:"Amt"`
-
 }
-
 
 func (b *BalanceDetails6) SetCategory(value string) {
 	b.Category = (*FinancialAssetTypeCategory1Code)(&value)
@@ -35,4 +33,3 @@ func (b *BalanceDetails6) AddAmount() *AmountAndDirection31 {
 	b.Amount = new(AmountAndDirection31)
 	return b.Amount
 }
-

@@ -8,9 +8,7 @@ type DateCode20Choice struct {
 
 	// Proprietary identification of the type of date.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (d *DateCode20Choice) SetCode(value string) {
 	d.Code = (*DateType1Code)(&value)
@@ -20,4 +18,3 @@ func (d *DateCode20Choice) AddProprietary() *GenericIdentification30 {
 	d.Proprietary = new(GenericIdentification30)
 	return d.Proprietary
 }
-

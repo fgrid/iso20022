@@ -8,9 +8,7 @@ type RateType4Choice struct {
 
 	// Rate type expressed, in an other form.
 	Other *Max35Text `xml:"Othr"`
-
 }
-
 
 func (r *RateType4Choice) SetPercentage(value string) {
 	r.Percentage = (*PercentageRate)(&value)
@@ -19,4 +17,3 @@ func (r *RateType4Choice) SetPercentage(value string) {
 func (r *RateType4Choice) SetOther(value string) {
 	r.Other = (*Max35Text)(&value)
 }
-

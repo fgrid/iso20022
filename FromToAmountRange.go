@@ -8,9 +8,7 @@ type FromToAmountRange struct {
 
 	// Upper boundary of a range of amount values.
 	ToAmount *AmountRangeBoundary1 `xml:"ToAmt"`
-
 }
-
 
 func (f *FromToAmountRange) AddFromAmount() *AmountRangeBoundary1 {
 	f.FromAmount = new(AmountRangeBoundary1)
@@ -21,4 +19,3 @@ func (f *FromToAmountRange) AddToAmount() *AmountRangeBoundary1 {
 	f.ToAmount = new(AmountRangeBoundary1)
 	return f.ToAmount
 }
-

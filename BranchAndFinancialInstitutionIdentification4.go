@@ -7,12 +7,10 @@ type BranchAndFinancialInstitutionIdentification4 struct {
 	FinancialInstitutionIdentification *FinancialInstitutionIdentification7 `xml:"FinInstnId"`
 
 	// Identifies a specific branch of a financial institution.
-	// 
+	//
 	// Usage: This component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
 	BranchIdentification *BranchData2 `xml:"BrnchId,omitempty"`
-
 }
-
 
 func (b *BranchAndFinancialInstitutionIdentification4) AddFinancialInstitutionIdentification() *FinancialInstitutionIdentification7 {
 	b.FinancialInstitutionIdentification = new(FinancialInstitutionIdentification7)
@@ -23,4 +21,3 @@ func (b *BranchAndFinancialInstitutionIdentification4) AddBranchIdentification()
 	b.BranchIdentification = new(BranchData2)
 	return b.BranchIdentification
 }
-

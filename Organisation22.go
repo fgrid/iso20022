@@ -29,9 +29,7 @@ type Organisation22 struct {
 
 	// Type of organisation.
 	TypeOfOrganisation *OrganisationType1Choice `xml:"TpOfOrg,omitempty"`
-
 }
-
 
 func (o *Organisation22) SetName(value string) {
 	o.Name = (*Max350Text)(&value)
@@ -63,7 +61,7 @@ func (o *Organisation22) SetRegistrationDate(value string) {
 }
 
 func (o *Organisation22) AddModifiedPostalAddress() *ModificationScope34 {
-	newValue := new (ModificationScope34)
+	newValue := new(ModificationScope34)
 	o.ModifiedPostalAddress = append(o.ModifiedPostalAddress, newValue)
 	return newValue
 }
@@ -72,4 +70,3 @@ func (o *Organisation22) AddTypeOfOrganisation() *OrganisationType1Choice {
 	o.TypeOfOrganisation = new(OrganisationType1Choice)
 	return o.TypeOfOrganisation
 }
-

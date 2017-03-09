@@ -8,9 +8,7 @@ type Pagination struct {
 
 	// Indicates the last page.
 	LastPageIndicator *YesNoIndicator `xml:"LastPgInd"`
-
 }
-
 
 func (p *Pagination) SetPageNumber(value string) {
 	p.PageNumber = (*Max5NumericText)(&value)
@@ -19,4 +17,3 @@ func (p *Pagination) SetPageNumber(value string) {
 func (p *Pagination) SetLastPageIndicator(value string) {
 	p.LastPageIndicator = (*YesNoIndicator)(&value)
 }
-

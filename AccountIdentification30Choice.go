@@ -26,9 +26,7 @@ type AccountIdentification30Choice struct {
 
 	// Other identifier.
 	Other *Max35Text `xml:"Othr"`
-
 }
-
 
 func (a *AccountIdentification30Choice) SetCard(value string) {
 	a.Card = (*Min8Max28NumericText)(&value)
@@ -61,4 +59,3 @@ func (a *AccountIdentification30Choice) SetDomestic(value string) {
 func (a *AccountIdentification30Choice) SetOther(value string) {
 	a.Other = (*Max35Text)(&value)
 }
-

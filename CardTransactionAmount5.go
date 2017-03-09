@@ -12,9 +12,7 @@ type CardTransactionAmount5 struct {
 
 	// Only present within financial transactions when reconciliation currency differs from transaction currency. It may be populated by acquirers in the request or by the schemes in the responses, depending where the reconciliation point is located.
 	ReconciliationTransactionAmount *DetailedAmount8 `xml:"RcncltnTxAmt,omitempty"`
-
 }
-
 
 func (c *CardTransactionAmount5) SetTotalAmount(value, currency string) {
 	c.TotalAmount = NewCurrencyAndAmount(value, currency)
@@ -29,4 +27,3 @@ func (c *CardTransactionAmount5) AddReconciliationTransactionAmount() *DetailedA
 	c.ReconciliationTransactionAmount = new(DetailedAmount8)
 	return c.ReconciliationTransactionAmount
 }
-

@@ -8,9 +8,7 @@ type LetterOfGuarantee5Choice struct {
 
 	// Letter of guarantee information expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (l *LetterOfGuarantee5Choice) SetIndicator(value string) {
 	l.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (l *LetterOfGuarantee5Choice) AddProprietary() *GenericIdentification47 {
 	l.Proprietary = new(GenericIdentification47)
 	return l.Proprietary
 }
-

@@ -38,9 +38,7 @@ type EntitlementAssessment2 struct {
 
 	// Number of votes assigned to one security.
 	Entitlement *Entitlement1Choice `xml:"Entitlmnt,omitempty"`
-
 }
-
 
 func (e *EntitlementAssessment2) AddSecuritiesBlockingDeadline() *DateFormat2Choice {
 	e.SecuritiesBlockingDeadline = new(DateFormat2Choice)
@@ -100,4 +98,3 @@ func (e *EntitlementAssessment2) AddEntitlement() *Entitlement1Choice {
 	e.Entitlement = new(Entitlement1Choice)
 	return e.Entitlement
 }
-

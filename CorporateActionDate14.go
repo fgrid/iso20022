@@ -98,9 +98,7 @@ type CorporateActionDate14 struct {
 
 	// Last day an investor can become a lead plaintiff.
 	LeadPlaintiffDeadline *DateFormat19Choice `xml:"LeadPlntffDdln,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate14) AddAnnouncementDate() *DateFormat19Choice {
 	c.AnnouncementDate = new(DateFormat19Choice)
@@ -261,4 +259,3 @@ func (c *CorporateActionDate14) AddLeadPlaintiffDeadline() *DateFormat19Choice {
 	c.LeadPlaintiffDeadline = new(DateFormat19Choice)
 	return c.LeadPlaintiffDeadline
 }
-

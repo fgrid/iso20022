@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500205 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.015.002.05 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:semt.015.002.05 Document"`
 	Message *IntraPositionMovementConfirmation002V05 `xml:"IntraPosMvmntConf"`
 }
 
@@ -17,12 +17,12 @@ func (d *Document01500205) AddMessage() *IntraPositionMovementConfirmation002V05
 }
 
 // Scope
-// An account servicer sends a IntraPositionMovementConfirmation to an account owner to confirm the movement of securities within its holding from one sub-balance to another, for example, blocking of securities. 
+// An account servicer sends a IntraPositionMovementConfirmation to an account owner to confirm the movement of securities within its holding from one sub-balance to another, for example, blocking of securities.
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -54,9 +54,7 @@ type IntraPositionMovementConfirmation002V05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementConfirmation002V05) AddAdditionalParameters() *iso20022.AdditionalParameters25 {
 	i.AdditionalParameters = new(iso20022.AdditionalParameters25)
@@ -94,8 +92,7 @@ func (i *IntraPositionMovementConfirmation002V05) AddIntraPositionDetails() *iso
 }
 
 func (i *IntraPositionMovementConfirmation002V05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

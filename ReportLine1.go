@@ -17,9 +17,7 @@ type ReportLine1 struct {
 
 	// Accumulated net amount, after adjustments, intended to be paid.
 	AccumulatedNetAmount *CurrencyAndAmount `xml:"AcmltdNetAmt"`
-
 }
-
 
 func (r *ReportLine1) SetTransactionIdentification(value string) {
 	r.TransactionIdentification = (*Max35Text)(&value)
@@ -42,4 +40,3 @@ func (r *ReportLine1) SetPurchaseOrderTotalNetAmount(value, currency string) {
 func (r *ReportLine1) SetAccumulatedNetAmount(value, currency string) {
 	r.AccumulatedNetAmount = NewCurrencyAndAmount(value, currency)
 }
-

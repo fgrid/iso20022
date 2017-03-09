@@ -8,9 +8,7 @@ type DocumentIdentification3Choice struct {
 
 	// Identification of the document assigned by the account owner.
 	AccountOwnerDocumentIdentification *Max35Text `xml:"AcctOwnrDocId"`
-
 }
-
 
 func (d *DocumentIdentification3Choice) SetAccountServicerDocumentIdentification(value string) {
 	d.AccountServicerDocumentIdentification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (d *DocumentIdentification3Choice) SetAccountServicerDocumentIdentification
 func (d *DocumentIdentification3Choice) SetAccountOwnerDocumentIdentification(value string) {
 	d.AccountOwnerDocumentIdentification = (*Max35Text)(&value)
 }
-

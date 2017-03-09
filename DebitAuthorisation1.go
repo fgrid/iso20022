@@ -14,9 +14,7 @@ type DebitAuthorisation1 struct {
 
 	// Further details on the cancellation request reason.
 	AdditionalCancellationReasonInformation []*Max105Text `xml:"AddtlCxlRsnInf,omitempty"`
-
 }
-
 
 func (d *DebitAuthorisation1) AddCancellationReason() *CancellationReason14Choice {
 	d.CancellationReason = new(CancellationReason14Choice)
@@ -34,4 +32,3 @@ func (d *DebitAuthorisation1) SetValueDateToDebit(value string) {
 func (d *DebitAuthorisation1) AddAdditionalCancellationReasonInformation(value string) {
 	d.AdditionalCancellationReasonInformation = append(d.AdditionalCancellationReasonInformation, (*Max105Text)(&value))
 }
-

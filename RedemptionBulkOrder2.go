@@ -29,9 +29,7 @@ type RedemptionBulkOrder2 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	BulkCashSettlementDetails *PaymentTransaction18 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkOrder2) SetPlaceOfTrade(value string) {
 	r.PlaceOfTrade = (*CountryCode)(&value)
@@ -56,7 +54,7 @@ func (r *RedemptionBulkOrder2) AddFinancialInstrumentDetails() *FinancialInstrum
 }
 
 func (r *RedemptionBulkOrder2) AddIndividualOrderDetails() *RedemptionOrder3 {
-	newValue := new (RedemptionOrder3)
+	newValue := new(RedemptionOrder3)
 	r.IndividualOrderDetails = append(r.IndividualOrderDetails, newValue)
 	return newValue
 }
@@ -73,4 +71,3 @@ func (r *RedemptionBulkOrder2) AddBulkCashSettlementDetails() *PaymentTransactio
 	r.BulkCashSettlementDetails = new(PaymentTransaction18)
 	return r.BulkCashSettlementDetails
 }
-

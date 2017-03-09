@@ -14,9 +14,7 @@ type ATMSecurityConfiguration2 struct {
 
 	// Maximum RSA root key length (in number of bytes), the security module is able to manage, if different from the maximum RSA key length.
 	MaximumRootKeyLength *Number `xml:"MaxRootKeyLngth,omitempty"`
-
 }
-
 
 func (a *ATMSecurityConfiguration2) SetMaximumSymmetricKey(value string) {
 	a.MaximumSymmetricKey = (*Number)(&value)
@@ -33,4 +31,3 @@ func (a *ATMSecurityConfiguration2) SetMaximumRSAKeyLength(value string) {
 func (a *ATMSecurityConfiguration2) SetMaximumRootKeyLength(value string) {
 	a.MaximumRootKeyLength = (*Number)(&value)
 }
-

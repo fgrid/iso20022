@@ -50,9 +50,7 @@ type SwitchOrderStatusAndReason1 struct {
 
 	// Information that has been added to the original order.
 	NewDetails *ExpectedExecutionDetails2 `xml:"NewDtls,omitempty"`
-
 }
-
 
 func (s *SwitchOrderStatusAndReason1) SetMasterReference(value string) {
 	s.MasterReference = (*Max35Text)(&value)
@@ -89,7 +87,7 @@ func (s *SwitchOrderStatusAndReason1) AddConditionallyAccepted() *ConditionallyA
 }
 
 func (s *SwitchOrderStatusAndReason1) AddRejected() *RejectedStatus6 {
-	newValue := new (RejectedStatus6)
+	newValue := new(RejectedStatus6)
 	s.Rejected = append(s.Rejected, newValue)
 	return newValue
 }
@@ -110,7 +108,7 @@ func (s *SwitchOrderStatusAndReason1) AddPartiallySettled() *PartiallySettledSta
 }
 
 func (s *SwitchOrderStatusAndReason1) AddLegInformation() *SwitchLegReferences1 {
-	newValue := new (SwitchLegReferences1)
+	newValue := new(SwitchLegReferences1)
 	s.LegInformation = append(s.LegInformation, newValue)
 	return newValue
 }
@@ -129,4 +127,3 @@ func (s *SwitchOrderStatusAndReason1) AddNewDetails() *ExpectedExecutionDetails2
 	s.NewDetails = new(ExpectedExecutionDetails2)
 	return s.NewDetails
 }
-

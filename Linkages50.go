@@ -8,9 +8,7 @@ type Linkages50 struct {
 
 	// Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).
 	SecuritiesSettlementTransactionIdentification *RestrictedFINMax16Text `xml:"SctiesSttlmTxId"`
-
 }
-
 
 func (l *Linkages50) AddProcessingPosition() *ProcessingPosition23Choice {
 	l.ProcessingPosition = new(ProcessingPosition23Choice)
@@ -20,4 +18,3 @@ func (l *Linkages50) AddProcessingPosition() *ProcessingPosition23Choice {
 func (l *Linkages50) SetSecuritiesSettlementTransactionIdentification(value string) {
 	l.SecuritiesSettlementTransactionIdentification = (*RestrictedFINMax16Text)(&value)
 }
-

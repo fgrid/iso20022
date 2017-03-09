@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.012.001.01 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:pain.012.001.01 Document"`
 	Message *MandateAcceptanceReportV01 `xml:"MndtAccptncRpt"`
 }
 
@@ -18,7 +18,7 @@ func (d *Document01200101) AddMessage() *MandateAcceptanceReportV01 {
 
 // Scope
 // The MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).
-// A MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. 
+// A MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message.
 // Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.
 // Usage
 // The MandateAcceptanceReport message can contain only one confirmation of acceptance of rejection of one specific MandateRequest message.
@@ -31,9 +31,7 @@ type MandateAcceptanceReportV01 struct {
 
 	// Set of elements used to provide information on the acception or rejection of the mandate request.
 	UnderlyingAcceptanceDetails *iso20022.MandateAcceptance1 `xml:"UndrlygAccptncDtls"`
-
 }
-
 
 func (m *MandateAcceptanceReportV01) AddGroupHeader() *iso20022.GroupHeader31 {
 	m.GroupHeader = new(iso20022.GroupHeader31)
@@ -44,4 +42,3 @@ func (m *MandateAcceptanceReportV01) AddUnderlyingAcceptanceDetails() *iso20022.
 	m.UnderlyingAcceptanceDetails = new(iso20022.MandateAcceptance1)
 	return m.UnderlyingAcceptanceDetails
 }
-

@@ -20,9 +20,7 @@ type Statement31 struct {
 
 	// Indicates whether there is activity or information update reported in the statement.
 	ActivityIndicator *YesNoIndicator `xml:"ActvtyInd"`
-
 }
-
 
 func (s *Statement31) SetStatementIdentification(value string) {
 	s.StatementIdentification = (*Max35Text)(&value)
@@ -48,4 +46,3 @@ func (s *Statement31) SetReportNumber(value string) {
 func (s *Statement31) SetActivityIndicator(value string) {
 	s.ActivityIndicator = (*YesNoIndicator)(&value)
 }
-

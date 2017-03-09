@@ -42,8 +42,8 @@ type CorporateActionOption20 struct {
 	// Indicates whether redemption charges apply.
 	ChargesAppliedIndicator *YesNoIndicator `xml:"ChrgsApldInd,omitempty"`
 
-	// Indicates whether or not certification is required from the account owner. 
-	// Yes: certification required 
+	// Indicates whether or not certification is required from the account owner.
+	// Yes: certification required
 	// No: no certification required
 	CertificationIndicator *YesNoIndicator `xml:"CertfctnInd,omitempty"`
 
@@ -79,9 +79,7 @@ type CorporateActionOption20 struct {
 
 	// Provides additional information about the corporate action movement.
 	AdditionalInformation *CorporateActionNarrative5 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionOption20) SetOptionNumber(value string) {
 	c.OptionNumber = (*Exact3NumericText)(&value)
@@ -98,13 +96,13 @@ func (c *CorporateActionOption20) AddFractionDisposition() *FractionDispositionT
 }
 
 func (c *CorporateActionOption20) AddOfferType() *OfferTypeFormat1Choice {
-	newValue := new (OfferTypeFormat1Choice)
+	newValue := new(OfferTypeFormat1Choice)
 	c.OfferType = append(c.OfferType, newValue)
 	return newValue
 }
 
 func (c *CorporateActionOption20) AddOptionFeatures() *OptionFeaturesFormat6Choice {
-	newValue := new (OptionFeaturesFormat6Choice)
+	newValue := new(OptionFeaturesFormat6Choice)
 	c.OptionFeatures = append(c.OptionFeatures, newValue)
 	return newValue
 }
@@ -120,7 +118,7 @@ func (c *CorporateActionOption20) AddOptionAvailabilityStatus() *OptionAvailabil
 }
 
 func (c *CorporateActionOption20) AddCertificationType() *BeneficiaryCertificationType1Choice {
-	newValue := new (BeneficiaryCertificationType1Choice)
+	newValue := new(BeneficiaryCertificationType1Choice)
 	c.CertificationType = append(c.CertificationType, newValue)
 	return newValue
 }
@@ -189,13 +187,13 @@ func (c *CorporateActionOption20) AddSecuritiesQuantity() *SecuritiesOption15 {
 }
 
 func (c *CorporateActionOption20) AddSecuritiesMovementDetails() *SecuritiesOption13 {
-	newValue := new (SecuritiesOption13)
+	newValue := new(SecuritiesOption13)
 	c.SecuritiesMovementDetails = append(c.SecuritiesMovementDetails, newValue)
 	return newValue
 }
 
 func (c *CorporateActionOption20) AddCashMovementDetails() *CashOption11 {
-	newValue := new (CashOption11)
+	newValue := new(CashOption11)
 	c.CashMovementDetails = append(c.CashMovementDetails, newValue)
 	return newValue
 }
@@ -204,4 +202,3 @@ func (c *CorporateActionOption20) AddAdditionalInformation() *CorporateActionNar
 	c.AdditionalInformation = new(CorporateActionNarrative5)
 	return c.AdditionalInformation
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.018.001.01 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.018.001.01 Document"`
 	Message *TradeStatusReportV01 `xml:"TradStsRpt"`
 }
 
@@ -24,9 +24,7 @@ type TradeStatusReportV01 struct {
 
 	// Digital signature of the report.
 	DigitalSignature *iso20022.PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (t *TradeStatusReportV01) AddTradeStatusAdviceDetails() *iso20022.TradeStatusReport1 {
 	t.TradeStatusAdviceDetails = new(iso20022.TradeStatusReport1)
@@ -37,4 +35,3 @@ func (t *TradeStatusReportV01) AddDigitalSignature() *iso20022.PartyAndSignature
 	t.DigitalSignature = new(iso20022.PartyAndSignature2)
 	return t.DigitalSignature
 }
-

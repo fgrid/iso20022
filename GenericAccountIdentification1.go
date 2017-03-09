@@ -11,9 +11,7 @@ type GenericAccountIdentification1 struct {
 
 	// Entity that assigns the identification.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GenericAccountIdentification1) SetIdentification(value string) {
 	g.Identification = (*Max34Text)(&value)
@@ -27,4 +25,3 @@ func (g *GenericAccountIdentification1) AddSchemeName() *AccountSchemeName1Choic
 func (g *GenericAccountIdentification1) SetIssuer(value string) {
 	g.Issuer = (*Max35Text)(&value)
 }
-

@@ -20,9 +20,7 @@ type StatementOfInvestmentFundTransactions1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *StatementOfInvestmentFundTransactions1) AddMessagePagination() *Pagination {
 	s.MessagePagination = new(Pagination)
@@ -40,7 +38,7 @@ func (s *StatementOfInvestmentFundTransactions1) AddInvestmentAccountDetails() *
 }
 
 func (s *StatementOfInvestmentFundTransactions1) AddTransactionOnAccount() *InvestmentFundTransactionsByFund1 {
-	newValue := new (InvestmentFundTransactionsByFund1)
+	newValue := new(InvestmentFundTransactionsByFund1)
 	s.TransactionOnAccount = append(s.TransactionOnAccount, newValue)
 	return newValue
 }
@@ -51,8 +49,7 @@ func (s *StatementOfInvestmentFundTransactions1) AddSubAccountDetails() *SubAcco
 }
 
 func (s *StatementOfInvestmentFundTransactions1) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

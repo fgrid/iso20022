@@ -11,9 +11,7 @@ type ReportingPeriod1 struct {
 
 	// Specifies whether all matching items need to be reported or only those items that are new or have changed since the last similar request was made.
 	Type *QueryType3Code `xml:"Tp"`
-
 }
-
 
 func (r *ReportingPeriod1) AddFromToDate() *DatePeriodDetails1 {
 	r.FromToDate = new(DatePeriodDetails1)
@@ -28,4 +26,3 @@ func (r *ReportingPeriod1) AddFromToTime() *TimePeriodDetails1 {
 func (r *ReportingPeriod1) SetType(value string) {
 	r.Type = (*QueryType3Code)(&value)
 }
-

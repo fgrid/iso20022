@@ -7,7 +7,7 @@ import (
 )
 
 type Document06200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.062.001.03 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:camt.062.001.03 Document"`
 	Message *PayInScheduleV03 `xml:"PayInSchdl"`
 }
 
@@ -36,9 +36,7 @@ type PayInScheduleV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (p *PayInScheduleV03) AddPartyIdentification() *iso20022.PartyIdentification73Choice {
 	p.PartyIdentification = new(iso20022.PartyIdentification73Choice)
@@ -51,13 +49,13 @@ func (p *PayInScheduleV03) AddReportData() *iso20022.ReportData4 {
 }
 
 func (p *PayInScheduleV03) AddPayInScheduleLongBalance() *iso20022.BalanceStatus2 {
-	newValue := new (iso20022.BalanceStatus2)
+	newValue := new(iso20022.BalanceStatus2)
 	p.PayInScheduleLongBalance = append(p.PayInScheduleLongBalance, newValue)
 	return newValue
 }
 
 func (p *PayInScheduleV03) AddPayInScheduleItem() *iso20022.PayInScheduleItems1 {
-	newValue := new (iso20022.PayInScheduleItems1)
+	newValue := new(iso20022.PayInScheduleItems1)
 	p.PayInScheduleItem = append(p.PayInScheduleItem, newValue)
 	return newValue
 }
@@ -68,8 +66,7 @@ func (p *PayInScheduleV03) AddPayInFactors() *iso20022.PayInFactors1 {
 }
 
 func (p *PayInScheduleV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	p.SupplementaryData = append(p.SupplementaryData, newValue)
 	return newValue
 }
-

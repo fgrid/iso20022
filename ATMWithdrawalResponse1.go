@@ -11,9 +11,7 @@ type ATMWithdrawalResponse1 struct {
 
 	// Response to the withdrawal transaction request.
 	Transaction *ATMTransaction2 `xml:"Tx"`
-
 }
-
 
 func (a *ATMWithdrawalResponse1) AddEnvironment() *ATMEnvironment2 {
 	a.Environment = new(ATMEnvironment2)
@@ -29,4 +27,3 @@ func (a *ATMWithdrawalResponse1) AddTransaction() *ATMTransaction2 {
 	a.Transaction = new(ATMTransaction2)
 	return a.Transaction
 }
-

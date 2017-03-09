@@ -20,9 +20,7 @@ type AutomatedTellerMachine6 struct {
 
 	// ATM terminal equipment.
 	Equipment *ATMEquipment1 `xml:"Eqpmnt,omitempty"`
-
 }
-
 
 func (a *AutomatedTellerMachine6) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -49,4 +47,3 @@ func (a *AutomatedTellerMachine6) AddEquipment() *ATMEquipment1 {
 	a.Equipment = new(ATMEquipment1)
 	return a.Equipment
 }
-

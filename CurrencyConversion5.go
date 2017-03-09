@@ -20,9 +20,7 @@ type CurrencyConversion5 struct {
 
 	// Resulting calculated amount is in target currency.
 	CalculatedAmount *ImpliedCurrencyAndAmount `xml:"ClctdAmt"`
-
 }
-
 
 func (c *CurrencyConversion5) SetSourceCurrency(value string) {
 	c.SourceCurrency = (*ActiveCurrencyCode)(&value)
@@ -47,4 +45,3 @@ func (c *CurrencyConversion5) SetRate(value string) {
 func (c *CurrencyConversion5) SetCalculatedAmount(value, currency string) {
 	c.CalculatedAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

@@ -29,9 +29,7 @@ type IndividualOrderStatusAndReason4 struct {
 
 	// Financial instrument information of the individual order cancellation for which the status is given.
 	FinancialInstrumentDetails *FinancialInstrument10 `xml:"FinInstrmDtls,omitempty"`
-
 }
-
 
 func (i *IndividualOrderStatusAndReason4) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -72,4 +70,3 @@ func (i *IndividualOrderStatusAndReason4) AddFinancialInstrumentDetails() *Finan
 	i.FinancialInstrumentDetails = new(FinancialInstrument10)
 	return i.FinancialInstrumentDetails
 }
-

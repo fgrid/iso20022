@@ -47,9 +47,7 @@ type CustomerAccount1 struct {
 
 	// Restriction on capability or operations allowed.
 	Restriction []*Restriction1 `xml:"Rstrctn,omitempty"`
-
 }
-
 
 func (c *CustomerAccount1) AddIdentification() *AccountIdentification4Choice {
 	c.Identification = new(AccountIdentification4Choice)
@@ -110,8 +108,7 @@ func (c *CustomerAccount1) SetClosingDate(value string) {
 }
 
 func (c *CustomerAccount1) AddRestriction() *Restriction1 {
-	newValue := new (Restriction1)
+	newValue := new(Restriction1)
 	c.Restriction = append(c.Restriction, newValue)
 	return newValue
 }
-

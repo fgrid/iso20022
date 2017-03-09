@@ -13,7 +13,7 @@ type CashAccount26 struct {
 	AccountServicer *PartyIdentification2Choice `xml:"AcctSvcr,omitempty"`
 
 	// Information identifying a specific branch of a financial institution.
-	// 
+	//
 	// Usage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
 	AccountServicerBranch *BranchData `xml:"AcctSvcrBrnch,omitempty"`
 
@@ -22,9 +22,7 @@ type CashAccount26 struct {
 
 	// Other identification such as national registration identification number, passport number.
 	AccountOwnerOtherIdentification []*GenericIdentification46 `xml:"AcctOwnrOthrId,omitempty"`
-
 }
-
 
 func (c *CashAccount26) AddIdentification() *AccountIdentificationAndName3 {
 	c.Identification = new(AccountIdentificationAndName3)
@@ -52,8 +50,7 @@ func (c *CashAccount26) AddInvestmentAccountType() *InvestmentAccountType1Choice
 }
 
 func (c *CashAccount26) AddAccountOwnerOtherIdentification() *GenericIdentification46 {
-	newValue := new (GenericIdentification46)
+	newValue := new(GenericIdentification46)
 	c.AccountOwnerOtherIdentification = append(c.AccountOwnerOtherIdentification, newValue)
 	return newValue
 }
-

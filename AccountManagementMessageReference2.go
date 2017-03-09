@@ -14,9 +14,7 @@ type AccountManagementMessageReference2 struct {
 
 	// Account information for which the status of an account management instruction is requested.
 	InvestmentAccount *InvestmentAccount45 `xml:"InvstmtAcct,omitempty"`
-
 }
-
 
 func (a *AccountManagementMessageReference2) AddLinkedReference() *LinkedMessage2Choice {
 	a.LinkedReference = new(LinkedMessage2Choice)
@@ -35,4 +33,3 @@ func (a *AccountManagementMessageReference2) AddInvestmentAccount() *InvestmentA
 	a.InvestmentAccount = new(InvestmentAccount45)
 	return a.InvestmentAccount
 }
-

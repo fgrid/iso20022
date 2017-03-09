@@ -11,9 +11,7 @@ type ProcessingStatus64Choice struct {
 
 	// Status that cannot be reported using one of the available standard status.
 	Proprietary *ProprietaryStatusAndReason7 `xml:"Prtry"`
-
 }
-
 
 func (p *ProcessingStatus64Choice) AddAcknowledgedAccepted() *AcknowledgedAcceptedStatus31Choice {
 	p.AcknowledgedAccepted = new(AcknowledgedAcceptedStatus31Choice)
@@ -29,4 +27,3 @@ func (p *ProcessingStatus64Choice) AddProprietary() *ProprietaryStatusAndReason7
 	p.Proprietary = new(ProprietaryStatusAndReason7)
 	return p.Proprietary
 }
-

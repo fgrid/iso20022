@@ -11,9 +11,7 @@ type NetDividendRateFormat24Choice struct {
 
 	// Specifies different formats for the net dividend rate.
 	RateTypeAndAmountAndRateStatus *RateTypeAndAmountAndStatus29 `xml:"RateTpAndAmtAndRateSts"`
-
 }
-
 
 func (n *NetDividendRateFormat24Choice) SetAmount(value, currency string) {
 	n.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -28,4 +26,3 @@ func (n *NetDividendRateFormat24Choice) AddRateTypeAndAmountAndRateStatus() *Rat
 	n.RateTypeAndAmountAndRateStatus = new(RateTypeAndAmountAndStatus29)
 	return n.RateTypeAndAmountAndRateStatus
 }
-

@@ -8,9 +8,7 @@ type TaxableIncomePerShareCalculatedFormat3Choice struct {
 
 	// Proprietary identification to specify whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS).
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (t *TaxableIncomePerShareCalculatedFormat3Choice) SetCode(value string) {
 	t.Code = (*CorporateActionTaxableIncomePerShareCalculated1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TaxableIncomePerShareCalculatedFormat3Choice) AddProprietary() *Generic
 	t.Proprietary = new(GenericIdentification30)
 	return t.Proprietary
 }
-

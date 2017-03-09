@@ -8,9 +8,7 @@ type SecurityPosition6 struct {
 
 	// Amount of securities that are eligible for the vote.
 	Position []*EligiblePosition3 `xml:"Pos,omitempty"`
-
 }
-
 
 func (s *SecurityPosition6) AddIdentification() *SecurityIdentification11 {
 	s.Identification = new(SecurityIdentification11)
@@ -18,8 +16,7 @@ func (s *SecurityPosition6) AddIdentification() *SecurityIdentification11 {
 }
 
 func (s *SecurityPosition6) AddPosition() *EligiblePosition3 {
-	newValue := new (EligiblePosition3)
+	newValue := new(EligiblePosition3)
 	s.Position = append(s.Position, newValue)
 	return newValue
 }
-

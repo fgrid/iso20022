@@ -21,17 +21,15 @@ type StructuredRemittanceInformation12 struct {
 	// Provides remittance information about a payment made for tax-related purposes.
 	TaxRemittance *TaxInformation4 `xml:"TaxRmt,omitempty"`
 
-	// Provides remittance information about a payment for garnishment-related purposes. 
+	// Provides remittance information about a payment for garnishment-related purposes.
 	GarnishmentRemittance *Garnishment1 `xml:"GrnshmtRmt,omitempty"`
 
 	// Additional information, in free text form, to complement the structured remittance information.
 	AdditionalRemittanceInformation []*Max140Text `xml:"AddtlRmtInf,omitempty"`
-
 }
 
-
 func (s *StructuredRemittanceInformation12) AddReferredDocumentInformation() *ReferredDocumentInformation6 {
-	newValue := new (ReferredDocumentInformation6)
+	newValue := new(ReferredDocumentInformation6)
 	s.ReferredDocumentInformation = append(s.ReferredDocumentInformation, newValue)
 	return newValue
 }
@@ -69,4 +67,3 @@ func (s *StructuredRemittanceInformation12) AddGarnishmentRemittance() *Garnishm
 func (s *StructuredRemittanceInformation12) AddAdditionalRemittanceInformation(value string) {
 	s.AdditionalRemittanceInformation = append(s.AdditionalRemittanceInformation, (*Max140Text)(&value))
 }
-

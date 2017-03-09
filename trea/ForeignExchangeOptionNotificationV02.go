@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.012.001.02 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:trea.012.001.02 Document"`
 	Message *ForeignExchangeOptionNotificationV02 `xml:"FXOptnNtfctnV02"`
 }
 
@@ -36,9 +36,7 @@ type ForeignExchangeOptionNotificationV02 struct {
 
 	// Provides information on the settlement of a trade.
 	SettlementData *iso20022.SettlementData2 `xml:"SttlmData,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeOptionNotificationV02) AddTradingSideIdentification() *iso20022.TradePartyIdentification4 {
 	f.TradingSideIdentification = new(iso20022.TradePartyIdentification4)
@@ -64,4 +62,3 @@ func (f *ForeignExchangeOptionNotificationV02) AddSettlementData() *iso20022.Set
 	f.SettlementData = new(iso20022.SettlementData2)
 	return f.SettlementData
 }
-

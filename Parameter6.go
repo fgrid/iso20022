@@ -11,9 +11,7 @@ type Parameter6 struct {
 
 	// Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.
 	BytePadding *BytePadding1Code `xml:"BPddg,omitempty"`
-
 }
-
 
 func (p *Parameter6) SetEncryptionFormat(value string) {
 	p.EncryptionFormat = (*EncryptionFormat1Code)(&value)
@@ -26,4 +24,3 @@ func (p *Parameter6) SetInitialisationVector(value string) {
 func (p *Parameter6) SetBytePadding(value string) {
 	p.BytePadding = (*BytePadding1Code)(&value)
 }
-

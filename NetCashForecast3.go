@@ -11,9 +11,7 @@ type NetCashForecast3 struct {
 
 	// Specifies the direction of the cash flow from the perspective of the fund.
 	FlowDirection *FlowDirectionType1Code `xml:"FlowDrctn"`
-
 }
-
 
 func (n *NetCashForecast3) SetNetAmount(value, currency string) {
 	n.NetAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -27,4 +25,3 @@ func (n *NetCashForecast3) AddNetUnitsNumber() *FinancialInstrumentQuantity1 {
 func (n *NetCashForecast3) SetFlowDirection(value string) {
 	n.FlowDirection = (*FlowDirectionType1Code)(&value)
 }
-

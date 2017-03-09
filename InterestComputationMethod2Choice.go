@@ -8,9 +8,7 @@ type InterestComputationMethod2Choice struct {
 
 	// Interest computation method is determined using a data source scheme.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (i *InterestComputationMethod2Choice) SetCode(value string) {
 	i.Code = (*InterestComputationMethod1Code)(&value)
@@ -20,4 +18,3 @@ func (i *InterestComputationMethod2Choice) AddProprietary() *GenericIdentificati
 	i.Proprietary = new(GenericIdentification38)
 	return i.Proprietary
 }
-

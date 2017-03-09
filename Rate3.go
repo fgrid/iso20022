@@ -8,9 +8,7 @@ type Rate3 struct {
 
 	// An amount range where the interest rate is applicable.
 	ValidityRange *CurrencyAndAmountRange2 `xml:"VldtyRg,omitempty"`
-
 }
-
 
 func (r *Rate3) AddType() *RateType4Choice {
 	r.Type = new(RateType4Choice)
@@ -21,4 +19,3 @@ func (r *Rate3) AddValidityRange() *CurrencyAndAmountRange2 {
 	r.ValidityRange = new(CurrencyAndAmountRange2)
 	return r.ValidityRange
 }
-

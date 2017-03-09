@@ -8,9 +8,7 @@ type CapitalGainFormat1Choice struct {
 
 	// Proprietary identification of the type of capital gain.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (c *CapitalGainFormat1Choice) SetCode(value string) {
 	c.Code = (*EUCapitalGain2Code)(&value)
@@ -20,4 +18,3 @@ func (c *CapitalGainFormat1Choice) AddProprietary() *GenericIdentification20 {
 	c.Proprietary = new(GenericIdentification20)
 	return c.Proprietary
 }
-

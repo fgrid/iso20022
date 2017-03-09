@@ -29,9 +29,7 @@ type CorporateActionNarrative4 struct {
 
 	// Provides additional information on the basket or index underlying a security, for example a warrant.
 	BasketOrIndexInformation []*Max350Text `xml:"BsktOrIndxInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative4) AddDeclarationDetails(value string) {
 	c.DeclarationDetails = append(c.DeclarationDetails, (*Max350Text)(&value))
@@ -68,4 +66,3 @@ func (c *CorporateActionNarrative4) AddTaxationConditions(value string) {
 func (c *CorporateActionNarrative4) AddBasketOrIndexInformation(value string) {
 	c.BasketOrIndexInformation = append(c.BasketOrIndexInformation, (*Max350Text)(&value))
 }
-

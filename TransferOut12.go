@@ -17,16 +17,14 @@ type TransferOut12 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferOut12) SetMasterReference(value string) {
 	t.MasterReference = (*Max35Text)(&value)
 }
 
 func (t *TransferOut12) AddTransferDetails() *Transfer28 {
-	newValue := new (Transfer28)
+	newValue := new(Transfer28)
 	t.TransferDetails = append(t.TransferDetails, newValue)
 	return newValue
 }
@@ -42,8 +40,7 @@ func (t *TransferOut12) AddSettlementDetails() *ReceiveInformation12 {
 }
 
 func (t *TransferOut12) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

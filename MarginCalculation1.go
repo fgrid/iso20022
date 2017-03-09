@@ -14,9 +14,7 @@ type MarginCalculation1 struct {
 
 	// Provide details on the margin result taking into consideration the total margin amount and the minimum requirements deposit.
 	MarginResult *MarginResult1Choice `xml:"MrgnRslt,omitempty"`
-
 }
-
 
 func (m *MarginCalculation1) AddTotalMarginAmount() *AmountAndDirection20 {
 	m.TotalMarginAmount = new(AmountAndDirection20)
@@ -24,7 +22,7 @@ func (m *MarginCalculation1) AddTotalMarginAmount() *AmountAndDirection20 {
 }
 
 func (m *MarginCalculation1) AddCollateralOnDeposit() *Collateral6 {
-	newValue := new (Collateral6)
+	newValue := new(Collateral6)
 	m.CollateralOnDeposit = append(m.CollateralOnDeposit, newValue)
 	return newValue
 }
@@ -37,4 +35,3 @@ func (m *MarginCalculation1) AddMarginResult() *MarginResult1Choice {
 	m.MarginResult = new(MarginResult1Choice)
 	return m.MarginResult
 }
-

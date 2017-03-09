@@ -11,9 +11,7 @@ type SpecificInstructionRequest1 struct {
 
 	// Request to register the securities for the meeting.
 	SecuritiesRegistration *YesNoIndicator `xml:"SctiesRegn,omitempty"`
-
 }
-
 
 func (s *SpecificInstructionRequest1) SetParticipationRegistration(value string) {
 	s.ParticipationRegistration = (*YesNoIndicator)(&value)
@@ -26,4 +24,3 @@ func (s *SpecificInstructionRequest1) SetBlockingSecurities(value string) {
 func (s *SpecificInstructionRequest1) SetSecuritiesRegistration(value string) {
 	s.SecuritiesRegistration = (*YesNoIndicator)(&value)
 }
-

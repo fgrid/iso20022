@@ -7,7 +7,7 @@ import (
 )
 
 type Document04900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.049.001.01 Document"`
+	XMLName xml.Name                                                     `xml:"urn:iso:std:iso:20022:tech:xsd:setr.049.001.01 Document"`
 	Message *SubscriptionBulkOrderConfirmationCancellationInstructionV01 `xml:"SbcptBlkOrdrConfCxlInstrV01"`
 }
 
@@ -57,9 +57,7 @@ type SubscriptionBulkOrderConfirmationCancellationInstructionV01 struct {
 
 	// Message is a copy.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (s *SubscriptionBulkOrderConfirmationCancellationInstructionV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -72,7 +70,7 @@ func (s *SubscriptionBulkOrderConfirmationCancellationInstructionV01) AddPoolRef
 }
 
 func (s *SubscriptionBulkOrderConfirmationCancellationInstructionV01) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -96,4 +94,3 @@ func (s *SubscriptionBulkOrderConfirmationCancellationInstructionV01) AddCopyDet
 	s.CopyDetails = new(iso20022.CopyInformation2)
 	return s.CopyDetails
 }
-

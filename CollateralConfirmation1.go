@@ -14,9 +14,7 @@ type CollateralConfirmation1 struct {
 
 	// Allows to provides additional comments on the collateral substitution status.
 	Comment *Max140Text `xml:"Cmnt,omitempty"`
-
 }
-
 
 func (c *CollateralConfirmation1) SetCollateralSubstitutionRequestIdentification(value string) {
 	c.CollateralSubstitutionRequestIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (c *CollateralConfirmation1) SetConfirmationType(value string) {
 func (c *CollateralConfirmation1) SetComment(value string) {
 	c.Comment = (*Max140Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type StatusAndReason10 struct {
 
 	// Provides additional information about the reason in narrative form.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (s *StatusAndReason10) AddAffirmationStatus() *AffirmationStatus7Choice {
 	s.AffirmationStatus = new(AffirmationStatus7Choice)
@@ -28,4 +26,3 @@ func (s *StatusAndReason10) AddUnaffirmedReason() *UnaffirmedReason2Choice {
 func (s *StatusAndReason10) SetAdditionalReasonInformation(value string) {
 	s.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

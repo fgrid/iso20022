@@ -4,7 +4,7 @@ package iso20022
 type GroupHeader9 struct {
 
 	// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.
-	// 
+	//
 	// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
 	MessageIdentification *Max35Text `xml:"MsgId"`
 
@@ -12,7 +12,7 @@ type GroupHeader9 struct {
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
 
 	// User identification or any user key that allows to check if the initiating party is allowed to initiate transactions from the account specified in the initiation.
-	// 
+	//
 	// Usage: the content is not of a technical nature, but reflects the organisational structure at the initiating side.
 	// The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a different party than the initiating party.
 	Authorisation []*Max128Text `xml:"Authstn,omitempty"`
@@ -43,9 +43,7 @@ type GroupHeader9 struct {
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
 	InstructedAgent *BranchAndFinancialInstitutionIdentification3 `xml:"InstdAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader9) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -97,4 +95,3 @@ func (g *GroupHeader9) AddInstructedAgent() *BranchAndFinancialInstitutionIdenti
 	g.InstructedAgent = new(BranchAndFinancialInstitutionIdentification3)
 	return g.InstructedAgent
 }
-

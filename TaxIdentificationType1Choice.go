@@ -8,9 +8,7 @@ type TaxIdentificationType1Choice struct {
 
 	// Type of tax identification number expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (t *TaxIdentificationType1Choice) SetCode(value string) {
 	t.Code = (*TaxIdentificationNumberType1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TaxIdentificationType1Choice) AddProprietary() *GenericIdentification47
 	t.Proprietary = new(GenericIdentification47)
 	return t.Proprietary
 }
-

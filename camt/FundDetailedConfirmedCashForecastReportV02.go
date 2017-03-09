@@ -7,7 +7,7 @@ import (
 )
 
 type Document04300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.043.001.02 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.043.001.02 Document"`
 	Message *FundDetailedConfirmedCashForecastReportV02 `xml:"camt.043.001.02"`
 }
 
@@ -37,9 +37,7 @@ type FundDetailedConfirmedCashForecastReportV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundDetailedConfirmedCashForecastReportV02) AddPoolReference() *iso20022.AdditionalReference3 {
 	f.PoolReference = new(iso20022.AdditionalReference3)
@@ -47,26 +45,25 @@ func (f *FundDetailedConfirmedCashForecastReportV02) AddPoolReference() *iso2002
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV02) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.PreviousReference = append(f.PreviousReference, newValue)
 	return newValue
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV02) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV02) AddFundCashForecastDetails() *iso20022.FundCashForecast2 {
-	newValue := new (iso20022.FundCashForecast2)
+	newValue := new(iso20022.FundCashForecast2)
 	f.FundCashForecastDetails = append(f.FundCashForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

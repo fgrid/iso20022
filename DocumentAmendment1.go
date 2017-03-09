@@ -8,9 +8,7 @@ type DocumentAmendment1 struct {
 
 	// Identification of the original document being amended.
 	OriginalDocumentIdentification *Max35Text `xml:"OrgnlDocId,omitempty"`
-
 }
-
 
 func (d *DocumentAmendment1) SetCorrectionIdentification(value string) {
 	d.CorrectionIdentification = (*Number)(&value)
@@ -19,4 +17,3 @@ func (d *DocumentAmendment1) SetCorrectionIdentification(value string) {
 func (d *DocumentAmendment1) SetOriginalDocumentIdentification(value string) {
 	d.OriginalDocumentIdentification = (*Max35Text)(&value)
 }
-

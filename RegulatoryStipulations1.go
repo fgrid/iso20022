@@ -8,9 +8,7 @@ type RegulatoryStipulations1 struct {
 
 	// Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or where they conduct business.
 	Stipulations []*Max350Text `xml:"Stiptns"`
-
 }
-
 
 func (r *RegulatoryStipulations1) SetCountry(value string) {
 	r.Country = (*CountryCode)(&value)
@@ -19,4 +17,3 @@ func (r *RegulatoryStipulations1) SetCountry(value string) {
 func (r *RegulatoryStipulations1) AddStipulations(value string) {
 	r.Stipulations = append(r.Stipulations, (*Max350Text)(&value))
 }
-

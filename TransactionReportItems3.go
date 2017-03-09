@@ -51,9 +51,7 @@ type TransactionReportItems3 struct {
 
 	// Next processing step required.
 	PendingRequestForAction []*PendingActivity2 `xml:"PdgReqForActn,omitempty"`
-
 }
-
 
 func (t *TransactionReportItems3) SetTransactionIdentification(value string) {
 	t.TransactionIdentification = (*Max35Text)(&value)
@@ -70,7 +68,7 @@ func (t *TransactionReportItems3) AddTransactionStatus() *TransactionStatus4 {
 }
 
 func (t *TransactionReportItems3) AddUserTransactionReference() *DocumentIdentification5 {
-	newValue := new (DocumentIdentification5)
+	newValue := new(DocumentIdentification5)
 	t.UserTransactionReference = append(t.UserTransactionReference, newValue)
 	return newValue
 }
@@ -109,13 +107,13 @@ func (t *TransactionReportItems3) SetSellerBankCountry(value string) {
 }
 
 func (t *TransactionReportItems3) AddObligorBank() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	t.ObligorBank = append(t.ObligorBank, newValue)
 	return newValue
 }
 
 func (t *TransactionReportItems3) AddSubmittingBank() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	t.SubmittingBank = append(t.SubmittingBank, newValue)
 	return newValue
 }
@@ -129,8 +127,7 @@ func (t *TransactionReportItems3) SetTotalNetAmount(value, currency string) {
 }
 
 func (t *TransactionReportItems3) AddPendingRequestForAction() *PendingActivity2 {
-	newValue := new (PendingActivity2)
+	newValue := new(PendingActivity2)
 	t.PendingRequestForAction = append(t.PendingRequestForAction, newValue)
 	return newValue
 }
-

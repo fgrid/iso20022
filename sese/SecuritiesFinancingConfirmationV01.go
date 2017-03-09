@@ -7,7 +7,7 @@ import (
 )
 
 type Document03500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.035.001.01 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:sese.035.001.01 Document"`
 	Message *SecuritiesFinancingConfirmationV01 `xml:"SctiesFincgConf"`
 }
 
@@ -17,18 +17,18 @@ func (d *Document03500101) AddMessage() *SecuritiesFinancingConfirmationV01 {
 }
 
 // SCOPE
-// A securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction. 
+// A securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction.
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants
-// - an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or
 // - a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // USAGE
-// The message may also be used to: 
-// - re-send a message previously sent (the sub-function of the message is Duplicate) 
-// - provide a third party with a copy of a message for information (the sub-function of the message is Copy) 
+// The message may also be used to:
+// - re-send a message previously sent (the sub-function of the message is Duplicate)
+// - provide a third party with a copy of a message for information (the sub-function of the message is Copy)
 // - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).
-// 
+//
 // ISO 15022 - 20022 COEXISTENCE
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesFinancingConfirmationV01 struct {
@@ -89,9 +89,7 @@ type SecuritiesFinancingConfirmationV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingConfirmationV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -184,8 +182,7 @@ func (s *SecuritiesFinancingConfirmationV01) AddMessageRecipient() *iso20022.Par
 }
 
 func (s *SecuritiesFinancingConfirmationV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

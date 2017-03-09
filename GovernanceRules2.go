@@ -14,9 +14,7 @@ type GovernanceRules2 struct {
 
 	// Place at or system under which any dispute related to the undertaking is to be resolved, such as court or arbitration. This is also known as 'forum'.
 	Jurisdiction []*Location1 `xml:"Jursdctn,omitempty"`
-
 }
-
 
 func (g *GovernanceRules2) SetIdentification(value string) {
 	g.Identification = (*ID)(&value)
@@ -33,8 +31,7 @@ func (g *GovernanceRules2) AddApplicableLaw() *Location1 {
 }
 
 func (g *GovernanceRules2) AddJurisdiction() *Location1 {
-	newValue := new (Location1)
+	newValue := new(Location1)
 	g.Jurisdiction = append(g.Jurisdiction, newValue)
 	return newValue
 }
-

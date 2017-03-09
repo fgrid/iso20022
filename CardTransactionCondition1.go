@@ -8,9 +8,7 @@ type CardTransactionCondition1 struct {
 
 	// Level of the condition.
 	Value *Max35Text `xml:"Val,omitempty"`
-
 }
-
 
 func (c *CardTransactionCondition1) SetProgram(value string) {
 	c.Program = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (c *CardTransactionCondition1) SetProgram(value string) {
 func (c *CardTransactionCondition1) SetValue(value string) {
 	c.Value = (*Max35Text)(&value)
 }
-

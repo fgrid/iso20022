@@ -17,9 +17,7 @@ type ContentInformationType9 struct {
 
 	// Data protected by a digest.
 	DigestedData *DigestedData3 `xml:"DgstdData,omitempty"`
-
 }
-
 
 func (c *ContentInformationType9) SetContentType(value string) {
 	c.ContentType = (*ContentType1Code)(&value)
@@ -44,4 +42,3 @@ func (c *ContentInformationType9) AddDigestedData() *DigestedData3 {
 	c.DigestedData = new(DigestedData3)
 	return c.DigestedData
 }
-

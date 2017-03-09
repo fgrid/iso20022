@@ -11,9 +11,7 @@ type TaxCalculationInformation2 struct {
 
 	// Percentage of grandfathered debt claim.
 	PercentageGrandfatheredDebt *PercentageRate `xml:"PctgGrdfthdDebt,omitempty"`
-
 }
-
 
 func (t *TaxCalculationInformation2) AddEUCapitalGain() *EUCapitalGain1 {
 	t.EUCapitalGain = new(EUCapitalGain1)
@@ -27,4 +25,3 @@ func (t *TaxCalculationInformation2) SetPercentageOfDebtClaim(value string) {
 func (t *TaxCalculationInformation2) SetPercentageGrandfatheredDebt(value string) {
 	t.PercentageGrandfatheredDebt = (*PercentageRate)(&value)
 }
-

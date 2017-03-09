@@ -35,9 +35,7 @@ type PaymentTerms3 struct {
 
 	// Amount used as a basis to calculate the penalty amount.
 	PenaltyBasisAmount *CurrencyAndAmount `xml:"PnltyBsisAmt,omitempty"`
-
 }
-
 
 func (p *PaymentTerms3) SetDueDate(value string) {
 	p.DueDate = (*ISODate)(&value)
@@ -83,4 +81,3 @@ func (p *PaymentTerms3) SetPenaltyPercentRate(value string) {
 func (p *PaymentTerms3) SetPenaltyBasisAmount(value, currency string) {
 	p.PenaltyBasisAmount = NewCurrencyAndAmount(value, currency)
 }
-

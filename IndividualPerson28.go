@@ -62,9 +62,7 @@ type IndividualPerson28 struct {
 
 	// Information related to the person.
 	FamilyInformation *PersonalInformation1 `xml:"FmlyInf,omitempty"`
-
 }
-
 
 func (i *IndividualPerson28) AddNamePrefix() *NamePrefix1Choice {
 	i.NamePrefix = new(NamePrefix1Choice)
@@ -112,13 +110,13 @@ func (i *IndividualPerson28) SetProfession(value string) {
 }
 
 func (i *IndividualPerson28) AddModifiedPostalAddress() *ModificationScope34 {
-	newValue := new (ModificationScope34)
+	newValue := new(ModificationScope34)
 	i.ModifiedPostalAddress = append(i.ModifiedPostalAddress, newValue)
 	return newValue
 }
 
 func (i *IndividualPerson28) AddModifiedCitizenship() *ModificationScope3 {
-	newValue := new (ModificationScope3)
+	newValue := new(ModificationScope3)
 	i.ModifiedCitizenship = append(i.ModifiedCitizenship, newValue)
 	return newValue
 }
@@ -153,4 +151,3 @@ func (i *IndividualPerson28) AddFamilyInformation() *PersonalInformation1 {
 	i.FamilyInformation = new(PersonalInformation1)
 	return i.FamilyInformation
 }
-

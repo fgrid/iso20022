@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.027.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:auth.027.001.01 Document"`
 	Message *CurrencyControlStatusAdviceV01 `xml:"CcyCtrlStsAdvc"`
 }
 
@@ -17,8 +17,8 @@ func (d *Document02700101) AddMessage() *CurrencyControlStatusAdviceV01 {
 }
 
 // The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.
-// 
-// Usage: 
+//
+// Usage:
 // The message may be sent in response to requests on the registration of  the currency control contract, supporting document or on the payment regulatory information notification.
 type CurrencyControlStatusAdviceV01 struct {
 
@@ -33,9 +33,7 @@ type CurrencyControlStatusAdviceV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CurrencyControlStatusAdviceV01) AddGroupHeader() *iso20022.CurrencyControlHeader2 {
 	c.GroupHeader = new(iso20022.CurrencyControlHeader2)
@@ -43,20 +41,19 @@ func (c *CurrencyControlStatusAdviceV01) AddGroupHeader() *iso20022.CurrencyCont
 }
 
 func (c *CurrencyControlStatusAdviceV01) AddGroupStatus() *iso20022.CurrencyControlGroupStatus1 {
-	newValue := new (iso20022.CurrencyControlGroupStatus1)
+	newValue := new(iso20022.CurrencyControlGroupStatus1)
 	c.GroupStatus = append(c.GroupStatus, newValue)
 	return newValue
 }
 
 func (c *CurrencyControlStatusAdviceV01) AddPackageStatus() *iso20022.CurrencyControlPackageStatus1 {
-	newValue := new (iso20022.CurrencyControlPackageStatus1)
+	newValue := new(iso20022.CurrencyControlPackageStatus1)
 	c.PackageStatus = append(c.PackageStatus, newValue)
 	return newValue
 }
 
 func (c *CurrencyControlStatusAdviceV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type ATMPINManagementRequest1 struct {
 
 	// Transaction for which the service is requested.
 	Transaction *ATMTransaction9 `xml:"Tx"`
-
 }
-
 
 func (a *ATMPINManagementRequest1) AddEnvironment() *ATMEnvironment1 {
 	a.Environment = new(ATMEnvironment1)
@@ -29,4 +27,3 @@ func (a *ATMPINManagementRequest1) AddTransaction() *ATMTransaction9 {
 	a.Transaction = new(ATMTransaction9)
 	return a.Transaction
 }
-

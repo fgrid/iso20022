@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.004.001.02 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.004.001.02 Document"`
 	Message *ActivityReportSetUpRequestV02 `xml:"ActvtyRptSetUpReq"`
 }
 
@@ -28,9 +28,7 @@ type ActivityReportSetUpRequestV02 struct {
 
 	// Specifies the parameters to calculate the local reporting time.
 	UTCOffset *iso20022.UTCOffset1 `xml:"UTCOffset"`
-
 }
-
 
 func (a *ActivityReportSetUpRequestV02) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	a.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -41,4 +39,3 @@ func (a *ActivityReportSetUpRequestV02) AddUTCOffset() *iso20022.UTCOffset1 {
 	a.UTCOffset = new(iso20022.UTCOffset1)
 	return a.UTCOffset
 }
-

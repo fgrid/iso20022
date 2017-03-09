@@ -17,9 +17,7 @@ type TransferOut5 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferOut5) AddTransferDetails() *Transfer9 {
 	t.TransferDetails = new(Transfer9)
@@ -42,8 +40,7 @@ func (t *TransferOut5) AddSettlementDetails() *ReceiveInformation3 {
 }
 
 func (t *TransferOut5) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

@@ -14,9 +14,7 @@ type CorporateActionEventAndBalance10 struct {
 
 	// Provides additional information related to the event and the balance of the corporate action.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionEventAndBalance10) AddGeneralInformation() *EventInformation8 {
 	c.GeneralInformation = new(EventInformation8)
@@ -34,8 +32,7 @@ func (c *CorporateActionEventAndBalance10) AddBalance() *CorporateActionBalanceD
 }
 
 func (c *CorporateActionEventAndBalance10) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

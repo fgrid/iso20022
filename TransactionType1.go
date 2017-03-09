@@ -11,9 +11,7 @@ type TransactionType1 struct {
 
 	// Specifies the minimum value of entries to be reported in the requested message.
 	FloorLimit []*Limit2 `xml:"FlrLmt,omitempty"`
-
 }
-
 
 func (t *TransactionType1) SetStatus(value string) {
 	t.Status = (*EntryStatus2Code)(&value)
@@ -24,8 +22,7 @@ func (t *TransactionType1) SetCreditDebitIndicator(value string) {
 }
 
 func (t *TransactionType1) AddFloorLimit() *Limit2 {
-	newValue := new (Limit2)
+	newValue := new(Limit2)
 	t.FloorLimit = append(t.FloorLimit, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700206 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.017.002.06 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:semt.017.002.06 Document"`
 	Message *SecuritiesTransactionPostingReport002V06 `xml:"SctiesTxPstngRpt"`
 }
 
@@ -17,15 +17,15 @@ func (d *Document01700206) AddMessage() *SecuritiesTransactionPostingReport002V0
 }
 
 // Scope
-// An account servicer sends a SecuritiesTransactionPostingReport to an account owner to provide the details of increases and decreases of holdings which occurred during a specified period, for all or selected securities in the specified safekeeping account or sub-safekeeping account which the account servicer holds for the account owner. 
+// An account servicer sends a SecuritiesTransactionPostingReport to an account owner to provide the details of increases and decreases of holdings which occurred during a specified period, for all or selected securities in the specified safekeeping account or sub-safekeeping account which the account servicer holds for the account owner.
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // This message may be used as a trade date based or a settlement date based statement.
-// The message may also be used to: 
+// The message may also be used to:
 // - re-send a message previously sent,
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
@@ -49,9 +49,7 @@ type SecuritiesTransactionPostingReport002V06 struct {
 
 	// Details at sub-account level.
 	SubAccountDetails []*iso20022.SubAccountIdentification47 `xml:"SubAcctDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionPostingReport002V06) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -74,14 +72,13 @@ func (s *SecuritiesTransactionPostingReport002V06) AddSafekeepingAccount() *iso2
 }
 
 func (s *SecuritiesTransactionPostingReport002V06) AddFinancialInstrumentDetails() *iso20022.FinancialInstrumentDetails23 {
-	newValue := new (iso20022.FinancialInstrumentDetails23)
+	newValue := new(iso20022.FinancialInstrumentDetails23)
 	s.FinancialInstrumentDetails = append(s.FinancialInstrumentDetails, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTransactionPostingReport002V06) AddSubAccountDetails() *iso20022.SubAccountIdentification47 {
-	newValue := new (iso20022.SubAccountIdentification47)
+	newValue := new(iso20022.SubAccountIdentification47)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
-

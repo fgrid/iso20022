@@ -20,9 +20,7 @@ type TransportByRoad5 struct {
 
 	// Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.
 	CarrierAgentCountry *CountryCode `xml:"CrrierAgtCtry,omitempty"`
-
 }
-
 
 func (t *TransportByRoad5) AddPlaceOfReceipt(value string) {
 	t.PlaceOfReceipt = append(t.PlaceOfReceipt, (*Max35Text)(&value))
@@ -47,4 +45,3 @@ func (t *TransportByRoad5) SetCarrierAgentName(value string) {
 func (t *TransportByRoad5) SetCarrierAgentCountry(value string) {
 	t.CarrierAgentCountry = (*CountryCode)(&value)
 }
-

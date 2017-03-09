@@ -14,9 +14,7 @@ type ApplicationParameters4 struct {
 
 	// Sensitive parameters (sequence of parameters including the envelope) encrypted with a cryptographic key.
 	EncryptedParameters *ContentInformationType10 `xml:"NcrptdParams,omitempty"`
-
 }
-
 
 func (a *ApplicationParameters4) SetApplicationIdentification(value string) {
 	a.ApplicationIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (a *ApplicationParameters4) AddEncryptedParameters() *ContentInformationTyp
 	a.EncryptedParameters = new(ContentInformationType10)
 	return a.EncryptedParameters
 }
-

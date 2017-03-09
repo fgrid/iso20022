@@ -11,9 +11,7 @@ type PercentageAndPeriod1 struct {
 
 	// End of period or indefinite if not specified.
 	EndDate *ISODate `xml:"EndDt,omitempty"`
-
 }
-
 
 func (p *PercentageAndPeriod1) SetPercentage(value string) {
 	p.Percentage = (*PercentageBoundedRate)(&value)
@@ -26,4 +24,3 @@ func (p *PercentageAndPeriod1) SetStartDate(value string) {
 func (p *PercentageAndPeriod1) SetEndDate(value string) {
 	p.EndDate = (*ISODate)(&value)
 }
-

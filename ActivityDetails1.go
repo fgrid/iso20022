@@ -11,9 +11,7 @@ type ActivityDetails1 struct {
 
 	// Financial institution which initiated the activity.
 	Initiator *BICIdentification1 `xml:"Initr"`
-
 }
-
 
 func (a *ActivityDetails1) SetDateTime(value string) {
 	a.DateTime = (*ISODateTime)(&value)
@@ -28,4 +26,3 @@ func (a *ActivityDetails1) AddInitiator() *BICIdentification1 {
 	a.Initiator = new(BICIdentification1)
 	return a.Initiator
 }
-

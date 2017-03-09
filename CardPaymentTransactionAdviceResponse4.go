@@ -14,9 +14,7 @@ type CardPaymentTransactionAdviceResponse4 struct {
 
 	// Result of a requested service.
 	Response *Response1Code `xml:"Rspn"`
-
 }
-
 
 func (c *CardPaymentTransactionAdviceResponse4) SetSaleReferenceIdentification(value string) {
 	c.SaleReferenceIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (c *CardPaymentTransactionAdviceResponse4) SetReconciliationIdentification(
 func (c *CardPaymentTransactionAdviceResponse4) SetResponse(value string) {
 	c.Response = (*Response1Code)(&value)
 }
-

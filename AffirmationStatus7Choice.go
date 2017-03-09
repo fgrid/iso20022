@@ -8,9 +8,7 @@ type AffirmationStatus7Choice struct {
 
 	// Trade has been unaffirmed.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (a *AffirmationStatus7Choice) SetCode(value string) {
 	a.Code = (*AffirmationStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AffirmationStatus7Choice) AddProprietary() *GenericIdentification38 {
 	a.Proprietary = new(GenericIdentification38)
 	return a.Proprietary
 }
-

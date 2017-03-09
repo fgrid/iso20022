@@ -11,9 +11,7 @@ type CustomerDevice1 struct {
 
 	// Provider of the component.
 	Provider *Max35Text `xml:"Prvdr,omitempty"`
-
 }
-
 
 func (c *CustomerDevice1) SetIdentification(value string) {
 	c.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (c *CustomerDevice1) SetType(value string) {
 func (c *CustomerDevice1) SetProvider(value string) {
 	c.Provider = (*Max35Text)(&value)
 }
-

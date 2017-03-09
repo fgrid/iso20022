@@ -4,7 +4,7 @@ package iso20022
 type MessageIdentification5 struct {
 
 	// Point to point reference, as assigned by the assigner, and sent to the next party in the chain to unambiguously identify the message.
-	// 
+	//
 	// Usage: The assigner has to make sure that MessageIdentification is unique per assignee for a pre-agreed period.
 	MessageIdentification *Max35Text `xml:"MsgId,omitempty"`
 
@@ -13,9 +13,7 @@ type MessageIdentification5 struct {
 
 	// Identifies the first agent in the identification chain, following the payment initiating party.
 	FirstAgent *BranchAndFinancialInstitutionIdentification5 `xml:"FrstAgt,omitempty"`
-
 }
-
 
 func (m *MessageIdentification5) SetMessageIdentification(value string) {
 	m.MessageIdentification = (*Max35Text)(&value)
@@ -29,4 +27,3 @@ func (m *MessageIdentification5) AddFirstAgent() *BranchAndFinancialInstitutionI
 	m.FirstAgent = new(BranchAndFinancialInstitutionIdentification5)
 	return m.FirstAgent
 }
-

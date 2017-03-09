@@ -26,9 +26,7 @@ type TransactionTypeAndAdditionalParameters10 struct {
 
 	// Identification assigned by the account servicer to unambiguously identify a corporate action event.
 	CorporateActionEventIdentification *Max35Text `xml:"CorpActnEvtId,omitempty"`
-
 }
-
 
 func (t *TransactionTypeAndAdditionalParameters10) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -61,4 +59,3 @@ func (t *TransactionTypeAndAdditionalParameters10) SetPoolIdentification(value s
 func (t *TransactionTypeAndAdditionalParameters10) SetCorporateActionEventIdentification(value string) {
 	t.CorporateActionEventIdentification = (*Max35Text)(&value)
 }
-

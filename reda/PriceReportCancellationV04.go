@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.002.001.04 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:reda.002.001.04 Document"`
 	Message *PriceReportCancellationV04 `xml:"PricRptCxl"`
 }
 
@@ -18,18 +18,18 @@ func (d *Document00200104) AddMessage() *PriceReportCancellationV04 {
 
 // SCOPE
 // A report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReportCancellation message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to cancel previously sent prices.
-// 
+//
 // USAGE
 // The PriceReportCancellation message is used to either:
 // - cancel an entire PriceReport that was previously sent (by quoting the business reference of the original price report in the PriceReportIdentification element), or,
 // - cancel one or more individual prices from a previously sent price report (by using the PriceDetailsToBeCancelled sequence).
 // Technically, it is possible to cancel all the prices individually by using the PriceDetailsToBeCancelled sequence, but this is not recommended.
-// The cancellation should not contain the cancellation of prices for more than one NAV date. 
-// 
-// 
+// The cancellation should not contain the cancellation of prices for more than one NAV date.
+//
+//
 type PriceReportCancellationV04 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -61,9 +61,7 @@ type PriceReportCancellationV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PriceReportCancellationV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	p.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -107,14 +105,13 @@ func (p *PriceReportCancellationV04) SetCompletePriceCancellation(value string) 
 }
 
 func (p *PriceReportCancellationV04) AddCancelledPriceValuationDetails() *iso20022.PriceReport3 {
-	newValue := new (iso20022.PriceReport3)
+	newValue := new(iso20022.PriceReport3)
 	p.CancelledPriceValuationDetails = append(p.CancelledPriceValuationDetails, newValue)
 	return newValue
 }
 
 func (p *PriceReportCancellationV04) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

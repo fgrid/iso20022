@@ -11,9 +11,7 @@ type AlternatePartyIdentification8 struct {
 
 	// Alternate identification for a party.
 	AlternateIdentification *Max35Text `xml:"AltrnId"`
-
 }
-
 
 func (a *AlternatePartyIdentification8) AddIdentificationType() *IdentificationType43Choice {
 	a.IdentificationType = new(IdentificationType43Choice)
@@ -27,4 +25,3 @@ func (a *AlternatePartyIdentification8) SetCountry(value string) {
 func (a *AlternatePartyIdentification8) SetAlternateIdentification(value string) {
 	a.AlternateIdentification = (*Max35Text)(&value)
 }
-

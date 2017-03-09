@@ -14,9 +14,7 @@ type InterestResponse1 struct {
 
 	// Provides the reference to the interest payment request.
 	InterestPaymentRequestIdentification *Max35Text `xml:"IntrstPmtReqId"`
-
 }
-
 
 func (i *InterestResponse1) SetResponseType(value string) {
 	i.ResponseType = (*Status4Code)(&value)
@@ -34,4 +32,3 @@ func (i *InterestResponse1) SetRejectionReasonInformation(value string) {
 func (i *InterestResponse1) SetInterestPaymentRequestIdentification(value string) {
 	i.InterestPaymentRequestIdentification = (*Max35Text)(&value)
 }
-

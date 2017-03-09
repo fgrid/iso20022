@@ -8,9 +8,7 @@ type PriceType1Choice struct {
 
 	// Estimated price, for valuation purposes.
 	Indicative *Price2 `xml:"Indctv"`
-
 }
-
 
 func (p *PriceType1Choice) AddMarket() *Price2 {
 	p.Market = new(Price2)
@@ -21,4 +19,3 @@ func (p *PriceType1Choice) AddIndicative() *Price2 {
 	p.Indicative = new(Price2)
 	return p.Indicative
 }
-

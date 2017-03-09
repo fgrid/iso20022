@@ -11,9 +11,7 @@ type ProcessingStatus56Choice struct {
 
 	// Instruction is accepted.
 	Accepted *AcceptedStatus7Choice `xml:"Accptd"`
-
 }
-
 
 func (p *ProcessingStatus56Choice) AddRejected() *RejectedStatus17Choice {
 	p.Rejected = new(RejectedStatus17Choice)
@@ -29,4 +27,3 @@ func (p *ProcessingStatus56Choice) AddAccepted() *AcceptedStatus7Choice {
 	p.Accepted = new(AcceptedStatus7Choice)
 	return p.Accepted
 }
-

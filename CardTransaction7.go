@@ -45,9 +45,7 @@ type CardTransaction7 struct {
 
 	// Response to the reversal.
 	TransactionResponse *ResponseType2 `xml:"TxRspn,omitempty"`
-
 }
-
 
 func (c *CardTransaction7) SetTransactionType(value string) {
 	c.TransactionType = (*CardPaymentServiceType7Code)(&value)
@@ -104,4 +102,3 @@ func (c *CardTransaction7) AddTransactionResponse() *ResponseType2 {
 	c.TransactionResponse = new(ResponseType2)
 	return c.TransactionResponse
 }
-

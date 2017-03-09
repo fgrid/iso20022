@@ -17,9 +17,7 @@ type CardAggregated1 struct {
 
 	// Date range on which the globalisation applies.
 	TransactionDateRange *DateOrDateTimePeriodChoice `xml:"TxDtRg,omitempty"`
-
 }
-
 
 func (c *CardAggregated1) SetAdditionalService(value string) {
 	c.AdditionalService = (*CardPaymentServiceType2Code)(&value)
@@ -42,4 +40,3 @@ func (c *CardAggregated1) AddTransactionDateRange() *DateOrDateTimePeriodChoice 
 	c.TransactionDateRange = new(DateOrDateTimePeriodChoice)
 	return c.TransactionDateRange
 }
-

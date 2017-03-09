@@ -14,9 +14,7 @@ type ReportParameter2Choice struct {
 
 	// Parameter for which the estimated cash flow is being reported.
 	UserDefined *DataFormat2Choice `xml:"UsrDfnd"`
-
 }
-
 
 func (r *ReportParameter2Choice) AddParty() *PartyIdentification2Choice {
 	r.Party = new(PartyIdentification2Choice)
@@ -35,4 +33,3 @@ func (r *ReportParameter2Choice) AddUserDefined() *DataFormat2Choice {
 	r.UserDefined = new(DataFormat2Choice)
 	return r.UserDefined
 }
-

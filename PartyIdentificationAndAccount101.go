@@ -17,9 +17,7 @@ type PartyIdentificationAndAccount101 struct {
 
 	// Alternate identification for a party.
 	AlternateIdentification *AlternatePartyIdentification2 `xml:"AltrnId,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount101) AddIdentification() *PartyIdentification38Choice {
 	p.Identification = new(PartyIdentification38Choice)
@@ -43,4 +41,3 @@ func (p *PartyIdentificationAndAccount101) AddAlternateIdentification() *Alterna
 	p.AlternateIdentification = new(AlternatePartyIdentification2)
 	return p.AlternateIdentification
 }
-

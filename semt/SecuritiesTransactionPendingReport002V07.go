@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800207 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.002.07 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.002.07 Document"`
 	Message *SecuritiesTransactionPendingReport002V07 `xml:"SctiesTxPdgRpt"`
 }
 
@@ -17,12 +17,12 @@ func (d *Document01800207) AddMessage() *SecuritiesTransactionPendingReport002V0
 }
 
 // Scope
-// An account servicer sends a SecuritiesTransactionPendingReport to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending. 
+// An account servicer sends a SecuritiesTransactionPendingReport to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending.
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The statement may also include future settlement or forward transactions which have become binding on the account owner.
 // The message may also be used to:
@@ -49,9 +49,7 @@ type SecuritiesTransactionPendingReport002V07 struct {
 
 	// Details of the transactions reported.
 	Transactions []*iso20022.Transaction49 `xml:"Txs,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionPendingReport002V07) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -74,14 +72,13 @@ func (s *SecuritiesTransactionPendingReport002V07) AddSafekeepingAccount() *iso2
 }
 
 func (s *SecuritiesTransactionPendingReport002V07) AddStatus() *iso20022.StatusAndReason30 {
-	newValue := new (iso20022.StatusAndReason30)
+	newValue := new(iso20022.StatusAndReason30)
 	s.Status = append(s.Status, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTransactionPendingReport002V07) AddTransactions() *iso20022.Transaction49 {
-	newValue := new (iso20022.Transaction49)
+	newValue := new(iso20022.Transaction49)
 	s.Transactions = append(s.Transactions, newValue)
 	return newValue
 }
-

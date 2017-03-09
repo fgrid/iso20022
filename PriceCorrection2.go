@@ -11,9 +11,7 @@ type PriceCorrection2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PriceCorrection2) AddPreviouslySentPriceDetails() *PriceValuation2 {
 	p.PreviouslySentPriceDetails = new(PriceValuation2)
@@ -26,8 +24,7 @@ func (p *PriceCorrection2) AddCorrectedPriceDetails() *PriceValuation2 {
 }
 
 func (p *PriceCorrection2) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

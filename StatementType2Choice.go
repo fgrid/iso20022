@@ -8,9 +8,7 @@ type StatementType2Choice struct {
 
 	// Statement type expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (s *StatementType2Choice) SetCode(value string) {
 	s.Code = (*SecuritiesStatementType1Code)(&value)
@@ -20,4 +18,3 @@ func (s *StatementType2Choice) AddProprietary() *GenericIdentification20 {
 	s.Proprietary = new(GenericIdentification20)
 	return s.Proprietary
 }
-

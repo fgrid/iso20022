@@ -22,9 +22,7 @@ type CorporateActionPrice6 struct {
 
 	// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.
 	TaxableIncomePerDividendShare *AmountPrice3 `xml:"TaxblIncmPerDvddShr,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice6) AddCashInLieuOfSharePrice() *PriceFormat11Choice {
 	c.CashInLieuOfSharePrice = new(PriceFormat11Choice)
@@ -37,7 +35,7 @@ func (c *CorporateActionPrice6) AddExercisePrice() *PriceFormat8Choice {
 }
 
 func (c *CorporateActionPrice6) AddGenericCashPriceReceivedPerProduct() *PriceFormat9Choice {
-	newValue := new (PriceFormat9Choice)
+	newValue := new(PriceFormat9Choice)
 	c.GenericCashPriceReceivedPerProduct = append(c.GenericCashPriceReceivedPerProduct, newValue)
 	return newValue
 }
@@ -56,4 +54,3 @@ func (c *CorporateActionPrice6) AddTaxableIncomePerDividendShare() *AmountPrice3
 	c.TaxableIncomePerDividendShare = new(AmountPrice3)
 	return c.TaxableIncomePerDividendShare
 }
-

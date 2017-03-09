@@ -8,9 +8,7 @@ type Party23Choice struct {
 
 	// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').
 	IndividualPerson *IndividualPerson23 `xml:"IndvPrsn"`
-
 }
-
 
 func (p *Party23Choice) AddOrganisation() *Organisation16 {
 	p.Organisation = new(Organisation16)
@@ -21,4 +19,3 @@ func (p *Party23Choice) AddIndividualPerson() *IndividualPerson23 {
 	p.IndividualPerson = new(IndividualPerson23)
 	return p.IndividualPerson
 }
-

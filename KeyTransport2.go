@@ -14,9 +14,7 @@ type KeyTransport2 struct {
 
 	// Encrypted key encryption key (KEK).
 	EncryptedKey *Max140Binary `xml:"NcrptdKey"`
-
 }
-
 
 func (k *KeyTransport2) SetVersion(value string) {
 	k.Version = (*Number)(&value)
@@ -35,4 +33,3 @@ func (k *KeyTransport2) AddKeyEncryptionAlgorithm() *AlgorithmIdentification7 {
 func (k *KeyTransport2) SetEncryptedKey(value string) {
 	k.EncryptedKey = (*Max140Binary)(&value)
 }
-

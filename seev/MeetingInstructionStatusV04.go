@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.006.001.04 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:seev.006.001.04 Document"`
 	Message *MeetingInstructionStatusV04 `xml:"MtgInstrSts"`
 }
 
@@ -40,7 +40,7 @@ type MeetingInstructionStatusV04 struct {
 	// Party reporting the status.
 	ReportingParty *iso20022.PartyIdentification9Choice `xml:"RptgPty"`
 
-	// Identifies the securities for which the meeting is organised. 
+	// Identifies the securities for which the meeting is organised.
 	SecurityIdentification *iso20022.SecurityIdentification11 `xml:"SctyId"`
 
 	// Type of instruction status.
@@ -48,9 +48,7 @@ type MeetingInstructionStatusV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (m *MeetingInstructionStatusV04) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -83,8 +81,7 @@ func (m *MeetingInstructionStatusV04) AddInstructionTypeStatus() *iso20022.Instr
 }
 
 func (m *MeetingInstructionStatusV04) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	m.Extension = append(m.Extension, newValue)
 	return newValue
 }
-

@@ -24,9 +24,7 @@ type CurrencyControlGroupStatus1 struct {
 
 	// Provides the date and time when the status was issued.
 	StatusDateTime *ISODateTime `xml:"StsDtTm,omitempty"`
-
 }
-
 
 func (c *CurrencyControlGroupStatus1) AddOriginalReferences() *OriginalMessage3 {
 	c.OriginalReferences = new(OriginalMessage3)
@@ -53,7 +51,7 @@ func (c *CurrencyControlGroupStatus1) SetStatus(value string) {
 }
 
 func (c *CurrencyControlGroupStatus1) AddStatusReason() *ValidationStatusReason1 {
-	newValue := new (ValidationStatusReason1)
+	newValue := new(ValidationStatusReason1)
 	c.StatusReason = append(c.StatusReason, newValue)
 	return newValue
 }
@@ -61,4 +59,3 @@ func (c *CurrencyControlGroupStatus1) AddStatusReason() *ValidationStatusReason1
 func (c *CurrencyControlGroupStatus1) SetStatusDateTime(value string) {
 	c.StatusDateTime = (*ISODateTime)(&value)
 }
-

@@ -8,9 +8,7 @@ type CorporateActionEventStageFormat6Choice struct {
 
 	// Proprietary identification of the stage of the corporate action event.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionEventStageFormat6Choice) SetCode(value string) {
 	c.Code = (*CorporateActionEventStage4Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionEventStageFormat6Choice) AddProprietary() *GenericIdenti
 	c.Proprietary = new(GenericIdentification20)
 	return c.Proprietary
 }
-

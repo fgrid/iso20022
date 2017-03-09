@@ -8,9 +8,7 @@ type CorporateActionOption2Choice struct {
 
 	// Proprietary identification of the type of corporate action options.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionOption2Choice) SetCode(value string) {
 	c.Code = (*CorporateActionOption2Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionOption2Choice) AddProprietary() *GenericIdentification20
 	c.Proprietary = new(GenericIdentification20)
 	return c.Proprietary
 }
-

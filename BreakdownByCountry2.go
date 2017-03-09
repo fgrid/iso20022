@@ -14,29 +14,26 @@ type BreakdownByCountry2 struct {
 
 	// Net cash as a result of the cash-in and cash-out flows specified for the country.
 	NetCashForecast []*NetCashForecast4 `xml:"NetCshFcst,omitempty"`
-
 }
-
 
 func (b *BreakdownByCountry2) SetCountry(value string) {
 	b.Country = (*CountryCode)(&value)
 }
 
 func (b *BreakdownByCountry2) AddCashInForecast() *CashInForecast5 {
-	newValue := new (CashInForecast5)
+	newValue := new(CashInForecast5)
 	b.CashInForecast = append(b.CashInForecast, newValue)
 	return newValue
 }
 
 func (b *BreakdownByCountry2) AddCashOutForecast() *CashOutForecast5 {
-	newValue := new (CashOutForecast5)
+	newValue := new(CashOutForecast5)
 	b.CashOutForecast = append(b.CashOutForecast, newValue)
 	return newValue
 }
 
 func (b *BreakdownByCountry2) AddNetCashForecast() *NetCashForecast4 {
-	newValue := new (NetCashForecast4)
+	newValue := new(NetCashForecast4)
 	b.NetCashForecast = append(b.NetCashForecast, newValue)
 	return newValue
 }
-

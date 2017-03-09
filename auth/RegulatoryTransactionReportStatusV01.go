@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.010.001.01 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:auth.010.001.01 Document"`
 	Message *RegulatoryTransactionReportStatusV01 `xml:"RgltryTxRptStsV01"`
 }
 
@@ -37,9 +37,7 @@ type RegulatoryTransactionReportStatusV01 struct {
 
 	// Provides the status of one or more transactions that were previously sent within a RegulatoryTransactionReport by the reporting institution.
 	IndividualTransactionStatus []*iso20022.TradeTransactionStatusAndReason1 `xml:"IndvTxSts"`
-
 }
-
 
 func (r *RegulatoryTransactionReportStatusV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	r.Identification = new(iso20022.DocumentIdentification8)
@@ -57,8 +55,7 @@ func (r *RegulatoryTransactionReportStatusV01) AddReportStatus() *iso20022.Repor
 }
 
 func (r *RegulatoryTransactionReportStatusV01) AddIndividualTransactionStatus() *iso20022.TradeTransactionStatusAndReason1 {
-	newValue := new (iso20022.TradeTransactionStatusAndReason1)
+	newValue := new(iso20022.TradeTransactionStatusAndReason1)
 	r.IndividualTransactionStatus = append(r.IndividualTransactionStatus, newValue)
 	return newValue
 }
-

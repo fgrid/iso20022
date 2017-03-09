@@ -25,9 +25,7 @@ type MarginCall1 struct {
 
 	// Provides details about the collateral held, in transit or that still needs to be agreed by both parties with a segregation between variation margin and segregated independent amount.
 	CollateralBalance *CollateralBalance1Choice `xml:"CollBal,omitempty"`
-
 }
-
 
 func (m *MarginCall1) SetExposedAmountPartyA(value, currency string) {
 	m.ExposedAmountPartyA = NewActiveCurrencyAndAmount(value, currency)
@@ -60,4 +58,3 @@ func (m *MarginCall1) AddCollateralBalance() *CollateralBalance1Choice {
 	m.CollateralBalance = new(CollateralBalance1Choice)
 	return m.CollateralBalance
 }
-

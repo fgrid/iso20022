@@ -11,9 +11,7 @@ type AdditionalBalanceInformation6 struct {
 
 	// Provides additional subbalance information.
 	SubBalanceAdditionalDetails *Max140Text `xml:"SubBalAddtlDtls,omitempty"`
-
 }
-
 
 func (a *AdditionalBalanceInformation6) AddSubBalanceType() *SubBalanceType6Choice {
 	a.SubBalanceType = new(SubBalanceType6Choice)
@@ -28,4 +26,3 @@ func (a *AdditionalBalanceInformation6) AddQuantity() *SubBalanceQuantity3Choice
 func (a *AdditionalBalanceInformation6) SetSubBalanceAdditionalDetails(value string) {
 	a.SubBalanceAdditionalDetails = (*Max140Text)(&value)
 }
-

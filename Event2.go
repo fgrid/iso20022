@@ -14,9 +14,7 @@ type Event2 struct {
 
 	// Date and time at which the event occurred.
 	EventTime *ISODateTime `xml:"EvtTm,omitempty"`
-
 }
-
 
 func (e *Event2) SetEventCode(value string) {
 	e.EventCode = (*Max4AlphaNumericText)(&value)
@@ -33,4 +31,3 @@ func (e *Event2) SetEventDescription(value string) {
 func (e *Event2) SetEventTime(value string) {
 	e.EventTime = (*ISODateTime)(&value)
 }
-

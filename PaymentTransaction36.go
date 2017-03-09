@@ -26,7 +26,7 @@ type PaymentTransaction36 struct {
 	ReversedInterbankSettlementAmount *ActiveCurrencyAndAmount `xml:"RvsdIntrBkSttlmAmt"`
 
 	// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-	// 
+	//
 	// Usage: The InterbankSettlementDate is the interbank settlement date of the reversal message, and not of the original instruction.
 	InterbankSettlementDate *ISODate `xml:"IntrBkSttlmDt,omitempty"`
 
@@ -40,7 +40,7 @@ type PaymentTransaction36 struct {
 	CompensationAmount *ActiveOrHistoricCurrencyAndAmount `xml:"CompstnAmt,omitempty"`
 
 	// Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.
-	// 
+	//
 	// Usage: The ChargeBearer applies to the reversal message, not to the original instruction.
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
@@ -48,12 +48,12 @@ type PaymentTransaction36 struct {
 	ChargesInformation []*Charges2 `xml:"ChrgsInf,omitempty"`
 
 	// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed.
 	InstructingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstgAgt,omitempty"`
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructed agent is the party receiving the reversal message and not the party that received the original instruction that is being reversed.
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
@@ -62,9 +62,7 @@ type PaymentTransaction36 struct {
 
 	// Key elements used to identify the original transaction that is being referred to.
 	OriginalTransactionReference *OriginalTransactionReference16 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction36) SetReversalIdentification(value string) {
 	p.ReversalIdentification = (*Max35Text)(&value)
@@ -115,7 +113,7 @@ func (p *PaymentTransaction36) SetChargeBearer(value string) {
 }
 
 func (p *PaymentTransaction36) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -131,7 +129,7 @@ func (p *PaymentTransaction36) AddInstructedAgent() *BranchAndFinancialInstituti
 }
 
 func (p *PaymentTransaction36) AddReversalReasonInformation() *PaymentReversalReason7 {
-	newValue := new (PaymentReversalReason7)
+	newValue := new(PaymentReversalReason7)
 	p.ReversalReasonInformation = append(p.ReversalReasonInformation, newValue)
 	return newValue
 }
@@ -140,4 +138,3 @@ func (p *PaymentTransaction36) AddOriginalTransactionReference() *OriginalTransa
 	p.OriginalTransactionReference = new(OriginalTransactionReference16)
 	return p.OriginalTransactionReference
 }
-

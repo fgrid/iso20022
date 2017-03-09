@@ -11,9 +11,7 @@ type SuspendedStatus1 struct {
 
 	// Proprietary identification of a reason for a suspended status in the report.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (s *SuspendedStatus1) SetNoReason(value string) {
 	s.NoReason = (*NoReasonCode)(&value)
@@ -28,4 +26,3 @@ func (s *SuspendedStatus1) AddDataSourceScheme() *GenericIdentification1 {
 	s.DataSourceScheme = new(GenericIdentification1)
 	return s.DataSourceScheme
 }
-

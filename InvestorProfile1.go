@@ -6,20 +6,18 @@ type InvestorProfile1 struct {
 	// Type of profile.
 	Type *ProfileType1Choice `xml:"Tp,omitempty"`
 
-	// Status of the profile. 
+	// Status of the profile.
 	Status *InvestorProfileStatus1Choice `xml:"Sts,omitempty"`
 
-	// Information about the profile for treasury trading. 
+	// Information about the profile for treasury trading.
 	Treasury *TreasuryProfile1 `xml:"Trsr,omitempty"`
 
-	// Information about the profile for high frequency trading. 
+	// Information about the profile for high frequency trading.
 	HighFrequencyTrading *HighFrequencyTradingProfile1 `xml:"HghFrqcyTradg,omitempty"`
 
-	// Information about the profile for a market marker. 
+	// Information about the profile for a market marker.
 	MarketMaker *MarketMakerProfile1 `xml:"MktMakr,omitempty"`
-
 }
-
 
 func (i *InvestorProfile1) AddType() *ProfileType1Choice {
 	i.Type = new(ProfileType1Choice)
@@ -45,4 +43,3 @@ func (i *InvestorProfile1) AddMarketMaker() *MarketMakerProfile1 {
 	i.MarketMaker = new(MarketMakerProfile1)
 	return i.MarketMaker
 }
-

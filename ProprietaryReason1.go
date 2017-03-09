@@ -8,9 +8,7 @@ type ProprietaryReason1 struct {
 
 	// Provides additional information about the processed instruction.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (p *ProprietaryReason1) AddReason() *GenericIdentification20 {
 	p.Reason = new(GenericIdentification20)
@@ -20,4 +18,3 @@ func (p *ProprietaryReason1) AddReason() *GenericIdentification20 {
 func (p *ProprietaryReason1) SetAdditionalReasonInformation(value string) {
 	p.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

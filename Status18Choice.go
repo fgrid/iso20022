@@ -17,9 +17,7 @@ type Status18Choice struct {
 
 	// Provides the status of an instruction.
 	InstructionProcessingStatus *InstructionProcessingStatus22Choice `xml:"InstrPrcgSts"`
-
 }
-
 
 func (s *Status18Choice) AddProprietary() *ProprietaryStatusAndReason6 {
 	s.Proprietary = new(ProprietaryStatusAndReason6)
@@ -45,4 +43,3 @@ func (s *Status18Choice) AddInstructionProcessingStatus() *InstructionProcessing
 	s.InstructionProcessingStatus = new(InstructionProcessingStatus22Choice)
 	return s.InstructionProcessingStatus
 }
-

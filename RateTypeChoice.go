@@ -8,9 +8,7 @@ type RateTypeChoice struct {
 
 	// Rate is expressed as a text.
 	TextualRate *Max35Text `xml:"TxtlRate"`
-
 }
-
 
 func (r *RateTypeChoice) SetPercentageRate(value string) {
 	r.PercentageRate = (*PercentageRate)(&value)
@@ -19,4 +17,3 @@ func (r *RateTypeChoice) SetPercentageRate(value string) {
 func (r *RateTypeChoice) SetTextualRate(value string) {
 	r.TextualRate = (*Max35Text)(&value)
 }
-

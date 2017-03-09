@@ -11,9 +11,7 @@ type CardPaymentTransactionAdviceResponse3 struct {
 
 	// Result of a requested service.
 	Response *Response1Code `xml:"Rspn"`
-
 }
-
 
 func (c *CardPaymentTransactionAdviceResponse3) AddTransactionIdentification() *TransactionIdentifier1 {
 	c.TransactionIdentification = new(TransactionIdentifier1)
@@ -27,4 +25,3 @@ func (c *CardPaymentTransactionAdviceResponse3) SetReconciliationIdentification(
 func (c *CardPaymentTransactionAdviceResponse3) SetResponse(value string) {
 	c.Response = (*Response1Code)(&value)
 }
-

@@ -6,7 +6,7 @@ type AccountReport11 struct {
 	// Unique identification, as assigned by the account servicer, to unambiguously identify the account report.
 	Identification *Max35Text `xml:"Id"`
 
-	// Sequential number of the report, as assigned by the account servicer. 
+	// Sequential number of the report, as assigned by the account servicer.
 	// Usage: The sequential number is increased incrementally for each report sent electronically.
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
@@ -46,9 +46,7 @@ type AccountReport11 struct {
 
 	// Further details of the account report.
 	AdditionalReportInformation *Max500Text `xml:"AddtlRptInf,omitempty"`
-
 }
-
 
 func (a *AccountReport11) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -91,13 +89,13 @@ func (a *AccountReport11) AddRelatedAccount() *CashAccount16 {
 }
 
 func (a *AccountReport11) AddInterest() *AccountInterest2 {
-	newValue := new (AccountInterest2)
+	newValue := new(AccountInterest2)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountReport11) AddBalance() *CashBalance3 {
-	newValue := new (CashBalance3)
+	newValue := new(CashBalance3)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -108,7 +106,7 @@ func (a *AccountReport11) AddTransactionsSummary() *TotalTransactions2 {
 }
 
 func (a *AccountReport11) AddEntry() *ReportEntry2 {
-	newValue := new (ReportEntry2)
+	newValue := new(ReportEntry2)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -116,4 +114,3 @@ func (a *AccountReport11) AddEntry() *ReportEntry2 {
 func (a *AccountReport11) SetAdditionalReportInformation(value string) {
 	a.AdditionalReportInformation = (*Max500Text)(&value)
 }
-

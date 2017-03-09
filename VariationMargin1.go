@@ -17,9 +17,7 @@ type VariationMargin1 struct {
 
 	// Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.
 	RoundingMethod *RoundingMethod1Code `xml:"RndgMtd"`
-
 }
-
 
 func (v *VariationMargin1) SetThresholdAmount(value, currency string) {
 	v.ThresholdAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -40,4 +38,3 @@ func (v *VariationMargin1) SetRoundingAmount(value, currency string) {
 func (v *VariationMargin1) SetRoundingMethod(value string) {
 	v.RoundingMethod = (*RoundingMethod1Code)(&value)
 }
-

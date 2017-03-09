@@ -23,9 +23,7 @@ type PaymentInstrument13 struct {
 
 	// Instrument that has or represents monetary value and is used to process a payment instruction for an interest payment.
 	InterestPaymentInstrument *PaymentInstrument19Choice `xml:"IntrstPmtInstrm,omitempty"`
-
 }
-
 
 func (p *PaymentInstrument13) SetSettlementCurrency(value string) {
 	p.SettlementCurrency = (*ActiveCurrencyCode)(&value)
@@ -59,4 +57,3 @@ func (p *PaymentInstrument13) AddInterestPaymentInstrument() *PaymentInstrument1
 	p.InterestPaymentInstrument = new(PaymentInstrument19Choice)
 	return p.InterestPaymentInstrument
 }
-

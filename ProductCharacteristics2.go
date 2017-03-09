@@ -8,9 +8,7 @@ type ProductCharacteristics2 struct {
 
 	// Measurement value for this product characteristic.
 	ValueMeasure *Quantity3 `xml:"ValMeasr,omitempty"`
-
 }
-
 
 func (p *ProductCharacteristics2) AddCharacteristic() *ProductCharacteristics1Choice {
 	p.Characteristic = new(ProductCharacteristics1Choice)
@@ -21,4 +19,3 @@ func (p *ProductCharacteristics2) AddValueMeasure() *Quantity3 {
 	p.ValueMeasure = new(Quantity3)
 	return p.ValueMeasure
 }
-

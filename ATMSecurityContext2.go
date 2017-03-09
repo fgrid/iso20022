@@ -11,9 +11,7 @@ type ATMSecurityContext2 struct {
 
 	// Configuration parameters in use by the security device.
 	CurrentConfiguration *ATMSecurityConfiguration1 `xml:"CurCfgtn,omitempty"`
-
 }
-
 
 func (a *ATMSecurityContext2) SetCurrentSecurityScheme(value string) {
 	a.CurrentSecurityScheme = (*ATMSecurityScheme1Code)(&value)
@@ -28,4 +26,3 @@ func (a *ATMSecurityContext2) AddCurrentConfiguration() *ATMSecurityConfiguratio
 	a.CurrentConfiguration = new(ATMSecurityConfiguration1)
 	return a.CurrentConfiguration
 }
-

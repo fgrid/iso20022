@@ -14,9 +14,7 @@ type FinancialInstrumentQuantity6Choice struct {
 
 	// Amount of money used to determine the quantity of investment fund units to be subscribed, including all charges, commissions, and tax.
 	GrossAmount *ActiveOrHistoricCurrencyAndAmount `xml:"GrssAmt"`
-
 }
-
 
 func (f *FinancialInstrumentQuantity6Choice) AddUnitsNumber() *FinancialInstrumentQuantity1 {
 	f.UnitsNumber = new(FinancialInstrumentQuantity1)
@@ -34,4 +32,3 @@ func (f *FinancialInstrumentQuantity6Choice) SetNetAmount(value, currency string
 func (f *FinancialInstrumentQuantity6Choice) SetGrossAmount(value, currency string) {
 	f.GrossAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

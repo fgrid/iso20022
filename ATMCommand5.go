@@ -20,9 +20,7 @@ type ATMCommand5 struct {
 
 	// Additional information on the failure to be logged for further examination.
 	AdditionalErrorInformation *Max140Text `xml:"AddtlErrInf,omitempty"`
-
 }
-
 
 func (a *ATMCommand5) SetType(value string) {
 	a.Type = (*ATMCommand3Code)(&value)
@@ -48,4 +46,3 @@ func (a *ATMCommand5) SetResult(value string) {
 func (a *ATMCommand5) SetAdditionalErrorInformation(value string) {
 	a.AdditionalErrorInformation = (*Max140Text)(&value)
 }
-

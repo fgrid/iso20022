@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.024.001.01 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:seev.024.001.01 Document"`
 	Message *AgentCAInformationStatusAdviceV01 `xml:"AgtCAInfStsAdvc"`
 }
 
@@ -34,9 +34,7 @@ type AgentCAInformationStatusAdviceV01 struct {
 
 	// Status of the information advice sent by the CSD.
 	InformationStatusDetails *iso20022.CorporateActionInformationStatus1Choice `xml:"InfStsDtls"`
-
 }
-
 
 func (a *AgentCAInformationStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -57,4 +55,3 @@ func (a *AgentCAInformationStatusAdviceV01) AddInformationStatusDetails() *iso20
 	a.InformationStatusDetails = new(iso20022.CorporateActionInformationStatus1Choice)
 	return a.InformationStatusDetails
 }
-

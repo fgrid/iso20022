@@ -23,9 +23,7 @@ type FinancingAllowedSummary1 struct {
 
 	// Unambiguous identification of the internal bank account actually used by First Agent to manage the line of credit granted to Financing Requestor.
 	FinancingAccount *CashAccount7 `xml:"FincgAcct,omitempty"`
-
 }
-
 
 func (f *FinancingAllowedSummary1) SetFinancedItemNumber(value string) {
 	f.FinancedItemNumber = (*Number)(&value)
@@ -57,4 +55,3 @@ func (f *FinancingAllowedSummary1) AddFinancingAccount() *CashAccount7 {
 	f.FinancingAccount = new(CashAccount7)
 	return f.FinancingAccount
 }
-

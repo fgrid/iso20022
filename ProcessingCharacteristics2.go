@@ -40,9 +40,7 @@ type ProcessingCharacteristics2 struct {
 	// for orders placed with the main Fund Order Desk, eg. T+3. Enter "P" (pre-payment) if cleared funds may be required before a
 	// subscription order can be executed.
 	SettlementCycle *TimeFrame5Choice `xml:"SttlmCycl"`
-
 }
-
 
 func (p *ProcessingCharacteristics2) AddDealingCurrencyAccepted(value string) {
 	p.DealingCurrencyAccepted = append(p.DealingCurrencyAccepted, (*ActiveCurrencyCode)(&value))
@@ -96,4 +94,3 @@ func (p *ProcessingCharacteristics2) AddSettlementCycle() *TimeFrame5Choice {
 	p.SettlementCycle = new(TimeFrame5Choice)
 	return p.SettlementCycle
 }
-

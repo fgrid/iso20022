@@ -7,7 +7,7 @@ import (
 )
 
 type Document03900103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.039.001.03 Document"`
+	XMLName xml.Name             `xml:"urn:iso:std:iso:20022:tech:xsd:camt.039.001.03 Document"`
 	Message *CaseStatusReportV03 `xml:"CaseStsRpt"`
 }
 
@@ -40,9 +40,7 @@ type CaseStatusReportV03 struct {
 	// Identifies the change of an assignment for an investigation case from an assigner to a new assignee.
 	// Usage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.
 	NewAssignment *iso20022.CaseAssignment2 `xml:"NewAssgnmt,omitempty"`
-
 }
-
 
 func (c *CaseStatusReportV03) AddHeader() *iso20022.ReportHeader2 {
 	c.Header = new(iso20022.ReportHeader2)
@@ -63,4 +61,3 @@ func (c *CaseStatusReportV03) AddNewAssignment() *iso20022.CaseAssignment2 {
 	c.NewAssignment = new(iso20022.CaseAssignment2)
 	return c.NewAssignment
 }
-

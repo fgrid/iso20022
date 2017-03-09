@@ -4,7 +4,7 @@ package iso20022
 type CommunicationChannel1 struct {
 
 	// Method by which the original undertaking or proposed amendment is to be made available.
-	// 
+	//
 	Method *ExternalChannel1Code `xml:"Mtd"`
 
 	// Type of party to whom the original undertaking or proposed amendment is intended to be delivered.
@@ -15,9 +15,7 @@ type CommunicationChannel1 struct {
 
 	// Address of party to whom the original undertaking or proposed amendment is intended to be delivered.
 	DeliverToAddress *PostalAddress6 `xml:"DlvrToAdr,omitempty"`
-
 }
-
 
 func (c *CommunicationChannel1) SetMethod(value string) {
 	c.Method = (*ExternalChannel1Code)(&value)
@@ -36,4 +34,3 @@ func (c *CommunicationChannel1) AddDeliverToAddress() *PostalAddress6 {
 	c.DeliverToAddress = new(PostalAddress6)
 	return c.DeliverToAddress
 }
-

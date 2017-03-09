@@ -8,9 +8,7 @@ type GenericDocumentIdentification1 struct {
 
 	// Identification of the document.
 	Identification *Max35Text `xml:"Id"`
-
 }
-
 
 func (g *GenericDocumentIdentification1) AddMessageNumber() *DocumentNumber1Choice {
 	g.MessageNumber = new(DocumentNumber1Choice)
@@ -20,4 +18,3 @@ func (g *GenericDocumentIdentification1) AddMessageNumber() *DocumentNumber1Choi
 func (g *GenericDocumentIdentification1) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
 }
-

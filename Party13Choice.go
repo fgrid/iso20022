@@ -8,9 +8,7 @@ type Party13Choice struct {
 
 	// Unique and unambiguous identification of a financial institution.
 	FinancialInstitutionIdentification *FinancialInstitutionIdentification9 `xml:"FIId"`
-
 }
-
 
 func (p *Party13Choice) AddOrganisationIdentification() *OrganisationIdentification8 {
 	p.OrganisationIdentification = new(OrganisationIdentification8)
@@ -21,4 +19,3 @@ func (p *Party13Choice) AddFinancialInstitutionIdentification() *FinancialInstit
 	p.FinancialInstitutionIdentification = new(FinancialInstitutionIdentification9)
 	return p.FinancialInstitutionIdentification
 }
-

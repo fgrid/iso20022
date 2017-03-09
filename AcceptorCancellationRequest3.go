@@ -11,9 +11,7 @@ type AcceptorCancellationRequest3 struct {
 
 	// Cancellation transaction between an acceptor and an acquirer.
 	Transaction *CardPaymentTransaction26 `xml:"Tx"`
-
 }
-
 
 func (a *AcceptorCancellationRequest3) AddEnvironment() *CardPaymentEnvironment23 {
 	a.Environment = new(CardPaymentEnvironment23)
@@ -29,4 +27,3 @@ func (a *AcceptorCancellationRequest3) AddTransaction() *CardPaymentTransaction2
 	a.Transaction = new(CardPaymentTransaction26)
 	return a.Transaction
 }
-

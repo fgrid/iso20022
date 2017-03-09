@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.007.001.01 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:pain.007.001.01 Document"`
 	Message *CustomerPaymentReversalV01 `xml:"pain.007.001.01"`
 }
 
@@ -32,9 +32,7 @@ type CustomerPaymentReversalV01 struct {
 
 	// Information concerning the original transactions, to which the reversal message refers.
 	TransactionInformation []*iso20022.PaymentTransactionInformation4 `xml:"TxInf,omitempty"`
-
 }
-
 
 func (c *CustomerPaymentReversalV01) AddGroupHeader() *iso20022.GroupHeader8 {
 	c.GroupHeader = new(iso20022.GroupHeader8)
@@ -47,8 +45,7 @@ func (c *CustomerPaymentReversalV01) AddOriginalGroupInformation() *iso20022.Ori
 }
 
 func (c *CustomerPaymentReversalV01) AddTransactionInformation() *iso20022.PaymentTransactionInformation4 {
-	newValue := new (iso20022.PaymentTransactionInformation4)
+	newValue := new(iso20022.PaymentTransactionInformation4)
 	c.TransactionInformation = append(c.TransactionInformation, newValue)
 	return newValue
 }
-

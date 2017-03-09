@@ -11,9 +11,7 @@ type UnderlyingStatementEntry1 struct {
 
 	// Original unique identification, as assigned by the account servicer, to unambiguously identify the original entry.
 	OriginalEntryIdentification *Max35Text `xml:"OrgnlNtryId,omitempty"`
-
 }
-
 
 func (u *UnderlyingStatementEntry1) AddOriginalGroupInformation() *OriginalGroupInformation3 {
 	u.OriginalGroupInformation = new(OriginalGroupInformation3)
@@ -27,4 +25,3 @@ func (u *UnderlyingStatementEntry1) SetOriginalStatementIdentification(value str
 func (u *UnderlyingStatementEntry1) SetOriginalEntryIdentification(value string) {
 	u.OriginalEntryIdentification = (*Max35Text)(&value)
 }
-

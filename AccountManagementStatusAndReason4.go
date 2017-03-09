@@ -11,9 +11,7 @@ type AccountManagementStatusAndReason4 struct {
 
 	// Account to which the account opening is related.
 	ExistingAccountIdentification *Max35Text `xml:"ExstgAcctId,omitempty"`
-
 }
-
 
 func (a *AccountManagementStatusAndReason4) AddStatus() *Status20Choice {
 	a.Status = new(Status20Choice)
@@ -27,4 +25,3 @@ func (a *AccountManagementStatusAndReason4) SetAccountApplicationIdentification(
 func (a *AccountManagementStatusAndReason4) SetExistingAccountIdentification(value string) {
 	a.ExistingAccountIdentification = (*Max35Text)(&value)
 }
-

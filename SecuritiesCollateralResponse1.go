@@ -17,9 +17,7 @@ type SecuritiesCollateralResponse1 struct {
 
 	// Additional information regarding why the collateral proposal has a rejected status.
 	RejectionInformation *Max35Text `xml:"RjctnInf,omitempty"`
-
 }
-
 
 func (s *SecuritiesCollateralResponse1) SetCollateralIdentification(value string) {
 	s.CollateralIdentification = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (s *SecuritiesCollateralResponse1) SetRejectionReason(value string) {
 func (s *SecuritiesCollateralResponse1) SetRejectionInformation(value string) {
 	s.RejectionInformation = (*Max35Text)(&value)
 }
-

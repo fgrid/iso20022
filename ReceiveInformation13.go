@@ -38,9 +38,7 @@ type ReceiveInformation13 struct {
 
 	// Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
 	ClientReference *Max35Text `xml:"ClntRef,omitempty"`
-
 }
-
 
 func (r *ReceiveInformation13) SetRequestedSettlementDate(value string) {
 	r.RequestedSettlementDate = (*ISODate)(&value)
@@ -64,25 +62,25 @@ func (r *ReceiveInformation13) AddSettlementPartiesDetails() *ReceivingPartiesAn
 }
 
 func (r *ReceiveInformation13) AddChargeDetails() *Charge20 {
-	newValue := new (Charge20)
+	newValue := new(Charge20)
 	r.ChargeDetails = append(r.ChargeDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation13) AddCommissionDetails() *Commission17 {
-	newValue := new (Commission17)
+	newValue := new(Commission17)
 	r.CommissionDetails = append(r.CommissionDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation13) AddTaxDetails() *Tax21 {
-	newValue := new (Tax21)
+	newValue := new(Tax21)
 	r.TaxDetails = append(r.TaxDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation13) AddForeignExchangeDetails() *ForeignExchangeTerms7 {
-	newValue := new (ForeignExchangeTerms7)
+	newValue := new(ForeignExchangeTerms7)
 	r.ForeignExchangeDetails = append(r.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -99,4 +97,3 @@ func (r *ReceiveInformation13) AddPhysicalTransferDetails() *DeliveryParameters4
 func (r *ReceiveInformation13) SetClientReference(value string) {
 	r.ClientReference = (*Max35Text)(&value)
 }
-

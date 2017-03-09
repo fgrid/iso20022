@@ -35,9 +35,7 @@ type CorporateActionDate4 struct {
 
 	// Date/time by which cash must be in place in order to take part in the event.
 	SubscriptionCostDebitDate *DateFormat4Choice `xml:"SbcptCostDbtDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate4) AddCouponClippingDate() *DateFormat4Choice {
 	c.CouponClippingDate = new(DateFormat4Choice)
@@ -93,4 +91,3 @@ func (c *CorporateActionDate4) AddSubscriptionCostDebitDate() *DateFormat4Choice
 	c.SubscriptionCostDebitDate = new(DateFormat4Choice)
 	return c.SubscriptionCostDebitDate
 }
-

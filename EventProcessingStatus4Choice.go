@@ -14,9 +14,7 @@ type EventProcessingStatus4Choice struct {
 
 	// Proprietary status related to the event processing.
 	ProprietaryStatus *ProprietaryStatusAndReason7 `xml:"PrtrySts"`
-
 }
-
 
 func (e *EventProcessingStatus4Choice) AddComplete() *NoSpecifiedReason1 {
 	e.Complete = new(NoSpecifiedReason1)
@@ -37,4 +35,3 @@ func (e *EventProcessingStatus4Choice) AddProprietaryStatus() *ProprietaryStatus
 	e.ProprietaryStatus = new(ProprietaryStatusAndReason7)
 	return e.ProprietaryStatus
 }
-

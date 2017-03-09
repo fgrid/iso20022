@@ -14,9 +14,7 @@ type AccountIdentification32 struct {
 
 	// Balance to which the payment applies (less or equal to the total eligible balance).
 	ConfirmedBalance *BalanceFormat5Choice `xml:"ConfdBal"`
-
 }
-
 
 func (a *AccountIdentification32) SetSafekeepingAccount(value string) {
 	a.SafekeepingAccount = (*Max35Text)(&value)
@@ -36,4 +34,3 @@ func (a *AccountIdentification32) AddConfirmedBalance() *BalanceFormat5Choice {
 	a.ConfirmedBalance = new(BalanceFormat5Choice)
 	return a.ConfirmedBalance
 }
-

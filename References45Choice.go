@@ -14,9 +14,7 @@ type References45Choice struct {
 
 	// Reference to a transaction that cannot be identified using a standard reference element present in the message.
 	OtherTransactionIdentification *GenericDocumentIdentification4 `xml:"OthrTxId"`
-
 }
-
 
 func (r *References45Choice) AddSecuritiesSettlementTransactionIdentification() *SettlementTypeAndIdentification18 {
 	r.SecuritiesSettlementTransactionIdentification = new(SettlementTypeAndIdentification18)
@@ -36,4 +34,3 @@ func (r *References45Choice) AddOtherTransactionIdentification() *GenericDocumen
 	r.OtherTransactionIdentification = new(GenericDocumentIdentification4)
 	return r.OtherTransactionIdentification
 }
-

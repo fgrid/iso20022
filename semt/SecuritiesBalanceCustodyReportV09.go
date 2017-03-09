@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200109 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.09 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.09 Document"`
 	Message *SecuritiesBalanceCustodyReportV09 `xml:"SctiesBalCtdyRpt"`
 }
 
@@ -18,18 +18,18 @@ func (d *Document00200109) AddMessage() *SecuritiesBalanceCustodyReportV09 {
 
 // Scope
 // An account servicer sends a SecuritiesBalanceCustodyReport to an account owner to provide, at a moment in time, the quantity and identification of the financial instruments that the account servicer holds for the account owner.
-// 
+//
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants, or
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer, or
 // - a transfer agent acting on behalf of a fund manager or an account owner's designated agent.
-// 
+//
 // Usage
-// The message can also include availability and the location of holdings to facilitate trading and minimise settlement issues. The message reports all information per financial instrument, that is, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided. 
-// The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner. The message may be provided on a trade date, contractual or settlement date basis. 
+// The message can also include availability and the location of holdings to facilitate trading and minimise settlement issues. The message reports all information per financial instrument, that is, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided.
+// The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner. The message may be provided on a trade date, contractual or settlement date basis.
 // There may be one or more intermediary parties, for example, an intermediary or a concentrator between the account owner and account servicer.
-// 
+//
 // The message may also be used to:
 // - re-send a message previously sent,
 // - provide a third party with a copy of a message for information,
@@ -47,7 +47,7 @@ type SecuritiesBalanceCustodyReportV09 struct {
 	AccountOwner *iso20022.PartyIdentification98 `xml:"AcctOwnr,omitempty"`
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
-	// 
+	//
 	AccountServicer *iso20022.PartyIdentification100 `xml:"AcctSvcr,omitempty"`
 
 	// Account to or from which a securities entry is made.
@@ -64,9 +64,7 @@ type SecuritiesBalanceCustodyReportV09 struct {
 
 	// Total valuation amounts provided in the base currency of the account.
 	AccountBaseCurrencyTotalAmounts *iso20022.TotalValueInPageAndStatement1 `xml:"AcctBaseCcyTtlAmts,omitempty"`
-
 }
-
 
 func (s *SecuritiesBalanceCustodyReportV09) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -94,19 +92,19 @@ func (s *SecuritiesBalanceCustodyReportV09) AddSafekeepingAccount() *iso20022.Se
 }
 
 func (s *SecuritiesBalanceCustodyReportV09) AddIntermediaryInformation() *iso20022.Intermediary32 {
-	newValue := new (iso20022.Intermediary32)
+	newValue := new(iso20022.Intermediary32)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceCustodyReportV09) AddBalanceForAccount() *iso20022.AggregateBalanceInformation30 {
-	newValue := new (iso20022.AggregateBalanceInformation30)
+	newValue := new(iso20022.AggregateBalanceInformation30)
 	s.BalanceForAccount = append(s.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceCustodyReportV09) AddSubAccountDetails() *iso20022.SubAccountIdentification42 {
-	newValue := new (iso20022.SubAccountIdentification42)
+	newValue := new(iso20022.SubAccountIdentification42)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
@@ -115,4 +113,3 @@ func (s *SecuritiesBalanceCustodyReportV09) AddAccountBaseCurrencyTotalAmounts()
 	s.AccountBaseCurrencyTotalAmounts = new(iso20022.TotalValueInPageAndStatement1)
 	return s.AccountBaseCurrencyTotalAmounts
 }
-

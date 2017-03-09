@@ -32,9 +32,7 @@ type ATMTransaction7 struct {
 
 	// Maintenance command to perform on the ATM.
 	Command []*ATMCommand1 `xml:"Cmd,omitempty"`
-
 }
-
 
 func (a *ATMTransaction7) AddTransactionIdentification() *TransactionIdentifier1 {
 	a.TransactionIdentification = new(TransactionIdentifier1)
@@ -47,7 +45,7 @@ func (a *ATMTransaction7) AddTransactionResponse() *ResponseType3 {
 }
 
 func (a *ATMTransaction7) AddAction() *Action5 {
-	newValue := new (Action5)
+	newValue := new(Action5)
 	a.Action = append(a.Action, newValue)
 	return newValue
 }
@@ -63,13 +61,13 @@ func (a *ATMTransaction7) AddCurrencyConversion() *CurrencyConversion3 {
 }
 
 func (a *ATMTransaction7) AddAccountInformation() *CardAccount6 {
-	newValue := new (CardAccount6)
+	newValue := new(CardAccount6)
 	a.AccountInformation = append(a.AccountInformation, newValue)
 	return newValue
 }
 
 func (a *ATMTransaction7) AddAccountStatementData() *ATMAccountStatement1 {
-	newValue := new (ATMAccountStatement1)
+	newValue := new(ATMAccountStatement1)
 	a.AccountStatementData = append(a.AccountStatementData, newValue)
 	return newValue
 }
@@ -84,8 +82,7 @@ func (a *ATMTransaction7) SetICCRelatedData(value string) {
 }
 
 func (a *ATMTransaction7) AddCommand() *ATMCommand1 {
-	newValue := new (ATMCommand1)
+	newValue := new(ATMCommand1)
 	a.Command = append(a.Command, newValue)
 	return newValue
 }
-

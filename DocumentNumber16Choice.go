@@ -11,9 +11,7 @@ type DocumentNumber16Choice struct {
 
 	// Proprietary document identification.
 	ProprietaryNumber *GenericIdentification163 `xml:"PrtryNb"`
-
 }
-
 
 func (d *DocumentNumber16Choice) SetShortNumber(value string) {
 	d.ShortNumber = (*Exact3NumericText)(&value)
@@ -27,4 +25,3 @@ func (d *DocumentNumber16Choice) AddProprietaryNumber() *GenericIdentification16
 	d.ProprietaryNumber = new(GenericIdentification163)
 	return d.ProprietaryNumber
 }
-

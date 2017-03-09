@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.03 Document"`
 	Message *MeetingNotificationV03 `xml:"MtgNtfctn"`
 }
 
@@ -62,9 +62,7 @@ type MeetingNotificationV03 struct {
 
 	// Specifies requirements relative to the use of Power of Attorney.
 	PowerOfAttorneyRequirements *iso20022.PowerOfAttorneyRequirements2 `xml:"PwrOfAttnyRqrmnts,omitempty"`
-
 }
-
 
 func (m *MeetingNotificationV03) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -87,7 +85,7 @@ func (m *MeetingNotificationV03) AddMeeting() *iso20022.MeetingNotice3 {
 }
 
 func (m *MeetingNotificationV03) AddMeetingDetails() *iso20022.Meeting3 {
-	newValue := new (iso20022.Meeting3)
+	newValue := new(iso20022.Meeting3)
 	m.MeetingDetails = append(m.MeetingDetails, newValue)
 	return newValue
 }
@@ -103,19 +101,19 @@ func (m *MeetingNotificationV03) AddIssuer() *iso20022.IssuerInformation1 {
 }
 
 func (m *MeetingNotificationV03) AddIssuerAgent() *iso20022.IssuerAgent1 {
-	newValue := new (iso20022.IssuerAgent1)
+	newValue := new(iso20022.IssuerAgent1)
 	m.IssuerAgent = append(m.IssuerAgent, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV03) AddSecurity() *iso20022.SecurityPosition6 {
-	newValue := new (iso20022.SecurityPosition6)
+	newValue := new(iso20022.SecurityPosition6)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV03) AddResolution() *iso20022.Resolution2 {
-	newValue := new (iso20022.Resolution2)
+	newValue := new(iso20022.Resolution2)
 	m.Resolution = append(m.Resolution, newValue)
 	return newValue
 }
@@ -134,4 +132,3 @@ func (m *MeetingNotificationV03) AddPowerOfAttorneyRequirements() *iso20022.Powe
 	m.PowerOfAttorneyRequirements = new(iso20022.PowerOfAttorneyRequirements2)
 	return m.PowerOfAttorneyRequirements
 }
-

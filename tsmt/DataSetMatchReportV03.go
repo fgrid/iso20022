@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.013.001.03 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.013.001.03 Document"`
 	Message *DataSetMatchReportV03 `xml:"DataSetMtchRpt"`
 }
 
@@ -29,14 +29,14 @@ func (d *Document01300103) AddMessage() *DataSetMatchReportV03 {
 // The DataSetMatchReport message can be sent by the matching application to the party requesting a data set match or pre-match for a transaction established in the lodge mode. In the outlined scenario, the DataSetMatchReport will either inform about the successful match or list the mis-matches between the data set(s) conveyed with the DataSetSubmission message and the related baseline.
 type DataSetMatchReportV03 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -45,16 +45,16 @@ type DataSetMatchReportV03 struct {
 	// Reference to the transaction for each financial institution which is a party to the transaction.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
-	// Party that buys goods or services, or a financial instrument. 
+	// Party that buys goods or services, or a financial instrument.
 	Buyer *iso20022.PartyIdentification26 `xml:"Buyr"`
 
-	// Party that sells goods or services, or a financial instrument. 
+	// Party that sells goods or services, or a financial instrument.
 	Seller *iso20022.PartyIdentification26 `xml:"Sellr"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Identifies the documents compared in this report.
@@ -68,9 +68,7 @@ type DataSetMatchReportV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (d *DataSetMatchReportV03) AddReportIdentification() *iso20022.MessageIdentification1 {
 	d.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -93,7 +91,7 @@ func (d *DataSetMatchReportV03) AddTransactionStatus() *iso20022.TransactionStat
 }
 
 func (d *DataSetMatchReportV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	d.UserTransactionReference = append(d.UserTransactionReference, newValue)
 	return newValue
 }
@@ -119,7 +117,7 @@ func (d *DataSetMatchReportV03) AddSellerBank() *iso20022.BICIdentification1 {
 }
 
 func (d *DataSetMatchReportV03) AddComparedDocumentReference() *iso20022.DocumentIdentification10 {
-	newValue := new (iso20022.DocumentIdentification10)
+	newValue := new(iso20022.DocumentIdentification10)
 	d.ComparedDocumentReference = append(d.ComparedDocumentReference, newValue)
 	return newValue
 }
@@ -138,4 +136,3 @@ func (d *DataSetMatchReportV03) AddRequestForAction() *iso20022.PendingActivity2
 	d.RequestForAction = new(iso20022.PendingActivity2)
 	return d.RequestForAction
 }
-

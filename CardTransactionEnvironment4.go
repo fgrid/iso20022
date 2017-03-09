@@ -20,9 +20,7 @@ type CardTransactionEnvironment4 struct {
 
 	// Payment token information.
 	PaymentToken *CardPaymentToken2 `xml:"PmtTkn,omitempty"`
-
 }
-
 
 func (c *CardTransactionEnvironment4) SetAcquirerIdentification(value string) {
 	c.AcquirerIdentification = (*Max35Text)(&value)
@@ -49,4 +47,3 @@ func (c *CardTransactionEnvironment4) AddPaymentToken() *CardPaymentToken2 {
 	c.PaymentToken = new(CardPaymentToken2)
 	return c.PaymentToken
 }
-

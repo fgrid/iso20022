@@ -8,9 +8,7 @@ type FundOrderType1Choice struct {
 
 	// Order type expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (f *FundOrderType1Choice) SetType(value string) {
 	f.Type = (*FundOrderType6Code)(&value)
@@ -20,4 +18,3 @@ func (f *FundOrderType1Choice) AddProprietary() *GenericIdentification47 {
 	f.Proprietary = new(GenericIdentification47)
 	return f.Proprietary
 }
-

@@ -8,9 +8,7 @@ type PaymentPeriod1 struct {
 
 	// Number of days after which the payment must be effected.
 	NumberOfDays *Number `xml:"NbOfDays,omitempty"`
-
 }
-
 
 func (p *PaymentPeriod1) SetCode(value string) {
 	p.Code = (*PaymentTime1Code)(&value)
@@ -19,4 +17,3 @@ func (p *PaymentPeriod1) SetCode(value string) {
 func (p *PaymentPeriod1) SetNumberOfDays(value string) {
 	p.NumberOfDays = (*Number)(&value)
 }
-

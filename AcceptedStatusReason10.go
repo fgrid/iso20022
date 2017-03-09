@@ -8,9 +8,7 @@ type AcceptedStatusReason10 struct {
 
 	// Provides additional information about the processed instruction.
 	AdditionalReasonInformation *RestrictedFINXMax210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (a *AcceptedStatusReason10) AddReasonCode() *AcceptedReason11Choice {
 	a.ReasonCode = new(AcceptedReason11Choice)
@@ -20,4 +18,3 @@ func (a *AcceptedStatusReason10) AddReasonCode() *AcceptedReason11Choice {
 func (a *AcceptedStatusReason10) SetAdditionalReasonInformation(value string) {
 	a.AdditionalReasonInformation = (*RestrictedFINXMax210Text)(&value)
 }
-

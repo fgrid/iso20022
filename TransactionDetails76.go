@@ -26,9 +26,7 @@ type TransactionDetails76 struct {
 
 	// Provides additional details on the transaction which can not be included within the structured fields of the message.
 	TransactionDetails *TransactionDetails74 `xml:"TxDtls,omitempty"`
-
 }
-
 
 func (t *TransactionDetails76) AddAccountOwnerTransactionIdentification() *SettlementTypeAndIdentification18 {
 	t.AccountOwnerTransactionIdentification = new(SettlementTypeAndIdentification18)
@@ -65,4 +63,3 @@ func (t *TransactionDetails76) AddTransactionDetails() *TransactionDetails74 {
 	t.TransactionDetails = new(TransactionDetails74)
 	return t.TransactionDetails
 }
-

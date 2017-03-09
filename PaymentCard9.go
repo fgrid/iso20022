@@ -26,9 +26,7 @@ type PaymentCard9 struct {
 
 	// Additional card issuer specific data.
 	AdditionalCardData *Max70Text `xml:"AddtlCardData,omitempty"`
-
 }
-
 
 func (p *PaymentCard9) AddProtectedCardData() *ContentInformationType10 {
 	p.ProtectedCardData = new(ContentInformationType10)
@@ -63,4 +61,3 @@ func (p *PaymentCard9) SetCardBrand(value string) {
 func (p *PaymentCard9) SetAdditionalCardData(value string) {
 	p.AdditionalCardData = (*Max70Text)(&value)
 }
-

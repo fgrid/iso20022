@@ -18,9 +18,7 @@ type CurrencyControlHeader2 struct {
 
 	// Agent which sends the message.
 	RegistrationAgent *BranchAndFinancialInstitutionIdentification5 `xml:"RegnAgt"`
-
 }
-
 
 func (c *CurrencyControlHeader2) SetMessageIdentification(value string) {
 	c.MessageIdentification = (*Max35Text)(&value)
@@ -43,4 +41,3 @@ func (c *CurrencyControlHeader2) AddRegistrationAgent() *BranchAndFinancialInsti
 	c.RegistrationAgent = new(BranchAndFinancialInstitutionIdentification5)
 	return c.RegistrationAgent
 }
-

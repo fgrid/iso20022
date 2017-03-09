@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.027.001.01 Document"`
+	XMLName xml.Name                                                 `xml:"urn:iso:std:iso:20022:tech:xsd:sese.027.001.01 Document"`
 	Message *SecuritiesTransactionCancellationRequestStatusAdviceV01 `xml:"SctiesTxCxlReqStsAdvc"`
 }
 
@@ -54,9 +54,7 @@ type SecuritiesTransactionCancellationRequestStatusAdviceV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionCancellationRequestStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -94,8 +92,7 @@ func (s *SecuritiesTransactionCancellationRequestStatusAdviceV01) AddMessageReci
 }
 
 func (s *SecuritiesTransactionCancellationRequestStatusAdviceV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

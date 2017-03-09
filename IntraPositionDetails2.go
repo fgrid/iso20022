@@ -29,9 +29,7 @@ type IntraPositionDetails2 struct {
 
 	// Provides additional settlement processing information which can not be included within the structured fields of the message.
 	InstructionProcessingAdditionalDetails *Max350Text `xml:"InstrPrcgAddtlDtls,omitempty"`
-
 }
-
 
 func (i *IntraPositionDetails2) AddSettledQuantity() *FinancialInstrumentQuantity1Choice {
 	i.SettledQuantity = new(FinancialInstrumentQuantity1Choice)
@@ -76,4 +74,3 @@ func (i *IntraPositionDetails2) AddBalanceTo() *SecuritiesBalanceType3Choice {
 func (i *IntraPositionDetails2) SetInstructionProcessingAdditionalDetails(value string) {
 	i.InstructionProcessingAdditionalDetails = (*Max350Text)(&value)
 }
-

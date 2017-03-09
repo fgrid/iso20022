@@ -35,9 +35,7 @@ type Transaction6 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *Transaction6) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -81,8 +79,7 @@ func (t *Transaction6) AddTransactionDetails() *TransactionDetails6 {
 }
 
 func (t *Transaction6) AddExtension() *Extension2 {
-	newValue := new (Extension2)
+	newValue := new(Extension2)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

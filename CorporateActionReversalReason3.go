@@ -8,9 +8,7 @@ type CorporateActionReversalReason3 struct {
 
 	// Provides additional information about the processed instruction.
 	AdditionalReasonInformation *Max256Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionReversalReason3) AddReason() *CorporateActionReversalReason3Choice {
 	c.Reason = new(CorporateActionReversalReason3Choice)
@@ -20,4 +18,3 @@ func (c *CorporateActionReversalReason3) AddReason() *CorporateActionReversalRea
 func (c *CorporateActionReversalReason3) SetAdditionalReasonInformation(value string) {
 	c.AdditionalReasonInformation = (*Max256Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.013.001.02 Document"`
+	XMLName xml.Name        `xml:"urn:iso:std:iso:20022:tech:xsd:setr.013.001.02 Document"`
 	Message *SwitchOrderV02 `xml:"setr.013.001.02"`
 }
 
@@ -43,9 +43,7 @@ type SwitchOrderV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SwitchOrderV02) AddMasterReference() *iso20022.AdditionalReference3 {
 	s.MasterReference = new(iso20022.AdditionalReference3)
@@ -58,7 +56,7 @@ func (s *SwitchOrderV02) AddPoolReference() *iso20022.AdditionalReference3 {
 }
 
 func (s *SwitchOrderV02) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -69,7 +67,7 @@ func (s *SwitchOrderV02) AddSwitchOrderDetails() *iso20022.SwitchOrder2 {
 }
 
 func (s *SwitchOrderV02) AddIntermediaryDetails() *iso20022.Intermediary4 {
-	newValue := new (iso20022.Intermediary4)
+	newValue := new(iso20022.Intermediary4)
 	s.IntermediaryDetails = append(s.IntermediaryDetails, newValue)
 	return newValue
 }
@@ -80,8 +78,7 @@ func (s *SwitchOrderV02) AddCopyDetails() *iso20022.CopyInformation1 {
 }
 
 func (s *SwitchOrderV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

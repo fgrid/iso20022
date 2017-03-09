@@ -38,9 +38,7 @@ type CorporateActionOption23 struct {
 
 	// Provides information about the cash movement related to a corporate action option.
 	CashMovementDetails []*CashOption12 `xml:"CshMvmntDtls,omitempty"`
-
 }
-
 
 func (c *CorporateActionOption23) AddOptionNumber() *OptionNumber1Choice {
 	c.OptionNumber = new(OptionNumber1Choice)
@@ -53,7 +51,7 @@ func (c *CorporateActionOption23) AddOptionType() *CorporateActionOption3Choice 
 }
 
 func (c *CorporateActionOption23) AddOptionFeatures() *OptionFeaturesFormat1Choice {
-	newValue := new (OptionFeaturesFormat1Choice)
+	newValue := new(OptionFeaturesFormat1Choice)
 	c.OptionFeatures = append(c.OptionFeatures, newValue)
 	return newValue
 }
@@ -93,14 +91,13 @@ func (c *CorporateActionOption23) AddPlaceOfTrade() *MarketIdentification4 {
 }
 
 func (c *CorporateActionOption23) AddSecuritiesMovementDetails() *SecuritiesOption18 {
-	newValue := new (SecuritiesOption18)
+	newValue := new(SecuritiesOption18)
 	c.SecuritiesMovementDetails = append(c.SecuritiesMovementDetails, newValue)
 	return newValue
 }
 
 func (c *CorporateActionOption23) AddCashMovementDetails() *CashOption12 {
-	newValue := new (CashOption12)
+	newValue := new(CashOption12)
 	c.CashMovementDetails = append(c.CashMovementDetails, newValue)
 	return newValue
 }
-

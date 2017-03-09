@@ -8,9 +8,7 @@ type Registration6Choice struct {
 
 	// Registration information expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (r *Registration6Choice) SetCode(value string) {
 	r.Code = (*Registration1Code)(&value)
@@ -20,4 +18,3 @@ func (r *Registration6Choice) AddProprietary() *GenericIdentification38 {
 	r.Proprietary = new(GenericIdentification38)
 	return r.Proprietary
 }
-

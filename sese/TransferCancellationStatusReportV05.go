@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.010.001.05 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:sese.010.001.05 Document"`
 	Message *TransferCancellationStatusReportV05 `xml:"TrfCxlStsRpt"`
 }
 
@@ -30,7 +30,7 @@ func (d *Document01000105) AddMessage() *TransferCancellationStatusReportV05 {
 // - the transfer cancellation is rejected and the reason for the status.
 type TransferCancellationStatusReportV05 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Unambiguous identification of the transfer allocated by the counterparty.
@@ -47,9 +47,7 @@ type TransferCancellationStatusReportV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferCancellationStatusReportV05) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -77,8 +75,7 @@ func (t *TransferCancellationStatusReportV05) AddMarketPracticeVersion() *iso200
 }
 
 func (t *TransferCancellationStatusReportV05) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

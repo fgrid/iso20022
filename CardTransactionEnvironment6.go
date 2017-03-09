@@ -8,9 +8,7 @@ type CardTransactionEnvironment6 struct {
 
 	// Institution destination of the reconciliation (correspond to the ISO 8583 field 93).
 	ReceivingInstitution *GenericIdentification73 `xml:"RcvgInstn"`
-
 }
-
 
 func (c *CardTransactionEnvironment6) AddSendingInstitution() *GenericIdentification73 {
 	c.SendingInstitution = new(GenericIdentification73)
@@ -21,4 +19,3 @@ func (c *CardTransactionEnvironment6) AddReceivingInstitution() *GenericIdentifi
 	c.ReceivingInstitution = new(GenericIdentification73)
 	return c.ReceivingInstitution
 }
-

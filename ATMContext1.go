@@ -8,9 +8,7 @@ type ATMContext1 struct {
 
 	// Withdrawal service provided by the ATM inside the session.
 	Service *ATMService1 `xml:"Svc,omitempty"`
-
 }
-
 
 func (a *ATMContext1) SetSessionReference(value string) {
 	a.SessionReference = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (a *ATMContext1) AddService() *ATMService1 {
 	a.Service = new(ATMService1)
 	return a.Service
 }
-

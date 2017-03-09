@@ -9,7 +9,7 @@ type RateDetails22 struct {
 	// Cash dividend amount per equity before deductions or allowances have been made.
 	GrossDividendRate []*GrossDividendRateFormat20Choice `xml:"GrssDvddRate,omitempty"`
 
-	// The actual interest rate used for the payment of the interest for the specified interest period. 
+	// The actual interest rate used for the payment of the interest for the specified interest period.
 	// Usage guideline: It is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.
 	InterestRateUsedForPayment []*InterestRateUsedForPaymentFormat8Choice `xml:"IntrstRateUsdForPmt,omitempty"`
 
@@ -60,9 +60,7 @@ type RateDetails22 struct {
 
 	// Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.
 	EqualisationRate *RateAndAmountFormat42Choice `xml:"EqulstnRate,omitempty"`
-
 }
-
 
 func (r *RateDetails22) AddAdditionalTax() *RateAndAmountFormat37Choice {
 	r.AdditionalTax = new(RateAndAmountFormat37Choice)
@@ -70,25 +68,25 @@ func (r *RateDetails22) AddAdditionalTax() *RateAndAmountFormat37Choice {
 }
 
 func (r *RateDetails22) AddGrossDividendRate() *GrossDividendRateFormat20Choice {
-	newValue := new (GrossDividendRateFormat20Choice)
+	newValue := new(GrossDividendRateFormat20Choice)
 	r.GrossDividendRate = append(r.GrossDividendRate, newValue)
 	return newValue
 }
 
 func (r *RateDetails22) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat8Choice {
-	newValue := new (InterestRateUsedForPaymentFormat8Choice)
+	newValue := new(InterestRateUsedForPaymentFormat8Choice)
 	r.InterestRateUsedForPayment = append(r.InterestRateUsedForPayment, newValue)
 	return newValue
 }
 
 func (r *RateDetails22) AddWithholdingTaxRate() *RateAndAmountFormat41Choice {
-	newValue := new (RateAndAmountFormat41Choice)
+	newValue := new(RateAndAmountFormat41Choice)
 	r.WithholdingTaxRate = append(r.WithholdingTaxRate, newValue)
 	return newValue
 }
 
 func (r *RateDetails22) AddSecondLevelTax() *RateAndAmountFormat41Choice {
-	newValue := new (RateAndAmountFormat41Choice)
+	newValue := new(RateAndAmountFormat41Choice)
 	r.SecondLevelTax = append(r.SecondLevelTax, newValue)
 	return newValue
 }
@@ -119,7 +117,7 @@ func (r *RateDetails22) AddThirdPartyIncentiveRate() *RateFormat20Choice {
 }
 
 func (r *RateDetails22) AddNetDividendRate() *NetDividendRateFormat22Choice {
-	newValue := new (NetDividendRateFormat22Choice)
+	newValue := new(NetDividendRateFormat22Choice)
 	r.NetDividendRate = append(r.NetDividendRate, newValue)
 	return newValue
 }
@@ -140,7 +138,7 @@ func (r *RateDetails22) AddSolicitationFeeRate() *SolicitationFeeRateFormat7Choi
 }
 
 func (r *RateDetails22) AddTaxCreditRate() *TaxCreditRateFormat8Choice {
-	newValue := new (TaxCreditRateFormat8Choice)
+	newValue := new(TaxCreditRateFormat8Choice)
 	r.TaxCreditRate = append(r.TaxCreditRate, newValue)
 	return newValue
 }
@@ -164,4 +162,3 @@ func (r *RateDetails22) AddEqualisationRate() *RateAndAmountFormat42Choice {
 	r.EqualisationRate = new(RateAndAmountFormat42Choice)
 	return r.EqualisationRate
 }
-

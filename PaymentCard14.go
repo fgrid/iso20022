@@ -17,9 +17,7 @@ type PaymentCard14 struct {
 
 	// Currency code of the card issuer (ISO 4217 numeric code).
 	CardCurrencyCode *Exact3AlphaNumericText `xml:"CardCcyCd,omitempty"`
-
 }
-
 
 func (p *PaymentCard14) AddProtectedCardData() *ContentInformationType10 {
 	p.ProtectedCardData = new(ContentInformationType10)
@@ -42,4 +40,3 @@ func (p *PaymentCard14) SetCardCountryCode(value string) {
 func (p *PaymentCard14) SetCardCurrencyCode(value string) {
 	p.CardCurrencyCode = (*Exact3AlphaNumericText)(&value)
 }
-

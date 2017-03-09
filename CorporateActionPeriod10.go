@@ -50,9 +50,7 @@ type CorporateActionPeriod10 struct {
 
 	// Period during which a physical certificate can be split.
 	SplitPeriod *Period3Choice `xml:"SpltPrd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod10) AddPriceCalculationPeriod() *Period3Choice {
 	c.PriceCalculationPeriod = new(Period3Choice)
@@ -133,4 +131,3 @@ func (c *CorporateActionPeriod10) AddSplitPeriod() *Period3Choice {
 	c.SplitPeriod = new(Period3Choice)
 	return c.SplitPeriod
 }
-

@@ -23,9 +23,7 @@ type PartyIdentificationAndAccount131 struct {
 
 	// Provides additional information to a party identification.
 	AdditionalInformation *PartyTextInformation3 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount131) AddIdentification() *PartyIdentification104Choice {
 	p.Identification = new(PartyIdentification104Choice)
@@ -59,4 +57,3 @@ func (p *PartyIdentificationAndAccount131) AddAdditionalInformation() *PartyText
 	p.AdditionalInformation = new(PartyTextInformation3)
 	return p.AdditionalInformation
 }
-

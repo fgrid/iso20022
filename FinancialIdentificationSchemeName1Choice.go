@@ -8,9 +8,7 @@ type FinancialIdentificationSchemeName1Choice struct {
 
 	// Name of the identification scheme, in a free text form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (f *FinancialIdentificationSchemeName1Choice) SetCode(value string) {
 	f.Code = (*ExternalFinancialInstitutionIdentification1Code)(&value)
@@ -19,4 +17,3 @@ func (f *FinancialIdentificationSchemeName1Choice) SetCode(value string) {
 func (f *FinancialIdentificationSchemeName1Choice) SetProprietary(value string) {
 	f.Proprietary = (*Max35Text)(&value)
 }
-

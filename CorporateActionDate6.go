@@ -23,9 +23,7 @@ type CorporateActionDate6 struct {
 
 	// Date/time at which the deal (rights) was agreed.
 	TradingDate *DateFormat6Choice `xml:"TradgDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate6) AddResponseDeadline() *DateFormat6Choice {
 	c.ResponseDeadline = new(DateFormat6Choice)
@@ -61,4 +59,3 @@ func (c *CorporateActionDate6) AddTradingDate() *DateFormat6Choice {
 	c.TradingDate = new(DateFormat6Choice)
 	return c.TradingDate
 }
-

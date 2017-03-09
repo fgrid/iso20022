@@ -7,7 +7,7 @@ import (
 )
 
 type Document02100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.021.001.01 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:auth.021.001.01 Document"`
 	Message *ContractRegistrationAmendmentRequestV01 `xml:"CtrctRegnAmdmntReq"`
 }
 
@@ -27,9 +27,7 @@ type ContractRegistrationAmendmentRequestV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *ContractRegistrationAmendmentRequestV01) AddGroupHeader() *iso20022.CurrencyControlHeader1 {
 	c.GroupHeader = new(iso20022.CurrencyControlHeader1)
@@ -37,14 +35,13 @@ func (c *ContractRegistrationAmendmentRequestV01) AddGroupHeader() *iso20022.Cur
 }
 
 func (c *ContractRegistrationAmendmentRequestV01) AddContractRegistrationAmendment() *iso20022.RegisteredContract1 {
-	newValue := new (iso20022.RegisteredContract1)
+	newValue := new(iso20022.RegisteredContract1)
 	c.ContractRegistrationAmendment = append(c.ContractRegistrationAmendment, newValue)
 	return newValue
 }
 
 func (c *ContractRegistrationAmendmentRequestV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

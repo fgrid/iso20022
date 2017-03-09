@@ -10,12 +10,10 @@ type StructuredRegulatoryReporting2 struct {
 	Amount *CurrencyAndAmount `xml:"Amt,omitempty"`
 
 	// Additional details that cater for specific domestic regulatory requirements.
-	// 
+	//
 	// Usage: Information is used to provide details that are not catered for in the Code or/and Amount elements.
 	Information *Max35Text `xml:"Inf,omitempty"`
-
 }
-
 
 func (s *StructuredRegulatoryReporting2) SetCode(value string) {
 	s.Code = (*Max3Text)(&value)
@@ -28,4 +26,3 @@ func (s *StructuredRegulatoryReporting2) SetAmount(value, currency string) {
 func (s *StructuredRegulatoryReporting2) SetInformation(value string) {
 	s.Information = (*Max35Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type BillingCompensation1 struct {
 
 	// Identifies the currency type used to report the value or total, in a coded form, such as Settlement (STLM).
 	CurrencyType *BillingCurrencyType2Code `xml:"CcyTp,omitempty"`
-
 }
-
 
 func (b *BillingCompensation1) AddType() *BillingCompensationType1Choice {
 	b.Type = new(BillingCompensationType1Choice)
@@ -28,4 +26,3 @@ func (b *BillingCompensation1) AddValue() *AmountAndDirection34 {
 func (b *BillingCompensation1) SetCurrencyType(value string) {
 	b.CurrencyType = (*BillingCurrencyType2Code)(&value)
 }
-

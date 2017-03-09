@@ -8,9 +8,7 @@ type Status6Choice struct {
 
 	// Status expressed as a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (s *Status6Choice) SetCode(value string) {
 	s.Code = (*TradeStatus4Code)(&value)
@@ -19,4 +17,3 @@ func (s *Status6Choice) SetCode(value string) {
 func (s *Status6Choice) SetProprietary(value string) {
 	s.Proprietary = (*Max35Text)(&value)
 }
-

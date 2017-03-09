@@ -26,9 +26,7 @@ type CommonData1 struct {
 
 	// Currency associated with the set of transaction.
 	Currency *CurrencyCode `xml:"Ccy,omitempty"`
-
 }
-
 
 func (c *CommonData1) AddEnvironment() *CardPaymentEnvironment5 {
 	c.Environment = new(CardPaymentEnvironment5)
@@ -63,4 +61,3 @@ func (c *CommonData1) SetReconciliationIdentification(value string) {
 func (c *CommonData1) SetCurrency(value string) {
 	c.Currency = (*CurrencyCode)(&value)
 }
-

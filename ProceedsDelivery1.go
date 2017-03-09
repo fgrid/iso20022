@@ -14,9 +14,7 @@ type ProceedsDelivery1 struct {
 
 	// Identification of the institution servicing the account.
 	AccountServicerIdentification *PartyIdentification2Choice `xml:"AcctSvcrId,omitempty"`
-
 }
-
 
 func (p *ProceedsDelivery1) SetSecuritiesAccountIdentification(value string) {
 	p.SecuritiesAccountIdentification = (*Max35Text)(&value)
@@ -36,4 +34,3 @@ func (p *ProceedsDelivery1) AddAccountServicerIdentification() *PartyIdentificat
 	p.AccountServicerIdentification = new(PartyIdentification2Choice)
 	return p.AccountServicerIdentification
 }
-

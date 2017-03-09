@@ -8,9 +8,7 @@ type InvestigationResult1Choice struct {
 
 	// Provides the investigation status.
 	InvestigationStatus *InvestigationStatus1Code `xml:"InvstgtnSts"`
-
 }
-
 
 func (i *InvestigationResult1Choice) AddResult() *SupplementaryDataEnvelope1 {
 	i.Result = new(SupplementaryDataEnvelope1)
@@ -20,4 +18,3 @@ func (i *InvestigationResult1Choice) AddResult() *SupplementaryDataEnvelope1 {
 func (i *InvestigationResult1Choice) SetInvestigationStatus(value string) {
 	i.InvestigationStatus = (*InvestigationStatus1Code)(&value)
 }
-

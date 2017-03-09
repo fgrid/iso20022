@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.03 Document"`
+	XMLName xml.Name                                             `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.03 Document"`
 	Message *ForeignExchangeTradeStatusAndDetailsNotificationV03 `xml:"FXTradStsAndDtlsNtfctn"`
 }
 
@@ -16,9 +16,9 @@ func (d *Document01700103) AddMessage() *ForeignExchangeTradeStatusAndDetailsNot
 	return d.Message
 }
 
-// Scope
-// The ForeignExchangeTradeStatusAndDetails message is sent by a central system to the participant to provide notification of the status and details of a foreign exchange trade.
-// Usage
+// Scope
+// The ForeignExchangeTradeStatusAndDetails message is sent by a central system to the participant to provide notification of the status and details of a foreign exchange trade.
+// Usage
 // The notification is sent by a central settlement system to the two trading parties after it has received foreign exchange trade instructions from both.
 type ForeignExchangeTradeStatusAndDetailsNotificationV03 struct {
 
@@ -57,9 +57,7 @@ type ForeignExchangeTradeStatusAndDetailsNotificationV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTradeStatusAndDetailsNotificationV03) AddStatusDetails() *iso20022.TradeData9 {
 	f.StatusDetails = new(iso20022.TradeData9)
@@ -107,7 +105,7 @@ func (f *ForeignExchangeTradeStatusAndDetailsNotificationV03) AddGeneralInformat
 }
 
 func (f *ForeignExchangeTradeStatusAndDetailsNotificationV03) AddSplitTradeInformation() *iso20022.SplitTradeDetails1 {
-	newValue := new (iso20022.SplitTradeDetails1)
+	newValue := new(iso20022.SplitTradeDetails1)
 	f.SplitTradeInformation = append(f.SplitTradeInformation, newValue)
 	return newValue
 }
@@ -118,8 +116,7 @@ func (f *ForeignExchangeTradeStatusAndDetailsNotificationV03) AddRegulatoryRepor
 }
 
 func (f *ForeignExchangeTradeStatusAndDetailsNotificationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	f.SupplementaryData = append(f.SupplementaryData, newValue)
 	return newValue
 }
-

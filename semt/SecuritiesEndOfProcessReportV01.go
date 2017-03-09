@@ -7,7 +7,7 @@ import (
 )
 
 type Document02300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.023.001.01 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:semt.023.001.01 Document"`
 	Message *SecuritiesEndOfProcessReportV01 `xml:"SctiesEndOfPrcRpt"`
 }
 
@@ -42,12 +42,10 @@ type SecuritiesEndOfProcessReportV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
 
-
 func (s *SecuritiesEndOfProcessReportV01) AddPagination() *iso20022.Pagination {
-	newValue := new (iso20022.Pagination)
+	newValue := new(iso20022.Pagination)
 	s.Pagination = append(s.Pagination, newValue)
 	return newValue
 }
@@ -58,20 +56,19 @@ func (s *SecuritiesEndOfProcessReportV01) AddReportGeneralDetails() *iso20022.Re
 }
 
 func (s *SecuritiesEndOfProcessReportV01) AddConfirmationParties() *iso20022.ConfirmationParties2 {
-	newValue := new (iso20022.ConfirmationParties2)
+	newValue := new(iso20022.ConfirmationParties2)
 	s.ConfirmationParties = append(s.ConfirmationParties, newValue)
 	return newValue
 }
 
 func (s *SecuritiesEndOfProcessReportV01) AddInvestor() *iso20022.PartyIdentificationAndAccount79 {
-	newValue := new (iso20022.PartyIdentificationAndAccount79)
+	newValue := new(iso20022.PartyIdentificationAndAccount79)
 	s.Investor = append(s.Investor, newValue)
 	return newValue
 }
 
 func (s *SecuritiesEndOfProcessReportV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -29,9 +29,7 @@ type InvestmentAccountOwnershipInformation5 struct {
 
 	// Indicates whether the signature of the account owner is required to authorise transactions on the account.
 	SignatoryRightIndicator *YesNoIndicator `xml:"SgntryRghtInd,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOwnershipInformation5) AddOrganisation() *Organisation2 {
 	i.Organisation = new(Organisation2)
@@ -52,7 +50,7 @@ func (i *InvestmentAccountOwnershipInformation5) SetExtendedMoneyLaunderingCheck
 }
 
 func (i *InvestmentAccountOwnershipInformation5) AddInvestorProfileValidation() *PartyProfileInformation1 {
-	newValue := new (PartyProfileInformation1)
+	newValue := new(PartyProfileInformation1)
 	i.InvestorProfileValidation = append(i.InvestorProfileValidation, newValue)
 	return newValue
 }
@@ -72,4 +70,3 @@ func (i *InvestmentAccountOwnershipInformation5) SetFiscalExemption(value string
 func (i *InvestmentAccountOwnershipInformation5) SetSignatoryRightIndicator(value string) {
 	i.SignatoryRightIndicator = (*YesNoIndicator)(&value)
 }
-

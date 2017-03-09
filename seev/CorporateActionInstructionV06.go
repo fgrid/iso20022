@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.033.001.06 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:seev.033.001.06 Document"`
 	Message *CorporateActionInstructionV06 `xml:"CorpActnInstr"`
 }
 
@@ -17,7 +17,7 @@ func (d *Document03300106) AddMessage() *CorporateActionInstructionV06 {
 }
 
 // Scope
-// An account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.
+// An account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.
 // This message is used to provide the custodian with instructions on how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.
 // Usage
 // The message may also be used to:
@@ -59,9 +59,7 @@ type CorporateActionInstructionV06 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionV06) SetChangeInstructionIndicator(value string) {
 	c.ChangeInstructionIndicator = (*iso20022.YesNoIndicator)(&value)
@@ -78,13 +76,13 @@ func (c *CorporateActionInstructionV06) AddInstructionCancellationRequestIdentif
 }
 
 func (c *CorporateActionInstructionV06) AddOtherDocumentIdentification() *iso20022.DocumentIdentification32 {
-	newValue := new (iso20022.DocumentIdentification32)
+	newValue := new(iso20022.DocumentIdentification32)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
 
 func (c *CorporateActionInstructionV06) AddEventsLinkage() *iso20022.CorporateActionEventReference3 {
-	newValue := new (iso20022.CorporateActionEventReference3)
+	newValue := new(iso20022.CorporateActionEventReference3)
 	c.EventsLinkage = append(c.EventsLinkage, newValue)
 	return newValue
 }
@@ -100,7 +98,7 @@ func (c *CorporateActionInstructionV06) AddAccountDetails() *iso20022.AccountAnd
 }
 
 func (c *CorporateActionInstructionV06) AddBeneficialOwnerDetails() *iso20022.PartyIdentification93 {
-	newValue := new (iso20022.PartyIdentification93)
+	newValue := new(iso20022.PartyIdentification93)
 	c.BeneficialOwnerDetails = append(c.BeneficialOwnerDetails, newValue)
 	return newValue
 }
@@ -116,8 +114,7 @@ func (c *CorporateActionInstructionV06) AddAdditionalInformation() *iso20022.Cor
 }
 
 func (c *CorporateActionInstructionV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

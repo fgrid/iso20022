@@ -10,7 +10,7 @@ type PaymentTransactionInformation1 struct {
 	OriginalPaymentInformationIdentification *Max35Text `xml:"OrgnlPmtInfId,omitempty"`
 
 	// Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.
-	// 
+	//
 	// Usage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction.
 	OriginalInstructionIdentification *Max35Text `xml:"OrgnlInstrId,omitempty"`
 
@@ -27,7 +27,7 @@ type PaymentTransactionInformation1 struct {
 	StatusReasonInformation []*StatusReasonInformation1 `xml:"StsRsnInf,omitempty"`
 
 	// Information on charges related to the processing of the rejection of the instruction.
-	// 
+	//
 	// Usage: ChargesInformation is past on for information purposes only. Settlement of the charges will be done separately.
 	ChargesInformation []*ChargesInformation1 `xml:"ChrgsInf,omitempty"`
 
@@ -42,9 +42,7 @@ type PaymentTransactionInformation1 struct {
 
 	// Set of key elements of the original transaction being referred to.
 	OriginalTransactionReference *OriginalTransactionReference1 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransactionInformation1) SetStatusIdentification(value string) {
 	p.StatusIdentification = (*Max35Text)(&value)
@@ -71,13 +69,13 @@ func (p *PaymentTransactionInformation1) SetTransactionStatus(value string) {
 }
 
 func (p *PaymentTransactionInformation1) AddStatusReasonInformation() *StatusReasonInformation1 {
-	newValue := new (StatusReasonInformation1)
+	newValue := new(StatusReasonInformation1)
 	p.StatusReasonInformation = append(p.StatusReasonInformation, newValue)
 	return newValue
 }
 
 func (p *PaymentTransactionInformation1) AddChargesInformation() *ChargesInformation1 {
-	newValue := new (ChargesInformation1)
+	newValue := new(ChargesInformation1)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -100,4 +98,3 @@ func (p *PaymentTransactionInformation1) AddOriginalTransactionReference() *Orig
 	p.OriginalTransactionReference = new(OriginalTransactionReference1)
 	return p.OriginalTransactionReference
 }
-

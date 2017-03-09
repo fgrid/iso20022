@@ -20,9 +20,7 @@ type Meeting2 struct {
 
 	// Minimum quantity of securities, expressed as a percentage, required to hold a meeting.
 	QuorumQuantityPercentage *PercentageRate `xml:"QrmQtyPctg,omitempty"`
-
 }
-
 
 func (m *Meeting2) AddDateAndTime() *DateFormat2Choice {
 	m.DateAndTime = new(DateFormat2Choice)
@@ -38,7 +36,7 @@ func (m *Meeting2) SetQuorumRequired(value string) {
 }
 
 func (m *Meeting2) AddLocation() *LocationFormat1Choice {
-	newValue := new (LocationFormat1Choice)
+	newValue := new(LocationFormat1Choice)
 	m.Location = append(m.Location, newValue)
 	return newValue
 }
@@ -50,4 +48,3 @@ func (m *Meeting2) SetQuorumQuantity(value string) {
 func (m *Meeting2) SetQuorumQuantityPercentage(value string) {
 	m.QuorumQuantityPercentage = (*PercentageRate)(&value)
 }
-

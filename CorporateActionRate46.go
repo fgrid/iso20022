@@ -35,18 +35,16 @@ type CorporateActionRate46 struct {
 
 	// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments, for example, in the context of the EU Savings directive.
 	TaxableIncomePerDividendShare []*RateTypeAndAmountAndStatus11 `xml:"TaxblIncmPerDvddShr,omitempty"`
-
 }
 
-
 func (c *CorporateActionRate46) AddGrossDividendRate() *GrossDividendRateFormat10Choice {
-	newValue := new (GrossDividendRateFormat10Choice)
+	newValue := new(GrossDividendRateFormat10Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate46) AddNetDividendRate() *NetDividendRateFormat12Choice {
-	newValue := new (NetDividendRateFormat12Choice)
+	newValue := new(NetDividendRateFormat12Choice)
 	c.NetDividendRate = append(c.NetDividendRate, newValue)
 	return newValue
 }
@@ -57,7 +55,7 @@ func (c *CorporateActionRate46) AddIndexFactor() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate46) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat2Choice {
-	newValue := new (InterestRateUsedForPaymentFormat2Choice)
+	newValue := new(InterestRateUsedForPaymentFormat2Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
@@ -71,13 +69,13 @@ func (c *CorporateActionRate46) SetProrationRate(value string) {
 }
 
 func (c *CorporateActionRate46) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	c.TaxRelatedRate = append(c.TaxRelatedRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate46) AddWithholdingTaxRate() *RateFormat11Choice {
-	newValue := new (RateFormat11Choice)
+	newValue := new(RateFormat11Choice)
 	c.WithholdingTaxRate = append(c.WithholdingTaxRate, newValue)
 	return newValue
 }
@@ -88,14 +86,13 @@ func (c *CorporateActionRate46) AddAdditionalTax() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate46) AddWithholdingOfForeignTax() *RateAndAmountFormat21Choice {
-	newValue := new (RateAndAmountFormat21Choice)
+	newValue := new(RateAndAmountFormat21Choice)
 	c.WithholdingOfForeignTax = append(c.WithholdingOfForeignTax, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate46) AddTaxableIncomePerDividendShare() *RateTypeAndAmountAndStatus11 {
-	newValue := new (RateTypeAndAmountAndStatus11)
+	newValue := new(RateTypeAndAmountAndStatus11)
 	c.TaxableIncomePerDividendShare = append(c.TaxableIncomePerDividendShare, newValue)
 	return newValue
 }
-

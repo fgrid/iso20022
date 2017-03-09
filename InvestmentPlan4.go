@@ -38,9 +38,7 @@ type InvestmentPlan4 struct {
 
 	// Cash settlement standing instruction associated to the investment plan.
 	CashSettlement *InvestmentFundCashSettlementInformation3 `xml:"CshSttlm,omitempty"`
-
 }
-
 
 func (i *InvestmentPlan4) SetFrequency(value string) {
 	i.Frequency = (*EventFrequency1Code)(&value)
@@ -83,7 +81,7 @@ func (i *InvestmentPlan4) SetRoundingDirection(value string) {
 }
 
 func (i *InvestmentPlan4) AddSecurityDetails() *Repartition1 {
-	newValue := new (Repartition1)
+	newValue := new(Repartition1)
 	i.SecurityDetails = append(i.SecurityDetails, newValue)
 	return newValue
 }
@@ -92,4 +90,3 @@ func (i *InvestmentPlan4) AddCashSettlement() *InvestmentFundCashSettlementInfor
 	i.CashSettlement = new(InvestmentFundCashSettlementInformation3)
 	return i.CashSettlement
 }
-

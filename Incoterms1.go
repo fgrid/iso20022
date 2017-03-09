@@ -11,9 +11,7 @@ type Incoterms1 struct {
 
 	// Location where the Incoterms are actioned.
 	Location *Max35Text `xml:"Lctn,omitempty"`
-
 }
-
 
 func (i *Incoterms1) SetCode(value string) {
 	i.Code = (*Incoterms1Code)(&value)
@@ -26,4 +24,3 @@ func (i *Incoterms1) SetOther(value string) {
 func (i *Incoterms1) SetLocation(value string) {
 	i.Location = (*Max35Text)(&value)
 }
-

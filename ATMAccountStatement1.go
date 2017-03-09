@@ -12,9 +12,7 @@ type ATMAccountStatement1 struct {
 
 	// Statement information.
 	AccountStatement []*ATMAccountStatement2 `xml:"AcctStmt,omitempty"`
-
 }
-
 
 func (a *ATMAccountStatement1) AddAccountIdentifier() *AccountIdentification31Choice {
 	a.AccountIdentifier = new(AccountIdentification31Choice)
@@ -26,8 +24,7 @@ func (a *ATMAccountStatement1) SetAccountName(value string) {
 }
 
 func (a *ATMAccountStatement1) AddAccountStatement() *ATMAccountStatement2 {
-	newValue := new (ATMAccountStatement2)
+	newValue := new(ATMAccountStatement2)
 	a.AccountStatement = append(a.AccountStatement, newValue)
 	return newValue
 }
-

@@ -50,9 +50,7 @@ type PriceValuation3 struct {
 
 	// Factors that give indications about the performance of a fund.
 	PerformanceDetails *PerformanceFactors1 `xml:"PrfrmncDtls,omitempty"`
-
 }
-
 
 func (p *PriceValuation3) SetIdentification(value string) {
 	p.Identification = (*Max35Text)(&value)
@@ -114,13 +112,13 @@ func (p *PriceValuation3) SetSuspendedIndicator(value string) {
 }
 
 func (p *PriceValuation3) AddPriceDetails() *UnitPrice15 {
-	newValue := new (UnitPrice15)
+	newValue := new(UnitPrice15)
 	p.PriceDetails = append(p.PriceDetails, newValue)
 	return newValue
 }
 
 func (p *PriceValuation3) AddValuationStatistics() *ValuationStatistics3 {
-	newValue := new (ValuationStatistics3)
+	newValue := new(ValuationStatistics3)
 	p.ValuationStatistics = append(p.ValuationStatistics, newValue)
 	return newValue
 }
@@ -129,4 +127,3 @@ func (p *PriceValuation3) AddPerformanceDetails() *PerformanceFactors1 {
 	p.PerformanceDetails = new(PerformanceFactors1)
 	return p.PerformanceDetails
 }
-

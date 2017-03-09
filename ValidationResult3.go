@@ -14,9 +14,7 @@ type ValidationResult3 struct {
 
 	// Description of the elements that violated the rule.
 	Element []*ElementIdentification3 `xml:"Elmt,omitempty"`
-
 }
-
 
 func (v *ValidationResult3) SetSequenceNumber(value string) {
 	v.SequenceNumber = (*Number)(&value)
@@ -31,8 +29,7 @@ func (v *ValidationResult3) SetRuleDescription(value string) {
 }
 
 func (v *ValidationResult3) AddElement() *ElementIdentification3 {
-	newValue := new (ElementIdentification3)
+	newValue := new(ElementIdentification3)
 	v.Element = append(v.Element, newValue)
 	return newValue
 }
-

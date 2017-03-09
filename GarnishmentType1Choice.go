@@ -12,9 +12,7 @@ type GarnishmentType1Choice struct {
 
 	// Proprietary identification of the type of garnishment.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (g *GarnishmentType1Choice) SetCode(value string) {
 	g.Code = (*ExternalGarnishmentType1Code)(&value)
@@ -23,4 +21,3 @@ func (g *GarnishmentType1Choice) SetCode(value string) {
 func (g *GarnishmentType1Choice) SetProprietary(value string) {
 	g.Proprietary = (*Max35Text)(&value)
 }
-

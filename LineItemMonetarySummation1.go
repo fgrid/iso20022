@@ -20,9 +20,7 @@ type LineItemMonetarySummation1 struct {
 
 	// Monetary value of an amount being reported for information in this line item monetary summation.
 	InformationAmount []*CurrencyAndAmount `xml:"InfAmt,omitempty"`
-
 }
-
 
 func (l *LineItemMonetarySummation1) AddLineTotalAmount(value, currency string) {
 	l.LineTotalAmount = append(l.LineTotalAmount, NewCurrencyAndAmount(value, currency))
@@ -47,4 +45,3 @@ func (l *LineItemMonetarySummation1) AddTaxBasisTotalAmount(value, currency stri
 func (l *LineItemMonetarySummation1) AddInformationAmount(value, currency string) {
 	l.InformationAmount = append(l.InformationAmount, NewCurrencyAndAmount(value, currency))
 }
-

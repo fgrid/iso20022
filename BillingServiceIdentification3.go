@@ -21,9 +21,7 @@ type BillingServiceIdentification3 struct {
 
 	// Type used to classify or organise different services by common characteristics.
 	ServiceType *Max12Text `xml:"SvcTp,omitempty"`
-
 }
-
 
 func (b *BillingServiceIdentification3) SetIdentification(value string) {
 	b.Identification = (*Max35Text)(&value)
@@ -51,4 +49,3 @@ func (b *BillingServiceIdentification3) AddBankTransactionCode() *BankTransactio
 func (b *BillingServiceIdentification3) SetServiceType(value string) {
 	b.ServiceType = (*Max12Text)(&value)
 }
-

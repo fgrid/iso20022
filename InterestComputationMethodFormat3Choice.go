@@ -8,9 +8,7 @@ type InterestComputationMethodFormat3Choice struct {
 
 	// Proprietary identification of the format of interest computation method.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (i *InterestComputationMethodFormat3Choice) SetCode(value string) {
 	i.Code = (*InterestComputationMethod2Code)(&value)
@@ -20,4 +18,3 @@ func (i *InterestComputationMethodFormat3Choice) AddProprietary() *GenericIdenti
 	i.Proprietary = new(GenericIdentification38)
 	return i.Proprietary
 }
-

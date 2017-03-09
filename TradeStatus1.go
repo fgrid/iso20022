@@ -23,9 +23,7 @@ type TradeStatus1 struct {
 
 	// Identifies the party which assigned a status to a treasury trade.
 	StatusOriginator *Max35Text `xml:"StsOrgtr,omitempty"`
-
 }
-
 
 func (t *TradeStatus1) SetAllegedTrade(value string) {
 	t.AllegedTrade = (*YesNoIndicator)(&value)
@@ -54,4 +52,3 @@ func (t *TradeStatus1) SetStatusTime(value string) {
 func (t *TradeStatus1) SetStatusOriginator(value string) {
 	t.StatusOriginator = (*Max35Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type BillingTaxIdentification1 struct {
 
 	// Specifies financial institution's contact details for the tax region. This contact works for the financial institution, not the tax region.
 	TaxContact *ContactDetails3 `xml:"TaxCtct,omitempty"`
-
 }
-
 
 func (b *BillingTaxIdentification1) SetVATRegistrationNumber(value string) {
 	b.VATRegistrationNumber = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (b *BillingTaxIdentification1) AddTaxContact() *ContactDetails3 {
 	b.TaxContact = new(ContactDetails3)
 	return b.TaxContact
 }
-

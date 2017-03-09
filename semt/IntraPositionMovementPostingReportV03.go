@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.016.001.03 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:semt.016.001.03 Document"`
 	Message *IntraPositionMovementPostingReportV03 `xml:"IntraPosMvmntPstngRpt"`
 }
 
@@ -46,9 +46,7 @@ type IntraPositionMovementPostingReportV03 struct {
 
 	// Reporting per financial instrument.
 	FinancialInstrument []*iso20022.FinancialInstrumentDetails10 `xml:"FinInstrm,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementPostingReportV03) AddPagination() *iso20022.Pagination {
 	i.Pagination = new(iso20022.Pagination)
@@ -71,8 +69,7 @@ func (i *IntraPositionMovementPostingReportV03) AddSafekeepingAccount() *iso2002
 }
 
 func (i *IntraPositionMovementPostingReportV03) AddFinancialInstrument() *iso20022.FinancialInstrumentDetails10 {
-	newValue := new (iso20022.FinancialInstrumentDetails10)
+	newValue := new(iso20022.FinancialInstrumentDetails10)
 	i.FinancialInstrument = append(i.FinancialInstrument, newValue)
 	return newValue
 }
-

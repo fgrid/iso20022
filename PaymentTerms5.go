@@ -8,9 +8,7 @@ type PaymentTerms5 struct {
 
 	// Specifies if it is a fixed amount or a percentage.
 	AmountOrPercentage *AmountOrPercentage2Choice `xml:"AmtOrPctg"`
-
 }
-
 
 func (p *PaymentTerms5) AddPaymentTerms() *PaymentCodeOrOther2Choice {
 	p.PaymentTerms = new(PaymentCodeOrOther2Choice)
@@ -21,4 +19,3 @@ func (p *PaymentTerms5) AddAmountOrPercentage() *AmountOrPercentage2Choice {
 	p.AmountOrPercentage = new(AmountOrPercentage2Choice)
 	return p.AmountOrPercentage
 }
-

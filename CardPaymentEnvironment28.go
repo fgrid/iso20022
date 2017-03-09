@@ -17,9 +17,7 @@ type CardPaymentEnvironment28 struct {
 
 	// Payment card performing the transaction.
 	PlainCardData *PlainCardData3 `xml:"PlainCardData,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment28) AddAcquirerIdentification() *GenericIdentification32 {
 	c.AcquirerIdentification = new(GenericIdentification32)
@@ -45,4 +43,3 @@ func (c *CardPaymentEnvironment28) AddPlainCardData() *PlainCardData3 {
 	c.PlainCardData = new(PlainCardData3)
 	return c.PlainCardData
 }
-

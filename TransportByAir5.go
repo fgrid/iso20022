@@ -20,18 +20,16 @@ type TransportByAir5 struct {
 
 	// Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.
 	CarrierAgentCountry *CountryCode `xml:"CrrierAgtCtry,omitempty"`
-
 }
 
-
 func (t *TransportByAir5) AddDepartureAirport() *AirportName1Choice {
-	newValue := new (AirportName1Choice)
+	newValue := new(AirportName1Choice)
 	t.DepartureAirport = append(t.DepartureAirport, newValue)
 	return newValue
 }
 
 func (t *TransportByAir5) AddDestinationAirport() *AirportName1Choice {
-	newValue := new (AirportName1Choice)
+	newValue := new(AirportName1Choice)
 	t.DestinationAirport = append(t.DestinationAirport, newValue)
 	return newValue
 }
@@ -51,4 +49,3 @@ func (t *TransportByAir5) SetCarrierAgentName(value string) {
 func (t *TransportByAir5) SetCarrierAgentCountry(value string) {
 	t.CarrierAgentCountry = (*CountryCode)(&value)
 }
-

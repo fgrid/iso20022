@@ -11,9 +11,7 @@ type AcceptorCompletionAdvice3 struct {
 
 	// Card payment transaction between an acceptor and an acquirer.
 	Transaction *CardPaymentTransaction25 `xml:"Tx"`
-
 }
-
 
 func (a *AcceptorCompletionAdvice3) AddEnvironment() *CardPaymentEnvironment22 {
 	a.Environment = new(CardPaymentEnvironment22)
@@ -29,4 +27,3 @@ func (a *AcceptorCompletionAdvice3) AddTransaction() *CardPaymentTransaction25 {
 	a.Transaction = new(CardPaymentTransaction25)
 	return a.Transaction
 }
-

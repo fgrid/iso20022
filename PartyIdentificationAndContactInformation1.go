@@ -8,9 +8,7 @@ type PartyIdentificationAndContactInformation1 struct {
 
 	// Information needed to contact a physical person related to the party, such as name, phone number, email address.
 	ContactInformation *ContactIdentification1 `xml:"CtctInf,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndContactInformation1) AddPartyIdentification() *PartyIdentification8 {
 	p.PartyIdentification = new(PartyIdentification8)
@@ -21,4 +19,3 @@ func (p *PartyIdentificationAndContactInformation1) AddContactInformation() *Con
 	p.ContactInformation = new(ContactIdentification1)
 	return p.ContactInformation
 }
-

@@ -20,9 +20,7 @@ type ATMCassette1 struct {
 
 	// Counter per unit value or globally.
 	MediaCounters []*ATMCassetteCounters1 `xml:"MdiaCntrs,omitempty"`
-
 }
-
 
 func (a *ATMCassette1) SetPhysicalIdentification(value string) {
 	a.PhysicalIdentification = (*Max35Text)(&value)
@@ -45,8 +43,7 @@ func (a *ATMCassette1) SetMediaType(value string) {
 }
 
 func (a *ATMCassette1) AddMediaCounters() *ATMCassetteCounters1 {
-	newValue := new (ATMCassetteCounters1)
+	newValue := new(ATMCassetteCounters1)
 	a.MediaCounters = append(a.MediaCounters, newValue)
 	return newValue
 }
-

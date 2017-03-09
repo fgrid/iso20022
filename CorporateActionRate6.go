@@ -14,9 +14,7 @@ type CorporateActionRate6 struct {
 
 	// Quantity of new equities that will be derived by the exercise of a given quantity of intermediate securities.
 	NewSecuritiesToUnderlyingSecurities *RatioFormat4Choice `xml:"NewSctiesToUndrlygScties,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate6) AddAdditionalQuantityForSubscribedResultantSecurities() *RatioFormat3Choice {
 	c.AdditionalQuantityForSubscribedResultantSecurities = new(RatioFormat3Choice)
@@ -37,4 +35,3 @@ func (c *CorporateActionRate6) AddNewSecuritiesToUnderlyingSecurities() *RatioFo
 	c.NewSecuritiesToUnderlyingSecurities = new(RatioFormat4Choice)
 	return c.NewSecuritiesToUnderlyingSecurities
 }
-

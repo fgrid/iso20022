@@ -11,9 +11,7 @@ type AutoExtension1 struct {
 
 	// Details related to the notification of the end of the period for notification of non-extension of the expiry date.
 	NonExtensionNotification []*NonExtension1 `xml:"NonXtnsnNtfctn,omitempty"`
-
 }
-
 
 func (a *AutoExtension1) AddPeriod() *AutoExtend1Choice {
 	a.Period = new(AutoExtend1Choice)
@@ -25,8 +23,7 @@ func (a *AutoExtension1) SetFinalExpiryDate(value string) {
 }
 
 func (a *AutoExtension1) AddNonExtensionNotification() *NonExtension1 {
-	newValue := new (NonExtension1)
+	newValue := new(NonExtension1)
 	a.NonExtensionNotification = append(a.NonExtensionNotification, newValue)
 	return newValue
 }
-

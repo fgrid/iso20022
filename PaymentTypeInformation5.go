@@ -13,12 +13,10 @@ type PaymentTypeInformation5 struct {
 	ClearingChannel *ClearingChannel2Code `xml:"ClrChanl,omitempty"`
 
 	// User community specific instrument required for use within that user community.
-	// 
+	//
 	// Usage : When available, codes provided by local authorities should be used.
 	LocalInstrument *RestrictedProprietaryChoice `xml:"LclInstrm,omitempty"`
-
 }
-
 
 func (p *PaymentTypeInformation5) SetInstructionPriority(value string) {
 	p.InstructionPriority = (*Priority2Code)(&value)
@@ -37,4 +35,3 @@ func (p *PaymentTypeInformation5) AddLocalInstrument() *RestrictedProprietaryCho
 	p.LocalInstrument = new(RestrictedProprietaryChoice)
 	return p.LocalInstrument
 }
-

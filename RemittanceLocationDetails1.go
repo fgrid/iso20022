@@ -11,9 +11,7 @@ type RemittanceLocationDetails1 struct {
 
 	// Postal address to which an agent is to send the remittance information.
 	PostalAddress *NameAndAddress10 `xml:"PstlAdr,omitempty"`
-
 }
-
 
 func (r *RemittanceLocationDetails1) SetMethod(value string) {
 	r.Method = (*RemittanceLocationMethod2Code)(&value)
@@ -27,4 +25,3 @@ func (r *RemittanceLocationDetails1) AddPostalAddress() *NameAndAddress10 {
 	r.PostalAddress = new(NameAndAddress10)
 	return r.PostalAddress
 }
-

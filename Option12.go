@@ -8,9 +8,7 @@ type Option12 struct {
 
 	// Provides the exercise date or notice period for a call/put option.
 	DateOrPeriod *OptionDateOrPeriod1Choice `xml:"DtOrPrd"`
-
 }
-
 
 func (o *Option12) SetType(value string) {
 	o.Type = (*OptionType1Code)(&value)
@@ -20,4 +18,3 @@ func (o *Option12) AddDateOrPeriod() *OptionDateOrPeriod1Choice {
 	o.DateOrPeriod = new(OptionDateOrPeriod1Choice)
 	return o.DateOrPeriod
 }
-

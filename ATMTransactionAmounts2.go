@@ -23,9 +23,7 @@ type ATMTransactionAmounts2 struct {
 
 	// Remaining monthly amount of the customer totals after the withdrawal.
 	MonthlyBalance *DetailedAmount4 `xml:"MnthlyBal,omitempty"`
-
 }
-
 
 func (a *ATMTransactionAmounts2) SetCurrency(value string) {
 	a.Currency = (*ActiveCurrencyCode)(&value)
@@ -57,4 +55,3 @@ func (a *ATMTransactionAmounts2) AddMonthlyBalance() *DetailedAmount4 {
 	a.MonthlyBalance = new(DetailedAmount4)
 	return a.MonthlyBalance
 }
-

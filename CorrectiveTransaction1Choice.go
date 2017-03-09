@@ -8,9 +8,7 @@ type CorrectiveTransaction1Choice struct {
 
 	// Set of elements used to reference the details of the corrective interbank payment transaction.
 	Interbank *CorrectiveInterbankTransaction1 `xml:"IntrBk"`
-
 }
-
 
 func (c *CorrectiveTransaction1Choice) AddInitiation() *CorrectivePaymentInitiation1 {
 	c.Initiation = new(CorrectivePaymentInitiation1)
@@ -21,4 +19,3 @@ func (c *CorrectiveTransaction1Choice) AddInterbank() *CorrectiveInterbankTransa
 	c.Interbank = new(CorrectiveInterbankTransaction1)
 	return c.Interbank
 }
-

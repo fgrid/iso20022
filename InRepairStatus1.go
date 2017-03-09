@@ -11,9 +11,7 @@ type InRepairStatus1 struct {
 
 	// Proprietary identification for a reason of a specific status in the report.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (i *InRepairStatus1) SetNoReason(value string) {
 	i.NoReason = (*NoReasonCode)(&value)
@@ -28,4 +26,3 @@ func (i *InRepairStatus1) AddDataSourceScheme() *GenericIdentification1 {
 	i.DataSourceScheme = new(GenericIdentification1)
 	return i.DataSourceScheme
 }
-

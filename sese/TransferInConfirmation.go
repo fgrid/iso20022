@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.007.001.01 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:sese.007.001.01 Document"`
 	Message *TransferInConfirmation `xml:"sese.007.001.01"`
 }
 
@@ -32,7 +32,7 @@ type TransferInConfirmation struct {
 	// Reference to a linked message that was previously sent.
 	PreviousReference *iso20022.AdditionalReference2 `xml:"PrvsRef,omitempty"`
 
-	// General information related to the transfer of a financial instrument. 
+	// General information related to the transfer of a financial instrument.
 	TransferDetails *iso20022.Transfer4 `xml:"TrfDtls"`
 
 	// Information related to the financial instrument received.
@@ -46,9 +46,7 @@ type TransferInConfirmation struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferInConfirmation) AddRelatedReference() *iso20022.AdditionalReference2 {
 	t.RelatedReference = new(iso20022.AdditionalReference2)
@@ -86,8 +84,7 @@ func (t *TransferInConfirmation) AddSettlementDetails() *iso20022.DeliverInforma
 }
 
 func (t *TransferInConfirmation) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

@@ -20,9 +20,7 @@ type PaymentTerminalParameters2 struct {
 
 	// Others manufacturer configuration parameters of the point of interaction.
 	OtherParameters *Max10000Binary `xml:"OthrParams,omitempty"`
-
 }
-
 
 func (p *PaymentTerminalParameters2) SetVendorIdentification(value string) {
 	p.VendorIdentification = (*Max35Text)(&value)
@@ -42,7 +40,7 @@ func (p *PaymentTerminalParameters2) AddTimeZoneLine(value string) {
 }
 
 func (p *PaymentTerminalParameters2) AddLocalDateTime() *LocalDateTime1 {
-	newValue := new (LocalDateTime1)
+	newValue := new(LocalDateTime1)
 	p.LocalDateTime = append(p.LocalDateTime, newValue)
 	return newValue
 }
@@ -50,4 +48,3 @@ func (p *PaymentTerminalParameters2) AddLocalDateTime() *LocalDateTime1 {
 func (p *PaymentTerminalParameters2) SetOtherParameters(value string) {
 	p.OtherParameters = (*Max10000Binary)(&value)
 }
-

@@ -8,19 +8,16 @@ type Report5 struct {
 
 	// Provides information about the settlement obligation details.
 	SettlementObligationDetails []*SettlementObligation8 `xml:"SttlmOblgtnDtls"`
-
 }
 
-
 func (r *Report5) AddNonClearingMember() *PartyIdentificationAndAccount31 {
-	newValue := new (PartyIdentificationAndAccount31)
+	newValue := new(PartyIdentificationAndAccount31)
 	r.NonClearingMember = append(r.NonClearingMember, newValue)
 	return newValue
 }
 
 func (r *Report5) AddSettlementObligationDetails() *SettlementObligation8 {
-	newValue := new (SettlementObligation8)
+	newValue := new(SettlementObligation8)
 	r.SettlementObligationDetails = append(r.SettlementObligationDetails, newValue)
 	return newValue
 }
-

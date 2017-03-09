@@ -14,9 +14,7 @@ type DetailedAmount10 struct {
 
 	// Short description of the amount to provide to the cardholder.
 	Label *Max35Text `xml:"Labl,omitempty"`
-
 }
-
 
 func (d *DetailedAmount10) SetType(value string) {
 	d.Type = (*TypeOfAmount6Code)(&value)
@@ -33,4 +31,3 @@ func (d *DetailedAmount10) SetAmount(value, currency string) {
 func (d *DetailedAmount10) SetLabel(value string) {
 	d.Label = (*Max35Text)(&value)
 }
-

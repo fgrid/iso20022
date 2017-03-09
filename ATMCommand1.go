@@ -17,9 +17,7 @@ type ATMCommand1 struct {
 
 	// Specific parameters attached to the command.
 	CommandParameters *ATMCommandParameters1Choice `xml:"CmdParams,omitempty"`
-
 }
-
 
 func (a *ATMCommand1) SetType(value string) {
 	a.Type = (*ATMCommand1Code)(&value)
@@ -42,4 +40,3 @@ func (a *ATMCommand1) AddCommandParameters() *ATMCommandParameters1Choice {
 	a.CommandParameters = new(ATMCommandParameters1Choice)
 	return a.CommandParameters
 }
-

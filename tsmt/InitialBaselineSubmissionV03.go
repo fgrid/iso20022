@@ -7,7 +7,7 @@ import (
 )
 
 type Document01900103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.019.001.03 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.019.001.03 Document"`
 	Message *InitialBaselineSubmissionV03 `xml:"InitlBaselnSubmissn"`
 }
 
@@ -32,13 +32,13 @@ type InitialBaselineSubmissionV03 struct {
 	// Reference to the transaction for the requesting financial institution.
 	SubmitterTransactionReference *iso20022.SimpleIdentificationInformation `xml:"SubmitrTxRef"`
 
-	// Specifies the instruction requested by the submitter by means of a code. 
+	// Specifies the instruction requested by the submitter by means of a code.
 	Instruction *iso20022.InstructionType1 `xml:"Instr"`
 
 	// Specifies the commercial details of the underlying transaction.
 	Baseline *iso20022.Baseline3 `xml:"Baseln"`
 
-	// Person to be contacted in the organisation of the buyer. 
+	// Person to be contacted in the organisation of the buyer.
 	BuyerContactPerson []*iso20022.ContactIdentification1 `xml:"BuyrCtctPrsn,omitempty"`
 
 	// Person to be contacted in the organisation of the seller.
@@ -52,9 +52,7 @@ type InitialBaselineSubmissionV03 struct {
 
 	// Person to be contacted in another bank than seller or buyer's bank.
 	OtherBankContactPerson []*iso20022.ContactIdentification3 `xml:"OthrBkCtctPrsn,omitempty"`
-
 }
-
 
 func (i *InitialBaselineSubmissionV03) AddSubmissionIdentification() *iso20022.MessageIdentification1 {
 	i.SubmissionIdentification = new(iso20022.MessageIdentification1)
@@ -77,32 +75,31 @@ func (i *InitialBaselineSubmissionV03) AddBaseline() *iso20022.Baseline3 {
 }
 
 func (i *InitialBaselineSubmissionV03) AddBuyerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	i.BuyerContactPerson = append(i.BuyerContactPerson, newValue)
 	return newValue
 }
 
 func (i *InitialBaselineSubmissionV03) AddSellerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	i.SellerContactPerson = append(i.SellerContactPerson, newValue)
 	return newValue
 }
 
 func (i *InitialBaselineSubmissionV03) AddBuyerBankContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	i.BuyerBankContactPerson = append(i.BuyerBankContactPerson, newValue)
 	return newValue
 }
 
 func (i *InitialBaselineSubmissionV03) AddSellerBankContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	i.SellerBankContactPerson = append(i.SellerBankContactPerson, newValue)
 	return newValue
 }
 
 func (i *InitialBaselineSubmissionV03) AddOtherBankContactPerson() *iso20022.ContactIdentification3 {
-	newValue := new (iso20022.ContactIdentification3)
+	newValue := new(iso20022.ContactIdentification3)
 	i.OtherBankContactPerson = append(i.OtherBankContactPerson, newValue)
 	return newValue
 }
-

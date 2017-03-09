@@ -20,9 +20,7 @@ type OtherCertificateDataSet2 struct {
 
 	// Additional and important information that could not be captured by structured fields.
 	CertificateInformation []*Max350Text `xml:"CertInf,omitempty"`
-
 }
-
 
 func (o *OtherCertificateDataSet2) AddDataSetIdentification() *DocumentIdentification1 {
 	o.DataSetIdentification = new(DocumentIdentification1)
@@ -49,4 +47,3 @@ func (o *OtherCertificateDataSet2) AddIssuer() *PartyIdentification26 {
 func (o *OtherCertificateDataSet2) AddCertificateInformation(value string) {
 	o.CertificateInformation = append(o.CertificateInformation, (*Max350Text)(&value))
 }
-

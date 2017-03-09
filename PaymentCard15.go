@@ -17,9 +17,7 @@ type PaymentCard15 struct {
 
 	// Name of card product.
 	CardProductName *Max35Text `xml:"CardPdctNm,omitempty"`
-
 }
-
 
 func (p *PaymentCard15) AddProtectedCardData() *ContentInformationType10 {
 	p.ProtectedCardData = new(ContentInformationType10)
@@ -42,4 +40,3 @@ func (p *PaymentCard15) SetCardProductType(value string) {
 func (p *PaymentCard15) SetCardProductName(value string) {
 	p.CardProductName = (*Max35Text)(&value)
 }
-

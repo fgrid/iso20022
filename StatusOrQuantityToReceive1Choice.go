@@ -8,9 +8,7 @@ type StatusOrQuantityToReceive1Choice struct {
 
 	// Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.
 	QuantityToReceive *Quantity6Choice `xml:"QtyToRcv"`
-
 }
-
 
 func (s *StatusOrQuantityToReceive1Choice) AddStatusQuantity() *Quantity6Choice {
 	s.StatusQuantity = new(Quantity6Choice)
@@ -21,4 +19,3 @@ func (s *StatusOrQuantityToReceive1Choice) AddQuantityToReceive() *Quantity6Choi
 	s.QuantityToReceive = new(Quantity6Choice)
 	return s.QuantityToReceive
 }
-

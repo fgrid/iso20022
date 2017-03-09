@@ -11,9 +11,7 @@ type ProcessTiming4 struct {
 
 	// Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.
 	Period *Max9NumericText `xml:"Prd,omitempty"`
-
 }
-
 
 func (p *ProcessTiming4) SetStartTime(value string) {
 	p.StartTime = (*ISODateTime)(&value)
@@ -26,4 +24,3 @@ func (p *ProcessTiming4) SetEndTime(value string) {
 func (p *ProcessTiming4) SetPeriod(value string) {
 	p.Period = (*Max9NumericText)(&value)
 }
-

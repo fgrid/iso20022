@@ -8,9 +8,7 @@ type FrequencyCodeAndDSSCodeChoice struct {
 
 	// Frequency expressed as a data source scheme and a code used within the data source scheme.
 	FrequencyAsDSS *GenericIdentification7 `xml:"FrqcyAsDSS"`
-
 }
-
 
 func (f *FrequencyCodeAndDSSCodeChoice) SetFrequencyAsCode(value string) {
 	f.FrequencyAsCode = (*Frequency1Code)(&value)
@@ -20,4 +18,3 @@ func (f *FrequencyCodeAndDSSCodeChoice) AddFrequencyAsDSS() *GenericIdentificati
 	f.FrequencyAsDSS = new(GenericIdentification7)
 	return f.FrequencyAsDSS
 }
-

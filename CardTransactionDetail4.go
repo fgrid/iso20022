@@ -25,9 +25,7 @@ type CardTransactionDetail4 struct {
 	// Data related to an integrated circuit card application.
 	// It corresponds to ISO 8583, field number 55 for the versions 93 and 2003.
 	ICCRelatedData *Max10000Binary `xml:"ICCRltdData,omitempty"`
-
 }
-
 
 func (c *CardTransactionDetail4) AddTransactionAmounts() *CardTransactionAmount4 {
 	c.TransactionAmounts = new(CardTransactionAmount4)
@@ -35,25 +33,25 @@ func (c *CardTransactionDetail4) AddTransactionAmounts() *CardTransactionAmount4
 }
 
 func (c *CardTransactionDetail4) AddTransactionFees() *DetailedAmount11 {
-	newValue := new (DetailedAmount11)
+	newValue := new(DetailedAmount11)
 	c.TransactionFees = append(c.TransactionFees, newValue)
 	return newValue
 }
 
 func (c *CardTransactionDetail4) AddAdditionalAmounts() *DetailedAmount10 {
-	newValue := new (DetailedAmount10)
+	newValue := new(DetailedAmount10)
 	c.AdditionalAmounts = append(c.AdditionalAmounts, newValue)
 	return newValue
 }
 
 func (c *CardTransactionDetail4) AddAccountAndBalance() *CardAccount2 {
-	newValue := new (CardAccount2)
+	newValue := new(CardAccount2)
 	c.AccountAndBalance = append(c.AccountAndBalance, newValue)
 	return newValue
 }
 
 func (c *CardTransactionDetail4) AddTransactionVerificationResult() *TransactionVerificationResult4 {
-	newValue := new (TransactionVerificationResult4)
+	newValue := new(TransactionVerificationResult4)
 	c.TransactionVerificationResult = append(c.TransactionVerificationResult, newValue)
 	return newValue
 }
@@ -65,4 +63,3 @@ func (c *CardTransactionDetail4) SetValidityDate(value string) {
 func (c *CardTransactionDetail4) SetICCRelatedData(value string) {
 	c.ICCRelatedData = (*Max10000Binary)(&value)
 }
-

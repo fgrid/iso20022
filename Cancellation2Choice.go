@@ -8,9 +8,7 @@ type Cancellation2Choice struct {
 
 	// Details of the transfer in request to cancel.
 	TransferInDetails *TransferIn7 `xml:"TrfInDtls"`
-
 }
-
 
 func (c *Cancellation2Choice) AddReference() *TransferReference1 {
 	c.Reference = new(TransferReference1)
@@ -21,4 +19,3 @@ func (c *Cancellation2Choice) AddTransferInDetails() *TransferIn7 {
 	c.TransferInDetails = new(TransferIn7)
 	return c.TransferInDetails
 }
-

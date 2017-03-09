@@ -8,9 +8,7 @@ type BlockedReason1Choice struct {
 
 	// Reason expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (b *BlockedReason1Choice) SetReason(value string) {
 	b.Reason = (*BlockedReason1Code)(&value)
@@ -20,4 +18,3 @@ func (b *BlockedReason1Choice) AddProprietary() *GenericIdentification47 {
 	b.Proprietary = new(GenericIdentification47)
 	return b.Proprietary
 }
-

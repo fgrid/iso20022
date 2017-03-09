@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.014.001.04 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.014.001.04 Document"`
 	Message *IntraPositionMovementStatusAdviceV04 `xml:"IntraPosMvmntStsAdvc"`
 }
 
@@ -22,7 +22,7 @@ func (d *Document01400104) AddMessage() *IntraPositionMovementStatusAdviceV04 {
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -45,9 +45,7 @@ type IntraPositionMovementStatusAdviceV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementStatusAdviceV04) AddTransactionIdentification() *iso20022.TransactionIdentifications29 {
 	i.TransactionIdentification = new(iso20022.TransactionIdentifications29)
@@ -70,8 +68,7 @@ func (i *IntraPositionMovementStatusAdviceV04) AddTransactionDetails() *iso20022
 }
 
 func (i *IntraPositionMovementStatusAdviceV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

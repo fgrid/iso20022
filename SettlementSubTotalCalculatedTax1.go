@@ -20,9 +20,7 @@ type SettlementSubTotalCalculatedTax1 struct {
 
 	// Reason for a tax exemption.
 	ExemptionReason *TaxExemptionReason1 `xml:"XmptnRsn,omitempty"`
-
 }
-
 
 func (s *SettlementSubTotalCalculatedTax1) SetTypeCode(value string) {
 	s.TypeCode = (*Max4Text)(&value)
@@ -48,4 +46,3 @@ func (s *SettlementSubTotalCalculatedTax1) AddExemptionReason() *TaxExemptionRea
 	s.ExemptionReason = new(TaxExemptionReason1)
 	return s.ExemptionReason
 }
-

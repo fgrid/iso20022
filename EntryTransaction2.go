@@ -7,12 +7,12 @@ type EntryTransaction2 struct {
 	References *TransactionReferences2 `xml:"Refs,omitempty"`
 
 	// Set of elements providing detailed information on the original amount.
-	// 
+	//
 	// Usage: This component (on transaction level) should be used in case booking is for a single transaction and the original amount is different from the entry amount. It can also be used in case individual original amounts are provided in case of a batch or aggregate booking.
 	AmountDetails *AmountAndCurrencyExchange3 `xml:"AmtDtls,omitempty"`
 
-	// Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest. 
-	// 
+	// Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest.
+	//
 	// Usage: This type of information is used in the US and is linked to particular instruments such as cheques.
 	// Example: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability2 `xml:"Avlbty,omitempty"`
@@ -21,12 +21,12 @@ type EntryTransaction2 struct {
 	BankTransactionCode *BankTransactionCodeStructure4 `xml:"BkTxCd,omitempty"`
 
 	// Provides information on the charges included in the entry amount.
-	// 
+	//
 	// Usage: This component (on transaction level) can be used in case the booking is for a single transaction, and charges are included in the entry amount. It can also be used in case individual charge amounts are applied to individual transactions in case of a batch or aggregate amount booking.
 	Charges []*ChargesInformation6 `xml:"Chrgs,omitempty"`
 
 	// Set of elements used to provide details of the interest amount included in the entry amount.
-	// 
+	//
 	// Usage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount.  It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking.
 	Interest []*TransactionInterest2 `xml:"Intrst,omitempty"`
 
@@ -72,9 +72,7 @@ type EntryTransaction2 struct {
 
 	// Further details of the transaction.
 	AdditionalTransactionInformation *Max500Text `xml:"AddtlTxInf,omitempty"`
-
 }
-
 
 func (e *EntryTransaction2) AddReferences() *TransactionReferences2 {
 	e.References = new(TransactionReferences2)
@@ -87,7 +85,7 @@ func (e *EntryTransaction2) AddAmountDetails() *AmountAndCurrencyExchange3 {
 }
 
 func (e *EntryTransaction2) AddAvailability() *CashBalanceAvailability2 {
-	newValue := new (CashBalanceAvailability2)
+	newValue := new(CashBalanceAvailability2)
 	e.Availability = append(e.Availability, newValue)
 	return newValue
 }
@@ -98,13 +96,13 @@ func (e *EntryTransaction2) AddBankTransactionCode() *BankTransactionCodeStructu
 }
 
 func (e *EntryTransaction2) AddCharges() *ChargesInformation6 {
-	newValue := new (ChargesInformation6)
+	newValue := new(ChargesInformation6)
 	e.Charges = append(e.Charges, newValue)
 	return newValue
 }
 
 func (e *EntryTransaction2) AddInterest() *TransactionInterest2 {
-	newValue := new (TransactionInterest2)
+	newValue := new(TransactionInterest2)
 	e.Interest = append(e.Interest, newValue)
 	return newValue
 }
@@ -125,7 +123,7 @@ func (e *EntryTransaction2) AddPurpose() *Purpose2Choice {
 }
 
 func (e *EntryTransaction2) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	e.RelatedRemittanceInformation = append(e.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -146,7 +144,7 @@ func (e *EntryTransaction2) AddRelatedPrice() *TransactionPrice2Choice {
 }
 
 func (e *EntryTransaction2) AddRelatedQuantities() *TransactionQuantities1Choice {
-	newValue := new (TransactionQuantities1Choice)
+	newValue := new(TransactionQuantities1Choice)
 	e.RelatedQuantities = append(e.RelatedQuantities, newValue)
 	return newValue
 }
@@ -179,4 +177,3 @@ func (e *EntryTransaction2) AddSafekeepingAccount() *CashAccount16 {
 func (e *EntryTransaction2) SetAdditionalTransactionInformation(value string) {
 	e.AdditionalTransactionInformation = (*Max500Text)(&value)
 }
-

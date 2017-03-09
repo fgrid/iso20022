@@ -8,9 +8,7 @@ type CreditorReferenceType1Choice struct {
 
 	// Creditor reference type, in a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *CreditorReferenceType1Choice) SetCode(value string) {
 	c.Code = (*DocumentType3Code)(&value)
@@ -19,4 +17,3 @@ func (c *CreditorReferenceType1Choice) SetCode(value string) {
 func (c *CreditorReferenceType1Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

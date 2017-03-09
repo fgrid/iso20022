@@ -8,9 +8,7 @@ type ElectionAdviceStatus1Choice struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *CorporateActionInstructionRejectionStatus1 `xml:"RjctdSts"`
-
 }
-
 
 func (e *ElectionAdviceStatus1Choice) AddProcessedStatus() *CorporateActionInstructionProcessingStatus1 {
 	e.ProcessedStatus = new(CorporateActionInstructionProcessingStatus1)
@@ -21,4 +19,3 @@ func (e *ElectionAdviceStatus1Choice) AddRejectedStatus() *CorporateActionInstru
 	e.RejectedStatus = new(CorporateActionInstructionRejectionStatus1)
 	return e.RejectedStatus
 }
-

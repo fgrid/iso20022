@@ -17,9 +17,7 @@ type CorporateActionSecuritiesMovement2 struct {
 
 	// Provides information about the account which is debited/credited as a result of the movement.
 	AccountDetails []*SecuritiesAccount9 `xml:"AcctDtls"`
-
 }
-
 
 func (c *CorporateActionSecuritiesMovement2) AddSecurityIdentification() *SecurityIdentification7 {
 	c.SecurityIdentification = new(SecurityIdentification7)
@@ -41,8 +39,7 @@ func (c *CorporateActionSecuritiesMovement2) AddPostingQuantity() *UnitOrFaceAmo
 }
 
 func (c *CorporateActionSecuritiesMovement2) AddAccountDetails() *SecuritiesAccount9 {
-	newValue := new (SecuritiesAccount9)
+	newValue := new(SecuritiesAccount9)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
-

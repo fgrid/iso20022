@@ -14,9 +14,7 @@ type OriginalGroupInformation22 struct {
 
 	// Set of elements used to provide detailed information on the reversal reason.
 	ReversalReasonInformation []*ReversalReasonInformation6 `xml:"RvslRsnInf,omitempty"`
-
 }
-
 
 func (o *OriginalGroupInformation22) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (o *OriginalGroupInformation22) SetOriginalCreationDateTime(value string) {
 }
 
 func (o *OriginalGroupInformation22) AddReversalReasonInformation() *ReversalReasonInformation6 {
-	newValue := new (ReversalReasonInformation6)
+	newValue := new(ReversalReasonInformation6)
 	o.ReversalReasonInformation = append(o.ReversalReasonInformation, newValue)
 	return newValue
 }
-

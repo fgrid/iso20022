@@ -11,9 +11,7 @@ type DeliveringPartiesAndAccount3 struct {
 
 	// Party that delivers securities to the receiving agent at the place of settlement, eg, central securities depository.
 	DeliveringAgentDetails *PartyIdentificationAndAccount3 `xml:"DlvrgAgtDtls"`
-
 }
-
 
 func (d *DeliveringPartiesAndAccount3) AddDeliverersCustodianDetails() *PartyIdentificationAndAccount3 {
 	d.DeliverersCustodianDetails = new(PartyIdentificationAndAccount3)
@@ -29,4 +27,3 @@ func (d *DeliveringPartiesAndAccount3) AddDeliveringAgentDetails() *PartyIdentif
 	d.DeliveringAgentDetails = new(PartyIdentificationAndAccount3)
 	return d.DeliveringAgentDetails
 }
-

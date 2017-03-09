@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.004.001.02 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:seev.004.001.02 Document"`
 	Message *MeetingInstructionV02 `xml:"MtgInstr"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document00400102) AddMessage() *MeetingInstructionV02 {
 // Once the message is sent, it cannot be modified. It must be cancelled by a MeetingInstructionCancellationRequest. Only after receipt of a confirmed cancelled status via the MeetingInstructionStatus message, a new MeetingInstruction message can be sent.
 type MeetingInstructionV02 struct {
 
-	// Identifies the meeting instruction message. 
+	// Identifies the meeting instruction message.
 	MeetingInstructionIdentification *iso20022.MessageIdentification1 `xml:"MtgInstrId"`
 
 	// Series of elements which allow to identify a meeting.
@@ -38,9 +38,7 @@ type MeetingInstructionV02 struct {
 
 	// Identifies the position of the instructing party and the action that they want to take.
 	Instruction []*iso20022.Instruction1 `xml:"Instr"`
-
 }
-
 
 func (m *MeetingInstructionV02) AddMeetingInstructionIdentification() *iso20022.MessageIdentification1 {
 	m.MeetingInstructionIdentification = new(iso20022.MessageIdentification1)
@@ -63,8 +61,7 @@ func (m *MeetingInstructionV02) AddSecurityIdentification() *iso20022.SecurityId
 }
 
 func (m *MeetingInstructionV02) AddInstruction() *iso20022.Instruction1 {
-	newValue := new (iso20022.Instruction1)
+	newValue := new(iso20022.Instruction1)
 	m.Instruction = append(m.Instruction, newValue)
 	return newValue
 }
-

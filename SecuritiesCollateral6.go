@@ -21,7 +21,7 @@ type SecuritiesCollateral6 struct {
 	// Quantity of securities collateral.
 	Quantity *FinancialInstrumentQuantity1Choice `xml:"Qty"`
 
-	// Quantity blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral. 
+	// Quantity blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral.
 	BlockedQuantity *FinancialInstrumentQuantity1Choice `xml:"BlckdQty,omitempty"`
 
 	// Indicates the price of the security.
@@ -44,9 +44,7 @@ type SecuritiesCollateral6 struct {
 
 	// Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
 	SafekeepingPlace *SafekeepingPlaceFormat10Choice `xml:"SfkpgPlc"`
-
 }
-
 
 func (s *SecuritiesCollateral6) SetAssetNumber(value string) {
 	s.AssetNumber = (*Max35Text)(&value)
@@ -111,4 +109,3 @@ func (s *SecuritiesCollateral6) AddSafekeepingPlace() *SafekeepingPlaceFormat10C
 	s.SafekeepingPlace = new(SafekeepingPlaceFormat10Choice)
 	return s.SafekeepingPlace
 }
-

@@ -23,12 +23,10 @@ type TradeProduct1 struct {
 
 	// Unique global serial identifier for this product instance.
 	GlobalSerialIdentifier []*Max35Text `xml:"GblSrlIdr,omitempty"`
-
 }
 
-
 func (t *TradeProduct1) AddIdentification() *ProductIdentifier2Choice {
-	newValue := new (ProductIdentifier2Choice)
+	newValue := new(ProductIdentifier2Choice)
 	t.Identification = append(t.Identification, newValue)
 	return newValue
 }
@@ -42,19 +40,19 @@ func (t *TradeProduct1) SetDescription(value string) {
 }
 
 func (t *TradeProduct1) AddCountryOfOrigin() *CountryCodeAndName1 {
-	newValue := new (CountryCodeAndName1)
+	newValue := new(CountryCodeAndName1)
 	t.CountryOfOrigin = append(t.CountryOfOrigin, newValue)
 	return newValue
 }
 
 func (t *TradeProduct1) AddProductCharacteristics() *ProductCharacteristics2 {
-	newValue := new (ProductCharacteristics2)
+	newValue := new(ProductCharacteristics2)
 	t.ProductCharacteristics = append(t.ProductCharacteristics, newValue)
 	return newValue
 }
 
 func (t *TradeProduct1) AddProductCategory() *ProductCategory1Choice {
-	newValue := new (ProductCategory1Choice)
+	newValue := new(ProductCategory1Choice)
 	t.ProductCategory = append(t.ProductCategory, newValue)
 	return newValue
 }
@@ -62,4 +60,3 @@ func (t *TradeProduct1) AddProductCategory() *ProductCategory1Choice {
 func (t *TradeProduct1) AddGlobalSerialIdentifier(value string) {
 	t.GlobalSerialIdentifier = append(t.GlobalSerialIdentifier, (*Max35Text)(&value))
 }
-

@@ -20,9 +20,7 @@ type FinancialInstrument26 struct {
 
 	// Account held in the name of a party that is not the name of the beneficial owner of the shares.
 	TransfereeAccount *Account6 `xml:"TrfeeAcct,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument26) AddIdentification() *SecurityIdentification3Choice {
 	f.Identification = new(SecurityIdentification3Choice)
@@ -50,4 +48,3 @@ func (f *FinancialInstrument26) AddTransfereeAccount() *Account6 {
 	f.TransfereeAccount = new(Account6)
 	return f.TransfereeAccount
 }
-

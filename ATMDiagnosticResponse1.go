@@ -8,9 +8,7 @@ type ATMDiagnosticResponse1 struct {
 
 	// Maintenance command to perform on the ATM.
 	Command []*ATMCommand1 `xml:"Cmd,omitempty"`
-
 }
-
 
 func (a *ATMDiagnosticResponse1) AddEnvironment() *ATMEnvironment6 {
 	a.Environment = new(ATMEnvironment6)
@@ -18,8 +16,7 @@ func (a *ATMDiagnosticResponse1) AddEnvironment() *ATMEnvironment6 {
 }
 
 func (a *ATMDiagnosticResponse1) AddCommand() *ATMCommand1 {
-	newValue := new (ATMCommand1)
+	newValue := new(ATMCommand1)
 	a.Command = append(a.Command, newValue)
 	return newValue
 }
-

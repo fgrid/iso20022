@@ -8,9 +8,7 @@ type RemittanceInformation3Choice struct {
 
 	// Information in structured form, that is supplied to enable the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an account receivable system.
 	Structured *StructuredRemittanceInformation2 `xml:"Strd"`
-
 }
-
 
 func (r *RemittanceInformation3Choice) SetUnstructured(value string) {
 	r.Unstructured = (*Max140Text)(&value)
@@ -20,4 +18,3 @@ func (r *RemittanceInformation3Choice) AddStructured() *StructuredRemittanceInfo
 	r.Structured = new(StructuredRemittanceInformation2)
 	return r.Structured
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.002.001.03 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:reda.002.001.03 Document"`
 	Message *PriceReportCancellationV03 `xml:"PricRptCxlV03"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document00200103) AddMessage() *PriceReportCancellationV03 {
 // This message must contain the reference of the message to be cancelled.This message may also contain details of the message to be cancelled, but this is not recommended.
 type PriceReportCancellationV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -38,9 +38,7 @@ type PriceReportCancellationV03 struct {
 
 	// Common information related to all the price reports to be cancelled.
 	PriceReportToBeCancelled *iso20022.PriceReport2 `xml:"PricRptToBeCanc,omitempty"`
-
 }
-
 
 func (p *PriceReportCancellationV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	p.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -66,4 +64,3 @@ func (p *PriceReportCancellationV03) AddPriceReportToBeCancelled() *iso20022.Pri
 	p.PriceReportToBeCancelled = new(iso20022.PriceReport2)
 	return p.PriceReportToBeCancelled
 }
-

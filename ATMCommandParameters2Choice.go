@@ -20,9 +20,7 @@ type ATMCommandParameters2Choice struct {
 
 	// Parameters to be used by the various cryptographic key commands.
 	Key *ATMConfigurationParameter2 `xml:"Key"`
-
 }
-
 
 func (a *ATMCommandParameters2Choice) SetATMRequiredGlobalStatus(value string) {
 	a.ATMRequiredGlobalStatus = (*ATMStatus1Code)(&value)
@@ -50,4 +48,3 @@ func (a *ATMCommandParameters2Choice) AddKey() *ATMConfigurationParameter2 {
 	a.Key = new(ATMConfigurationParameter2)
 	return a.Key
 }
-

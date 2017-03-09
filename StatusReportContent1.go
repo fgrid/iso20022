@@ -23,9 +23,7 @@ type StatusReportContent1 struct {
 
 	// Error log of the point of interaction since the last status report.
 	Errors *Max140Text `xml:"Errs,omitempty"`
-
 }
-
 
 func (s *StatusReportContent1) AddPOICapabilities() *PointOfInteractionCapabilities1 {
 	s.POICapabilities = new(PointOfInteractionCapabilities1)
@@ -33,7 +31,7 @@ func (s *StatusReportContent1) AddPOICapabilities() *PointOfInteractionCapabilit
 }
 
 func (s *StatusReportContent1) AddPOIComponent() *PointOfInteractionComponent2 {
-	newValue := new (PointOfInteractionComponent2)
+	newValue := new(PointOfInteractionComponent2)
 	s.POIComponent = append(s.POIComponent, newValue)
 	return newValue
 }
@@ -52,7 +50,7 @@ func (s *StatusReportContent1) AddDataSetRequired() *DataSetIdentification2 {
 }
 
 func (s *StatusReportContent1) AddEvent() *TMSEvent1 {
-	newValue := new (TMSEvent1)
+	newValue := new(TMSEvent1)
 	s.Event = append(s.Event, newValue)
 	return newValue
 }
@@ -60,4 +58,3 @@ func (s *StatusReportContent1) AddEvent() *TMSEvent1 {
 func (s *StatusReportContent1) SetErrors(value string) {
 	s.Errors = (*Max140Text)(&value)
 }
-

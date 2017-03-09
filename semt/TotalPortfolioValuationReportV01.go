@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.024.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:semt.024.001.01 Document"`
 	Message *TotalPortfolioValuationReportV01 `xml:"TtlPrtflValtnRpt"`
 }
 
@@ -42,11 +42,9 @@ type TotalPortfolioValuationReportV01 struct {
 	// Balance breakdown information.
 	Balance *iso20022.PortfolioBalance1 `xml:"Bal,omitempty"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData *iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (t *TotalPortfolioValuationReportV01) AddPagination() *iso20022.Pagination {
 	t.Pagination = new(iso20022.Pagination)
@@ -77,4 +75,3 @@ func (t *TotalPortfolioValuationReportV01) AddSupplementaryData() *iso20022.Supp
 	t.SupplementaryData = new(iso20022.SupplementaryData1)
 	return t.SupplementaryData
 }
-

@@ -11,9 +11,7 @@ type AcceptorConfiguration2 struct {
 
 	// Data set containing the acceptor parameters of a point of interaction (POI).
 	DataSet []*TerminalManagementDataSet6 `xml:"DataSet"`
-
 }
-
 
 func (a *AcceptorConfiguration2) AddPOIIdentification() *GenericIdentification35 {
 	a.POIIdentification = new(GenericIdentification35)
@@ -26,8 +24,7 @@ func (a *AcceptorConfiguration2) AddTerminalManagerIdentification() *GenericIden
 }
 
 func (a *AcceptorConfiguration2) AddDataSet() *TerminalManagementDataSet6 {
-	newValue := new (TerminalManagementDataSet6)
+	newValue := new(TerminalManagementDataSet6)
 	a.DataSet = append(a.DataSet, newValue)
 	return newValue
 }
-

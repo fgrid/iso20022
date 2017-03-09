@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.033.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:camt.033.001.01 Document"`
 	Message *RequestForDuplicateInstruction `xml:"camt.033.001.01"`
 }
 
@@ -27,14 +27,12 @@ func (d *Document03300101) AddMessage() *RequestForDuplicateInstruction {
 // - must be used exclusively between the case assignee and its case creator/case assigner
 type RequestForDuplicateInstruction struct {
 
-	// 
+	//
 	Assignment *iso20022.CaseAssignment `xml:"Assgnmt"`
 
-	// 
+	//
 	Case *iso20022.Case `xml:"Case"`
-
 }
-
 
 func (r *RequestForDuplicateInstruction) AddAssignment() *iso20022.CaseAssignment {
 	r.Assignment = new(iso20022.CaseAssignment)
@@ -45,4 +43,3 @@ func (r *RequestForDuplicateInstruction) AddCase() *iso20022.Case {
 	r.Case = new(iso20022.Case)
 	return r.Case
 }
-

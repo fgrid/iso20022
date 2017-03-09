@@ -8,9 +8,7 @@ type DividendTypeFormat9Choice struct {
 
 	// Proprietary identification of the frequency of the corporate action event.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (d *DividendTypeFormat9Choice) SetCode(value string) {
 	d.Code = (*CorporateActionFrequencyType5Code)(&value)
@@ -20,4 +18,3 @@ func (d *DividendTypeFormat9Choice) AddProprietary() *GenericIdentification30 {
 	d.Proprietary = new(GenericIdentification30)
 	return d.Proprietary
 }
-

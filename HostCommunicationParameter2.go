@@ -11,9 +11,7 @@ type HostCommunicationParameter2 struct {
 
 	// Cryptographic key used to communicate with the host.
 	Key []*CryptographicKey3 `xml:"Key,omitempty"`
-
 }
-
 
 func (h *HostCommunicationParameter2) SetHostIdentification(value string) {
 	h.HostIdentification = (*Max35Text)(&value)
@@ -25,8 +23,7 @@ func (h *HostCommunicationParameter2) AddAddress() *NetworkParameters1 {
 }
 
 func (h *HostCommunicationParameter2) AddKey() *CryptographicKey3 {
-	newValue := new (CryptographicKey3)
+	newValue := new(CryptographicKey3)
 	h.Key = append(h.Key, newValue)
 	return newValue
 }
-

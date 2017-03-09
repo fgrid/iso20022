@@ -20,9 +20,7 @@ type DeliveringPartiesAndAccount9 struct {
 
 	// Place where settlement of the securities takes place.
 	PlaceOfSettlementDetails *PartyIdentification21 `xml:"PlcOfSttlmDtls,omitempty"`
-
 }
-
 
 func (d *DeliveringPartiesAndAccount9) AddDelivererDetails() *InvestmentAccount41 {
 	d.DelivererDetails = new(InvestmentAccount41)
@@ -52,4 +50,3 @@ func (d *DeliveringPartiesAndAccount9) AddPlaceOfSettlementDetails() *PartyIdent
 	d.PlaceOfSettlementDetails = new(PartyIdentification21)
 	return d.PlaceOfSettlementDetails
 }
-

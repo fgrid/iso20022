@@ -8,9 +8,7 @@ type AmountAndRateStatus2 struct {
 
 	// Value expressed as a rate status.
 	RateStatus *RateStatus1Code `xml:"RateSts"`
-
 }
-
 
 func (a *AmountAndRateStatus2) SetAmount(value, currency string) {
 	a.Amount = NewRestrictedFINActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -19,4 +17,3 @@ func (a *AmountAndRateStatus2) SetAmount(value, currency string) {
 func (a *AmountAndRateStatus2) SetRateStatus(value string) {
 	a.RateStatus = (*RateStatus1Code)(&value)
 }
-

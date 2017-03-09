@@ -8,9 +8,7 @@ type RateType19Choice struct {
 
 	// Rate is determined using a data source scheme.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (r *RateType19Choice) SetCode(value string) {
 	r.Code = (*RateType1Code)(&value)
@@ -20,4 +18,3 @@ func (r *RateType19Choice) AddProprietary() *GenericIdentification38 {
 	r.Proprietary = new(GenericIdentification38)
 	return r.Proprietary
 }
-

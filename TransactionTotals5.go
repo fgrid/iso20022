@@ -23,9 +23,7 @@ type TransactionTotals5 struct {
 
 	// Sum amount of all fees.
 	FeeAmounts *ImpliedCurrencyAndAmount `xml:"FeeAmts,omitempty"`
-
 }
-
 
 func (t *TransactionTotals5) SetAmount(value, currency string) {
 	t.Amount = NewImpliedCurrencyAndAmount(value, currency)
@@ -54,4 +52,3 @@ func (t *TransactionTotals5) SetReversalNumber(value string) {
 func (t *TransactionTotals5) SetFeeAmounts(value, currency string) {
 	t.FeeAmounts = NewImpliedCurrencyAndAmount(value, currency)
 }
-

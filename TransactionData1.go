@@ -17,9 +17,7 @@ type TransactionData1 struct {
 
 	// PrePaid Account for funds transfer or loading.
 	PrePaidAccount *CashAccount24 `xml:"PrePdAcct,omitempty"`
-
 }
-
 
 func (t *TransactionData1) SetCardBrand(value string) {
 	t.CardBrand = (*Max35Text)(&value)
@@ -44,4 +42,3 @@ func (t *TransactionData1) AddPrePaidAccount() *CashAccount24 {
 	t.PrePaidAccount = new(CashAccount24)
 	return t.PrePaidAccount
 }
-

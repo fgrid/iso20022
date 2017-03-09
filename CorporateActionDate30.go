@@ -8,9 +8,7 @@ type CorporateActionDate30 struct {
 
 	// Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.
 	ExDividendDate *DateFormat19Choice `xml:"ExDvddDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate30) AddRecordDate() *DateFormat19Choice {
 	c.RecordDate = new(DateFormat19Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionDate30) AddExDividendDate() *DateFormat19Choice {
 	c.ExDividendDate = new(DateFormat19Choice)
 	return c.ExDividendDate
 }
-

@@ -11,9 +11,7 @@ type ParentCashAccount2 struct {
 
 	// Financial institution in which the parent account resides.
 	Servicer *BranchAndFinancialInstitutionIdentification5 `xml:"Svcr,omitempty"`
-
 }
-
 
 func (p *ParentCashAccount2) SetLevel(value string) {
 	p.Level = (*AccountLevel1Code)(&value)
@@ -28,4 +26,3 @@ func (p *ParentCashAccount2) AddServicer() *BranchAndFinancialInstitutionIdentif
 	p.Servicer = new(BranchAndFinancialInstitutionIdentification5)
 	return p.Servicer
 }
-

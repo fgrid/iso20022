@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.009.001.02 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:trea.009.001.02 Document"`
 	Message *CreateForeignExchangeOptionV02 `xml:"CretFXOptnV02"`
 }
 
@@ -34,9 +34,7 @@ type CreateForeignExchangeOptionV02 struct {
 
 	// Specifies the parameters of the currency option which is sold by the trading side.
 	Option *iso20022.Option3 `xml:"Optn"`
-
 }
-
 
 func (c *CreateForeignExchangeOptionV02) AddTradeInformation() *iso20022.TradeAgreement1 {
 	c.TradeInformation = new(iso20022.TradeAgreement1)
@@ -57,4 +55,3 @@ func (c *CreateForeignExchangeOptionV02) AddOption() *iso20022.Option3 {
 	c.Option = new(iso20022.Option3)
 	return c.Option
 }
-

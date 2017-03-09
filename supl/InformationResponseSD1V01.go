@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:supl.027.001.01 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:supl.027.001.01 Document"`
 	Message *InformationResponseSD1V01 `xml:"InfRspnSD1"`
 }
 
@@ -30,9 +30,7 @@ type InformationResponseSD1V01 struct {
 
 	// Requested account and its owners.
 	AccountAndParties []*iso20022.AccountAndParties2 `xml:"AcctAndPties"`
-
 }
-
 
 func (i *InformationResponseSD1V01) SetInvestigationIdentification(value string) {
 	i.InvestigationIdentification = (*iso20022.Max35Text)(&value)
@@ -48,8 +46,7 @@ func (i *InformationResponseSD1V01) AddAccountServicerIdentification() *iso20022
 }
 
 func (i *InformationResponseSD1V01) AddAccountAndParties() *iso20022.AccountAndParties2 {
-	newValue := new (iso20022.AccountAndParties2)
+	newValue := new(iso20022.AccountAndParties2)
 	i.AccountAndParties = append(i.AccountAndParties, newValue)
 	return newValue
 }
-

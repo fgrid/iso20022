@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.010.001.02 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:pain.010.001.02 Document"`
 	Message *MandateAmendmentRequestV02 `xml:"MndtAmdmntReq"`
 }
 
@@ -36,9 +36,7 @@ type MandateAmendmentRequestV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MandateAmendmentRequestV02) AddGroupHeader() *iso20022.GroupHeader47 {
 	m.GroupHeader = new(iso20022.GroupHeader47)
@@ -51,8 +49,7 @@ func (m *MandateAmendmentRequestV02) AddUnderlyingAmendmentDetails() *iso20022.M
 }
 
 func (m *MandateAmendmentRequestV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

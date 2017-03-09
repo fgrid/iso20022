@@ -8,9 +8,7 @@ type AllegmentMatchingReason1 struct {
 
 	// Provides additional information about the reason in narrative form.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (a *AllegmentMatchingReason1) AddCode() *AllegmentReason1Choice {
 	a.Code = new(AllegmentReason1Choice)
@@ -20,4 +18,3 @@ func (a *AllegmentMatchingReason1) AddCode() *AllegmentReason1Choice {
 func (a *AllegmentMatchingReason1) SetAdditionalReasonInformation(value string) {
 	a.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

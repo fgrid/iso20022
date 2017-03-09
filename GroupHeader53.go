@@ -11,17 +11,15 @@ type GroupHeader53 struct {
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
 
 	// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructing agent is the party sending the status message and not the party that sent the original instruction that is being reported on.
 	InstructingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstgAgt,omitempty"`
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader53) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (g *GroupHeader53) AddInstructedAgent() *BranchAndFinancialInstitutionIdent
 	g.InstructedAgent = new(BranchAndFinancialInstitutionIdentification5)
 	return g.InstructedAgent
 }
-

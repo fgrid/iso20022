@@ -8,9 +8,7 @@ type Price4 struct {
 
 	// Specification of the price type.
 	Type *PriceValueType7Code `xml:"Tp,omitempty"`
-
 }
-
 
 func (p *Price4) AddValue() *PriceRateOrAmountChoice {
 	p.Value = new(PriceRateOrAmountChoice)
@@ -20,4 +18,3 @@ func (p *Price4) AddValue() *PriceRateOrAmountChoice {
 func (p *Price4) SetType(value string) {
 	p.Type = (*PriceValueType7Code)(&value)
 }
-

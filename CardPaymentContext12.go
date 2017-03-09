@@ -8,9 +8,7 @@ type CardPaymentContext12 struct {
 
 	// Context of the sale involving the card payment transaction.
 	SaleContext *SaleContext1 `xml:"SaleCntxt,omitempty"`
-
 }
-
 
 func (c *CardPaymentContext12) AddPaymentContext() *PaymentContext12 {
 	c.PaymentContext = new(PaymentContext12)
@@ -21,4 +19,3 @@ func (c *CardPaymentContext12) AddSaleContext() *SaleContext1 {
 	c.SaleContext = new(SaleContext1)
 	return c.SaleContext
 }
-

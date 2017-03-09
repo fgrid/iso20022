@@ -11,9 +11,7 @@ type Result1 struct {
 
 	// Provides additional information related to the collateral that may be requested.
 	AdditionalInformation *Max210Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *Result1) SetDueToPartyA(value, currency string) {
 	r.DueToPartyA = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (r *Result1) SetDueToPartyB(value, currency string) {
 func (r *Result1) SetAdditionalInformation(value string) {
 	r.AdditionalInformation = (*Max210Text)(&value)
 }
-

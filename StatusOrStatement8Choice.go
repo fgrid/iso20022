@@ -8,9 +8,7 @@ type StatusOrStatement8Choice struct {
 
 	// Identify the statement/report that was requested.
 	Statement *DocumentNumber14 `xml:"Stmt"`
-
 }
-
 
 func (s *StatusOrStatement8Choice) AddStatusAdvice() *DocumentNumber15 {
 	s.StatusAdvice = new(DocumentNumber15)
@@ -21,4 +19,3 @@ func (s *StatusOrStatement8Choice) AddStatement() *DocumentNumber14 {
 	s.Statement = new(DocumentNumber14)
 	return s.Statement
 }
-

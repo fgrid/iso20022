@@ -8,9 +8,7 @@ type PlaceOrUnderConfirmationChoice1 struct {
 
 	// Place of presentation when there is a confirmation.
 	PresentationUnderConfirmation *PresentationParty1Code `xml:"PresntnUdrConf"`
-
 }
-
 
 func (p *PlaceOrUnderConfirmationChoice1) AddPlaceOfPresentation() *PlaceOfPresentation1 {
 	p.PlaceOfPresentation = new(PlaceOfPresentation1)
@@ -20,4 +18,3 @@ func (p *PlaceOrUnderConfirmationChoice1) AddPlaceOfPresentation() *PlaceOfPrese
 func (p *PlaceOrUnderConfirmationChoice1) SetPresentationUnderConfirmation(value string) {
 	p.PresentationUnderConfirmation = (*PresentationParty1Code)(&value)
 }
-

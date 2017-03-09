@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.011.001.03 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:setr.011.001.03 Document"`
 	Message *SubscriptionOrderCancellationRequestV03 `xml:"SbcptOrdrCxlReqV03"`
 }
 
@@ -37,7 +37,7 @@ func (d *Document01100103) AddMessage() *SubscriptionOrderCancellationRequestV03
 // The rejection or acceptance of a SubscriptionOrderCancellationRequest is made using an OrderCancellationStatusReport message.
 type SubscriptionOrderCancellationRequestV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -54,9 +54,7 @@ type SubscriptionOrderCancellationRequestV03 struct {
 
 	// Message is a copy.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (s *SubscriptionOrderCancellationRequestV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -87,4 +85,3 @@ func (s *SubscriptionOrderCancellationRequestV03) AddCopyDetails() *iso20022.Cop
 	s.CopyDetails = new(iso20022.CopyInformation2)
 	return s.CopyDetails
 }
-

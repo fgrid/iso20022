@@ -8,9 +8,7 @@ type RateTypeAndPercentageRate8 struct {
 
 	// Value expressed as a rate.
 	Rate *PercentageRate `xml:"Rate"`
-
 }
-
 
 func (r *RateTypeAndPercentageRate8) AddRateType() *RateType42Choice {
 	r.RateType = new(RateType42Choice)
@@ -20,4 +18,3 @@ func (r *RateTypeAndPercentageRate8) AddRateType() *RateType42Choice {
 func (r *RateTypeAndPercentageRate8) SetRate(value string) {
 	r.Rate = (*PercentageRate)(&value)
 }
-

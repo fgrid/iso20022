@@ -1,14 +1,14 @@
 package iso20022
 
 // Specifies an identification of a document assigned by and relative to the issuing party (of the identification).
-	// Optionally, the component can contain a copy of the identified document and a URI/URL (Universal Resource Information/Location) facilitating retrieval of the document.
-	// The component may also contain a cryptographic hash of the referenced document.
-	// Financial items are identified by three parts:
-	// (1) the creator of the document,
-	// (2) an identification of a dossier, and
-	// (3) an identification of a financial item.
-	// The two latter identifiers are independent permitting to identify the same item in several lists.
-	// The element identification is of schema type ID, it can be referenced by IDREF typed elements (composite=false).
+// Optionally, the component can contain a copy of the identified document and a URI/URL (Universal Resource Information/Location) facilitating retrieval of the document.
+// The component may also contain a cryptographic hash of the referenced document.
+// Financial items are identified by three parts:
+// (1) the creator of the document,
+// (2) an identification of a dossier, and
+// (3) an identification of a financial item.
+// The two latter identifiers are independent permitting to identify the same item in several lists.
+// The element identification is of schema type ID, it can be referenced by IDREF typed elements (composite=false).
 type QualifiedDocumentInformation1 struct {
 
 	// Local identification to be used in IDREFs in this message.
@@ -43,9 +43,7 @@ type QualifiedDocumentInformation1 struct {
 
 	// Attached file for this document. The file must be in a self-describing format.
 	AttachedFile []*BinaryFile1 `xml:"AttchdFile,omitempty"`
-
 }
-
 
 func (q *QualifiedDocumentInformation1) SetIdentification(value string) {
 	q.Identification = (*ID)(&value)
@@ -77,7 +75,7 @@ func (q *QualifiedDocumentInformation1) SetElectronicOriginal(value string) {
 }
 
 func (q *QualifiedDocumentInformation1) AddDigest() *AlgorithmAndDigest1 {
-	newValue := new (AlgorithmAndDigest1)
+	newValue := new(AlgorithmAndDigest1)
 	q.Digest = append(q.Digest, newValue)
 	return newValue
 }
@@ -91,8 +89,7 @@ func (q *QualifiedDocumentInformation1) SetURL(value string) {
 }
 
 func (q *QualifiedDocumentInformation1) AddAttachedFile() *BinaryFile1 {
-	newValue := new (BinaryFile1)
+	newValue := new(BinaryFile1)
 	q.AttachedFile = append(q.AttachedFile, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type SubBalanceInformation1 struct {
 
 	// Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.
 	AdditionalBalanceBreakdownDetails []*AdditionalBalanceInformation `xml:"AddtlBalBrkdwnDtls,omitempty"`
-
 }
-
 
 func (s *SubBalanceInformation1) AddQuantity() *SubBalanceQuantity1Choice {
 	s.Quantity = new(SubBalanceQuantity1Choice)
@@ -26,8 +24,7 @@ func (s *SubBalanceInformation1) AddSubBalanceType() *SecuritiesBalanceType1Choi
 }
 
 func (s *SubBalanceInformation1) AddAdditionalBalanceBreakdownDetails() *AdditionalBalanceInformation {
-	newValue := new (AdditionalBalanceInformation)
+	newValue := new(AdditionalBalanceInformation)
 	s.AdditionalBalanceBreakdownDetails = append(s.AdditionalBalanceBreakdownDetails, newValue)
 	return newValue
 }
-

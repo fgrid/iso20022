@@ -8,9 +8,7 @@ type CancelledReason8Choice struct {
 
 	// Proprietary identification specifying the reason why the instruction is cancelled.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (c *CancelledReason8Choice) SetCode(value string) {
 	c.Code = (*CancelledStatusReason6Code)(&value)
@@ -20,4 +18,3 @@ func (c *CancelledReason8Choice) AddProprietary() *GenericIdentification30 {
 	c.Proprietary = new(GenericIdentification30)
 	return c.Proprietary
 }
-

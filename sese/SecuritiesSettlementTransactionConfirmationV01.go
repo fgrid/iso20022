@@ -7,7 +7,7 @@ import (
 )
 
 type Document02500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.025.001.01 Document"`
+	XMLName xml.Name                                        `xml:"urn:iso:std:iso:20022:tech:xsd:sese.025.001.01 Document"`
 	Message *SecuritiesSettlementTransactionConfirmationV01 `xml:"SctiesSttlmTxConf"`
 }
 
@@ -87,9 +87,7 @@ type SecuritiesSettlementTransactionConfirmationV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionConfirmationV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -182,8 +180,7 @@ func (s *SecuritiesSettlementTransactionConfirmationV01) AddMessageRecipient() *
 }
 
 func (s *SecuritiesSettlementTransactionConfirmationV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

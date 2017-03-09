@@ -38,9 +38,7 @@ type UndertakingStatusAdvice1 struct {
 
 	// Additional information related to the report.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (u *UndertakingStatusAdvice1) AddInitiatingParty() *PartyIdentification43 {
 	u.InitiatingParty = new(PartyIdentification43)
@@ -73,13 +71,13 @@ func (u *UndertakingStatusAdvice1) SetStatus(value string) {
 }
 
 func (u *UndertakingStatusAdvice1) AddStatusReason() *StatusReasonInformation8 {
-	newValue := new (StatusReasonInformation8)
+	newValue := new(StatusReasonInformation8)
 	u.StatusReason = append(u.StatusReason, newValue)
 	return newValue
 }
 
 func (u *UndertakingStatusAdvice1) AddReportedAmount() *ReportedAmount1 {
-	newValue := new (ReportedAmount1)
+	newValue := new(ReportedAmount1)
 	u.ReportedAmount = append(u.ReportedAmount, newValue)
 	return newValue
 }
@@ -90,7 +88,7 @@ func (u *UndertakingStatusAdvice1) AddOriginalMessageDetails() *OriginalMessage1
 }
 
 func (u *UndertakingStatusAdvice1) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	u.EnclosedFile = append(u.EnclosedFile, newValue)
 	return newValue
 }
@@ -98,4 +96,3 @@ func (u *UndertakingStatusAdvice1) AddEnclosedFile() *Document9 {
 func (u *UndertakingStatusAdvice1) AddAdditionalInformation(value string) {
 	u.AdditionalInformation = append(u.AdditionalInformation, (*Max2000Text)(&value))
 }
-

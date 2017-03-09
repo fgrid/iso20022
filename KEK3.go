@@ -14,9 +14,7 @@ type KEK3 struct {
 
 	// Encrypted key encryption key (KEK).
 	EncryptedKey *Max140Binary `xml:"NcrptdKey"`
-
 }
-
 
 func (k *KEK3) SetVersion(value string) {
 	k.Version = (*Number)(&value)
@@ -35,4 +33,3 @@ func (k *KEK3) AddKeyEncryptionAlgorithm() *AlgorithmIdentification9 {
 func (k *KEK3) SetEncryptedKey(value string) {
 	k.EncryptedKey = (*Max140Binary)(&value)
 }
-

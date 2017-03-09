@@ -14,9 +14,7 @@ type RemittanceLocation2 struct {
 
 	// Postal address to which an agent is to send the remittance information.
 	RemittanceLocationPostalAddress *NameAndAddress10 `xml:"RmtLctnPstlAdr,omitempty"`
-
 }
-
 
 func (r *RemittanceLocation2) SetRemittanceIdentification(value string) {
 	r.RemittanceIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (r *RemittanceLocation2) AddRemittanceLocationPostalAddress() *NameAndAddre
 	r.RemittanceLocationPostalAddress = new(NameAndAddress10)
 	return r.RemittanceLocationPostalAddress
 }
-

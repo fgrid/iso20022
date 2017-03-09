@@ -11,9 +11,7 @@ type AmountAndDirection67 struct {
 
 	// Posting/settlement amount in its original currency when conversion from/into another currency has occurred.
 	OriginalCurrencyAndOrderedAmount *RestrictedFINActiveOrHistoricCurrencyAndAmount `xml:"OrgnlCcyAndOrdrdAmt,omitempty"`
-
 }
-
 
 func (a *AmountAndDirection67) SetAmount(value, currency string) {
 	a.Amount = NewRestrictedFINActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (a *AmountAndDirection67) SetCreditDebitIndicator(value string) {
 func (a *AmountAndDirection67) SetOriginalCurrencyAndOrderedAmount(value, currency string) {
 	a.OriginalCurrencyAndOrderedAmount = NewRestrictedFINActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

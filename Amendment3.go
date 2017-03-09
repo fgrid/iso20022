@@ -38,9 +38,7 @@ type Amendment3 struct {
 
 	// Additional information related to the request.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *Amendment3) SetApplicantRequestNumber(value string) {
 	a.ApplicantRequestNumber = (*Max35Text)(&value)
@@ -77,7 +75,7 @@ func (a *Amendment3) AddNewBeneficiary() *Beneficiary1 {
 }
 
 func (a *Amendment3) AddNewUndertakingTermsAndConditions() *Narrative1 {
-	newValue := new (Narrative1)
+	newValue := new(Narrative1)
 	a.NewUndertakingTermsAndConditions = append(a.NewUndertakingTermsAndConditions, newValue)
 	return newValue
 }
@@ -93,7 +91,7 @@ func (a *Amendment3) AddDeliveryChannel() *CommunicationChannel1 {
 }
 
 func (a *Amendment3) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	a.EnclosedFile = append(a.EnclosedFile, newValue)
 	return newValue
 }
@@ -101,4 +99,3 @@ func (a *Amendment3) AddEnclosedFile() *Document9 {
 func (a *Amendment3) AddAdditionalInformation(value string) {
 	a.AdditionalInformation = append(a.AdditionalInformation, (*Max2000Text)(&value))
 }
-

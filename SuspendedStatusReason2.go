@@ -14,9 +14,7 @@ type SuspendedStatusReason2 struct {
 
 	// Additional information about the suspended status reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (s *SuspendedStatusReason2) SetReason(value string) {
 	s.Reason = (*SuspendedStatusReason3Code)(&value)
@@ -34,4 +32,3 @@ func (s *SuspendedStatusReason2) AddDataSourceScheme() *GenericIdentification1 {
 func (s *SuspendedStatusReason2) SetAdditionalInformation(value string) {
 	s.AdditionalInformation = (*Max350Text)(&value)
 }
-

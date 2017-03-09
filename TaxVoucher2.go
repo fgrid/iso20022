@@ -11,9 +11,7 @@ type TaxVoucher2 struct {
 
 	// Settlement date of the dividend reinvestment purchase transaction.
 	BargainSettlementDate *DateAndDateTimeChoice `xml:"BrgnSttlmDt,omitempty"`
-
 }
-
 
 func (t *TaxVoucher2) SetIdentification(value string) {
 	t.Identification = (*Max35Text)(&value)
@@ -28,4 +26,3 @@ func (t *TaxVoucher2) AddBargainSettlementDate() *DateAndDateTimeChoice {
 	t.BargainSettlementDate = new(DateAndDateTimeChoice)
 	return t.BargainSettlementDate
 }
-

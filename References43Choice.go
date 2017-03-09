@@ -44,9 +44,7 @@ type References43Choice struct {
 
 	// Unique identification of the report.
 	TotalPortfolioValuationReportIdentification *Max35Text `xml:"TtlPrtflValtnRptId"`
-
 }
-
 
 func (r *References43Choice) AddSecuritiesSettlementTransactionConfirmationIdentification() *SettlementTypeAndIdentification18 {
 	r.SecuritiesSettlementTransactionConfirmationIdentification = new(SettlementTypeAndIdentification18)
@@ -107,4 +105,3 @@ func (r *References43Choice) SetOtherMessageIdentification(value string) {
 func (r *References43Choice) SetTotalPortfolioValuationReportIdentification(value string) {
 	r.TotalPortfolioValuationReportIdentification = (*Max35Text)(&value)
 }
-

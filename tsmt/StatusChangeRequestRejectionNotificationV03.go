@@ -7,7 +7,7 @@ import (
 )
 
 type Document03000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.030.001.03 Document"`
+	XMLName xml.Name                                     `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.030.001.03 Document"`
 	Message *StatusChangeRequestRejectionNotificationV03 `xml:"StsChngReqRjctnNtfctn"`
 }
 
@@ -34,7 +34,7 @@ type StatusChangeRequestRejectionNotificationV03 struct {
 	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
-	// Identifies the status of the transaction by means of a code. 
+	// Identifies the status of the transaction by means of a code.
 	TransactionStatus *iso20022.TransactionStatus4 `xml:"TxSts"`
 
 	// Reference to the transaction for each financial institution which is a party to the transaction.
@@ -48,9 +48,7 @@ type StatusChangeRequestRejectionNotificationV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (s *StatusChangeRequestRejectionNotificationV03) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	s.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -73,7 +71,7 @@ func (s *StatusChangeRequestRejectionNotificationV03) AddTransactionStatus() *is
 }
 
 func (s *StatusChangeRequestRejectionNotificationV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	s.UserTransactionReference = append(s.UserTransactionReference, newValue)
 	return newValue
 }
@@ -92,4 +90,3 @@ func (s *StatusChangeRequestRejectionNotificationV03) AddRequestForAction() *iso
 	s.RequestForAction = new(iso20022.PendingActivity2)
 	return s.RequestForAction
 }
-

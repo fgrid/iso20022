@@ -39,7 +39,7 @@ type FinancialInstrument51 struct {
 	// Details of third party rights.
 	ThirdPartyRights *ThirdPartyRights1 `xml:"ThrdPtyRghts,omitempty"`
 
-	// Specifies if all the shares are owned exclusively by the fund company. 
+	// Specifies if all the shares are owned exclusively by the fund company.
 	FundOwnership *FundOwnership1Code `xml:"FndOwnrsh,omitempty"`
 
 	// Specifies if the fund is intended for qualified investors.
@@ -47,9 +47,7 @@ type FinancialInstrument51 struct {
 
 	// Operational status of the fund.
 	OperationalStatus *OperationalStatus1Code `xml:"OprlSts,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument51) AddIdentification() *SecurityIdentification23Choice {
 	f.Identification = new(SecurityIdentification23Choice)
@@ -113,4 +111,3 @@ func (f *FinancialInstrument51) SetFundIntention(value string) {
 func (f *FinancialInstrument51) SetOperationalStatus(value string) {
 	f.OperationalStatus = (*OperationalStatus1Code)(&value)
 }
-

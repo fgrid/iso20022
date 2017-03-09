@@ -8,9 +8,7 @@ type Activity1 struct {
 
 	// Further information on a message associated with the activity.
 	Description *Max140Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (a *Activity1) SetMessageName(value string) {
 	a.MessageName = (*Max70Text)(&value)
@@ -19,4 +17,3 @@ func (a *Activity1) SetMessageName(value string) {
 func (a *Activity1) SetDescription(value string) {
 	a.Description = (*Max140Text)(&value)
 }
-

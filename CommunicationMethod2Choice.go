@@ -8,9 +8,7 @@ type CommunicationMethod2Choice struct {
 
 	// Unique and unambiguous identification of communication method using a bilaterally or multilaterally agreed description.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *CommunicationMethod2Choice) SetCode(value string) {
 	c.Code = (*CommunicationMethod2Code)(&value)
@@ -19,4 +17,3 @@ func (c *CommunicationMethod2Choice) SetCode(value string) {
 func (c *CommunicationMethod2Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

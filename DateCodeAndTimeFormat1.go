@@ -8,9 +8,7 @@ type DateCodeAndTimeFormat1 struct {
 
 	// Specifies the time.
 	Time *ISOTime `xml:"Tm"`
-
 }
-
 
 func (d *DateCodeAndTimeFormat1) AddDateCode() *DateCode4Choice {
 	d.DateCode = new(DateCode4Choice)
@@ -20,4 +18,3 @@ func (d *DateCodeAndTimeFormat1) AddDateCode() *DateCode4Choice {
 func (d *DateCodeAndTimeFormat1) SetTime(value string) {
 	d.Time = (*ISOTime)(&value)
 }
-

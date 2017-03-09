@@ -14,9 +14,7 @@ type CardPaymentDataSetTransaction1Choice struct {
 
 	// Card payment transaction including an authorisation response.
 	AuthorisationResponse *CardPaymentDataSetTransaction5 `xml:"AuthstnRspn,omitempty"`
-
 }
-
 
 func (c *CardPaymentDataSetTransaction1Choice) AddCompletion() *CardPaymentDataSetTransaction2 {
 	c.Completion = new(CardPaymentDataSetTransaction2)
@@ -37,4 +35,3 @@ func (c *CardPaymentDataSetTransaction1Choice) AddAuthorisationResponse() *CardP
 	c.AuthorisationResponse = new(CardPaymentDataSetTransaction5)
 	return c.AuthorisationResponse
 }
-

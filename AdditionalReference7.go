@@ -11,9 +11,7 @@ type AdditionalReference7 struct {
 
 	// Name of the message.
 	MessageName *Max35Text `xml:"MsgNm,omitempty"`
-
 }
-
 
 func (a *AdditionalReference7) SetReference(value string) {
 	a.Reference = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (a *AdditionalReference7) AddReferenceIssuer() *PartyIdentification97Choice
 func (a *AdditionalReference7) SetMessageName(value string) {
 	a.MessageName = (*Max35Text)(&value)
 }
-

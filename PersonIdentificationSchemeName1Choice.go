@@ -8,9 +8,7 @@ type PersonIdentificationSchemeName1Choice struct {
 
 	// Name of the identification scheme, in a free text form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (p *PersonIdentificationSchemeName1Choice) SetCode(value string) {
 	p.Code = (*ExternalPersonIdentification1Code)(&value)
@@ -19,4 +17,3 @@ func (p *PersonIdentificationSchemeName1Choice) SetCode(value string) {
 func (p *PersonIdentificationSchemeName1Choice) SetProprietary(value string) {
 	p.Proprietary = (*Max35Text)(&value)
 }
-

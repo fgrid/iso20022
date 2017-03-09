@@ -14,9 +14,7 @@ type CashAccount17 struct {
 
 	// Identification of the cash correspondent back.
 	CorrespondentBankIdentification *BICIdentifier `xml:"CrspdtBkId"`
-
 }
-
 
 func (c *CashAccount17) AddAccountIdentification() *CashAccountIdentification1Choice {
 	c.AccountIdentification = new(CashAccountIdentification1Choice)
@@ -35,4 +33,3 @@ func (c *CashAccount17) AddAccountOwnerIdentification() *PartyIdentification2Cho
 func (c *CashAccount17) SetCorrespondentBankIdentification(value string) {
 	c.CorrespondentBankIdentification = (*BICIdentifier)(&value)
 }
-

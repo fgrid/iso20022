@@ -21,9 +21,7 @@ type PointOfInteractionComponent1 struct {
 	// Unique approval number for a component, delivered by a certification body.
 	// Usage: More than one approval number could be present, when assigned by different bodies. The certification body identification must be provided within the approval number (for example at the beginning of the value).
 	ApprovalNumber []*Max70Text `xml:"ApprvlNb,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionComponent1) SetPOIComponentType(value string) {
 	p.POIComponentType = (*POIComponentType1Code)(&value)
@@ -48,4 +46,3 @@ func (p *PointOfInteractionComponent1) SetSerialNumber(value string) {
 func (p *PointOfInteractionComponent1) AddApprovalNumber(value string) {
 	p.ApprovalNumber = append(p.ApprovalNumber, (*Max70Text)(&value))
 }
-

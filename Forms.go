@@ -8,9 +8,7 @@ type Forms struct {
 
 	// Type of signature.
 	SignatureType *SignatureType1Code `xml:"SgntrTp"`
-
 }
-
 
 func (f *Forms) SetApplicationForm(value string) {
 	f.ApplicationForm = (*YesNoIndicator)(&value)
@@ -19,4 +17,3 @@ func (f *Forms) SetApplicationForm(value string) {
 func (f *Forms) SetSignatureType(value string) {
 	f.SignatureType = (*SignatureType1Code)(&value)
 }
-

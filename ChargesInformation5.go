@@ -8,9 +8,7 @@ type ChargesInformation5 struct {
 
 	// Party that takes the transaction charges or to which the transaction charges are due.
 	Party *BranchAndFinancialInstitutionIdentification4 `xml:"Pty"`
-
 }
-
 
 func (c *ChargesInformation5) SetAmount(value, currency string) {
 	c.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -20,4 +18,3 @@ func (c *ChargesInformation5) AddParty() *BranchAndFinancialInstitutionIdentific
 	c.Party = new(BranchAndFinancialInstitutionIdentification4)
 	return c.Party
 }
-

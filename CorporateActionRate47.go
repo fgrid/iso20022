@@ -17,9 +17,7 @@ type CorporateActionRate47 struct {
 
 	// Requested rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.
 	RequestedWithholdingOfLocalTax []*RateAndAmountFormat21Choice `xml:"ReqdWhldgOfLclTax,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate47) SetProposedRate(value string) {
 	c.ProposedRate = (*PercentageRate)(&value)
@@ -31,20 +29,19 @@ func (c *CorporateActionRate47) AddOversubscriptionRate() *RateAndAmountFormat5C
 }
 
 func (c *CorporateActionRate47) AddRequestedTaxationRate() *RateAndAmountFormat21Choice {
-	newValue := new (RateAndAmountFormat21Choice)
+	newValue := new(RateAndAmountFormat21Choice)
 	c.RequestedTaxationRate = append(c.RequestedTaxationRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate47) AddRequestedWithholdingOfForeignTax() *RateAndAmountFormat21Choice {
-	newValue := new (RateAndAmountFormat21Choice)
+	newValue := new(RateAndAmountFormat21Choice)
 	c.RequestedWithholdingOfForeignTax = append(c.RequestedWithholdingOfForeignTax, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate47) AddRequestedWithholdingOfLocalTax() *RateAndAmountFormat21Choice {
-	newValue := new (RateAndAmountFormat21Choice)
+	newValue := new(RateAndAmountFormat21Choice)
 	c.RequestedWithholdingOfLocalTax = append(c.RequestedWithholdingOfLocalTax, newValue)
 	return newValue
 }
-

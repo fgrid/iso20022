@@ -14,9 +14,7 @@ type DetailedInstructionStatus8 struct {
 
 	// Status applying to individual instructions of a MeetingInstruction.
 	InstructionStatus *InstructionStatus4Choice `xml:"InstrSts"`
-
 }
-
 
 func (d *DetailedInstructionStatus8) SetInstructionIdentification(value string) {
 	d.InstructionIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (d *DetailedInstructionStatus8) AddInstructionStatus() *InstructionStatus4C
 	d.InstructionStatus = new(InstructionStatus4Choice)
 	return d.InstructionStatus
 }
-

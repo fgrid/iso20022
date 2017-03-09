@@ -17,9 +17,7 @@ type FinancialInstrumentQuantity5Choice struct {
 
 	// Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed.
 	HoldingsRedemptionRate *PercentageRate `xml:"HldgsRedRate"`
-
 }
-
 
 func (f *FinancialInstrumentQuantity5Choice) AddUnitsNumber() *FinancialInstrumentQuantity1 {
 	f.UnitsNumber = new(FinancialInstrumentQuantity1)
@@ -41,4 +39,3 @@ func (f *FinancialInstrumentQuantity5Choice) SetGrossAmount(value, currency stri
 func (f *FinancialInstrumentQuantity5Choice) SetHoldingsRedemptionRate(value string) {
 	f.HoldingsRedemptionRate = (*PercentageRate)(&value)
 }
-

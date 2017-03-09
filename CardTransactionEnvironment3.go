@@ -26,9 +26,7 @@ type CardTransactionEnvironment3 struct {
 
 	// Payment token information.
 	PaymentToken *CardPaymentToken4 `xml:"PmtTkn,omitempty"`
-
 }
-
 
 func (c *CardTransactionEnvironment3) AddAcquirer() *Acquirer6 {
 	c.Acquirer = new(Acquirer6)
@@ -68,4 +66,3 @@ func (c *CardTransactionEnvironment3) AddPaymentToken() *CardPaymentToken4 {
 	c.PaymentToken = new(CardPaymentToken4)
 	return c.PaymentToken
 }
-

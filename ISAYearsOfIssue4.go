@@ -14,9 +14,7 @@ type ISAYearsOfIssue4 struct {
 
 	// Specifies the amounts already subscribed for the current year.
 	CurrentYearSubscriptionDetails *SubscriptionInformation1 `xml:"CurYrSbcptDtls,omitempty"`
-
 }
-
 
 func (i *ISAYearsOfIssue4) AddCurrentYear() *CurrentYearType1Choice {
 	i.CurrentYear = new(CurrentYearType1Choice)
@@ -36,4 +34,3 @@ func (i *ISAYearsOfIssue4) AddCurrentYearSubscriptionDetails() *SubscriptionInfo
 	i.CurrentYearSubscriptionDetails = new(SubscriptionInformation1)
 	return i.CurrentYearSubscriptionDetails
 }
-

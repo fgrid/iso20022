@@ -8,9 +8,7 @@ type ModificationCancellationAllowed3Choice struct {
 
 	// Modification, cancellation allowed information expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (m *ModificationCancellationAllowed3Choice) SetIndicator(value string) {
 	m.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationCancellationAllowed3Choice) AddProprietary() *GenericIdenti
 	m.Proprietary = new(GenericIdentification38)
 	return m.Proprietary
 }
-

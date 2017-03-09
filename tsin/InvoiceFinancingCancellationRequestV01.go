@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01 Document"`
+	XMLName xml.Name                                `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01 Document"`
 	Message *InvoiceFinancingCancellationRequestV01 `xml:"InvcFincgCxlReq"`
 }
 
@@ -32,9 +32,7 @@ type InvoiceFinancingCancellationRequestV01 struct {
 
 	// Set of information related to the cancellation request, such as actors involved and identification of the original invoice financing request to which the cancellation request refers.
 	CancellationRequestInformation *iso20022.CancellationRequestInformation1 `xml:"CxlReqInf"`
-
 }
-
 
 func (i *InvoiceFinancingCancellationRequestV01) AddCancellationRequestIdentification() *iso20022.MessageIdentification1 {
 	i.CancellationRequestIdentification = new(iso20022.MessageIdentification1)
@@ -45,4 +43,3 @@ func (i *InvoiceFinancingCancellationRequestV01) AddCancellationRequestInformati
 	i.CancellationRequestInformation = new(iso20022.CancellationRequestInformation1)
 	return i.CancellationRequestInformation
 }
-

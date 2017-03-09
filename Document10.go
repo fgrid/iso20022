@@ -17,9 +17,7 @@ type Document10 struct {
 
 	// Indication whether the document must be signed.
 	SignedIndicator *YesNoIndicator `xml:"SgndInd,omitempty"`
-
 }
-
 
 func (d *Document10) AddDocumentType() *UndertakingDocumentType2Choice {
 	d.DocumentType = new(UndertakingDocumentType2Choice)
@@ -43,4 +41,3 @@ func (d *Document10) SetCopyIndicator(value string) {
 func (d *Document10) SetSignedIndicator(value string) {
 	d.SignedIndicator = (*YesNoIndicator)(&value)
 }
-

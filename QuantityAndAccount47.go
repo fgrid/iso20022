@@ -23,9 +23,7 @@ type QuantityAndAccount47 struct {
 
 	// Breakdown of a quantity into lots such as tax lots, instrument series, etc.
 	QuantityBreakdown []*QuantityBreakdown38 `xml:"QtyBrkdwn,omitempty"`
-
 }
-
 
 func (q *QuantityAndAccount47) AddSettlementQuantity() *Quantity10Choice {
 	q.SettlementQuantity = new(Quantity10Choice)
@@ -57,8 +55,7 @@ func (q *QuantityAndAccount47) AddSafekeepingPlace() *SafeKeepingPlace2 {
 }
 
 func (q *QuantityAndAccount47) AddQuantityBreakdown() *QuantityBreakdown38 {
-	newValue := new (QuantityBreakdown38)
+	newValue := new(QuantityBreakdown38)
 	q.QuantityBreakdown = append(q.QuantityBreakdown, newValue)
 	return newValue
 }
-

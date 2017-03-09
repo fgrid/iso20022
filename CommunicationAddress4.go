@@ -8,9 +8,7 @@ type CommunicationAddress4 struct {
 
 	// Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.
 	URLAddress *Max256Text `xml:"URLAdr,omitempty"`
-
 }
-
 
 func (c *CommunicationAddress4) SetEmailAddress(value string) {
 	c.EmailAddress = (*Max256Text)(&value)
@@ -19,4 +17,3 @@ func (c *CommunicationAddress4) SetEmailAddress(value string) {
 func (c *CommunicationAddress4) SetURLAddress(value string) {
 	c.URLAddress = (*Max256Text)(&value)
 }
-

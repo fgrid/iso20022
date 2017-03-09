@@ -68,9 +68,7 @@ type IndividualPerson11 struct {
 
 	// Identification information to be either inserted or deleted.
 	ModifiedOtherIdentification []*ModificationScope2 `xml:"ModfdOthrId,omitempty"`
-
 }
-
 
 func (i *IndividualPerson11) SetNamePrefix(value string) {
 	i.NamePrefix = (*NamePrefix1Code)(&value)
@@ -142,13 +140,13 @@ func (i *IndividualPerson11) SetEmployingCompany(value string) {
 }
 
 func (i *IndividualPerson11) AddModifiedPostalAddress() *ModificationScope1 {
-	newValue := new (ModificationScope1)
+	newValue := new(ModificationScope1)
 	i.ModifiedPostalAddress = append(i.ModifiedPostalAddress, newValue)
 	return newValue
 }
 
 func (i *IndividualPerson11) AddModifiedCitizenship() *ModificationScope3 {
-	newValue := new (ModificationScope3)
+	newValue := new(ModificationScope3)
 	i.ModifiedCitizenship = append(i.ModifiedCitizenship, newValue)
 	return newValue
 }
@@ -164,8 +162,7 @@ func (i *IndividualPerson11) AddSecondaryCommunicationAddress() *CommunicationAd
 }
 
 func (i *IndividualPerson11) AddModifiedOtherIdentification() *ModificationScope2 {
-	newValue := new (ModificationScope2)
+	newValue := new(ModificationScope2)
 	i.ModifiedOtherIdentification = append(i.ModifiedOtherIdentification, newValue)
 	return newValue
 }
-

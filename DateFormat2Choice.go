@@ -8,9 +8,7 @@ type DateFormat2Choice struct {
 
 	// Indicates that date and time are unknown.
 	DateCode *DateType1Code `xml:"DtCd"`
-
 }
-
 
 func (d *DateFormat2Choice) SetDate(value string) {
 	d.Date = (*ISODateTime)(&value)
@@ -19,4 +17,3 @@ func (d *DateFormat2Choice) SetDate(value string) {
 func (d *DateFormat2Choice) SetDateCode(value string) {
 	d.DateCode = (*DateType1Code)(&value)
 }
-

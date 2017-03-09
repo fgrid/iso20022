@@ -8,9 +8,7 @@ type ExpectedCollateralMovement1 struct {
 
 	// Type of collateral that will be returned.
 	Return []*CollateralType1Code `xml:"Rtr,omitempty"`
-
 }
-
 
 func (e *ExpectedCollateralMovement1) AddDelivery(value string) {
 	e.Delivery = append(e.Delivery, (*CollateralType1Code)(&value))
@@ -19,4 +17,3 @@ func (e *ExpectedCollateralMovement1) AddDelivery(value string) {
 func (e *ExpectedCollateralMovement1) AddReturn(value string) {
 	e.Return = append(e.Return, (*CollateralType1Code)(&value))
 }
-

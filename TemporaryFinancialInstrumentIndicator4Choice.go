@@ -8,9 +8,7 @@ type TemporaryFinancialInstrumentIndicator4Choice struct {
 
 	// Proprietary code to specify whether the security is a temporary security.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (t *TemporaryFinancialInstrumentIndicator4Choice) SetTemporaryIndicator(value string) {
 	t.TemporaryIndicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (t *TemporaryFinancialInstrumentIndicator4Choice) AddProprietary() *Generic
 	t.Proprietary = new(GenericIdentification47)
 	return t.Proprietary
 }
-

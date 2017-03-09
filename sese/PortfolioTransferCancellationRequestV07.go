@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400107 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.014.001.07 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:sese.014.001.07 Document"`
 	Message *PortfolioTransferCancellationRequestV07 `xml:"PrtflTrfCxlReq"`
 }
 
@@ -42,9 +42,7 @@ type PortfolioTransferCancellationRequestV07 struct {
 
 	// Identifies the market practice to which the message conforms.
 	MarketPracticeVersion *iso20022.MarketPracticeVersion1 `xml:"MktPrctcVrsn,omitempty"`
-
 }
-
 
 func (p *PortfolioTransferCancellationRequestV07) AddMessageReference() *iso20022.MessageIdentification1 {
 	p.MessageReference = new(iso20022.MessageIdentification1)
@@ -75,4 +73,3 @@ func (p *PortfolioTransferCancellationRequestV07) AddMarketPracticeVersion() *is
 	p.MarketPracticeVersion = new(iso20022.MarketPracticeVersion1)
 	return p.MarketPracticeVersion
 }
-

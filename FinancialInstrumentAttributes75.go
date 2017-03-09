@@ -78,7 +78,7 @@ type FinancialInstrumentAttributes75 struct {
 	// Interest rate applicable to the next interest payment period in relation to variable rate instruments.
 	NextInterestRate *PercentageRate `xml:"NxtIntrstRate,omitempty"`
 
-	// Specifies the reference rate for fixed income instruments where the 
+	// Specifies the reference rate for fixed income instruments where the
 	// price of the instrument is indexed to the price of an underlying benchmark.
 	IndexRateBasis *PercentageRate `xml:"IndxRateBsis,omitempty"`
 
@@ -126,9 +126,7 @@ type FinancialInstrumentAttributes75 struct {
 
 	// Provides additional information about the financial instrument in narrative form.
 	FinancialInstrumentAttributeAdditionalDetails *RestrictedFINXMax350Text `xml:"FinInstrmAttrAddtlDtls,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentAttributes75) AddPlaceOfListing() *MarketIdentification4Choice {
 	f.PlaceOfListing = new(MarketIdentification4Choice)
@@ -254,7 +252,7 @@ func (f *FinancialInstrumentAttributes75) AddPoolNumber() *GenericIdentification
 }
 
 func (f *FinancialInstrumentAttributes75) AddQuantityBreakdown() *QuantityBreakdown33 {
-	newValue := new (QuantityBreakdown33)
+	newValue := new(QuantityBreakdown33)
 	f.QuantityBreakdown = append(f.QuantityBreakdown, newValue)
 	return newValue
 }
@@ -307,7 +305,7 @@ func (f *FinancialInstrumentAttributes75) AddContractSize() *FinancialInstrument
 }
 
 func (f *FinancialInstrumentAttributes75) AddUnderlyingFinancialInstrumentIdentification() *SecurityIdentification32 {
-	newValue := new (SecurityIdentification32)
+	newValue := new(SecurityIdentification32)
 	f.UnderlyingFinancialInstrumentIdentification = append(f.UnderlyingFinancialInstrumentIdentification, newValue)
 	return newValue
 }
@@ -315,4 +313,3 @@ func (f *FinancialInstrumentAttributes75) AddUnderlyingFinancialInstrumentIdenti
 func (f *FinancialInstrumentAttributes75) SetFinancialInstrumentAttributeAdditionalDetails(value string) {
 	f.FinancialInstrumentAttributeAdditionalDetails = (*RestrictedFINXMax350Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type CardPaymentTransactionResult1 struct {
 
 	// Value assigned by the authorising party.
 	AuthorisationCode *Min6Max8Text `xml:"AuthstnCd,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransactionResult1) AddAuthorisationEntity() *GenericIdentification33 {
 	c.AuthorisationEntity = new(GenericIdentification33)
@@ -28,4 +26,3 @@ func (c *CardPaymentTransactionResult1) AddResponseToAuthorisation() *ResponseTy
 func (c *CardPaymentTransactionResult1) SetAuthorisationCode(value string) {
 	c.AuthorisationCode = (*Min6Max8Text)(&value)
 }
-

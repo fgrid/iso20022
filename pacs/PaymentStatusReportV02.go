@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.002.001.02 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.002.001.02 Document"`
 	Message *PaymentStatusReportV02 `xml:"pacs.002.001.02"`
 }
 
@@ -23,7 +23,7 @@ func (d *Document00200102) AddMessage() *PaymentStatusReportV02 {
 // The PaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (e.g. PaymentCancellationRequest).
 // The PaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
 // The PaymentStatusReport message can be used in domestic and cross-border scenarios.
-// The PaymentStatusReport message exchanged between agents is identified in the schema as follows: 
+// The PaymentStatusReport message exchanged between agents is identified in the schema as follows:
 // urn:iso:std:iso:20022:tech:xsd:pacs.002.001.02
 type PaymentStatusReportV02 struct {
 
@@ -35,9 +35,7 @@ type PaymentStatusReportV02 struct {
 
 	// Information concerning the original transactions, to which the status report message refers.
 	TransactionInformationAndStatus []*iso20022.PaymentTransactionInformation1 `xml:"TxInfAndSts,omitempty"`
-
 }
-
 
 func (p *PaymentStatusReportV02) AddGroupHeader() *iso20022.GroupHeader5 {
 	p.GroupHeader = new(iso20022.GroupHeader5)
@@ -50,8 +48,7 @@ func (p *PaymentStatusReportV02) AddOriginalGroupInformationAndStatus() *iso2002
 }
 
 func (p *PaymentStatusReportV02) AddTransactionInformationAndStatus() *iso20022.PaymentTransactionInformation1 {
-	newValue := new (iso20022.PaymentTransactionInformation1)
+	newValue := new(iso20022.PaymentTransactionInformation1)
 	p.TransactionInformationAndStatus = append(p.TransactionInformationAndStatus, newValue)
 	return newValue
 }
-

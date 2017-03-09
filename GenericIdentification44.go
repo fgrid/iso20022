@@ -17,9 +17,7 @@ type GenericIdentification44 struct {
 
 	// Date at which the identification expires.
 	ExpiryDate *ISODate `xml:"XpryDt,omitempty"`
-
 }
-
 
 func (g *GenericIdentification44) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -41,4 +39,3 @@ func (g *GenericIdentification44) SetIssueDate(value string) {
 func (g *GenericIdentification44) SetExpiryDate(value string) {
 	g.ExpiryDate = (*ISODate)(&value)
 }
-

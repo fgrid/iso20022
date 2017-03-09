@@ -11,9 +11,7 @@ type ConditionallyAcceptedStatus1 struct {
 
 	// Proprietary identification of a reason for a conditionally accepted status in the report.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (c *ConditionallyAcceptedStatus1) SetNoReason(value string) {
 	c.NoReason = (*NoReasonCode)(&value)
@@ -28,4 +26,3 @@ func (c *ConditionallyAcceptedStatus1) AddDataSourceScheme() *GenericIdentificat
 	c.DataSourceScheme = new(GenericIdentification1)
 	return c.DataSourceScheme
 }
-

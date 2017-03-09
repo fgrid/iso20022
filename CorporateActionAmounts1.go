@@ -152,9 +152,7 @@ type CorporateActionAmounts1 struct {
 
 	// Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.
 	ChargesAmount *ActiveCurrencyAndAmount `xml:"ChrgsAmt,omitempty"`
-
 }
-
 
 func (c *CorporateActionAmounts1) SetGrossCashAmount(value, currency string) {
 	c.GrossCashAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -355,4 +353,3 @@ func (c *CorporateActionAmounts1) SetShippingFeesAmount(value, currency string) 
 func (c *CorporateActionAmounts1) SetChargesAmount(value, currency string) {
 	c.ChargesAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

@@ -8,9 +8,7 @@ type InstructionStatus1Choice struct {
 
 	// Status applying to individual instructions of a MeetingInstruction.
 	DetailedInstructionStatus []*DetailedInstructionStatus1 `xml:"DtldInstrSts"`
-
 }
-
 
 func (i *InstructionStatus1Choice) AddGlobalInstructionStatus() *InstructionStatus2Choice {
 	i.GlobalInstructionStatus = new(InstructionStatus2Choice)
@@ -18,8 +16,7 @@ func (i *InstructionStatus1Choice) AddGlobalInstructionStatus() *InstructionStat
 }
 
 func (i *InstructionStatus1Choice) AddDetailedInstructionStatus() *DetailedInstructionStatus1 {
-	newValue := new (DetailedInstructionStatus1)
+	newValue := new(DetailedInstructionStatus1)
 	i.DetailedInstructionStatus = append(i.DetailedInstructionStatus, newValue)
 	return newValue
 }
-

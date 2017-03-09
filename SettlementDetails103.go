@@ -23,12 +23,10 @@ type SettlementDetails103 struct {
 
 	// Specifies the stamp duty type or exemption reason applicable to the settlement transaction.
 	StampDutyTaxBasis *GenericIdentification47 `xml:"StmpDtyTaxBsis,omitempty"`
-
 }
 
-
 func (s *SettlementDetails103) AddSettlementTransactionCondition() *SettlementTransactionCondition21Choice {
-	newValue := new (SettlementTransactionCondition21Choice)
+	newValue := new(SettlementTransactionCondition21Choice)
 	s.SettlementTransactionCondition = append(s.SettlementTransactionCondition, newValue)
 	return newValue
 }
@@ -62,4 +60,3 @@ func (s *SettlementDetails103) AddStampDutyTaxBasis() *GenericIdentification47 {
 	s.StampDutyTaxBasis = new(GenericIdentification47)
 	return s.StampDutyTaxBasis
 }
-

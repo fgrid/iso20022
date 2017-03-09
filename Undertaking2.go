@@ -6,7 +6,7 @@ type Undertaking2 struct {
 	// Undertaking name.
 	Name *UndertakingName1Code `xml:"Nm,omitempty"`
 
-	// Party in whose favour the counter-undertaking is issued. 
+	// Party in whose favour the counter-undertaking is issued.
 	Beneficiary *PartyIdentification43 `xml:"Bnfcry,omitempty"`
 
 	// Details related to the expiry terms of the counter-undertaking.
@@ -26,9 +26,7 @@ type Undertaking2 struct {
 
 	// Additional information related to the counter-undertaking.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (u *Undertaking2) SetName(value string) {
 	u.Name = (*UndertakingName1Code)(&value)
@@ -65,4 +63,3 @@ func (u *Undertaking2) SetStandardClaimDocumentIndicator(value string) {
 func (u *Undertaking2) AddAdditionalInformation(value string) {
 	u.AdditionalInformation = append(u.AdditionalInformation, (*Max2000Text)(&value))
 }
-

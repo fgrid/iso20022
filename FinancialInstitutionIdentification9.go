@@ -11,9 +11,7 @@ type FinancialInstitutionIdentification9 struct {
 
 	// Unique identification of an agent, as assigned by an institution, using an identification scheme.
 	Other *GenericFinancialIdentification1 `xml:"Othr,omitempty"`
-
 }
-
 
 func (f *FinancialInstitutionIdentification9) SetBICFI(value string) {
 	f.BICFI = (*BICFIIdentifier)(&value)
@@ -28,4 +26,3 @@ func (f *FinancialInstitutionIdentification9) AddOther() *GenericFinancialIdenti
 	f.Other = new(GenericFinancialIdentification1)
 	return f.Other
 }
-

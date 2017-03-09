@@ -11,9 +11,7 @@ type PowerOfAttorneyRequirements3 struct {
 
 	// Date by which the requested documents must be provided.
 	DocumentSubmissionDeadline *DateFormat29Choice `xml:"DocSubmissnDdln,omitempty"`
-
 }
-
 
 func (p *PowerOfAttorneyRequirements3) AddLegalRequirement(value string) {
 	p.LegalRequirement = append(p.LegalRequirement, (*PowerOfAttorneyLegalisation1Code)(&value))
@@ -27,4 +25,3 @@ func (p *PowerOfAttorneyRequirements3) AddDocumentSubmissionDeadline() *DateForm
 	p.DocumentSubmissionDeadline = new(DateFormat29Choice)
 	return p.DocumentSubmissionDeadline
 }
-

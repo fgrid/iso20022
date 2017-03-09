@@ -8,9 +8,7 @@ type InformationDistribution1Choice struct {
 
 	// Information distribution expressed as a code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (i *InformationDistribution1Choice) SetCode(value string) {
 	i.Code = (*InformationDistribution2Code)(&value)
@@ -20,4 +18,3 @@ func (i *InformationDistribution1Choice) AddProprietary() *GenericIdentification
 	i.Proprietary = new(GenericIdentification47)
 	return i.Proprietary
 }
-

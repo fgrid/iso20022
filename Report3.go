@@ -23,9 +23,7 @@ type Report3 struct {
 
 	// Notifies the type of report transmitted.
 	NoticeType *GenericIdentification38 `xml:"NtceTp,omitempty"`
-
 }
-
 
 func (r *Report3) SetReportNumber(value string) {
 	r.ReportNumber = (*Max5NumericText)(&value)
@@ -59,4 +57,3 @@ func (r *Report3) AddNoticeType() *GenericIdentification38 {
 	r.NoticeType = new(GenericIdentification38)
 	return r.NoticeType
 }
-

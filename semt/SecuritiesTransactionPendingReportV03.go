@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.001.03 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.001.03 Document"`
 	Message *SecuritiesTransactionPendingReportV03 `xml:"SctiesTxPdgRpt"`
 }
 
@@ -50,9 +50,7 @@ type SecuritiesTransactionPendingReportV03 struct {
 
 	// Details of the transactions reported.
 	Transactions []*iso20022.Transaction19 `xml:"Txs,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionPendingReportV03) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -75,14 +73,13 @@ func (s *SecuritiesTransactionPendingReportV03) AddSafekeepingAccount() *iso2002
 }
 
 func (s *SecuritiesTransactionPendingReportV03) AddStatus() *iso20022.StatusAndReason9 {
-	newValue := new (iso20022.StatusAndReason9)
+	newValue := new(iso20022.StatusAndReason9)
 	s.Status = append(s.Status, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTransactionPendingReportV03) AddTransactions() *iso20022.Transaction19 {
-	newValue := new (iso20022.Transaction19)
+	newValue := new(iso20022.Transaction19)
 	s.Transactions = append(s.Transactions, newValue)
 	return newValue
 }
-

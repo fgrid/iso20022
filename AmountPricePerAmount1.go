@@ -1,9 +1,9 @@
 package iso20022
 
 // Specifies a ratio: Amount price per amount.
-	// 
-	// Example:
-	// ISIN US629377AS17. Repurchase USD1087.17 cash for every USD1000 stock (NRG Energy Inc 8% Senior Notes 15/12/13).
+//
+// Example:
+// ISIN US629377AS17. Repurchase USD1087.17 cash for every USD1000 stock (NRG Energy Inc 8% Senior Notes 15/12/13).
 type AmountPricePerAmount1 struct {
 
 	// Type of amount price.
@@ -14,9 +14,7 @@ type AmountPricePerAmount1 struct {
 
 	// The amount.
 	Amount *ActiveCurrencyAnd13DecimalAmount `xml:"Amt"`
-
 }
-
 
 func (a *AmountPricePerAmount1) AddAmountPriceType() *AmountPriceType1FormatChoice {
 	a.AmountPriceType = new(AmountPriceType1FormatChoice)
@@ -30,4 +28,3 @@ func (a *AmountPricePerAmount1) SetPriceValue(value, currency string) {
 func (a *AmountPricePerAmount1) SetAmount(value, currency string) {
 	a.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

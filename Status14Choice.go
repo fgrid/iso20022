@@ -8,17 +8,14 @@ type Status14Choice struct {
 
 	// Status of the order is rejected.
 	Rejected []*RejectionReason16 `xml:"Rjctd"`
-
 }
-
 
 func (s *Status14Choice) SetStatus(value string) {
 	s.Status = (*AccountManagementStatus1Code)(&value)
 }
 
 func (s *Status14Choice) AddRejected() *RejectionReason16 {
-	newValue := new (RejectionReason16)
+	newValue := new(RejectionReason16)
 	s.Rejected = append(s.Rejected, newValue)
 	return newValue
 }
-

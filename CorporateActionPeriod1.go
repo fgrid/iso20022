@@ -17,9 +17,7 @@ type CorporateActionPeriod1 struct {
 
 	// Period during which the price of a security is determined.
 	PriceCalculationPeriod *Period1 `xml:"PricClctnPrd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod1) AddActionPeriod() *Period1 {
 	c.ActionPeriod = new(Period1)
@@ -45,4 +43,3 @@ func (c *CorporateActionPeriod1) AddPriceCalculationPeriod() *Period1 {
 	c.PriceCalculationPeriod = new(Period1)
 	return c.PriceCalculationPeriod
 }
-

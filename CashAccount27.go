@@ -13,7 +13,7 @@ type CashAccount27 struct {
 	Currency *ActiveOrHistoricCurrencyCode `xml:"Ccy,omitempty"`
 
 	// Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.
-	// 
+	//
 	// Usage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.
 	Name *Max70Text `xml:"Nm,omitempty"`
 
@@ -21,11 +21,9 @@ type CashAccount27 struct {
 	Owner *PartyIdentification41 `xml:"Ownr,omitempty"`
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
-	// 
+	//
 	Servicer *BranchAndFinancialInstitutionIdentification5 `xml:"Svcr,omitempty"`
-
 }
-
 
 func (c *CashAccount27) AddIdentification() *AccountIdentification4Choice {
 	c.Identification = new(AccountIdentification4Choice)
@@ -54,4 +52,3 @@ func (c *CashAccount27) AddServicer() *BranchAndFinancialInstitutionIdentificati
 	c.Servicer = new(BranchAndFinancialInstitutionIdentification5)
 	return c.Servicer
 }
-

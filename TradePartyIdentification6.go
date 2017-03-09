@@ -10,11 +10,9 @@ type TradePartyIdentification6 struct {
 	TradeParty *PartyIdentification73Choice `xml:"TradPty,omitempty"`
 
 	// Identifies the fund that is one of the parties in the foreign exchange trade.
-	// 
+	//
 	FundIdentification []*FundIdentification4 `xml:"FndId,omitempty"`
-
 }
-
 
 func (t *TradePartyIdentification6) AddSubmittingParty() *PartyIdentification73Choice {
 	t.SubmittingParty = new(PartyIdentification73Choice)
@@ -27,8 +25,7 @@ func (t *TradePartyIdentification6) AddTradeParty() *PartyIdentification73Choice
 }
 
 func (t *TradePartyIdentification6) AddFundIdentification() *FundIdentification4 {
-	newValue := new (FundIdentification4)
+	newValue := new(FundIdentification4)
 	t.FundIdentification = append(t.FundIdentification, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.016.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.016.001.01 Document"`
 	Message *DemandRefusalNotificationV01 `xml:"DmndRfslNtfctn"`
 }
 
@@ -24,12 +24,10 @@ type DemandRefusalNotificationV01 struct {
 
 	// Digital signature of the notification.
 	DigitalSignature *iso20022.PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
 
-
 func (d *DemandRefusalNotificationV01) AddDemandRefusalNotificationDetails() *iso20022.DemandRefusal1 {
-	newValue := new (iso20022.DemandRefusal1)
+	newValue := new(iso20022.DemandRefusal1)
 	d.DemandRefusalNotificationDetails = append(d.DemandRefusalNotificationDetails, newValue)
 	return newValue
 }
@@ -38,4 +36,3 @@ func (d *DemandRefusalNotificationV01) AddDigitalSignature() *iso20022.PartyAndS
 	d.DigitalSignature = new(iso20022.PartyAndSignature2)
 	return d.DigitalSignature
 }
-

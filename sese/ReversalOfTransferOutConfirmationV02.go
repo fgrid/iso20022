@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.004.001.02 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:sese.004.001.02 Document"`
 	Message *ReversalOfTransferOutConfirmationV02 `xml:"RvslOfTrfOutConfV02"`
 }
 
@@ -26,7 +26,7 @@ func (d *Document00400102) AddMessage() *ReversalOfTransferOutConfirmationV02 {
 // The message identification of the TransferOutConfirmation message in which the transfer out confirmation was conveyed may also be quoted in PreviousReference. The message identification of the TransferOutInstruction message in which the transfer out instruction was conveyed may also be quoted in RelatedReference.
 type ReversalOfTransferOutConfirmationV02 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message that was previously sent.
@@ -46,9 +46,7 @@ type ReversalOfTransferOutConfirmationV02 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (r *ReversalOfTransferOutConfirmationV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -84,4 +82,3 @@ func (r *ReversalOfTransferOutConfirmationV02) AddCopyDetails() *iso20022.CopyIn
 	r.CopyDetails = new(iso20022.CopyInformation2)
 	return r.CopyDetails
 }
-

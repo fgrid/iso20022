@@ -14,9 +14,7 @@ type TotalTransactions2 struct {
 
 	// Specifies the total number and sum of entries per bank transaction code.
 	TotalEntriesPerBankTransactionCode []*TotalsPerBankTransactionCode2 `xml:"TtlNtriesPerBkTxCd,omitempty"`
-
 }
-
 
 func (t *TotalTransactions2) AddTotalEntries() *NumberAndSumOfTransactions2 {
 	t.TotalEntries = new(NumberAndSumOfTransactions2)
@@ -34,8 +32,7 @@ func (t *TotalTransactions2) AddTotalDebitEntries() *NumberAndSumOfTransactions1
 }
 
 func (t *TotalTransactions2) AddTotalEntriesPerBankTransactionCode() *TotalsPerBankTransactionCode2 {
-	newValue := new (TotalsPerBankTransactionCode2)
+	newValue := new(TotalsPerBankTransactionCode2)
 	t.TotalEntriesPerBankTransactionCode = append(t.TotalEntriesPerBankTransactionCode, newValue)
 	return newValue
 }
-

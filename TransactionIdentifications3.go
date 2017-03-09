@@ -11,9 +11,7 @@ type TransactionIdentifications3 struct {
 
 	// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
 	MarketInfrastructureTransactionIdentification *Max35Text `xml:"MktInfrstrctrTxId,omitempty"`
-
 }
-
 
 func (t *TransactionIdentifications3) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (t *TransactionIdentifications3) SetAccountServicerTransactionIdentificatio
 func (t *TransactionIdentifications3) SetMarketInfrastructureTransactionIdentification(value string) {
 	t.MarketInfrastructureTransactionIdentification = (*Max35Text)(&value)
 }
-

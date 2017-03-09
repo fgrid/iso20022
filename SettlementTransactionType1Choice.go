@@ -8,9 +8,7 @@ type SettlementTransactionType1Choice struct {
 
 	// Securities transaction type expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlementTransactionType1Choice) SetCode(value string) {
 	s.Code = (*SettlementTransactionType7Code)(&value)
@@ -20,4 +18,3 @@ func (s *SettlementTransactionType1Choice) AddProprietary() *GenericIdentificati
 	s.Proprietary = new(GenericIdentification38)
 	return s.Proprietary
 }
-

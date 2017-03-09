@@ -3,7 +3,7 @@ package iso20022
 // Information about the wording for a demand guarantee, standby letter of credit or other undertaking.
 type UndertakingWording1 struct {
 
-	// Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. 
+	// Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions.
 	ModelForm *ModelFormIdentification1 `xml:"MdlForm,omitempty"`
 
 	// Language of the standard wording provided by the issuer.
@@ -11,9 +11,7 @@ type UndertakingWording1 struct {
 
 	// Terms and conditions of the undertaking.
 	UndertakingTermsAndConditions []*Narrative1 `xml:"UdrtkgTermsAndConds,omitempty"`
-
 }
-
 
 func (u *UndertakingWording1) AddModelForm() *ModelFormIdentification1 {
 	u.ModelForm = new(ModelFormIdentification1)
@@ -25,8 +23,7 @@ func (u *UndertakingWording1) SetRequestedWordingLanguage(value string) {
 }
 
 func (u *UndertakingWording1) AddUndertakingTermsAndConditions() *Narrative1 {
-	newValue := new (Narrative1)
+	newValue := new(Narrative1)
 	u.UndertakingTermsAndConditions = append(u.UndertakingTermsAndConditions, newValue)
 	return newValue
 }
-

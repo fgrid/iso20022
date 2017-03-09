@@ -8,9 +8,7 @@ type TransportMeans6 struct {
 
 	// Specifies the different movements and places and their role in a multimodal conveyance of goods.
 	MultimodalTransport *MultimodalTransport3 `xml:"MltmdlTrnsprt,omitempty"`
-
 }
-
 
 func (t *TransportMeans6) AddIndividualTransport() *SingleTransport8 {
 	t.IndividualTransport = new(SingleTransport8)
@@ -21,4 +19,3 @@ func (t *TransportMeans6) AddMultimodalTransport() *MultimodalTransport3 {
 	t.MultimodalTransport = new(MultimodalTransport3)
 	return t.MultimodalTransport
 }
-

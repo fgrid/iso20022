@@ -23,9 +23,7 @@ type DirectDebitMandate2 struct {
 
 	// Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.
 	MandateIdentification *Max35Text `xml:"MndtId,omitempty"`
-
 }
-
 
 func (d *DirectDebitMandate2) AddDebtorAccountIdentification() *CashAccountIdentification1Choice {
 	d.DebtorAccountIdentification = new(CashAccountIdentification1Choice)
@@ -59,4 +57,3 @@ func (d *DirectDebitMandate2) SetRegistrationIdentification(value string) {
 func (d *DirectDebitMandate2) SetMandateIdentification(value string) {
 	d.MandateIdentification = (*Max35Text)(&value)
 }
-

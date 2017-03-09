@@ -11,9 +11,7 @@ type PaymentDateRange1 struct {
 
 	// Latest date whereby the amount must be paid.
 	DueDate *ISODate `xml:"DueDt,omitempty"`
-
 }
-
 
 func (p *PaymentDateRange1) SetPaymentScheduleIdentification(value string) {
 	p.PaymentScheduleIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (p *PaymentDateRange1) SetExpectedDate(value string) {
 func (p *PaymentDateRange1) SetDueDate(value string) {
 	p.DueDate = (*ISODate)(&value)
 }
-

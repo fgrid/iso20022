@@ -7,7 +7,7 @@ import (
 )
 
 type Document02900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.029.001.01 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:seev.029.001.01 Document"`
 	Message *AgentCADeactivationCancellationRequestV01 `xml:"AgtCADeactvtnCxlReq"`
 }
 
@@ -35,9 +35,7 @@ type AgentCADeactivationCancellationRequestV01 struct {
 
 	// Details of the deactivation instruction to be cancelled.
 	DeactivationInstructionDetails *iso20022.CorporateActionDeactivationInstruction1 `xml:"DeactvtnInstrDtls,omitempty"`
-
 }
-
 
 func (a *AgentCADeactivationCancellationRequestV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -58,4 +56,3 @@ func (a *AgentCADeactivationCancellationRequestV01) AddDeactivationInstructionDe
 	a.DeactivationInstructionDetails = new(iso20022.CorporateActionDeactivationInstruction1)
 	return a.DeactivationInstructionDetails
 }
-

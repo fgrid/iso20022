@@ -11,9 +11,7 @@ type ReportStatusAndReason2 struct {
 
 	// Indicates that the cancellation is rejected and provides a reason why.
 	Rejected []*RejectedCancellationStatusReason1Choice `xml:"Rjctd"`
-
 }
-
 
 func (r *ReportStatusAndReason2) SetRelatedReference(value string) {
 	r.RelatedReference = (*Max35Text)(&value)
@@ -24,8 +22,7 @@ func (r *ReportStatusAndReason2) SetStatus(value string) {
 }
 
 func (r *ReportStatusAndReason2) AddRejected() *RejectedCancellationStatusReason1Choice {
-	newValue := new (RejectedCancellationStatusReason1Choice)
+	newValue := new(RejectedCancellationStatusReason1Choice)
 	r.Rejected = append(r.Rejected, newValue)
 	return newValue
 }
-

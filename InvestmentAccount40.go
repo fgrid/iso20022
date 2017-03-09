@@ -38,12 +38,10 @@ type InvestmentAccount40 struct {
 
 	// Sub-accounts that are grouped in a master or omnibus account.
 	SubAccountDetails *SubAccount1 `xml:"SubAcctDtls,omitempty"`
-
 }
 
-
 func (i *InvestmentAccount40) AddOwnerIdentification() *PartyIdentification2Choice {
-	newValue := new (PartyIdentification2Choice)
+	newValue := new(PartyIdentification2Choice)
 	i.OwnerIdentification = append(i.OwnerIdentification, newValue)
 	return newValue
 }
@@ -62,7 +60,7 @@ func (i *InvestmentAccount40) SetAccountDesignation(value string) {
 }
 
 func (i *InvestmentAccount40) AddIntermediaryInformation() *Intermediary25 {
-	newValue := new (Intermediary25)
+	newValue := new(Intermediary25)
 	i.IntermediaryInformation = append(i.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -97,4 +95,3 @@ func (i *InvestmentAccount40) AddSubAccountDetails() *SubAccount1 {
 	i.SubAccountDetails = new(SubAccount1)
 	return i.SubAccountDetails
 }
-

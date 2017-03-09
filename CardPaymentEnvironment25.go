@@ -14,9 +14,7 @@ type CardPaymentEnvironment25 struct {
 
 	// Data related to the components of the POI (Point Of Interaction) that have been performed the payment transactions.
 	POIComponent []*PointOfInteractionComponent4 `xml:"POICmpnt,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment25) AddAcquirer() *Acquirer2 {
 	c.Acquirer = new(Acquirer2)
@@ -34,8 +32,7 @@ func (c *CardPaymentEnvironment25) AddPOIIdentification() *GenericIdentification
 }
 
 func (c *CardPaymentEnvironment25) AddPOIComponent() *PointOfInteractionComponent4 {
-	newValue := new (PointOfInteractionComponent4)
+	newValue := new(PointOfInteractionComponent4)
 	c.POIComponent = append(c.POIComponent, newValue)
 	return newValue
 }
-

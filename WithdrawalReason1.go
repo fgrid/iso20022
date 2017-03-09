@@ -8,9 +8,7 @@ type WithdrawalReason1 struct {
 
 	// Further withdrawal reason information expressed as a code.
 	WithdrawalReasonSubCode *Max4Text `xml:"WdrwlRsnSubCd,omitempty"`
-
 }
-
 
 func (w *WithdrawalReason1) SetWithdrawalReasonCode(value string) {
 	w.WithdrawalReasonCode = (*WithdrawalReason1Code)(&value)
@@ -19,4 +17,3 @@ func (w *WithdrawalReason1) SetWithdrawalReasonCode(value string) {
 func (w *WithdrawalReason1) SetWithdrawalReasonSubCode(value string) {
 	w.WithdrawalReasonSubCode = (*Max4Text)(&value)
 }
-

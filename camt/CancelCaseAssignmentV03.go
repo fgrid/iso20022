@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.032.001.03 Document"`
+	XMLName xml.Name                 `xml:"urn:iso:std:iso:20022:tech:xsd:camt.032.001.03 Document"`
 	Message *CancelCaseAssignmentV03 `xml:"CclCaseAssgnmt"`
 }
 
@@ -41,9 +41,7 @@ type CancelCaseAssignmentV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CancelCaseAssignmentV03) AddAssignment() *iso20022.CaseAssignment3 {
 	c.Assignment = new(iso20022.CaseAssignment3)
@@ -56,8 +54,7 @@ func (c *CancelCaseAssignmentV03) AddCase() *iso20022.Case3 {
 }
 
 func (c *CancelCaseAssignmentV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

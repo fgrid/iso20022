@@ -8,9 +8,7 @@ type IdentificationVerification2 struct {
 
 	// Party and/or account identification information for which verification is requested.
 	PartyAndAccountIdentification *IdentificationInformation2 `xml:"PtyAndAcctId"`
-
 }
-
 
 func (i *IdentificationVerification2) SetIdentification(value string) {
 	i.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (i *IdentificationVerification2) AddPartyAndAccountIdentification() *Identi
 	i.PartyAndAccountIdentification = new(IdentificationInformation2)
 	return i.PartyAndAccountIdentification
 }
-

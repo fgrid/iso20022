@@ -14,9 +14,7 @@ type BuyIn4 struct {
 
 	// Identifies the date by which the buy-in operation is reversed by the CCP.
 	BuyInReversionDate *ISODate `xml:"BuyInRvrsnDt,omitempty"`
-
 }
-
 
 func (b *BuyIn4) SetWarningIndicator(value string) {
 	b.WarningIndicator = (*YesNoIndicator)(&value)
@@ -34,4 +32,3 @@ func (b *BuyIn4) SetCancellationLimitDate(value string) {
 func (b *BuyIn4) SetBuyInReversionDate(value string) {
 	b.BuyInReversionDate = (*ISODate)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document04100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.041.001.01 Document"`
+	XMLName xml.Name                                                      `xml:"urn:iso:std:iso:20022:tech:xsd:seev.041.001.01 Document"`
 	Message *CorporateActionInstructionCancellationRequestStatusAdviceV01 `xml:"CorpActnInstrCxlReqStsAdvc"`
 }
 
@@ -57,9 +57,7 @@ type CorporateActionInstructionCancellationRequestStatusAdviceV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	c.Identification = new(iso20022.DocumentIdentification11)
@@ -72,7 +70,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddInstru
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddOtherDocumentIdentification() *iso20022.DocumentIdentification14 {
-	newValue := new (iso20022.DocumentIdentification14)
+	newValue := new(iso20022.DocumentIdentification14)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -83,7 +81,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddCorpor
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddInstructionCancellationRequestStatus() *iso20022.InstructionCancellationRequestStatus1Choice {
-	newValue := new (iso20022.InstructionCancellationRequestStatus1Choice)
+	newValue := new(iso20022.InstructionCancellationRequestStatus1Choice)
 	c.InstructionCancellationRequestStatus = append(c.InstructionCancellationRequestStatus, newValue)
 	return newValue
 }
@@ -109,8 +107,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddMessag
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

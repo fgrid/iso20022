@@ -23,9 +23,7 @@ type PostalAddress13 struct {
 
 	// Nation with its own government, occupying a particular territory.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PostalAddress13) AddAddressLine(value string) {
 	p.AddressLine = append(p.AddressLine, (*Max70Text)(&value))
@@ -54,4 +52,3 @@ func (p *PostalAddress13) SetCountrySubDivision(value string) {
 func (p *PostalAddress13) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

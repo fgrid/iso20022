@@ -44,9 +44,7 @@ type ConfirmationParties2 struct {
 
 	// Party involved  in a legal proceeding, agreement or other transaction.
 	TradeBeneficiaryParty *ConfirmationPartyDetails3 `xml:"TradBnfcryPty,omitempty"`
-
 }
-
 
 func (c *ConfirmationParties2) AddBuyer() *ConfirmationPartyDetails2 {
 	c.Buyer = new(ConfirmationPartyDetails2)
@@ -117,4 +115,3 @@ func (c *ConfirmationParties2) AddTradeBeneficiaryParty() *ConfirmationPartyDeta
 	c.TradeBeneficiaryParty = new(ConfirmationPartyDetails3)
 	return c.TradeBeneficiaryParty
 }
-

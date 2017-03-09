@@ -14,16 +14,14 @@ type DigestedData1 struct {
 
 	// Result of data-digesting process.
 	Digest *Max140Text `xml:"Dgst"`
-
 }
-
 
 func (d *DigestedData1) SetVersion(value string) {
 	d.Version = (*Number)(&value)
 }
 
 func (d *DigestedData1) AddDigestAlgorithm() *AlgorithmIdentification1 {
-	newValue := new (AlgorithmIdentification1)
+	newValue := new(AlgorithmIdentification1)
 	d.DigestAlgorithm = append(d.DigestAlgorithm, newValue)
 	return newValue
 }
@@ -36,4 +34,3 @@ func (d *DigestedData1) AddEncapsulatedContent() *EncapsulatedContent1 {
 func (d *DigestedData1) SetDigest(value string) {
 	d.Digest = (*Max140Text)(&value)
 }
-

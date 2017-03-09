@@ -17,9 +17,7 @@ type EventInformation5 struct {
 
 	// Provides information about the identification of the last notification.
 	LastNotificationIdentification *NotificationIdentification1 `xml:"LastNtfctnId,omitempty"`
-
 }
-
 
 func (e *EventInformation5) SetCorporateActionEventIdentification(value string) {
 	e.CorporateActionEventIdentification = (*Max35Text)(&value)
@@ -43,4 +41,3 @@ func (e *EventInformation5) AddLastNotificationIdentification() *NotificationIde
 	e.LastNotificationIdentification = new(NotificationIdentification1)
 	return e.LastNotificationIdentification
 }
-

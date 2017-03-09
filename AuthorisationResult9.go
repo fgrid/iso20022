@@ -17,9 +17,7 @@ type AuthorisationResult9 struct {
 
 	// Sequence of actions to be performed by the ATM to complete the transaction.
 	Action []*Action5 `xml:"Actn,omitempty"`
-
 }
-
 
 func (a *AuthorisationResult9) SetAuthorisationEntity(value string) {
 	a.AuthorisationEntity = (*PartyType13Code)(&value)
@@ -31,7 +29,7 @@ func (a *AuthorisationResult9) AddAuthorisationResponse() *ResponseType3 {
 }
 
 func (a *AuthorisationResult9) AddResponseTrace() *ResponseType4 {
-	newValue := new (ResponseType4)
+	newValue := new(ResponseType4)
 	a.ResponseTrace = append(a.ResponseTrace, newValue)
 	return newValue
 }
@@ -41,8 +39,7 @@ func (a *AuthorisationResult9) SetAuthorisationCode(value string) {
 }
 
 func (a *AuthorisationResult9) AddAction() *Action5 {
-	newValue := new (Action5)
+	newValue := new(Action5)
 	a.Action = append(a.Action, newValue)
 	return newValue
 }
-

@@ -41,9 +41,7 @@ type CardPaymentTransaction28 struct {
 
 	// Additional information related to the transaction.
 	AdditionalTransactionData []*Max70Text `xml:"AddtlTxData,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransaction28) SetMerchantCategoryCode(value string) {
 	c.MerchantCategoryCode = (*Min3Max4Text)(&value)
@@ -100,4 +98,3 @@ func (c *CardPaymentTransaction28) AddAuthorisationResult() *AuthorisationResult
 func (c *CardPaymentTransaction28) AddAdditionalTransactionData(value string) {
 	c.AdditionalTransactionData = append(c.AdditionalTransactionData, (*Max70Text)(&value))
 }
-

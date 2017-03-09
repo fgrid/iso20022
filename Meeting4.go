@@ -17,9 +17,7 @@ type Meeting4 struct {
 
 	// Minimum quantity of securities required to hold a meeting.
 	QuorumQuantity *QuorumQuantity1Choice `xml:"QrmQty,omitempty"`
-
 }
-
 
 func (m *Meeting4) AddDateAndTime() *DateFormat29Choice {
 	m.DateAndTime = new(DateFormat29Choice)
@@ -35,7 +33,7 @@ func (m *Meeting4) SetQuorumRequired(value string) {
 }
 
 func (m *Meeting4) AddLocation() *LocationFormat1Choice {
-	newValue := new (LocationFormat1Choice)
+	newValue := new(LocationFormat1Choice)
 	m.Location = append(m.Location, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (m *Meeting4) AddQuorumQuantity() *QuorumQuantity1Choice {
 	m.QuorumQuantity = new(QuorumQuantity1Choice)
 	return m.QuorumQuantity
 }
-

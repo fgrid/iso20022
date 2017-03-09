@@ -8,9 +8,7 @@ type SecuritiesSubBalanceTypeAndQuantityBreakdown1 struct {
 
 	// Breakdown of a quantity into lots such as tax lots, instrument series.
 	QuantityBreakdown []*QuantityBreakdown12 `xml:"QtyBrkdwn,omitempty"`
-
 }
-
 
 func (s *SecuritiesSubBalanceTypeAndQuantityBreakdown1) AddType() *SecuritiesBalanceType3Choice {
 	s.Type = new(SecuritiesBalanceType3Choice)
@@ -18,8 +16,7 @@ func (s *SecuritiesSubBalanceTypeAndQuantityBreakdown1) AddType() *SecuritiesBal
 }
 
 func (s *SecuritiesSubBalanceTypeAndQuantityBreakdown1) AddQuantityBreakdown() *QuantityBreakdown12 {
-	newValue := new (QuantityBreakdown12)
+	newValue := new(QuantityBreakdown12)
 	s.QuantityBreakdown = append(s.QuantityBreakdown, newValue)
 	return newValue
 }
-

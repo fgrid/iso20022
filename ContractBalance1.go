@@ -11,9 +11,7 @@ type ContractBalance1 struct {
 
 	// Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance
 	CreditDebitIndicator *CreditDebit3Code `xml:"CdtDbtInd"`
-
 }
-
 
 func (c *ContractBalance1) AddType() *ContractBalanceType1Choice {
 	c.Type = new(ContractBalanceType1Choice)
@@ -27,4 +25,3 @@ func (c *ContractBalance1) SetAmount(value, currency string) {
 func (c *ContractBalance1) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebit3Code)(&value)
 }
-

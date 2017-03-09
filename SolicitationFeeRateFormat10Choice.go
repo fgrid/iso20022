@@ -14,9 +14,7 @@ type SolicitationFeeRateFormat10Choice struct {
 
 	// Value of the rate not specified.
 	NotSpecifiedRate *RateValueType7Code `xml:"NotSpcfdRate"`
-
 }
-
 
 func (s *SolicitationFeeRateFormat10Choice) SetRate(value string) {
 	s.Rate = (*PercentageRate)(&value)
@@ -34,4 +32,3 @@ func (s *SolicitationFeeRateFormat10Choice) SetAmount(value, currency string) {
 func (s *SolicitationFeeRateFormat10Choice) SetNotSpecifiedRate(value string) {
 	s.NotSpecifiedRate = (*RateValueType7Code)(&value)
 }
-

@@ -8,9 +8,7 @@ type Quantity18Choice struct {
 
 	// Signed quantity of security.
 	SignedQuantity *SignedQuantityFormat6 `xml:"SgndQty"`
-
 }
-
 
 func (q *Quantity18Choice) AddOriginalAndCurrentFaceAmount() *OriginalAndCurrentQuantities6 {
 	q.OriginalAndCurrentFaceAmount = new(OriginalAndCurrentQuantities6)
@@ -21,4 +19,3 @@ func (q *Quantity18Choice) AddSignedQuantity() *SignedQuantityFormat6 {
 	q.SignedQuantity = new(SignedQuantityFormat6)
 	return q.SignedQuantity
 }
-

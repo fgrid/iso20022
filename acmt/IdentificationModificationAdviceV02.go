@@ -7,7 +7,7 @@ import (
 )
 
 type Document02200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.022.001.02 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.022.001.02 Document"`
 	Message *IdentificationModificationAdviceV02 `xml:"IdModAdvc"`
 }
 
@@ -36,9 +36,7 @@ type IdentificationModificationAdviceV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IdentificationModificationAdviceV02) AddAssignment() *iso20022.IdentificationAssignment2 {
 	i.Assignment = new(iso20022.IdentificationAssignment2)
@@ -51,14 +49,13 @@ func (i *IdentificationModificationAdviceV02) AddOriginalTransactionReference() 
 }
 
 func (i *IdentificationModificationAdviceV02) AddModification() *iso20022.IdentificationModification2 {
-	newValue := new (iso20022.IdentificationModification2)
+	newValue := new(iso20022.IdentificationModification2)
 	i.Modification = append(i.Modification, newValue)
 	return newValue
 }
 
 func (i *IdentificationModificationAdviceV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

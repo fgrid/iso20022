@@ -17,9 +17,7 @@ type CardPaymentTransaction9 struct {
 
 	// Set of actions to be performed by the POI (Point Of Interaction) system.
 	Action []*Action1 `xml:"Actn,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransaction9) AddAuthorisationResult() *AuthorisationResult1 {
 	c.AuthorisationResult = new(AuthorisationResult1)
@@ -40,8 +38,7 @@ func (c *CardPaymentTransaction9) SetCurrency(value string) {
 }
 
 func (c *CardPaymentTransaction9) AddAction() *Action1 {
-	newValue := new (Action1)
+	newValue := new(Action1)
 	c.Action = append(c.Action, newValue)
 	return newValue
 }
-

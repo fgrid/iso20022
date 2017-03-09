@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.017.001.03 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:setr.017.001.03 Document"`
 	Message *OrderCancellationStatusReportV03 `xml:"OrdrCxlStsRptV03"`
 }
 
@@ -31,7 +31,7 @@ func (d *Document01700103) AddMessage() *OrderCancellationStatusReportV03 {
 // When the cancellation is rejected, the reason for the rejection must be specified.
 type OrderCancellationStatusReportV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message that was previously received.
@@ -48,9 +48,7 @@ type OrderCancellationStatusReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (o *OrderCancellationStatusReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	o.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -58,13 +56,13 @@ func (o *OrderCancellationStatusReportV03) AddMessageIdentification() *iso20022.
 }
 
 func (o *OrderCancellationStatusReportV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.RelatedReference = append(o.RelatedReference, newValue)
 	return newValue
 }
 
 func (o *OrderCancellationStatusReportV03) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.OtherReference = append(o.OtherReference, newValue)
 	return newValue
 }
@@ -75,14 +73,13 @@ func (o *OrderCancellationStatusReportV03) AddCancellationStatusReport() *iso200
 }
 
 func (o *OrderCancellationStatusReportV03) AddIndividualCancellationStatusReport() *iso20022.IndividualOrderStatusAndReason4 {
-	newValue := new (iso20022.IndividualOrderStatusAndReason4)
+	newValue := new(iso20022.IndividualOrderStatusAndReason4)
 	o.IndividualCancellationStatusReport = append(o.IndividualCancellationStatusReport, newValue)
 	return newValue
 }
 
 func (o *OrderCancellationStatusReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	o.Extension = append(o.Extension, newValue)
 	return newValue
 }
-

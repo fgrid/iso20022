@@ -8,9 +8,7 @@ type DerivativeBasicAttributes2 struct {
 
 	// Indicates whether the given derivative price includes a prorated accrued interest component.
 	InterestIncludedInPrice *YesNoIndicator `xml:"IntrstInclInPric,omitempty"`
-
 }
-
 
 func (d *DerivativeBasicAttributes2) SetNotionalCurrencyAndAmount(value, currency string) {
 	d.NotionalCurrencyAndAmount = NewRestrictedFINActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (d *DerivativeBasicAttributes2) SetNotionalCurrencyAndAmount(value, currenc
 func (d *DerivativeBasicAttributes2) SetInterestIncludedInPrice(value string) {
 	d.InterestIncludedInPrice = (*YesNoIndicator)(&value)
 }
-

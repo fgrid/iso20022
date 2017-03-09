@@ -20,9 +20,7 @@ type StatementGroup1 struct {
 
 	// Provides the bank services billing statement recounting of all service chargeable events that occurred during a reporting cycle, such as the end of the month reporting.
 	BillingStatement []*BillingStatement1 `xml:"BllgStmt"`
-
 }
-
 
 func (s *StatementGroup1) SetGroupIdentification(value string) {
 	s.GroupIdentification = (*Max35Text)(&value)
@@ -34,7 +32,7 @@ func (s *StatementGroup1) AddSender() *PartyIdentification58 {
 }
 
 func (s *StatementGroup1) AddSenderIndividualContact() *ContactDetails3 {
-	newValue := new (ContactDetails3)
+	newValue := new(ContactDetails3)
 	s.SenderIndividualContact = append(s.SenderIndividualContact, newValue)
 	return newValue
 }
@@ -45,14 +43,13 @@ func (s *StatementGroup1) AddReceiver() *PartyIdentification58 {
 }
 
 func (s *StatementGroup1) AddReceiverIndividualContact() *ContactDetails3 {
-	newValue := new (ContactDetails3)
+	newValue := new(ContactDetails3)
 	s.ReceiverIndividualContact = append(s.ReceiverIndividualContact, newValue)
 	return newValue
 }
 
 func (s *StatementGroup1) AddBillingStatement() *BillingStatement1 {
-	newValue := new (BillingStatement1)
+	newValue := new(BillingStatement1)
 	s.BillingStatement = append(s.BillingStatement, newValue)
 	return newValue
 }
-

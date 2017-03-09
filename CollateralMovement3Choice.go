@@ -8,9 +8,7 @@ type CollateralMovement3Choice struct {
 
 	// Provides the collateral movement direction that is a return only.
 	Return *Collateral7 `xml:"Rtr"`
-
 }
-
 
 func (c *CollateralMovement3Choice) AddCollateralMovementDirection() *CollateralMovement6 {
 	c.CollateralMovementDirection = new(CollateralMovement6)
@@ -21,4 +19,3 @@ func (c *CollateralMovement3Choice) AddReturn() *Collateral7 {
 	c.Return = new(Collateral7)
 	return c.Return
 }
-

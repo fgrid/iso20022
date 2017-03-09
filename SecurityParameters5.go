@@ -11,16 +11,14 @@ type SecurityParameters5 struct {
 
 	// Digital signature of implicit data depending on the security scheme download procedure.
 	DigitalSignature *ContentInformationType14 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (s *SecurityParameters5) SetHostChallenge(value string) {
 	s.HostChallenge = (*Max140Binary)(&value)
 }
 
 func (s *SecurityParameters5) AddKey() *CryptographicKey8 {
-	newValue := new (CryptographicKey8)
+	newValue := new(CryptographicKey8)
 	s.Key = append(s.Key, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (s *SecurityParameters5) AddDigitalSignature() *ContentInformationType14 {
 	s.DigitalSignature = new(ContentInformationType14)
 	return s.DigitalSignature
 }
-

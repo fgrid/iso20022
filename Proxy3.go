@@ -8,9 +8,7 @@ type Proxy3 struct {
 
 	// Identifies an authorized proxy which has been assigned by the issuer of the meeting.
 	PreassignedProxy *IndividualPerson16 `xml:"PrssgndPrxy,omitempty"`
-
 }
-
 
 func (p *Proxy3) AddProxyType(value string) {
 	p.ProxyType = append(p.ProxyType, (*ProxyType2Code)(&value))
@@ -20,4 +18,3 @@ func (p *Proxy3) AddPreassignedProxy() *IndividualPerson16 {
 	p.PreassignedProxy = new(IndividualPerson16)
 	return p.PreassignedProxy
 }
-

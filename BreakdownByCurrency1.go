@@ -14,29 +14,26 @@ type BreakdownByCurrency1 struct {
 
 	// Net cash as a result of the cash-in and cash-out flows specified for the currency.
 	NetCashForecast []*NetCashForecast2 `xml:"NetCshFcst,omitempty"`
-
 }
-
 
 func (b *BreakdownByCurrency1) SetCurrency(value string) {
 	b.Currency = (*ActiveOrHistoricCurrencyCode)(&value)
 }
 
 func (b *BreakdownByCurrency1) AddCashOutForecast() *CashOutForecast3 {
-	newValue := new (CashOutForecast3)
+	newValue := new(CashOutForecast3)
 	b.CashOutForecast = append(b.CashOutForecast, newValue)
 	return newValue
 }
 
 func (b *BreakdownByCurrency1) AddCashInForecast() *CashInForecast3 {
-	newValue := new (CashInForecast3)
+	newValue := new(CashInForecast3)
 	b.CashInForecast = append(b.CashInForecast, newValue)
 	return newValue
 }
 
 func (b *BreakdownByCurrency1) AddNetCashForecast() *NetCashForecast2 {
-	newValue := new (NetCashForecast2)
+	newValue := new(NetCashForecast2)
 	b.NetCashForecast = append(b.NetCashForecast, newValue)
 	return newValue
 }
-

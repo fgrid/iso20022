@@ -20,9 +20,7 @@ type ATMKeyDownloadRequest1 struct {
 
 	// Random value from the host provided during a previous exchange.
 	HostChallenge *Max140Binary `xml:"HstChllng,omitempty"`
-
 }
-
 
 func (a *ATMKeyDownloadRequest1) AddEnvironment() *ATMEnvironment8 {
 	a.Environment = new(ATMEnvironment8)
@@ -30,7 +28,7 @@ func (a *ATMKeyDownloadRequest1) AddEnvironment() *ATMEnvironment8 {
 }
 
 func (a *ATMKeyDownloadRequest1) AddCommandResult() *ATMCommand2 {
-	newValue := new (ATMCommand2)
+	newValue := new(ATMCommand2)
 	a.CommandResult = append(a.CommandResult, newValue)
 	return newValue
 }
@@ -53,4 +51,3 @@ func (a *ATMKeyDownloadRequest1) AddATMSecurityParameters() *SecurityParameters4
 func (a *ATMKeyDownloadRequest1) SetHostChallenge(value string) {
 	a.HostChallenge = (*Max140Binary)(&value)
 }
-

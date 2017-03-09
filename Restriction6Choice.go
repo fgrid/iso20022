@@ -8,9 +8,7 @@ type Restriction6Choice struct {
 
 	// Restrictions expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (r *Restriction6Choice) SetCode(value string) {
 	r.Code = (*OwnershipLegalRestrictions1Code)(&value)
@@ -20,4 +18,3 @@ func (r *Restriction6Choice) AddProprietary() *GenericIdentification47 {
 	r.Proprietary = new(GenericIdentification47)
 	return r.Proprietary
 }
-

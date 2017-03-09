@@ -8,9 +8,7 @@ type Quantity14Choice struct {
 
 	// Percentage rate of assets to be settled.
 	PercentageRate *PercentageRate `xml:"PctgRate"`
-
 }
-
 
 func (q *Quantity14Choice) AddUnit() *Unit4 {
 	q.Unit = new(Unit4)
@@ -20,4 +18,3 @@ func (q *Quantity14Choice) AddUnit() *Unit4 {
 func (q *Quantity14Choice) SetPercentageRate(value string) {
 	q.PercentageRate = (*PercentageRate)(&value)
 }
-

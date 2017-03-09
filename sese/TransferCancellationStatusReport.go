@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.010.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:sese.010.001.01 Document"`
 	Message *TransferCancellationStatusReport `xml:"sese.010.001.01"`
 }
 
@@ -34,12 +34,10 @@ type TransferCancellationStatusReport struct {
 
 	// Status of the transfer cancellation instruction.
 	StatusReport *iso20022.CancellationStatusAndReason `xml:"StsRpt"`
-
 }
 
-
 func (t *TransferCancellationStatusReport) AddRelatedReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	t.RelatedReference = append(t.RelatedReference, newValue)
 	return newValue
 }
@@ -53,4 +51,3 @@ func (t *TransferCancellationStatusReport) AddStatusReport() *iso20022.Cancellat
 	t.StatusReport = new(iso20022.CancellationStatusAndReason)
 	return t.StatusReport
 }
-

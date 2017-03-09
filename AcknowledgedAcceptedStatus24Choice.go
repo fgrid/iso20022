@@ -8,17 +8,14 @@ type AcknowledgedAcceptedStatus24Choice struct {
 
 	// Specifies the reason of the acknowledged accepted status.
 	Reason []*AcknowledgementReason12 `xml:"Rsn"`
-
 }
-
 
 func (a *AcknowledgedAcceptedStatus24Choice) SetNoSpecifiedReason(value string) {
 	a.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (a *AcknowledgedAcceptedStatus24Choice) AddReason() *AcknowledgementReason12 {
-	newValue := new (AcknowledgementReason12)
+	newValue := new(AcknowledgementReason12)
 	a.Reason = append(a.Reason, newValue)
 	return newValue
 }
-

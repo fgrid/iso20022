@@ -7,7 +7,7 @@ import (
 )
 
 type Document02000102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.020.001.02 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.020.001.02 Document"`
 	Message *AccountClosingAmendmentRequestV02 `xml:"AcctClsgAmdmntReq"`
 }
 
@@ -28,8 +28,8 @@ type AccountClosingAmendmentRequestV02 struct {
 	// Unique and unambiguous identification of the account between the account owner and the account servicer.
 	AccountIdentification *iso20022.AccountForAction1 `xml:"AcctId"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification5 `xml:"AcctSvcrId"`
 
 	// Identification of the organisation requesting the change.
@@ -49,9 +49,7 @@ type AccountClosingAmendmentRequestV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AccountClosingAmendmentRequestV02) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -94,14 +92,13 @@ func (a *AccountClosingAmendmentRequestV02) AddTransferAccountServicerIdentifica
 }
 
 func (a *AccountClosingAmendmentRequestV02) AddDigitalSignature() *iso20022.PartyAndSignature2 {
-	newValue := new (iso20022.PartyAndSignature2)
+	newValue := new(iso20022.PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
 
 func (a *AccountClosingAmendmentRequestV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.009.001.01 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:pain.009.001.01 Document"`
 	Message *MandateInitiationRequestV01 `xml:"MndtInitnReq"`
 }
 
@@ -32,9 +32,7 @@ type MandateInitiationRequestV01 struct {
 
 	// Set of elements used to provide the details of the mandate signed between the (ultimate) creditor and the (ultimate) debtor.
 	Mandate *iso20022.MandateInformation2 `xml:"Mndt"`
-
 }
-
 
 func (m *MandateInitiationRequestV01) AddGroupHeader() *iso20022.GroupHeader31 {
 	m.GroupHeader = new(iso20022.GroupHeader31)
@@ -45,4 +43,3 @@ func (m *MandateInitiationRequestV01) AddMandate() *iso20022.MandateInformation2
 	m.Mandate = new(iso20022.MandateInformation2)
 	return m.Mandate
 }
-

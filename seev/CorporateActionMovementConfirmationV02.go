@@ -7,7 +7,7 @@ import (
 )
 
 type Document03600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.036.001.02 Document"`
+	XMLName xml.Name                                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.036.001.02 Document"`
 	Message *CorporateActionMovementConfirmationV02 `xml:"CorpActnMvmntConf"`
 }
 
@@ -66,9 +66,7 @@ type CorporateActionMovementConfirmationV02 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionMovementConfirmationV02) AddNotificationIdentification() *iso20022.DocumentIdentification15 {
 	c.NotificationIdentification = new(iso20022.DocumentIdentification15)
@@ -86,13 +84,13 @@ func (c *CorporateActionMovementConfirmationV02) AddInstructionIdentification() 
 }
 
 func (c *CorporateActionMovementConfirmationV02) AddOtherDocumentIdentification() *iso20022.DocumentIdentification13 {
-	newValue := new (iso20022.DocumentIdentification13)
+	newValue := new(iso20022.DocumentIdentification13)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementConfirmationV02) AddEventsLinkage() *iso20022.CorporateActionEventReference1 {
-	newValue := new (iso20022.CorporateActionEventReference1)
+	newValue := new(iso20022.CorporateActionEventReference1)
 	c.EventsLinkage = append(c.EventsLinkage, newValue)
 	return newValue
 }
@@ -118,26 +116,25 @@ func (c *CorporateActionMovementConfirmationV02) AddAdditionalInformation() *iso
 }
 
 func (c *CorporateActionMovementConfirmationV02) AddIssuerAgent() *iso20022.PartyIdentification46Choice {
-	newValue := new (iso20022.PartyIdentification46Choice)
+	newValue := new(iso20022.PartyIdentification46Choice)
 	c.IssuerAgent = append(c.IssuerAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementConfirmationV02) AddPayingAgent() *iso20022.PartyIdentification46Choice {
-	newValue := new (iso20022.PartyIdentification46Choice)
+	newValue := new(iso20022.PartyIdentification46Choice)
 	c.PayingAgent = append(c.PayingAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementConfirmationV02) AddSubPayingAgent() *iso20022.PartyIdentification46Choice {
-	newValue := new (iso20022.PartyIdentification46Choice)
+	newValue := new(iso20022.PartyIdentification46Choice)
 	c.SubPayingAgent = append(c.SubPayingAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionMovementConfirmationV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

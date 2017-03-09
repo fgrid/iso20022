@@ -44,9 +44,7 @@ type PostalAddress11 struct {
 
 	// Building room number.
 	Room *Max70Text `xml:"Room,omitempty"`
-
 }
-
 
 func (p *PostalAddress11) SetAddressType(value string) {
 	p.AddressType = (*AddressType2Code)(&value)
@@ -103,4 +101,3 @@ func (p *PostalAddress11) SetBuildingName(value string) {
 func (p *PostalAddress11) SetRoom(value string) {
 	p.Room = (*Max70Text)(&value)
 }
-

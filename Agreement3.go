@@ -23,9 +23,7 @@ type Agreement3 struct {
 
 	// Fraction of the cash consideration that must be collateralized, expressed as a percent. A margin ratio of 02% indicates that the value of the collateral (after deducting for "haircut") must exceed the cash consideration by 2%.
 	MarginRatio *PercentageRate `xml:"MrgnRatio,omitempty"`
-
 }
-
 
 func (a *Agreement3) SetDescription(value string) {
 	a.Description = (*Max350Text)(&value)
@@ -54,4 +52,3 @@ func (a *Agreement3) SetDeliveryType(value string) {
 func (a *Agreement3) SetMarginRatio(value string) {
 	a.MarginRatio = (*PercentageRate)(&value)
 }
-

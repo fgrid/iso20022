@@ -17,9 +17,7 @@ type OriginalNotification8 struct {
 
 	// Identifies the original notification item, to which the cancellation advice refers.
 	OriginalNotificationReference []*OriginalNotificationReference6 `xml:"OrgnlNtfctnRef,omitempty"`
-
 }
-
 
 func (o *OriginalNotification8) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -38,8 +36,7 @@ func (o *OriginalNotification8) SetNotificationCancellation(value string) {
 }
 
 func (o *OriginalNotification8) AddOriginalNotificationReference() *OriginalNotificationReference6 {
-	newValue := new (OriginalNotificationReference6)
+	newValue := new(OriginalNotificationReference6)
 	o.OriginalNotificationReference = append(o.OriginalNotificationReference, newValue)
 	return newValue
 }
-

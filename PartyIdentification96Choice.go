@@ -17,9 +17,7 @@ type PartyIdentification96Choice struct {
 
 	// Number assigned by a national registration authority to an entity.
 	NationalRegistrationNumber *Max35Text `xml:"NtlRegnNb"`
-
 }
-
 
 func (p *PartyIdentification96Choice) SetAnyBIC(value string) {
 	p.AnyBIC = (*AnyBICIdentifier)(&value)
@@ -42,4 +40,3 @@ func (p *PartyIdentification96Choice) SetTaxIdentificationNumber(value string) {
 func (p *PartyIdentification96Choice) SetNationalRegistrationNumber(value string) {
 	p.NationalRegistrationNumber = (*Max35Text)(&value)
 }
-

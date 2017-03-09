@@ -8,9 +8,7 @@ type InvestmentAccountOrFinancialInstrument1Choice struct {
 
 	// Instrument that has intrinsic monetary value, and may transfer value, the price of which may be obtained from a financial market, eg, a bond or a cheque.
 	FinancialInstrument *FinancialInstrument6 `xml:"FinInstrm"`
-
 }
-
 
 func (i *InvestmentAccountOrFinancialInstrument1Choice) AddInvestmentAccount() *InvestmentAccount13 {
 	i.InvestmentAccount = new(InvestmentAccount13)
@@ -21,4 +19,3 @@ func (i *InvestmentAccountOrFinancialInstrument1Choice) AddFinancialInstrument()
 	i.FinancialInstrument = new(FinancialInstrument6)
 	return i.FinancialInstrument
 }
-

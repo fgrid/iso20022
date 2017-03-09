@@ -8,9 +8,7 @@ type DistributionTypeFormat3Choice struct {
 
 	// Proprietary identification of the type of distribution.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (d *DistributionTypeFormat3Choice) SetCode(value string) {
 	d.Code = (*DistributionType2Code)(&value)
@@ -20,4 +18,3 @@ func (d *DistributionTypeFormat3Choice) AddProprietary() *GenericIdentification2
 	d.Proprietary = new(GenericIdentification20)
 	return d.Proprietary
 }
-

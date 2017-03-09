@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.018.001.03 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:sese.018.001.03 Document"`
 	Message *AccountHoldingInformationV03 `xml:"AcctHldgInf"`
 }
 
@@ -67,11 +67,9 @@ type AccountHoldingInformationV03 struct {
 	// Provides information related to the asset(s) transferred.
 	ProductTransfer []*iso20022.ISATransfer6 `xml:"PdctTrf"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountHoldingInformationV03) AddMessageReference() *iso20022.MessageIdentification1 {
 	a.MessageReference = new(iso20022.MessageIdentification1)
@@ -108,7 +106,7 @@ func (a *AccountHoldingInformationV03) AddSecondaryIndividualInvestor() *iso2002
 }
 
 func (a *AccountHoldingInformationV03) AddOtherIndividualInvestor() *iso20022.IndividualPerson8 {
-	newValue := new (iso20022.IndividualPerson8)
+	newValue := new(iso20022.IndividualPerson8)
 	a.OtherIndividualInvestor = append(a.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -124,7 +122,7 @@ func (a *AccountHoldingInformationV03) AddSecondaryCorporateInvestor() *iso20022
 }
 
 func (a *AccountHoldingInformationV03) AddOtherCorporateInvestor() *iso20022.Organisation4 {
-	newValue := new (iso20022.Organisation4)
+	newValue := new(iso20022.Organisation4)
 	a.OtherCorporateInvestor = append(a.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -145,14 +143,13 @@ func (a *AccountHoldingInformationV03) AddTransferee() *iso20022.PartyIdentifica
 }
 
 func (a *AccountHoldingInformationV03) AddProductTransfer() *iso20022.ISATransfer6 {
-	newValue := new (iso20022.ISATransfer6)
+	newValue := new(iso20022.ISATransfer6)
 	a.ProductTransfer = append(a.ProductTransfer, newValue)
 	return newValue
 }
 
 func (a *AccountHoldingInformationV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

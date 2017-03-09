@@ -19,9 +19,7 @@ type CorporateActionPrice8 struct {
 
 	// Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.
 	GenericCashPricePaidPerProduct *PriceFormat5Choice `xml:"GncCshPricPdPerPdct,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice8) AddIndicativeOrMarketPrice() *IndicativeOrMarketPrice2Choice {
 	c.IndicativeOrMarketPrice = new(IndicativeOrMarketPrice2Choice)
@@ -47,4 +45,3 @@ func (c *CorporateActionPrice8) AddGenericCashPricePaidPerProduct() *PriceFormat
 	c.GenericCashPricePaidPerProduct = new(PriceFormat5Choice)
 	return c.GenericCashPricePaidPerProduct
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.005.001.02 Document"`
+	XMLName xml.Name                                `xml:"urn:iso:std:iso:20022:tech:xsd:trea.005.001.02 Document"`
 	Message *AmendNonDeliverableForwardValuationV02 `xml:"AmdNDFValtnV02"`
 }
 
@@ -39,9 +39,7 @@ type AmendNonDeliverableForwardValuationV02 struct {
 
 	// Specifies the valuation information of the valuation of the non deliverable trade which is amended.
 	ValuationInformation *iso20022.ValuationData2 `xml:"ValtnInf"`
-
 }
-
 
 func (a *AmendNonDeliverableForwardValuationV02) AddTradeInformation() *iso20022.TradeAgreement2 {
 	a.TradeInformation = new(iso20022.TradeAgreement2)
@@ -72,4 +70,3 @@ func (a *AmendNonDeliverableForwardValuationV02) AddValuationInformation() *iso2
 	a.ValuationInformation = new(iso20022.ValuationData2)
 	return a.ValuationInformation
 }
-

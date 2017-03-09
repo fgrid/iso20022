@@ -50,9 +50,7 @@ type NetPosition3 struct {
 
 	// Provides the trade leg details such as trade leg identification and trade type.
 	TradeLegDetails []*TradeLeg10 `xml:"TradLegDtls,omitempty"`
-
 }
-
 
 func (n *NetPosition3) AddClearingAccount() *SecuritiesAccount18 {
 	n.ClearingAccount = new(SecuritiesAccount18)
@@ -127,8 +125,7 @@ func (n *NetPosition3) AddSettlementDate() *DateFormat15Choice {
 }
 
 func (n *NetPosition3) AddTradeLegDetails() *TradeLeg10 {
-	newValue := new (TradeLeg10)
+	newValue := new(TradeLeg10)
 	n.TradeLegDetails = append(n.TradeLegDetails, newValue)
 	return newValue
 }
-

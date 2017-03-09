@@ -17,9 +17,7 @@ type TransactionIdentifications25 struct {
 
 	// Reference to a transaction that cannot be identified using a standard reference element present in the message.
 	OtherIdentification *Max35Text `xml:"OthrId,omitempty"`
-
 }
-
 
 func (t *TransactionIdentifications25) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (t *TransactionIdentifications25) SetProcessorTransactionIdentification(val
 func (t *TransactionIdentifications25) SetOtherIdentification(value string) {
 	t.OtherIdentification = (*Max35Text)(&value)
 }
-

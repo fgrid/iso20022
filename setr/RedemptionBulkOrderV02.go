@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.001.001.02 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:setr.001.001.02 Document"`
 	Message *RedemptionBulkOrderV02 `xml:"setr.001.001.02"`
 }
 
@@ -46,9 +46,7 @@ type RedemptionBulkOrderV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkOrderV02) AddMasterReference() *iso20022.AdditionalReference3 {
 	r.MasterReference = new(iso20022.AdditionalReference3)
@@ -61,7 +59,7 @@ func (r *RedemptionBulkOrderV02) AddPoolReference() *iso20022.AdditionalReferenc
 }
 
 func (r *RedemptionBulkOrderV02) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	r.PreviousReference = append(r.PreviousReference, newValue)
 	return newValue
 }
@@ -72,7 +70,7 @@ func (r *RedemptionBulkOrderV02) AddBulkOrderDetails() *iso20022.RedemptionBulkO
 }
 
 func (r *RedemptionBulkOrderV02) AddIntermediaryDetails() *iso20022.Intermediary4 {
-	newValue := new (iso20022.Intermediary4)
+	newValue := new(iso20022.Intermediary4)
 	r.IntermediaryDetails = append(r.IntermediaryDetails, newValue)
 	return newValue
 }
@@ -83,8 +81,7 @@ func (r *RedemptionBulkOrderV02) AddCopyDetails() *iso20022.CopyInformation1 {
 }
 
 func (r *RedemptionBulkOrderV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

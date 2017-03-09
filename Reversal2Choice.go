@@ -8,9 +8,7 @@ type Reversal2Choice struct {
 
 	// Details of the transfer in confirmation to be reversed.
 	TransferInConfirmationDetails *TransferIn8 `xml:"TrfInConfDtls"`
-
 }
-
 
 func (r *Reversal2Choice) AddReference() *TransferReference2 {
 	r.Reference = new(TransferReference2)
@@ -21,4 +19,3 @@ func (r *Reversal2Choice) AddTransferInConfirmationDetails() *TransferIn8 {
 	r.TransferInConfirmationDetails = new(TransferIn8)
 	return r.TransferInConfirmationDetails
 }
-

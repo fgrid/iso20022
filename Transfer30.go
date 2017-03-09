@@ -59,9 +59,7 @@ type Transfer30 struct {
 
 	// Specifies how the payment of charges, taxes and commissions as a result of the transfer is covered, that is, whether by cash or the redemption of units.
 	TransferExpensesPaymentType *ChargePaymentMethod1Choice `xml:"TrfExpnssPmtTp,omitempty"`
-
 }
-
 
 func (t *Transfer30) SetTransferReference(value string) {
 	t.TransferReference = (*Max35Text)(&value)
@@ -109,7 +107,7 @@ func (t *Transfer30) AddQuantity() *Quantity13Choice {
 }
 
 func (t *Transfer30) AddUnitsDetails() *Unit6 {
-	newValue := new (Unit6)
+	newValue := new(Unit6)
 	t.UnitsDetails = append(t.UnitsDetails, newValue)
 	return newValue
 }
@@ -148,4 +146,3 @@ func (t *Transfer30) AddTransferExpensesPaymentType() *ChargePaymentMethod1Choic
 	t.TransferExpensesPaymentType = new(ChargePaymentMethod1Choice)
 	return t.TransferExpensesPaymentType
 }
-

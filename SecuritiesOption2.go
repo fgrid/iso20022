@@ -11,9 +11,7 @@ type SecuritiesOption2 struct {
 
 	// Specifies whether the quantity of financial instrument is a quantity of securities instructed or a quantity to receive.
 	InstructedOrQuantityToReceive *InstructedOrQuantityToReceive1Choice `xml:"InstdOrQtyToRcv"`
-
 }
-
 
 func (s *SecuritiesOption2) AddConditionalQuantity() *FinancialInstrumentQuantity1Choice {
 	s.ConditionalQuantity = new(FinancialInstrumentQuantity1Choice)
@@ -29,4 +27,3 @@ func (s *SecuritiesOption2) AddInstructedOrQuantityToReceive() *InstructedOrQuan
 	s.InstructedOrQuantityToReceive = new(InstructedOrQuantityToReceive1Choice)
 	return s.InstructedOrQuantityToReceive
 }
-

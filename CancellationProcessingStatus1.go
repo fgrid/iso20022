@@ -8,9 +8,7 @@ type CancellationProcessingStatus1 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CancellationProcessingStatus1) SetStatus(value string) {
 	c.Status = (*CancellationStatus3Code)(&value)
@@ -19,4 +17,3 @@ func (c *CancellationProcessingStatus1) SetStatus(value string) {
 func (c *CancellationProcessingStatus1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

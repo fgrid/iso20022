@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.010.001.03 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:sese.010.001.03 Document"`
 	Message *TransferCancellationStatusReportV03 `xml:"TrfCxlStsRpt"`
 }
 
@@ -30,7 +30,7 @@ func (d *Document01000103) AddMessage() *TransferCancellationStatusReportV03 {
 // - the transfer cancellation is rejected and the reason for the status.
 type TransferCancellationStatusReportV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Unambiguous identification of the transfer allocated by the counterparty.
@@ -47,9 +47,7 @@ type TransferCancellationStatusReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferCancellationStatusReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -62,13 +60,13 @@ func (t *TransferCancellationStatusReportV03) AddCounterpartyReference() *iso200
 }
 
 func (t *TransferCancellationStatusReportV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	t.RelatedReference = append(t.RelatedReference, newValue)
 	return newValue
 }
 
 func (t *TransferCancellationStatusReportV03) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	t.OtherReference = append(t.OtherReference, newValue)
 	return newValue
 }
@@ -79,8 +77,7 @@ func (t *TransferCancellationStatusReportV03) AddStatusReport() *iso20022.Cancel
 }
 
 func (t *TransferCancellationStatusReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

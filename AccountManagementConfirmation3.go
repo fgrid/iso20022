@@ -17,9 +17,7 @@ type AccountManagementConfirmation3 struct {
 
 	// Account to which the account opening is related.
 	ExistingAccountIdentification *Max35Text `xml:"ExstgAcctId,omitempty"`
-
 }
-
 
 func (a *AccountManagementConfirmation3) SetConfirmationType(value string) {
 	a.ConfirmationType = (*AccountManagementType2Code)(&value)
@@ -41,4 +39,3 @@ func (a *AccountManagementConfirmation3) AddCounterpartyReference() *AdditionalR
 func (a *AccountManagementConfirmation3) SetExistingAccountIdentification(value string) {
 	a.ExistingAccountIdentification = (*Max35Text)(&value)
 }
-

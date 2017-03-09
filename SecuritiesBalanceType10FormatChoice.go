@@ -8,9 +8,7 @@ type SecuritiesBalanceType10FormatChoice struct {
 
 	// Proprietary code to  express the type of securities balance.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (s *SecuritiesBalanceType10FormatChoice) SetCode(value string) {
 	s.Code = (*SecuritiesBalanceType10Code)(&value)
@@ -20,4 +18,3 @@ func (s *SecuritiesBalanceType10FormatChoice) AddProprietary() *GenericIdentific
 	s.Proprietary = new(GenericIdentification13)
 	return s.Proprietary
 }
-

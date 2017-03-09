@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:cain.009.001.01 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:cain.009.001.01 Document"`
 	Message *NetworkManagementInitiation `xml:"NtwkMgmtInitn"`
 }
 
@@ -27,9 +27,7 @@ type NetworkManagementInitiation struct {
 
 	// Trailer of the message containing a MAC.
 	SecurityTrailer *iso20022.ContentInformationType15 `xml:"SctyTrlr,omitempty"`
-
 }
-
 
 func (n *NetworkManagementInitiation) AddHeader() *iso20022.Header17 {
 	n.Header = new(iso20022.Header17)
@@ -45,4 +43,3 @@ func (n *NetworkManagementInitiation) AddSecurityTrailer() *iso20022.ContentInfo
 	n.SecurityTrailer = new(iso20022.ContentInformationType15)
 	return n.SecurityTrailer
 }
-

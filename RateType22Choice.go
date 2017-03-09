@@ -8,9 +8,7 @@ type RateType22Choice struct {
 
 	// Proprietary identification of the type of gross dividend rate.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (r *RateType22Choice) SetCode(value string) {
 	r.Code = (*GrossDividendRateType3Code)(&value)
@@ -20,4 +18,3 @@ func (r *RateType22Choice) AddProprietary() *GenericIdentification20 {
 	r.Proprietary = new(GenericIdentification20)
 	return r.Proprietary
 }
-

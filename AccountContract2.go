@@ -11,9 +11,7 @@ type AccountContract2 struct {
 
 	// Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.
 	UrgencyFlag *YesNoIndicator `xml:"UrgcyFlg,omitempty"`
-
 }
-
 
 func (a *AccountContract2) SetTargetGoLiveDate(value string) {
 	a.TargetGoLiveDate = (*ISODate)(&value)
@@ -26,4 +24,3 @@ func (a *AccountContract2) SetTargetClosingDate(value string) {
 func (a *AccountContract2) SetUrgencyFlag(value string) {
 	a.UrgencyFlag = (*YesNoIndicator)(&value)
 }
-

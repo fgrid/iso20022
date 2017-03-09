@@ -14,9 +14,7 @@ type GenericIdentification32 struct {
 
 	// Name of the entity.
 	ShortName *Max35Text `xml:"ShrtNm,omitempty"`
-
 }
-
 
 func (g *GenericIdentification32) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (g *GenericIdentification32) SetIssuer(value string) {
 func (g *GenericIdentification32) SetShortName(value string) {
 	g.ShortName = (*Max35Text)(&value)
 }
-

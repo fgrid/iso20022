@@ -11,9 +11,7 @@ type AffirmationStatus6Choice struct {
 
 	// Provides a proprietary status and a proprietary reason of the affirmation of the trade.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts,omitempty"`
-
 }
-
 
 func (a *AffirmationStatus6Choice) AddAffirmed() *ProprietaryReason1 {
 	a.Affirmed = new(ProprietaryReason1)
@@ -29,4 +27,3 @@ func (a *AffirmationStatus6Choice) AddProprietaryStatus() *ProprietaryStatusAndR
 	a.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return a.ProprietaryStatus
 }
-

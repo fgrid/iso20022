@@ -8,9 +8,7 @@ type AccountForAction1 struct {
 
 	// Medium of exchange of value.
 	Currency *ActiveCurrencyCode `xml:"Ccy"`
-
 }
-
 
 func (a *AccountForAction1) AddIdentification() *AccountIdentification4Choice {
 	a.Identification = new(AccountIdentification4Choice)
@@ -20,4 +18,3 @@ func (a *AccountForAction1) AddIdentification() *AccountIdentification4Choice {
 func (a *AccountForAction1) SetCurrency(value string) {
 	a.Currency = (*ActiveCurrencyCode)(&value)
 }
-

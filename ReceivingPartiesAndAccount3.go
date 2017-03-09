@@ -11,9 +11,7 @@ type ReceivingPartiesAndAccount3 struct {
 
 	// Party that receives securities from the delivering agent at the place of settlement, eg, central securities depository.
 	ReceivingAgentDetails *PartyIdentificationAndAccount3 `xml:"RcvgAgtDtls"`
-
 }
-
 
 func (r *ReceivingPartiesAndAccount3) AddReceiversCustodianDetails() *PartyIdentificationAndAccount3 {
 	r.ReceiversCustodianDetails = new(PartyIdentificationAndAccount3)
@@ -29,4 +27,3 @@ func (r *ReceivingPartiesAndAccount3) AddReceivingAgentDetails() *PartyIdentific
 	r.ReceivingAgentDetails = new(PartyIdentificationAndAccount3)
 	return r.ReceivingAgentDetails
 }
-

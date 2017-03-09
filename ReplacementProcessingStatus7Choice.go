@@ -35,9 +35,7 @@ type ReplacementProcessingStatus7Choice struct {
 
 	// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts,omitempty"`
-
 }
-
 
 func (r *ReplacementProcessingStatus7Choice) AddAccepted() *ProprietaryReason1 {
 	r.Accepted = new(ProprietaryReason1)
@@ -93,4 +91,3 @@ func (r *ReplacementProcessingStatus7Choice) AddProprietaryStatus() *Proprietary
 	r.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return r.ProprietaryStatus
 }
-

@@ -9,7 +9,7 @@ type GeneralInformation4 struct {
 	// Reference to a preceding transaction, for example, an option or swap.
 	RelatedTradeReference *Max35Text `xml:"RltdTradRef,omitempty"`
 
-	// Method used by the trading parties to negotiate and/or execute a deal. 
+	// Method used by the trading parties to negotiate and/or execute a deal.
 	DealingMethod *Trading1MethodCode `xml:"DealgMtd,omitempty"`
 
 	// Specifies the broker which arranged the deal between the trading side and the counterparty side or, when two money brokers are involved, between the trading side and the other money broker.
@@ -32,9 +32,7 @@ type GeneralInformation4 struct {
 
 	// Specifies the name and/or electronic address of the receiver of the message who may be contacted for any queries concerning this trade.
 	ContactInformation *ContactInformation1 `xml:"CtctInf,omitempty"`
-
 }
-
 
 func (g *GeneralInformation4) SetBlockIndicator(value string) {
 	g.BlockIndicator = (*YesNoIndicator)(&value)
@@ -79,4 +77,3 @@ func (g *GeneralInformation4) AddContactInformation() *ContactInformation1 {
 	g.ContactInformation = new(ContactInformation1)
 	return g.ContactInformation
 }
-

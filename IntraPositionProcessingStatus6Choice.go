@@ -17,9 +17,7 @@ type IntraPositionProcessingStatus6Choice struct {
 
 	// Specifies a choice of status for the processing of an intra-position movement.
 	Proprietary *ProprietaryStatusAndReason7 `xml:"Prtry"`
-
 }
-
 
 func (i *IntraPositionProcessingStatus6Choice) AddRejected() *RejectionOrRepairStatus33Choice {
 	i.Rejected = new(RejectionOrRepairStatus33Choice)
@@ -45,4 +43,3 @@ func (i *IntraPositionProcessingStatus6Choice) AddProprietary() *ProprietaryStat
 	i.Proprietary = new(ProprietaryStatusAndReason7)
 	return i.Proprietary
 }
-

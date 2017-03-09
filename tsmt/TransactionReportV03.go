@@ -7,7 +7,7 @@ import (
 )
 
 type Document04100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.041.001.03 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.041.001.03 Document"`
 	Message *TransactionReportV03 `xml:"TxRpt"`
 }
 
@@ -23,7 +23,7 @@ func (d *Document04100103) AddMessage() *TransactionReportV03 {
 // The TransactionReport message can be sent by the matching application to report on various details of transactions that the requester of the report asked for. The message is sent in response to a TransactionReportRequest message.
 type TransactionReportV03 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Reference to the previous message requesting the report.
@@ -31,9 +31,7 @@ type TransactionReportV03 struct {
 
 	// Detailed description of the items that correspond to the parameters set in the request.
 	ReportedItems []*iso20022.TransactionReportItems3 `xml:"RptdItms,omitempty"`
-
 }
-
 
 func (t *TransactionReportV03) AddReportIdentification() *iso20022.MessageIdentification1 {
 	t.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -46,8 +44,7 @@ func (t *TransactionReportV03) AddRelatedMessageReference() *iso20022.MessageIde
 }
 
 func (t *TransactionReportV03) AddReportedItems() *iso20022.TransactionReportItems3 {
-	newValue := new (iso20022.TransactionReportItems3)
+	newValue := new(iso20022.TransactionReportItems3)
 	t.ReportedItems = append(t.ReportedItems, newValue)
 	return newValue
 }
-

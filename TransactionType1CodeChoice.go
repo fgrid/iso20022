@@ -8,9 +8,7 @@ type TransactionType1CodeChoice struct {
 
 	// Transaction type in free text form.
 	Unstructured *Max35Text `xml:"Ustrd"`
-
 }
-
 
 func (t *TransactionType1CodeChoice) SetStructured(value string) {
 	t.Structured = (*TransactionType2Code)(&value)
@@ -19,4 +17,3 @@ func (t *TransactionType1CodeChoice) SetStructured(value string) {
 func (t *TransactionType1CodeChoice) SetUnstructured(value string) {
 	t.Unstructured = (*Max35Text)(&value)
 }
-

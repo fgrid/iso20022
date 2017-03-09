@@ -14,9 +14,7 @@ type DemandDocumentation1 struct {
 
 	// Narrative text constituting the demand.
 	DemandNarrative *Max20000Text `xml:"DmndNrrtv,omitempty"`
-
 }
-
 
 func (d *DemandDocumentation1) SetCompleteIndicator(value string) {
 	d.CompleteIndicator = (*YesNoIndicator)(&value)
@@ -27,7 +25,7 @@ func (d *DemandDocumentation1) SetCompletionInformation(value string) {
 }
 
 func (d *DemandDocumentation1) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	d.EnclosedFile = append(d.EnclosedFile, newValue)
 	return newValue
 }
@@ -35,4 +33,3 @@ func (d *DemandDocumentation1) AddEnclosedFile() *Document9 {
 func (d *DemandDocumentation1) SetDemandNarrative(value string) {
 	d.DemandNarrative = (*Max20000Text)(&value)
 }
-

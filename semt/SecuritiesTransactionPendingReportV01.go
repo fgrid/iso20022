@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.001.01 Document"`
 	Message *SecuritiesTransactionPendingReportV01 `xml:"SctiesTxPdgRpt"`
 }
 
@@ -58,9 +58,7 @@ type SecuritiesTransactionPendingReportV01 struct {
 
 	// Party that is the final destination of the message, if other than the receiver.
 	MessageRecipient *iso20022.PartyIdentification10Choice `xml:"MsgRcpt,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionPendingReportV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -88,13 +86,13 @@ func (s *SecuritiesTransactionPendingReportV01) AddSafekeepingAccount() *iso2002
 }
 
 func (s *SecuritiesTransactionPendingReportV01) AddStatus() *iso20022.StatusAndReason1 {
-	newValue := new (iso20022.StatusAndReason1)
+	newValue := new(iso20022.StatusAndReason1)
 	s.Status = append(s.Status, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTransactionPendingReportV01) AddTransactions() *iso20022.Transaction8 {
-	newValue := new (iso20022.Transaction8)
+	newValue := new(iso20022.Transaction8)
 	s.Transactions = append(s.Transactions, newValue)
 	return newValue
 }
@@ -108,4 +106,3 @@ func (s *SecuritiesTransactionPendingReportV01) AddMessageRecipient() *iso20022.
 	s.MessageRecipient = new(iso20022.PartyIdentification10Choice)
 	return s.MessageRecipient
 }
-

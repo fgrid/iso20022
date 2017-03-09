@@ -8,9 +8,7 @@ type ProprietaryParty3 struct {
 
 	// Proprietary party.
 	Party *PartyIdentification43 `xml:"Pty"`
-
 }
-
 
 func (p *ProprietaryParty3) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (p *ProprietaryParty3) AddParty() *PartyIdentification43 {
 	p.Party = new(PartyIdentification43)
 	return p.Party
 }
-

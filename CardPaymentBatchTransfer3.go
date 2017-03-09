@@ -8,19 +8,16 @@ type CardPaymentBatchTransfer3 struct {
 
 	// Card payment transactions from one data set of transactions.
 	DataSet []*CardPaymentDataSet10 `xml:"DataSet,omitempty"`
-
 }
 
-
 func (c *CardPaymentBatchTransfer3) AddTransactionTotals() *TransactionTotals3 {
-	newValue := new (TransactionTotals3)
+	newValue := new(TransactionTotals3)
 	c.TransactionTotals = append(c.TransactionTotals, newValue)
 	return newValue
 }
 
 func (c *CardPaymentBatchTransfer3) AddDataSet() *CardPaymentDataSet10 {
-	newValue := new (CardPaymentDataSet10)
+	newValue := new(CardPaymentDataSet10)
 	c.DataSet = append(c.DataSet, newValue)
 	return newValue
 }
-

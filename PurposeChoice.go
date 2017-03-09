@@ -8,9 +8,7 @@ type PurposeChoice struct {
 
 	// Specifies the type of transaction that resulted in the payment initiation in coded form.
 	Code *PaymentPurpose1Code `xml:"Cd"`
-
 }
-
 
 func (p *PurposeChoice) SetProprietary(value string) {
 	p.Proprietary = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *PurposeChoice) SetProprietary(value string) {
 func (p *PurposeChoice) SetCode(value string) {
 	p.Code = (*PaymentPurpose1Code)(&value)
 }
-

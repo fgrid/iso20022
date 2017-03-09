@@ -7,7 +7,7 @@ import (
 )
 
 type Document05400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.054.001.01 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:camt.054.001.01 Document"`
 	Message *BankToCustomerDebitCreditNotificationV01 `xml:"BkToCstmrDbtCdtNtfctnV01"`
 }
 
@@ -35,9 +35,7 @@ type BankToCustomerDebitCreditNotificationV01 struct {
 
 	// Notifies debit and credit entries for the account.
 	Notification []*iso20022.AccountNotification1 `xml:"Ntfctn"`
-
 }
-
 
 func (b *BankToCustomerDebitCreditNotificationV01) AddGroupHeader() *iso20022.GroupHeader23 {
 	b.GroupHeader = new(iso20022.GroupHeader23)
@@ -45,8 +43,7 @@ func (b *BankToCustomerDebitCreditNotificationV01) AddGroupHeader() *iso20022.Gr
 }
 
 func (b *BankToCustomerDebitCreditNotificationV01) AddNotification() *iso20022.AccountNotification1 {
-	newValue := new (iso20022.AccountNotification1)
+	newValue := new(iso20022.AccountNotification1)
 	b.Notification = append(b.Notification, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type ATMWithdrawalCompletionAcknowledgement1 struct {
 
 	// Acknowledgement of the withdrawal completion advice.
 	Transaction *ATMTransaction4 `xml:"Tx"`
-
 }
-
 
 func (a *ATMWithdrawalCompletionAcknowledgement1) AddATM() *AutomatedTellerMachine3 {
 	a.ATM = new(AutomatedTellerMachine3)
@@ -29,4 +27,3 @@ func (a *ATMWithdrawalCompletionAcknowledgement1) AddTransaction() *ATMTransacti
 	a.Transaction = new(ATMTransaction4)
 	return a.Transaction
 }
-

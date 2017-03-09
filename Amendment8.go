@@ -12,11 +12,9 @@ type Amendment8 struct {
 	// Unique and unambiguous identifier assigned by the beneficiary to the undertaking.
 	BeneficiaryReferenceNumber *Max35Text `xml:"BnfcryRefNb,omitempty"`
 
-	// Party that issues the undertaking. 
+	// Party that issues the undertaking.
 	Issuer *PartyIdentification43 `xml:"Issr"`
-
 }
-
 
 func (a *Amendment8) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (a *Amendment8) AddIssuer() *PartyIdentification43 {
 	a.Issuer = new(PartyIdentification43)
 	return a.Issuer
 }
-

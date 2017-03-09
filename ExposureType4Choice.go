@@ -8,9 +8,7 @@ type ExposureType4Choice struct {
 
 	// Collateral movement exposure type expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (e *ExposureType4Choice) SetCode(value string) {
 	e.Code = (*ExposureType2Code)(&value)
@@ -20,4 +18,3 @@ func (e *ExposureType4Choice) AddProprietary() *GenericIdentification20 {
 	e.Proprietary = new(GenericIdentification20)
 	return e.Proprietary
 }
-

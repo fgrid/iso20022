@@ -14,9 +14,7 @@ type AcquirerProtocolParameters8 struct {
 
 	// Configuration of the cancellation exchanges.
 	CancellationExchange *CancellationProcess1Code `xml:"CxlXchg,omitempty"`
-
 }
-
 
 func (a *AcquirerProtocolParameters8) SetFinancialCapture(value string) {
 	a.FinancialCapture = (*FinancialCapture1Code)(&value)
@@ -35,4 +33,3 @@ func (a *AcquirerProtocolParameters8) AddCompletionExchange() *ExchangeConfigura
 func (a *AcquirerProtocolParameters8) SetCancellationExchange(value string) {
 	a.CancellationExchange = (*CancellationProcess1Code)(&value)
 }
-

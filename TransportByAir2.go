@@ -11,9 +11,7 @@ type TransportByAir2 struct {
 
 	// Identifies the party that is responsible for the conveyance of the goods from one place to another.
 	AirCarrierName *Max35Text `xml:"AirCrrierNm,omitempty"`
-
 }
-
 
 func (t *TransportByAir2) AddDepartureAirport() *AirportName1Choice {
 	t.DepartureAirport = new(AirportName1Choice)
@@ -28,4 +26,3 @@ func (t *TransportByAir2) AddDestinationAirport() *AirportName1Choice {
 func (t *TransportByAir2) SetAirCarrierName(value string) {
 	t.AirCarrierName = (*Max35Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type BillingServiceParameters1 struct {
 
 	// Count or number of items (volume) involved in the charge.
 	Volume *DecimalNumber `xml:"Vol,omitempty"`
-
 }
-
 
 func (b *BillingServiceParameters1) AddBankService() *BillingServiceIdentification1 {
 	b.BankService = new(BillingServiceIdentification1)
@@ -20,4 +18,3 @@ func (b *BillingServiceParameters1) AddBankService() *BillingServiceIdentificati
 func (b *BillingServiceParameters1) SetVolume(value string) {
 	b.Volume = (*DecimalNumber)(&value)
 }
-

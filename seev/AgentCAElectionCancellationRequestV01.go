@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.014.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:seev.014.001.01 Document"`
 	Message *AgentCAElectionCancellationRequestV01 `xml:"AgtCAElctnCxlReq"`
 }
 
@@ -34,9 +34,7 @@ type AgentCAElectionCancellationRequestV01 struct {
 
 	// Provides information about the election advice to be cancelled.
 	ElectionDetails *iso20022.CorporateActionElection3 `xml:"ElctnDtls,omitempty"`
-
 }
-
 
 func (a *AgentCAElectionCancellationRequestV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -57,4 +55,3 @@ func (a *AgentCAElectionCancellationRequestV01) AddElectionDetails() *iso20022.C
 	a.ElectionDetails = new(iso20022.CorporateActionElection3)
 	return a.ElectionDetails
 }
-

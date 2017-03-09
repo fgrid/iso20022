@@ -8,17 +8,14 @@ type ContentInformationType6 struct {
 
 	// Data protection by a message authentication code (MAC).
 	AuthenticatedData []*AuthenticatedData2 `xml:"AuthntcdData,omitempty"`
-
 }
-
 
 func (c *ContentInformationType6) SetContentType(value string) {
 	c.ContentType = (*ContentType1Code)(&value)
 }
 
 func (c *ContentInformationType6) AddAuthenticatedData() *AuthenticatedData2 {
-	newValue := new (AuthenticatedData2)
+	newValue := new(AuthenticatedData2)
 	c.AuthenticatedData = append(c.AuthenticatedData, newValue)
 	return newValue
 }
-

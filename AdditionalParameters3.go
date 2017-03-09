@@ -23,9 +23,7 @@ type AdditionalParameters3 struct {
 
 	// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
 	MarketInfrastructureTransactionIdentification *Max35Text `xml:"MktInfrstrctrTxId,omitempty"`
-
 }
-
 
 func (a *AdditionalParameters3) SetPartialSettlement(value string) {
 	a.PartialSettlement = (*PartialSettlement1Code)(&value)
@@ -54,4 +52,3 @@ func (a *AdditionalParameters3) SetCorporateActionEventIdentification(value stri
 func (a *AdditionalParameters3) SetMarketInfrastructureTransactionIdentification(value string) {
 	a.MarketInfrastructureTransactionIdentification = (*Max35Text)(&value)
 }
-

@@ -18,8 +18,8 @@ type BeneficialOwner1 struct {
 	// The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.
 	NonDomicileCountry *CountryCode `xml:"NonDmclCtry,omitempty"`
 
-	// Whether or not certification is required from the account owner. 
-	// Yes: certification required 
+	// Whether or not certification is required from the account owner.
+	// Yes: certification required
 	// No: no certification required
 	CertificationIndicator *YesNoIndicator `xml:"CertfctnInd,omitempty"`
 
@@ -34,9 +34,7 @@ type BeneficialOwner1 struct {
 
 	// Quantity of securities elected by to the beneficial owner.
 	ElectedSecuritiesQuantity *UnitOrFaceAmount1Choice `xml:"ElctdSctiesQty"`
-
 }
-
 
 func (b *BeneficialOwner1) AddBeneficialOwnerIdentification() *PartyIdentification2Choice {
 	b.BeneficialOwnerIdentification = new(PartyIdentification2Choice)
@@ -82,4 +80,3 @@ func (b *BeneficialOwner1) AddElectedSecuritiesQuantity() *UnitOrFaceAmount1Choi
 	b.ElectedSecuritiesQuantity = new(UnitOrFaceAmount1Choice)
 	return b.ElectedSecuritiesQuantity
 }
-

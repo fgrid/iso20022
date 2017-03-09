@@ -26,9 +26,7 @@ type AdditionalParameters21 struct {
 
 	// Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.
 	ProcessorTransactionIdentification *Max35Text `xml:"PrcrTxId,omitempty"`
-
 }
-
 
 func (a *AdditionalParameters21) SetPartialSettlement(value string) {
 	a.PartialSettlement = (*PartialSettlement2Code)(&value)
@@ -61,4 +59,3 @@ func (a *AdditionalParameters21) SetMarketInfrastructureTransactionIdentificatio
 func (a *AdditionalParameters21) SetProcessorTransactionIdentification(value string) {
 	a.ProcessorTransactionIdentification = (*Max35Text)(&value)
 }
-

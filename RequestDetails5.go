@@ -11,9 +11,7 @@ type RequestDetails5 struct {
 
 	// Report key and returned data.
 	ReportKey []*RequestDetails4 `xml:"RptKey"`
-
 }
-
 
 func (r *RequestDetails5) SetType(value string) {
 	r.Type = (*Max35Text)(&value)
@@ -24,8 +22,7 @@ func (r *RequestDetails5) SetRequestReference(value string) {
 }
 
 func (r *RequestDetails5) AddReportKey() *RequestDetails4 {
-	newValue := new (RequestDetails4)
+	newValue := new(RequestDetails4)
 	r.ReportKey = append(r.ReportKey, newValue)
 	return newValue
 }
-

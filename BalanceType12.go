@@ -8,9 +8,7 @@ type BalanceType12 struct {
 
 	// Specifies the balance sub-type.
 	SubType *BalanceSubType1Choice `xml:"SubTp,omitempty"`
-
 }
-
 
 func (b *BalanceType12) AddCodeOrProprietary() *BalanceType5Choice {
 	b.CodeOrProprietary = new(BalanceType5Choice)
@@ -21,4 +19,3 @@ func (b *BalanceType12) AddSubType() *BalanceSubType1Choice {
 	b.SubType = new(BalanceSubType1Choice)
 	return b.SubType
 }
-

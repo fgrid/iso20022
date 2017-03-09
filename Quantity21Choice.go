@@ -8,9 +8,7 @@ type Quantity21Choice struct {
 
 	// Proprietary quantity of security format.
 	ProprietaryQuantity *ProprietaryQuantity9 `xml:"PrtryQty"`
-
 }
-
 
 func (q *Quantity21Choice) AddQuantity() *FinancialInstrumentQuantity15Choice {
 	q.Quantity = new(FinancialInstrumentQuantity15Choice)
@@ -21,4 +19,3 @@ func (q *Quantity21Choice) AddProprietaryQuantity() *ProprietaryQuantity9 {
 	q.ProprietaryQuantity = new(ProprietaryQuantity9)
 	return q.ProprietaryQuantity
 }
-

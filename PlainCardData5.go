@@ -14,9 +14,7 @@ type PlainCardData5 struct {
 
 	// Expiry date of the card expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
 	ExpiryDate *Max10Text `xml:"XpryDt"`
-
 }
-
 
 func (p *PlainCardData5) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -33,4 +31,3 @@ func (p *PlainCardData5) SetEffectiveDate(value string) {
 func (p *PlainCardData5) SetExpiryDate(value string) {
 	p.ExpiryDate = (*Max10Text)(&value)
 }
-

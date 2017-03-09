@@ -9,9 +9,7 @@ type SupplementaryData1 struct {
 
 	// Technical element wrapping the supplementary data.
 	Envelope *SupplementaryDataEnvelope1 `xml:"Envlp"`
-
 }
-
 
 func (s *SupplementaryData1) SetPlaceAndName(value string) {
 	s.PlaceAndName = (*Max350Text)(&value)
@@ -21,4 +19,3 @@ func (s *SupplementaryData1) AddEnvelope() *SupplementaryDataEnvelope1 {
 	s.Envelope = new(SupplementaryDataEnvelope1)
 	return s.Envelope
 }
-

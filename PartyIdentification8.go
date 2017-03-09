@@ -14,9 +14,7 @@ type PartyIdentification8 struct {
 
 	// Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.
 	CountryOfResidence *CountryCode `xml:"CtryOfRes,omitempty"`
-
 }
-
 
 func (p *PartyIdentification8) SetName(value string) {
 	p.Name = (*Max70Text)(&value)
@@ -35,4 +33,3 @@ func (p *PartyIdentification8) AddIdentification() *Party2Choice {
 func (p *PartyIdentification8) SetCountryOfResidence(value string) {
 	p.CountryOfResidence = (*CountryCode)(&value)
 }
-

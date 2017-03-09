@@ -8,9 +8,7 @@ type AccountManagementStatusAndReason3 struct {
 
 	// Unique and unambiguous identifier of the account opening or modification instruction at application level.
 	AccountApplicationIdentification *Max35Text `xml:"AcctApplId,omitempty"`
-
 }
-
 
 func (a *AccountManagementStatusAndReason3) AddStatus() *Status14Choice {
 	a.Status = new(Status14Choice)
@@ -20,4 +18,3 @@ func (a *AccountManagementStatusAndReason3) AddStatus() *Status14Choice {
 func (a *AccountManagementStatusAndReason3) SetAccountApplicationIdentification(value string) {
 	a.AccountApplicationIdentification = (*Max35Text)(&value)
 }
-

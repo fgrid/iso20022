@@ -11,9 +11,7 @@ type OwnerType1 struct {
 
 	// Additional information about owner type or mandate type in proprietary format.
 	Proprietary *GenericIdentification1 `xml:"Prtry,omitempty"`
-
 }
-
 
 func (o *OwnerType1) SetType(value string) {
 	o.Type = (*AccountOwnerType1Code)(&value)
@@ -27,4 +25,3 @@ func (o *OwnerType1) AddProprietary() *GenericIdentification1 {
 	o.Proprietary = new(GenericIdentification1)
 	return o.Proprietary
 }
-

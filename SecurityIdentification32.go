@@ -11,16 +11,14 @@ type SecurityIdentification32 struct {
 
 	// Textual description of a security instrument.
 	Description *RestrictedFINXMax140Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (s *SecurityIdentification32) SetISIN(value string) {
 	s.ISIN = (*ISINOct2015Identifier)(&value)
 }
 
 func (s *SecurityIdentification32) AddOtherIdentification() *OtherIdentification3 {
-	newValue := new (OtherIdentification3)
+	newValue := new(OtherIdentification3)
 	s.OtherIdentification = append(s.OtherIdentification, newValue)
 	return newValue
 }
@@ -28,4 +26,3 @@ func (s *SecurityIdentification32) AddOtherIdentification() *OtherIdentification
 func (s *SecurityIdentification32) SetDescription(value string) {
 	s.Description = (*RestrictedFINXMax140Text)(&value)
 }
-

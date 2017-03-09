@@ -17,9 +17,7 @@ type LocalMarketAnnex2 struct {
 
 	// Account to or from which a cash entry is made.
 	SettlementDetails []*CashAccount22 `xml:"SttlmDtls"`
-
 }
-
 
 func (l *LocalMarketAnnex2) AddCountry(value string) {
 	l.Country = append(l.Country, (*CountryCode)(&value))
@@ -41,8 +39,7 @@ func (l *LocalMarketAnnex2) AddRedemptionProcessingCharacteristics() *Processing
 }
 
 func (l *LocalMarketAnnex2) AddSettlementDetails() *CashAccount22 {
-	newValue := new (CashAccount22)
+	newValue := new(CashAccount22)
 	l.SettlementDetails = append(l.SettlementDetails, newValue)
 	return newValue
 }
-

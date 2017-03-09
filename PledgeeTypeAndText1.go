@@ -8,9 +8,7 @@ type PledgeeTypeAndText1 struct {
 
 	// Entity to which the financial instruments are pledged expressed as a code.
 	PledgeeType *PledgeeType1Code `xml:"PldgeeTp"`
-
 }
-
 
 func (p *PledgeeTypeAndText1) SetIdentification(value string) {
 	p.Identification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *PledgeeTypeAndText1) SetIdentification(value string) {
 func (p *PledgeeTypeAndText1) SetPledgeeType(value string) {
 	p.PledgeeType = (*PledgeeType1Code)(&value)
 }
-

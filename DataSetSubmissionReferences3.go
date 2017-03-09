@@ -15,9 +15,7 @@ type DataSetSubmissionReferences3 struct {
 
 	// Specifies that this message should force the matching application to match all data sets it has received so far for the transaction identified by the transaction identification.
 	ForcedMatch *YesNoIndicator `xml:"ForcdMtch"`
-
 }
-
 
 func (d *DataSetSubmissionReferences3) SetTransactionIdentification(value string) {
 	d.TransactionIdentification = (*Max35Text)(&value)
@@ -35,4 +33,3 @@ func (d *DataSetSubmissionReferences3) SetSubmitterTransactionReference(value st
 func (d *DataSetSubmissionReferences3) SetForcedMatch(value string) {
 	d.ForcedMatch = (*YesNoIndicator)(&value)
 }
-

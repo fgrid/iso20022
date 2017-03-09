@@ -11,9 +11,7 @@ type GenericOrganisationIdentification2 struct {
 
 	// Entity that assigns the identification.
 	Issuer *RestrictedFINXMax35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GenericOrganisationIdentification2) SetIdentification(value string) {
 	g.Identification = (*RestrictedFINXMax35Text)(&value)
@@ -27,4 +25,3 @@ func (g *GenericOrganisationIdentification2) AddSchemeName() *OrganisationIdenti
 func (g *GenericOrganisationIdentification2) SetIssuer(value string) {
 	g.Issuer = (*RestrictedFINXMax35Text)(&value)
 }
-

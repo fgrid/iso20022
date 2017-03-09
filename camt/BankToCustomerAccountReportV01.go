@@ -7,7 +7,7 @@ import (
 )
 
 type Document05200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.052.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:camt.052.001.01 Document"`
 	Message *BankToCustomerAccountReportV01 `xml:"BkToCstmrAcctRptV01"`
 }
 
@@ -32,9 +32,7 @@ type BankToCustomerAccountReportV01 struct {
 
 	// Reports on a cash account.
 	Report []*iso20022.AccountReport9 `xml:"Rpt"`
-
 }
-
 
 func (b *BankToCustomerAccountReportV01) AddGroupHeader() *iso20022.GroupHeader23 {
 	b.GroupHeader = new(iso20022.GroupHeader23)
@@ -42,8 +40,7 @@ func (b *BankToCustomerAccountReportV01) AddGroupHeader() *iso20022.GroupHeader2
 }
 
 func (b *BankToCustomerAccountReportV01) AddReport() *iso20022.AccountReport9 {
-	newValue := new (iso20022.AccountReport9)
+	newValue := new(iso20022.AccountReport9)
 	b.Report = append(b.Report, newValue)
 	return newValue
 }
-

@@ -3,7 +3,7 @@ package iso20022
 // Unique and unambiguous identification of the original message references.
 type OriginalMessage3 struct {
 
-	// Original message sender used to identify the message. 
+	// Original message sender used to identify the message.
 	OriginalSender *Party28Choice `xml:"OrgnlSndr,omitempty"`
 
 	// Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.
@@ -14,9 +14,7 @@ type OriginalMessage3 struct {
 
 	// Original date and time at which the message was created.
 	OriginalCreationDateTime *ISODateTime `xml:"OrgnlCreDtTm,omitempty"`
-
 }
-
 
 func (o *OriginalMessage3) AddOriginalSender() *Party28Choice {
 	o.OriginalSender = new(Party28Choice)
@@ -34,4 +32,3 @@ func (o *OriginalMessage3) SetOriginalMessageNameIdentification(value string) {
 func (o *OriginalMessage3) SetOriginalCreationDateTime(value string) {
 	o.OriginalCreationDateTime = (*ISODateTime)(&value)
 }
-

@@ -20,9 +20,7 @@ type ProcessingStatus23Choice struct {
 
 	// Cancellation request from your counterparty for this transaction is pending waiting for your cancellation request.
 	CancellationRequested *ProprietaryReason1 `xml:"CxlReqd"`
-
 }
-
 
 func (p *ProcessingStatus23Choice) AddAcknowledgedAccepted() *AcknowledgedAcceptedStatus7Choice {
 	p.AcknowledgedAccepted = new(AcknowledgedAcceptedStatus7Choice)
@@ -53,4 +51,3 @@ func (p *ProcessingStatus23Choice) AddCancellationRequested() *ProprietaryReason
 	p.CancellationRequested = new(ProprietaryReason1)
 	return p.CancellationRequested
 }
-

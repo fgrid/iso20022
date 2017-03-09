@@ -11,9 +11,7 @@ type AccountIdentification3 struct {
 
 	// Proprietary information, often a code, issued by the data source scheme issuer.
 	Information *Exact4AlphaNumericText `xml:"Inf"`
-
 }
-
 
 func (a *AccountIdentification3) AddIdentification() *AccountIdentification1 {
 	a.Identification = new(AccountIdentification1)
@@ -27,4 +25,3 @@ func (a *AccountIdentification3) SetIssuer(value string) {
 func (a *AccountIdentification3) SetInformation(value string) {
 	a.Information = (*Exact4AlphaNumericText)(&value)
 }
-

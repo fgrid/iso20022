@@ -32,9 +32,7 @@ type DeliverInformation4 struct {
 
 	// Parameters of a physical delivery.
 	PhysicalTransferDetails *DeliveryParameters4 `xml:"PhysTrfDtls,omitempty"`
-
 }
-
 
 func (d *DeliverInformation4) AddEffectiveSettlementDate() *DateAndDateTimeChoice {
 	d.EffectiveSettlementDate = new(DateAndDateTimeChoice)
@@ -54,19 +52,19 @@ func (d *DeliverInformation4) SetNetAmount(value, currency string) {
 }
 
 func (d *DeliverInformation4) AddChargeDetails() *Charge20 {
-	newValue := new (Charge20)
+	newValue := new(Charge20)
 	d.ChargeDetails = append(d.ChargeDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation4) AddCommissionDetails() *Commission12 {
-	newValue := new (Commission12)
+	newValue := new(Commission12)
 	d.CommissionDetails = append(d.CommissionDetails, newValue)
 	return newValue
 }
 
 func (d *DeliverInformation4) AddTaxDetails() *Tax15 {
-	newValue := new (Tax15)
+	newValue := new(Tax15)
 	d.TaxDetails = append(d.TaxDetails, newValue)
 	return newValue
 }
@@ -84,4 +82,3 @@ func (d *DeliverInformation4) AddPhysicalTransferDetails() *DeliveryParameters4 
 	d.PhysicalTransferDetails = new(DeliveryParameters4)
 	return d.PhysicalTransferDetails
 }
-

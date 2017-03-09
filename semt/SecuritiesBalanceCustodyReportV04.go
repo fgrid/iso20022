@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.04 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.04 Document"`
 	Message *SecuritiesBalanceCustodyReportV04 `xml:"SctiesBalCtdyRpt"`
 }
 
@@ -46,7 +46,7 @@ type SecuritiesBalanceCustodyReportV04 struct {
 	AccountOwner *iso20022.PartyIdentification36Choice `xml:"AcctOwnr,omitempty"`
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
-	// 
+	//
 	AccountServicer *iso20022.PartyIdentification49Choice `xml:"AcctSvcr,omitempty"`
 
 	// Account to or from which a securities entry is made.
@@ -63,9 +63,7 @@ type SecuritiesBalanceCustodyReportV04 struct {
 
 	// Total valuation amounts provided in the base currency of the account.
 	AccountBaseCurrencyTotalAmounts *iso20022.TotalValueInPageAndStatement1 `xml:"AcctBaseCcyTtlAmts,omitempty"`
-
 }
-
 
 func (s *SecuritiesBalanceCustodyReportV04) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -93,19 +91,19 @@ func (s *SecuritiesBalanceCustodyReportV04) AddSafekeepingAccount() *iso20022.Se
 }
 
 func (s *SecuritiesBalanceCustodyReportV04) AddIntermediaryInformation() *iso20022.Intermediary21 {
-	newValue := new (iso20022.Intermediary21)
+	newValue := new(iso20022.Intermediary21)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceCustodyReportV04) AddBalanceForAccount() *iso20022.AggregateBalanceInformation12 {
-	newValue := new (iso20022.AggregateBalanceInformation12)
+	newValue := new(iso20022.AggregateBalanceInformation12)
 	s.BalanceForAccount = append(s.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceCustodyReportV04) AddSubAccountDetails() *iso20022.SubAccountIdentification17 {
-	newValue := new (iso20022.SubAccountIdentification17)
+	newValue := new(iso20022.SubAccountIdentification17)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
@@ -114,4 +112,3 @@ func (s *SecuritiesBalanceCustodyReportV04) AddAccountBaseCurrencyTotalAmounts()
 	s.AccountBaseCurrencyTotalAmounts = new(iso20022.TotalValueInPageAndStatement1)
 	return s.AccountBaseCurrencyTotalAmounts
 }
-

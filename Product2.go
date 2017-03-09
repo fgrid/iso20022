@@ -23,9 +23,7 @@ type Product2 struct {
 
 	// Additional information related to the product.
 	AdditionalProductInformation *Max35Text `xml:"AddtlPdctInf,omitempty"`
-
 }
-
 
 func (p *Product2) SetProductCode(value string) {
 	p.ProductCode = (*Max70Text)(&value)
@@ -54,4 +52,3 @@ func (p *Product2) SetTaxType(value string) {
 func (p *Product2) SetAdditionalProductInformation(value string) {
 	p.AdditionalProductInformation = (*Max35Text)(&value)
 }
-

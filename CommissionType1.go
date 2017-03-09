@@ -8,9 +8,7 @@ type CommissionType1 struct {
 
 	// Additional information about the type of commission.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CommissionType1) SetStructured(value string) {
 	c.Structured = (*CommissionType5Code)(&value)
@@ -19,4 +17,3 @@ func (c *CommissionType1) SetStructured(value string) {
 func (c *CommissionType1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

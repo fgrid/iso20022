@@ -7,7 +7,7 @@ import (
 )
 
 type Document03000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.030.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.030.001.01 Document"`
 	Message *NotificationOfCaseAssignment `xml:"camt.030.001.01"`
 }
 
@@ -40,17 +40,15 @@ type NotificationOfCaseAssignment struct {
 	// Identifies the case.
 	Case *iso20022.Case `xml:"Case"`
 
-	// Identifies the current assignment of the case. 
-	// 
+	// Identifies the current assignment of the case.
+	//
 	// The Assigner must be the emitter of the notification.
 	// The Assignee must be another Party in the payment chain.
 	Assignment *iso20022.CaseAssignment `xml:"Assgnmt"`
 
 	// Information about the type of action taken.
 	Notification *iso20022.CaseForwardingNotification `xml:"Ntfctn"`
-
 }
-
 
 func (n *NotificationOfCaseAssignment) AddHeader() *iso20022.ReportHeader {
 	n.Header = new(iso20022.ReportHeader)
@@ -71,4 +69,3 @@ func (n *NotificationOfCaseAssignment) AddNotification() *iso20022.CaseForwardin
 	n.Notification = new(iso20022.CaseForwardingNotification)
 	return n.Notification
 }
-

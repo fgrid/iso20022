@@ -8,9 +8,7 @@ type RejectedReason13Choice struct {
 
 	// Proprietary identification of the reason why the instruction/cancellation request has a rejected status.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (r *RejectedReason13Choice) SetCode(value string) {
 	r.Code = (*RejectionReason43Code)(&value)
@@ -20,4 +18,3 @@ func (r *RejectedReason13Choice) AddProprietary() *GenericIdentification30 {
 	r.Proprietary = new(GenericIdentification30)
 	return r.Proprietary
 }
-

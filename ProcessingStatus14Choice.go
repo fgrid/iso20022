@@ -20,9 +20,7 @@ type ProcessingStatus14Choice struct {
 
 	// Modification is pending. It is not known at this time whether modification can be affected.
 	Pending *PendingStatus4Choice `xml:"Pdg"`
-
 }
-
 
 func (p *ProcessingStatus14Choice) AddAcknowledgedAccepted() *AcknowledgedAcceptedStatus3Choice {
 	p.AcknowledgedAccepted = new(AcknowledgedAcceptedStatus3Choice)
@@ -53,4 +51,3 @@ func (p *ProcessingStatus14Choice) AddPending() *PendingStatus4Choice {
 	p.Pending = new(PendingStatus4Choice)
 	return p.Pending
 }
-

@@ -11,9 +11,7 @@ type AcceptorReconciliationResponse2 struct {
 
 	// Reconciliation transaction between an acceptor an acquirer.
 	Transaction *TransactionReconciliation2 `xml:"Tx"`
-
 }
-
 
 func (a *AcceptorReconciliationResponse2) AddEnvironment() *CardPaymentEnvironment19 {
 	a.Environment = new(CardPaymentEnvironment19)
@@ -29,4 +27,3 @@ func (a *AcceptorReconciliationResponse2) AddTransaction() *TransactionReconcili
 	a.Transaction = new(TransactionReconciliation2)
 	return a.Transaction
 }
-

@@ -8,17 +8,14 @@ type ClockSynchronisation1 struct {
 
 	// Parameters to contact a time server.
 	SynchronisationServer []*NetworkParameters2 `xml:"SynctnSvr,omitempty"`
-
 }
-
 
 func (c *ClockSynchronisation1) SetPOITimeZone(value string) {
 	c.POITimeZone = (*Max70Text)(&value)
 }
 
 func (c *ClockSynchronisation1) AddSynchronisationServer() *NetworkParameters2 {
-	newValue := new (NetworkParameters2)
+	newValue := new(NetworkParameters2)
 	c.SynchronisationServer = append(c.SynchronisationServer, newValue)
 	return newValue
 }
-

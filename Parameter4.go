@@ -11,9 +11,7 @@ type Parameter4 struct {
 
 	// Mask generator function cryptographic algorithm and parameters.
 	MaskGeneratorAlgorithm *AlgorithmIdentification12 `xml:"MskGnrtrAlgo,omitempty"`
-
 }
-
 
 func (p *Parameter4) SetEncryptionFormat(value string) {
 	p.EncryptionFormat = (*EncryptionFormat1Code)(&value)
@@ -27,4 +25,3 @@ func (p *Parameter4) AddMaskGeneratorAlgorithm() *AlgorithmIdentification12 {
 	p.MaskGeneratorAlgorithm = new(AlgorithmIdentification12)
 	return p.MaskGeneratorAlgorithm
 }
-

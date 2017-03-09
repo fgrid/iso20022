@@ -11,9 +11,7 @@ type SettlementStatus7Choice struct {
 
 	// Proprietary status.
 	Proprietary *ProprietaryStatusAndReason1 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlementStatus7Choice) AddPending() *PendingStatus9Choice {
 	s.Pending = new(PendingStatus9Choice)
@@ -29,4 +27,3 @@ func (s *SettlementStatus7Choice) AddProprietary() *ProprietaryStatusAndReason1 
 	s.Proprietary = new(ProprietaryStatusAndReason1)
 	return s.Proprietary
 }
-

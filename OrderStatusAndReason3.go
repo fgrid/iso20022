@@ -23,9 +23,7 @@ type OrderStatusAndReason3 struct {
 
 	// Unique and unambiguous technical identification of an instance of a leg within a switch.
 	SwitchOrderLegIdentification *Max35Text `xml:"SwtchOrdrLegId,omitempty"`
-
 }
-
 
 func (o *OrderStatusAndReason3) SetStatus(value string) {
 	o.Status = (*OrderStatus2Code)(&value)
@@ -59,4 +57,3 @@ func (o *OrderStatusAndReason3) AddStatusInitiator() *PartyIdentification2Choice
 func (o *OrderStatusAndReason3) SetSwitchOrderLegIdentification(value string) {
 	o.SwitchOrderLegIdentification = (*Max35Text)(&value)
 }
-

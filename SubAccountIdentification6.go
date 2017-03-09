@@ -11,9 +11,7 @@ type SubAccountIdentification6 struct {
 
 	// Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.
 	TransactionOnSubAccount []*InvestmentFundTransactionsByFund2 `xml:"TxOnSubAcct,omitempty"`
-
 }
-
 
 func (s *SubAccountIdentification6) AddIdentification() *AccountIdentificationFormatChoice {
 	s.Identification = new(AccountIdentificationFormatChoice)
@@ -25,8 +23,7 @@ func (s *SubAccountIdentification6) SetActivityIndicator(value string) {
 }
 
 func (s *SubAccountIdentification6) AddTransactionOnSubAccount() *InvestmentFundTransactionsByFund2 {
-	newValue := new (InvestmentFundTransactionsByFund2)
+	newValue := new(InvestmentFundTransactionsByFund2)
 	s.TransactionOnSubAccount = append(s.TransactionOnSubAccount, newValue)
 	return newValue
 }
-

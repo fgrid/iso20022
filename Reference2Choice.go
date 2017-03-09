@@ -35,9 +35,7 @@ type Reference2Choice struct {
 
 	// Unique identifier of the interest payment statement.
 	InterestPaymentStatementIdentification *Max35Text `xml:"IntrstPmtStmtId"`
-
 }
-
 
 func (r *Reference2Choice) SetMarginCallRequestIdentification(value string) {
 	r.MarginCallRequestIdentification = (*Max35Text)(&value)
@@ -82,4 +80,3 @@ func (r *Reference2Choice) SetInterestPaymentResponseIdentification(value string
 func (r *Reference2Choice) SetInterestPaymentStatementIdentification(value string) {
 	r.InterestPaymentStatementIdentification = (*Max35Text)(&value)
 }
-

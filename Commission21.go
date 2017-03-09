@@ -8,9 +8,7 @@ type Commission21 struct {
 
 	// Commission amount or commission rate applied.
 	CommissionApplied *AmountOrRate3Choice `xml:"ComssnApld"`
-
 }
-
 
 func (c *Commission21) AddCommissionType() *CommissionType5Choice {
 	c.CommissionType = new(CommissionType5Choice)
@@ -21,4 +19,3 @@ func (c *Commission21) AddCommissionApplied() *AmountOrRate3Choice {
 	c.CommissionApplied = new(AmountOrRate3Choice)
 	return c.CommissionApplied
 }
-

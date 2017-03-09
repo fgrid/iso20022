@@ -14,9 +14,7 @@ type RegulatoryInformation1 struct {
 
 	// Other regulatory information.
 	Other *Max35Text `xml:"Othr,omitempty"`
-
 }
-
 
 func (r *RegulatoryInformation1) SetSector(value string) {
 	r.Sector = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (r *RegulatoryInformation1) SetGroup(value string) {
 func (r *RegulatoryInformation1) SetOther(value string) {
 	r.Other = (*Max35Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type GenericIdentification81 struct {
 
 	// Type of identification.
 	IdentificationType *OtherIdentification3Choice `xml:"IdTp"`
-
 }
-
 
 func (g *GenericIdentification81) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (g *GenericIdentification81) AddIdentificationType() *OtherIdentification3C
 	g.IdentificationType = new(OtherIdentification3Choice)
 	return g.IdentificationType
 }
-

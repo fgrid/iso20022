@@ -24,11 +24,9 @@ type CorporateActionGeneralInformation79 struct {
 	// Type of intermediates securities distribution.
 	IntermediateSecuritiesDistributionType *IntermediateSecuritiesDistributionTypeFormat5Choice `xml:"IntrmdtSctiesDstrbtnTp,omitempty"`
 
-	// Fractional quantity resulting from an event which will be paid with cash in lieu. 
+	// Fractional quantity resulting from an event which will be paid with cash in lieu.
 	FractionalQuantity *FinancialInstrumentQuantity1Choice `xml:"FrctnlQty,omitempty"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation79) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*Max35Text)(&value)
@@ -66,4 +64,3 @@ func (c *CorporateActionGeneralInformation79) AddFractionalQuantity() *Financial
 	c.FractionalQuantity = new(FinancialInstrumentQuantity1Choice)
 	return c.FractionalQuantity
 }
-

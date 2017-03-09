@@ -8,19 +8,16 @@ type Vote1Choice struct {
 
 	// Instruction specifiying a vote instruction per resolution for the entire entitlement.
 	GlobalVoteInstruction []*Vote3 `xml:"GblVoteInstr"`
-
 }
 
-
 func (v *Vote1Choice) AddVoteInstruction() *Vote4 {
-	newValue := new (Vote4)
+	newValue := new(Vote4)
 	v.VoteInstruction = append(v.VoteInstruction, newValue)
 	return newValue
 }
 
 func (v *Vote1Choice) AddGlobalVoteInstruction() *Vote3 {
-	newValue := new (Vote3)
+	newValue := new(Vote3)
 	v.GlobalVoteInstruction = append(v.GlobalVoteInstruction, newValue)
 	return newValue
 }
-

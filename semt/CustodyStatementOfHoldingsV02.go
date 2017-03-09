@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.02 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:semt.002.001.02 Document"`
 	Message *CustodyStatementOfHoldingsV02 `xml:"CtdyStmtOfHldgsV02"`
 }
 
@@ -58,9 +58,7 @@ type CustodyStatementOfHoldingsV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CustodyStatementOfHoldingsV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	c.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -68,13 +66,13 @@ func (c *CustodyStatementOfHoldingsV02) AddMessageIdentification() *iso20022.Mes
 }
 
 func (c *CustodyStatementOfHoldingsV02) AddPreviousReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	c.PreviousReference = append(c.PreviousReference, newValue)
 	return newValue
 }
 
 func (c *CustodyStatementOfHoldingsV02) AddRelatedReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	c.RelatedReference = append(c.RelatedReference, newValue)
 	return newValue
 }
@@ -95,13 +93,13 @@ func (c *CustodyStatementOfHoldingsV02) AddAccountDetails() *iso20022.Safekeepin
 }
 
 func (c *CustodyStatementOfHoldingsV02) AddBalanceForAccount() *iso20022.AggregateBalanceInformation4 {
-	newValue := new (iso20022.AggregateBalanceInformation4)
+	newValue := new(iso20022.AggregateBalanceInformation4)
 	c.BalanceForAccount = append(c.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (c *CustodyStatementOfHoldingsV02) AddSubAccountDetails() *iso20022.SubAccountIdentification5 {
-	newValue := new (iso20022.SubAccountIdentification5)
+	newValue := new(iso20022.SubAccountIdentification5)
 	c.SubAccountDetails = append(c.SubAccountDetails, newValue)
 	return newValue
 }
@@ -112,8 +110,7 @@ func (c *CustodyStatementOfHoldingsV02) AddTotalValues() *iso20022.TotalValueInP
 }
 
 func (c *CustodyStatementOfHoldingsV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

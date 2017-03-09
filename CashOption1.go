@@ -17,9 +17,7 @@ type CashOption1 struct {
 
 	// Provides information about a foreign exchange.
 	ExchangeRate *ForeignExchangeTerms8 `xml:"XchgRate,omitempty"`
-
 }
-
 
 func (c *CashOption1) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -43,4 +41,3 @@ func (c *CashOption1) AddExchangeRate() *ForeignExchangeTerms8 {
 	c.ExchangeRate = new(ForeignExchangeTerms8)
 	return c.ExchangeRate
 }
-

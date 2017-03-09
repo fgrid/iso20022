@@ -23,9 +23,7 @@ type OriginalRequestInformation1 struct {
 
 	// Information on the business status of the cancellation.
 	CancellationStatusInformation *CancellationStatusInformation1 `xml:"CxlStsInf,omitempty"`
-
 }
-
 
 func (o *OriginalRequestInformation1) SetIdentification(value string) {
 	o.Identification = (*Max35Text)(&value)
@@ -59,4 +57,3 @@ func (o *OriginalRequestInformation1) AddCancellationStatusInformation() *Cancel
 	o.CancellationStatusInformation = new(CancellationStatusInformation1)
 	return o.CancellationStatusInformation
 }
-

@@ -38,9 +38,7 @@ type ProcessingCharacteristics3 struct {
 	// renunciation, indicate the last business day following receipt of the relevant renunciation documentation by the main Fund
 	// Order Desk (R) by which the proceeds will be sent.&nbsp; Examples of the above would be T+3, R+4 etc.
 	SettlementCycle *TimeFrame4Choice `xml:"SttlmCycl"`
-
 }
-
 
 func (p *ProcessingCharacteristics3) AddDealingCurrencyAccepted(value string) {
 	p.DealingCurrencyAccepted = append(p.DealingCurrencyAccepted, (*ActiveCurrencyCode)(&value))
@@ -89,4 +87,3 @@ func (p *ProcessingCharacteristics3) AddSettlementCycle() *TimeFrame4Choice {
 	p.SettlementCycle = new(TimeFrame4Choice)
 	return p.SettlementCycle
 }
-

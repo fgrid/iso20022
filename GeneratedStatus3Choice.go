@@ -8,17 +8,14 @@ type GeneratedStatus3Choice struct {
 
 	// Specifies the reason of the GeneratedStatus.
 	Reason []*GeneratedReason1 `xml:"Rsn"`
-
 }
-
 
 func (g *GeneratedStatus3Choice) SetNoSpecifiedReason(value string) {
 	g.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (g *GeneratedStatus3Choice) AddReason() *GeneratedReason1 {
-	newValue := new (GeneratedReason1)
+	newValue := new(GeneratedReason1)
 	g.Reason = append(g.Reason, newValue)
 	return newValue
 }
-

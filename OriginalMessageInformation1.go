@@ -11,9 +11,7 @@ type OriginalMessageInformation1 struct {
 
 	// Date and time at which the message was created.
 	CreationDateTime *ISODateTime `xml:"CreDtTm,omitempty"`
-
 }
-
 
 func (o *OriginalMessageInformation1) SetMessageIdentification(value string) {
 	o.MessageIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (o *OriginalMessageInformation1) SetMessageNameIdentification(value string)
 func (o *OriginalMessageInformation1) SetCreationDateTime(value string) {
 	o.CreationDateTime = (*ISODateTime)(&value)
 }
-

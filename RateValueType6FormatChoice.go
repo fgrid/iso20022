@@ -8,9 +8,7 @@ type RateValueType6FormatChoice struct {
 
 	// Proprietary code to  express the value of a rate.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (r *RateValueType6FormatChoice) SetCode(value string) {
 	r.Code = (*RateValueType6Code)(&value)
@@ -20,4 +18,3 @@ func (r *RateValueType6FormatChoice) AddProprietary() *GenericIdentification13 {
 	r.Proprietary = new(GenericIdentification13)
 	return r.Proprietary
 }
-

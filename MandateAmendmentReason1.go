@@ -11,9 +11,7 @@ type MandateAmendmentReason1 struct {
 
 	// Further details on the amendment request reason.
 	AdditionalInformation []*Max105Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (m *MandateAmendmentReason1) AddOriginator() *PartyIdentification43 {
 	m.Originator = new(PartyIdentification43)
@@ -28,4 +26,3 @@ func (m *MandateAmendmentReason1) AddReason() *MandateReason1Choice {
 func (m *MandateAmendmentReason1) AddAdditionalInformation(value string) {
 	m.AdditionalInformation = append(m.AdditionalInformation, (*Max105Text)(&value))
 }
-

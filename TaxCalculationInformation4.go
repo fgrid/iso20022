@@ -23,9 +23,7 @@ type TaxCalculationInformation4 struct {
 
 	// Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.
 	ExtendedEUDividendStatus *Extended350Code `xml:"XtndedEUDvddSts,omitempty"`
-
 }
-
 
 func (t *TaxCalculationInformation4) SetEUCapitalGain(value string) {
 	t.EUCapitalGain = (*EUCapitalGain2Code)(&value)
@@ -54,4 +52,3 @@ func (t *TaxCalculationInformation4) SetEUDividendStatus(value string) {
 func (t *TaxCalculationInformation4) SetExtendedEUDividendStatus(value string) {
 	t.ExtendedEUDividendStatus = (*Extended350Code)(&value)
 }
-

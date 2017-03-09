@@ -8,9 +8,7 @@ type CodeOrProprietary1Choice struct {
 
 	// Element expressed as a proprietary code.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *CodeOrProprietary1Choice) SetCode(value string) {
 	c.Code = (*Max4Text)(&value)
@@ -20,4 +18,3 @@ func (c *CodeOrProprietary1Choice) AddProprietary() *GenericIdentification13 {
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

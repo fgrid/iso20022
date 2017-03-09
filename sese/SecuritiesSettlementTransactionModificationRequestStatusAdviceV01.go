@@ -7,7 +7,7 @@ import (
 )
 
 type Document03900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.039.001.01 Document"`
+	XMLName xml.Name                                                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.039.001.01 Document"`
 	Message *SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 `xml:"SctiesSttlmTxModReqStsAdvc"`
 }
 
@@ -21,14 +21,14 @@ func (d *Document03900101) AddMessage() *SecuritiesSettlementTransactionModifica
 // The account servicer may be:
 // - a central securities depository or another settlement market infrastructure managing securities settlement transactions on behalf of their participants
 // - an custodian acting as an accounting and/or settlement agent.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message sent by the account owner to the account servicer,
 // - provide a third party with a copy of a message being sent by the account owner for information,
 // - re-send to a third party a copy of a message being sent by the account owner for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 struct {
@@ -53,9 +53,7 @@ type SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionModificationRequestStatusAdviceV01) AddModificationRequestReference() *iso20022.Identification1 {
 	s.ModificationRequestReference = new(iso20022.Identification1)
@@ -88,8 +86,7 @@ func (s *SecuritiesSettlementTransactionModificationRequestStatusAdviceV01) AddT
 }
 
 func (s *SecuritiesSettlementTransactionModificationRequestStatusAdviceV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

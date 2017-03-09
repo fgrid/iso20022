@@ -14,9 +14,7 @@ type PlaceOfTradeIdentification1Choice struct {
 
 	// Place at which the Over-the-Counter (OTC) transaction is executed.
 	OverTheCounter *Max35Text `xml:"OverTheCntr"`
-
 }
-
 
 func (p *PlaceOfTradeIdentification1Choice) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
@@ -33,4 +31,3 @@ func (p *PlaceOfTradeIdentification1Choice) SetParty(value string) {
 func (p *PlaceOfTradeIdentification1Choice) SetOverTheCounter(value string) {
 	p.OverTheCounter = (*Max35Text)(&value)
 }
-

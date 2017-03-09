@@ -11,9 +11,7 @@ type CurrencyAndAmountRange struct {
 
 	// Medium of exchange of value, used to qualify an amount.
 	Currency *CurrencyCode `xml:"Ccy"`
-
 }
-
 
 func (c *CurrencyAndAmountRange) AddAmount() *ImpliedCurrencyAmountRangeChoice {
 	c.Amount = new(ImpliedCurrencyAmountRangeChoice)
@@ -27,4 +25,3 @@ func (c *CurrencyAndAmountRange) SetCreditDebitIndicator(value string) {
 func (c *CurrencyAndAmountRange) SetCurrency(value string) {
 	c.Currency = (*CurrencyCode)(&value)
 }
-

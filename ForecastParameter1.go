@@ -14,9 +14,7 @@ type ForecastParameter1 struct {
 
 	// Net cash movements to a fund as a result of investment funds transactions.
 	EstimatedNetCashForecastDetails []*NetCashForecast1 `xml:"EstmtdNetCshFcstDtls,omitempty"`
-
 }
-
 
 func (f *ForecastParameter1) AddReportParameter() *ReportParameter2Choice {
 	f.ReportParameter = new(ReportParameter2Choice)
@@ -24,20 +22,19 @@ func (f *ForecastParameter1) AddReportParameter() *ReportParameter2Choice {
 }
 
 func (f *ForecastParameter1) AddEstimatedCashInForecastDetails() *CashInForecast1 {
-	newValue := new (CashInForecast1)
+	newValue := new(CashInForecast1)
 	f.EstimatedCashInForecastDetails = append(f.EstimatedCashInForecastDetails, newValue)
 	return newValue
 }
 
 func (f *ForecastParameter1) AddEstimatedCashOutForecastDetails() *CashOutForecast1 {
-	newValue := new (CashOutForecast1)
+	newValue := new(CashOutForecast1)
 	f.EstimatedCashOutForecastDetails = append(f.EstimatedCashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (f *ForecastParameter1) AddEstimatedNetCashForecastDetails() *NetCashForecast1 {
-	newValue := new (NetCashForecast1)
+	newValue := new(NetCashForecast1)
 	f.EstimatedNetCashForecastDetails = append(f.EstimatedNetCashForecastDetails, newValue)
 	return newValue
 }
-

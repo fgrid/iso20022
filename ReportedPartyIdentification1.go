@@ -6,11 +6,9 @@ type ReportedPartyIdentification1 struct {
 	// Name or sector of the counterparty of the reporting agent used by the reporting agent.
 	NameOrSector *NameOrSector1Choice `xml:"NmOrSctr"`
 
-	// Location of the country in which the counterparty is incorporated. 
+	// Location of the country in which the counterparty is incorporated.
 	Location *CountryCode `xml:"Lctn"`
-
 }
-
 
 func (r *ReportedPartyIdentification1) AddNameOrSector() *NameOrSector1Choice {
 	r.NameOrSector = new(NameOrSector1Choice)
@@ -20,4 +18,3 @@ func (r *ReportedPartyIdentification1) AddNameOrSector() *NameOrSector1Choice {
 func (r *ReportedPartyIdentification1) SetLocation(value string) {
 	r.Location = (*CountryCode)(&value)
 }
-

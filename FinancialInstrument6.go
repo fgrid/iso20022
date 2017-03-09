@@ -23,9 +23,7 @@ type FinancialInstrument6 struct {
 
 	// Company specific description of a group of funds.
 	ProductGroup *Max140Text `xml:"PdctGrp,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument6) AddIdentification() *SecurityIdentification1Choice {
 	f.Identification = new(SecurityIdentification1Choice)
@@ -55,4 +53,3 @@ func (f *FinancialInstrument6) SetDistributionPolicy(value string) {
 func (f *FinancialInstrument6) SetProductGroup(value string) {
 	f.ProductGroup = (*Max140Text)(&value)
 }
-

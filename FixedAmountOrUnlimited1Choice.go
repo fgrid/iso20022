@@ -8,9 +8,7 @@ type FixedAmountOrUnlimited1Choice struct {
 
 	// Unlimited amount.
 	NotLimited *Unlimited9Text `xml:"NotLtd"`
-
 }
-
 
 func (f *FixedAmountOrUnlimited1Choice) SetAmount(value, currency string) {
 	f.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (f *FixedAmountOrUnlimited1Choice) SetAmount(value, currency string) {
 func (f *FixedAmountOrUnlimited1Choice) SetNotLimited(value string) {
 	f.NotLimited = (*Unlimited9Text)(&value)
 }
-

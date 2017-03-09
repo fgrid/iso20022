@@ -11,9 +11,7 @@ type Document11 struct {
 
 	// Details related to an electronic presentation.
 	ElectronicDetails []*Presentation3 `xml:"ElctrncDtls,omitempty"`
-
 }
-
 
 func (d *Document11) AddType() *PresentationDocumentFormat1Choice {
 	d.Type = new(PresentationDocumentFormat1Choice)
@@ -25,8 +23,7 @@ func (d *Document11) SetWording(value string) {
 }
 
 func (d *Document11) AddElectronicDetails() *Presentation3 {
-	newValue := new (Presentation3)
+	newValue := new(Presentation3)
 	d.ElectronicDetails = append(d.ElectronicDetails, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document05700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.057.001.02 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:camt.057.001.02 Document"`
 	Message *NotificationToReceiveV02 `xml:"NtfctnToRcv"`
 }
 
@@ -27,9 +27,7 @@ type NotificationToReceiveV02 struct {
 
 	// Set of elements used to provide further details on the account notification.
 	Notification *iso20022.AccountNotification4 `xml:"Ntfctn"`
-
 }
-
 
 func (n *NotificationToReceiveV02) AddGroupHeader() *iso20022.GroupHeader43 {
 	n.GroupHeader = new(iso20022.GroupHeader43)
@@ -40,4 +38,3 @@ func (n *NotificationToReceiveV02) AddNotification() *iso20022.AccountNotificati
 	n.Notification = new(iso20022.AccountNotification4)
 	return n.Notification
 }
-

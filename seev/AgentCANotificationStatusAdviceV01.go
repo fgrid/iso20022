@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.011.001.01 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:seev.011.001.01 Document"`
 	Message *AgentCANotificationStatusAdviceV01 `xml:"AgtCANtfctnStsAdvc"`
 }
 
@@ -40,9 +40,7 @@ type AgentCANotificationStatusAdviceV01 struct {
 
 	// Status of the notification advice sent by the issuer (agent).
 	NotificationAdviceStatus *iso20022.NotificationAdviceStatus1Choice `xml:"NtfctnAdvcSts"`
-
 }
-
 
 func (a *AgentCANotificationStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -73,4 +71,3 @@ func (a *AgentCANotificationStatusAdviceV01) AddNotificationAdviceStatus() *iso2
 	a.NotificationAdviceStatus = new(iso20022.NotificationAdviceStatus1Choice)
 	return a.NotificationAdviceStatus
 }
-

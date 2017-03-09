@@ -20,9 +20,7 @@ type CommunicationAddress5 struct {
 
 	// Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.
 	AdditionalContactInformation *Max256Text `xml:"AddtlCtctInf,omitempty"`
-
 }
-
 
 func (c *CommunicationAddress5) AddPostalAddress() *PostalAddress18 {
 	c.PostalAddress = new(PostalAddress18)
@@ -48,4 +46,3 @@ func (c *CommunicationAddress5) SetCustomerService(value string) {
 func (c *CommunicationAddress5) SetAdditionalContactInformation(value string) {
 	c.AdditionalContactInformation = (*Max256Text)(&value)
 }
-

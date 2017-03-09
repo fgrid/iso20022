@@ -8,17 +8,14 @@ type TransferIn16 struct {
 
 	// General information related to the transfer of a financial instrument.
 	TransferDetails []*Transfer32 `xml:"TrfDtls"`
-
 }
-
 
 func (t *TransferIn16) SetCancellationReference(value string) {
 	t.CancellationReference = (*Max35Text)(&value)
 }
 
 func (t *TransferIn16) AddTransferDetails() *Transfer32 {
-	newValue := new (Transfer32)
+	newValue := new(Transfer32)
 	t.TransferDetails = append(t.TransferDetails, newValue)
 	return newValue
 }
-

@@ -44,9 +44,7 @@ type OrganisationModification1 struct {
 
 	// Person that is officially and legally mandated to represent the organisation. Depending on legislation, the legal representative(s) might for instance be assigned by the Board, identified in the by-laws of the organisation, be publicly announced in the official journal of a country, etc.
 	LegalRepresentative []*PartyModification1 `xml:"LglRprtv,omitempty"`
-
 }
-
 
 func (o *OrganisationModification1) AddFullLegalName() *FullLegalNameModification1 {
 	o.FullLegalName = new(FullLegalNameModification1)
@@ -92,7 +90,7 @@ func (o *OrganisationModification1) AddOrganisationIdentification() *Organisatio
 }
 
 func (o *OrganisationModification1) AddRepresentativeOfficer() *PartyModification1 {
-	newValue := new (PartyModification1)
+	newValue := new(PartyModification1)
 	o.RepresentativeOfficer = append(o.RepresentativeOfficer, newValue)
 	return newValue
 }
@@ -103,20 +101,19 @@ func (o *OrganisationModification1) AddTreasuryManager() *PartyModification1 {
 }
 
 func (o *OrganisationModification1) AddMainMandateHolder() *PartyModification1 {
-	newValue := new (PartyModification1)
+	newValue := new(PartyModification1)
 	o.MainMandateHolder = append(o.MainMandateHolder, newValue)
 	return newValue
 }
 
 func (o *OrganisationModification1) AddSender() *PartyModification1 {
-	newValue := new (PartyModification1)
+	newValue := new(PartyModification1)
 	o.Sender = append(o.Sender, newValue)
 	return newValue
 }
 
 func (o *OrganisationModification1) AddLegalRepresentative() *PartyModification1 {
-	newValue := new (PartyModification1)
+	newValue := new(PartyModification1)
 	o.LegalRepresentative = append(o.LegalRepresentative, newValue)
 	return newValue
 }
-

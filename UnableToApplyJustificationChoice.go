@@ -8,9 +8,7 @@ type UnableToApplyJustificationChoice struct {
 
 	// Missing or incorrect information.
 	MissingOrIncorrectInformation *MissingOrIncorrectInformation `xml:"MssngOrIncrrctInf"`
-
 }
-
 
 func (u *UnableToApplyJustificationChoice) SetAnyInformation(value string) {
 	u.AnyInformation = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (u *UnableToApplyJustificationChoice) AddMissingOrIncorrectInformation() *M
 	u.MissingOrIncorrectInformation = new(MissingOrIncorrectInformation)
 	return u.MissingOrIncorrectInformation
 }
-

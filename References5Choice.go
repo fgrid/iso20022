@@ -14,9 +14,7 @@ type References5Choice struct {
 
 	// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
 	MarketInfrastructureTransactionIdentification *Max35Text `xml:"MktInfrstrctrTxId"`
-
 }
-
 
 func (r *References5Choice) SetAccountOwnerTransactionIdentification(value string) {
 	r.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (r *References5Choice) SetPoolIdentification(value string) {
 func (r *References5Choice) SetMarketInfrastructureTransactionIdentification(value string) {
 	r.MarketInfrastructureTransactionIdentification = (*Max35Text)(&value)
 }
-

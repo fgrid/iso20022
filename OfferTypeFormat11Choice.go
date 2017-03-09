@@ -8,9 +8,7 @@ type OfferTypeFormat11Choice struct {
 
 	// Proprietary identification of the conditions that apply to the offer.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (o *OfferTypeFormat11Choice) SetCode(value string) {
 	o.Code = (*OfferType3Code)(&value)
@@ -20,4 +18,3 @@ func (o *OfferTypeFormat11Choice) AddProprietary() *GenericIdentification47 {
 	o.Proprietary = new(GenericIdentification47)
 	return o.Proprietary
 }
-

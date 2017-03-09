@@ -8,9 +8,7 @@ type NameAndAddress1 struct {
 
 	// Postal address of a party.
 	Address *LongPostalAddress1Choice `xml:"Adr"`
-
 }
-
 
 func (n *NameAndAddress1) SetName(value string) {
 	n.Name = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (n *NameAndAddress1) AddAddress() *LongPostalAddress1Choice {
 	n.Address = new(LongPostalAddress1Choice)
 	return n.Address
 }
-

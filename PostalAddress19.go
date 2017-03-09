@@ -38,9 +38,7 @@ type PostalAddress19 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services, presented in free format text.
 	AddressLine []*Max70Text `xml:"AdrLine,omitempty"`
-
 }
-
 
 func (p *PostalAddress19) SetAddressType(value string) {
 	p.AddressType = (*AddressType2Code)(&value)
@@ -89,4 +87,3 @@ func (p *PostalAddress19) SetCountry(value string) {
 func (p *PostalAddress19) AddAddressLine(value string) {
 	p.AddressLine = append(p.AddressLine, (*Max70Text)(&value))
 }
-

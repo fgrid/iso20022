@@ -11,9 +11,7 @@ type UnitPrice20 struct {
 
 	// Type of pricing calculation method.
 	PriceMethod *PriceMethod1Code `xml:"PricMtd,omitempty"`
-
 }
-
 
 func (u *UnitPrice20) AddPriceType() *UnitPriceType2Choice {
 	u.PriceType = new(UnitPriceType2Choice)
@@ -28,4 +26,3 @@ func (u *UnitPrice20) AddValue() *PriceValue1 {
 func (u *UnitPrice20) SetPriceMethod(value string) {
 	u.PriceMethod = (*PriceMethod1Code)(&value)
 }
-

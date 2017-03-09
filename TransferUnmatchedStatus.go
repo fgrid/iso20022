@@ -11,9 +11,7 @@ type TransferUnmatchedStatus struct {
 
 	// Indicates that there is no reason available or to report.
 	NoReason *NoReasonCode `xml:"NoRsn"`
-
 }
-
 
 func (t *TransferUnmatchedStatus) AddReason() *TransferUnmatchedStatusReason1 {
 	t.Reason = new(TransferUnmatchedStatusReason1)
@@ -28,4 +26,3 @@ func (t *TransferUnmatchedStatus) AddDataSourceScheme() *GenericIdentification1 
 func (t *TransferUnmatchedStatus) SetNoReason(value string) {
 	t.NoReason = (*NoReasonCode)(&value)
 }
-

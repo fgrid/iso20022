@@ -7,7 +7,7 @@ import (
 )
 
 type Document04300104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.043.001.04 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.043.001.04 Document"`
 	Message *FundDetailedConfirmedCashForecastReportV04 `xml:"FndDtldConfdCshFcstRpt"`
 }
 
@@ -20,7 +20,7 @@ func (d *Document04300104) AddMessage() *FundDetailedConfirmedCashForecastReport
 // A report provider, such as a transfer agent, sends the FundDetailedConfirmedCashForecastReport message to the report user, such as an investment manager or pricing agent, to report the confirmed cash incomings and outgoings, sorted by country, institution name or other criteria defined by the user of one or more share classes of an investment fund on one or more trade dates.
 // The cash movements may result from, for example, redemption, subscription, switch transactions or reinvestment of dividends.
 // Usage
-// The FundDetailedConfirmedCashForecastReport is used to provide definitive cash movements, that is, it is sent after the cut-off time and/or the price valuation of the fund. 
+// The FundDetailedConfirmedCashForecastReport is used to provide definitive cash movements, that is, it is sent after the cut-off time and/or the price valuation of the fund.
 // If the price is not yet definitive, then the FundDetailedEstimatedCashForecastReport message must be used.
 // The message structure allows for the following uses:
 // -	to provide cash in and cash out amounts for a fund/sub fund and one or more share classes (a FundOrSubFundDetails sequence and one or FundCashForecastDetails sequences are used),
@@ -56,9 +56,7 @@ type FundDetailedConfirmedCashForecastReportV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundDetailedConfirmedCashForecastReportV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	f.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -71,13 +69,13 @@ func (f *FundDetailedConfirmedCashForecastReportV04) AddPoolReference() *iso2002
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV04) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.PreviousReference = append(f.PreviousReference, newValue)
 	return newValue
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV04) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
@@ -93,7 +91,7 @@ func (f *FundDetailedConfirmedCashForecastReportV04) AddFundOrSubFundDetails() *
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV04) AddFundCashForecastDetails() *iso20022.FundCashForecast6 {
-	newValue := new (iso20022.FundCashForecast6)
+	newValue := new(iso20022.FundCashForecast6)
 	f.FundCashForecastDetails = append(f.FundCashForecastDetails, newValue)
 	return newValue
 }
@@ -104,8 +102,7 @@ func (f *FundDetailedConfirmedCashForecastReportV04) AddConsolidatedNetCashForec
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV04) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

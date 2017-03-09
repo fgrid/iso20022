@@ -8,9 +8,7 @@ type ClearingBrokerIdentification1 struct {
 
 	// Specifies the identification assigned to the clearing broker.
 	ClearingBrokerIdentification *Max35Text `xml:"ClrBrkrId"`
-
 }
-
 
 func (c *ClearingBrokerIdentification1) SetSideIndicator(value string) {
 	c.SideIndicator = (*SideIndicator1Code)(&value)
@@ -19,4 +17,3 @@ func (c *ClearingBrokerIdentification1) SetSideIndicator(value string) {
 func (c *ClearingBrokerIdentification1) SetClearingBrokerIdentification(value string) {
 	c.ClearingBrokerIdentification = (*Max35Text)(&value)
 }
-

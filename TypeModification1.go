@@ -8,9 +8,7 @@ type TypeModification1 struct {
 
 	// Type of the account.
 	Type *CashAccountType2Choice `xml:"Tp"`
-
 }
-
 
 func (t *TypeModification1) SetModificationCode(value string) {
 	t.ModificationCode = (*Modification1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TypeModification1) AddType() *CashAccountType2Choice {
 	t.Type = new(CashAccountType2Choice)
 	return t.Type
 }
-

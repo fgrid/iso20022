@@ -8,9 +8,7 @@ type CorporateActionFrequencyType1FormatChoice struct {
 
 	// Proprietary code to  express the frequency of a CA event.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionFrequencyType1FormatChoice) SetCode(value string) {
 	c.Code = (*CorporateActionFrequencyType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionFrequencyType1FormatChoice) AddProprietary() *GenericIde
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

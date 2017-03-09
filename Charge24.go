@@ -8,17 +8,14 @@ type Charge24 struct {
 
 	// Amount of money associated with a service.
 	Charges []*ChargesDetails3 `xml:"Chrgs,omitempty"`
-
 }
-
 
 func (c *Charge24) SetType(value string) {
 	c.Type = (*FreightCharges1Code)(&value)
 }
 
 func (c *Charge24) AddCharges() *ChargesDetails3 {
-	newValue := new (ChargesDetails3)
+	newValue := new(ChargesDetails3)
 	c.Charges = append(c.Charges, newValue)
 	return newValue
 }
-

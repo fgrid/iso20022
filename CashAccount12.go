@@ -20,9 +20,7 @@ type CashAccount12 struct {
 
 	// Specifies the current state of an account, eg, enabled or deleted.
 	Status *AccountStatus1Code `xml:"Sts"`
-
 }
-
 
 func (c *CashAccount12) AddIdentification() *CashAccountIdentification1Choice {
 	c.Identification = new(CashAccountIdentification1Choice)
@@ -48,4 +46,3 @@ func (c *CashAccount12) SetCurrency(value string) {
 func (c *CashAccount12) SetStatus(value string) {
 	c.Status = (*AccountStatus1Code)(&value)
 }
-

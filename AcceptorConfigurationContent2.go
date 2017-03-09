@@ -20,12 +20,10 @@ type AcceptorConfigurationContent2 struct {
 
 	// Point of interaction parameters related to the security of software application and application protocol.
 	SecurityParameters []*SecurityParameters1 `xml:"SctyParams,omitempty"`
-
 }
 
-
 func (a *AcceptorConfigurationContent2) AddAcquirerProtocolParameters() *AcquirerProtocolParameters3 {
-	newValue := new (AcquirerProtocolParameters3)
+	newValue := new(AcquirerProtocolParameters3)
 	a.AcquirerProtocolParameters = append(a.AcquirerProtocolParameters, newValue)
 	return newValue
 }
@@ -39,20 +37,19 @@ func (a *AcceptorConfigurationContent2) AddTerminalParameters(value string) {
 }
 
 func (a *AcceptorConfigurationContent2) AddApplicationParameters() *ApplicationParameters2 {
-	newValue := new (ApplicationParameters2)
+	newValue := new(ApplicationParameters2)
 	a.ApplicationParameters = append(a.ApplicationParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent2) AddHostCommunicationParameters() *HostCommunicationParameter2 {
-	newValue := new (HostCommunicationParameter2)
+	newValue := new(HostCommunicationParameter2)
 	a.HostCommunicationParameters = append(a.HostCommunicationParameters, newValue)
 	return newValue
 }
 
 func (a *AcceptorConfigurationContent2) AddSecurityParameters() *SecurityParameters1 {
-	newValue := new (SecurityParameters1)
+	newValue := new(SecurityParameters1)
 	a.SecurityParameters = append(a.SecurityParameters, newValue)
 	return newValue
 }
-

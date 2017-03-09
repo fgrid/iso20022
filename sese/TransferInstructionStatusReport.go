@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.011.001.01 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:sese.011.001.01 Document"`
 	Message *TransferInstructionStatusReport `xml:"sese.011.001.01"`
 }
 
@@ -37,9 +37,7 @@ type TransferInstructionStatusReport struct {
 
 	// Status of the transfer instruction.
 	StatusReport *iso20022.TransferStatusAndReason `xml:"StsRpt"`
-
 }
-
 
 func (t *TransferInstructionStatusReport) AddRelatedReference() *iso20022.AdditionalReference2 {
 	t.RelatedReference = new(iso20022.AdditionalReference2)
@@ -55,4 +53,3 @@ func (t *TransferInstructionStatusReport) AddStatusReport() *iso20022.TransferSt
 	t.StatusReport = new(iso20022.TransferStatusAndReason)
 	return t.StatusReport
 }
-

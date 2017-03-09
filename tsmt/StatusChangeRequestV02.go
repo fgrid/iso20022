@@ -7,7 +7,7 @@ import (
 )
 
 type Document02600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.026.001.02 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.026.001.02 Document"`
 	Message *StatusChangeRequestV02 `xml:"StsChngReq"`
 }
 
@@ -34,14 +34,12 @@ type StatusChangeRequestV02 struct {
 	// Reference to the transaction for the requesting financial institution.
 	SubmitterTransactionReference *iso20022.SimpleIdentificationInformation `xml:"SubmitrTxRef,omitempty"`
 
-	// Specifies the baseline status requested by the submitter by means of a code. 
+	// Specifies the baseline status requested by the submitter by means of a code.
 	RequestedStatus *iso20022.TransactionStatus3 `xml:"ReqdSts"`
 
 	// Specifies the reason for the request to change status.
 	RequestReason *iso20022.Reason2 `xml:"ReqRsn,omitempty"`
-
 }
-
 
 func (s *StatusChangeRequestV02) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	s.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -67,4 +65,3 @@ func (s *StatusChangeRequestV02) AddRequestReason() *iso20022.Reason2 {
 	s.RequestReason = new(iso20022.Reason2)
 	return s.RequestReason
 }
-

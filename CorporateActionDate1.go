@@ -95,9 +95,7 @@ type CorporateActionDate1 struct {
 
 	// Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end.
 	MarketClaimTrackingEndDate *DateFormat6Choice `xml:"MktClmTrckgEndDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate1) AddAnnouncementDate() *DateFormat6Choice {
 	c.AnnouncementDate = new(DateFormat6Choice)
@@ -253,4 +251,3 @@ func (c *CorporateActionDate1) AddMarketClaimTrackingEndDate() *DateFormat6Choic
 	c.MarketClaimTrackingEndDate = new(DateFormat6Choice)
 	return c.MarketClaimTrackingEndDate
 }
-

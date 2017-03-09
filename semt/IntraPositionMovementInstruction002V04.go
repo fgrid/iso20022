@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300204 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.013.002.04 Document"`
+	XMLName xml.Name                                `xml:"urn:iso:std:iso:20022:tech:xsd:semt.013.002.04 Document"`
 	Message *IntraPositionMovementInstruction002V04 `xml:"IntraPosMvmntInstr"`
 }
 
@@ -64,9 +64,7 @@ type IntraPositionMovementInstruction002V04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementInstruction002V04) SetTransactionIdentification(value string) {
 	i.TransactionIdentification = (*iso20022.RestrictedFINXMax16Text)(&value)
@@ -83,7 +81,7 @@ func (i *IntraPositionMovementInstruction002V04) AddNumberCounts() *iso20022.Num
 }
 
 func (i *IntraPositionMovementInstruction002V04) AddLinkages() *iso20022.Linkages42 {
-	newValue := new (iso20022.Linkages42)
+	newValue := new(iso20022.Linkages42)
 	i.Linkages = append(i.Linkages, newValue)
 	return newValue
 }
@@ -119,8 +117,7 @@ func (i *IntraPositionMovementInstruction002V04) AddIntraPositionDetails() *iso2
 }
 
 func (i *IntraPositionMovementInstruction002V04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

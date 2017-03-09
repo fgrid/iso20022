@@ -20,9 +20,7 @@ type ATMTotals3 struct {
 
 	// Amount of transaction with the defined currency.
 	Amount *ImpliedCurrencyAndAmount `xml:"Amt,omitempty"`
-
 }
-
 
 func (a *ATMTotals3) SetIdentification(value string) {
 	a.Identification = (*Max70Text)(&value)
@@ -47,4 +45,3 @@ func (a *ATMTotals3) SetCount(value string) {
 func (a *ATMTotals3) SetAmount(value, currency string) {
 	a.Amount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

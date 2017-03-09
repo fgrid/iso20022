@@ -11,9 +11,7 @@ type ProprietaryDate1 struct {
 
 	// Date and time in ISO format.
 	DateTime *ISODateTime `xml:"DtTm"`
-
 }
-
 
 func (p *ProprietaryDate1) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (p *ProprietaryDate1) SetDate(value string) {
 func (p *ProprietaryDate1) SetDateTime(value string) {
 	p.DateTime = (*ISODateTime)(&value)
 }
-

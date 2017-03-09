@@ -17,9 +17,7 @@ type CorporateActionRate7 struct {
 
 	// Rate used to determine the cash consideration split across outturn settlement transactions that are the result of a transformation of the parent transaction.
 	TransformationRate *PercentageRate `xml:"TrfrmatnRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate7) AddAdditionalQuantityForSubscribedResultantSecurities() *RatioFormat5Choice {
 	c.AdditionalQuantityForSubscribedResultantSecurities = new(RatioFormat5Choice)
@@ -44,4 +42,3 @@ func (c *CorporateActionRate7) AddNewSecuritiesToUnderlyingSecurities() *RatioFo
 func (c *CorporateActionRate7) SetTransformationRate(value string) {
 	c.TransformationRate = (*PercentageRate)(&value)
 }
-

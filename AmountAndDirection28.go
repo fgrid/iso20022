@@ -23,9 +23,7 @@ type AmountAndDirection28 struct {
 
 	// Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.
 	ValueDate *DateAndDateTime1Choice `xml:"ValDt,omitempty"`
-
 }
-
 
 func (a *AmountAndDirection28) SetAccruedInterestIndicator(value string) {
 	a.AccruedInterestIndicator = (*YesNoIndicator)(&value)
@@ -56,4 +54,3 @@ func (a *AmountAndDirection28) AddValueDate() *DateAndDateTime1Choice {
 	a.ValueDate = new(DateAndDateTime1Choice)
 	return a.ValueDate
 }
-

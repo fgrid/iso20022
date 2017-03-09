@@ -7,7 +7,7 @@ import (
 )
 
 type Document02300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.023.001.01 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.023.001.01 Document"`
 	Message *IdentificationVerificationRequestV01 `xml:"IdVrfctnReq"`
 }
 
@@ -28,9 +28,7 @@ type IdentificationVerificationRequestV01 struct {
 
 	// Information concerning the identification data that is requested to be verified.
 	Verification []*iso20022.IdentificationVerification1 `xml:"Vrfctn"`
-
 }
-
 
 func (i *IdentificationVerificationRequestV01) AddAssignment() *iso20022.IdentificationAssignment1 {
 	i.Assignment = new(iso20022.IdentificationAssignment1)
@@ -38,8 +36,7 @@ func (i *IdentificationVerificationRequestV01) AddAssignment() *iso20022.Identif
 }
 
 func (i *IdentificationVerificationRequestV01) AddVerification() *iso20022.IdentificationVerification1 {
-	newValue := new (iso20022.IdentificationVerification1)
+	newValue := new(iso20022.IdentificationVerification1)
 	i.Verification = append(i.Verification, newValue)
 	return newValue
 }
-

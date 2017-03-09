@@ -23,9 +23,7 @@ type ValuationDealingProcessingCharacteristics2 struct {
 
 	// Currencies in which the prices for the investment fund class are published by the fund management company.
 	PriceCurrency []*ActiveCurrencyCode `xml:"PricCcy"`
-
 }
-
 
 func (v *ValuationDealingProcessingCharacteristics2) SetValuationFrequency(value string) {
 	v.ValuationFrequency = (*EventFrequency5Code)(&value)
@@ -54,4 +52,3 @@ func (v *ValuationDealingProcessingCharacteristics2) SetPriceMethod(value string
 func (v *ValuationDealingProcessingCharacteristics2) AddPriceCurrency(value string) {
 	v.PriceCurrency = append(v.PriceCurrency, (*ActiveCurrencyCode)(&value))
 }
-

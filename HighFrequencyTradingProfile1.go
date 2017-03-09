@@ -11,9 +11,7 @@ type HighFrequencyTradingProfile1 struct {
 
 	// Specifies whether consolidation is done generally or at the level of segregated account.
 	ConsolidationType *ConsolidationType1Choice `xml:"CnsldtnTp,omitempty"`
-
 }
-
 
 func (h *HighFrequencyTradingProfile1) SetDate(value string) {
 	h.Date = (*ISODate)(&value)
@@ -28,4 +26,3 @@ func (h *HighFrequencyTradingProfile1) AddConsolidationType() *ConsolidationType
 	h.ConsolidationType = new(ConsolidationType1Choice)
 	return h.ConsolidationType
 }
-

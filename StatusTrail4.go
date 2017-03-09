@@ -35,9 +35,7 @@ type StatusTrail4 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *StatusTrail4) SetStatusDate(value string) {
 	s.StatusDate = (*ISODateTime)(&value)
@@ -88,8 +86,7 @@ func (s *StatusTrail4) AddSettled() *ProprietaryReason1 {
 }
 
 func (s *StatusTrail4) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -18,9 +18,7 @@ type CurrencyControlHeader3 struct {
 
 	// Agent which forwards the message.
 	ForwardingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"FwdgAgt,omitempty"`
-
 }
-
 
 func (c *CurrencyControlHeader3) SetMessageIdentification(value string) {
 	c.MessageIdentification = (*Max35Text)(&value)
@@ -43,4 +41,3 @@ func (c *CurrencyControlHeader3) AddForwardingAgent() *BranchAndFinancialInstitu
 	c.ForwardingAgent = new(BranchAndFinancialInstitutionIdentification5)
 	return c.ForwardingAgent
 }
-

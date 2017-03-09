@@ -8,9 +8,7 @@ type LegalOrganisation1 struct {
 
 	// Specifies the short name of the organisation.
 	Name *Max140Text `xml:"Nm,omitempty"`
-
 }
-
 
 func (l *LegalOrganisation1) SetIdentification(value string) {
 	l.Identification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (l *LegalOrganisation1) SetIdentification(value string) {
 func (l *LegalOrganisation1) SetName(value string) {
 	l.Name = (*Max140Text)(&value)
 }
-

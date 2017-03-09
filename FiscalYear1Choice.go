@@ -8,9 +8,7 @@ type FiscalYear1Choice struct {
 
 	// End date of the fiscal year.
 	EndDate *ISODate `xml:"EndDt"`
-
 }
-
 
 func (f *FiscalYear1Choice) SetStartDate(value string) {
 	f.StartDate = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (f *FiscalYear1Choice) SetStartDate(value string) {
 func (f *FiscalYear1Choice) SetEndDate(value string) {
 	f.EndDate = (*ISODate)(&value)
 }
-

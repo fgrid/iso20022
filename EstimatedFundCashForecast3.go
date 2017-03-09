@@ -44,9 +44,7 @@ type EstimatedFundCashForecast3 struct {
 
 	// Net cash movements to a fund as a result of investment funds transactions.
 	EstimatedNetCashForecastDetails []*NetCashForecast2 `xml:"EstmtdNetCshFcstDtls,omitempty"`
-
 }
-
 
 func (e *EstimatedFundCashForecast3) SetIdentification(value string) {
 	e.Identification = (*Max35Text)(&value)
@@ -98,20 +96,19 @@ func (e *EstimatedFundCashForecast3) SetExceptionalNetCashFlowIndicator(value st
 }
 
 func (e *EstimatedFundCashForecast3) AddEstimatedCashInForecastDetails() *CashInForecast4 {
-	newValue := new (CashInForecast4)
+	newValue := new(CashInForecast4)
 	e.EstimatedCashInForecastDetails = append(e.EstimatedCashInForecastDetails, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast3) AddEstimatedCashOutForecastDetails() *CashOutForecast4 {
-	newValue := new (CashOutForecast4)
+	newValue := new(CashOutForecast4)
 	e.EstimatedCashOutForecastDetails = append(e.EstimatedCashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast3) AddEstimatedNetCashForecastDetails() *NetCashForecast2 {
-	newValue := new (NetCashForecast2)
+	newValue := new(NetCashForecast2)
 	e.EstimatedNetCashForecastDetails = append(e.EstimatedNetCashForecastDetails, newValue)
 	return newValue
 }
-

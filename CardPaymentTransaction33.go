@@ -14,9 +14,7 @@ type CardPaymentTransaction33 struct {
 
 	// Link to a previous currency conversion.
 	CurrencyConversion *CurrencyConversion1 `xml:"CcyConvs"`
-
 }
-
 
 func (c *CardPaymentTransaction33) SetSaleReferenceIdentification(value string) {
 	c.SaleReferenceIdentification = (*Max35Text)(&value)
@@ -36,4 +34,3 @@ func (c *CardPaymentTransaction33) AddCurrencyConversion() *CurrencyConversion1 
 	c.CurrencyConversion = new(CurrencyConversion1)
 	return c.CurrencyConversion
 }
-

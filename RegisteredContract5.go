@@ -22,7 +22,7 @@ type RegisteredContract5 struct {
 	RegisteredContractIdentification *DocumentIdentification29 `xml:"RegdCtrctId"`
 
 	// Identification of a previously defined registered contract linked to the same underlying contract.
-	// 
+	//
 	// Usage:
 	// This is the identification of a previous contract registration for the same underlying contract, which was closed. In most cases, this is used  when a reporting party moves from one registration agent to another.
 	PreviousRegisteredContractIdentification *DocumentIdentification22 `xml:"PrvsRegdCtrctId,omitempty"`
@@ -40,7 +40,7 @@ type RegisteredContract5 struct {
 	Delivery *RegisteredContractCommunication1 `xml:"Dlvry"`
 
 	// Amount of money the borrower pays back to the lender outside of interests and charges.
-	// 
+	//
 	// Usage:
 	// Only applicable for loan contracts.
 	LoanPrincipalAmount *ActiveCurrencyAndAmount `xml:"LnPrncplAmt,omitempty"`
@@ -49,16 +49,14 @@ type RegisteredContract5 struct {
 	EstimatedDateIndicator *TrueFalseIndicator `xml:"EstmtdDtInd"`
 
 	// Indicates whether loan in which both the lender and the borrower are divisions of the same corporation or not.
-	// 
+	//
 	// Usage:
 	// Only applicable for loan contracts.
 	InterCompanyLoan *TrueFalseIndicator `xml:"IntrCpnyLn"`
 
 	// Further information on the registered contract.
 	AdditionalInformation *Max1025Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *RegisteredContract5) SetOriginalContractRegistrationRequest(value string) {
 	r.OriginalContractRegistrationRequest = (*Max35Text)(&value)
@@ -75,7 +73,7 @@ func (r *RegisteredContract5) AddContract() *UnderlyingContract1Choice {
 }
 
 func (r *RegisteredContract5) AddContractBalance() *ContractBalance1 {
-	newValue := new (ContractBalance1)
+	newValue := new(ContractBalance1)
 	r.ContractBalance = append(r.ContractBalance, newValue)
 	return newValue
 }
@@ -96,13 +94,13 @@ func (r *RegisteredContract5) AddPreviousRegisteredContractIdentification() *Doc
 }
 
 func (r *RegisteredContract5) AddRegisteredContractJournal() *RegisteredContractJournal1 {
-	newValue := new (RegisteredContractJournal1)
+	newValue := new(RegisteredContractJournal1)
 	r.RegisteredContractJournal = append(r.RegisteredContractJournal, newValue)
 	return newValue
 }
 
 func (r *RegisteredContract5) AddAmendment() *RegisteredContractAmendment1 {
-	newValue := new (RegisteredContractAmendment1)
+	newValue := new(RegisteredContractAmendment1)
 	r.Amendment = append(r.Amendment, newValue)
 	return newValue
 }
@@ -132,4 +130,3 @@ func (r *RegisteredContract5) SetInterCompanyLoan(value string) {
 func (r *RegisteredContract5) SetAdditionalInformation(value string) {
 	r.AdditionalInformation = (*Max1025Text)(&value)
 }
-

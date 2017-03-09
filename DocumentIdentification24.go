@@ -8,9 +8,7 @@ type DocumentIdentification24 struct {
 
 	// Reference to the query identification.
 	Reference *Identification1 `xml:"Ref"`
-
 }
-
 
 func (d *DocumentIdentification24) AddMessageNumber() *DocumentNumber1Choice {
 	d.MessageNumber = new(DocumentNumber1Choice)
@@ -21,4 +19,3 @@ func (d *DocumentIdentification24) AddReference() *Identification1 {
 	d.Reference = new(Identification1)
 	return d.Reference
 }
-

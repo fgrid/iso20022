@@ -17,9 +17,7 @@ type Intermediary10 struct {
 
 	// Contact person and contact information.
 	ContactPerson *ContactIdentification2 `xml:"CtctPrsn,omitempty"`
-
 }
-
 
 func (i *Intermediary10) AddIdentification() *PartyIdentification2Choice {
 	i.Identification = new(PartyIdentification2Choice)
@@ -43,4 +41,3 @@ func (i *Intermediary10) AddContactPerson() *ContactIdentification2 {
 	i.ContactPerson = new(ContactIdentification2)
 	return i.ContactPerson
 }
-

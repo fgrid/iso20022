@@ -8,9 +8,7 @@ type TimePeriodDetails1 struct {
 
 	// Time at which the time span ends.
 	ToTime *ISOTime `xml:"ToTm,omitempty"`
-
 }
-
 
 func (t *TimePeriodDetails1) SetFromTime(value string) {
 	t.FromTime = (*ISOTime)(&value)
@@ -19,4 +17,3 @@ func (t *TimePeriodDetails1) SetFromTime(value string) {
 func (t *TimePeriodDetails1) SetToTime(value string) {
 	t.ToTime = (*ISOTime)(&value)
 }
-

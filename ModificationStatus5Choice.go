@@ -8,17 +8,14 @@ type ModificationStatus5Choice struct {
 
 	// Specifies the reason of the modification status.
 	Reason []*ModificationReason5 `xml:"Rsn,omitempty"`
-
 }
-
 
 func (m *ModificationStatus5Choice) SetNoSpecifiedReason(value string) {
 	m.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (m *ModificationStatus5Choice) AddReason() *ModificationReason5 {
-	newValue := new (ModificationReason5)
+	newValue := new(ModificationReason5)
 	m.Reason = append(m.Reason, newValue)
 	return newValue
 }
-

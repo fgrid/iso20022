@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600107 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.006.001.07 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:sese.006.001.07 Document"`
 	Message *TransferInCancellationRequestV07 `xml:"TrfInCxlReq"`
 }
 
@@ -43,9 +43,7 @@ type TransferInCancellationRequestV07 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation4 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (t *TransferInCancellationRequestV07) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -53,7 +51,7 @@ func (t *TransferInCancellationRequestV07) AddMessageIdentification() *iso20022.
 }
 
 func (t *TransferInCancellationRequestV07) AddReferences() *iso20022.References20 {
-	newValue := new (iso20022.References20)
+	newValue := new(iso20022.References20)
 	t.References = append(t.References, newValue)
 	return newValue
 }
@@ -63,7 +61,7 @@ func (t *TransferInCancellationRequestV07) SetFunction(value string) {
 }
 
 func (t *TransferInCancellationRequestV07) AddCancellation() *iso20022.Cancellation10Choice {
-	newValue := new (iso20022.Cancellation10Choice)
+	newValue := new(iso20022.Cancellation10Choice)
 	t.Cancellation = append(t.Cancellation, newValue)
 	return newValue
 }
@@ -77,4 +75,3 @@ func (t *TransferInCancellationRequestV07) AddCopyDetails() *iso20022.CopyInform
 	t.CopyDetails = new(iso20022.CopyInformation4)
 	return t.CopyDetails
 }
-

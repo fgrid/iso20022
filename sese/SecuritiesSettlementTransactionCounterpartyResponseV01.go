@@ -7,7 +7,7 @@ import (
 )
 
 type Document04000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.040.001.01 Document"`
+	XMLName xml.Name                                                `xml:"urn:iso:std:iso:20022:tech:xsd:sese.040.001.01 Document"`
 	Message *SecuritiesSettlementTransactionCounterpartyResponseV01 `xml:"SctiesSttlmTxCtrPtyRspn"`
 }
 
@@ -25,14 +25,14 @@ func (d *Document04000101) AddMessage() *SecuritiesSettlementTransactionCounterp
 // - a central securities depository participant which has an account with a central securities depository or a market infrastructure
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message sent by the account owner to the account servicer,
 // - provide a third party with a copy of a message being sent by the account owner for information,
 // - re-send to a third party a copy of a message being sent by the account owner for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesSettlementTransactionCounterpartyResponseV01 struct {
@@ -48,9 +48,7 @@ type SecuritiesSettlementTransactionCounterpartyResponseV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionCounterpartyResponseV01) AddTransactionIdentification() *iso20022.TransactionIdentification2 {
 	s.TransactionIdentification = new(iso20022.TransactionIdentification2)
@@ -68,8 +66,7 @@ func (s *SecuritiesSettlementTransactionCounterpartyResponseV01) AddTransactionD
 }
 
 func (s *SecuritiesSettlementTransactionCounterpartyResponseV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

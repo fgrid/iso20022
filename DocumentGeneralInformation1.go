@@ -17,9 +17,7 @@ type DocumentGeneralInformation1 struct {
 
 	// URL (Uniform Resource Locator) related to the document.
 	URL *Max256Text `xml:"URL,omitempty"`
-
 }
-
 
 func (d *DocumentGeneralInformation1) SetDocumentType(value string) {
 	d.DocumentType = (*DocumentType4Code)(&value)
@@ -40,4 +38,3 @@ func (d *DocumentGeneralInformation1) SetIssueDate(value string) {
 func (d *DocumentGeneralInformation1) SetURL(value string) {
 	d.URL = (*Max256Text)(&value)
 }
-

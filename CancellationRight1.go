@@ -8,9 +8,7 @@ type CancellationRight1 struct {
 
 	// Additional information about the type of charge.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CancellationRight1) SetStructured(value string) {
 	c.Structured = (*CancellationRight2Code)(&value)
@@ -19,4 +17,3 @@ func (c *CancellationRight1) SetStructured(value string) {
 func (c *CancellationRight1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

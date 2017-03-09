@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.006.001.03 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.006.001.03 Document"`
 	Message *AccountManagementStatusReportV03 `xml:"AcctMgmtStsRpt"`
 }
 
@@ -32,9 +32,7 @@ type AccountManagementStatusReportV03 struct {
 
 	// Status report details of an account opening instruction or account modification instruction that was previously received.
 	StatusReport *iso20022.AccountManagementStatusAndReason2 `xml:"StsRpt"`
-
 }
-
 
 func (a *AccountManagementStatusReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -42,7 +40,7 @@ func (a *AccountManagementStatusReportV03) AddMessageIdentification() *iso20022.
 }
 
 func (a *AccountManagementStatusReportV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	a.RelatedReference = append(a.RelatedReference, newValue)
 	return newValue
 }
@@ -51,4 +49,3 @@ func (a *AccountManagementStatusReportV03) AddStatusReport() *iso20022.AccountMa
 	a.StatusReport = new(iso20022.AccountManagementStatusAndReason2)
 	return a.StatusReport
 }
-

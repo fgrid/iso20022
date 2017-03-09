@@ -23,9 +23,7 @@ type Commission16 struct {
 
 	// Specifies the VAT rate.
 	VATRate *BaseOneRate `xml:"VATRate,omitempty"`
-
 }
-
 
 func (c *Commission16) AddType() *CommissionType2Choice {
 	c.Type = new(CommissionType2Choice)
@@ -58,4 +56,3 @@ func (c *Commission16) SetTotalVATAmount(value, currency string) {
 func (c *Commission16) SetVATRate(value string) {
 	c.VATRate = (*BaseOneRate)(&value)
 }
-

@@ -23,9 +23,7 @@ type MessageAndBusinessReference6 struct {
 
 	// Investment account information of the transfer message for which the status is requested.
 	InvestmentAccountDetails *InvestmentAccount22 `xml:"InvstmtAcctDtls,omitempty"`
-
 }
-
 
 func (m *MessageAndBusinessReference6) AddPreviousReference() *AdditionalReference3 {
 	m.PreviousReference = new(AdditionalReference3)
@@ -57,4 +55,3 @@ func (m *MessageAndBusinessReference6) AddInvestmentAccountDetails() *Investment
 	m.InvestmentAccountDetails = new(InvestmentAccount22)
 	return m.InvestmentAccountDetails
 }
-

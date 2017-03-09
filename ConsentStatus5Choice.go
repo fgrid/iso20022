@@ -8,17 +8,14 @@ type ConsentStatus5Choice struct {
 
 	// Reason provided for the status.
 	Reason []*ConsentReason5 `xml:"Rsn"`
-
 }
-
 
 func (c *ConsentStatus5Choice) SetNoSpecifiedReason(value string) {
 	c.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (c *ConsentStatus5Choice) AddReason() *ConsentReason5 {
-	newValue := new (ConsentReason5)
+	newValue := new(ConsentReason5)
 	c.Reason = append(c.Reason, newValue)
 	return newValue
 }
-

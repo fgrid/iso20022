@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.008.001.05 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:seev.008.001.05 Document"`
 	Message *MeetingResultDisseminationV05 `xml:"MtgRsltDssmntn"`
 }
 
@@ -44,9 +44,7 @@ type MeetingResultDisseminationV05 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MeetingResultDisseminationV05) AddAmendment() *iso20022.AmendInformation3 {
 	m.Amendment = new(iso20022.AmendInformation3)
@@ -59,13 +57,13 @@ func (m *MeetingResultDisseminationV05) AddMeetingReference() *iso20022.MeetingR
 }
 
 func (m *MeetingResultDisseminationV05) AddSecurity() *iso20022.SecurityPosition8 {
-	newValue := new (iso20022.SecurityPosition8)
+	newValue := new(iso20022.SecurityPosition8)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingResultDisseminationV05) AddVoteResult() *iso20022.Vote7 {
-	newValue := new (iso20022.Vote7)
+	newValue := new(iso20022.Vote7)
 	m.VoteResult = append(m.VoteResult, newValue)
 	return newValue
 }
@@ -81,8 +79,7 @@ func (m *MeetingResultDisseminationV05) AddAdditionalInformation() *iso20022.Com
 }
 
 func (m *MeetingResultDisseminationV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

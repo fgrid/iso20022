@@ -8,9 +8,7 @@ type Charges1 struct {
 
 	// Amount of charges.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (c *Charges1) AddType() *ChargeType2FormatChoice {
 	c.Type = new(ChargeType2FormatChoice)
@@ -20,4 +18,3 @@ func (c *Charges1) AddType() *ChargeType2FormatChoice {
 func (c *Charges1) SetAmount(value, currency string) {
 	c.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

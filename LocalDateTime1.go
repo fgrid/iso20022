@@ -11,9 +11,7 @@ type LocalDateTime1 struct {
 
 	// UTC offset in minutes, of the local time during the period. For instance, 120 for Central European Time, -720 for Central Standard Time (North America).
 	UTCOffset *Number `xml:"UTCOffset"`
-
 }
-
 
 func (l *LocalDateTime1) SetFromDateTime(value string) {
 	l.FromDateTime = (*ISODateTime)(&value)
@@ -26,4 +24,3 @@ func (l *LocalDateTime1) SetToDateTime(value string) {
 func (l *LocalDateTime1) SetUTCOffset(value string) {
 	l.UTCOffset = (*Number)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.028.001.01 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:seev.028.001.01 Document"`
 	Message *AgentCADeactivationInstructionV01 `xml:"AgtCADeactvtnInstr"`
 }
 
@@ -35,9 +35,7 @@ type AgentCADeactivationInstructionV01 struct {
 
 	// Information related to the deactivation of a CA event.
 	DeactivationDetails *iso20022.CorporateActionDeactivationInstruction1 `xml:"DeactvtnDtls"`
-
 }
-
 
 func (a *AgentCADeactivationInstructionV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -53,4 +51,3 @@ func (a *AgentCADeactivationInstructionV01) AddDeactivationDetails() *iso20022.C
 	a.DeactivationDetails = new(iso20022.CorporateActionDeactivationInstruction1)
 	return a.DeactivationDetails
 }
-

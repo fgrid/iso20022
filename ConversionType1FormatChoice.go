@@ -8,9 +8,7 @@ type ConversionType1FormatChoice struct {
 
 	// Proprietary code to  express the type of conversion.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *ConversionType1FormatChoice) SetCode(value string) {
 	c.Code = (*ConversionType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *ConversionType1FormatChoice) AddProprietary() *GenericIdentification13 
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

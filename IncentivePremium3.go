@@ -14,9 +14,7 @@ type IncentivePremium3 struct {
 
 	// Date/time for the payment of the premium.
 	PaymentDate *DateFormat3Choice `xml:"PmtDt,omitempty"`
-
 }
-
 
 func (i *IncentivePremium3) SetDescription(value string) {
 	i.Description = (*Max350Text)(&value)
@@ -36,4 +34,3 @@ func (i *IncentivePremium3) AddPaymentDate() *DateFormat3Choice {
 	i.PaymentDate = new(DateFormat3Choice)
 	return i.PaymentDate
 }
-

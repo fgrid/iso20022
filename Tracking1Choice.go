@@ -8,9 +8,7 @@ type Tracking1Choice struct {
 
 	// Tracking information expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (t *Tracking1Choice) SetIndicator(value string) {
 	t.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (t *Tracking1Choice) AddProprietary() *GenericIdentification20 {
 	t.Proprietary = new(GenericIdentification20)
 	return t.Proprietary
 }
-

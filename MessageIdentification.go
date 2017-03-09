@@ -5,11 +5,8 @@ type MessageIdentification struct {
 
 	// String of characters that uniquely identifies a message.
 	Identification *Max35Text `xml:"Id"`
-
 }
-
 
 func (m *MessageIdentification) SetIdentification(value string) {
 	m.Identification = (*Max35Text)(&value)
 }
-

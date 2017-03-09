@@ -14,9 +14,7 @@ type Contribution1 struct {
 
 	// Provides the identification for the non-clearing member.
 	NonClearingMember *PartyIdentificationAndAccount31 `xml:"NonClrMmb,omitempty"`
-
 }
-
 
 func (c *Contribution1) AddAccount() *AccountIdentification4Choice {
 	c.Account = new(AccountIdentification4Choice)
@@ -35,4 +33,3 @@ func (c *Contribution1) AddNonClearingMember() *PartyIdentificationAndAccount31 
 	c.NonClearingMember = new(PartyIdentificationAndAccount31)
 	return c.NonClearingMember
 }
-

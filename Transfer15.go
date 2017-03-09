@@ -35,9 +35,7 @@ type Transfer15 struct {
 
 	// Additional specific settlement information for non-regulated traded funds.
 	NonStandardSettlementInformation *Max350Text `xml:"NonStdSttlmInf,omitempty"`
-
 }
-
 
 func (t *Transfer15) SetTransferReference(value string) {
 	t.TransferReference = (*Max35Text)(&value)
@@ -87,4 +85,3 @@ func (t *Transfer15) SetOwnAccountTransferIndicator(value string) {
 func (t *Transfer15) SetNonStandardSettlementInformation(value string) {
 	t.NonStandardSettlementInformation = (*Max350Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type ConsentTypeFormat4Choice struct {
 
 	// Proprietary identification of the consent type.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (c *ConsentTypeFormat4Choice) SetCode(value string) {
 	c.Code = (*ConsentType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *ConsentTypeFormat4Choice) AddProprietary() *GenericIdentification30 {
 	c.Proprietary = new(GenericIdentification30)
 	return c.Proprietary
 }
-

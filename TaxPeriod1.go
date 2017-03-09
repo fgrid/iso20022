@@ -11,9 +11,7 @@ type TaxPeriod1 struct {
 
 	// Range of time between a start date and an end date for which the tax report is provided.
 	FromToDate *DatePeriodDetails `xml:"FrToDt,omitempty"`
-
 }
-
 
 func (t *TaxPeriod1) SetYear(value string) {
 	t.Year = (*ISODate)(&value)
@@ -27,4 +25,3 @@ func (t *TaxPeriod1) AddFromToDate() *DatePeriodDetails {
 	t.FromToDate = new(DatePeriodDetails)
 	return t.FromToDate
 }
-

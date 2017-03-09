@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.013.001.01 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:pain.013.001.01 Document"`
 	Message *CreditorPaymentActivationRequestV01 `xml:"CdtrPmtActvtnReq"`
 }
 
@@ -26,9 +26,7 @@ type CreditorPaymentActivationRequestV01 struct {
 
 	// Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.
 	PaymentInformation []*iso20022.PaymentInstruction5 `xml:"PmtInf"`
-
 }
-
 
 func (c *CreditorPaymentActivationRequestV01) AddGroupHeader() *iso20022.GroupHeader45 {
 	c.GroupHeader = new(iso20022.GroupHeader45)
@@ -36,8 +34,7 @@ func (c *CreditorPaymentActivationRequestV01) AddGroupHeader() *iso20022.GroupHe
 }
 
 func (c *CreditorPaymentActivationRequestV01) AddPaymentInformation() *iso20022.PaymentInstruction5 {
-	newValue := new (iso20022.PaymentInstruction5)
+	newValue := new(iso20022.PaymentInstruction5)
 	c.PaymentInformation = append(c.PaymentInformation, newValue)
 	return newValue
 }
-

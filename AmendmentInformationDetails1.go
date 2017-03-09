@@ -32,9 +32,7 @@ type AmendmentInformationDetails1 struct {
 
 	// Original frequency that has been modified.
 	OriginalFrequency *Frequency1Code `xml:"OrgnlFrqcy,omitempty"`
-
 }
-
 
 func (a *AmendmentInformationDetails1) SetOriginalMandateIdentification(value string) {
 	a.OriginalMandateIdentification = (*Max35Text)(&value)
@@ -82,4 +80,3 @@ func (a *AmendmentInformationDetails1) SetOriginalFinalCollectionDate(value stri
 func (a *AmendmentInformationDetails1) SetOriginalFrequency(value string) {
 	a.OriginalFrequency = (*Frequency1Code)(&value)
 }
-

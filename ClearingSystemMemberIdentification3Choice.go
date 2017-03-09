@@ -8,9 +8,7 @@ type ClearingSystemMemberIdentification3Choice struct {
 
 	// Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *ClearingSystemMemberIdentification3Choice) SetIdentification(value string) {
 	c.Identification = (*ExternalClearingSystemMemberCode)(&value)
@@ -19,4 +17,3 @@ func (c *ClearingSystemMemberIdentification3Choice) SetIdentification(value stri
 func (c *ClearingSystemMemberIdentification3Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

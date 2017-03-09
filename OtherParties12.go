@@ -20,12 +20,10 @@ type OtherParties12 struct {
 
 	// Party that identifies a broker when required (for example, authorised broker, prime broker, etc).
 	Broker *PartyIdentificationAndAccount41 `xml:"Brkr,omitempty"`
-
 }
 
-
 func (o *OtherParties12) AddInvestor() *PartyIdentificationAndAccount46 {
-	newValue := new (PartyIdentificationAndAccount46)
+	newValue := new(PartyIdentificationAndAccount46)
 	o.Investor = append(o.Investor, newValue)
 	return newValue
 }
@@ -54,4 +52,3 @@ func (o *OtherParties12) AddBroker() *PartyIdentificationAndAccount41 {
 	o.Broker = new(PartyIdentificationAndAccount41)
 	return o.Broker
 }
-

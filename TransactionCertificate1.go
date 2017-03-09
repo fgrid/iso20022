@@ -23,9 +23,7 @@ type TransactionCertificate1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (t *TransactionCertificate1) SetTransactionIdentification(value string) {
 	t.TransactionIdentification = (*Max35Text)(&value)
@@ -51,14 +49,13 @@ func (t *TransactionCertificate1) AddAmendment() *DocumentAmendment1 {
 }
 
 func (t *TransactionCertificate1) AddCertificateRecord() *TransactionCertificateRecord1 {
-	newValue := new (TransactionCertificateRecord1)
+	newValue := new(TransactionCertificateRecord1)
 	t.CertificateRecord = append(t.CertificateRecord, newValue)
 	return newValue
 }
 
 func (t *TransactionCertificate1) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	t.SupplementaryData = append(t.SupplementaryData, newValue)
 	return newValue
 }
-

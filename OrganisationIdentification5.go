@@ -8,9 +8,7 @@ type OrganisationIdentification5 struct {
 
 	// Name of the register managed by a registration authority.
 	RegisterName *Max35Text `xml:"RegrNm,omitempty"`
-
 }
-
 
 func (o *OrganisationIdentification5) SetRegistrationNumber(value string) {
 	o.RegistrationNumber = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (o *OrganisationIdentification5) SetRegistrationNumber(value string) {
 func (o *OrganisationIdentification5) SetRegisterName(value string) {
 	o.RegisterName = (*Max35Text)(&value)
 }
-

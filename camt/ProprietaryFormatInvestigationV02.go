@@ -7,7 +7,7 @@ import (
 )
 
 type Document03500102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.035.001.02 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:camt.035.001.02 Document"`
 	Message *ProprietaryFormatInvestigationV02 `xml:"PrtryFrmtInvstgtn"`
 }
 
@@ -33,9 +33,7 @@ type ProprietaryFormatInvestigationV02 struct {
 
 	// Proprietary information.
 	ProprietaryData *iso20022.ProprietaryData4 `xml:"PrtryData"`
-
 }
-
 
 func (p *ProprietaryFormatInvestigationV02) AddAssignment() *iso20022.CaseAssignment2 {
 	p.Assignment = new(iso20022.CaseAssignment2)
@@ -51,4 +49,3 @@ func (p *ProprietaryFormatInvestigationV02) AddProprietaryData() *iso20022.Propr
 	p.ProprietaryData = new(iso20022.ProprietaryData4)
 	return p.ProprietaryData
 }
-

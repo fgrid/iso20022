@@ -26,9 +26,7 @@ type QuantityBreakdown14 struct {
 
 	// Valuation amounts for the lot provided in another currency than the base currency of the account.
 	AlternateReportingCurrencyAmounts *BalanceAmounts2 `xml:"AltrnRptgCcyAmts,omitempty"`
-
 }
-
 
 func (q *QuantityBreakdown14) AddLotNumber() *GenericIdentification37 {
 	q.LotNumber = new(GenericIdentification37)
@@ -69,4 +67,3 @@ func (q *QuantityBreakdown14) AddAlternateReportingCurrencyAmounts() *BalanceAmo
 	q.AlternateReportingCurrencyAmounts = new(BalanceAmounts2)
 	return q.AlternateReportingCurrencyAmounts
 }
-

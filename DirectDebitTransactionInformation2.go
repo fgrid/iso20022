@@ -58,7 +58,7 @@ type DirectDebitTransactionInformation2 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification3 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the creditor agent and the intermediary agent 2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt1,omitempty"`
 
@@ -66,7 +66,7 @@ type DirectDebitTransactionInformation2 struct {
 	IntermediaryAgent1Account *CashAccount7 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the intermediary agent 1 and the intermediary agent 3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt2,omitempty"`
 
@@ -74,7 +74,7 @@ type DirectDebitTransactionInformation2 struct {
 	IntermediaryAgent2Account *CashAccount7 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the intermediary agent 2 and the debtor agent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt3,omitempty"`
 
@@ -97,7 +97,7 @@ type DirectDebitTransactionInformation2 struct {
 	UltimateDebtor *PartyIdentification8 `xml:"UltmtDbtr,omitempty"`
 
 	// Underlying reason for the payment transaction.
-	// 
+	//
 	// Usage: Purpose is used by the end-customers, i.e. initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
 	Purpose *Purpose1Choice `xml:"Purp,omitempty"`
 
@@ -109,9 +109,7 @@ type DirectDebitTransactionInformation2 struct {
 
 	// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
 	RemittanceInformation *RemittanceInformation1 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation2) AddPaymentIdentification() *PaymentIdentification2 {
 	d.PaymentIdentification = new(PaymentIdentification2)
@@ -144,7 +142,7 @@ func (d *DirectDebitTransactionInformation2) SetChargeBearer(value string) {
 }
 
 func (d *DirectDebitTransactionInformation2) AddChargesInformation() *ChargesInformation1 {
-	newValue := new (ChargesInformation1)
+	newValue := new(ChargesInformation1)
 	d.ChargesInformation = append(d.ChargesInformation, newValue)
 	return newValue
 }
@@ -259,13 +257,13 @@ func (d *DirectDebitTransactionInformation2) AddPurpose() *Purpose1Choice {
 }
 
 func (d *DirectDebitTransactionInformation2) AddRegulatoryReporting() *RegulatoryReporting2 {
-	newValue := new (RegulatoryReporting2)
+	newValue := new(RegulatoryReporting2)
 	d.RegulatoryReporting = append(d.RegulatoryReporting, newValue)
 	return newValue
 }
 
 func (d *DirectDebitTransactionInformation2) AddRelatedRemittanceInformation() *RemittanceLocation1 {
-	newValue := new (RemittanceLocation1)
+	newValue := new(RemittanceLocation1)
 	d.RelatedRemittanceInformation = append(d.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -274,4 +272,3 @@ func (d *DirectDebitTransactionInformation2) AddRemittanceInformation() *Remitta
 	d.RemittanceInformation = new(RemittanceInformation1)
 	return d.RemittanceInformation
 }
-

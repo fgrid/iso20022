@@ -11,9 +11,7 @@ type Adjustment7 struct {
 
 	// Specifies whether the adjustment must be subtracted or added to the total amount.
 	Direction *AdjustmentDirection1Code `xml:"Drctn"`
-
 }
-
 
 func (a *Adjustment7) AddType() *AdjustmentType1Choice {
 	a.Type = new(AdjustmentType1Choice)
@@ -28,4 +26,3 @@ func (a *Adjustment7) AddAmountOrPercentage() *AmountOrPercentage2Choice {
 func (a *Adjustment7) SetDirection(value string) {
 	a.Direction = (*AdjustmentDirection1Code)(&value)
 }
-

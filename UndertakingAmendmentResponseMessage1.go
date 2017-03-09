@@ -8,9 +8,7 @@ type UndertakingAmendmentResponseMessage1 struct {
 
 	// Digital signature of the response.
 	DigitalSignature *PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (u *UndertakingAmendmentResponseMessage1) AddUndertakingAmendmentResponseDetails() *Amendment7 {
 	u.UndertakingAmendmentResponseDetails = new(Amendment7)
@@ -21,4 +19,3 @@ func (u *UndertakingAmendmentResponseMessage1) AddDigitalSignature() *PartyAndSi
 	u.DigitalSignature = new(PartyAndSignature2)
 	return u.DigitalSignature
 }
-

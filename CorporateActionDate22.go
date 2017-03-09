@@ -104,9 +104,7 @@ type CorporateActionDate22 struct {
 
 	// Date for the hearing between the plaintiff and defendant, as set by the court.
 	HearingDate *DateFormat16Choice `xml:"HrgDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate22) AddAnnouncementDate() *DateFormat19Choice {
 	c.AnnouncementDate = new(DateFormat19Choice)
@@ -277,4 +275,3 @@ func (c *CorporateActionDate22) AddHearingDate() *DateFormat16Choice {
 	c.HearingDate = new(DateFormat16Choice)
 	return c.HearingDate
 }
-

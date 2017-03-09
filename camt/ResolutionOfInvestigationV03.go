@@ -7,7 +7,7 @@ import (
 )
 
 type Document02900103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.03 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.03 Document"`
 	Message *ResolutionOfInvestigationV03 `xml:"RsltnOfInvstgtn"`
 }
 
@@ -61,9 +61,7 @@ type ResolutionOfInvestigationV03 struct {
 
 	// Reference of a return or a reversal initiated to fix the case under investigation as part of the resolution.
 	ResolutionRelatedInformation *iso20022.ResolutionInformation1 `xml:"RsltnRltdInf,omitempty"`
-
 }
-
 
 func (r *ResolutionOfInvestigationV03) AddAssignment() *iso20022.CaseAssignment2 {
 	r.Assignment = new(iso20022.CaseAssignment2)
@@ -81,7 +79,7 @@ func (r *ResolutionOfInvestigationV03) AddStatus() *iso20022.InvestigationStatus
 }
 
 func (r *ResolutionOfInvestigationV03) AddCancellationDetails() *iso20022.UnderlyingTransaction3 {
-	newValue := new (iso20022.UnderlyingTransaction3)
+	newValue := new(iso20022.UnderlyingTransaction3)
 	r.CancellationDetails = append(r.CancellationDetails, newValue)
 	return newValue
 }
@@ -100,4 +98,3 @@ func (r *ResolutionOfInvestigationV03) AddResolutionRelatedInformation() *iso200
 	r.ResolutionRelatedInformation = new(iso20022.ResolutionInformation1)
 	return r.ResolutionRelatedInformation
 }
-

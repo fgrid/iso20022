@@ -8,9 +8,7 @@ type UserDefinedInformation1 struct {
 
 	// Specifies the content of the user information.
 	Information *Max140Text `xml:"Inf"`
-
 }
-
 
 func (u *UserDefinedInformation1) SetLabel(value string) {
 	u.Label = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (u *UserDefinedInformation1) SetLabel(value string) {
 func (u *UserDefinedInformation1) SetInformation(value string) {
 	u.Information = (*Max140Text)(&value)
 }
-

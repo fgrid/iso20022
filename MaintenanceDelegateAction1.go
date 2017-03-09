@@ -26,9 +26,7 @@ type MaintenanceDelegateAction1 struct {
 
 	// Sequence of action to include in the next MTM management plan.
 	Action []*TMSAction4 `xml:"Actn,omitempty"`
-
 }
-
 
 func (m *MaintenanceDelegateAction1) SetPeriodicAction(value string) {
 	m.PeriodicAction = (*TrueFalseIndicator)(&value)
@@ -62,8 +60,7 @@ func (m *MaintenanceDelegateAction1) AddAdditionalInformation(value string) {
 }
 
 func (m *MaintenanceDelegateAction1) AddAction() *TMSAction4 {
-	newValue := new (TMSAction4)
+	newValue := new(TMSAction4)
 	m.Action = append(m.Action, newValue)
 	return newValue
 }
-

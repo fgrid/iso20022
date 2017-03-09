@@ -14,9 +14,7 @@ type CorporateActionDeactivationInstructionStatus1 struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *CorporateActionDeactivationInstructionRejectionStatus1 `xml:"RjctdSts"`
-
 }
-
 
 func (c *CorporateActionDeactivationInstructionStatus1) AddOptionType() *CorporateActionOption1FormatChoice {
 	c.OptionType = new(CorporateActionOption1FormatChoice)
@@ -36,4 +34,3 @@ func (c *CorporateActionDeactivationInstructionStatus1) AddRejectedStatus() *Cor
 	c.RejectedStatus = new(CorporateActionDeactivationInstructionRejectionStatus1)
 	return c.RejectedStatus
 }
-

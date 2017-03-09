@@ -14,9 +14,7 @@ type TransactionVerificationResult1 struct {
 
 	// Product code for which the authorisation was declined.
 	DeclinedProductCode []*Max70Text `xml:"DclndPdctCd,omitempty"`
-
 }
-
 
 func (t *TransactionVerificationResult1) SetElectronicCommerceAuthenticationResult(value string) {
 	t.ElectronicCommerceAuthenticationResult = (*Max500Text)(&value)
@@ -33,4 +31,3 @@ func (t *TransactionVerificationResult1) SetCardholderAddressVerificationResult(
 func (t *TransactionVerificationResult1) AddDeclinedProductCode(value string) {
 	t.DeclinedProductCode = append(t.DeclinedProductCode, (*Max70Text)(&value))
 }
-

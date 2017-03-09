@@ -8,9 +8,7 @@ type CorporateActionEventType7Choice struct {
 
 	// Event types expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionEventType7Choice) SetCode(value string) {
 	c.Code = (*CorporateActionEventType8Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionEventType7Choice) AddProprietary() *GenericIdentificatio
 	c.Proprietary = new(GenericIdentification20)
 	return c.Proprietary
 }
-

@@ -83,16 +83,14 @@ type TradeSettlement1 struct {
 
 	// Factoring agreement document referenced.
 	IssuerFactoringAgreementIdentification []*Max35Text `xml:"IssrFactrgAgrmtId,omitempty"`
-
 }
-
 
 func (t *TradeSettlement1) AddDuePayableAmount(value, currency string) {
 	t.DuePayableAmount = append(t.DuePayableAmount, NewCurrencyAndAmount(value, currency))
 }
 
 func (t *TradeSettlement1) AddCreditorReference() *CreditorReferenceInformation2 {
-	newValue := new (CreditorReferenceInformation2)
+	newValue := new(CreditorReferenceInformation2)
 	t.CreditorReference = append(t.CreditorReference, newValue)
 	return newValue
 }
@@ -141,13 +139,13 @@ func (t *TradeSettlement1) AddPaymentCurrencyExchange() *CurrencyReference2 {
 }
 
 func (t *TradeSettlement1) AddPaymentMeans() *PaymentMeans1 {
-	newValue := new (PaymentMeans1)
+	newValue := new(PaymentMeans1)
 	t.PaymentMeans = append(t.PaymentMeans, newValue)
 	return newValue
 }
 
 func (t *TradeSettlement1) AddTax() *SettlementTax1 {
-	newValue := new (SettlementTax1)
+	newValue := new(SettlementTax1)
 	t.Tax = append(t.Tax, newValue)
 	return newValue
 }
@@ -158,25 +156,25 @@ func (t *TradeSettlement1) AddBillingPeriod() *Period1 {
 }
 
 func (t *TradeSettlement1) AddAllowanceCharge() *SettlementAllowanceCharge1 {
-	newValue := new (SettlementAllowanceCharge1)
+	newValue := new(SettlementAllowanceCharge1)
 	t.AllowanceCharge = append(t.AllowanceCharge, newValue)
 	return newValue
 }
 
 func (t *TradeSettlement1) AddSubTotalCalculatedTax() *SettlementSubTotalCalculatedTax1 {
-	newValue := new (SettlementSubTotalCalculatedTax1)
+	newValue := new(SettlementSubTotalCalculatedTax1)
 	t.SubTotalCalculatedTax = append(t.SubTotalCalculatedTax, newValue)
 	return newValue
 }
 
 func (t *TradeSettlement1) AddLogisticsCharge() *ChargesDetails2 {
-	newValue := new (ChargesDetails2)
+	newValue := new(ChargesDetails2)
 	t.LogisticsCharge = append(t.LogisticsCharge, newValue)
 	return newValue
 }
 
 func (t *TradeSettlement1) AddPaymentTerms() *PaymentTerms3 {
-	newValue := new (PaymentTerms3)
+	newValue := new(PaymentTerms3)
 	t.PaymentTerms = append(t.PaymentTerms, newValue)
 	return newValue
 }
@@ -187,7 +185,7 @@ func (t *TradeSettlement1) AddMonetarySummation() *SettlementMonetarySummation1 
 }
 
 func (t *TradeSettlement1) AddAdjustmentAmountAndReason() *DocumentAdjustment2 {
-	newValue := new (DocumentAdjustment2)
+	newValue := new(DocumentAdjustment2)
 	t.AdjustmentAmountAndReason = append(t.AdjustmentAmountAndReason, newValue)
 	return newValue
 }
@@ -208,13 +206,13 @@ func (t *TradeSettlement1) AddLetterOfCreditReferencedDocument() *DocumentIdenti
 }
 
 func (t *TradeSettlement1) AddFinancialCard() *FinancialCard1 {
-	newValue := new (FinancialCard1)
+	newValue := new(FinancialCard1)
 	t.FinancialCard = append(t.FinancialCard, newValue)
 	return newValue
 }
 
 func (t *TradeSettlement1) AddPurchaseAccountingAccount() *AccountingAccount1 {
-	newValue := new (AccountingAccount1)
+	newValue := new(AccountingAccount1)
 	t.PurchaseAccountingAccount = append(t.PurchaseAccountingAccount, newValue)
 	return newValue
 }
@@ -226,4 +224,3 @@ func (t *TradeSettlement1) AddIssuerFactoringListIdentification(value string) {
 func (t *TradeSettlement1) AddIssuerFactoringAgreementIdentification(value string) {
 	t.IssuerFactoringAgreementIdentification = append(t.IssuerFactoringAgreementIdentification, (*Max35Text)(&value))
 }
-

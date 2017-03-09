@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.002.001.03 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:pain.002.001.03 Document"`
 	Message *CustomerPaymentStatusReportV03 `xml:"CstmrPmtStsRpt"`
 }
 
@@ -33,9 +33,7 @@ type CustomerPaymentStatusReportV03 struct {
 
 	// Information concerning the original payment information, to which the status report message refers.
 	OriginalPaymentInformationAndStatus []*iso20022.OriginalPaymentInformation1 `xml:"OrgnlPmtInfAndSts,omitempty"`
-
 }
-
 
 func (c *CustomerPaymentStatusReportV03) AddGroupHeader() *iso20022.GroupHeader36 {
 	c.GroupHeader = new(iso20022.GroupHeader36)
@@ -48,8 +46,7 @@ func (c *CustomerPaymentStatusReportV03) AddOriginalGroupInformationAndStatus() 
 }
 
 func (c *CustomerPaymentStatusReportV03) AddOriginalPaymentInformationAndStatus() *iso20022.OriginalPaymentInformation1 {
-	newValue := new (iso20022.OriginalPaymentInformation1)
+	newValue := new(iso20022.OriginalPaymentInformation1)
 	c.OriginalPaymentInformationAndStatus = append(c.OriginalPaymentInformationAndStatus, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type OrganisationType1Choice struct {
 
 	// Type of organisation expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (o *OrganisationType1Choice) SetCode(value string) {
 	o.Code = (*OrganisationType1Code)(&value)
@@ -20,4 +18,3 @@ func (o *OrganisationType1Choice) AddProprietary() *GenericIdentification47 {
 	o.Proprietary = new(GenericIdentification47)
 	return o.Proprietary
 }
-

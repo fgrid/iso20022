@@ -11,9 +11,7 @@ type SettlementTypeAndAdditionalParameters2 struct {
 
 	// Unique reference agreed upon by the two trade counterparties to identify the trade.
 	CommonIdentification *Max35Text `xml:"CmonId,omitempty"`
-
 }
-
 
 func (s *SettlementTypeAndAdditionalParameters2) SetSecuritiesMovementType(value string) {
 	s.SecuritiesMovementType = (*ReceiveDelivery1Code)(&value)
@@ -26,4 +24,3 @@ func (s *SettlementTypeAndAdditionalParameters2) SetPayment(value string) {
 func (s *SettlementTypeAndAdditionalParameters2) SetCommonIdentification(value string) {
 	s.CommonIdentification = (*Max35Text)(&value)
 }
-

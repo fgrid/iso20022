@@ -11,9 +11,7 @@ type Quantity9 struct {
 
 	// Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.
 	Factor *Max15NumericText `xml:"Fctr,omitempty"`
-
 }
-
 
 func (q *Quantity9) AddUnitOfMeasure() *UnitOfMeasure3Choice {
 	q.UnitOfMeasure = new(UnitOfMeasure3Choice)
@@ -27,4 +25,3 @@ func (q *Quantity9) SetValue(value string) {
 func (q *Quantity9) SetFactor(value string) {
 	q.Factor = (*Max15NumericText)(&value)
 }
-

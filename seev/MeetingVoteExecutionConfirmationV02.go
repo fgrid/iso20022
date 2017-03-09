@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.007.001.02 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:seev.007.001.02 Document"`
 	Message *MeetingVoteExecutionConfirmationV02 `xml:"MtgVoteExctnConf"`
 }
 
@@ -35,14 +35,12 @@ type MeetingVoteExecutionConfirmationV02 struct {
 	// Party confirming the votes.
 	ReportingParty *iso20022.PartyIdentification9Choice `xml:"RptgPty"`
 
-	// Identifies the securities for which the meeting is organised. 
+	// Identifies the securities for which the meeting is organised.
 	SecurityIdentification *iso20022.SecurityIdentification3 `xml:"SctyId"`
 
 	// Specifies how a party has voted for each agenda item.
 	VoteInstruction []*iso20022.DetailedInstructionStatus2 `xml:"VoteInstr"`
-
 }
-
 
 func (m *MeetingVoteExecutionConfirmationV02) AddVoteExecutionConfirmationIdentification() *iso20022.MessageIdentification1 {
 	m.VoteExecutionConfirmationIdentification = new(iso20022.MessageIdentification1)
@@ -70,8 +68,7 @@ func (m *MeetingVoteExecutionConfirmationV02) AddSecurityIdentification() *iso20
 }
 
 func (m *MeetingVoteExecutionConfirmationV02) AddVoteInstruction() *iso20022.DetailedInstructionStatus2 {
-	newValue := new (iso20022.DetailedInstructionStatus2)
+	newValue := new(iso20022.DetailedInstructionStatus2)
 	m.VoteInstruction = append(m.VoteInstruction, newValue)
 	return newValue
 }
-

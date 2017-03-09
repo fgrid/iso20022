@@ -8,9 +8,7 @@ type ServiceLevel2Choice struct {
 
 	// Proprietary identification of a pre-agreed level of service between the parties.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (s *ServiceLevel2Choice) SetCode(value string) {
 	s.Code = (*ServiceLevel1Code)(&value)
@@ -19,4 +17,3 @@ func (s *ServiceLevel2Choice) SetCode(value string) {
 func (s *ServiceLevel2Choice) SetProprietary(value string) {
 	s.Proprietary = (*Max35Text)(&value)
 }
-

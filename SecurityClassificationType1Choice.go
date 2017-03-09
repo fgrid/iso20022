@@ -8,9 +8,7 @@ type SecurityClassificationType1Choice struct {
 
 	// Other type of classification of the financial instrument.
 	AlternateClassification *GenericIdentification3 `xml:"AltrnClssfctn"`
-
 }
-
 
 func (s *SecurityClassificationType1Choice) SetCFI(value string) {
 	s.CFI = (*CFIIdentifier)(&value)
@@ -20,4 +18,3 @@ func (s *SecurityClassificationType1Choice) AddAlternateClassification() *Generi
 	s.AlternateClassification = new(GenericIdentification3)
 	return s.AlternateClassification
 }
-

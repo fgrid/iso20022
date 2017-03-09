@@ -8,9 +8,7 @@ type ModificationScope29 struct {
 
 	// Detailed information about the investment fund or security associated to the account.
 	FinancialInstrumentDetails *FinancialInstrument51 `xml:"FinInstrmDtls"`
-
 }
-
 
 func (m *ModificationScope29) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification2Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope29) AddFinancialInstrumentDetails() *FinancialInstrume
 	m.FinancialInstrumentDetails = new(FinancialInstrument51)
 	return m.FinancialInstrumentDetails
 }
-

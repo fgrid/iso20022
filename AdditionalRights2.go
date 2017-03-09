@@ -17,9 +17,7 @@ type AdditionalRights2 struct {
 
 	// Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions.
 	AdditionalRightThreshold *AdditionalRightThreshold1Choice `xml:"AddtlRghtThrshld,omitempty"`
-
 }
-
 
 func (a *AdditionalRights2) AddAdditionalRight() *AdditionalRightCode1Choice {
 	a.AdditionalRight = new(AdditionalRightCode1Choice)
@@ -44,4 +42,3 @@ func (a *AdditionalRights2) AddAdditionalRightThreshold() *AdditionalRightThresh
 	a.AdditionalRightThreshold = new(AdditionalRightThreshold1Choice)
 	return a.AdditionalRightThreshold
 }
-

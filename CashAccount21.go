@@ -8,9 +8,7 @@ type CashAccount21 struct {
 
 	// Unique and unambiguous identification for the account between the account owner and the account servicer.
 	Identification *AccountIdentification5Choice `xml:"Id"`
-
 }
-
 
 func (c *CashAccount21) SetServicer(value string) {
 	c.Servicer = (*BICIdentifier)(&value)
@@ -20,4 +18,3 @@ func (c *CashAccount21) AddIdentification() *AccountIdentification5Choice {
 	c.Identification = new(AccountIdentification5Choice)
 	return c.Identification
 }
-

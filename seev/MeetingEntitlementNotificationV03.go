@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.003.001.03 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:seev.003.001.03 Document"`
 	Message *MeetingEntitlementNotificationV03 `xml:"MtgEntitlmntNtfctn"`
 }
 
@@ -41,9 +41,7 @@ type MeetingEntitlementNotificationV03 struct {
 
 	// Defines the dates determining eligibility.
 	Eligibility *iso20022.EligibilityDates1 `xml:"Elgblty"`
-
 }
-
 
 func (m *MeetingEntitlementNotificationV03) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -66,7 +64,7 @@ func (m *MeetingEntitlementNotificationV03) AddNotifyingParty() *iso20022.PartyI
 }
 
 func (m *MeetingEntitlementNotificationV03) AddSecurity() *iso20022.SecurityPosition6 {
-	newValue := new (iso20022.SecurityPosition6)
+	newValue := new(iso20022.SecurityPosition6)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
@@ -75,4 +73,3 @@ func (m *MeetingEntitlementNotificationV03) AddEligibility() *iso20022.Eligibili
 	m.Eligibility = new(iso20022.EligibilityDates1)
 	return m.Eligibility
 }
-

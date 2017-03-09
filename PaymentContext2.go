@@ -26,9 +26,7 @@ type PaymentContext2 struct {
 
 	// Indicator of a card entry mode fallback.
 	FallbackIndicator *TrueFalseIndicator `xml:"FllbckInd,omitempty"`
-
 }
-
 
 func (p *PaymentContext2) SetCardPresent(value string) {
 	p.CardPresent = (*TrueFalseIndicator)(&value)
@@ -61,4 +59,3 @@ func (p *PaymentContext2) SetCardDataEntryMode(value string) {
 func (p *PaymentContext2) SetFallbackIndicator(value string) {
 	p.FallbackIndicator = (*TrueFalseIndicator)(&value)
 }
-

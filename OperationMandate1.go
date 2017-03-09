@@ -23,9 +23,7 @@ type OperationMandate1 struct {
 
 	// Is the date when the mandate stops to be valid.
 	EndDate *ISODate `xml:"EndDt,omitempty"`
-
 }
-
 
 func (o *OperationMandate1) SetIdentification(value string) {
 	o.Identification = (*Max35Text)(&value)
@@ -40,13 +38,13 @@ func (o *OperationMandate1) SetSignatureOrderIndicator(value string) {
 }
 
 func (o *OperationMandate1) AddMandateHolder() *PartyAndCertificate1 {
-	newValue := new (PartyAndCertificate1)
+	newValue := new(PartyAndCertificate1)
 	o.MandateHolder = append(o.MandateHolder, newValue)
 	return newValue
 }
 
 func (o *OperationMandate1) AddBankOperation() *BankTransactionCodeStructure4 {
-	newValue := new (BankTransactionCodeStructure4)
+	newValue := new(BankTransactionCodeStructure4)
 	o.BankOperation = append(o.BankOperation, newValue)
 	return newValue
 }
@@ -58,4 +56,3 @@ func (o *OperationMandate1) SetStartDate(value string) {
 func (o *OperationMandate1) SetEndDate(value string) {
 	o.EndDate = (*ISODate)(&value)
 }
-

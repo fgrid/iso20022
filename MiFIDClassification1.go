@@ -8,9 +8,7 @@ type MiFIDClassification1 struct {
 
 	// Additional information about the source of classification.
 	Narrative *Max350Text `xml:"Nrrtv,omitempty"`
-
 }
-
 
 func (m *MiFIDClassification1) SetClassification(value string) {
 	m.Classification = (*OrderOriginatorEligibility1Code)(&value)
@@ -19,4 +17,3 @@ func (m *MiFIDClassification1) SetClassification(value string) {
 func (m *MiFIDClassification1) SetNarrative(value string) {
 	m.Narrative = (*Max350Text)(&value)
 }
-

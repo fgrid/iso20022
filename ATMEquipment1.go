@@ -26,9 +26,7 @@ type ATMEquipment1 struct {
 
 	// Configuration parameter version.
 	ConfigurationParameter []*ATMConfigurationParameter1 `xml:"CfgtnParam,omitempty"`
-
 }
-
 
 func (a *ATMEquipment1) SetManufacturer(value string) {
 	a.Manufacturer = (*Max35Text)(&value)
@@ -59,8 +57,7 @@ func (a *ATMEquipment1) SetApprovalNumber(value string) {
 }
 
 func (a *ATMEquipment1) AddConfigurationParameter() *ATMConfigurationParameter1 {
-	newValue := new (ATMConfigurationParameter1)
+	newValue := new(ATMConfigurationParameter1)
 	a.ConfigurationParameter = append(a.ConfigurationParameter, newValue)
 	return newValue
 }
-

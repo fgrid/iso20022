@@ -23,9 +23,7 @@ type PlainCardData7 struct {
 
 	// Name of the cardholder stored on the card.
 	CardholderName *Max45Text `xml:"CrdhldrNm,omitempty"`
-
 }
-
 
 func (p *PlainCardData7) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -48,7 +46,7 @@ func (p *PlainCardData7) SetServiceCode(value string) {
 }
 
 func (p *PlainCardData7) AddTrackData() *TrackData1 {
-	newValue := new (TrackData1)
+	newValue := new(TrackData1)
 	p.TrackData = append(p.TrackData, newValue)
 	return newValue
 }
@@ -56,4 +54,3 @@ func (p *PlainCardData7) AddTrackData() *TrackData1 {
 func (p *PlainCardData7) SetCardholderName(value string) {
 	p.CardholderName = (*Max45Text)(&value)
 }
-

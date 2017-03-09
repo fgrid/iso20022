@@ -7,7 +7,7 @@ import (
 )
 
 type Document02100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.021.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:seev.021.001.01 Document"`
 	Message *AgentCAMovementConfirmationV01 `xml:"AgtCAMvmntConf"`
 }
 
@@ -46,9 +46,7 @@ type AgentCAMovementConfirmationV01 struct {
 
 	// Information about the cash movement.
 	CashMovementDetails []*iso20022.CashMovement3 `xml:"CshMvmntDtls,omitempty"`
-
 }
-
 
 func (a *AgentCAMovementConfirmationV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -76,14 +74,13 @@ func (a *AgentCAMovementConfirmationV01) AddCorporateActionGeneralInformation() 
 }
 
 func (a *AgentCAMovementConfirmationV01) AddSecuritiesMovementDetails() *iso20022.CorporateActionSecuritiesMovement1 {
-	newValue := new (iso20022.CorporateActionSecuritiesMovement1)
+	newValue := new(iso20022.CorporateActionSecuritiesMovement1)
 	a.SecuritiesMovementDetails = append(a.SecuritiesMovementDetails, newValue)
 	return newValue
 }
 
 func (a *AgentCAMovementConfirmationV01) AddCashMovementDetails() *iso20022.CashMovement3 {
-	newValue := new (iso20022.CashMovement3)
+	newValue := new(iso20022.CashMovement3)
 	a.CashMovementDetails = append(a.CashMovementDetails, newValue)
 	return newValue
 }
-

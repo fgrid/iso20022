@@ -8,9 +8,7 @@ type AmendInformation1 struct {
 
 	// Indicates whether instructions must be resent (in case of modification of the parameters of a meeting for which instructions have already been sent).
 	ReconfirmInstructions *YesNoIndicator `xml:"RcnfrmInstrs"`
-
 }
-
 
 func (a *AmendInformation1) AddPreviousReference() *MessageIdentification {
 	a.PreviousReference = new(MessageIdentification)
@@ -20,4 +18,3 @@ func (a *AmendInformation1) AddPreviousReference() *MessageIdentification {
 func (a *AmendInformation1) SetReconfirmInstructions(value string) {
 	a.ReconfirmInstructions = (*YesNoIndicator)(&value)
 }
-

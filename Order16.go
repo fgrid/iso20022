@@ -135,9 +135,7 @@ type Order16 struct {
 
 	// Interest amount that has accrued in between two periods, for example, in between interest payment periods.
 	AccruedInterestAmount *AmountAndDirection29 `xml:"AcrdIntrstAmt,omitempty"`
-
 }
-
 
 func (o *Order16) AddBusinessProcessType() *BusinessProcessType1Choice {
 	o.BusinessProcessType = new(BusinessProcessType1Choice)
@@ -179,7 +177,7 @@ func (o *Order16) AddTradeTransactionType() *TradeType3Choice {
 }
 
 func (o *Order16) AddTradeTransactionCondition() *TradeTransactionCondition4Choice {
-	newValue := new (TradeTransactionCondition4Choice)
+	newValue := new(TradeTransactionCondition4Choice)
 	o.TradeTransactionCondition = append(o.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -222,7 +220,7 @@ func (o *Order16) AddNAVDate() *DateAndDateTime1Choice {
 }
 
 func (o *Order16) AddPartialFillDetails() *PartialFill1 {
-	newValue := new (PartialFill1)
+	newValue := new(PartialFill1)
 	o.PartialFillDetails = append(o.PartialFillDetails, newValue)
 	return newValue
 }
@@ -233,7 +231,7 @@ func (o *Order16) AddConfirmationQuantity() *Quantity6Choice {
 }
 
 func (o *Order16) AddQuantityBreakdown() *QuantityBreakdown11 {
-	newValue := new (QuantityBreakdown11)
+	newValue := new(QuantityBreakdown11)
 	o.QuantityBreakdown = append(o.QuantityBreakdown, newValue)
 	return newValue
 }
@@ -324,7 +322,7 @@ func (o *Order16) AddYieldType() *YieldCalculation2 {
 }
 
 func (o *Order16) AddReporting() *Reporting5Choice {
-	newValue := new (Reporting5Choice)
+	newValue := new(Reporting5Choice)
 	o.Reporting = append(o.Reporting, newValue)
 	return newValue
 }
@@ -342,4 +340,3 @@ func (o *Order16) AddAccruedInterestAmount() *AmountAndDirection29 {
 	o.AccruedInterestAmount = new(AmountAndDirection29)
 	return o.AccruedInterestAmount
 }
-

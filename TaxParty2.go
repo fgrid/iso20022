@@ -14,9 +14,7 @@ type TaxParty2 struct {
 
 	// Details of the authorised tax paying party.
 	Authorisation *TaxAuthorisation1 `xml:"Authstn,omitempty"`
-
 }
-
 
 func (t *TaxParty2) SetTaxIdentification(value string) {
 	t.TaxIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (t *TaxParty2) AddAuthorisation() *TaxAuthorisation1 {
 	t.Authorisation = new(TaxAuthorisation1)
 	return t.Authorisation
 }
-

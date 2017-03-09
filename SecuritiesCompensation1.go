@@ -11,9 +11,7 @@ type SecuritiesCompensation1 struct {
 
 	// Amount of money related to the fees for the securities compensation.
 	Fees *AmountAndDirection20 `xml:"Fees,omitempty"`
-
 }
-
 
 func (s *SecuritiesCompensation1) AddDepository() *PartyIdentification34Choice {
 	s.Depository = new(PartyIdentification34Choice)
@@ -29,4 +27,3 @@ func (s *SecuritiesCompensation1) AddFees() *AmountAndDirection20 {
 	s.Fees = new(AmountAndDirection20)
 	return s.Fees
 }
-

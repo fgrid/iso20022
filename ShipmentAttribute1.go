@@ -11,9 +11,7 @@ type ShipmentAttribute1 struct {
 
 	// Country in which the counter party is located.
 	CountryOfCounterParty *CountryCode `xml:"CtryOfCntrPty"`
-
 }
-
 
 func (s *ShipmentAttribute1) SetConditions(value string) {
 	s.Conditions = (*ExternalShipmentCondition1Code)(&value)
@@ -26,4 +24,3 @@ func (s *ShipmentAttribute1) SetExpectedDate(value string) {
 func (s *ShipmentAttribute1) SetCountryOfCounterParty(value string) {
 	s.CountryOfCounterParty = (*CountryCode)(&value)
 }
-

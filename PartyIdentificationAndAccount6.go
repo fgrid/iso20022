@@ -11,9 +11,7 @@ type PartyIdentificationAndAccount6 struct {
 
 	// Unambiguous identification of an internal bank account used by First Agent to manage the line of credit granted to Financing Requestor. This account is requested to be used for managing the financing process.
 	FinancingAccount *CashAccount7 `xml:"FincgAcct,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount6) AddPartyIdentification() *PartyIdentification25 {
 	p.PartyIdentification = new(PartyIdentification25)
@@ -29,4 +27,3 @@ func (p *PartyIdentificationAndAccount6) AddFinancingAccount() *CashAccount7 {
 	p.FinancingAccount = new(CashAccount7)
 	return p.FinancingAccount
 }
-

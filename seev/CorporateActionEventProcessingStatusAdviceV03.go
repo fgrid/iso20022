@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.032.001.03 Document"`
+	XMLName xml.Name                                       `xml:"urn:iso:std:iso:20022:tech:xsd:seev.032.001.03 Document"`
 	Message *CorporateActionEventProcessingStatusAdviceV03 `xml:"CorpActnEvtPrcgStsAdvc"`
 }
 
@@ -46,9 +46,7 @@ type CorporateActionEventProcessingStatusAdviceV03 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionEventProcessingStatusAdviceV03) AddNotificationIdentification() *iso20022.DocumentIdentification9 {
 	c.NotificationIdentification = new(iso20022.DocumentIdentification9)
@@ -56,7 +54,7 @@ func (c *CorporateActionEventProcessingStatusAdviceV03) AddNotificationIdentific
 }
 
 func (c *CorporateActionEventProcessingStatusAdviceV03) AddOtherDocumentIdentification() *iso20022.DocumentIdentification14 {
-	newValue := new (iso20022.DocumentIdentification14)
+	newValue := new(iso20022.DocumentIdentification14)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -67,7 +65,7 @@ func (c *CorporateActionEventProcessingStatusAdviceV03) AddCorporateActionGenera
 }
 
 func (c *CorporateActionEventProcessingStatusAdviceV03) AddEventProcessingStatus() *iso20022.EventProcessingStatus1Choice {
-	newValue := new (iso20022.EventProcessingStatus1Choice)
+	newValue := new(iso20022.EventProcessingStatus1Choice)
 	c.EventProcessingStatus = append(c.EventProcessingStatus, newValue)
 	return newValue
 }
@@ -78,8 +76,7 @@ func (c *CorporateActionEventProcessingStatusAdviceV03) AddAdditionalInformation
 }
 
 func (c *CorporateActionEventProcessingStatusAdviceV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

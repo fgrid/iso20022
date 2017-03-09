@@ -20,9 +20,7 @@ type FundSettlementParameters3 struct {
 
 	// Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.
 	DeliveringSideDetails *DeliveringPartiesAndAccount3 `xml:"DlvrgSdDtls"`
-
 }
-
 
 func (f *FundSettlementParameters3) SetSettlementDate(value string) {
 	f.SettlementDate = (*ISODate)(&value)
@@ -51,4 +49,3 @@ func (f *FundSettlementParameters3) AddDeliveringSideDetails() *DeliveringPartie
 	f.DeliveringSideDetails = new(DeliveringPartiesAndAccount3)
 	return f.DeliveringSideDetails
 }
-

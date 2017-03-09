@@ -11,9 +11,7 @@ type RatioFormat17Choice struct {
 
 	// Ratio expressed as a quotient of amounts.
 	AmountToAmount *AmountToAmountRatio2 `xml:"AmtToAmt"`
-
 }
-
 
 func (r *RatioFormat17Choice) AddQuantityToQuantity() *QuantityToQuantityRatio1 {
 	r.QuantityToQuantity = new(QuantityToQuantityRatio1)
@@ -28,4 +26,3 @@ func (r *RatioFormat17Choice) AddAmountToAmount() *AmountToAmountRatio2 {
 	r.AmountToAmount = new(AmountToAmountRatio2)
 	return r.AmountToAmount
 }
-

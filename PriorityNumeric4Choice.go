@@ -8,9 +8,7 @@ type PriorityNumeric4Choice struct {
 
 	// Specifies the execution priority of the instruction with a proprietary scheme.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (p *PriorityNumeric4Choice) SetNumeric(value string) {
 	p.Numeric = (*Exact4NumericText)(&value)
@@ -20,4 +18,3 @@ func (p *PriorityNumeric4Choice) AddProprietary() *GenericIdentification30 {
 	p.Proprietary = new(GenericIdentification30)
 	return p.Proprietary
 }
-

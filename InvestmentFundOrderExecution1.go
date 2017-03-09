@@ -11,9 +11,7 @@ type InvestmentFundOrderExecution1 struct {
 
 	// Reference of an order, client or deal reference.
 	OrderReferences []*InvestmentFundOrderExecution2 `xml:"OrdrRefs"`
-
 }
-
 
 func (i *InvestmentFundOrderExecution1) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -24,8 +22,7 @@ func (i *InvestmentFundOrderExecution1) SetAmendmentIndicator(value string) {
 }
 
 func (i *InvestmentFundOrderExecution1) AddOrderReferences() *InvestmentFundOrderExecution2 {
-	newValue := new (InvestmentFundOrderExecution2)
+	newValue := new(InvestmentFundOrderExecution2)
 	i.OrderReferences = append(i.OrderReferences, newValue)
 	return newValue
 }
-

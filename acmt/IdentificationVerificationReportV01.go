@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.024.001.01 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.024.001.01 Document"`
 	Message *IdentificationVerificationReportV01 `xml:"IdVrfctnRpt"`
 }
 
@@ -33,9 +33,7 @@ type IdentificationVerificationReportV01 struct {
 
 	// Information concerning the verification of the identification data for which verification was requested.
 	Report []*iso20022.VerificationReport1 `xml:"Rpt"`
-
 }
-
 
 func (i *IdentificationVerificationReportV01) AddAssignment() *iso20022.IdentificationAssignment1 {
 	i.Assignment = new(iso20022.IdentificationAssignment1)
@@ -48,8 +46,7 @@ func (i *IdentificationVerificationReportV01) AddOriginalAssignment() *iso20022.
 }
 
 func (i *IdentificationVerificationReportV01) AddReport() *iso20022.VerificationReport1 {
-	newValue := new (iso20022.VerificationReport1)
+	newValue := new(iso20022.VerificationReport1)
 	i.Report = append(i.Report, newValue)
 	return newValue
 }
-

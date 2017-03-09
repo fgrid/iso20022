@@ -11,9 +11,7 @@ type AmountAndCurrencyExchangeDetails4 struct {
 
 	// Set of elements used to provide details on the currency exchange.
 	CurrencyExchange *CurrencyExchange5 `xml:"CcyXchg,omitempty"`
-
 }
-
 
 func (a *AmountAndCurrencyExchangeDetails4) SetType(value string) {
 	a.Type = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (a *AmountAndCurrencyExchangeDetails4) AddCurrencyExchange() *CurrencyExcha
 	a.CurrencyExchange = new(CurrencyExchange5)
 	return a.CurrencyExchange
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.017.001.01 Document"`
+	XMLName xml.Name                                          `xml:"urn:iso:std:iso:20022:tech:xsd:seev.017.001.01 Document"`
 	Message *AgentCAGlobalDistributionAuthorisationRequestV01 `xml:"AgtCAGblDstrbtnAuthstnReq"`
 }
 
@@ -32,9 +32,7 @@ type AgentCAGlobalDistributionAuthorisationRequestV01 struct {
 
 	// Provides detailed information about the global distribution.
 	GlobalDistributionDetails *iso20022.GlobalDistributionRequest1 `xml:"GblDstrbtnDtls"`
-
 }
-
 
 func (a *AgentCAGlobalDistributionAuthorisationRequestV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -50,4 +48,3 @@ func (a *AgentCAGlobalDistributionAuthorisationRequestV01) AddGlobalDistribution
 	a.GlobalDistributionDetails = new(iso20022.GlobalDistributionRequest1)
 	return a.GlobalDistributionDetails
 }
-

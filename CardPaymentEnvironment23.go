@@ -15,9 +15,7 @@ type CardPaymentEnvironment23 struct {
 
 	// Payment card performing the transaction.
 	Card *PaymentCard8 `xml:"Card"`
-
 }
-
 
 func (c *CardPaymentEnvironment23) AddAcquirer() *Acquirer2 {
 	c.Acquirer = new(Acquirer2)
@@ -38,4 +36,3 @@ func (c *CardPaymentEnvironment23) AddCard() *PaymentCard8 {
 	c.Card = new(PaymentCard8)
 	return c.Card
 }
-

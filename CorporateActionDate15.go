@@ -26,9 +26,7 @@ type CorporateActionDate15 struct {
 
 	// Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected.
 	DepositoryCoverExpirationDate *DateFormat19Choice `xml:"DpstryCoverXprtnDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate15) AddEarlyResponseDeadline() *DateFormat19Choice {
 	c.EarlyResponseDeadline = new(DateFormat19Choice)
@@ -69,4 +67,3 @@ func (c *CorporateActionDate15) AddDepositoryCoverExpirationDate() *DateFormat19
 	c.DepositoryCoverExpirationDate = new(DateFormat19Choice)
 	return c.DepositoryCoverExpirationDate
 }
-

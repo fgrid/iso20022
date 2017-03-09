@@ -8,9 +8,7 @@ type QueryReference struct {
 
 	// Name of the query.
 	QueryName *Max35Text `xml:"QryNm,omitempty"`
-
 }
-
 
 func (q *QueryReference) SetQueryReference(value string) {
 	q.QueryReference = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (q *QueryReference) SetQueryReference(value string) {
 func (q *QueryReference) SetQueryName(value string) {
 	q.QueryName = (*Max35Text)(&value)
 }
-

@@ -23,9 +23,7 @@ type Commission12 struct {
 
 	// Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.
 	CommercialAgreementReference *Max35Text `xml:"ComrclAgrmtRef,omitempty"`
-
 }
-
 
 func (c *Commission12) SetType(value string) {
 	c.Type = (*CommissionType7Code)(&value)
@@ -55,4 +53,3 @@ func (c *Commission12) AddRecipientIdentification() *PartyIdentification2Choice 
 func (c *Commission12) SetCommercialAgreementReference(value string) {
 	c.CommercialAgreementReference = (*Max35Text)(&value)
 }
-

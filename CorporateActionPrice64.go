@@ -17,9 +17,7 @@ type CorporateActionPrice64 struct {
 
 	// Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.
 	GenericCashPriceReceivedPerProduct *PriceFormat56Choice `xml:"GncCshPricRcvdPerPdct,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice64) AddCashInLieuOfSharePrice() *PriceFormat52Choice {
 	c.CashInLieuOfSharePrice = new(PriceFormat52Choice)
@@ -45,4 +43,3 @@ func (c *CorporateActionPrice64) AddGenericCashPriceReceivedPerProduct() *PriceF
 	c.GenericCashPriceReceivedPerProduct = new(PriceFormat56Choice)
 	return c.GenericCashPriceReceivedPerProduct
 }
-

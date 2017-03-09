@@ -14,9 +14,7 @@ type SecuritiesTradeDetails5 struct {
 
 	// Provides additional settlement processing information which can not be included within the structured fields of the message.
 	InstructionProcessingAdditionalDetails *Max350Text `xml:"InstrPrcgAddtlDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails5) AddTradeDate() *DateAndDateTimeChoice {
 	s.TradeDate = new(DateAndDateTimeChoice)
@@ -35,4 +33,3 @@ func (s *SecuritiesTradeDetails5) SetNumberOfDaysAccrued(value string) {
 func (s *SecuritiesTradeDetails5) SetInstructionProcessingAdditionalDetails(value string) {
 	s.InstructionProcessingAdditionalDetails = (*Max350Text)(&value)
 }
-

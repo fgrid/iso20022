@@ -11,9 +11,7 @@ type SplitTradeDetails1 struct {
 
 	// Exchange rate as agreed by the traders.
 	AgreedRate *AgreedRate1 `xml:"AgrdRate,omitempty"`
-
 }
-
 
 func (s *SplitTradeDetails1) AddStatusDetails() *TradeData9 {
 	s.StatusDetails = new(TradeData9)
@@ -29,4 +27,3 @@ func (s *SplitTradeDetails1) AddAgreedRate() *AgreedRate1 {
 	s.AgreedRate = new(AgreedRate1)
 	return s.AgreedRate
 }
-

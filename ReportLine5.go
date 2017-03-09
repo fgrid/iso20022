@@ -11,9 +11,7 @@ type ReportLine5 struct {
 
 	// Net amount, after adjustments, intended to be paid.
 	NetAmount *CurrencyAndAmount `xml:"NetAmt"`
-
 }
-
 
 func (r *ReportLine5) AddPurchaseOrderReference() *DocumentIdentification7 {
 	r.PurchaseOrderReference = new(DocumentIdentification7)
@@ -21,7 +19,7 @@ func (r *ReportLine5) AddPurchaseOrderReference() *DocumentIdentification7 {
 }
 
 func (r *ReportLine5) AddAdjustment() *Adjustment6 {
-	newValue := new (Adjustment6)
+	newValue := new(Adjustment6)
 	r.Adjustment = append(r.Adjustment, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (r *ReportLine5) AddAdjustment() *Adjustment6 {
 func (r *ReportLine5) SetNetAmount(value, currency string) {
 	r.NetAmount = NewCurrencyAndAmount(value, currency)
 }
-

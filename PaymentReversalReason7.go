@@ -11,9 +11,7 @@ type PaymentReversalReason7 struct {
 
 	// Further details on the reversal reason.
 	AdditionalInformation []*Max105Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PaymentReversalReason7) AddOriginator() *PartyIdentification43 {
 	p.Originator = new(PartyIdentification43)
@@ -28,4 +26,3 @@ func (p *PaymentReversalReason7) AddReason() *ReversalReason4Choice {
 func (p *PaymentReversalReason7) AddAdditionalInformation(value string) {
 	p.AdditionalInformation = append(p.AdditionalInformation, (*Max105Text)(&value))
 }
-

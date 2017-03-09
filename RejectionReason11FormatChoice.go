@@ -8,9 +8,7 @@ type RejectionReason11FormatChoice struct {
 
 	// Proprietary code to  express the reason of a rejection of the notification cancellation request.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (r *RejectionReason11FormatChoice) SetCode(value string) {
 	r.Code = (*RejectionReason11Code)(&value)
@@ -20,4 +18,3 @@ func (r *RejectionReason11FormatChoice) AddProprietary() *GenericIdentification1
 	r.Proprietary = new(GenericIdentification13)
 	return r.Proprietary
 }
-

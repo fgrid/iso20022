@@ -20,9 +20,7 @@ type CorporateActionGeneralInformation4 struct {
 
 	// Indicates that the additional business process relates to a claim on the associated corporate action event.
 	AdditionalBusinessProcessIndicator *AdditionalBusinessProcessFormat3Choice `xml:"AddtlBizPrcInd,omitempty"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation4) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (c *CorporateActionGeneralInformation4) AddAdditionalBusinessProcessIndicat
 	c.AdditionalBusinessProcessIndicator = new(AdditionalBusinessProcessFormat3Choice)
 	return c.AdditionalBusinessProcessIndicator
 }
-

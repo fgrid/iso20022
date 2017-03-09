@@ -8,9 +8,7 @@ type BillingBalanceType1Choice struct {
 
 	// Defines the type of billing balance, in a proprietary format.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (b *BillingBalanceType1Choice) SetCode(value string) {
 	b.Code = (*ExternalBillingBalanceType1Code)(&value)
@@ -19,4 +17,3 @@ func (b *BillingBalanceType1Choice) SetCode(value string) {
 func (b *BillingBalanceType1Choice) SetProprietary(value string) {
 	b.Proprietary = (*Max35Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document04000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.040.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.040.001.03 Document"`
 	Message *TimeOutNotificationV03 `xml:"TmOutNtfctn"`
 }
 
@@ -30,10 +30,10 @@ type TimeOutNotificationV03 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -47,9 +47,7 @@ type TimeOutNotificationV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (t *TimeOutNotificationV03) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	t.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -72,7 +70,7 @@ func (t *TimeOutNotificationV03) AddTransactionStatus() *iso20022.TransactionSta
 }
 
 func (t *TimeOutNotificationV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	t.UserTransactionReference = append(t.UserTransactionReference, newValue)
 	return newValue
 }
@@ -86,4 +84,3 @@ func (t *TimeOutNotificationV03) AddRequestForAction() *iso20022.PendingActivity
 	t.RequestForAction = new(iso20022.PendingActivity2)
 	return t.RequestForAction
 }
-

@@ -59,9 +59,7 @@ type SecuritiesTradeDetails7 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails7) SetNotificationSenderTransactionIdentification(value string) {
 	s.NotificationSenderTransactionIdentification = (*Max35Text)(&value)
@@ -108,7 +106,7 @@ func (s *SecuritiesTradeDetails7) AddFinancialInstrumentAttributes() *FinancialI
 }
 
 func (s *SecuritiesTradeDetails7) AddReporting() *Reporting1Choice {
-	newValue := new (Reporting1Choice)
+	newValue := new(Reporting1Choice)
 	s.Reporting = append(s.Reporting, newValue)
 	return newValue
 }
@@ -149,8 +147,7 @@ func (s *SecuritiesTradeDetails7) AddOtherBusinessParties() *OtherParties4 {
 }
 
 func (s *SecuritiesTradeDetails7) AddExtension() *Extension2 {
-	newValue := new (Extension2)
+	newValue := new(Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

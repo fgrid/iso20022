@@ -3,7 +3,7 @@ package iso20022
 // Characteristics of the ownership of an investment account.
 type InvestmentAccountOwnershipInformation8 struct {
 
-	// Information about the organisation or individual person. 
+	// Information about the organisation or individual person.
 	Party *Party15Choice `xml:"Pty"`
 
 	// Status of an identity check to prevent money laundering. This includes the counter-terrorism check.
@@ -29,9 +29,7 @@ type InvestmentAccountOwnershipInformation8 struct {
 
 	// Specifies how information is sent to the account holder.
 	InformationDistribution *InformationDistribution1Code `xml:"InfDstrbtn,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOwnershipInformation8) AddParty() *Party15Choice {
 	i.Party = new(Party15Choice)
@@ -60,7 +58,7 @@ func (i *InvestmentAccountOwnershipInformation8) SetSignatoryRightIndicator(valu
 }
 
 func (i *InvestmentAccountOwnershipInformation8) AddModifiedInvestorProfileValidation() *ModificationScope19 {
-	newValue := new (ModificationScope19)
+	newValue := new(ModificationScope19)
 	i.ModifiedInvestorProfileValidation = append(i.ModifiedInvestorProfileValidation, newValue)
 	return newValue
 }
@@ -73,4 +71,3 @@ func (i *InvestmentAccountOwnershipInformation8) AddMiFIDClassification() *MiFID
 func (i *InvestmentAccountOwnershipInformation8) SetInformationDistribution(value string) {
 	i.InformationDistribution = (*InformationDistribution1Code)(&value)
 }
-

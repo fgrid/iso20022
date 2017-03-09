@@ -53,9 +53,7 @@ type Mandate4 struct {
 
 	// Additional information that cannot be captured in the structured elements within the message component.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *Mandate4) SetMandateIdentification(value string) {
 	m.MandateIdentification = (*Max35Text)(&value)
@@ -134,8 +132,7 @@ func (m *Mandate4) AddReferredDocument() *ReferredDocumentInformation3 {
 }
 
 func (m *Mandate4) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

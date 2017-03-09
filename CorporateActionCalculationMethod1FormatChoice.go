@@ -8,9 +8,7 @@ type CorporateActionCalculationMethod1FormatChoice struct {
 
 	// Proprietary code to  express the calculation method for drawings.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionCalculationMethod1FormatChoice) SetCode(value string) {
 	c.Code = (*CorporateActionCalculationMethod1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionCalculationMethod1FormatChoice) AddProprietary() *Generi
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

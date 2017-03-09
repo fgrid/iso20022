@@ -21,9 +21,7 @@ type GroupHeader36 struct {
 
 	// Financial institution servicing an account for the creditor.
 	CreditorAgent *BranchAndFinancialInstitutionIdentification4 `xml:"CdtrAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader36) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -52,4 +50,3 @@ func (g *GroupHeader36) AddCreditorAgent() *BranchAndFinancialInstitutionIdentif
 	g.CreditorAgent = new(BranchAndFinancialInstitutionIdentification4)
 	return g.CreditorAgent
 }
-

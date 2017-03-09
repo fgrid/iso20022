@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.05 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.05 Document"`
 	Message *MeetingNotificationV05 `xml:"MtgNtfctn"`
 }
 
@@ -63,9 +63,7 @@ type MeetingNotificationV05 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MeetingNotificationV05) AddAmendment() *iso20022.AmendInformation1 {
 	m.Amendment = new(iso20022.AmendInformation1)
@@ -83,7 +81,7 @@ func (m *MeetingNotificationV05) AddMeeting() *iso20022.MeetingNotice4 {
 }
 
 func (m *MeetingNotificationV05) AddMeetingDetails() *iso20022.Meeting4 {
-	newValue := new (iso20022.Meeting4)
+	newValue := new(iso20022.Meeting4)
 	m.MeetingDetails = append(m.MeetingDetails, newValue)
 	return newValue
 }
@@ -94,19 +92,19 @@ func (m *MeetingNotificationV05) AddIssuer() *iso20022.IssuerInformation2 {
 }
 
 func (m *MeetingNotificationV05) AddIssuerAgent() *iso20022.IssuerAgent2 {
-	newValue := new (iso20022.IssuerAgent2)
+	newValue := new(iso20022.IssuerAgent2)
 	m.IssuerAgent = append(m.IssuerAgent, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV05) AddSecurity() *iso20022.SecurityPosition8 {
-	newValue := new (iso20022.SecurityPosition8)
+	newValue := new(iso20022.SecurityPosition8)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV05) AddResolution() *iso20022.Resolution3 {
-	newValue := new (iso20022.Resolution3)
+	newValue := new(iso20022.Resolution3)
 	m.Resolution = append(m.Resolution, newValue)
 	return newValue
 }
@@ -132,8 +130,7 @@ func (m *MeetingNotificationV05) AddAdditionalInformation() *iso20022.CorporateE
 }
 
 func (m *MeetingNotificationV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

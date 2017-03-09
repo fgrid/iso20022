@@ -14,9 +14,7 @@ type AccountIdentification31Choice struct {
 
 	// Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.
 	DomesticAccount *SimpleIdentificationInformation4 `xml:"DmstAcct"`
-
 }
-
 
 func (a *AccountIdentification31Choice) SetIBAN(value string) {
 	a.IBAN = (*IBANIdentifier)(&value)
@@ -34,4 +32,3 @@ func (a *AccountIdentification31Choice) AddDomesticAccount() *SimpleIdentificati
 	a.DomesticAccount = new(SimpleIdentificationInformation4)
 	return a.DomesticAccount
 }
-

@@ -8,9 +8,7 @@ type AlgorithmIdentification12 struct {
 
 	// Parameters associated to the mask generator function cryptographic algorithm
 	Parameter *Parameter5 `xml:"Param,omitempty"`
-
 }
-
 
 func (a *AlgorithmIdentification12) SetAlgorithm(value string) {
 	a.Algorithm = (*Algorithm8Code)(&value)
@@ -20,4 +18,3 @@ func (a *AlgorithmIdentification12) AddParameter() *Parameter5 {
 	a.Parameter = new(Parameter5)
 	return a.Parameter
 }
-

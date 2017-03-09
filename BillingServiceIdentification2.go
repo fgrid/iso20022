@@ -12,9 +12,7 @@ type BillingServiceIdentification2 struct {
 
 	// Specifies further details to describe the financial institution service description, which is not the standard description related to the common code.
 	Description *Max70Text `xml:"Desc"`
-
 }
-
 
 func (b *BillingServiceIdentification2) SetIdentification(value string) {
 	b.Identification = (*Max35Text)(&value)
@@ -28,4 +26,3 @@ func (b *BillingServiceIdentification2) AddSubService() *BillingSubServiceIdenti
 func (b *BillingServiceIdentification2) SetDescription(value string) {
 	b.Description = (*Max70Text)(&value)
 }
-

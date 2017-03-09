@@ -8,9 +8,7 @@ type DeMinimusApplicable1 struct {
 
 	// Percentage of the new issue profits and losses that it receives to beneficial owners that are restricted persons.
 	Percentage *PercentageRate `xml:"Pctg,omitempty"`
-
 }
-
 
 func (d *DeMinimusApplicable1) SetNewIssuePermission(value string) {
 	d.NewIssuePermission = (*YesNoIndicator)(&value)
@@ -19,4 +17,3 @@ func (d *DeMinimusApplicable1) SetNewIssuePermission(value string) {
 func (d *DeMinimusApplicable1) SetPercentage(value string) {
 	d.Percentage = (*PercentageRate)(&value)
 }
-

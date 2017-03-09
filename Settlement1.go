@@ -8,9 +8,7 @@ type Settlement1 struct {
 
 	// Place where settlement of the securities takes place.
 	Depository *PartyIdentification34Choice `xml:"Dpstry,omitempty"`
-
 }
-
 
 func (s *Settlement1) AddSettlementAmount() *AmountAndDirection27 {
 	s.SettlementAmount = new(AmountAndDirection27)
@@ -21,4 +19,3 @@ func (s *Settlement1) AddDepository() *PartyIdentification34Choice {
 	s.Depository = new(PartyIdentification34Choice)
 	return s.Depository
 }
-

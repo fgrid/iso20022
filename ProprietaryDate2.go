@@ -8,9 +8,7 @@ type ProprietaryDate2 struct {
 
 	// Date in ISO format.
 	Date *DateAndDateTimeChoice `xml:"Dt"`
-
 }
-
 
 func (p *ProprietaryDate2) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (p *ProprietaryDate2) AddDate() *DateAndDateTimeChoice {
 	p.Date = new(DateAndDateTimeChoice)
 	return p.Date
 }
-

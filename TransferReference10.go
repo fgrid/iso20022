@@ -17,9 +17,7 @@ type TransferReference10 struct {
 
 	// Unambiguous identification of the transfer allocated by the counterparty.
 	CounterpartyReference *AdditionalReference7 `xml:"CtrPtyRef,omitempty"`
-
 }
-
 
 func (t *TransferReference10) SetMasterReference(value string) {
 	t.MasterReference = (*Max35Text)(&value)
@@ -42,4 +40,3 @@ func (t *TransferReference10) AddCounterpartyReference() *AdditionalReference7 {
 	t.CounterpartyReference = new(AdditionalReference7)
 	return t.CounterpartyReference
 }
-

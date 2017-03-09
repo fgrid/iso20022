@@ -14,9 +14,7 @@ type FinancingResult1 struct {
 
 	// Indicates amount financed related to the request.
 	FinancedAmount *FinancingRateOrAmountChoice `xml:"FincdAmt,omitempty"`
-
 }
-
 
 func (f *FinancingResult1) SetFinancingRequestStatus(value string) {
 	f.FinancingRequestStatus = (*RequestStatus1Code)(&value)
@@ -35,4 +33,3 @@ func (f *FinancingResult1) AddFinancedAmount() *FinancingRateOrAmountChoice {
 	f.FinancedAmount = new(FinancingRateOrAmountChoice)
 	return f.FinancedAmount
 }
-

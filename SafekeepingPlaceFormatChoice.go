@@ -11,9 +11,7 @@ type SafekeepingPlaceFormatChoice struct {
 
 	// Place of safekeeping expressed with a country code.
 	IdentificationAsCountry *CountryCode `xml:"IdAsCtry"`
-
 }
-
 
 func (s *SafekeepingPlaceFormatChoice) AddIdentification() *SafekeepingPlaceAsCodeAndPartyIdentification {
 	s.Identification = new(SafekeepingPlaceAsCodeAndPartyIdentification)
@@ -28,4 +26,3 @@ func (s *SafekeepingPlaceFormatChoice) AddIdentificationAsDSS() *GenericIdentifi
 func (s *SafekeepingPlaceFormatChoice) SetIdentificationAsCountry(value string) {
 	s.IdentificationAsCountry = (*CountryCode)(&value)
 }
-

@@ -11,9 +11,7 @@ type DebitAuthorisationDetails struct {
 
 	// Value date for debiting the amount.
 	ValueDateToDebit *ISODate `xml:"ValDtToDbt,omitempty"`
-
 }
-
 
 func (d *DebitAuthorisationDetails) SetCancellationReason(value string) {
 	d.CancellationReason = (*CancellationReason1Code)(&value)
@@ -26,4 +24,3 @@ func (d *DebitAuthorisationDetails) SetAmountToDebit(value, currency string) {
 func (d *DebitAuthorisationDetails) SetValueDateToDebit(value string) {
 	d.ValueDateToDebit = (*ISODate)(&value)
 }
-

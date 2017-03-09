@@ -8,9 +8,7 @@ type TradeTransactionCondition6Choice struct {
 
 	// Trade conditions expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (t *TradeTransactionCondition6Choice) SetCode(value string) {
 	t.Code = (*TradeTransactionCondition4Code)(&value)
@@ -20,4 +18,3 @@ func (t *TradeTransactionCondition6Choice) AddProprietary() *GenericIdentificati
 	t.Proprietary = new(GenericIdentification47)
 	return t.Proprietary
 }
-

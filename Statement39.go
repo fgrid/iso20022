@@ -23,9 +23,7 @@ type Statement39 struct {
 
 	// Indicates whether there is activity or information update reported in the statement.
 	ActivityIndicator *YesNoIndicator `xml:"ActvtyInd"`
-
 }
-
 
 func (s *Statement39) AddReportNumber() *Number3Choice {
 	s.ReportNumber = new(Number3Choice)
@@ -58,4 +56,3 @@ func (s *Statement39) AddUpdateType() *UpdateType15Choice {
 func (s *Statement39) SetActivityIndicator(value string) {
 	s.ActivityIndicator = (*YesNoIndicator)(&value)
 }
-

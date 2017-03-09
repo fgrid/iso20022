@@ -8,9 +8,7 @@ type ReportingSource1Choice struct {
 
 	// Reporting source, in a proprietary form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (r *ReportingSource1Choice) SetCode(value string) {
 	r.Code = (*ExternalReportingSource1Code)(&value)
@@ -19,4 +17,3 @@ func (r *ReportingSource1Choice) SetCode(value string) {
 func (r *ReportingSource1Choice) SetProprietary(value string) {
 	r.Proprietary = (*Max35Text)(&value)
 }
-

@@ -14,9 +14,7 @@ type OriginalTransactionReference14 struct {
 
 	// Provides reference information to the original transaction.
 	OriginalTransaction []*PaymentIdentification3 `xml:"OrgnlTx,omitempty"`
-
 }
-
 
 func (o *OriginalTransactionReference14) SetMessageIdentification(value string) {
 	o.MessageIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (o *OriginalTransactionReference14) SetCreationDateTime(value string) {
 }
 
 func (o *OriginalTransactionReference14) AddOriginalTransaction() *PaymentIdentification3 {
-	newValue := new (PaymentIdentification3)
+	newValue := new(PaymentIdentification3)
 	o.OriginalTransaction = append(o.OriginalTransaction, newValue)
 	return newValue
 }
-

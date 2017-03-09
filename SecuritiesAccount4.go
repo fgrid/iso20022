@@ -20,9 +20,7 @@ type SecuritiesAccount4 struct {
 
 	// Specifies the current state of an account, eg, enabled or deleted.
 	Status *AccountStatus1Code `xml:"Sts"`
-
 }
-
 
 func (s *SecuritiesAccount4) AddIdentification() *AccountIdentification1 {
 	s.Identification = new(AccountIdentification1)
@@ -49,4 +47,3 @@ func (s *SecuritiesAccount4) SetFinancialInstrumentName(value string) {
 func (s *SecuritiesAccount4) SetStatus(value string) {
 	s.Status = (*AccountStatus1Code)(&value)
 }
-

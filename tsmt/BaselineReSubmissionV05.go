@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.012.001.05 Document"`
+	XMLName xml.Name                 `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.012.001.05 Document"`
 	Message *BaselineReSubmissionV05 `xml:"BaselnReSubmissn"`
 }
 
@@ -40,10 +40,10 @@ type BaselineReSubmissionV05 struct {
 	// Specifies the commercial details of the underlying transaction.
 	Baseline *iso20022.Baseline5 `xml:"Baseln"`
 
-	// Person to be contacted in the organisation of the buyer. 
+	// Person to be contacted in the organisation of the buyer.
 	BuyerContactPerson []*iso20022.ContactIdentification1 `xml:"BuyrCtctPrsn,omitempty"`
 
-	// Person to be contacted in the organisation of the seller. 
+	// Person to be contacted in the organisation of the seller.
 	SellerContactPerson []*iso20022.ContactIdentification1 `xml:"SellrCtctPrsn,omitempty"`
 
 	// Person to be contacted in the seller's bank or buyer's bank.
@@ -51,9 +51,7 @@ type BaselineReSubmissionV05 struct {
 
 	// Person to be contacted in another bank than the seller or buyer's bank.
 	OtherBankContactPerson []*iso20022.ContactIdentification3 `xml:"OthrBkCtctPrsn,omitempty"`
-
 }
-
 
 func (b *BaselineReSubmissionV05) AddSubmissionIdentification() *iso20022.MessageIdentification1 {
 	b.SubmissionIdentification = new(iso20022.MessageIdentification1)
@@ -76,13 +74,13 @@ func (b *BaselineReSubmissionV05) AddBaseline() *iso20022.Baseline5 {
 }
 
 func (b *BaselineReSubmissionV05) AddBuyerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	b.BuyerContactPerson = append(b.BuyerContactPerson, newValue)
 	return newValue
 }
 
 func (b *BaselineReSubmissionV05) AddSellerContactPerson() *iso20022.ContactIdentification1 {
-	newValue := new (iso20022.ContactIdentification1)
+	newValue := new(iso20022.ContactIdentification1)
 	b.SellerContactPerson = append(b.SellerContactPerson, newValue)
 	return newValue
 }
@@ -93,8 +91,7 @@ func (b *BaselineReSubmissionV05) AddBankContactPerson() *iso20022.BankContactPe
 }
 
 func (b *BaselineReSubmissionV05) AddOtherBankContactPerson() *iso20022.ContactIdentification3 {
-	newValue := new (iso20022.ContactIdentification3)
+	newValue := new(iso20022.ContactIdentification3)
 	b.OtherBankContactPerson = append(b.OtherBankContactPerson, newValue)
 	return newValue
 }
-

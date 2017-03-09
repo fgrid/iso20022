@@ -44,9 +44,7 @@ type CorporateActionPeriod3 struct {
 
 	// Period defining the last date on which shareholder registration will be accepted by the issuer and the date on which shareholder registration will resume.
 	BookClosurePeriod *Period1Choice `xml:"BookClsrPrd,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod3) AddPriceCalculationPeriod() *Period1Choice {
 	c.PriceCalculationPeriod = new(Period1Choice)
@@ -117,4 +115,3 @@ func (c *CorporateActionPeriod3) AddBookClosurePeriod() *Period1Choice {
 	c.BookClosurePeriod = new(Period1Choice)
 	return c.BookClosurePeriod
 }
-

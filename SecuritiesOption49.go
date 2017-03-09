@@ -54,9 +54,7 @@ type SecuritiesOption49 struct {
 
 	// Provides information about the prices related to securities movement.
 	PriceDetails *CorporateActionPrice56 `xml:"PricDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesOption49) AddSecurityDetails() *FinancialInstrumentAttributes67 {
 	s.SecurityDetails = new(FinancialInstrumentAttributes67)
@@ -92,7 +90,7 @@ func (s *SecuritiesOption49) AddIncomeType() *GenericIdentification30 {
 }
 
 func (s *SecuritiesOption49) AddExemptionType() *GenericIdentification30 {
-	newValue := new (GenericIdentification30)
+	newValue := new(GenericIdentification30)
 	s.ExemptionType = append(s.ExemptionType, newValue)
 	return newValue
 }
@@ -139,4 +137,3 @@ func (s *SecuritiesOption49) AddPriceDetails() *CorporateActionPrice56 {
 	s.PriceDetails = new(CorporateActionPrice56)
 	return s.PriceDetails
 }
-

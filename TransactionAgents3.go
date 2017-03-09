@@ -10,17 +10,17 @@ type TransactionAgents3 struct {
 	CreditorAgent *BranchAndFinancialInstitutionIdentification5 `xml:"CdtrAgt,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt1,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt2,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt3,omitempty"`
 
@@ -41,9 +41,7 @@ type TransactionAgents3 struct {
 
 	// Proprietary agent related to the underlying transaction.
 	Proprietary []*ProprietaryAgent3 `xml:"Prtry,omitempty"`
-
 }
-
 
 func (t *TransactionAgents3) AddDebtorAgent() *BranchAndFinancialInstitutionIdentification5 {
 	t.DebtorAgent = new(BranchAndFinancialInstitutionIdentification5)
@@ -91,8 +89,7 @@ func (t *TransactionAgents3) AddSettlementPlace() *BranchAndFinancialInstitution
 }
 
 func (t *TransactionAgents3) AddProprietary() *ProprietaryAgent3 {
-	newValue := new (ProprietaryAgent3)
+	newValue := new(ProprietaryAgent3)
 	t.Proprietary = append(t.Proprietary, newValue)
 	return newValue
 }
-

@@ -14,9 +14,7 @@ type AccountManagementConfirmation2 struct {
 
 	// Unambiguous identification of the transfer as allocated by the counterparty.
 	CounterpartyReference *AdditionalReference2 `xml:"CtrPtyRef,omitempty"`
-
 }
-
 
 func (a *AccountManagementConfirmation2) SetConfirmationType(value string) {
 	a.ConfirmationType = (*AccountManagementType2Code)(&value)
@@ -34,4 +32,3 @@ func (a *AccountManagementConfirmation2) AddCounterpartyReference() *AdditionalR
 	a.CounterpartyReference = new(AdditionalReference2)
 	return a.CounterpartyReference
 }
-

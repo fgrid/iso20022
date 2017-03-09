@@ -8,9 +8,7 @@ type FinancingRateOrAmountChoice struct {
 
 	// Amount expressed as a percentage rate.
 	Rate *PercentageRate `xml:"Rate"`
-
 }
-
 
 func (f *FinancingRateOrAmountChoice) SetAmount(value, currency string) {
 	f.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (f *FinancingRateOrAmountChoice) SetAmount(value, currency string) {
 func (f *FinancingRateOrAmountChoice) SetRate(value string) {
 	f.Rate = (*PercentageRate)(&value)
 }
-

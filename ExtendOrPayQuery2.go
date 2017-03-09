@@ -11,9 +11,7 @@ type ExtendOrPayQuery2 struct {
 
 	// Processing status reported by the applicant.
 	Status *DemandStatus1Code `xml:"Sts"`
-
 }
-
 
 func (e *ExtendOrPayQuery2) AddUndertakingIdentification() *Undertaking9 {
 	e.UndertakingIdentification = new(Undertaking9)
@@ -28,4 +26,3 @@ func (e *ExtendOrPayQuery2) AddDemandDetails() *Demand4 {
 func (e *ExtendOrPayQuery2) SetStatus(value string) {
 	e.Status = (*DemandStatus1Code)(&value)
 }
-

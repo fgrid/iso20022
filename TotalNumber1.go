@@ -8,9 +8,7 @@ type TotalNumber1 struct {
 
 	// Total number of settlement instructions that are linked together.
 	TotalOfLinkedInstructions *Exact3NumericText `xml:"TtlOfLkdInstrs"`
-
 }
-
 
 func (t *TotalNumber1) SetCurrentInstructionNumber(value string) {
 	t.CurrentInstructionNumber = (*Exact3NumericText)(&value)
@@ -19,4 +17,3 @@ func (t *TotalNumber1) SetCurrentInstructionNumber(value string) {
 func (t *TotalNumber1) SetTotalOfLinkedInstructions(value string) {
 	t.TotalOfLinkedInstructions = (*Exact3NumericText)(&value)
 }
-

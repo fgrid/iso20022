@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.005.001.06 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:sese.005.001.06 Document"`
 	Message *TransferInInstructionV06 `xml:"TrfInInstr"`
 }
 
@@ -38,7 +38,7 @@ type TransferInInstructionV06 struct {
 	// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
 	MasterReference *iso20022.Max35Text `xml:"MstrRef,omitempty"`
 
-	// General information related to the transfer of a financial instrument. 
+	// General information related to the transfer of a financial instrument.
 	TransferDetails []*iso20022.Transfer21 `xml:"TrfDtls"`
 
 	// Information related to the account into which the financial instrument is to be received.
@@ -55,9 +55,7 @@ type TransferInInstructionV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferInInstructionV06) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -84,7 +82,7 @@ func (t *TransferInInstructionV06) SetMasterReference(value string) {
 }
 
 func (t *TransferInInstructionV06) AddTransferDetails() *iso20022.Transfer21 {
-	newValue := new (iso20022.Transfer21)
+	newValue := new(iso20022.Transfer21)
 	t.TransferDetails = append(t.TransferDetails, newValue)
 	return newValue
 }
@@ -110,8 +108,7 @@ func (t *TransferInInstructionV06) AddCopyDetails() *iso20022.CopyInformation2 {
 }
 
 func (t *TransferInInstructionV06) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

@@ -17,16 +17,14 @@ type AuthenticatedData2 struct {
 
 	// Encrypted data which authenticates the data.
 	MAC *Max35Binary `xml:"MAC"`
-
 }
-
 
 func (a *AuthenticatedData2) SetVersion(value string) {
 	a.Version = (*Number)(&value)
 }
 
 func (a *AuthenticatedData2) AddRecipient() *Recipient2Choice {
-	newValue := new (Recipient2Choice)
+	newValue := new(Recipient2Choice)
 	a.Recipient = append(a.Recipient, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (a *AuthenticatedData2) AddEncapsulatedContent() *EncapsulatedContent1 {
 func (a *AuthenticatedData2) SetMAC(value string) {
 	a.MAC = (*Max35Binary)(&value)
 }
-

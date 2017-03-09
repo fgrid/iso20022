@@ -14,9 +14,7 @@ type FinancialInstitutionIdentification7Choice struct {
 
 	// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 	ProprietaryIdentification *SimpleIdentificationInformation4 `xml:"PrtryId"`
-
 }
-
 
 func (f *FinancialInstitutionIdentification7Choice) AddNameAndAddress() *NameAndAddress5 {
 	f.NameAndAddress = new(NameAndAddress5)
@@ -36,4 +34,3 @@ func (f *FinancialInstitutionIdentification7Choice) AddProprietaryIdentification
 	f.ProprietaryIdentification = new(SimpleIdentificationInformation4)
 	return f.ProprietaryIdentification
 }
-

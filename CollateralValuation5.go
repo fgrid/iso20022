@@ -38,9 +38,7 @@ type CollateralValuation5 struct {
 
 	// Provides details on other collateral valuation.
 	OtherCollateral *OtherCollateral6 `xml:"OthrColl,omitempty"`
-
 }
-
 
 func (c *CollateralValuation5) SetCollateralIdentification(value string) {
 	c.CollateralIdentification = (*Max35Text)(&value)
@@ -93,4 +91,3 @@ func (c *CollateralValuation5) AddOtherCollateral() *OtherCollateral6 {
 	c.OtherCollateral = new(OtherCollateral6)
 	return c.OtherCollateral
 }
-

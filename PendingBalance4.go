@@ -8,9 +8,7 @@ type PendingBalance4 struct {
 
 	// Overall process covering the trade and settlement transactions of financial instruments.
 	PendingTransactions []*SettlementTypeAndIdentification21 `xml:"PdgTxs,omitempty"`
-
 }
-
 
 func (p *PendingBalance4) AddBalance() *SignedQuantityFormat9 {
 	p.Balance = new(SignedQuantityFormat9)
@@ -18,8 +16,7 @@ func (p *PendingBalance4) AddBalance() *SignedQuantityFormat9 {
 }
 
 func (p *PendingBalance4) AddPendingTransactions() *SettlementTypeAndIdentification21 {
-	newValue := new (SettlementTypeAndIdentification21)
+	newValue := new(SettlementTypeAndIdentification21)
 	p.PendingTransactions = append(p.PendingTransactions, newValue)
 	return newValue
 }
-

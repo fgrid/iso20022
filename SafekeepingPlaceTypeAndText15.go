@@ -8,9 +8,7 @@ type SafekeepingPlaceTypeAndText15 struct {
 
 	// Additional information about the place of safekeeping.
 	Identification *RestrictedFINXMax30Text `xml:"Id,omitempty"`
-
 }
-
 
 func (s *SafekeepingPlaceTypeAndText15) SetSafekeepingPlaceType(value string) {
 	s.SafekeepingPlaceType = (*SafekeepingPlace3Code)(&value)
@@ -19,4 +17,3 @@ func (s *SafekeepingPlaceTypeAndText15) SetSafekeepingPlaceType(value string) {
 func (s *SafekeepingPlaceTypeAndText15) SetIdentification(value string) {
 	s.Identification = (*RestrictedFINXMax30Text)(&value)
 }
-

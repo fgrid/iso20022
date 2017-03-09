@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.002.001.04 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.002.001.04 Document"`
 	Message *MeetingCancellationV04 `xml:"MtgCxl"`
 }
 
@@ -44,9 +44,7 @@ type MeetingCancellationV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (m *MeetingCancellationV04) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -69,7 +67,7 @@ func (m *MeetingCancellationV04) AddNotifyingParty() *iso20022.PartyIdentificati
 }
 
 func (m *MeetingCancellationV04) AddSecurity() *iso20022.SecurityPosition6 {
-	newValue := new (iso20022.SecurityPosition6)
+	newValue := new(iso20022.SecurityPosition6)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
@@ -80,8 +78,7 @@ func (m *MeetingCancellationV04) AddReason() *iso20022.MeetingCancellationReason
 }
 
 func (m *MeetingCancellationV04) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	m.Extension = append(m.Extension, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type MeetingCancellationReason1 struct {
 
 	// Provides more information on the reason for cancelling a meeting in free format form.
 	CancellationReason *Max140Text `xml:"CxlRsn,omitempty"`
-
 }
-
 
 func (m *MeetingCancellationReason1) SetCode(value string) {
 	m.Code = (*MeetingCancellationReason2Code)(&value)
@@ -26,4 +24,3 @@ func (m *MeetingCancellationReason1) SetExtendedCode(value string) {
 func (m *MeetingCancellationReason1) SetCancellationReason(value string) {
 	m.CancellationReason = (*Max140Text)(&value)
 }
-

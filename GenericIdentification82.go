@@ -23,9 +23,7 @@ type GenericIdentification82 struct {
 
 	// Country that issued the identification document.
 	IssuerCountry *CountryCode `xml:"IssrCtry,omitempty"`
-
 }
-
 
 func (g *GenericIdentification82) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -55,4 +53,3 @@ func (g *GenericIdentification82) SetState(value string) {
 func (g *GenericIdentification82) SetIssuerCountry(value string) {
 	g.IssuerCountry = (*CountryCode)(&value)
 }
-

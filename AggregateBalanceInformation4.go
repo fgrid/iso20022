@@ -50,9 +50,7 @@ type AggregateBalanceInformation4 struct {
 
 	// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
 	BalanceAtSafekeepingPlace []*AggregateBalancePerSafekeepingPlace3 `xml:"BalAtSfkpgPlc,omitempty"`
-
 }
-
 
 func (a *AggregateBalanceInformation4) AddAggregateQuantity() *BalanceQuantity1Choice {
 	a.AggregateQuantity = new(BalanceQuantity1Choice)
@@ -104,7 +102,7 @@ func (a *AggregateBalanceInformation4) AddFinancialInstrumentDetails() *Financia
 }
 
 func (a *AggregateBalanceInformation4) AddPriceDetails() *PriceInformation2 {
-	newValue := new (PriceInformation2)
+	newValue := new(PriceInformation2)
 	a.PriceDetails = append(a.PriceDetails, newValue)
 	return newValue
 }
@@ -115,20 +113,19 @@ func (a *AggregateBalanceInformation4) AddForeignExchangeDetails() *ForeignExcha
 }
 
 func (a *AggregateBalanceInformation4) AddBalanceBreakdownDetails() *SubBalanceInformation2 {
-	newValue := new (SubBalanceInformation2)
+	newValue := new(SubBalanceInformation2)
 	a.BalanceBreakdownDetails = append(a.BalanceBreakdownDetails, newValue)
 	return newValue
 }
 
 func (a *AggregateBalanceInformation4) AddAdditionalBalanceBreakdownDetails() *AdditionalBalanceInformation2 {
-	newValue := new (AdditionalBalanceInformation2)
+	newValue := new(AdditionalBalanceInformation2)
 	a.AdditionalBalanceBreakdownDetails = append(a.AdditionalBalanceBreakdownDetails, newValue)
 	return newValue
 }
 
 func (a *AggregateBalanceInformation4) AddBalanceAtSafekeepingPlace() *AggregateBalancePerSafekeepingPlace3 {
-	newValue := new (AggregateBalancePerSafekeepingPlace3)
+	newValue := new(AggregateBalancePerSafekeepingPlace3)
 	a.BalanceAtSafekeepingPlace = append(a.BalanceAtSafekeepingPlace, newValue)
 	return newValue
 }
-

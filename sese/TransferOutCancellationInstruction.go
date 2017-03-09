@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.002.001.01 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:sese.002.001.01 Document"`
 	Message *TransferOutCancellationInstruction `xml:"sese.002.001.01"`
 }
 
@@ -33,11 +33,9 @@ type TransferOutCancellationInstruction struct {
 	// Reference to a linked message that was previously received.
 	RelatedReference *iso20022.AdditionalReference2 `xml:"RltdRef,omitempty"`
 
-	// 
+	//
 	TransferOutToBeCancelled *iso20022.TransferOut2 `xml:"TrfOutToBeCanc,omitempty"`
-
 }
-
 
 func (t *TransferOutCancellationInstruction) AddPreviousReference() *iso20022.AdditionalReference2 {
 	t.PreviousReference = new(iso20022.AdditionalReference2)
@@ -58,4 +56,3 @@ func (t *TransferOutCancellationInstruction) AddTransferOutToBeCancelled() *iso2
 	t.TransferOutToBeCancelled = new(iso20022.TransferOut2)
 	return t.TransferOutToBeCancelled
 }
-

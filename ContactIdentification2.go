@@ -23,9 +23,7 @@ type ContactIdentification2 struct {
 
 	// Address for electronic mail (e-mail).
 	EmailAddress *Max256Text `xml:"EmailAdr,omitempty"`
-
 }
-
 
 func (c *ContactIdentification2) SetNamePrefix(value string) {
 	c.NamePrefix = (*NamePrefix1Code)(&value)
@@ -54,4 +52,3 @@ func (c *ContactIdentification2) SetFaxNumber(value string) {
 func (c *ContactIdentification2) SetEmailAddress(value string) {
 	c.EmailAddress = (*Max256Text)(&value)
 }
-

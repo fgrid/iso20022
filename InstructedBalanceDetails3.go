@@ -8,9 +8,7 @@ type InstructedBalanceDetails3 struct {
 
 	// Provide instructed balance breakdown information per option.
 	OptionDetails []*InstructedCorporateActionOption4 `xml:"OptnDtls,omitempty"`
-
 }
-
 
 func (i *InstructedBalanceDetails3) AddTotalInstructedBalance() *BalanceFormat1Choice {
 	i.TotalInstructedBalance = new(BalanceFormat1Choice)
@@ -18,8 +16,7 @@ func (i *InstructedBalanceDetails3) AddTotalInstructedBalance() *BalanceFormat1C
 }
 
 func (i *InstructedBalanceDetails3) AddOptionDetails() *InstructedCorporateActionOption4 {
-	newValue := new (InstructedCorporateActionOption4)
+	newValue := new(InstructedCorporateActionOption4)
 	i.OptionDetails = append(i.OptionDetails, newValue)
 	return newValue
 }
-

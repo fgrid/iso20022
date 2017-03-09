@@ -8,9 +8,7 @@ type ConsentOrRejectionReason4Choice struct {
 
 	// Specifies the reason why the counterparty response has a  rejection status.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (c *ConsentOrRejectionReason4Choice) SetCode(value string) {
 	c.Code = (*CounterpartyResponseStatusReason1Code)(&value)
@@ -20,4 +18,3 @@ func (c *ConsentOrRejectionReason4Choice) AddProprietary() *GenericIdentificatio
 	c.Proprietary = new(GenericIdentification30)
 	return c.Proprietary
 }
-

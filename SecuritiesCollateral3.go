@@ -41,9 +41,7 @@ type SecuritiesCollateral3 struct {
 
 	// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
 	SettlementParameters *SettlementDetails88 `xml:"SttlmParams,omitempty"`
-
 }
-
 
 func (s *SecuritiesCollateral3) SetCollateralIdentification(value string) {
 	s.CollateralIdentification = (*Max35Text)(&value)
@@ -103,4 +101,3 @@ func (s *SecuritiesCollateral3) AddSettlementParameters() *SettlementDetails88 {
 	s.SettlementParameters = new(SettlementDetails88)
 	return s.SettlementParameters
 }
-

@@ -26,9 +26,7 @@ type ISATransfer10 struct {
 
 	// Specifies the underlying assets for the ISA or portfolio.
 	FinancialInstrumentAssetForTransfer []*FinancialInstrument33 `xml:"FinInstrmAsstForTrf,omitempty"`
-
 }
-
 
 func (i *ISATransfer10) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -60,8 +58,7 @@ func (i *ISATransfer10) SetAllOtherCash(value string) {
 }
 
 func (i *ISATransfer10) AddFinancialInstrumentAssetForTransfer() *FinancialInstrument33 {
-	newValue := new (FinancialInstrument33)
+	newValue := new(FinancialInstrument33)
 	i.FinancialInstrumentAssetForTransfer = append(i.FinancialInstrumentAssetForTransfer, newValue)
 	return newValue
 }
-

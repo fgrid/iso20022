@@ -14,9 +14,7 @@ type CorporateActionMovementFailedStatus1 struct {
 
 	// Provides information about the resource movement that failed and the reason of the failure.
 	ResourceDetails []*FailedMovement1 `xml:"RsrcDtls"`
-
 }
-
 
 func (c *CorporateActionMovementFailedStatus1) SetAgentAccountIdentification(value string) {
 	c.AgentAccountIdentification = (*Max35Text)(&value)
@@ -32,8 +30,7 @@ func (c *CorporateActionMovementFailedStatus1) AddAccountOwnerIdentification() *
 }
 
 func (c *CorporateActionMovementFailedStatus1) AddResourceDetails() *FailedMovement1 {
-	newValue := new (FailedMovement1)
+	newValue := new(FailedMovement1)
 	c.ResourceDetails = append(c.ResourceDetails, newValue)
 	return newValue
 }
-

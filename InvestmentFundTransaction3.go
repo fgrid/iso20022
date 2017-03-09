@@ -71,9 +71,7 @@ type InvestmentFundTransaction3 struct {
 
 	// Price at which the order was executed.
 	PriceDetails *UnitPrice11 `xml:"PricDtls,omitempty"`
-
 }
-
 
 func (i *InvestmentFundTransaction3) SetTransactionType(value string) {
 	i.TransactionType = (*TransactionType2Code)(&value)
@@ -169,4 +167,3 @@ func (i *InvestmentFundTransaction3) AddPriceDetails() *UnitPrice11 {
 	i.PriceDetails = new(UnitPrice11)
 	return i.PriceDetails
 }
-

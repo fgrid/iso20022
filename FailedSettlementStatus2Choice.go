@@ -11,9 +11,7 @@ type FailedSettlementStatus2Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (f *FailedSettlementStatus2Choice) SetReason(value string) {
 	f.Reason = (*Max350Text)(&value)
@@ -27,4 +25,3 @@ func (f *FailedSettlementStatus2Choice) AddDataSourceScheme() *GenericIdentifica
 func (f *FailedSettlementStatus2Choice) SetNoSpecifiedReason(value string) {
 	f.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

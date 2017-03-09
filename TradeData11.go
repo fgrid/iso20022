@@ -32,9 +32,7 @@ type TradeData11 struct {
 
 	// Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.
 	RegulatoryReporting *RegulatoryReporting4 `xml:"RgltryRptg,omitempty"`
-
 }
-
 
 func (t *TradeData11) SetOriginatorReference(value string) {
 	t.OriginatorReference = (*Max35Text)(&value)
@@ -76,4 +74,3 @@ func (t *TradeData11) AddRegulatoryReporting() *RegulatoryReporting4 {
 	t.RegulatoryReporting = new(RegulatoryReporting4)
 	return t.RegulatoryReporting
 }
-

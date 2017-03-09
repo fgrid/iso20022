@@ -8,9 +8,7 @@ type CardholderAuthentication2 struct {
 
 	// Entity or object in charge of verifying the cardholder authenticity.
 	AuthenticationEntity *AuthenticationEntity1Code `xml:"AuthntcnNtty"`
-
 }
-
 
 func (c *CardholderAuthentication2) SetAuthenticationMethod(value string) {
 	c.AuthenticationMethod = (*AuthenticationMethod1Code)(&value)
@@ -19,4 +17,3 @@ func (c *CardholderAuthentication2) SetAuthenticationMethod(value string) {
 func (c *CardholderAuthentication2) SetAuthenticationEntity(value string) {
 	c.AuthenticationEntity = (*AuthenticationEntity1Code)(&value)
 }
-

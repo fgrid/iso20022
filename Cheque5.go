@@ -35,9 +35,7 @@ type Cheque5 struct {
 
 	// Specifies the print location of the cheque.
 	PrintLocation *Max35Text `xml:"PrtLctn,omitempty"`
-
 }
-
 
 func (c *Cheque5) SetChequeType(value string) {
 	c.ChequeType = (*ChequeType2Code)(&value)
@@ -85,4 +83,3 @@ func (c *Cheque5) SetRegionalClearingZone(value string) {
 func (c *Cheque5) SetPrintLocation(value string) {
 	c.PrintLocation = (*Max35Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type ModificationScope33 struct {
 
 	// Referral information.
 	Placement *ReferredAgent2 `xml:"Plcmnt"`
-
 }
-
 
 func (m *ModificationScope33) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope33) AddPlacement() *ReferredAgent2 {
 	m.Placement = new(ReferredAgent2)
 	return m.Placement
 }
-

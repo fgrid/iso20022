@@ -20,9 +20,7 @@ type SecurityDate6 struct {
 
 	// Date/time at which the movement is due to take place (cash and/or securities).
 	PaymentDate *DateFormat19Choice `xml:"PmtDt,omitempty"`
-
 }
-
 
 func (s *SecurityDate6) AddPostingDate() *DateAndDateTimeChoice {
 	s.PostingDate = new(DateAndDateTimeChoice)
@@ -53,4 +51,3 @@ func (s *SecurityDate6) AddPaymentDate() *DateFormat19Choice {
 	s.PaymentDate = new(DateFormat19Choice)
 	return s.PaymentDate
 }
-

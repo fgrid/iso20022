@@ -7,7 +7,7 @@ import (
 )
 
 type Document05500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.055.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:camt.055.001.01 Document"`
 	Message *CustomerPaymentCancellationRequestV01 `xml:"CstmrPmtCxlReq"`
 }
 
@@ -43,9 +43,7 @@ type CustomerPaymentCancellationRequestV01 struct {
 
 	// Identifies the payment instruction to be cancelled.
 	Underlying []*iso20022.UnderlyingTransaction1 `xml:"Undrlyg"`
-
 }
-
 
 func (c *CustomerPaymentCancellationRequestV01) AddAssignment() *iso20022.CaseAssignment2 {
 	c.Assignment = new(iso20022.CaseAssignment2)
@@ -63,8 +61,7 @@ func (c *CustomerPaymentCancellationRequestV01) AddControlData() *iso20022.Contr
 }
 
 func (c *CustomerPaymentCancellationRequestV01) AddUnderlying() *iso20022.UnderlyingTransaction1 {
-	newValue := new (iso20022.UnderlyingTransaction1)
+	newValue := new(iso20022.UnderlyingTransaction1)
 	c.Underlying = append(c.Underlying, newValue)
 	return newValue
 }
-

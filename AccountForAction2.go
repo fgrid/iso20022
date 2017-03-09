@@ -7,15 +7,13 @@ type AccountForAction2 struct {
 	Identification *AccountIdentification4Choice `xml:"Id"`
 
 	// Name of the account. In case of conflict between the Account Identification and the Account Name, it is recommended that the Account Servicer ask for clarification by means of the Request for Additional Information message.
-	//  
-	// 
+	//
+	//
 	Name *Max70Text `xml:"Nm,omitempty"`
 
 	// Medium of exchange of value.
 	Currency *ActiveCurrencyCode `xml:"Ccy"`
-
 }
-
 
 func (a *AccountForAction2) AddIdentification() *AccountIdentification4Choice {
 	a.Identification = new(AccountIdentification4Choice)
@@ -29,4 +27,3 @@ func (a *AccountForAction2) SetName(value string) {
 func (a *AccountForAction2) SetCurrency(value string) {
 	a.Currency = (*ActiveCurrencyCode)(&value)
 }
-

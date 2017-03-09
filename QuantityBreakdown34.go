@@ -11,9 +11,7 @@ type QuantityBreakdown34 struct {
 
 	// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).
 	SecuritiesSubBalanceType *GenericIdentification47 `xml:"SctiesSubBalTp,omitempty"`
-
 }
-
 
 func (q *QuantityBreakdown34) AddLotNumber() *GenericIdentification39 {
 	q.LotNumber = new(GenericIdentification39)
@@ -29,4 +27,3 @@ func (q *QuantityBreakdown34) AddSecuritiesSubBalanceType() *GenericIdentificati
 	q.SecuritiesSubBalanceType = new(GenericIdentification47)
 	return q.SecuritiesSubBalanceType
 }
-

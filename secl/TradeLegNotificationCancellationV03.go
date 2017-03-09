@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:secl.002.001.03 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:secl.002.001.03 Document"`
 	Message *TradeLegNotificationCancellationV03 `xml:"TradLegNtfctnCxl"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document00200103) AddMessage() *TradeLegNotificationCancellationV03 {
 
 // Scope
 // The TradeLegNotificationCancellation message is sent by the central counterparty (CCP) to a clearing member to notify the cancellation of a TradeLegNotification message previously sent.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The previously sent message must be the Trade Leg Notification message.
 type TradeLegNotificationCancellationV03 struct {
@@ -46,11 +46,9 @@ type TradeLegNotificationCancellationV03 struct {
 	// Provides details about the settlement details of the trade leg such as the settlement currency or the place of settlement.
 	SettlementDetails *iso20022.Settlement1 `xml:"SttlmDtls"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (t *TradeLegNotificationCancellationV03) AddClearingMember() *iso20022.PartyIdentification35Choice {
 	t.ClearingMember = new(iso20022.PartyIdentification35Choice)
@@ -88,8 +86,7 @@ func (t *TradeLegNotificationCancellationV03) AddSettlementDetails() *iso20022.S
 }
 
 func (t *TradeLegNotificationCancellationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	t.SupplementaryData = append(t.SupplementaryData, newValue)
 	return newValue
 }
-

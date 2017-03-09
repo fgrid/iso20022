@@ -8,9 +8,7 @@ type ProprietaryQuantity1 struct {
 
 	// Provides the proprietary quantity in free format.
 	Quantity *Max35Text `xml:"Qty"`
-
 }
-
 
 func (p *ProprietaryQuantity1) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *ProprietaryQuantity1) SetType(value string) {
 func (p *ProprietaryQuantity1) SetQuantity(value string) {
 	p.Quantity = (*Max35Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type TwoLegTransactionType1Choice struct {
 
 	// Provides details about the two leg transaction.
 	SecuritiesFinancingDetails *SecuritiesFinancing10 `xml:"SctiesFincgDtls"`
-
 }
-
 
 func (t *TwoLegTransactionType1Choice) AddFutureOrOptionDetails() *FutureOrOptionDetails1 {
 	t.FutureOrOptionDetails = new(FutureOrOptionDetails1)
@@ -21,4 +19,3 @@ func (t *TwoLegTransactionType1Choice) AddSecuritiesFinancingDetails() *Securiti
 	t.SecuritiesFinancingDetails = new(SecuritiesFinancing10)
 	return t.SecuritiesFinancingDetails
 }
-

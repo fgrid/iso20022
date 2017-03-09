@@ -11,9 +11,7 @@ type CorporateActionAgent1 struct {
 
 	// Contact person at the agent.
 	ContactPerson *NameAndAddress5 `xml:"CtctPrsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionAgent1) AddAgentIdentification() *PartyIdentification2Choice {
 	c.AgentIdentification = new(PartyIdentification2Choice)
@@ -29,4 +27,3 @@ func (c *CorporateActionAgent1) AddContactPerson() *NameAndAddress5 {
 	c.ContactPerson = new(NameAndAddress5)
 	return c.ContactPerson
 }
-

@@ -50,9 +50,7 @@ type MandateInformation1 struct {
 
 	// Set of elements used to provide information to identify the underlying documents associated with the mandate.
 	ReferredDocument *ReferredDocumentInformation3 `xml:"RfrdDoc,omitempty"`
-
 }
-
 
 func (m *MandateInformation1) SetMandateIdentification(value string) {
 	m.MandateIdentification = (*Max35Text)(&value)
@@ -129,4 +127,3 @@ func (m *MandateInformation1) AddReferredDocument() *ReferredDocumentInformation
 	m.ReferredDocument = new(ReferredDocumentInformation3)
 	return m.ReferredDocument
 }
-

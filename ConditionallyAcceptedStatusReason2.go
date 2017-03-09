@@ -14,9 +14,7 @@ type ConditionallyAcceptedStatusReason2 struct {
 
 	// Additional information about the conditionally accepted status reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *ConditionallyAcceptedStatusReason2) SetReason(value string) {
 	c.Reason = (*ConditionallyAcceptedStatusReason2Code)(&value)
@@ -34,4 +32,3 @@ func (c *ConditionallyAcceptedStatusReason2) AddDataSourceScheme() *GenericIdent
 func (c *ConditionallyAcceptedStatusReason2) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

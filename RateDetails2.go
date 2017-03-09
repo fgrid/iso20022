@@ -65,9 +65,7 @@ type RateDetails2 struct {
 
 	// Rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.
 	WithholdingOfLocalTax *RateAndAmountFormat5Choice `xml:"WhldgOfLclTax,omitempty"`
-
 }
-
 
 func (r *RateDetails2) AddAdditionalTax() *RateAndAmountFormat5Choice {
 	r.AdditionalTax = new(RateAndAmountFormat5Choice)
@@ -93,7 +91,7 @@ func (r *RateDetails2) AddFullyFrankedRate() *RateAndAmountFormat5Choice {
 }
 
 func (r *RateDetails2) AddGrossDividendRate() *GrossDividendRateFormat2Choice {
-	newValue := new (GrossDividendRateFormat2Choice)
+	newValue := new(GrossDividendRateFormat2Choice)
 	r.GrossDividendRate = append(r.GrossDividendRate, newValue)
 	return newValue
 }
@@ -103,13 +101,13 @@ func (r *RateDetails2) SetCashIncentiveRate(value string) {
 }
 
 func (r *RateDetails2) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat2Choice {
-	newValue := new (InterestRateUsedForPaymentFormat2Choice)
+	newValue := new(InterestRateUsedForPaymentFormat2Choice)
 	r.InterestRateUsedForPayment = append(r.InterestRateUsedForPayment, newValue)
 	return newValue
 }
 
 func (r *RateDetails2) AddNetDividendRate() *NetDividendRateFormat2Choice {
-	newValue := new (NetDividendRateFormat2Choice)
+	newValue := new(NetDividendRateFormat2Choice)
 	r.NetDividendRate = append(r.NetDividendRate, newValue)
 	return newValue
 }
@@ -132,13 +130,13 @@ func (r *RateDetails2) SetSolicitationFeeRate(value string) {
 }
 
 func (r *RateDetails2) AddTaxCreditRate() *TaxCreditRateFormat2Choice {
-	newValue := new (TaxCreditRateFormat2Choice)
+	newValue := new(TaxCreditRateFormat2Choice)
 	r.TaxCreditRate = append(r.TaxCreditRate, newValue)
 	return newValue
 }
 
 func (r *RateDetails2) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	r.TaxRelatedRate = append(r.TaxRelatedRate, newValue)
 	return newValue
 }
@@ -168,4 +166,3 @@ func (r *RateDetails2) AddWithholdingOfLocalTax() *RateAndAmountFormat5Choice {
 	r.WithholdingOfLocalTax = new(RateAndAmountFormat5Choice)
 	return r.WithholdingOfLocalTax
 }
-

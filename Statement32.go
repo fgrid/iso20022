@@ -14,9 +14,7 @@ type Statement32 struct {
 
 	// Date and time of the statement.
 	StatementDateTime *DateAndDateTimeChoice `xml:"StmtDtTm"`
-
 }
-
 
 func (s *Statement32) SetStatementIdentification(value string) {
 	s.StatementIdentification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (s *Statement32) AddStatementDateTime() *DateAndDateTimeChoice {
 	s.StatementDateTime = new(DateAndDateTimeChoice)
 	return s.StatementDateTime
 }
-

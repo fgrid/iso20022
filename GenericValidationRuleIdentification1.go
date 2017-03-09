@@ -14,9 +14,7 @@ type GenericValidationRuleIdentification1 struct {
 
 	// Entity that assigns the identification.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GenericValidationRuleIdentification1) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (g *GenericValidationRuleIdentification1) AddSchemeName() *ValidationRuleSc
 func (g *GenericValidationRuleIdentification1) SetIssuer(value string) {
 	g.Issuer = (*Max35Text)(&value)
 }
-

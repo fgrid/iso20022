@@ -8,9 +8,7 @@ type SecuritiesAccount7 struct {
 
 	// Idenfitication of the account where financial instruments are maintained.
 	AccountIdentification *Max35Text `xml:"AcctId"`
-
 }
-
 
 func (s *SecuritiesAccount7) AddAccountOwnerIdentification() *PartyIdentification2Choice {
 	s.AccountOwnerIdentification = new(PartyIdentification2Choice)
@@ -20,4 +18,3 @@ func (s *SecuritiesAccount7) AddAccountOwnerIdentification() *PartyIdentificatio
 func (s *SecuritiesAccount7) SetAccountIdentification(value string) {
 	s.AccountIdentification = (*Max35Text)(&value)
 }
-

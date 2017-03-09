@@ -8,9 +8,7 @@ type Amount1Choice struct {
 
 	// Amount of decrease, and currency.
 	DecreaseAmount *ActiveCurrencyAndAmount `xml:"DcrAmt"`
-
 }
-
 
 func (a *Amount1Choice) SetIncreaseAmount(value, currency string) {
 	a.IncreaseAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (a *Amount1Choice) SetIncreaseAmount(value, currency string) {
 func (a *Amount1Choice) SetDecreaseAmount(value, currency string) {
 	a.DecreaseAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

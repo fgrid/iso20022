@@ -11,9 +11,7 @@ type RateAndAmountFormat46Choice struct {
 
 	// Value is expressed as a currency and amount.
 	Amount *RestrictedFINActiveCurrencyAnd13DecimalAmount `xml:"Amt"`
-
 }
-
 
 func (r *RateAndAmountFormat46Choice) SetRate(value string) {
 	r.Rate = (*PercentageRate)(&value)
@@ -26,4 +24,3 @@ func (r *RateAndAmountFormat46Choice) SetNotSpecifiedRate(value string) {
 func (r *RateAndAmountFormat46Choice) SetAmount(value, currency string) {
 	r.Amount = NewRestrictedFINActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

@@ -17,9 +17,7 @@ type TransactionVerificationResult5 struct {
 
 	// Token provided to the ATM for further proof of authentication.
 	AuthenticationToken *Max140Binary `xml:"AuthntcnTkn,omitempty"`
-
 }
-
 
 func (t *TransactionVerificationResult5) SetMethod(value string) {
 	t.Method = (*AuthenticationMethod7Code)(&value)
@@ -40,4 +38,3 @@ func (t *TransactionVerificationResult5) SetAdditionalResult(value string) {
 func (t *TransactionVerificationResult5) SetAuthenticationToken(value string) {
 	t.AuthenticationToken = (*Max140Binary)(&value)
 }
-

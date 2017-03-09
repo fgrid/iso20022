@@ -17,9 +17,7 @@ type ISAYearsOfIssue3 struct {
 
 	// Selection of investment plans issued during previous years.
 	PreviousYears *PreviousYear1 `xml:"PrvsYrs,omitempty"`
-
 }
-
 
 func (i *ISAYearsOfIssue3) SetCurrentYearType(value string) {
 	i.CurrentYearType = (*ISAType1Code)(&value)
@@ -42,4 +40,3 @@ func (i *ISAYearsOfIssue3) AddPreviousYears() *PreviousYear1 {
 	i.PreviousYears = new(PreviousYear1)
 	return i.PreviousYears
 }
-

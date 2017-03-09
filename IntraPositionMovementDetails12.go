@@ -38,9 +38,7 @@ type IntraPositionMovementDetails12 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementDetails12) AddIdentification() *References51Choice {
 	i.Identification = new(References51Choice)
@@ -97,8 +95,7 @@ func (i *IntraPositionMovementDetails12) SetInstructionProcessingAdditionalDetai
 }
 
 func (i *IntraPositionMovementDetails12) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

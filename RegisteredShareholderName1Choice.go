@@ -8,9 +8,7 @@ type RegisteredShareholderName1Choice struct {
 
 	// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 	Organisation *Organisation23 `xml:"Org"`
-
 }
-
 
 func (r *RegisteredShareholderName1Choice) AddIndividualPerson() *IndividualPerson29 {
 	r.IndividualPerson = new(IndividualPerson29)
@@ -21,4 +19,3 @@ func (r *RegisteredShareholderName1Choice) AddOrganisation() *Organisation23 {
 	r.Organisation = new(Organisation23)
 	return r.Organisation
 }
-

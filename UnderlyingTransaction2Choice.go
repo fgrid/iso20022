@@ -11,9 +11,7 @@ type UnderlyingTransaction2Choice struct {
 
 	// Reference details on the underlying statement cash entry.
 	StatementEntry *UnderlyingStatementEntry1 `xml:"StmtNtry"`
-
 }
-
 
 func (u *UnderlyingTransaction2Choice) AddInitiation() *UnderlyingPaymentInstruction2 {
 	u.Initiation = new(UnderlyingPaymentInstruction2)
@@ -29,4 +27,3 @@ func (u *UnderlyingTransaction2Choice) AddStatementEntry() *UnderlyingStatementE
 	u.StatementEntry = new(UnderlyingStatementEntry1)
 	return u.StatementEntry
 }
-

@@ -11,9 +11,7 @@ type ActionMessage3 struct {
 
 	// Content of the information.
 	Content *Max20000Text `xml:"Cntt"`
-
 }
-
 
 func (a *ActionMessage3) SetDestination(value string) {
 	a.Destination = (*UserInterface3Code)(&value)
@@ -26,4 +24,3 @@ func (a *ActionMessage3) SetFormat(value string) {
 func (a *ActionMessage3) SetContent(value string) {
 	a.Content = (*Max20000Text)(&value)
 }
-

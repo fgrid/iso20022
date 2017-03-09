@@ -32,9 +32,7 @@ type CashCollateral5 struct {
 
 	// Haircut or valuation factor on the collateral expressed as a percentage.
 	Haircut *PercentageRate `xml:"Hrcut,omitempty"`
-
 }
-
 
 func (c *CashCollateral5) SetCollateralIdentification(value string) {
 	c.CollateralIdentification = (*Max35Text)(&value)
@@ -76,4 +74,3 @@ func (c *CashCollateral5) SetCollateralValue(value, currency string) {
 func (c *CashCollateral5) SetHaircut(value string) {
 	c.Haircut = (*PercentageRate)(&value)
 }
-

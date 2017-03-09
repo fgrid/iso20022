@@ -8,9 +8,7 @@ type CorporateActionPrice10 struct {
 
 	// Cash disbursement in lieu of equities; usually in lieu of fractional quantity.
 	CashInLieuOfSharePrice *PriceFormat11Choice `xml:"CshInLieuOfShrPric,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice10) AddIndicativeOrMarketPrice() *IndicativeOrMarketPrice1Choice {
 	c.IndicativeOrMarketPrice = new(IndicativeOrMarketPrice1Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionPrice10) AddCashInLieuOfSharePrice() *PriceFormat11Choic
 	c.CashInLieuOfSharePrice = new(PriceFormat11Choice)
 	return c.CashInLieuOfSharePrice
 }
-

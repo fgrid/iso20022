@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.013.001.01 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:trea.013.001.01 Document"`
 	Message *WithdrawalNotificationV01 `xml:"WdrwlNtfctnV01"`
 }
 
@@ -24,12 +24,9 @@ type WithdrawalNotificationV01 struct {
 
 	// Reference assigned by the central matching system which is notifying the deletion of a previously reported trade.
 	MatchingSystemUniqueReference *iso20022.MessageReference `xml:"MtchgSysUnqRef"`
-
 }
-
 
 func (w *WithdrawalNotificationV01) AddMatchingSystemUniqueReference() *iso20022.MessageReference {
 	w.MatchingSystemUniqueReference = new(iso20022.MessageReference)
 	return w.MatchingSystemUniqueReference
 }
-

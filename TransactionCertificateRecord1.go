@@ -14,9 +14,7 @@ type TransactionCertificateRecord1 struct {
 
 	// Documents provided as attachments to the registered contract.
 	Attachment []*DocumentGeneralInformation3 `xml:"Attchmnt,omitempty"`
-
 }
-
 
 func (t *TransactionCertificateRecord1) SetCertificateRecordIdentification(value string) {
 	t.CertificateRecordIdentification = (*Max35Text)(&value)
@@ -33,8 +31,7 @@ func (t *TransactionCertificateRecord1) AddContract() *TransactionCertificateCon
 }
 
 func (t *TransactionCertificateRecord1) AddAttachment() *DocumentGeneralInformation3 {
-	newValue := new (DocumentGeneralInformation3)
+	newValue := new(DocumentGeneralInformation3)
 	t.Attachment = append(t.Attachment, newValue)
 	return newValue
 }
-

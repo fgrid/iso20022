@@ -14,9 +14,7 @@ type RatioFormat19Choice struct {
 
 	// Ratio expressed as a quantity to amount ratio.
 	QuantityToAmount *AmountAndQuantityRatio4 `xml:"QtyToAmt"`
-
 }
-
 
 func (r *RatioFormat19Choice) AddQuantityToQuantity() *QuantityToQuantityRatio1 {
 	r.QuantityToQuantity = new(QuantityToQuantityRatio1)
@@ -37,4 +35,3 @@ func (r *RatioFormat19Choice) AddQuantityToAmount() *AmountAndQuantityRatio4 {
 	r.QuantityToAmount = new(AmountAndQuantityRatio4)
 	return r.QuantityToAmount
 }
-

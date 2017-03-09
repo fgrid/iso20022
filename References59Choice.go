@@ -14,9 +14,7 @@ type References59Choice struct {
 
 	// Reference to the intra-position movement transaction requested to be cancelled as known by the account owner (or instructing party acting on its behalf).
 	IntraPositionMovementIdentification *RestrictedFINXMax16Text `xml:"IntraPosMvmntId"`
-
 }
-
 
 func (r *References59Choice) AddOtherTransactionIdentification() *GenericDocumentIdentification5 {
 	r.OtherTransactionIdentification = new(GenericDocumentIdentification5)
@@ -36,4 +34,3 @@ func (r *References59Choice) AddSecuritiesSettlementTransactionIdentification() 
 func (r *References59Choice) SetIntraPositionMovementIdentification(value string) {
 	r.IntraPositionMovementIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

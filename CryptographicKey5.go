@@ -28,9 +28,7 @@ type CryptographicKey5 struct {
 
 	// Encrypted cryptographic key.
 	KeyValue *ContentInformationType10 `xml:"KeyVal"`
-
 }
-
 
 func (c *CryptographicKey5) SetIdentification(value string) {
 	c.Identification = (*Max140Text)(&value)
@@ -64,4 +62,3 @@ func (c *CryptographicKey5) AddKeyValue() *ContentInformationType10 {
 	c.KeyValue = new(ContentInformationType10)
 	return c.KeyValue
 }
-

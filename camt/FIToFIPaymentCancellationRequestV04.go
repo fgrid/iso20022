@@ -7,7 +7,7 @@ import (
 )
 
 type Document05600104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.056.001.04 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:camt.056.001.04 Document"`
 	Message *FIToFIPaymentCancellationRequestV04 `xml:"FIToFIPmtCxlReq"`
 }
 
@@ -57,9 +57,7 @@ type FIToFIPaymentCancellationRequestV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (f *FIToFIPaymentCancellationRequestV04) AddAssignment() *iso20022.CaseAssignment3 {
 	f.Assignment = new(iso20022.CaseAssignment3)
@@ -77,14 +75,13 @@ func (f *FIToFIPaymentCancellationRequestV04) AddControlData() *iso20022.Control
 }
 
 func (f *FIToFIPaymentCancellationRequestV04) AddUnderlying() *iso20022.UnderlyingTransaction10 {
-	newValue := new (iso20022.UnderlyingTransaction10)
+	newValue := new(iso20022.UnderlyingTransaction10)
 	f.Underlying = append(f.Underlying, newValue)
 	return newValue
 }
 
 func (f *FIToFIPaymentCancellationRequestV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	f.SupplementaryData = append(f.SupplementaryData, newValue)
 	return newValue
 }
-

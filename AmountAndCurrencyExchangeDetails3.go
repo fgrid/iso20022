@@ -8,9 +8,7 @@ type AmountAndCurrencyExchangeDetails3 struct {
 
 	// Set of elements used to provide details on the currency exchange.
 	CurrencyExchange *CurrencyExchange5 `xml:"CcyXchg,omitempty"`
-
 }
-
 
 func (a *AmountAndCurrencyExchangeDetails3) SetAmount(value, currency string) {
 	a.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -20,4 +18,3 @@ func (a *AmountAndCurrencyExchangeDetails3) AddCurrencyExchange() *CurrencyExcha
 	a.CurrencyExchange = new(CurrencyExchange5)
 	return a.CurrencyExchange
 }
-

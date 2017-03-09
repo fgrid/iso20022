@@ -53,9 +53,7 @@ type LineItemDetails10 struct {
 
 	// Specifies the applicable Incoterms and associated location. Latest version of Incoterms in effect at the date of message creation.
 	Incoterms *Incoterms4 `xml:"Incotrms,omitempty"`
-
 }
-
 
 func (l *LineItemDetails10) SetLineItemIdentification(value string) {
 	l.LineItemIdentification = (*Max70Text)(&value)
@@ -86,19 +84,19 @@ func (l *LineItemDetails10) SetProductName(value string) {
 }
 
 func (l *LineItemDetails10) AddProductIdentifier() *ProductIdentifier2Choice {
-	newValue := new (ProductIdentifier2Choice)
+	newValue := new(ProductIdentifier2Choice)
 	l.ProductIdentifier = append(l.ProductIdentifier, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails10) AddProductCharacteristics() *ProductCharacteristics1Choice {
-	newValue := new (ProductCharacteristics1Choice)
+	newValue := new(ProductCharacteristics1Choice)
 	l.ProductCharacteristics = append(l.ProductCharacteristics, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails10) AddProductCategory() *ProductCategory1Choice {
-	newValue := new (ProductCategory1Choice)
+	newValue := new(ProductCategory1Choice)
 	l.ProductCategory = append(l.ProductCategory, newValue)
 	return newValue
 }
@@ -118,7 +116,7 @@ func (l *LineItemDetails10) AddRoutingSummary() *TransportMeans5 {
 }
 
 func (l *LineItemDetails10) AddAdjustment() *Adjustment7 {
-	newValue := new (Adjustment7)
+	newValue := new(Adjustment7)
 	l.Adjustment = append(l.Adjustment, newValue)
 	return newValue
 }
@@ -129,7 +127,7 @@ func (l *LineItemDetails10) AddFreightCharges() *Charge24 {
 }
 
 func (l *LineItemDetails10) AddTax() *Tax23 {
-	newValue := new (Tax23)
+	newValue := new(Tax23)
 	l.Tax = append(l.Tax, newValue)
 	return newValue
 }
@@ -142,4 +140,3 @@ func (l *LineItemDetails10) AddIncoterms() *Incoterms4 {
 	l.Incoterms = new(Incoterms4)
 	return l.Incoterms
 }
-

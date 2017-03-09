@@ -20,9 +20,7 @@ type CashOption48 struct {
 
 	// Amount of money that is to be/was posted to the account.
 	PostingAmount *RestrictedFINActiveCurrencyAndAmount `xml:"PstngAmt"`
-
 }
-
 
 func (c *CashOption48) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -51,4 +49,3 @@ func (c *CashOption48) AddValueDate() *DateAndDateTimeChoice {
 func (c *CashOption48) SetPostingAmount(value, currency string) {
 	c.PostingAmount = NewRestrictedFINActiveCurrencyAndAmount(value, currency)
 }
-

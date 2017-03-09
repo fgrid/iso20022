@@ -5,11 +5,8 @@ type PayInCallItem struct {
 
 	// Specifies the currency and amount of the called item.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (p *PayInCallItem) SetAmount(value, currency string) {
 	p.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

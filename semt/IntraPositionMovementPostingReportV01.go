@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.016.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:semt.016.001.01 Document"`
 	Message *IntraPositionMovementPostingReportV01 `xml:"IntraPosMvmntPstngRpt"`
 }
 
@@ -54,9 +54,7 @@ type IntraPositionMovementPostingReportV01 struct {
 
 	// Party that is the final destination of the message, if other than the receiver.
 	MessageRecipient *iso20022.PartyIdentification10Choice `xml:"MsgRcpt,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementPostingReportV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	i.Identification = new(iso20022.DocumentIdentification11)
@@ -84,7 +82,7 @@ func (i *IntraPositionMovementPostingReportV01) AddSafekeepingAccount() *iso2002
 }
 
 func (i *IntraPositionMovementPostingReportV01) AddFinancialInstrument() *iso20022.FinancialInstrumentDetails1 {
-	newValue := new (iso20022.FinancialInstrumentDetails1)
+	newValue := new(iso20022.FinancialInstrumentDetails1)
 	i.FinancialInstrument = append(i.FinancialInstrument, newValue)
 	return newValue
 }
@@ -98,4 +96,3 @@ func (i *IntraPositionMovementPostingReportV01) AddMessageRecipient() *iso20022.
 	i.MessageRecipient = new(iso20022.PartyIdentification10Choice)
 	return i.MessageRecipient
 }
-

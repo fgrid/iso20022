@@ -15,9 +15,7 @@ type MoneyMarketStatusReportHeader1 struct {
 
 	// Provides the details of the rule which could not be validated.
 	ValidationRule []*GenericValidationRuleIdentification1 `xml:"VldtnRule,omitempty"`
-
 }
-
 
 func (m *MoneyMarketStatusReportHeader1) SetReportingAgent(value string) {
 	m.ReportingAgent = (*LEIIdentifier)(&value)
@@ -33,8 +31,7 @@ func (m *MoneyMarketStatusReportHeader1) SetReportStatus(value string) {
 }
 
 func (m *MoneyMarketStatusReportHeader1) AddValidationRule() *GenericValidationRuleIdentification1 {
-	newValue := new (GenericValidationRuleIdentification1)
+	newValue := new(GenericValidationRuleIdentification1)
 	m.ValidationRule = append(m.ValidationRule, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type CancellationRejectionStatus1Choice struct {
 
 	// This code can be used in case another reason is required.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (c *CancellationRejectionStatus1Choice) SetCode(value string) {
 	c.Code = (*RejectionReason2Code)(&value)
@@ -20,4 +18,3 @@ func (c *CancellationRejectionStatus1Choice) AddProprietary() *GenericIdentifica
 	c.Proprietary = new(GenericIdentification13)
 	return c.Proprietary
 }
-

@@ -8,17 +8,14 @@ type TotalTaxes2 struct {
 
 	// Information related to a specific tax.
 	TaxDetails []*Tax7 `xml:"TaxDtls"`
-
 }
-
 
 func (t *TotalTaxes2) SetTotalAmountOfTaxes(value, currency string) {
 	t.TotalAmountOfTaxes = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
 
 func (t *TotalTaxes2) AddTaxDetails() *Tax7 {
-	newValue := new (Tax7)
+	newValue := new(Tax7)
 	t.TaxDetails = append(t.TaxDetails, newValue)
 	return newValue
 }
-

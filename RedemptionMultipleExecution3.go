@@ -39,9 +39,7 @@ type RedemptionMultipleExecution3 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	BulkCashSettlementDetails *PaymentTransaction22 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionMultipleExecution3) SetMasterReference(value string) {
 	r.MasterReference = (*Max35Text)(&value)
@@ -79,7 +77,7 @@ func (r *RedemptionMultipleExecution3) AddInvestmentAccountDetails() *Investment
 }
 
 func (r *RedemptionMultipleExecution3) AddIndividualExecutionDetails() *RedemptionExecution6 {
-	newValue := new (RedemptionExecution6)
+	newValue := new(RedemptionExecution6)
 	r.IndividualExecutionDetails = append(r.IndividualExecutionDetails, newValue)
 	return newValue
 }
@@ -96,4 +94,3 @@ func (r *RedemptionMultipleExecution3) AddBulkCashSettlementDetails() *PaymentTr
 	r.BulkCashSettlementDetails = new(PaymentTransaction22)
 	return r.BulkCashSettlementDetails
 }
-

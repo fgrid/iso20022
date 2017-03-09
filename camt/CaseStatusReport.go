@@ -7,7 +7,7 @@ import (
 )
 
 type Document03900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.039.001.01 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:camt.039.001.01 Document"`
 	Message *CaseStatusReport `xml:"camt.039.001.01"`
 }
 
@@ -39,9 +39,7 @@ type CaseStatusReport struct {
 
 	// Identifies the last assignment performed.
 	NewAssignment *iso20022.CaseAssignment `xml:"NewAssgnmt,omitempty"`
-
 }
-
 
 func (c *CaseStatusReport) AddHeader() *iso20022.ReportHeader {
 	c.Header = new(iso20022.ReportHeader)
@@ -62,4 +60,3 @@ func (c *CaseStatusReport) AddNewAssignment() *iso20022.CaseAssignment {
 	c.NewAssignment = new(iso20022.CaseAssignment)
 	return c.NewAssignment
 }
-

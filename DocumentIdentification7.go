@@ -8,9 +8,7 @@ type DocumentIdentification7 struct {
 
 	// Date of issuance of the document.
 	DateOfIssue *ISODate `xml:"DtOfIsse"`
-
 }
-
 
 func (d *DocumentIdentification7) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (d *DocumentIdentification7) SetIdentification(value string) {
 func (d *DocumentIdentification7) SetDateOfIssue(value string) {
 	d.DateOfIssue = (*ISODate)(&value)
 }
-

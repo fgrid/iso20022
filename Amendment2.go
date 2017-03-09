@@ -17,9 +17,7 @@ type Amendment2 struct {
 
 	// Digital signature of the party providing additional undertaking amendment advice details.
 	DigitalSignature []*PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *Amendment2) AddUndertakingAmendmentMessage() *UndertakingAmendmentMessage1 {
 	a.UndertakingAmendmentMessage = new(UndertakingAmendmentMessage1)
@@ -42,8 +40,7 @@ func (a *Amendment2) AddConfirmationDetails() *UndertakingConfirmation1 {
 }
 
 func (a *Amendment2) AddDigitalSignature() *PartyAndSignature2 {
-	newValue := new (PartyAndSignature2)
+	newValue := new(PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

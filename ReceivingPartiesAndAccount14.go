@@ -20,9 +20,7 @@ type ReceivingPartiesAndAccount14 struct {
 
 	// Place where settlement of the securities takes place.
 	PlaceOfSettlementDetails *PartyIdentification97 `xml:"PlcOfSttlmDtls,omitempty"`
-
 }
-
 
 func (r *ReceivingPartiesAndAccount14) AddReceiversCustodianDetails() *PartyIdentificationAndAccount124 {
 	r.ReceiversCustodianDetails = new(PartyIdentificationAndAccount124)
@@ -52,4 +50,3 @@ func (r *ReceivingPartiesAndAccount14) AddPlaceOfSettlementDetails() *PartyIdent
 	r.PlaceOfSettlementDetails = new(PartyIdentification97)
 	return r.PlaceOfSettlementDetails
 }
-

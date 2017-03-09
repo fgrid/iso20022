@@ -59,9 +59,7 @@ type RequestedModification struct {
 
 	// Unformatted information from the sender to the receiver.
 	SenderToReceiverInformation []*Max35Text `xml:"SndrToRcvrInf,omitempty"`
-
 }
-
 
 func (r *RequestedModification) SetRelatedReference(value string) {
 	r.RelatedReference = (*Max35Text)(&value)
@@ -149,4 +147,3 @@ func (r *RequestedModification) SetDetailsOfCharges(value string) {
 func (r *RequestedModification) AddSenderToReceiverInformation(value string) {
 	r.SenderToReceiverInformation = append(r.SenderToReceiverInformation, (*Max35Text)(&value))
 }
-

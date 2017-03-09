@@ -14,9 +14,7 @@ type NetDividendRateFormat21Choice struct {
 
 	// Value of the rate not specified.
 	NotSpecifiedRate *RateValueType7Code `xml:"NotSpcfdRate"`
-
 }
-
 
 func (n *NetDividendRateFormat21Choice) SetAmount(value, currency string) {
 	n.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -35,4 +33,3 @@ func (n *NetDividendRateFormat21Choice) AddRateTypeAndAmountAndRateStatus() *Rat
 func (n *NetDividendRateFormat21Choice) SetNotSpecifiedRate(value string) {
 	n.NotSpecifiedRate = (*RateValueType7Code)(&value)
 }
-

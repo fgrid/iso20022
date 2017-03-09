@@ -11,9 +11,7 @@ type PaymentInstrument12 struct {
 
 	// Percentage of the dividend payment not to be reinvested, that is, to be paid in cash.
 	DividendPercentage *PercentageBoundedRate `xml:"DvddPctg,omitempty"`
-
 }
-
 
 func (p *PaymentInstrument12) SetSettlementCurrency(value string) {
 	p.SettlementCurrency = (*ActiveCurrencyCode)(&value)
@@ -27,4 +25,3 @@ func (p *PaymentInstrument12) AddPaymentInstrument() *PaymentInstrument16Choice 
 func (p *PaymentInstrument12) SetDividendPercentage(value string) {
 	p.DividendPercentage = (*PercentageBoundedRate)(&value)
 }
-

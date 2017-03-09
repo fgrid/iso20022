@@ -3,11 +3,11 @@ package iso20022
 // Identification of a message previously sent.
 type OriginalMessage1 struct {
 
-	// XML schema-instance namespace, for example "tsin.008.001.01" 
+	// XML schema-instance namespace, for example "tsin.008.001.01"
 	MessageDefinitionIdentifier *Max35Text `xml:"MsgDefIdr"`
 
-	// Message sender specified in the original message.
-	// 
+	// Message sender specified in the original message.
+	//
 	From *Party9Choice `xml:"Fr"`
 
 	// Message recipient specified in the original message.
@@ -21,9 +21,7 @@ type OriginalMessage1 struct {
 
 	// Indicates whether the message is a copy, a duplicate or a copy of a duplicate of a previously sent ISO 20022 message.
 	CopyDuplicate *CopyDuplicate1Code `xml:"CpyDplct,omitempty"`
-
 }
-
 
 func (o *OriginalMessage1) SetMessageDefinitionIdentifier(value string) {
 	o.MessageDefinitionIdentifier = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (o *OriginalMessage1) SetCreationDate(value string) {
 func (o *OriginalMessage1) SetCopyDuplicate(value string) {
 	o.CopyDuplicate = (*CopyDuplicate1Code)(&value)
 }
-

@@ -8,9 +8,7 @@ type Tax22 struct {
 
 	// Specifies the tax as an amount.
 	Amount *CurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (t *Tax22) AddType() *TaxType2Choice {
 	t.Type = new(TaxType2Choice)
@@ -20,4 +18,3 @@ func (t *Tax22) AddType() *TaxType2Choice {
 func (t *Tax22) SetAmount(value, currency string) {
 	t.Amount = NewCurrencyAndAmount(value, currency)
 }
-

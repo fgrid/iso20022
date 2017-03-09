@@ -8,9 +8,7 @@ type PartyIdentification99 struct {
 
 	// Legal entity identification as an alternate identification for a party.
 	LEI *LEIIdentifier `xml:"LEI,omitempty"`
-
 }
-
 
 func (p *PartyIdentification99) AddIdentification() *PartyIdentification93Choice {
 	p.Identification = new(PartyIdentification93Choice)
@@ -20,4 +18,3 @@ func (p *PartyIdentification99) AddIdentification() *PartyIdentification93Choice
 func (p *PartyIdentification99) SetLEI(value string) {
 	p.LEI = (*LEIIdentifier)(&value)
 }
-

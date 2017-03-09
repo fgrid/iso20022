@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.001.01 Document"`
+	XMLName xml.Name                                                  `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.001.01 Document"`
 	Message *SecuritiesSettlementTransactionGenerationNotificationV01 `xml:"SctiesSttlmTxGnrtnNtfctn"`
 }
 
@@ -93,9 +93,7 @@ type SecuritiesSettlementTransactionGenerationNotificationV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -113,7 +111,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddNumberCoun
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddLinkages() *iso20022.Linkages1 {
-	newValue := new (iso20022.Linkages1)
+	newValue := new(iso20022.Linkages1)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -134,7 +132,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddFinancialI
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddQuantityAndAccountDetails() *iso20022.QuantityAndAccount1 {
-	newValue := new (iso20022.QuantityAndAccount1)
+	newValue := new(iso20022.QuantityAndAccount1)
 	s.QuantityAndAccountDetails = append(s.QuantityAndAccountDetails, newValue)
 	return newValue
 }
@@ -190,7 +188,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddAdditional
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddGeneratedReason() *iso20022.GeneratedReason1 {
-	newValue := new (iso20022.GeneratedReason1)
+	newValue := new(iso20022.GeneratedReason1)
 	s.GeneratedReason = append(s.GeneratedReason, newValue)
 	return newValue
 }
@@ -201,8 +199,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddStatusAndR
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

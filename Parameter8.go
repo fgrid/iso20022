@@ -14,9 +14,7 @@ type Parameter8 struct {
 
 	// Trailer field number.
 	TrailerField *Number `xml:"TrlrFld,omitempty"`
-
 }
-
 
 func (p *Parameter8) SetDigestAlgorithm(value string) {
 	p.DigestAlgorithm = (*Algorithm11Code)(&value)
@@ -34,4 +32,3 @@ func (p *Parameter8) SetSaltLength(value string) {
 func (p *Parameter8) SetTrailerField(value string) {
 	p.TrailerField = (*Number)(&value)
 }
-

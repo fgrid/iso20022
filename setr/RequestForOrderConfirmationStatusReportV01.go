@@ -7,7 +7,7 @@ import (
 )
 
 type Document05800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.058.001.01 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:setr.058.001.01 Document"`
 	Message *RequestForOrderConfirmationStatusReportV01 `xml:"ReqForOrdrConfStsRptV01"`
 }
 
@@ -28,7 +28,7 @@ func (d *Document05800101) AddMessage() *RequestForOrderConfirmationStatusReport
 // When the RequestForOrderConfirmationStatusReport is used to request the status of an order confirmation message, then the message identification of the order confirmation message is identified in PreviousReference.
 type RequestForOrderConfirmationStatusReportV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Information to identify the order confirmation for which the status is requested.
@@ -36,9 +36,7 @@ type RequestForOrderConfirmationStatusReportV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RequestForOrderConfirmationStatusReportV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	r.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -46,14 +44,13 @@ func (r *RequestForOrderConfirmationStatusReportV01) AddMessageIdentification() 
 }
 
 func (r *RequestForOrderConfirmationStatusReportV01) AddRequestDetails() *iso20022.MessageAndBusinessReference5 {
-	newValue := new (iso20022.MessageAndBusinessReference5)
+	newValue := new(iso20022.MessageAndBusinessReference5)
 	r.RequestDetails = append(r.RequestDetails, newValue)
 	return newValue
 }
 
 func (r *RequestForOrderConfirmationStatusReportV01) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

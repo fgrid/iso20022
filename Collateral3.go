@@ -11,9 +11,7 @@ type Collateral3 struct {
 
 	// Provides the type of collateral, such as securities or cash.
 	CollateralType *CollateralType2Code `xml:"CollTp"`
-
 }
-
 
 func (c *Collateral3) SetPostHaircutValue(value, currency string) {
 	c.PostHaircutValue = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (c *Collateral3) SetMarketValue(value, currency string) {
 func (c *Collateral3) SetCollateralType(value string) {
 	c.CollateralType = (*CollateralType2Code)(&value)
 }
-

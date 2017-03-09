@@ -17,9 +17,7 @@ type SecuritiesOption5 struct {
 
 	// Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.
 	OriginalPostingDate *DateAndDateTimeChoice `xml:"OrgnlPstngDt,omitempty"`
-
 }
-
 
 func (s *SecuritiesOption5) AddSecurityIdentification() *SecurityIdentification11 {
 	s.SecurityIdentification = new(SecurityIdentification11)
@@ -44,4 +42,3 @@ func (s *SecuritiesOption5) AddOriginalPostingDate() *DateAndDateTimeChoice {
 	s.OriginalPostingDate = new(DateAndDateTimeChoice)
 	return s.OriginalPostingDate
 }
-

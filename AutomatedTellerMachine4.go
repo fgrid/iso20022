@@ -29,9 +29,7 @@ type AutomatedTellerMachine4 struct {
 
 	// List of ATM devices out of service.
 	AvailableDevice []*ATMDevice2Code `xml:"AvlblDvc,omitempty"`
-
 }
-
 
 func (a *AutomatedTellerMachine4) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -71,4 +69,3 @@ func (a *AutomatedTellerMachine4) AddEquipment() *ATMEquipment1 {
 func (a *AutomatedTellerMachine4) AddAvailableDevice(value string) {
 	a.AvailableDevice = append(a.AvailableDevice, (*ATMDevice2Code)(&value))
 }
-

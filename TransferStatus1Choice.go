@@ -29,9 +29,7 @@ type TransferStatus1Choice struct {
 
 	// Status of the transfer is cancellation pending.
 	CancellationPending *CancellationPendingStatus1 `xml:"CxlPdg"`
-
 }
-
 
 func (t *TransferStatus1Choice) AddStatus() *TransferInstructionStatus3 {
 	t.Status = new(TransferInstructionStatus3)
@@ -54,7 +52,7 @@ func (t *TransferStatus1Choice) AddInRepair() *InRepairStatus3 {
 }
 
 func (t *TransferStatus1Choice) AddRejected() *RejectedStatus8Choice {
-	newValue := new (RejectedStatus8Choice)
+	newValue := new(RejectedStatus8Choice)
 	t.Rejected = append(t.Rejected, newValue)
 	return newValue
 }
@@ -78,4 +76,3 @@ func (t *TransferStatus1Choice) AddCancellationPending() *CancellationPendingSta
 	t.CancellationPending = new(CancellationPendingStatus1)
 	return t.CancellationPending
 }
-

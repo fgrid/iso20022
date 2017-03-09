@@ -11,9 +11,7 @@ type AuthorisationResult2 struct {
 
 	// Value assigned by the authorising party.
 	AuthorisationCode *Min6Max8Text `xml:"AuthstnCd,omitempty"`
-
 }
-
 
 func (a *AuthorisationResult2) AddAuthorisationEntity() *GenericIdentification33 {
 	a.AuthorisationEntity = new(GenericIdentification33)
@@ -28,4 +26,3 @@ func (a *AuthorisationResult2) AddResponseToAuthorisation() *ResponseType1 {
 func (a *AuthorisationResult2) SetAuthorisationCode(value string) {
 	a.AuthorisationCode = (*Min6Max8Text)(&value)
 }
-

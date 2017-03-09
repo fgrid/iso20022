@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.006.001.05 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.006.001.05 Document"`
 	Message *AccountManagementStatusReportV05 `xml:"AcctMgmtStsRpt"`
 }
 
@@ -38,9 +38,7 @@ type AccountManagementStatusReportV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountManagementStatusReportV05) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -48,7 +46,7 @@ func (a *AccountManagementStatusReportV05) AddMessageIdentification() *iso20022.
 }
 
 func (a *AccountManagementStatusReportV05) AddRelatedReference() *iso20022.AdditionalReference6 {
-	newValue := new (iso20022.AdditionalReference6)
+	newValue := new(iso20022.AdditionalReference6)
 	a.RelatedReference = append(a.RelatedReference, newValue)
 	return newValue
 }
@@ -64,8 +62,7 @@ func (a *AccountManagementStatusReportV05) AddMarketPracticeVersion() *iso20022.
 }
 
 func (a *AccountManagementStatusReportV05) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

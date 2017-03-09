@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.009.001.02 Document"`
+	XMLName xml.Name                                       `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.009.001.02 Document"`
 	Message *AccountOpeningAdditionalInformationRequestV02 `xml:"AcctOpngAddtlInfReq"`
 }
 
@@ -42,9 +42,7 @@ type AccountOpeningAdditionalInformationRequestV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AccountOpeningAdditionalInformationRequestV02) AddReferences() *iso20022.References3 {
 	a.References = new(iso20022.References3)
@@ -77,14 +75,13 @@ func (a *AccountOpeningAdditionalInformationRequestV02) AddUnderlyingMasterAgree
 }
 
 func (a *AccountOpeningAdditionalInformationRequestV02) AddDigitalSignature() *iso20022.PartyAndSignature2 {
-	newValue := new (iso20022.PartyAndSignature2)
+	newValue := new(iso20022.PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
 
 func (a *AccountOpeningAdditionalInformationRequestV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

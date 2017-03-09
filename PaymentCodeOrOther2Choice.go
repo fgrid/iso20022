@@ -11,9 +11,7 @@ type PaymentCodeOrOther2Choice struct {
 
 	// Specifies payment terms not present in a code list.
 	OtherPaymentTerms *Max140Text `xml:"OthrPmtTerms"`
-
 }
-
 
 func (p *PaymentCodeOrOther2Choice) AddPaymentCode() *PaymentPeriod4 {
 	p.PaymentCode = new(PaymentPeriod4)
@@ -27,4 +25,3 @@ func (p *PaymentCodeOrOther2Choice) SetPaymentDueDate(value string) {
 func (p *PaymentCodeOrOther2Choice) SetOtherPaymentTerms(value string) {
 	p.OtherPaymentTerms = (*Max140Text)(&value)
 }
-

@@ -26,9 +26,7 @@ type Intermediary36 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	NameAndAddress *NameAndAddress4 `xml:"NmAndAdr,omitempty"`
-
 }
-
 
 func (i *Intermediary36) AddIdentification() *PartyIdentification72Choice {
 	i.Identification = new(PartyIdentification72Choice)
@@ -54,13 +52,13 @@ func (i *Intermediary36) AddRole() *PartyRole2Choice {
 }
 
 func (i *Intermediary36) AddPrimaryCommunicationAddress() *CommunicationAddress6 {
-	newValue := new (CommunicationAddress6)
+	newValue := new(CommunicationAddress6)
 	i.PrimaryCommunicationAddress = append(i.PrimaryCommunicationAddress, newValue)
 	return newValue
 }
 
 func (i *Intermediary36) AddSecondaryCommunicationAddress() *CommunicationAddress6 {
-	newValue := new (CommunicationAddress6)
+	newValue := new(CommunicationAddress6)
 	i.SecondaryCommunicationAddress = append(i.SecondaryCommunicationAddress, newValue)
 	return newValue
 }
@@ -69,4 +67,3 @@ func (i *Intermediary36) AddNameAndAddress() *NameAndAddress4 {
 	i.NameAndAddress = new(NameAndAddress4)
 	return i.NameAndAddress
 }
-

@@ -17,9 +17,7 @@ type CardholderAuthentication6 struct {
 
 	// Numeric characters of the cardholder's billing or shipping address for verification.
 	AddressVerification *AddressVerification1 `xml:"AdrVrfctn,omitempty"`
-
 }
-
 
 func (c *CardholderAuthentication6) SetAuthenticationMethod(value string) {
 	c.AuthenticationMethod = (*AuthenticationMethod3Code)(&value)
@@ -43,4 +41,3 @@ func (c *CardholderAuthentication6) AddAddressVerification() *AddressVerificatio
 	c.AddressVerification = new(AddressVerification1)
 	return c.AddressVerification
 }
-

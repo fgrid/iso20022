@@ -8,9 +8,7 @@ type AccountIdentification4Choice struct {
 
 	// Unique identification of an account, as assigned by the account servicer, using an identification scheme.
 	Other *GenericAccountIdentification1 `xml:"Othr"`
-
 }
-
 
 func (a *AccountIdentification4Choice) SetIBAN(value string) {
 	a.IBAN = (*IBAN2007Identifier)(&value)
@@ -20,4 +18,3 @@ func (a *AccountIdentification4Choice) AddOther() *GenericAccountIdentification1
 	a.Other = new(GenericAccountIdentification1)
 	return a.Other
 }
-

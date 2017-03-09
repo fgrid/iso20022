@@ -8,9 +8,7 @@ type Extension1 struct {
 
 	// Text of the extension.
 	Text *Max350Text `xml:"Txt"`
-
 }
-
 
 func (e *Extension1) SetPlaceAndName(value string) {
 	e.PlaceAndName = (*Max350Text)(&value)
@@ -19,4 +17,3 @@ func (e *Extension1) SetPlaceAndName(value string) {
 func (e *Extension1) SetText(value string) {
 	e.Text = (*Max350Text)(&value)
 }
-

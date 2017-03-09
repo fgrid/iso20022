@@ -11,9 +11,7 @@ type FinancingNotificationParties1 struct {
 
 	// Party to whom a notification acknowledgement has to be sent by the notification receiver.
 	AcknowledgementReceiver []*QualifiedPartyIdentification1 `xml:"AckRcvr,omitempty"`
-
 }
-
 
 func (f *FinancingNotificationParties1) AddNotifyingParty() *QualifiedPartyIdentification1 {
 	f.NotifyingParty = new(QualifiedPartyIdentification1)
@@ -26,8 +24,7 @@ func (f *FinancingNotificationParties1) AddNotificationReceiver() *QualifiedPart
 }
 
 func (f *FinancingNotificationParties1) AddAcknowledgementReceiver() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	f.AcknowledgementReceiver = append(f.AcknowledgementReceiver, newValue)
 	return newValue
 }
-

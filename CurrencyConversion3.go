@@ -11,9 +11,7 @@ type CurrencyConversion3 struct {
 
 	// Information about the conversion of currency.
 	Conversion *CurrencyConversion2 `xml:"Convs,omitempty"`
-
 }
-
 
 func (c *CurrencyConversion3) SetResult(value string) {
 	c.Result = (*CurrencyConversionResponse1Code)(&value)
@@ -27,4 +25,3 @@ func (c *CurrencyConversion3) AddConversion() *CurrencyConversion2 {
 	c.Conversion = new(CurrencyConversion2)
 	return c.Conversion
 }
-

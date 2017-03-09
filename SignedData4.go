@@ -17,16 +17,14 @@ type SignedData4 struct {
 
 	// Digital signature and identification of a signer.
 	Signer []*Signer3 `xml:"Sgnr"`
-
 }
-
 
 func (s *SignedData4) SetVersion(value string) {
 	s.Version = (*Number)(&value)
 }
 
 func (s *SignedData4) AddDigestAlgorithm() *AlgorithmIdentification16 {
-	newValue := new (AlgorithmIdentification16)
+	newValue := new(AlgorithmIdentification16)
 	s.DigestAlgorithm = append(s.DigestAlgorithm, newValue)
 	return newValue
 }
@@ -41,8 +39,7 @@ func (s *SignedData4) AddCertificate(value string) {
 }
 
 func (s *SignedData4) AddSigner() *Signer3 {
-	newValue := new (Signer3)
+	newValue := new(Signer3)
 	s.Signer = append(s.Signer, newValue)
 	return newValue
 }
-

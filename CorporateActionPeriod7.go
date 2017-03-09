@@ -23,9 +23,7 @@ type CorporateActionPeriod7 struct {
 
 	// Period defining the last date on which withdrawal in street name requests on the outturn security will be accepted and the date on which the suspension will be released and withdrawal by transfer processing on the outturn security will resume.
 	DepositorySuspensionPeriodForWithdrawal *Period3Choice `xml:"DpstrySspnsnPrdForWdrwl,omitempty"`
-
 }
-
 
 func (c *CorporateActionPeriod7) AddPriceCalculationPeriod() *Period3Choice {
 	c.PriceCalculationPeriod = new(Period3Choice)
@@ -61,4 +59,3 @@ func (c *CorporateActionPeriod7) AddDepositorySuspensionPeriodForWithdrawal() *P
 	c.DepositorySuspensionPeriodForWithdrawal = new(Period3Choice)
 	return c.DepositorySuspensionPeriodForWithdrawal
 }
-

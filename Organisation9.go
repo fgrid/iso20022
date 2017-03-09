@@ -20,9 +20,7 @@ type Organisation9 struct {
 
 	// Additional merchant data required by a card scheme.
 	SchemeData *Max140Text `xml:"SchmeData,omitempty"`
-
 }
-
 
 func (o *Organisation9) AddIdentification() *GenericIdentification32 {
 	o.Identification = new(GenericIdentification32)
@@ -48,4 +46,3 @@ func (o *Organisation9) SetCountryCode(value string) {
 func (o *Organisation9) SetSchemeData(value string) {
 	o.SchemeData = (*Max140Text)(&value)
 }
-

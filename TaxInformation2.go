@@ -26,9 +26,7 @@ type TaxInformation2 struct {
 
 	// Set of characteristics defining the type of tax.
 	TaxTypeInformation []*TaxDetails `xml:"TaxTpInf,omitempty"`
-
 }
-
 
 func (t *TaxInformation2) SetCreditorTaxIdentification(value string) {
 	t.CreditorTaxIdentification = (*Max35Text)(&value)
@@ -59,8 +57,7 @@ func (t *TaxInformation2) SetTaxDate(value string) {
 }
 
 func (t *TaxInformation2) AddTaxTypeInformation() *TaxDetails {
-	newValue := new (TaxDetails)
+	newValue := new(TaxDetails)
 	t.TaxTypeInformation = append(t.TaxTypeInformation, newValue)
 	return newValue
 }
-

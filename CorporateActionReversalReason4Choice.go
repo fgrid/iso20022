@@ -8,9 +8,7 @@ type CorporateActionReversalReason4Choice struct {
 
 	// Proprietary identification for the reason of the reversal.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionReversalReason4Choice) SetCode(value string) {
 	c.Code = (*CorporateActionReversalReason1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionReversalReason4Choice) AddProprietary() *GenericIdentifi
 	c.Proprietary = new(GenericIdentification47)
 	return c.Proprietary
 }
-

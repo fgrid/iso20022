@@ -11,9 +11,7 @@ type DetailedAmount13 struct {
 
 	// Short description of the amount to display or print.
 	Label *Max70Text `xml:"Labl,omitempty"`
-
 }
-
 
 func (d *DetailedAmount13) SetAmount(value, currency string) {
 	d.Amount = NewImpliedCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (d *DetailedAmount13) SetCurrency(value string) {
 func (d *DetailedAmount13) SetLabel(value string) {
 	d.Label = (*Max70Text)(&value)
 }
-

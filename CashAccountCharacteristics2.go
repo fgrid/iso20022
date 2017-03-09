@@ -41,9 +41,7 @@ type CashAccountCharacteristics2 struct {
 
 	// Individual to contact at the financial institution's location regarding problems of a business nature.
 	AccountServicerContact *ContactDetails3 `xml:"AcctSvcrCtct"`
-
 }
-
 
 func (c *CashAccountCharacteristics2) SetAccountLevel(value string) {
 	c.AccountLevel = (*AccountLevel2Code)(&value)
@@ -102,4 +100,3 @@ func (c *CashAccountCharacteristics2) AddAccountServicerContact() *ContactDetail
 	c.AccountServicerContact = new(ContactDetails3)
 	return c.AccountServicerContact
 }
-

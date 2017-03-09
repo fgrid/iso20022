@@ -8,9 +8,7 @@ type ConditionallyAcceptedStatusReason1 struct {
 
 	// Reason for a conditionally accepted status in free format text.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *ConditionallyAcceptedStatusReason1) AddStructured(value string) {
 	c.Structured = append(c.Structured, (*ConditionallyAcceptedStatusReason1Code)(&value))
@@ -19,4 +17,3 @@ func (c *ConditionallyAcceptedStatusReason1) AddStructured(value string) {
 func (c *ConditionallyAcceptedStatusReason1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

@@ -35,9 +35,7 @@ type FinancialInstrumentAttributes17 struct {
 
 	// Balance of instructed position.
 	InstructedBalance *BalanceFormat1Choice `xml:"InstdBal,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentAttributes17) AddSecurityIdentification() *SecurityIdentification14 {
 	f.SecurityIdentification = new(SecurityIdentification14)
@@ -92,4 +90,3 @@ func (f *FinancialInstrumentAttributes17) AddInstructedBalance() *BalanceFormat1
 	f.InstructedBalance = new(BalanceFormat1Choice)
 	return f.InstructedBalance
 }
-

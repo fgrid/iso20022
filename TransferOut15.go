@@ -20,9 +20,7 @@ type TransferOut15 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferOut15) AddRequestedTransferDate() *DateFormat1Choice {
 	t.RequestedTransferDate = new(DateFormat1Choice)
@@ -34,7 +32,7 @@ func (t *TransferOut15) SetMasterReference(value string) {
 }
 
 func (t *TransferOut15) AddTransferAndReferences() *TransferOut13 {
-	newValue := new (TransferOut13)
+	newValue := new(TransferOut13)
 	t.TransferAndReferences = append(t.TransferAndReferences, newValue)
 	return newValue
 }
@@ -50,8 +48,7 @@ func (t *TransferOut15) AddSettlementDetails() *ReceiveInformation15 {
 }
 
 func (t *TransferOut15) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

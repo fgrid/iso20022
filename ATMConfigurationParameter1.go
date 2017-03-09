@@ -8,9 +8,7 @@ type ATMConfigurationParameter1 struct {
 
 	// Active version of the configuration.
 	Version *Max35Text `xml:"Vrsn"`
-
 }
-
 
 func (a *ATMConfigurationParameter1) SetType(value string) {
 	a.Type = (*DataSetCategory7Code)(&value)
@@ -19,4 +17,3 @@ func (a *ATMConfigurationParameter1) SetType(value string) {
 func (a *ATMConfigurationParameter1) SetVersion(value string) {
 	a.Version = (*Max35Text)(&value)
 }
-

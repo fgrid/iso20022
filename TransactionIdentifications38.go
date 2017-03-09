@@ -20,9 +20,7 @@ type TransactionIdentifications38 struct {
 
 	// Identification assigned by the netting service provider to identify the net transaction resulting from the netting process.
 	NettingServiceProviderIdentification *RestrictedFINXMax16Text `xml:"NetgSvcPrvdrId,omitempty"`
-
 }
-
 
 func (t *TransactionIdentifications38) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -47,4 +45,3 @@ func (t *TransactionIdentifications38) SetCommonIdentification(value string) {
 func (t *TransactionIdentifications38) SetNettingServiceProviderIdentification(value string) {
 	t.NettingServiceProviderIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

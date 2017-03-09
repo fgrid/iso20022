@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.013.001.03 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:colr.013.001.03 Document"`
 	Message *InterestPaymentRequestV03 `xml:"IntrstPmtReq"`
 }
 
@@ -21,9 +21,9 @@ func (d *Document01300103) AddMessage() *InterestPaymentRequestV03 {
 // - the collateral taker or its collateral manager to the collateral giver or its collateral manager, or
 // - the collateral giver or its collateral manager to the collateral taker or its collateral manager
 // It is used to request payment or advise the amount due for interest calculated for a specified period. The interest is based on the amount of collateral that has been held during the calculation period. It is possible to send these messages on a bi-lateral basis for matching.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The InterestPaymentRequest message is used to advise the interest amount calculated for a specific period or request payment for an interest amount for a specific period.
 type InterestPaymentRequestV03 struct {
@@ -48,9 +48,7 @@ type InterestPaymentRequestV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *InterestPaymentRequestV03) SetTransactionIdentification(value string) {
 	i.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -82,8 +80,7 @@ func (i *InterestPaymentRequestV03) AddNetAmountDetails() *iso20022.InterestResu
 }
 
 func (i *InterestPaymentRequestV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

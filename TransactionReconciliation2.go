@@ -17,9 +17,7 @@ type TransactionReconciliation2 struct {
 
 	// Additional information related to the reconciliation transaction.
 	AdditionalTransactionData *Max70Text `xml:"AddtlTxData,omitempty"`
-
 }
-
 
 func (t *TransactionReconciliation2) SetClosePeriod(value string) {
 	t.ClosePeriod = (*TrueFalseIndicator)(&value)
@@ -35,7 +33,7 @@ func (t *TransactionReconciliation2) SetReconciliationIdentification(value strin
 }
 
 func (t *TransactionReconciliation2) AddTransactionTotals() *TransactionTotals2 {
-	newValue := new (TransactionTotals2)
+	newValue := new(TransactionTotals2)
 	t.TransactionTotals = append(t.TransactionTotals, newValue)
 	return newValue
 }
@@ -43,4 +41,3 @@ func (t *TransactionReconciliation2) AddTransactionTotals() *TransactionTotals2 
 func (t *TransactionReconciliation2) SetAdditionalTransactionData(value string) {
 	t.AdditionalTransactionData = (*Max70Text)(&value)
 }
-

@@ -14,9 +14,7 @@ type AccountAndBalance35 struct {
 
 	// Provides information about balance related to a corporate action.
 	Balance *CorporateActionBalanceDetails32 `xml:"Bal,omitempty"`
-
 }
-
 
 func (a *AccountAndBalance35) SetSafekeepingAccount(value string) {
 	a.SafekeepingAccount = (*Max35Text)(&value)
@@ -36,4 +34,3 @@ func (a *AccountAndBalance35) AddBalance() *CorporateActionBalanceDetails32 {
 	a.Balance = new(CorporateActionBalanceDetails32)
 	return a.Balance
 }
-

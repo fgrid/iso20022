@@ -8,9 +8,7 @@ type RevaluationIndicator1Choice struct {
 
 	// Revaluation information provided as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (r *RevaluationIndicator1Choice) SetIndicator(value string) {
 	r.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (r *RevaluationIndicator1Choice) AddProprietary() *GenericIdentification20 
 	r.Proprietary = new(GenericIdentification20)
 	return r.Proprietary
 }
-

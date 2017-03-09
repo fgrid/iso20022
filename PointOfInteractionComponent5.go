@@ -20,9 +20,7 @@ type PointOfInteractionComponent5 struct {
 
 	// Assessments for the component of the point of interaction.
 	Assessment []*PointOfInteractionComponentAssessment1 `xml:"Assmnt,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionComponent5) SetType(value string) {
 	p.Type = (*POIComponentType3Code)(&value)
@@ -39,7 +37,7 @@ func (p *PointOfInteractionComponent5) AddStatus() *PointOfInteractionComponentS
 }
 
 func (p *PointOfInteractionComponent5) AddStandardCompliance() *GenericIdentification48 {
-	newValue := new (GenericIdentification48)
+	newValue := new(GenericIdentification48)
 	p.StandardCompliance = append(p.StandardCompliance, newValue)
 	return newValue
 }
@@ -50,8 +48,7 @@ func (p *PointOfInteractionComponent5) AddCharacteristics() *PointOfInteractionC
 }
 
 func (p *PointOfInteractionComponent5) AddAssessment() *PointOfInteractionComponentAssessment1 {
-	newValue := new (PointOfInteractionComponentAssessment1)
+	newValue := new(PointOfInteractionComponentAssessment1)
 	p.Assessment = append(p.Assessment, newValue)
 	return newValue
 }
-

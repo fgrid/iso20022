@@ -11,9 +11,7 @@ type PartyAndCertificate3 struct {
 
 	// Security certificate used to sign electronically.
 	Certificate *Max10KBinary `xml:"Cert,omitempty"`
-
 }
-
 
 func (p *PartyAndCertificate3) SetModificationCode(value string) {
 	p.ModificationCode = (*Modification1Code)(&value)
@@ -27,4 +25,3 @@ func (p *PartyAndCertificate3) AddParty() *PartyIdentification43 {
 func (p *PartyAndCertificate3) SetCertificate(value string) {
 	p.Certificate = (*Max10KBinary)(&value)
 }
-

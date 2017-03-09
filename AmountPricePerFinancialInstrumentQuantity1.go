@@ -11,9 +11,7 @@ type AmountPricePerFinancialInstrumentQuantity1 struct {
 
 	// Quantity of financial instrument.
 	FinancialInstrumentQuantity *UnitOrFaceAmount1Choice `xml:"FinInstrmQty"`
-
 }
-
 
 func (a *AmountPricePerFinancialInstrumentQuantity1) AddAmountPriceType() *AmountPriceType1FormatChoice {
 	a.AmountPriceType = new(AmountPriceType1FormatChoice)
@@ -28,4 +26,3 @@ func (a *AmountPricePerFinancialInstrumentQuantity1) AddFinancialInstrumentQuant
 	a.FinancialInstrumentQuantity = new(UnitOrFaceAmount1Choice)
 	return a.FinancialInstrumentQuantity
 }
-

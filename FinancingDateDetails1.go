@@ -11,9 +11,7 @@ type FinancingDateDetails1 struct {
 
 	// Date on which a financed amount has been debited.
 	DebitDate *ISODate `xml:"DbtDt,omitempty"`
-
 }
-
 
 func (f *FinancingDateDetails1) AddBookDate(value string) {
 	f.BookDate = append(f.BookDate, (*ISODate)(&value))
@@ -26,4 +24,3 @@ func (f *FinancingDateDetails1) SetCreditDate(value string) {
 func (f *FinancingDateDetails1) SetDebitDate(value string) {
 	f.DebitDate = (*ISODate)(&value)
 }
-

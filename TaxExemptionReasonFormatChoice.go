@@ -8,9 +8,7 @@ type TaxExemptionReasonFormatChoice struct {
 
 	// Structured format.
 	Structured *TaxExemptReason1Code `xml:"Strd"`
-
 }
-
 
 func (t *TaxExemptionReasonFormatChoice) SetUnstructured(value string) {
 	t.Unstructured = (*Max140Text)(&value)
@@ -19,4 +17,3 @@ func (t *TaxExemptionReasonFormatChoice) SetUnstructured(value string) {
 func (t *TaxExemptionReasonFormatChoice) SetStructured(value string) {
 	t.Structured = (*TaxExemptReason1Code)(&value)
 }
-

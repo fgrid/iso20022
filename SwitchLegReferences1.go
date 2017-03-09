@@ -20,9 +20,7 @@ type SwitchLegReferences1 struct {
 
 	// Financial instrument identification of the switch leg that is rejected or repaired.
 	FinancialInstrumentDetails *FinancialInstrument10 `xml:"FinInstrmDtls,omitempty"`
-
 }
-
 
 func (s *SwitchLegReferences1) SetRedemptionLegIdentification(value string) {
 	s.RedemptionLegIdentification = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (s *SwitchLegReferences1) AddFinancialInstrumentDetails() *FinancialInstrum
 	s.FinancialInstrumentDetails = new(FinancialInstrument10)
 	return s.FinancialInstrumentDetails
 }
-

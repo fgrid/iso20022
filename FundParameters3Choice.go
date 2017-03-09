@@ -8,9 +8,7 @@ type FundParameters3Choice struct {
 
 	// Report parameters.
 	Parameters *FundParameters4 `xml:"Params"`
-
 }
-
 
 func (f *FundParameters3Choice) SetNoCriteria(value string) {
 	f.NoCriteria = (*NoCriteria1Code)(&value)
@@ -20,4 +18,3 @@ func (f *FundParameters3Choice) AddParameters() *FundParameters4 {
 	f.Parameters = new(FundParameters4)
 	return f.Parameters
 }
-

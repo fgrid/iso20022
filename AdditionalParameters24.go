@@ -11,9 +11,7 @@ type AdditionalParameters24 struct {
 
 	// Identification of the confirmation previously sent to confirm the partial settlement of a transaction.
 	PreviousPartialConfirmationIdentification *Max35Text `xml:"PrvsPrtlConfId,omitempty"`
-
 }
-
 
 func (a *AdditionalParameters24) SetPreConfirmation(value string) {
 	a.PreConfirmation = (*PreConfirmation1Code)(&value)
@@ -26,4 +24,3 @@ func (a *AdditionalParameters24) SetPartialSettlement(value string) {
 func (a *AdditionalParameters24) SetPreviousPartialConfirmationIdentification(value string) {
 	a.PreviousPartialConfirmationIdentification = (*Max35Text)(&value)
 }
-

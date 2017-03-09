@@ -7,7 +7,7 @@ import (
 )
 
 type Document04800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.048.001.01 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:setr.048.001.01 Document"`
 	Message *SubscriptionOrderConfirmationAmendmentV01 `xml:"SbcptOrdrConfAmdmntV01"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document04800101) AddMessage() *SubscriptionOrderConfirmationAmendmentV
 // The message identification of the SubscriptionOrder message in which the individual orders were conveyed may also be quoted in RelatedReference. The message identification of the SubscriptionOrderConfirmation message in which the original order confirmations were conveyed may also be quoted in PreviousReference.
 type SubscriptionOrderConfirmationAmendmentV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -47,9 +47,7 @@ type SubscriptionOrderConfirmationAmendmentV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SubscriptionOrderConfirmationAmendmentV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -62,7 +60,7 @@ func (s *SubscriptionOrderConfirmationAmendmentV01) AddPoolReference() *iso20022
 }
 
 func (s *SubscriptionOrderConfirmationAmendmentV01) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -78,7 +76,7 @@ func (s *SubscriptionOrderConfirmationAmendmentV01) AddMultipleExecutionDetails(
 }
 
 func (s *SubscriptionOrderConfirmationAmendmentV01) AddRelatedPartyDetails() *iso20022.Intermediary9 {
-	newValue := new (iso20022.Intermediary9)
+	newValue := new(iso20022.Intermediary9)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -89,8 +87,7 @@ func (s *SubscriptionOrderConfirmationAmendmentV01) AddCopyDetails() *iso20022.C
 }
 
 func (s *SubscriptionOrderConfirmationAmendmentV01) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

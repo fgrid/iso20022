@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:admi.004.001.02 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:admi.004.001.02 Document"`
 	Message *SystemEventNotificationV02 `xml:"SysEvtNtfctn"`
 }
 
@@ -24,12 +24,9 @@ type SystemEventNotificationV02 struct {
 
 	// Detailed information about a system event.
 	EventInformation *iso20022.Event2 `xml:"EvtInf"`
-
 }
-
 
 func (s *SystemEventNotificationV02) AddEventInformation() *iso20022.Event2 {
 	s.EventInformation = new(iso20022.Event2)
 	return s.EventInformation
 }
-

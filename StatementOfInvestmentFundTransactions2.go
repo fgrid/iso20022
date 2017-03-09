@@ -17,9 +17,7 @@ type StatementOfInvestmentFundTransactions2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *StatementOfInvestmentFundTransactions2) AddStatementGeneralDetails() *Statement8 {
 	s.StatementGeneralDetails = new(Statement8)
@@ -32,7 +30,7 @@ func (s *StatementOfInvestmentFundTransactions2) AddInvestmentAccountDetails() *
 }
 
 func (s *StatementOfInvestmentFundTransactions2) AddTransactionOnAccount() *InvestmentFundTransactionsByFund2 {
-	newValue := new (InvestmentFundTransactionsByFund2)
+	newValue := new(InvestmentFundTransactionsByFund2)
 	s.TransactionOnAccount = append(s.TransactionOnAccount, newValue)
 	return newValue
 }
@@ -43,8 +41,7 @@ func (s *StatementOfInvestmentFundTransactions2) AddSubAccountDetails() *SubAcco
 }
 
 func (s *StatementOfInvestmentFundTransactions2) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

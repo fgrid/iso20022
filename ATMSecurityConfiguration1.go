@@ -23,9 +23,7 @@ type ATMSecurityConfiguration1 struct {
 
 	// Mechanism used to protect the message of the ATM protocol.
 	MessageProtection []*MessageProtection1Code `xml:"MsgPrtcn,omitempty"`
-
 }
-
 
 func (a *ATMSecurityConfiguration1) AddKeys() *ATMSecurityConfiguration2 {
 	a.Keys = new(ATMSecurityConfiguration2)
@@ -58,4 +56,3 @@ func (a *ATMSecurityConfiguration1) AddPIN() *ATMSecurityConfiguration5 {
 func (a *ATMSecurityConfiguration1) AddMessageProtection(value string) {
 	a.MessageProtection = append(a.MessageProtection, (*MessageProtection1Code)(&value))
 }
-

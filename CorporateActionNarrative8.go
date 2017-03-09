@@ -17,9 +17,7 @@ type CorporateActionNarrative8 struct {
 
 	// Provides additional details pertaining to the corporate action instruction.
 	InstructionAdditionalInformation []*Max350Text `xml:"InstrAddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative8) AddInformationToComplyWith(value string) {
 	c.InformationToComplyWith = append(c.InformationToComplyWith, (*Max350Text)(&value))
@@ -40,4 +38,3 @@ func (c *CorporateActionNarrative8) AddDisclaimer(value string) {
 func (c *CorporateActionNarrative8) AddInstructionAdditionalInformation(value string) {
 	c.InstructionAdditionalInformation = append(c.InstructionAdditionalInformation, (*Max350Text)(&value))
 }
-

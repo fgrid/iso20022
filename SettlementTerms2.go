@@ -8,9 +8,7 @@ type SettlementTerms2 struct {
 
 	// Account to be credited as a result of an instruction.
 	CreditorAccount *CashAccount7 `xml:"CdtrAcct"`
-
 }
-
 
 func (s *SettlementTerms2) AddCreditorAgent() *FinancialInstitutionIdentification4Choice {
 	s.CreditorAgent = new(FinancialInstitutionIdentification4Choice)
@@ -21,4 +19,3 @@ func (s *SettlementTerms2) AddCreditorAccount() *CashAccount7 {
 	s.CreditorAccount = new(CashAccount7)
 	return s.CreditorAccount
 }
-

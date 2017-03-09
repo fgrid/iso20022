@@ -8,9 +8,7 @@ type Party9Choice struct {
 
 	// Identification of a financial institution.
 	FinancialInstitutionIdentification *BranchAndFinancialInstitutionIdentification5 `xml:"FIId"`
-
 }
-
 
 func (p *Party9Choice) AddOrganisationIdentification() *PartyIdentification42 {
 	p.OrganisationIdentification = new(PartyIdentification42)
@@ -21,4 +19,3 @@ func (p *Party9Choice) AddFinancialInstitutionIdentification() *BranchAndFinanci
 	p.FinancialInstitutionIdentification = new(BranchAndFinancialInstitutionIdentification5)
 	return p.FinancialInstitutionIdentification
 }
-

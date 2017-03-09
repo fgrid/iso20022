@@ -75,18 +75,16 @@ type RegulatoryReporting4 struct {
 
 	// Specifies additional information that might be required by the regulator.
 	AdditionalReportingInformation *Max210Text `xml:"AddtlRptgInf,omitempty"`
-
 }
 
-
 func (r *RegulatoryReporting4) AddTradingSideTransactionReporting() *TradingSideTransactionReporting1 {
-	newValue := new (TradingSideTransactionReporting1)
+	newValue := new(TradingSideTransactionReporting1)
 	r.TradingSideTransactionReporting = append(r.TradingSideTransactionReporting, newValue)
 	return newValue
 }
 
 func (r *RegulatoryReporting4) AddCounterpartySideTransactionReporting() *CounterpartySideTransactionReporting1 {
-	newValue := new (CounterpartySideTransactionReporting1)
+	newValue := new(CounterpartySideTransactionReporting1)
 	r.CounterpartySideTransactionReporting = append(r.CounterpartySideTransactionReporting, newValue)
 	return newValue
 }
@@ -183,4 +181,3 @@ func (r *RegulatoryReporting4) SetCommercialOrTreasuryFinancingIndicator(value s
 func (r *RegulatoryReporting4) SetAdditionalReportingInformation(value string) {
 	r.AdditionalReportingInformation = (*Max210Text)(&value)
 }
-

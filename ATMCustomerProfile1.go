@@ -11,9 +11,7 @@ type ATMCustomerProfile1 struct {
 
 	// Identification of the customer for the bank.
 	CustomerIdentification *Max35Text `xml:"CstmrId,omitempty"`
-
 }
-
 
 func (a *ATMCustomerProfile1) SetRetrievalMode(value string) {
 	a.RetrievalMode = (*ATMCustomerProfile1Code)(&value)
@@ -26,4 +24,3 @@ func (a *ATMCustomerProfile1) SetProfileReference(value string) {
 func (a *ATMCustomerProfile1) SetCustomerIdentification(value string) {
 	a.CustomerIdentification = (*Max35Text)(&value)
 }
-

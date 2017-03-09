@@ -11,23 +11,20 @@ type SwitchOrderConfirmation1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SwitchOrderConfirmation1) SetAmendmentIndicator(value string) {
 	s.AmendmentIndicator = (*YesNoIndicator)(&value)
 }
 
 func (s *SwitchOrderConfirmation1) AddSwitchExecutionDetails() *SwitchExecution4 {
-	newValue := new (SwitchExecution4)
+	newValue := new(SwitchExecution4)
 	s.SwitchExecutionDetails = append(s.SwitchExecutionDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchOrderConfirmation1) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

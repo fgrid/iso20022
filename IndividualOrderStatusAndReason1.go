@@ -35,9 +35,7 @@ type IndividualOrderStatusAndReason1 struct {
 
 	// Information that has been added to the original order.
 	NewDetails *ExpectedExecutionDetails1 `xml:"NewDtls,omitempty"`
-
 }
-
 
 func (i *IndividualOrderStatusAndReason1) SetStatus(value string) {
 	i.Status = (*OrderStatus2Code)(&value)
@@ -91,4 +89,3 @@ func (i *IndividualOrderStatusAndReason1) AddNewDetails() *ExpectedExecutionDeta
 	i.NewDetails = new(ExpectedExecutionDetails1)
 	return i.NewDetails
 }
-

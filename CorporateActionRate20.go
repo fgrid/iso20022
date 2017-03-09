@@ -29,12 +29,10 @@ type CorporateActionRate20 struct {
 
 	// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.
 	TaxableIncomePerDividendShare []*RateTypeAndAmountAndStatus11 `xml:"TaxblIncmPerDvddShr,omitempty"`
-
 }
 
-
 func (c *CorporateActionRate20) AddGrossDividendRate() *GrossDividendRateFormat2Choice {
-	newValue := new (GrossDividendRateFormat2Choice)
+	newValue := new(GrossDividendRateFormat2Choice)
 	c.GrossDividendRate = append(c.GrossDividendRate, newValue)
 	return newValue
 }
@@ -45,7 +43,7 @@ func (c *CorporateActionRate20) AddIndexFactor() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate20) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat2Choice {
-	newValue := new (InterestRateUsedForPaymentFormat2Choice)
+	newValue := new(InterestRateUsedForPaymentFormat2Choice)
 	c.InterestRateUsedForPayment = append(c.InterestRateUsedForPayment, newValue)
 	return newValue
 }
@@ -59,7 +57,7 @@ func (c *CorporateActionRate20) SetProrationRate(value string) {
 }
 
 func (c *CorporateActionRate20) AddTaxRelatedRate() *RateTypeAndAmountAndStatus6 {
-	newValue := new (RateTypeAndAmountAndStatus6)
+	newValue := new(RateTypeAndAmountAndStatus6)
 	c.TaxRelatedRate = append(c.TaxRelatedRate, newValue)
 	return newValue
 }
@@ -74,8 +72,7 @@ func (c *CorporateActionRate20) AddAdditionalTax() *RateAndAmountFormat5Choice {
 }
 
 func (c *CorporateActionRate20) AddTaxableIncomePerDividendShare() *RateTypeAndAmountAndStatus11 {
-	newValue := new (RateTypeAndAmountAndStatus11)
+	newValue := new(RateTypeAndAmountAndStatus11)
 	c.TaxableIncomePerDividendShare = append(c.TaxableIncomePerDividendShare, newValue)
 	return newValue
 }
-

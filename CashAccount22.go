@@ -17,9 +17,7 @@ type CashAccount22 struct {
 
 	// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.
 	AccountTypeDescription *Max35Text `xml:"AcctTpDesc"`
-
 }
-
 
 func (c *CashAccount22) SetCurrency(value string) {
 	c.Currency = (*CurrencyCode)(&value)
@@ -42,4 +40,3 @@ func (c *CashAccount22) AddSecondaryAccount() *CashAccount21 {
 func (c *CashAccount22) SetAccountTypeDescription(value string) {
 	c.AccountTypeDescription = (*Max35Text)(&value)
 }
-

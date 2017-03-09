@@ -7,7 +7,7 @@ import (
 )
 
 type Document03700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.037.001.03 Document"`
+	XMLName xml.Name         `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.037.001.03 Document"`
 	Message *StatusReportV03 `xml:"StsRpt"`
 }
 
@@ -23,7 +23,7 @@ func (d *Document03700103) AddMessage() *StatusReportV03 {
 // The StatusReport message can be sent by the matching application to report on the status and sub-status of all transactions that the requester of the report is involved in. The message can be sent in response to a StatusReportRequest message.
 type StatusReportV03 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Reference to the previous message requesting the report.
@@ -31,9 +31,7 @@ type StatusReportV03 struct {
 
 	// Describes a transaction and its status.
 	ReportedItems []*iso20022.StatusReportItems2 `xml:"RptdItms,omitempty"`
-
 }
-
 
 func (s *StatusReportV03) AddReportIdentification() *iso20022.MessageIdentification1 {
 	s.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -46,8 +44,7 @@ func (s *StatusReportV03) AddRelatedMessageReference() *iso20022.MessageIdentifi
 }
 
 func (s *StatusReportV03) AddReportedItems() *iso20022.StatusReportItems2 {
-	newValue := new (iso20022.StatusReportItems2)
+	newValue := new(iso20022.StatusReportItems2)
 	s.ReportedItems = append(s.ReportedItems, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type TypeOfPrice4Choice struct {
 
 	// Type of price expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (t *TypeOfPrice4Choice) SetCode(value string) {
 	t.Code = (*TypeOfPrice11Code)(&value)
@@ -20,4 +18,3 @@ func (t *TypeOfPrice4Choice) AddProprietary() *GenericIdentification20 {
 	t.Proprietary = new(GenericIdentification20)
 	return t.Proprietary
 }
-

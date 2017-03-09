@@ -8,9 +8,7 @@ type Requirement1 struct {
 
 	// Provides details about the margin requirements for the segregated independent amount.
 	SegregatedIndependentAmountRequirement *MarginRequirement1 `xml:"SgrtdIndpdntAmtRqrmnt,omitempty"`
-
 }
-
 
 func (r *Requirement1) AddVariationMarginRequirement() *MarginRequirement1 {
 	r.VariationMarginRequirement = new(MarginRequirement1)
@@ -21,4 +19,3 @@ func (r *Requirement1) AddSegregatedIndependentAmountRequirement() *MarginRequir
 	r.SegregatedIndependentAmountRequirement = new(MarginRequirement1)
 	return r.SegregatedIndependentAmountRequirement
 }
-

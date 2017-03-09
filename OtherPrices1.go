@@ -47,9 +47,7 @@ type OtherPrices1 struct {
 
 	// Price of reference of the concerned financial instrument.
 	ReferencePrice *PriceInformation9 `xml:"RefPric,omitempty"`
-
 }
-
 
 func (o *OtherPrices1) AddMaximum() *Price4 {
 	o.Maximum = new(Price4)
@@ -125,4 +123,3 @@ func (o *OtherPrices1) AddReferencePrice() *PriceInformation9 {
 	o.ReferencePrice = new(PriceInformation9)
 	return o.ReferencePrice
 }
-

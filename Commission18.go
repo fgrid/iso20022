@@ -8,9 +8,7 @@ type Commission18 struct {
 
 	// Additional information about the type of markup.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *Commission18) SetRate(value string) {
 	c.Rate = (*PercentageRate)(&value)
@@ -19,4 +17,3 @@ func (c *Commission18) SetRate(value string) {
 func (c *Commission18) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

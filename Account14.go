@@ -8,9 +8,7 @@ type Account14 struct {
 
 	// Institution that maintains the records where the account is held.
 	AccountServicer *PartyIdentification2Choice `xml:"AcctSvcr,omitempty"`
-
 }
-
 
 func (a *Account14) AddIdentification() *AccountIdentification1 {
 	a.Identification = new(AccountIdentification1)
@@ -21,4 +19,3 @@ func (a *Account14) AddAccountServicer() *PartyIdentification2Choice {
 	a.AccountServicer = new(PartyIdentification2Choice)
 	return a.AccountServicer
 }
-

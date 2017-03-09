@@ -10,7 +10,7 @@ type AccountNotification1 struct {
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
 	// Legal sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent.
-	// 
+	//
 	// Usage : in those scenarios where eg a paper statement is a legal requirement, the paper statement may have a different numbering than the electronic sequential number. Paper statements can for instance only be sent if movement on the account has taken place, whereas electronic statements can be sent eg each day, regardless of whether movements have taken place or not.
 	LegalSequenceNumber *Number `xml:"LglSeqNb,omitempty"`
 
@@ -33,15 +33,13 @@ type AccountNotification1 struct {
 	TransactionsSummary *TotalTransactions1 `xml:"TxsSummry,omitempty"`
 
 	// Specifies the elements of an entry in the report.
-	// 
+	//
 	// Usage: At least one reference must be provided to identify the entry and its underlying transaction(s).
 	Entry []*NotificationEntry1 `xml:"Ntry,omitempty"`
 
 	// Further details on the account notification.
 	AdditionalNotificationInformation *Max500Text `xml:"AddtlNtfctnInf,omitempty"`
-
 }
-
 
 func (a *AccountNotification1) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -84,7 +82,7 @@ func (a *AccountNotification1) AddTransactionsSummary() *TotalTransactions1 {
 }
 
 func (a *AccountNotification1) AddEntry() *NotificationEntry1 {
-	newValue := new (NotificationEntry1)
+	newValue := new(NotificationEntry1)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -92,4 +90,3 @@ func (a *AccountNotification1) AddEntry() *NotificationEntry1 {
 func (a *AccountNotification1) SetAdditionalNotificationInformation(value string) {
 	a.AdditionalNotificationInformation = (*Max500Text)(&value)
 }
-

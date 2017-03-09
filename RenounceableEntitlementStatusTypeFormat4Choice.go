@@ -8,9 +8,7 @@ type RenounceableEntitlementStatusTypeFormat4Choice struct {
 
 	// Proprietary identification of the renounceable status.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (r *RenounceableEntitlementStatusTypeFormat4Choice) SetCode(value string) {
 	r.Code = (*RenounceableStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (r *RenounceableEntitlementStatusTypeFormat4Choice) AddProprietary() *Gener
 	r.Proprietary = new(GenericIdentification47)
 	return r.Proprietary
 }
-

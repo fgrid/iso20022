@@ -1,6 +1,6 @@
 package iso20022
 
-// Total eligible balance for the corporate action and full and part way period units. 
+// Total eligible balance for the corporate action and full and part way period units.
 type TotalEligibleBalanceFormat1 struct {
 
 	// Provides information about balance related to a corporate action.
@@ -11,9 +11,7 @@ type TotalEligibleBalanceFormat1 struct {
 
 	// Number of units of a fund that were purchased part way throughout a distribution period, for example Group II Units in the U.K.
 	PartWayPeriodUnits *SignedQuantityFormat2 `xml:"PartWayPrdUnits,omitempty"`
-
 }
-
 
 func (t *TotalEligibleBalanceFormat1) AddBalance() *Quantity3Choice {
 	t.Balance = new(Quantity3Choice)
@@ -29,4 +27,3 @@ func (t *TotalEligibleBalanceFormat1) AddPartWayPeriodUnits() *SignedQuantityFor
 	t.PartWayPeriodUnits = new(SignedQuantityFormat2)
 	return t.PartWayPeriodUnits
 }
-

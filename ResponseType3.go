@@ -11,9 +11,7 @@ type ResponseType3 struct {
 
 	// Additional information to be logged for further examination.
 	AdditionalResponseInformation *Max140Text `xml:"AddtlRspnInf,omitempty"`
-
 }
-
 
 func (r *ResponseType3) SetResponse(value string) {
 	r.Response = (*Response4Code)(&value)
@@ -26,4 +24,3 @@ func (r *ResponseType3) SetResponseReason(value string) {
 func (r *ResponseType3) SetAdditionalResponseInformation(value string) {
 	r.AdditionalResponseInformation = (*Max140Text)(&value)
 }
-

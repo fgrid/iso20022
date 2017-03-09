@@ -41,9 +41,7 @@ type Reason6Choice struct {
 
 	// Specifies the reason why the instruction has an unmatched status.
 	UnmatchedReason *UnmatchedReason2Choice `xml:"UmtchdRsn,omitempty"`
-
 }
-
 
 func (r *Reason6Choice) AddRepoCallAcknowledgementReason() *AcknowledgementReason3Choice {
 	r.RepoCallAcknowledgementReason = new(AcknowledgementReason3Choice)
@@ -109,4 +107,3 @@ func (r *Reason6Choice) AddUnmatchedReason() *UnmatchedReason2Choice {
 	r.UnmatchedReason = new(UnmatchedReason2Choice)
 	return r.UnmatchedReason
 }
-

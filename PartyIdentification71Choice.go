@@ -11,9 +11,7 @@ type PartyIdentification71Choice struct {
 
 	// Name and address of a party.
 	NameAndAddress *NameAndAddress5 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PartyIdentification71Choice) SetAnyBIC(value string) {
 	p.AnyBIC = (*AnyBICIdentifier)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification71Choice) AddNameAndAddress() *NameAndAddress5 {
 	p.NameAndAddress = new(NameAndAddress5)
 	return p.NameAndAddress
 }
-

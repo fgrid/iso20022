@@ -11,9 +11,7 @@ type CurrencyReference2 struct {
 
 	// The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).
 	ExchangeRateInformation []*ExchangeRateInformation1 `xml:"XchgRateInf,omitempty"`
-
 }
-
 
 func (c *CurrencyReference2) SetTargetCurrency(value string) {
 	c.TargetCurrency = (*CurrencyCode)(&value)
@@ -24,8 +22,7 @@ func (c *CurrencyReference2) SetSourceCurrency(value string) {
 }
 
 func (c *CurrencyReference2) AddExchangeRateInformation() *ExchangeRateInformation1 {
-	newValue := new (ExchangeRateInformation1)
+	newValue := new(ExchangeRateInformation1)
 	c.ExchangeRateInformation = append(c.ExchangeRateInformation, newValue)
 	return newValue
 }
-

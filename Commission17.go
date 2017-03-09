@@ -20,9 +20,7 @@ type Commission17 struct {
 
 	// Voluntary non-enforcement of the right to part of a commission.
 	WaivingDetails *CommissionWaiver4 `xml:"WvgDtls,omitempty"`
-
 }
-
 
 func (c *Commission17) AddType() *CommissionType3Choice {
 	c.Type = new(CommissionType3Choice)
@@ -51,4 +49,3 @@ func (c *Commission17) AddWaivingDetails() *CommissionWaiver4 {
 	c.WaivingDetails = new(CommissionWaiver4)
 	return c.WaivingDetails
 }
-

@@ -11,18 +11,16 @@ type DefaultFundReport1 struct {
 
 	// Excess amount that the central counterparty will restitute to the clearing member or deficit to be provided by the member for the guarantee fund.
 	NetExcessOrDeficit *AmountAndDirection21 `xml:"NetXcssOrDfcit"`
-
 }
 
-
 func (d *DefaultFundReport1) AddDefaultFundCalculation() *DefaultFund1 {
-	newValue := new (DefaultFund1)
+	newValue := new(DefaultFund1)
 	d.DefaultFundCalculation = append(d.DefaultFundCalculation, newValue)
 	return newValue
 }
 
 func (d *DefaultFundReport1) AddCollateralDescription() *Collateral3 {
-	newValue := new (Collateral3)
+	newValue := new(Collateral3)
 	d.CollateralDescription = append(d.CollateralDescription, newValue)
 	return newValue
 }
@@ -31,4 +29,3 @@ func (d *DefaultFundReport1) AddNetExcessOrDeficit() *AmountAndDirection21 {
 	d.NetExcessOrDeficit = new(AmountAndDirection21)
 	return d.NetExcessOrDeficit
 }
-

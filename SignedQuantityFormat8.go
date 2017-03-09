@@ -8,9 +8,7 @@ type SignedQuantityFormat8 struct {
 
 	// Choice between different quantity of security formats.
 	QuantityChoice *Quantity21Choice `xml:"QtyChc"`
-
 }
-
 
 func (s *SignedQuantityFormat8) SetShortLongPosition(value string) {
 	s.ShortLongPosition = (*ShortLong1Code)(&value)
@@ -20,4 +18,3 @@ func (s *SignedQuantityFormat8) AddQuantityChoice() *Quantity21Choice {
 	s.QuantityChoice = new(Quantity21Choice)
 	return s.QuantityChoice
 }
-

@@ -8,9 +8,7 @@ type ReferredDocumentType4 struct {
 
 	// Identification of the issuer of the reference document type.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (r *ReferredDocumentType4) AddCodeOrProprietary() *ReferredDocumentType3Choice {
 	r.CodeOrProprietary = new(ReferredDocumentType3Choice)
@@ -20,4 +18,3 @@ func (r *ReferredDocumentType4) AddCodeOrProprietary() *ReferredDocumentType3Cho
 func (r *ReferredDocumentType4) SetIssuer(value string) {
 	r.Issuer = (*Max35Text)(&value)
 }
-

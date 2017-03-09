@@ -8,9 +8,7 @@ type TaxRecordDetails1 struct {
 
 	// Underlying tax amount related to the specified period.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (t *TaxRecordDetails1) AddPeriod() *TaxPeriod1 {
 	t.Period = new(TaxPeriod1)
@@ -20,4 +18,3 @@ func (t *TaxRecordDetails1) AddPeriod() *TaxPeriod1 {
 func (t *TaxRecordDetails1) SetAmount(value, currency string) {
 	t.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

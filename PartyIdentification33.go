@@ -23,9 +23,7 @@ type PartyIdentification33 struct {
 
 	// Provides details relative to the beneficial owner not included within structured fields of this message.
 	DeclarationDetails *Max350Text `xml:"DclrtnDtls,omitempty"`
-
 }
-
 
 func (p *PartyIdentification33) AddOwnerIdentification() *PartyIdentification10Choice {
 	p.OwnerIdentification = new(PartyIdentification10Choice)
@@ -33,7 +31,7 @@ func (p *PartyIdentification33) AddOwnerIdentification() *PartyIdentification10C
 }
 
 func (p *PartyIdentification33) AddAlternateIdentification() *AlternatePartyIdentification2 {
-	newValue := new (AlternatePartyIdentification2)
+	newValue := new(AlternatePartyIdentification2)
 	p.AlternateIdentification = append(p.AlternateIdentification, newValue)
 	return newValue
 }
@@ -52,7 +50,7 @@ func (p *PartyIdentification33) AddOwnedSecuritiesQuantity() *FinancialInstrumen
 }
 
 func (p *PartyIdentification33) AddCertificationType() *BeneficiaryCertificationType2Choice {
-	newValue := new (BeneficiaryCertificationType2Choice)
+	newValue := new(BeneficiaryCertificationType2Choice)
 	p.CertificationType = append(p.CertificationType, newValue)
 	return newValue
 }
@@ -60,4 +58,3 @@ func (p *PartyIdentification33) AddCertificationType() *BeneficiaryCertification
 func (p *PartyIdentification33) SetDeclarationDetails(value string) {
 	p.DeclarationDetails = (*Max350Text)(&value)
 }
-

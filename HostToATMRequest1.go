@@ -11,9 +11,7 @@ type HostToATMRequest1 struct {
 
 	// Message that have to be sent by the ATM.
 	ExpectedMessageFunction *MessageFunction8Code `xml:"XpctdMsgFctn"`
-
 }
-
 
 func (h *HostToATMRequest1) AddEnvironment() *ATMEnvironment9 {
 	h.Environment = new(ATMEnvironment9)
@@ -28,4 +26,3 @@ func (h *HostToATMRequest1) AddCommandIdentification() *ATMCommandIdentification
 func (h *HostToATMRequest1) SetExpectedMessageFunction(value string) {
 	h.ExpectedMessageFunction = (*MessageFunction8Code)(&value)
 }
-

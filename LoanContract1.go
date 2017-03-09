@@ -51,14 +51,12 @@ type LoanContract1 struct {
 	// Details of the collateral for the loan.
 	Collateral *ContractCollateral1 `xml:"Coll,omitempty"`
 
-	// Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower. 
+	// Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower.
 	SyndicatedLoan []*SyndicatedLoan1 `xml:"SndctdLn,omitempty"`
 
 	// Documents provided as attachments to the loan contract.
 	Attachment []*DocumentGeneralInformation3 `xml:"Attchmnt,omitempty"`
-
 }
-
 
 func (l *LoanContract1) AddContractDocumentIdentification() *DocumentIdentification22 {
 	l.ContractDocumentIdentification = new(DocumentIdentification22)
@@ -66,13 +64,13 @@ func (l *LoanContract1) AddContractDocumentIdentification() *DocumentIdentificat
 }
 
 func (l *LoanContract1) AddBuyer() *TradeParty2 {
-	newValue := new (TradeParty2)
+	newValue := new(TradeParty2)
 	l.Buyer = append(l.Buyer, newValue)
 	return newValue
 }
 
 func (l *LoanContract1) AddSeller() *TradeParty2 {
-	newValue := new (TradeParty2)
+	newValue := new(TradeParty2)
 	l.Seller = append(l.Seller, newValue)
 	return newValue
 }
@@ -112,7 +110,7 @@ func (l *LoanContract1) AddInterestRate() *InterestRate2Choice {
 }
 
 func (l *LoanContract1) AddTranche() *LoanContractTranche1 {
-	newValue := new (LoanContractTranche1)
+	newValue := new(LoanContractTranche1)
 	l.Tranche = append(l.Tranche, newValue)
 	return newValue
 }
@@ -137,14 +135,13 @@ func (l *LoanContract1) AddCollateral() *ContractCollateral1 {
 }
 
 func (l *LoanContract1) AddSyndicatedLoan() *SyndicatedLoan1 {
-	newValue := new (SyndicatedLoan1)
+	newValue := new(SyndicatedLoan1)
 	l.SyndicatedLoan = append(l.SyndicatedLoan, newValue)
 	return newValue
 }
 
 func (l *LoanContract1) AddAttachment() *DocumentGeneralInformation3 {
-	newValue := new (DocumentGeneralInformation3)
+	newValue := new(DocumentGeneralInformation3)
 	l.Attachment = append(l.Attachment, newValue)
 	return newValue
 }
-

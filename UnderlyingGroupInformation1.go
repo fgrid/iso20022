@@ -14,9 +14,7 @@ type UnderlyingGroupInformation1 struct {
 
 	// Original channel used for the delivery of the message, to allow the receiver of the request to locate the payment with greater ease.
 	OriginalMessageDeliveryChannel *Max35Text `xml:"OrgnlMsgDlvryChanl,omitempty"`
-
 }
-
 
 func (u *UnderlyingGroupInformation1) SetOriginalMessageIdentification(value string) {
 	u.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (u *UnderlyingGroupInformation1) SetOriginalCreationDateTime(value string) 
 func (u *UnderlyingGroupInformation1) SetOriginalMessageDeliveryChannel(value string) {
 	u.OriginalMessageDeliveryChannel = (*Max35Text)(&value)
 }
-

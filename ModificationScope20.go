@@ -8,9 +8,7 @@ type ModificationScope20 struct {
 
 	// Information related to intermediaries.
 	Intermediary *Intermediary24 `xml:"Intrmy"`
-
 }
-
 
 func (m *ModificationScope20) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification1Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope20) AddIntermediary() *Intermediary24 {
 	m.Intermediary = new(Intermediary24)
 	return m.Intermediary
 }
-

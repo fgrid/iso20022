@@ -50,9 +50,7 @@ type EstimatedFundCashForecast4 struct {
 
 	// Estimated net cash movements per financial instrument.
 	EstimatedNetCashForecastDetails []*NetCashForecast2 `xml:"EstmtdNetCshFcstDtls,omitempty"`
-
 }
-
 
 func (e *EstimatedFundCashForecast4) SetIdentification(value string) {
 	e.Identification = (*Max35Text)(&value)
@@ -92,25 +90,25 @@ func (e *EstimatedFundCashForecast4) AddPreviousTotalUnitsNumber() *FinancialIns
 }
 
 func (e *EstimatedFundCashForecast4) AddBreakdownByParty() *BreakdownByParty1 {
-	newValue := new (BreakdownByParty1)
+	newValue := new(BreakdownByParty1)
 	e.BreakdownByParty = append(e.BreakdownByParty, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast4) AddBreakdownByCountry() *BreakdownByCountry1 {
-	newValue := new (BreakdownByCountry1)
+	newValue := new(BreakdownByCountry1)
 	e.BreakdownByCountry = append(e.BreakdownByCountry, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast4) AddBreakdownByCurrency() *BreakdownByCurrency1 {
-	newValue := new (BreakdownByCurrency1)
+	newValue := new(BreakdownByCurrency1)
 	e.BreakdownByCurrency = append(e.BreakdownByCurrency, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast4) AddBreakdownByUserDefinedParameter() *BreakdownByUserDefinedParameter1 {
-	newValue := new (BreakdownByUserDefinedParameter1)
+	newValue := new(BreakdownByUserDefinedParameter1)
 	e.BreakdownByUserDefinedParameter = append(e.BreakdownByUserDefinedParameter, newValue)
 	return newValue
 }
@@ -128,8 +126,7 @@ func (e *EstimatedFundCashForecast4) SetExceptionalNetCashFlowIndicator(value st
 }
 
 func (e *EstimatedFundCashForecast4) AddEstimatedNetCashForecastDetails() *NetCashForecast2 {
-	newValue := new (NetCashForecast2)
+	newValue := new(NetCashForecast2)
 	e.EstimatedNetCashForecastDetails = append(e.EstimatedNetCashForecastDetails, newValue)
 	return newValue
 }
-

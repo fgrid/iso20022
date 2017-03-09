@@ -8,9 +8,7 @@ type CashAvailabilityDate1Choice struct {
 
 	// Identifies the actual availability date.
 	ActualDate *ISODate `xml:"ActlDt"`
-
 }
-
 
 func (c *CashAvailabilityDate1Choice) SetNumberOfDays(value string) {
 	c.NumberOfDays = (*Max15PlusSignedNumericText)(&value)
@@ -19,4 +17,3 @@ func (c *CashAvailabilityDate1Choice) SetNumberOfDays(value string) {
 func (c *CashAvailabilityDate1Choice) SetActualDate(value string) {
 	c.ActualDate = (*ISODate)(&value)
 }
-

@@ -17,9 +17,7 @@ type PlainCardData11 struct {
 
 	// Services attached to the card, as defined in ISO 7813.
 	ServiceCode *Exact3NumericText `xml:"SvcCd,omitempty"`
-
 }
-
 
 func (p *PlainCardData11) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -40,4 +38,3 @@ func (p *PlainCardData11) SetExpiryDate(value string) {
 func (p *PlainCardData11) SetServiceCode(value string) {
 	p.ServiceCode = (*Exact3NumericText)(&value)
 }
-

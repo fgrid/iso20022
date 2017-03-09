@@ -8,17 +8,14 @@ type UnsecuredMarketReport3Choice struct {
 
 	// Provides the details of the unsecured market transaction as reported by the reporting agent.
 	Transaction []*UnsecuredMarketTransaction3 `xml:"Tx"`
-
 }
-
 
 func (u *UnsecuredMarketReport3Choice) SetDataSetAction(value string) {
 	u.DataSetAction = (*ReportPeriodActivity1Code)(&value)
 }
 
 func (u *UnsecuredMarketReport3Choice) AddTransaction() *UnsecuredMarketTransaction3 {
-	newValue := new (UnsecuredMarketTransaction3)
+	newValue := new(UnsecuredMarketTransaction3)
 	u.Transaction = append(u.Transaction, newValue)
 	return newValue
 }
-

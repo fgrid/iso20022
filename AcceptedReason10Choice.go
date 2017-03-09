@@ -8,9 +8,7 @@ type AcceptedReason10Choice struct {
 
 	// Proprietary identification of additional information about the processed instruction.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (a *AcceptedReason10Choice) SetCode(value string) {
 	a.Code = (*AcknowledgementReason7Code)(&value)
@@ -20,4 +18,3 @@ func (a *AcceptedReason10Choice) AddProprietary() *GenericIdentification30 {
 	a.Proprietary = new(GenericIdentification30)
 	return a.Proprietary
 }
-

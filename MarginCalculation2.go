@@ -23,9 +23,7 @@ type MarginCalculation2 struct {
 
 	// Provides margin calculation details such as the initial margin amount, the variation margin amount or other margin type amounts.
 	MarginTypeAmount *Margin3 `xml:"MrgnTpAmt,omitempty"`
-
 }
-
 
 func (m *MarginCalculation2) AddFinancialInstrumentIdentification() *SecurityIdentification14 {
 	m.FinancialInstrumentIdentification = new(SecurityIdentification14)
@@ -43,7 +41,7 @@ func (m *MarginCalculation2) AddTotalMarginAmount() *AmountAndDirection20 {
 }
 
 func (m *MarginCalculation2) AddCollateralOnDeposit() *Collateral6 {
-	newValue := new (Collateral6)
+	newValue := new(Collateral6)
 	m.CollateralOnDeposit = append(m.CollateralOnDeposit, newValue)
 	return newValue
 }
@@ -61,4 +59,3 @@ func (m *MarginCalculation2) AddMarginTypeAmount() *Margin3 {
 	m.MarginTypeAmount = new(Margin3)
 	return m.MarginTypeAmount
 }
-

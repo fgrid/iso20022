@@ -62,9 +62,7 @@ type InvestmentFundTransaction4 struct {
 
 	// Price at which the order was executed.
 	PriceDetails *UnitPrice20 `xml:"PricDtls,omitempty"`
-
 }
-
 
 func (i *InvestmentFundTransaction4) AddEventType() *TransactionType1Choice {
 	i.EventType = new(TransactionType1Choice)
@@ -149,4 +147,3 @@ func (i *InvestmentFundTransaction4) AddPriceDetails() *UnitPrice20 {
 	i.PriceDetails = new(UnitPrice20)
 	return i.PriceDetails
 }
-

@@ -20,9 +20,7 @@ type InterestResult1 struct {
 
 	// Provides details about the closing collateral balance.
 	ClosingCollateralBalance *CollateralBalance1 `xml:"ClsgCollBal"`
-
 }
-
 
 func (i *InterestResult1) SetInterestDueToA(value, currency string) {
 	i.InterestDueToA = NewActiveCurrencyAndAmount(value, currency)
@@ -49,4 +47,3 @@ func (i *InterestResult1) AddClosingCollateralBalance() *CollateralBalance1 {
 	i.ClosingCollateralBalance = new(CollateralBalance1)
 	return i.ClosingCollateralBalance
 }
-

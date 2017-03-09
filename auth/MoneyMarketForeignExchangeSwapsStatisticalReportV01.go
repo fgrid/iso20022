@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.014.001.01 Document"`
+	XMLName xml.Name                                             `xml:"urn:iso:std:iso:20022:tech:xsd:auth.014.001.01 Document"`
 	Message *MoneyMarketForeignExchangeSwapsStatisticalReportV01 `xml:"MnyMktFXSwpsSttstclRpt"`
 }
 
@@ -27,9 +27,7 @@ type MoneyMarketForeignExchangeSwapsStatisticalReportV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MoneyMarketForeignExchangeSwapsStatisticalReportV01) AddReportHeader() *iso20022.MoneyMarketReportHeader1 {
 	m.ReportHeader = new(iso20022.MoneyMarketReportHeader1)
@@ -42,8 +40,7 @@ func (m *MoneyMarketForeignExchangeSwapsStatisticalReportV01) AddForeignExchange
 }
 
 func (m *MoneyMarketForeignExchangeSwapsStatisticalReportV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

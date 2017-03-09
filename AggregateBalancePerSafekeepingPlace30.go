@@ -47,9 +47,7 @@ type AggregateBalancePerSafekeepingPlace30 struct {
 
 	// Provides additional information on the holding.
 	HoldingAdditionalDetails *RestrictedFINXMax350Text `xml:"HldgAddtlDtls,omitempty"`
-
 }
-
 
 func (a *AggregateBalancePerSafekeepingPlace30) AddSafekeepingPlace() *SafeKeepingPlace2 {
 	a.SafekeepingPlace = new(SafeKeepingPlace2)
@@ -72,13 +70,13 @@ func (a *AggregateBalancePerSafekeepingPlace30) AddAggregateBalance() *Balance10
 }
 
 func (a *AggregateBalancePerSafekeepingPlace30) AddPriceDetails() *PriceInformation14 {
-	newValue := new (PriceInformation14)
+	newValue := new(PriceInformation14)
 	a.PriceDetails = append(a.PriceDetails, newValue)
 	return newValue
 }
 
 func (a *AggregateBalancePerSafekeepingPlace30) AddForeignExchangeDetails() *ForeignExchangeTerms31 {
-	newValue := new (ForeignExchangeTerms31)
+	newValue := new(ForeignExchangeTerms31)
 	a.ForeignExchangeDetails = append(a.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -103,7 +101,7 @@ func (a *AggregateBalancePerSafekeepingPlace30) AddAlternateReportingCurrencyAmo
 }
 
 func (a *AggregateBalancePerSafekeepingPlace30) AddQuantityBreakdown() *QuantityBreakdown39 {
-	newValue := new (QuantityBreakdown39)
+	newValue := new(QuantityBreakdown39)
 	a.QuantityBreakdown = append(a.QuantityBreakdown, newValue)
 	return newValue
 }
@@ -114,13 +112,13 @@ func (a *AggregateBalancePerSafekeepingPlace30) AddExposureType() *ExposureType1
 }
 
 func (a *AggregateBalancePerSafekeepingPlace30) AddBalanceBreakdown() *SubBalanceInformation16 {
-	newValue := new (SubBalanceInformation16)
+	newValue := new(SubBalanceInformation16)
 	a.BalanceBreakdown = append(a.BalanceBreakdown, newValue)
 	return newValue
 }
 
 func (a *AggregateBalancePerSafekeepingPlace30) AddAdditionalBalanceBreakdown() *AdditionalBalanceInformation16 {
-	newValue := new (AdditionalBalanceInformation16)
+	newValue := new(AdditionalBalanceInformation16)
 	a.AdditionalBalanceBreakdown = append(a.AdditionalBalanceBreakdown, newValue)
 	return newValue
 }
@@ -128,4 +126,3 @@ func (a *AggregateBalancePerSafekeepingPlace30) AddAdditionalBalanceBreakdown() 
 func (a *AggregateBalancePerSafekeepingPlace30) SetHoldingAdditionalDetails(value string) {
 	a.HoldingAdditionalDetails = (*RestrictedFINXMax350Text)(&value)
 }
-

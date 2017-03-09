@@ -26,9 +26,7 @@ type Transfer12 struct {
 
 	// Additional specific settlement information for non-regulated traded funds.
 	NonStandardSettlementInformation *Max350Text `xml:"NonStdSttlmInf,omitempty"`
-
 }
-
 
 func (t *Transfer12) AddHoldingsPlanType(value string) {
 	t.HoldingsPlanType = append(t.HoldingsPlanType, (*HoldingsPlanType1Code)(&value))
@@ -45,7 +43,7 @@ func (t *Transfer12) AddQuantity() *Quantity13Choice {
 }
 
 func (t *Transfer12) AddUnitsDetails() *Unit3 {
-	newValue := new (Unit3)
+	newValue := new(Unit3)
 	t.UnitsDetails = append(t.UnitsDetails, newValue)
 	return newValue
 }
@@ -65,4 +63,3 @@ func (t *Transfer12) SetOwnAccountTransferIndicator(value string) {
 func (t *Transfer12) SetNonStandardSettlementInformation(value string) {
 	t.NonStandardSettlementInformation = (*Max350Text)(&value)
 }
-

@@ -17,9 +17,7 @@ type CardholderAuthentication8 struct {
 
 	// Encrypted personal identification number (PIN) and related information.
 	CardholderOnLinePIN *OnLinePIN5 `xml:"CrdhldrOnLinePIN,omitempty"`
-
 }
-
 
 func (c *CardholderAuthentication8) SetAuthenticationMethod(value string) {
 	c.AuthenticationMethod = (*AuthenticationMethod7Code)(&value)
@@ -42,4 +40,3 @@ func (c *CardholderAuthentication8) AddCardholderOnLinePIN() *OnLinePIN5 {
 	c.CardholderOnLinePIN = new(OnLinePIN5)
 	return c.CardholderOnLinePIN
 }
-

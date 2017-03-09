@@ -77,9 +77,7 @@ type CorporateActionDate2 struct {
 
 	// Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, eg, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.
 	SpecialExDate *DateFormat4Choice `xml:"SpclExDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate2) AddRecordDate() *DateFormat4Choice {
 	c.RecordDate = new(DateFormat4Choice)
@@ -205,4 +203,3 @@ func (c *CorporateActionDate2) AddSpecialExDate() *DateFormat4Choice {
 	c.SpecialExDate = new(DateFormat4Choice)
 	return c.SpecialExDate
 }
-

@@ -11,9 +11,7 @@ type ReportedAmount1 struct {
 
 	// Amount reported.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (r *ReportedAmount1) SetIdentification(value string) {
 	r.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (r *ReportedAmount1) SetType(value string) {
 func (r *ReportedAmount1) SetAmount(value, currency string) {
 	r.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

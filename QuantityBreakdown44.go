@@ -20,9 +20,7 @@ type QuantityBreakdown44 struct {
 
 	// Specifies the type of price and information about the price.
 	TypeOfPrice *TypeOfPrice32Choice `xml:"TpOfPric,omitempty"`
-
 }
-
 
 func (q *QuantityBreakdown44) AddLotNumber() *GenericIdentification39 {
 	q.LotNumber = new(GenericIdentification39)
@@ -53,4 +51,3 @@ func (q *QuantityBreakdown44) AddTypeOfPrice() *TypeOfPrice32Choice {
 	q.TypeOfPrice = new(TypeOfPrice32Choice)
 	return q.TypeOfPrice
 }
-

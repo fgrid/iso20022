@@ -29,9 +29,7 @@ type CardTransaction9 struct {
 
 	// Response to the reconciliation.
 	TransactionResponse *ResponseType2 `xml:"TxRspn,omitempty"`
-
 }
-
 
 func (c *CardTransaction9) SetReconciliationType(value string) {
 	c.ReconciliationType = (*CardServiceType1Code)(&value)
@@ -72,4 +70,3 @@ func (c *CardTransaction9) AddTransactionResponse() *ResponseType2 {
 	c.TransactionResponse = new(ResponseType2)
 	return c.TransactionResponse
 }
-

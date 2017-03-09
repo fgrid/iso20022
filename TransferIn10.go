@@ -20,9 +20,7 @@ type TransferIn10 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferIn10) AddRequestedTransferDate() *DateFormat1Choice {
 	t.RequestedTransferDate = new(DateFormat1Choice)
@@ -34,7 +32,7 @@ func (t *TransferIn10) SetMasterReference(value string) {
 }
 
 func (t *TransferIn10) AddTransferAndReferences() *TransferIn11 {
-	newValue := new (TransferIn11)
+	newValue := new(TransferIn11)
 	t.TransferAndReferences = append(t.TransferAndReferences, newValue)
 	return newValue
 }
@@ -50,8 +48,7 @@ func (t *TransferIn10) AddSettlementDetails() *DeliverInformation13 {
 }
 
 func (t *TransferIn10) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

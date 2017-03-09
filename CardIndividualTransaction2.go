@@ -25,7 +25,7 @@ type CardIndividualTransaction2 struct {
 	// Reason for representment of a card transaction.
 	RePresentmentReason *ExternalRePresentmentReason1Code `xml:"RePresntmntRsn,omitempty"`
 
-	// Sequential number of the card transaction, as assigned by the POI (Point of Interaction). 
+	// Sequential number of the card transaction, as assigned by the POI (Point of Interaction).
 	// Usage: The sequential number is increased incrementally for each transaction.
 	SequenceNumber *Max35Text `xml:"SeqNb,omitempty"`
 
@@ -41,9 +41,7 @@ type CardIndividualTransaction2 struct {
 	// Sequential number of the validation of the cash deposit.
 	// Usage: The sequential number is increased incrementally for each transaction.
 	ValidationSequenceNumber *Max35Text `xml:"VldtnSeqNb,omitempty"`
-
 }
-
 
 func (c *CardIndividualTransaction2) SetICCRelatedData(value string) {
 	c.ICCRelatedData = (*Max1025Text)(&value)
@@ -95,4 +93,3 @@ func (c *CardIndividualTransaction2) SetValidationDate(value string) {
 func (c *CardIndividualTransaction2) SetValidationSequenceNumber(value string) {
 	c.ValidationSequenceNumber = (*Max35Text)(&value)
 }
-

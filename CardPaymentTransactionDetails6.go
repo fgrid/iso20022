@@ -8,9 +8,7 @@ type CardPaymentTransactionDetails6 struct {
 
 	// Total amount of the transaction.
 	TotalAmount *ImpliedCurrencyAndAmount `xml:"TtlAmt"`
-
 }
-
 
 func (c *CardPaymentTransactionDetails6) SetCurrency(value string) {
 	c.Currency = (*CurrencyCode)(&value)
@@ -19,4 +17,3 @@ func (c *CardPaymentTransactionDetails6) SetCurrency(value string) {
 func (c *CardPaymentTransactionDetails6) SetTotalAmount(value, currency string) {
 	c.TotalAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

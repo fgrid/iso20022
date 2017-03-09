@@ -7,7 +7,7 @@ import (
 )
 
 type Document06100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.061.001.02 Document"`
+	XMLName xml.Name      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.061.001.02 Document"`
 	Message *PayInCallV02 `xml:"PayInCall"`
 }
 
@@ -30,9 +30,7 @@ type PayInCallV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (p *PayInCallV02) AddPartyIdentification() *iso20022.PartyIdentification73Choice {
 	p.PartyIdentification = new(iso20022.PartyIdentification73Choice)
@@ -49,8 +47,7 @@ func (p *PayInCallV02) SetSettlementSessionIdentifier(value string) {
 }
 
 func (p *PayInCallV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	p.SupplementaryData = append(p.SupplementaryData, newValue)
 	return newValue
 }
-

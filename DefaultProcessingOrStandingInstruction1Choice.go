@@ -8,9 +8,7 @@ type DefaultProcessingOrStandingInstruction1Choice struct {
 
 	// Indicates whether an account owner has placed a standing order to select this corporate action option.
 	StandingInstructionIndicator *YesNoIndicator `xml:"StgInstrInd"`
-
 }
-
 
 func (d *DefaultProcessingOrStandingInstruction1Choice) SetDefaultOptionIndicator(value string) {
 	d.DefaultOptionIndicator = (*YesNoIndicator)(&value)
@@ -19,4 +17,3 @@ func (d *DefaultProcessingOrStandingInstruction1Choice) SetDefaultOptionIndicato
 func (d *DefaultProcessingOrStandingInstruction1Choice) SetStandingInstructionIndicator(value string) {
 	d.StandingInstructionIndicator = (*YesNoIndicator)(&value)
 }
-

@@ -11,9 +11,7 @@ type CashCompensation1 struct {
 
 	// Indicates the value date of the cash compensation.
 	ValueDate *ISODate `xml:"ValDt,omitempty"`
-
 }
-
 
 func (c *CashCompensation1) AddSettlementAmount() *AmountAndDirection20 {
 	c.SettlementAmount = new(AmountAndDirection20)
@@ -28,4 +26,3 @@ func (c *CashCompensation1) AddFees() *AmountAndDirection20 {
 func (c *CashCompensation1) SetValueDate(value string) {
 	c.ValueDate = (*ISODate)(&value)
 }
-

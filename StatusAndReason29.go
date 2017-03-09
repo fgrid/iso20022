@@ -14,9 +14,7 @@ type StatusAndReason29 struct {
 
 	// Provides the status of settlement of a transaction.
 	SettlementStatus *SettlementStatus22Choice `xml:"SttlmSts,omitempty"`
-
 }
-
 
 func (s *StatusAndReason29) AddProcessingStatus() *ProcessingStatus62Choice {
 	s.ProcessingStatus = new(ProcessingStatus62Choice)
@@ -37,4 +35,3 @@ func (s *StatusAndReason29) AddSettlementStatus() *SettlementStatus22Choice {
 	s.SettlementStatus = new(SettlementStatus22Choice)
 	return s.SettlementStatus
 }
-

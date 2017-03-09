@@ -8,9 +8,7 @@ type Account20 struct {
 
 	// Institution servicing an account and assigning the account identifier to the account owner.
 	AccountServicer *PartyIdentification70Choice `xml:"AcctSvcr"`
-
 }
-
 
 func (a *Account20) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (a *Account20) AddAccountServicer() *PartyIdentification70Choice {
 	a.AccountServicer = new(PartyIdentification70Choice)
 	return a.AccountServicer
 }
-

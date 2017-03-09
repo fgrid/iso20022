@@ -23,9 +23,7 @@ type TransactionDates1 struct {
 
 	// Proprietary date related to the underlying transaction.
 	Proprietary []*ProprietaryDate1 `xml:"Prtry,omitempty"`
-
 }
-
 
 func (t *TransactionDates1) SetAcceptanceDateTime(value string) {
 	t.AcceptanceDateTime = (*ISODateTime)(&value)
@@ -52,8 +50,7 @@ func (t *TransactionDates1) SetTransactionDateTime(value string) {
 }
 
 func (t *TransactionDates1) AddProprietary() *ProprietaryDate1 {
-	newValue := new (ProprietaryDate1)
+	newValue := new(ProprietaryDate1)
 	t.Proprietary = append(t.Proprietary, newValue)
 	return newValue
 }
-

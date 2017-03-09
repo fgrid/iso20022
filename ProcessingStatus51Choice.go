@@ -29,9 +29,7 @@ type ProcessingStatus51Choice struct {
 
 	// Modification request from your counterparty for this transaction is pending waiting for your cancellation request or your consent.
 	ModificationRequested *ProprietaryReason4 `xml:"ModReqd"`
-
 }
-
 
 func (p *ProcessingStatus51Choice) AddPendingCancellation() *PendingStatus38Choice {
 	p.PendingCancellation = new(PendingStatus38Choice)
@@ -77,4 +75,3 @@ func (p *ProcessingStatus51Choice) AddModificationRequested() *ProprietaryReason
 	p.ModificationRequested = new(ProprietaryReason4)
 	return p.ModificationRequested
 }
-

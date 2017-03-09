@@ -14,9 +14,7 @@ type Tax13 struct {
 
 	// Rate used to calculate the tax.
 	Rate *PercentageRate `xml:"Rate"`
-
 }
-
 
 func (t *Tax13) SetType(value string) {
 	t.Type = (*TaxType9Code)(&value)
@@ -33,4 +31,3 @@ func (t *Tax13) SetAmount(value, currency string) {
 func (t *Tax13) SetRate(value string) {
 	t.Rate = (*PercentageRate)(&value)
 }
-

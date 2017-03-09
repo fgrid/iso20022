@@ -38,9 +38,7 @@ type RequestDetails16 struct {
 
 	// Information regarding the linkage requested.
 	Linkages []*Linkages44 `xml:"Lnkgs,omitempty"`
-
 }
-
 
 func (r *RequestDetails16) AddReference() *References21 {
 	r.Reference = new(References21)
@@ -67,7 +65,7 @@ func (r *RequestDetails16) AddPriority() *PriorityNumeric5Choice {
 }
 
 func (r *RequestDetails16) AddOtherProcessing() *GenericIdentification47 {
-	newValue := new (GenericIdentification47)
+	newValue := new(GenericIdentification47)
 	r.OtherProcessing = append(r.OtherProcessing, newValue)
 	return newValue
 }
@@ -97,8 +95,7 @@ func (r *RequestDetails16) AddUnilateralSplit() *UnilateralSplit4Choice {
 }
 
 func (r *RequestDetails16) AddLinkages() *Linkages44 {
-	newValue := new (Linkages44)
+	newValue := new(Linkages44)
 	r.Linkages = append(r.Linkages, newValue)
 	return newValue
 }
-

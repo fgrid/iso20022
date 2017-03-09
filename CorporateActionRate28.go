@@ -26,9 +26,7 @@ type CorporateActionRate28 struct {
 
 	// Amount of money per equity allocated as the result of a tax credit.
 	TaxCreditRate []*TaxCreditRateFormat5Choice `xml:"TaxCdtRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate28) AddAdditionalQuantityForSubscribedResultantSecurities() *RatioFormat11Choice {
 	c.AdditionalQuantityForSubscribedResultantSecurities = new(RatioFormat11Choice)
@@ -65,8 +63,7 @@ func (c *CorporateActionRate28) AddApplicableRate() *RateFormat6Choice {
 }
 
 func (c *CorporateActionRate28) AddTaxCreditRate() *TaxCreditRateFormat5Choice {
-	newValue := new (TaxCreditRateFormat5Choice)
+	newValue := new(TaxCreditRateFormat5Choice)
 	c.TaxCreditRate = append(c.TaxCreditRate, newValue)
 	return newValue
 }
-

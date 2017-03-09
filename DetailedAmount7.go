@@ -20,9 +20,7 @@ type DetailedAmount7 struct {
 
 	// Additional charge paid by the cardholder. For example airline credit card surcharge.
 	Surcharge []*DetailedAmount4 `xml:"Srchrg,omitempty"`
-
 }
-
 
 func (d *DetailedAmount7) SetCashBack(value, currency string) {
 	d.CashBack = NewImpliedCurrencyAndAmount(value, currency)
@@ -33,26 +31,25 @@ func (d *DetailedAmount7) SetGratuity(value, currency string) {
 }
 
 func (d *DetailedAmount7) AddFees() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.Fees = append(d.Fees, newValue)
 	return newValue
 }
 
 func (d *DetailedAmount7) AddRebate() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.Rebate = append(d.Rebate, newValue)
 	return newValue
 }
 
 func (d *DetailedAmount7) AddValueAddedTax() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.ValueAddedTax = append(d.ValueAddedTax, newValue)
 	return newValue
 }
 
 func (d *DetailedAmount7) AddSurcharge() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.Surcharge = append(d.Surcharge, newValue)
 	return newValue
 }
-

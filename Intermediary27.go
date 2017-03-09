@@ -11,9 +11,7 @@ type Intermediary27 struct {
 
 	// Function performed by the intermediary.
 	Role *Role4Choice `xml:"Role,omitempty"`
-
 }
-
 
 func (i *Intermediary27) AddIdentification() *PartyIdentification2Choice {
 	i.Identification = new(PartyIdentification2Choice)
@@ -29,4 +27,3 @@ func (i *Intermediary27) AddRole() *Role4Choice {
 	i.Role = new(Role4Choice)
 	return i.Role
 }
-

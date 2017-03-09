@@ -8,9 +8,7 @@ type ATMStatus1 struct {
 
 	// Present if the status required by the ATM manager is different from the current status.
 	DemandedStatus *ATMStatus1Code `xml:"DmnddSts,omitempty"`
-
 }
-
 
 func (a *ATMStatus1) SetCurrentStatus(value string) {
 	a.CurrentStatus = (*ATMStatus1Code)(&value)
@@ -19,4 +17,3 @@ func (a *ATMStatus1) SetCurrentStatus(value string) {
 func (a *ATMStatus1) SetDemandedStatus(value string) {
 	a.DemandedStatus = (*ATMStatus1Code)(&value)
 }
-

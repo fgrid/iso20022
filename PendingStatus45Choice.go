@@ -8,17 +8,14 @@ type PendingStatus45Choice struct {
 
 	// Specifies the reason of the pending status.
 	Reason []*PendingReason19 `xml:"Rsn"`
-
 }
-
 
 func (p *PendingStatus45Choice) SetNoSpecifiedReason(value string) {
 	p.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (p *PendingStatus45Choice) AddReason() *PendingReason19 {
-	newValue := new (PendingReason19)
+	newValue := new(PendingReason19)
 	p.Reason = append(p.Reason, newValue)
 	return newValue
 }
-

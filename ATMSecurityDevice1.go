@@ -17,9 +17,7 @@ type ATMSecurityDevice1 struct {
 
 	// Incident occurring on the device.
 	Incident *FailureReason5Code `xml:"Incdnt,omitempty"`
-
 }
-
 
 func (a *ATMSecurityDevice1) AddDeviceProperty() *ATMEquipment2 {
 	a.DeviceProperty = new(ATMEquipment2)
@@ -43,4 +41,3 @@ func (a *ATMSecurityDevice1) SetCurrentStatus(value string) {
 func (a *ATMSecurityDevice1) SetIncident(value string) {
 	a.Incident = (*FailureReason5Code)(&value)
 }
-

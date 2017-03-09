@@ -8,17 +8,14 @@ type HoldIndicator6 struct {
 
 	// Specifies the reason of the registration staus.
 	Reason []*RegistrationReason5 `xml:"Rsn,omitempty"`
-
 }
-
 
 func (h *HoldIndicator6) SetIndicator(value string) {
 	h.Indicator = (*YesNoIndicator)(&value)
 }
 
 func (h *HoldIndicator6) AddReason() *RegistrationReason5 {
-	newValue := new (RegistrationReason5)
+	newValue := new(RegistrationReason5)
 	h.Reason = append(h.Reason, newValue)
 	return newValue
 }
-

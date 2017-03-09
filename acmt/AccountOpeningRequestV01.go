@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.007.001.01 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.007.001.01 Document"`
 	Message *AccountOpeningRequestV01 `xml:"AcctOpngReq"`
 }
 
@@ -35,8 +35,8 @@ type AccountOpeningRequestV01 struct {
 	// Account contract established between the organisation or the Group to which the organisation belongs, and the account Servicer. This contract has to be applied for the new account to be opened and maintained.
 	UnderlyingMasterAgreement *iso20022.ContractDocument1 `xml:"UndrlygMstrAgrmt,omitempty"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification4 `xml:"AcctSvcrId"`
 
 	// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
@@ -50,9 +50,7 @@ type AccountOpeningRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountOpeningRequestV01) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -80,13 +78,13 @@ func (a *AccountOpeningRequestV01) AddAccountServicerIdentification() *iso20022.
 }
 
 func (a *AccountOpeningRequestV01) AddOrganisation() *iso20022.Organisation7 {
-	newValue := new (iso20022.Organisation7)
+	newValue := new(iso20022.Organisation7)
 	a.Organisation = append(a.Organisation, newValue)
 	return newValue
 }
 
 func (a *AccountOpeningRequestV01) AddMandate() *iso20022.OperationMandate1 {
-	newValue := new (iso20022.OperationMandate1)
+	newValue := new(iso20022.OperationMandate1)
 	a.Mandate = append(a.Mandate, newValue)
 	return newValue
 }
@@ -97,8 +95,7 @@ func (a *AccountOpeningRequestV01) AddReferenceAccount() *iso20022.CashAccount16
 }
 
 func (a *AccountOpeningRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

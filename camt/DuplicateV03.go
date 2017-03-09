@@ -7,7 +7,7 @@ import (
 )
 
 type Document03400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.034.001.03 Document"`
+	XMLName xml.Name      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.034.001.03 Document"`
 	Message *DuplicateV03 `xml:"Dplct"`
 }
 
@@ -32,9 +32,7 @@ type DuplicateV03 struct {
 
 	// Duplicate of a previously sent message.
 	Duplicate *iso20022.ProprietaryData4 `xml:"Dplct"`
-
 }
-
 
 func (d *DuplicateV03) AddAssignment() *iso20022.CaseAssignment2 {
 	d.Assignment = new(iso20022.CaseAssignment2)
@@ -50,4 +48,3 @@ func (d *DuplicateV03) AddDuplicate() *iso20022.ProprietaryData4 {
 	d.Duplicate = new(iso20022.ProprietaryData4)
 	return d.Duplicate
 }
-

@@ -8,9 +8,7 @@ type GeneratedReason3 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (g *GeneratedReason3) AddCode() *GeneratedReasons3Choice {
 	g.Code = new(GeneratedReasons3Choice)
@@ -20,4 +18,3 @@ func (g *GeneratedReason3) AddCode() *GeneratedReasons3Choice {
 func (g *GeneratedReason3) SetAdditionalReasonInformation(value string) {
 	g.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

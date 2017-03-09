@@ -14,9 +14,7 @@ type InvoiceFinancingDetails1 struct {
 
 	// Includes details about a single instalment within an invoice, such as identification and amount.
 	InstalmentFinancingInformation []*InstalmentFinancingInformation1 `xml:"InstlmtFincgInf,omitempty"`
-
 }
-
 
 func (i *InvoiceFinancingDetails1) AddOriginalInvoiceInformation() *OriginalInvoiceInformation1 {
 	i.OriginalInvoiceInformation = new(OriginalInvoiceInformation1)
@@ -34,8 +32,7 @@ func (i *InvoiceFinancingDetails1) AddInvoiceFinancingResult() *FinancingResult1
 }
 
 func (i *InvoiceFinancingDetails1) AddInstalmentFinancingInformation() *InstalmentFinancingInformation1 {
-	newValue := new (InstalmentFinancingInformation1)
+	newValue := new(InstalmentFinancingInformation1)
 	i.InstalmentFinancingInformation = append(i.InstalmentFinancingInformation, newValue)
 	return newValue
 }
-

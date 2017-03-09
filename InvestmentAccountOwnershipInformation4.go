@@ -29,9 +29,7 @@ type InvestmentAccountOwnershipInformation4 struct {
 
 	// Information related to the party profile to be inserted or deleted.
 	ModifiedInvestorProfileValidation []*ModificationScope11 `xml:"ModfdInvstrPrflVldtn,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOwnershipInformation4) AddOrganisation() *Organisation3 {
 	i.Organisation = new(Organisation3)
@@ -68,8 +66,7 @@ func (i *InvestmentAccountOwnershipInformation4) SetSignatoryRightIndicator(valu
 }
 
 func (i *InvestmentAccountOwnershipInformation4) AddModifiedInvestorProfileValidation() *ModificationScope11 {
-	newValue := new (ModificationScope11)
+	newValue := new(ModificationScope11)
 	i.ModifiedInvestorProfileValidation = append(i.ModifiedInvestorProfileValidation, newValue)
 	return newValue
 }
-

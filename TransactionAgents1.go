@@ -10,17 +10,17 @@ type TransactionAgents1 struct {
 	CreditorAgent *BranchAndFinancialInstitutionIdentification3 `xml:"CdtrAgt,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the debtor agent and the intermediary agent 2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt1,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the intermediary agent 1 and the intermediary agent 3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt2,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the intermediary agent 2 and the creditor agent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt3,omitempty"`
 
@@ -36,15 +36,13 @@ type TransactionAgents1 struct {
 	IssuingAgent *BranchAndFinancialInstitutionIdentification3 `xml:"IssgAgt,omitempty"`
 
 	// Place where settlement of the securities takes place.
-	// 
+	//
 	// Note : this is typed by a financial institution identification - as this is the standard way of identifying eg securities settlement agent/central system.
 	SettlementPlace *BranchAndFinancialInstitutionIdentification3 `xml:"SttlmPlc,omitempty"`
 
 	// Proprietary agent related to the underlying transaction.
 	Proprietary []*ProprietaryAgent1 `xml:"Prtry,omitempty"`
-
 }
-
 
 func (t *TransactionAgents1) AddDebtorAgent() *BranchAndFinancialInstitutionIdentification3 {
 	t.DebtorAgent = new(BranchAndFinancialInstitutionIdentification3)
@@ -92,8 +90,7 @@ func (t *TransactionAgents1) AddSettlementPlace() *BranchAndFinancialInstitution
 }
 
 func (t *TransactionAgents1) AddProprietary() *ProprietaryAgent1 {
-	newValue := new (ProprietaryAgent1)
+	newValue := new(ProprietaryAgent1)
 	t.Proprietary = append(t.Proprietary, newValue)
 	return newValue
 }
-

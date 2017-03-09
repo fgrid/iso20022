@@ -11,9 +11,7 @@ type TaxCalculationInformation3 struct {
 
 	// Amount of money that it is to be taxed.
 	TaxableAmount *ActiveCurrencyAnd13DecimalAmount `xml:"TaxblAmt,omitempty"`
-
 }
-
 
 func (t *TaxCalculationInformation3) AddBasis() *TaxationBasis1 {
 	t.Basis = new(TaxationBasis1)
@@ -28,4 +26,3 @@ func (t *TaxCalculationInformation3) AddEUCapitalGain() *EUCapitalGain1 {
 func (t *TaxCalculationInformation3) SetTaxableAmount(value, currency string) {
 	t.TaxableAmount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

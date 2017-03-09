@@ -20,9 +20,7 @@ type CardPaymentDataSet9 struct {
 
 	// Transaction in the batch, whose capture has been rejected.
 	RejectedTransaction []*CardPaymentDataSet8 `xml:"RjctdTx,omitempty"`
-
 }
-
 
 func (c *CardPaymentDataSet9) AddDataSetIdentification() *DataSetIdentification1 {
 	c.DataSetIdentification = new(DataSetIdentification1)
@@ -44,14 +42,13 @@ func (c *CardPaymentDataSet9) AddDataSetInitiator() *GenericIdentification32 {
 }
 
 func (c *CardPaymentDataSet9) AddTransactionTotals() *TransactionTotals2 {
-	newValue := new (TransactionTotals2)
+	newValue := new(TransactionTotals2)
 	c.TransactionTotals = append(c.TransactionTotals, newValue)
 	return newValue
 }
 
 func (c *CardPaymentDataSet9) AddRejectedTransaction() *CardPaymentDataSet8 {
-	newValue := new (CardPaymentDataSet8)
+	newValue := new(CardPaymentDataSet8)
 	c.RejectedTransaction = append(c.RejectedTransaction, newValue)
 	return newValue
 }
-

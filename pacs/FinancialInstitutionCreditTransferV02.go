@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.009.001.02 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.009.001.02 Document"`
 	Message *FinancialInstitutionCreditTransferV02 `xml:"FinInstnCdtTrf"`
 }
 
@@ -28,11 +28,9 @@ type FinancialInstitutionCreditTransferV02 struct {
 	// Set of characteristics shared by all individual transactions included in the message.
 	GroupHeader *iso20022.GroupHeader35 `xml:"GrpHdr"`
 
-	// Set of elements providing information specific to the individual credit transfer(s). 
+	// Set of elements providing information specific to the individual credit transfer(s).
 	CreditTransferTransactionInformation []*iso20022.CreditTransferTransactionInformation13 `xml:"CdtTrfTxInf"`
-
 }
-
 
 func (f *FinancialInstitutionCreditTransferV02) AddGroupHeader() *iso20022.GroupHeader35 {
 	f.GroupHeader = new(iso20022.GroupHeader35)
@@ -40,8 +38,7 @@ func (f *FinancialInstitutionCreditTransferV02) AddGroupHeader() *iso20022.Group
 }
 
 func (f *FinancialInstitutionCreditTransferV02) AddCreditTransferTransactionInformation() *iso20022.CreditTransferTransactionInformation13 {
-	newValue := new (iso20022.CreditTransferTransactionInformation13)
+	newValue := new(iso20022.CreditTransferTransactionInformation13)
 	f.CreditTransferTransactionInformation = append(f.CreditTransferTransactionInformation, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type SettlementTransactionCondition12Choice struct {
 
 	// Settlement conditions expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlementTransactionCondition12Choice) SetCode(value string) {
 	s.Code = (*SettlementTransactionCondition8Code)(&value)
@@ -20,4 +18,3 @@ func (s *SettlementTransactionCondition12Choice) AddProprietary() *GenericIdenti
 	s.Proprietary = new(GenericIdentification20)
 	return s.Proprietary
 }
-

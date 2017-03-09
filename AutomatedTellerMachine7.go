@@ -11,9 +11,7 @@ type AutomatedTellerMachine7 struct {
 
 	// ATM terminal device identification for the branch.
 	SequenceNumber *Max35Text `xml:"SeqNb,omitempty"`
-
 }
-
 
 func (a *AutomatedTellerMachine7) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (a *AutomatedTellerMachine7) SetAdditionalIdentification(value string) {
 func (a *AutomatedTellerMachine7) SetSequenceNumber(value string) {
 	a.SequenceNumber = (*Max35Text)(&value)
 }
-

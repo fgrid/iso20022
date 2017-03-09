@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.002.001.01 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:auth.002.001.01 Document"`
 	Message *InformationRequestResponseV01 `xml:"InfReqRspn"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document00200101) AddMessage() *InformationRequestResponseV01 {
 
 // This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.
 // The financial institution previously received a request for financial information in the scope of a financial investigation.
-// 
-// Depending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be 
-// •	provided in part or in full within the response message itself, or 
+//
+// Depending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be
+// •	provided in part or in full within the response message itself, or
 // •	only referred to in the response message
 type InformationRequestResponseV01 struct {
 
@@ -41,9 +41,7 @@ type InformationRequestResponseV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *InformationRequestResponseV01) SetResponseIdentification(value string) {
 	i.ResponseIdentification = (*iso20022.Max35Text)(&value)
@@ -63,14 +61,13 @@ func (i *InformationRequestResponseV01) AddSearchCriteria() *iso20022.SearchCrit
 }
 
 func (i *InformationRequestResponseV01) AddReturnIndicator() *iso20022.ReturnIndicator1 {
-	newValue := new (iso20022.ReturnIndicator1)
+	newValue := new(iso20022.ReturnIndicator1)
 	i.ReturnIndicator = append(i.ReturnIndicator, newValue)
 	return newValue
 }
 
 func (i *InformationRequestResponseV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

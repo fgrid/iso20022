@@ -14,9 +14,7 @@ type CancellationStatusAndReason struct {
 
 	// Party that initiates the status.
 	StatusInitiator *PartyIdentification1Choice `xml:"StsInitr,omitempty"`
-
 }
-
 
 func (c *CancellationStatusAndReason) AddStatus() *TransferCancellationStatus {
 	c.Status = new(TransferCancellationStatus)
@@ -37,4 +35,3 @@ func (c *CancellationStatusAndReason) AddStatusInitiator() *PartyIdentification1
 	c.StatusInitiator = new(PartyIdentification1Choice)
 	return c.StatusInitiator
 }
-

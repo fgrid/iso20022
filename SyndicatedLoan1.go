@@ -17,9 +17,7 @@ type SyndicatedLoan1 struct {
 
 	// Provides details on the currency exchange rate and contract.
 	ExchangeRateInformation *ExchangeRate1 `xml:"XchgRateInf,omitempty"`
-
 }
-
 
 func (s *SyndicatedLoan1) AddBorrower() *TradeParty2 {
 	s.Borrower = new(TradeParty2)
@@ -43,4 +41,3 @@ func (s *SyndicatedLoan1) AddExchangeRateInformation() *ExchangeRate1 {
 	s.ExchangeRateInformation = new(ExchangeRate1)
 	return s.ExchangeRateInformation
 }
-

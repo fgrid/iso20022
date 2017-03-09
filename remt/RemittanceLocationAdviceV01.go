@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:remt.002.001.01 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:remt.002.001.01 Document"`
 	Message *RemittanceLocationAdviceV01 `xml:"RmtLctnAdvc"`
 }
 
@@ -27,9 +27,7 @@ type RemittanceLocationAdviceV01 struct {
 
 	// Additional information that cannot be  captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (r *RemittanceLocationAdviceV01) AddGroupHeader() *iso20022.GroupHeader62 {
 	r.GroupHeader = new(iso20022.GroupHeader62)
@@ -37,14 +35,13 @@ func (r *RemittanceLocationAdviceV01) AddGroupHeader() *iso20022.GroupHeader62 {
 }
 
 func (r *RemittanceLocationAdviceV01) AddRemittanceLocation() *iso20022.RemittanceLocation3 {
-	newValue := new (iso20022.RemittanceLocation3)
+	newValue := new(iso20022.RemittanceLocation3)
 	r.RemittanceLocation = append(r.RemittanceLocation, newValue)
 	return newValue
 }
 
 func (r *RemittanceLocationAdviceV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	r.SupplementaryData = append(r.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type AcceptorCancellationResponse2 struct {
 
 	// Response from the acquirer to the cancellation transaction.
 	TransactionResponse *CardPaymentTransaction10 `xml:"TxRspn"`
-
 }
-
 
 func (a *AcceptorCancellationResponse2) AddEnvironment() *CardPaymentEnvironment11 {
 	a.Environment = new(CardPaymentEnvironment11)
@@ -29,4 +27,3 @@ func (a *AcceptorCancellationResponse2) AddTransactionResponse() *CardPaymentTra
 	a.TransactionResponse = new(CardPaymentTransaction10)
 	return a.TransactionResponse
 }
-

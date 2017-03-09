@@ -4,7 +4,7 @@ package iso20022
 type PaymentTransaction38 struct {
 
 	// Unique and unambiguous identifier of a cancellation request, as assigned by the assigner.
-	// 
+	//
 	// Usage: The cancellation request identification can be used for reconciliation or to link tasks relating to the cancellation request.
 	CancellationIdentification *Max35Text `xml:"CxlId,omitempty"`
 
@@ -45,9 +45,7 @@ type PaymentTransaction38 struct {
 
 	// Key elements used to identify the original transaction that is being referred to.
 	OriginalTransactionReference *OriginalTransactionReference16 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction38) SetCancellationIdentification(value string) {
 	p.CancellationIdentification = (*Max35Text)(&value)
@@ -98,7 +96,7 @@ func (p *PaymentTransaction38) AddAssignee() *BranchAndFinancialInstitutionIdent
 }
 
 func (p *PaymentTransaction38) AddCancellationReasonInformation() *PaymentCancellationReason2 {
-	newValue := new (PaymentCancellationReason2)
+	newValue := new(PaymentCancellationReason2)
 	p.CancellationReasonInformation = append(p.CancellationReasonInformation, newValue)
 	return newValue
 }
@@ -107,4 +105,3 @@ func (p *PaymentTransaction38) AddOriginalTransactionReference() *OriginalTransa
 	p.OriginalTransactionReference = new(OriginalTransactionReference16)
 	return p.OriginalTransactionReference
 }
-

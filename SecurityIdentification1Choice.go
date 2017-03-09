@@ -23,9 +23,7 @@ type SecurityIdentification1Choice struct {
 
 	// Identifier of securities issued in Luxembourg.  The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.
 	Common *EuroclearClearstreamIdentifier `xml:"Cmon"`
-
 }
-
 
 func (s *SecurityIdentification1Choice) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -55,4 +53,3 @@ func (s *SecurityIdentification1Choice) SetCTA(value string) {
 func (s *SecurityIdentification1Choice) SetCommon(value string) {
 	s.Common = (*EuroclearClearstreamIdentifier)(&value)
 }
-

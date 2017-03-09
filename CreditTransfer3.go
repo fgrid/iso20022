@@ -11,9 +11,7 @@ type CreditTransfer3 struct {
 
 	// Party that owes an amount of money to the creditor. The debtor is also the debit account owner.
 	DebtorDetails *Debtor2 `xml:"DbtrDtls,omitempty"`
-
 }
-
 
 func (c *CreditTransfer3) SetReference(value string) {
 	c.Reference = (*Max35Text)(&value)
@@ -28,4 +26,3 @@ func (c *CreditTransfer3) AddDebtorDetails() *Debtor2 {
 	c.DebtorDetails = new(Debtor2)
 	return c.DebtorDetails
 }
-

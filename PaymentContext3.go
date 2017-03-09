@@ -35,9 +35,7 @@ type PaymentContext3 struct {
 
 	// Method used to authenticate a cardholder.
 	AuthenticationMethod *CardholderAuthentication2 `xml:"AuthntcnMtd,omitempty"`
-
 }
-
 
 func (p *PaymentContext3) SetCardPresent(value string) {
 	p.CardPresent = (*TrueFalseIndicator)(&value)
@@ -83,4 +81,3 @@ func (p *PaymentContext3) AddAuthenticationMethod() *CardholderAuthentication2 {
 	p.AuthenticationMethod = new(CardholderAuthentication2)
 	return p.AuthenticationMethod
 }
-

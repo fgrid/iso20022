@@ -8,9 +8,7 @@ type ExpectedExecutionDetails1 struct {
 
 	// Expected date at which the financial instruments will be exchanged against cash.
 	ExpectedSettlementDate *ISODate `xml:"XpctdSttlmDt,omitempty"`
-
 }
-
 
 func (e *ExpectedExecutionDetails1) AddExpectedTradeDateTime() *DateAndDateTimeChoice {
 	e.ExpectedTradeDateTime = new(DateAndDateTimeChoice)
@@ -20,4 +18,3 @@ func (e *ExpectedExecutionDetails1) AddExpectedTradeDateTime() *DateAndDateTimeC
 func (e *ExpectedExecutionDetails1) SetExpectedSettlementDate(value string) {
 	e.ExpectedSettlementDate = (*ISODate)(&value)
 }
-

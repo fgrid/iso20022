@@ -8,9 +8,7 @@ type DateOrDateTimePeriodChoice struct {
 
 	// Period expressed a dates and times.
 	DateTime *DateTimePeriodDetails `xml:"DtTm"`
-
 }
-
 
 func (d *DateOrDateTimePeriodChoice) AddDate() *DatePeriodDetails {
 	d.Date = new(DatePeriodDetails)
@@ -21,4 +19,3 @@ func (d *DateOrDateTimePeriodChoice) AddDateTime() *DateTimePeriodDetails {
 	d.DateTime = new(DateTimePeriodDetails)
 	return d.DateTime
 }
-

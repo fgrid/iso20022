@@ -8,9 +8,7 @@ type InstructionStatus2Choice struct {
 
 	// Status advising on the rejection of the instruction.
 	RejectionStatus *InstructionRejectionStatus1 `xml:"RjctnSts"`
-
 }
-
 
 func (i *InstructionStatus2Choice) AddProcessingStatus() *InstructionProcessingStatus1 {
 	i.ProcessingStatus = new(InstructionProcessingStatus1)
@@ -21,4 +19,3 @@ func (i *InstructionStatus2Choice) AddRejectionStatus() *InstructionRejectionSta
 	i.RejectionStatus = new(InstructionRejectionStatus1)
 	return i.RejectionStatus
 }
-

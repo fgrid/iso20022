@@ -23,18 +23,16 @@ type TransportDetails3 struct {
 
 	// Specifies the applicable Incoterm and associated location.
 	Incoterms *Incoterms4 `xml:"Incotrms,omitempty"`
-
 }
 
-
 func (t *TransportDetails3) AddTransportDocumentReference() *DocumentIdentification7 {
-	newValue := new (DocumentIdentification7)
+	newValue := new(DocumentIdentification7)
 	t.TransportDocumentReference = append(t.TransportDocumentReference, newValue)
 	return newValue
 }
 
 func (t *TransportDetails3) AddTransportedGoods() *TransportedGoods1 {
-	newValue := new (TransportedGoods1)
+	newValue := new(TransportedGoods1)
 	t.TransportedGoods = append(t.TransportedGoods, newValue)
 	return newValue
 }
@@ -63,4 +61,3 @@ func (t *TransportDetails3) AddIncoterms() *Incoterms4 {
 	t.Incoterms = new(Incoterms4)
 	return t.Incoterms
 }
-

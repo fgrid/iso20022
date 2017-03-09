@@ -8,9 +8,7 @@ type Period2Choice struct {
 
 	// Time span defined by a start date and time, and an end date and time.
 	FromDateToDate *Period2 `xml:"FrDtToDt"`
-
 }
-
 
 func (p *Period2Choice) AddFromDateTimeToDateTime() *DateTimePeriodDetails {
 	p.FromDateTimeToDateTime = new(DateTimePeriodDetails)
@@ -21,4 +19,3 @@ func (p *Period2Choice) AddFromDateToDate() *Period2 {
 	p.FromDateToDate = new(Period2)
 	return p.FromDateToDate
 }
-

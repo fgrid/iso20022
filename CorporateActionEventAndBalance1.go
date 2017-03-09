@@ -14,9 +14,7 @@ type CorporateActionEventAndBalance1 struct {
 
 	// Provides additional information related to the event and the balance of the corporate action.
 	Extension []*Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionEventAndBalance1) AddGeneralInformation() *EventInformation1 {
 	c.GeneralInformation = new(EventInformation1)
@@ -34,8 +32,7 @@ func (c *CorporateActionEventAndBalance1) AddBalance() *CorporateActionBalanceDe
 }
 
 func (c *CorporateActionEventAndBalance1) AddExtension() *Extension2 {
-	newValue := new (Extension2)
+	newValue := new(Extension2)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

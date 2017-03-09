@@ -92,9 +92,7 @@ type SettlementDetails93 struct {
 
 	// Specifies the cash sub balance type indicator (example restriction type for a market infrastructure).
 	CashSubBalanceType *GenericIdentification30 `xml:"CshSubBalTp,omitempty"`
-
 }
-
 
 func (s *SettlementDetails93) AddHoldIndicator() *HoldIndicator6 {
 	s.HoldIndicator = new(HoldIndicator6)
@@ -112,7 +110,7 @@ func (s *SettlementDetails93) AddSecuritiesTransactionType() *SecuritiesTransact
 }
 
 func (s *SettlementDetails93) AddSettlementTransactionCondition() *SettlementTransactionCondition16Choice {
-	newValue := new (SettlementTransactionCondition16Choice)
+	newValue := new(SettlementTransactionCondition16Choice)
 	s.SettlementTransactionCondition = append(s.SettlementTransactionCondition, newValue)
 	return newValue
 }
@@ -243,4 +241,3 @@ func (s *SettlementDetails93) AddCashSubBalanceType() *GenericIdentification30 {
 	s.CashSubBalanceType = new(GenericIdentification30)
 	return s.CashSubBalanceType
 }
-

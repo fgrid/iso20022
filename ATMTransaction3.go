@@ -74,9 +74,7 @@ type ATMTransaction3 struct {
 
 	// Information on the cassettes of the ATM.
 	Cassette []*ATMCassette1 `xml:"Csstt,omitempty"`
-
 }
-
 
 func (a *ATMTransaction3) AddTransactionIdentification() *TransactionIdentifier1 {
 	a.TransactionIdentification = new(TransactionIdentifier1)
@@ -145,7 +143,7 @@ func (a *ATMTransaction3) AddCurrencyConversion() *CurrencyConversion4 {
 }
 
 func (a *ATMTransaction3) AddAdditionalCharge() *DetailedAmount13 {
-	newValue := new (DetailedAmount13)
+	newValue := new(DetailedAmount13)
 	a.AdditionalCharge = append(a.AdditionalCharge, newValue)
 	return newValue
 }
@@ -177,14 +175,13 @@ func (a *ATMTransaction3) SetICCRelatedData(value string) {
 }
 
 func (a *ATMTransaction3) AddATMTotals() *ATMTotals1 {
-	newValue := new (ATMTotals1)
+	newValue := new(ATMTotals1)
 	a.ATMTotals = append(a.ATMTotals, newValue)
 	return newValue
 }
 
 func (a *ATMTransaction3) AddCassette() *ATMCassette1 {
-	newValue := new (ATMCassette1)
+	newValue := new(ATMCassette1)
 	a.Cassette = append(a.Cassette, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type PendingSettlementStatusReason1 struct {
 
 	// Additional information about the reason for the settlement pending status in textual form.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PendingSettlementStatusReason1) SetStructured(value string) {
 	p.Structured = (*PendingSettlementStatusReason1Code)(&value)
@@ -19,4 +17,3 @@ func (p *PendingSettlementStatusReason1) SetStructured(value string) {
 func (p *PendingSettlementStatusReason1) SetAdditionalInformation(value string) {
 	p.AdditionalInformation = (*Max350Text)(&value)
 }
-

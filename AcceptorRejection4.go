@@ -11,16 +11,14 @@ type AcceptorRejection4 struct {
 
 	// Original request that caused the party to reject it.
 	MessageInError *Max100KBinary `xml:"MsgInErr,omitempty"`
-
 }
-
 
 func (a *AcceptorRejection4) SetRejectReason(value string) {
 	a.RejectReason = (*RejectReason1Code)(&value)
 }
 
 func (a *AcceptorRejection4) AddErrorReporting() *ErrorReporting1 {
-	newValue := new (ErrorReporting1)
+	newValue := new(ErrorReporting1)
 	a.ErrorReporting = append(a.ErrorReporting, newValue)
 	return newValue
 }
@@ -28,4 +26,3 @@ func (a *AcceptorRejection4) AddErrorReporting() *ErrorReporting1 {
 func (a *AcceptorRejection4) SetMessageInError(value string) {
 	a.MessageInError = (*Max100KBinary)(&value)
 }
-

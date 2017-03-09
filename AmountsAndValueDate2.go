@@ -11,9 +11,7 @@ type AmountsAndValueDate2 struct {
 
 	// Date on which the trade is settled, ie, the amounts are due.
 	FinalSettlementDate *ISODate `xml:"FnlSttlmDt"`
-
 }
-
 
 func (a *AmountsAndValueDate2) SetCallAmount(value, currency string) {
 	a.CallAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (a *AmountsAndValueDate2) SetPutAmount(value, currency string) {
 func (a *AmountsAndValueDate2) SetFinalSettlementDate(value string) {
 	a.FinalSettlementDate = (*ISODate)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.012.001.01 Document"`
+	XMLName xml.Name                                         `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.012.001.01 Document"`
 	Message *PartyRegistrationAndGuaranteeAcknowledgementV01 `xml:"PtyRegnAndGrntAck"`
 }
 
@@ -38,9 +38,7 @@ type PartyRegistrationAndGuaranteeAcknowledgementV01 struct {
 
 	// Referenced or related business message.
 	AttachedMessage []*iso20022.EncapsulatedBusinessMessage1 `xml:"AttchdMsg,omitempty"`
-
 }
-
 
 func (p *PartyRegistrationAndGuaranteeAcknowledgementV01) AddHeader() *iso20022.BusinessLetter1 {
 	p.Header = new(iso20022.BusinessLetter1)
@@ -48,7 +46,7 @@ func (p *PartyRegistrationAndGuaranteeAcknowledgementV01) AddHeader() *iso20022.
 }
 
 func (p *PartyRegistrationAndGuaranteeAcknowledgementV01) AddAcknowledgementList() *iso20022.FinancingAgreementList1 {
-	newValue := new (iso20022.FinancingAgreementList1)
+	newValue := new(iso20022.FinancingAgreementList1)
 	p.AcknowledgementList = append(p.AcknowledgementList, newValue)
 	return newValue
 }
@@ -66,8 +64,7 @@ func (p *PartyRegistrationAndGuaranteeAcknowledgementV01) SetControlSum(value st
 }
 
 func (p *PartyRegistrationAndGuaranteeAcknowledgementV01) AddAttachedMessage() *iso20022.EncapsulatedBusinessMessage1 {
-	newValue := new (iso20022.EncapsulatedBusinessMessage1)
+	newValue := new(iso20022.EncapsulatedBusinessMessage1)
 	p.AttachedMessage = append(p.AttachedMessage, newValue)
 	return newValue
 }
-

@@ -7,12 +7,10 @@ type FloatingRateNote2 struct {
 	ReferenceRateIndex *ISINOct2015Identifier `xml:"RefRateIndx"`
 
 	// Number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.
-	// 
+	//
 	// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
 	BasisPointSpread *Number `xml:"BsisPtSprd"`
-
 }
-
 
 func (f *FloatingRateNote2) SetReferenceRateIndex(value string) {
 	f.ReferenceRateIndex = (*ISINOct2015Identifier)(&value)
@@ -21,4 +19,3 @@ func (f *FloatingRateNote2) SetReferenceRateIndex(value string) {
 func (f *FloatingRateNote2) SetBasisPointSpread(value string) {
 	f.BasisPointSpread = (*Number)(&value)
 }
-

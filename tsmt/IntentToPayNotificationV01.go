@@ -7,7 +7,7 @@ import (
 )
 
 type Document04400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.044.001.01 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.044.001.01 Document"`
 	Message *IntentToPayNotificationV01 `xml:"InttToPayNtfctn"`
 }
 
@@ -34,19 +34,17 @@ type IntentToPayNotificationV01 struct {
 	// Reference to the transaction for the requesting financial institution.
 	SubmitterTransactionReference *iso20022.SimpleIdentificationInformation `xml:"SubmitrTxRef,omitempty"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
-	// 
+	// The financial institution of the buyer, uniquely identified by its BIC.
+	//
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
-	// 
+	// The financial institution of the seller, uniquely identified by its BIC.
+	//
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Provides the details of the intention to pay.
 	IntentToPay *iso20022.IntentToPay1 `xml:"InttToPay"`
-
 }
-
 
 func (i *IntentToPayNotificationV01) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	i.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -77,4 +75,3 @@ func (i *IntentToPayNotificationV01) AddIntentToPay() *iso20022.IntentToPay1 {
 	i.IntentToPay = new(iso20022.IntentToPay1)
 	return i.IntentToPay
 }
-

@@ -14,9 +14,7 @@ type PaginationBalance1 struct {
 
 	// Closing Balance of this page only. Must be the interemdiary opening balance of the next page (part of the same statement).
 	IntermediaryClosingBalance *FinancialInstrumentQuantity1 `xml:"IntrmyClsgBal,omitempty"`
-
 }
-
 
 func (p *PaginationBalance1) AddFirstOpeningBalance() *FinancialInstrumentQuantity1 {
 	p.FirstOpeningBalance = new(FinancialInstrumentQuantity1)
@@ -37,4 +35,3 @@ func (p *PaginationBalance1) AddIntermediaryClosingBalance() *FinancialInstrumen
 	p.IntermediaryClosingBalance = new(FinancialInstrumentQuantity1)
 	return p.IntermediaryClosingBalance
 }
-

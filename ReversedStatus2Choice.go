@@ -11,9 +11,7 @@ type ReversedStatus2Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (r *ReversedStatus2Choice) SetReason(value string) {
 	r.Reason = (*Max350Text)(&value)
@@ -27,4 +25,3 @@ func (r *ReversedStatus2Choice) AddDataSourceScheme() *GenericIdentification1 {
 func (r *ReversedStatus2Choice) SetNoSpecifiedReason(value string) {
 	r.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

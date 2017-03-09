@@ -7,7 +7,7 @@ import (
 )
 
 type Document01800105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.001.05 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:semt.018.001.05 Document"`
 	Message *SecuritiesTransactionPendingReportV05 `xml:"SctiesTxPdgRpt"`
 }
 
@@ -17,12 +17,12 @@ func (d *Document01800105) AddMessage() *SecuritiesTransactionPendingReportV05 {
 }
 
 // Scope
-// An account servicer sends a SecuritiesTransactionPendingReport to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending. 
+// An account servicer sends a SecuritiesTransactionPendingReport to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending.
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The statement may also include future settlement or forward transactions which have become binding on the account owner.
 // The message may also be used to:
@@ -30,7 +30,7 @@ func (d *Document01800105) AddMessage() *SecuritiesTransactionPendingReportV05 {
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesTransactionPendingReportV05 struct {
@@ -52,9 +52,7 @@ type SecuritiesTransactionPendingReportV05 struct {
 
 	// Details of the transactions reported.
 	Transactions []*iso20022.Transaction34 `xml:"Txs,omitempty"`
-
 }
-
 
 func (s *SecuritiesTransactionPendingReportV05) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -77,14 +75,13 @@ func (s *SecuritiesTransactionPendingReportV05) AddSafekeepingAccount() *iso2002
 }
 
 func (s *SecuritiesTransactionPendingReportV05) AddStatus() *iso20022.StatusAndReason18 {
-	newValue := new (iso20022.StatusAndReason18)
+	newValue := new(iso20022.StatusAndReason18)
 	s.Status = append(s.Status, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTransactionPendingReportV05) AddTransactions() *iso20022.Transaction34 {
-	newValue := new (iso20022.Transaction34)
+	newValue := new(iso20022.Transaction34)
 	s.Transactions = append(s.Transactions, newValue)
 	return newValue
 }
-

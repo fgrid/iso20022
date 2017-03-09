@@ -8,9 +8,7 @@ type Reference19 struct {
 
 	// After netting, reference that is common to a net transaction to settle and all its underlying trades
 	NetPositionIdentification *Max35Text `xml:"NetPosId,omitempty"`
-
 }
-
 
 func (r *Reference19) AddTradeLegNotificationIdentification(value string) {
 	r.TradeLegNotificationIdentification = append(r.TradeLegNotificationIdentification, (*Max35Text)(&value))
@@ -19,4 +17,3 @@ func (r *Reference19) AddTradeLegNotificationIdentification(value string) {
 func (r *Reference19) SetNetPositionIdentification(value string) {
 	r.NetPositionIdentification = (*Max35Text)(&value)
 }
-

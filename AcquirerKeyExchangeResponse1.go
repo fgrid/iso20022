@@ -8,9 +8,7 @@ type AcquirerKeyExchangeResponse1 struct {
 
 	// Key exchange transaction.
 	Transaction *CardTransaction14 `xml:"Tx"`
-
 }
-
 
 func (a *AcquirerKeyExchangeResponse1) AddEnvironment() *CardTransactionEnvironment6 {
 	a.Environment = new(CardTransactionEnvironment6)
@@ -21,4 +19,3 @@ func (a *AcquirerKeyExchangeResponse1) AddTransaction() *CardTransaction14 {
 	a.Transaction = new(CardTransaction14)
 	return a.Transaction
 }
-

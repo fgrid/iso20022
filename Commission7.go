@@ -11,9 +11,7 @@ type Commission7 struct {
 
 	// Service for which the commission is asked or paid.
 	Type *CommissionType1 `xml:"Tp"`
-
 }
-
 
 func (c *Commission7) SetAmount(value, currency string) {
 	c.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -27,4 +25,3 @@ func (c *Commission7) AddType() *CommissionType1 {
 	c.Type = new(CommissionType1)
 	return c.Type
 }
-

@@ -41,9 +41,7 @@ type Transaction28 struct {
 
 	// Identifies the details of the transaction.
 	TransactionDetails *TransactionDetails56 `xml:"TxDtls,omitempty"`
-
 }
-
 
 func (t *Transaction28) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -97,4 +95,3 @@ func (t *Transaction28) AddTransactionDetails() *TransactionDetails56 {
 	t.TransactionDetails = new(TransactionDetails56)
 	return t.TransactionDetails
 }
-

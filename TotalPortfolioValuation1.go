@@ -44,9 +44,7 @@ type TotalPortfolioValuation1 struct {
 
 	// Valuation information of the investment fund or investment fund share class.
 	InvestmentFundDetails []*InvestmentFund1 `xml:"InvstmtFndDtls,omitempty"`
-
 }
-
 
 func (t *TotalPortfolioValuation1) AddTotalPortfolioValue() *AmountAndDirection30 {
 	t.TotalPortfolioValue = new(AmountAndDirection30)
@@ -114,8 +112,7 @@ func (t *TotalPortfolioValuation1) AddAccruedIncome() *AmountAndDirection30 {
 }
 
 func (t *TotalPortfolioValuation1) AddInvestmentFundDetails() *InvestmentFund1 {
-	newValue := new (InvestmentFund1)
+	newValue := new(InvestmentFund1)
 	t.InvestmentFundDetails = append(t.InvestmentFundDetails, newValue)
 	return newValue
 }
-

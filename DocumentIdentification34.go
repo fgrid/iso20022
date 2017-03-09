@@ -8,9 +8,7 @@ type DocumentIdentification34 struct {
 
 	// Identification of the type of document.
 	DocumentNumber *DocumentNumber6Choice `xml:"DocNb,omitempty"`
-
 }
-
 
 func (d *DocumentIdentification34) AddIdentification() *DocumentIdentification4Choice {
 	d.Identification = new(DocumentIdentification4Choice)
@@ -21,4 +19,3 @@ func (d *DocumentIdentification34) AddDocumentNumber() *DocumentNumber6Choice {
 	d.DocumentNumber = new(DocumentNumber6Choice)
 	return d.DocumentNumber
 }
-

@@ -8,9 +8,7 @@ type DisputeResolutionType2Choice struct {
 
 	// Proprietary identification of the type of dispute that is to be resolved regarding the disputed collateral amount.
 	ProprietaryIdentification *GenericIdentification30 `xml:"PrtryId"`
-
 }
-
 
 func (d *DisputeResolutionType2Choice) SetCode(value string) {
 	d.Code = (*DisputeResolutionType2Code)(&value)
@@ -20,4 +18,3 @@ func (d *DisputeResolutionType2Choice) AddProprietaryIdentification() *GenericId
 	d.ProprietaryIdentification = new(GenericIdentification30)
 	return d.ProprietaryIdentification
 }
-

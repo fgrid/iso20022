@@ -8,9 +8,7 @@ type ContractRegistrationReference1Choice struct {
 
 	// Identification of the contract.
 	Contract *DocumentIdentification28 `xml:"Ctrct"`
-
 }
-
 
 func (c *ContractRegistrationReference1Choice) SetRegisteredContractIdentification(value string) {
 	c.RegisteredContractIdentification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (c *ContractRegistrationReference1Choice) AddContract() *DocumentIdentifica
 	c.Contract = new(DocumentIdentification28)
 	return c.Contract
 }
-

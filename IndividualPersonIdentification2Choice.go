@@ -8,9 +8,7 @@ type IndividualPersonIdentification2Choice struct {
 
 	// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').
 	PersonName *IndividualPerson30 `xml:"PrsnNm"`
-
 }
-
 
 func (i *IndividualPersonIdentification2Choice) AddIdentificationNumber() *GenericIdentification81 {
 	i.IdentificationNumber = new(GenericIdentification81)
@@ -21,4 +19,3 @@ func (i *IndividualPersonIdentification2Choice) AddPersonName() *IndividualPerso
 	i.PersonName = new(IndividualPerson30)
 	return i.PersonName
 }
-

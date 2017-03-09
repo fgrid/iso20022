@@ -11,9 +11,7 @@ type TMSTrigger1 struct {
 
 	// Date and time for calling the maintenance.
 	TMSContactDateTime *ISODateTime `xml:"TMSCtctDtTm,omitempty"`
-
 }
-
 
 func (t *TMSTrigger1) SetTMSContactLevel(value string) {
 	t.TMSContactLevel = (*TMSContactLevel1Code)(&value)
@@ -26,4 +24,3 @@ func (t *TMSTrigger1) SetTMSIdentification(value string) {
 func (t *TMSTrigger1) SetTMSContactDateTime(value string) {
 	t.TMSContactDateTime = (*ISODateTime)(&value)
 }
-

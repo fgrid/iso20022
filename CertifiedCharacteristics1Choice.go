@@ -23,9 +23,7 @@ type CertifiedCharacteristics1Choice struct {
 
 	// Indicates if the goods have passed the phytosanitary check.
 	PhytosanitaryIndication *YesNoIndicator `xml:"PhytosntryIndctn"`
-
 }
-
 
 func (c *CertifiedCharacteristics1Choice) SetOrigin(value string) {
 	c.Origin = (*CountryCode)(&value)
@@ -56,4 +54,3 @@ func (c *CertifiedCharacteristics1Choice) SetHealthIndication(value string) {
 func (c *CertifiedCharacteristics1Choice) SetPhytosanitaryIndication(value string) {
 	c.PhytosanitaryIndication = (*YesNoIndicator)(&value)
 }
-

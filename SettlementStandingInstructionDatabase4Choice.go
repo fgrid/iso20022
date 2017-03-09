@@ -8,9 +8,7 @@ type SettlementStandingInstructionDatabase4Choice struct {
 
 	// Settlement standing instruction database expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlementStandingInstructionDatabase4Choice) SetCode(value string) {
 	s.Code = (*SettlementStandingInstructionDatabase1Code)(&value)
@@ -20,4 +18,3 @@ func (s *SettlementStandingInstructionDatabase4Choice) AddProprietary() *Generic
 	s.Proprietary = new(GenericIdentification30)
 	return s.Proprietary
 }
-

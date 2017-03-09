@@ -8,9 +8,7 @@ type InterestRate1Choice struct {
 
 	// Provides details about the variable rate.
 	VariableInterestRate *VariableInterest1Rate `xml:"VarblIntrstRate"`
-
 }
-
 
 func (i *InterestRate1Choice) SetFixedInterestRate(value string) {
 	i.FixedInterestRate = (*PercentageRate)(&value)
@@ -20,4 +18,3 @@ func (i *InterestRate1Choice) AddVariableInterestRate() *VariableInterest1Rate {
 	i.VariableInterestRate = new(VariableInterest1Rate)
 	return i.VariableInterestRate
 }
-

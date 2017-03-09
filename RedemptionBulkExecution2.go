@@ -26,9 +26,7 @@ type RedemptionBulkExecution2 struct {
 
 	// Payment transaction related to the execution of an investment fund transaction.
 	BulkCashSettlementDetails *PaymentTransaction18 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkExecution2) SetPlaceOfTrade(value string) {
 	r.PlaceOfTrade = (*CountryCode)(&value)
@@ -49,7 +47,7 @@ func (r *RedemptionBulkExecution2) AddFinancialInstrumentDetails() *FinancialIns
 }
 
 func (r *RedemptionBulkExecution2) AddIndividualExecutionDetails() *RedemptionExecution3 {
-	newValue := new (RedemptionExecution3)
+	newValue := new(RedemptionExecution3)
 	r.IndividualExecutionDetails = append(r.IndividualExecutionDetails, newValue)
 	return newValue
 }
@@ -66,4 +64,3 @@ func (r *RedemptionBulkExecution2) AddBulkCashSettlementDetails() *PaymentTransa
 	r.BulkCashSettlementDetails = new(PaymentTransaction18)
 	return r.BulkCashSettlementDetails
 }
-

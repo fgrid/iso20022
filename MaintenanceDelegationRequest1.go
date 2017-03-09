@@ -11,9 +11,7 @@ type MaintenanceDelegationRequest1 struct {
 
 	// Information on the delegation of a maintenance action.
 	RequestedDelegation []*MaintenanceDelegation1 `xml:"ReqdDlgtn"`
-
 }
-
 
 func (m *MaintenanceDelegationRequest1) AddTMIdentification() *GenericIdentification72 {
 	m.TMIdentification = new(GenericIdentification72)
@@ -26,8 +24,7 @@ func (m *MaintenanceDelegationRequest1) AddMasterTMIdentification() *GenericIden
 }
 
 func (m *MaintenanceDelegationRequest1) AddRequestedDelegation() *MaintenanceDelegation1 {
-	newValue := new (MaintenanceDelegation1)
+	newValue := new(MaintenanceDelegation1)
 	m.RequestedDelegation = append(m.RequestedDelegation, newValue)
 	return newValue
 }
-

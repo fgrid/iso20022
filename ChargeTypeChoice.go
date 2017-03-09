@@ -8,9 +8,7 @@ type ChargeTypeChoice struct {
 
 	// Type of charge is a bilaterally agreed code.
 	ProprietaryCode *Max4AlphaNumericText `xml:"PrtryCd"`
-
 }
-
 
 func (c *ChargeTypeChoice) SetCode(value string) {
 	c.Code = (*ChargeType1Code)(&value)
@@ -19,4 +17,3 @@ func (c *ChargeTypeChoice) SetCode(value string) {
 func (c *ChargeTypeChoice) SetProprietaryCode(value string) {
 	c.ProprietaryCode = (*Max4AlphaNumericText)(&value)
 }
-

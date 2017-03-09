@@ -16,14 +16,12 @@ type ExchangeConfiguration3 struct {
 	TimeCondition *ProcessTiming2 `xml:"TmCond,omitempty"`
 
 	// Failed transaction must be exchanged.
-	// 
+	//
 	ExchangeFailed *TrueFalseIndicator `xml:"XchgFaild,omitempty"`
 
 	// Indicates that declined transaction must be exchanged
 	ExchangeDeclined *TrueFalseIndicator `xml:"XchgDclnd,omitempty"`
-
 }
-
 
 func (e *ExchangeConfiguration3) AddExchangePolicy(value string) {
 	e.ExchangePolicy = append(e.ExchangePolicy, (*ExchangePolicy1Code)(&value))
@@ -49,4 +47,3 @@ func (e *ExchangeConfiguration3) SetExchangeFailed(value string) {
 func (e *ExchangeConfiguration3) SetExchangeDeclined(value string) {
 	e.ExchangeDeclined = (*TrueFalseIndicator)(&value)
 }
-

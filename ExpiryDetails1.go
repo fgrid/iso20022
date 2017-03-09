@@ -8,9 +8,7 @@ type ExpiryDetails1 struct {
 
 	// Additional information related to the expiry and expiry extension.
 	AdditionalExpiryInformation []*Max2000Text `xml:"AddtlXpryInf,omitempty"`
-
 }
-
 
 func (e *ExpiryDetails1) AddExpiryTerms() *ExpiryTerms1 {
 	e.ExpiryTerms = new(ExpiryTerms1)
@@ -20,4 +18,3 @@ func (e *ExpiryDetails1) AddExpiryTerms() *ExpiryTerms1 {
 func (e *ExpiryDetails1) AddAdditionalExpiryInformation(value string) {
 	e.AdditionalExpiryInformation = append(e.AdditionalExpiryInformation, (*Max2000Text)(&value))
 }
-

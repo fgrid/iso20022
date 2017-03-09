@@ -14,9 +14,7 @@ type CorporateActionNarrative35 struct {
 
 	// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA)
 	TaxationConditions []*RestrictedFINXMax350Text `xml:"TaxtnConds,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative35) AddAdditionalText(value string) {
 	c.AdditionalText = append(c.AdditionalText, (*RestrictedFINXMax350Text)(&value))
@@ -33,4 +31,3 @@ func (c *CorporateActionNarrative35) AddPartyContactNarrative(value string) {
 func (c *CorporateActionNarrative35) AddTaxationConditions(value string) {
 	c.TaxationConditions = append(c.TaxationConditions, (*RestrictedFINXMax350Text)(&value))
 }
-

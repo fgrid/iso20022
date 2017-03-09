@@ -23,9 +23,7 @@ type RegisteredContract2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (r *RegisteredContract2) SetRegisteredContractClosureIdentification(value string) {
 	r.RegisteredContractClosureIdentification = (*Max35Text)(&value)
@@ -56,8 +54,7 @@ func (r *RegisteredContract2) AddClosureReason() *ContractClosureReason1Choice {
 }
 
 func (r *RegisteredContract2) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	r.SupplementaryData = append(r.SupplementaryData, newValue)
 	return newValue
 }
-

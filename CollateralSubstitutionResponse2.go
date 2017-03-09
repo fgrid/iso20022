@@ -14,9 +14,7 @@ type CollateralSubstitutionResponse2 struct {
 
 	// Provides additional information about the collateral substitution request rejection.
 	RejectionReasonInformation *Max140Text `xml:"RjctnRsnInf,omitempty"`
-
 }
-
 
 func (c *CollateralSubstitutionResponse2) SetCollateralSubstitutionRequestIdentification(value string) {
 	c.CollateralSubstitutionRequestIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (c *CollateralSubstitutionResponse2) SetRejectionReason(value string) {
 func (c *CollateralSubstitutionResponse2) SetRejectionReasonInformation(value string) {
 	c.RejectionReasonInformation = (*Max140Text)(&value)
 }
-

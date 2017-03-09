@@ -23,9 +23,7 @@ type ExtendOrPayQuery1 struct {
 
 	// Additional information related to the request.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (e *ExtendOrPayQuery1) AddUndertakingIdentification() *Undertaking9 {
 	e.UndertakingIdentification = new(Undertaking9)
@@ -47,13 +45,13 @@ func (e *ExtendOrPayQuery1) AddBankInstructions() *BankInstructions1 {
 }
 
 func (e *ExtendOrPayQuery1) AddBankContact() *Contacts3 {
-	newValue := new (Contacts3)
+	newValue := new(Contacts3)
 	e.BankContact = append(e.BankContact, newValue)
 	return newValue
 }
 
 func (e *ExtendOrPayQuery1) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	e.EnclosedFile = append(e.EnclosedFile, newValue)
 	return newValue
 }
@@ -61,4 +59,3 @@ func (e *ExtendOrPayQuery1) AddEnclosedFile() *Document9 {
 func (e *ExtendOrPayQuery1) AddAdditionalInformation(value string) {
 	e.AdditionalInformation = append(e.AdditionalInformation, (*Max2000Text)(&value))
 }
-

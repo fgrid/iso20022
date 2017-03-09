@@ -23,9 +23,7 @@ type CorporateActionRate1 struct {
 
 	// Rate used to calculate the amount of the charges/fees that cannot be categorised.
 	Charges *RateAndAmountFormat1Choice `xml:"Chrgs,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate1) AddInterest() *RateAndAmountFormat1Choice {
 	c.Interest = new(RateAndAmountFormat1Choice)
@@ -61,4 +59,3 @@ func (c *CorporateActionRate1) AddCharges() *RateAndAmountFormat1Choice {
 	c.Charges = new(RateAndAmountFormat1Choice)
 	return c.Charges
 }
-

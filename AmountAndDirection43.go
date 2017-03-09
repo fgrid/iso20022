@@ -11,9 +11,7 @@ type AmountAndDirection43 struct {
 
 	// Date of the amount.
 	Date *ISODate `xml:"Dt,omitempty"`
-
 }
-
 
 func (a *AmountAndDirection43) SetAmount(value, currency string) {
 	a.Amount = NewCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (a *AmountAndDirection43) SetSign(value string) {
 func (a *AmountAndDirection43) SetDate(value string) {
 	a.Date = (*ISODate)(&value)
 }
-

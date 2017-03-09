@@ -11,9 +11,7 @@ type SettlementTypeAndIdentification4 struct {
 
 	// Specifies how the transaction is to be settled, for example, against payment.
 	Payment *DeliveryReceiptType2Code `xml:"Pmt,omitempty"`
-
 }
-
 
 func (s *SettlementTypeAndIdentification4) SetTransactionIdentification(value string) {
 	s.TransactionIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (s *SettlementTypeAndIdentification4) SetSecuritiesMovementType(value strin
 func (s *SettlementTypeAndIdentification4) SetPayment(value string) {
 	s.Payment = (*DeliveryReceiptType2Code)(&value)
 }
-

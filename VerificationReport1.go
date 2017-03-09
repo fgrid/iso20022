@@ -17,9 +17,7 @@ type VerificationReport1 struct {
 
 	// Provides party and/or account identification information.
 	UpdatedPartyAndAccountIdentification *IdentificationInformation1 `xml:"UpdtdPtyAndAcctId,omitempty"`
-
 }
-
 
 func (v *VerificationReport1) SetOriginalIdentification(value string) {
 	v.OriginalIdentification = (*Max35Text)(&value)
@@ -43,4 +41,3 @@ func (v *VerificationReport1) AddUpdatedPartyAndAccountIdentification() *Identif
 	v.UpdatedPartyAndAccountIdentification = new(IdentificationInformation1)
 	return v.UpdatedPartyAndAccountIdentification
 }
-

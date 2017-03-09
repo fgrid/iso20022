@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.001.001.06 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.001.001.06 Document"`
 	Message *AccountOpeningInstructionV06 `xml:"AcctOpngInstr"`
 }
 
@@ -71,9 +71,7 @@ type AccountOpeningInstructionV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountOpeningInstructionV06) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -106,7 +104,7 @@ func (a *AccountOpeningInstructionV06) AddAccountParties() *iso20022.AccountPart
 }
 
 func (a *AccountOpeningInstructionV06) AddIntermediaries() *iso20022.Intermediary36 {
-	newValue := new (iso20022.Intermediary36)
+	newValue := new(iso20022.Intermediary36)
 	a.Intermediaries = append(a.Intermediaries, newValue)
 	return newValue
 }
@@ -122,31 +120,31 @@ func (a *AccountOpeningInstructionV06) AddNewIssueAllocation() *iso20022.NewIssu
 }
 
 func (a *AccountOpeningInstructionV06) AddSavingsInvestmentPlan() *iso20022.InvestmentPlan12 {
-	newValue := new (iso20022.InvestmentPlan12)
+	newValue := new(iso20022.InvestmentPlan12)
 	a.SavingsInvestmentPlan = append(a.SavingsInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountOpeningInstructionV06) AddWithdrawalInvestmentPlan() *iso20022.InvestmentPlan12 {
-	newValue := new (iso20022.InvestmentPlan12)
+	newValue := new(iso20022.InvestmentPlan12)
 	a.WithdrawalInvestmentPlan = append(a.WithdrawalInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountOpeningInstructionV06) AddCashSettlement() *iso20022.CashSettlement1 {
-	newValue := new (iso20022.CashSettlement1)
+	newValue := new(iso20022.CashSettlement1)
 	a.CashSettlement = append(a.CashSettlement, newValue)
 	return newValue
 }
 
 func (a *AccountOpeningInstructionV06) AddServiceLevelAgreement() *iso20022.DocumentToSend3 {
-	newValue := new (iso20022.DocumentToSend3)
+	newValue := new(iso20022.DocumentToSend3)
 	a.ServiceLevelAgreement = append(a.ServiceLevelAgreement, newValue)
 	return newValue
 }
 
 func (a *AccountOpeningInstructionV06) AddAdditionalInformation() *iso20022.AccountRestrictions1 {
-	newValue := new (iso20022.AccountRestrictions1)
+	newValue := new(iso20022.AccountRestrictions1)
 	a.AdditionalInformation = append(a.AdditionalInformation, newValue)
 	return newValue
 }
@@ -157,8 +155,7 @@ func (a *AccountOpeningInstructionV06) AddMarketPracticeVersion() *iso20022.Mark
 }
 
 func (a *AccountOpeningInstructionV06) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

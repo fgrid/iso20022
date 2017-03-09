@@ -17,9 +17,7 @@ type FinancialInstitutionIdentification5Choice struct {
 
 	// Unique and unambiguous identification of a financial institution, through a combimation of globally recognised or proprietary identification scheme.
 	CombinedIdentification *FinancialInstitutionIdentification3 `xml:"CmbndId"`
-
 }
-
 
 func (f *FinancialInstitutionIdentification5Choice) SetBIC(value string) {
 	f.BIC = (*BICIdentifier)(&value)
@@ -44,4 +42,3 @@ func (f *FinancialInstitutionIdentification5Choice) AddCombinedIdentification() 
 	f.CombinedIdentification = new(FinancialInstitutionIdentification3)
 	return f.CombinedIdentification
 }
-

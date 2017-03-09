@@ -8,9 +8,7 @@ type CollateralProposalResponse2Choice struct {
 
 	// Provides the collateral proposal response for the segregated independent amount only.
 	SegregatedIndependentAmount *CollateralProposalResponseType2 `xml:"SgrtdIndpdntAmt"`
-
 }
-
 
 func (c *CollateralProposalResponse2Choice) AddCollateralProposal() *CollateralProposalResponse2 {
 	c.CollateralProposal = new(CollateralProposalResponse2)
@@ -21,4 +19,3 @@ func (c *CollateralProposalResponse2Choice) AddSegregatedIndependentAmount() *Co
 	c.SegregatedIndependentAmount = new(CollateralProposalResponseType2)
 	return c.SegregatedIndependentAmount
 }
-

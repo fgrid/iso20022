@@ -14,9 +14,7 @@ type SubscriptionMultipleOrderInstruction1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SubscriptionMultipleOrderInstruction1) AddMultipleOrderDetails() *SubscriptionMultipleOrder2 {
 	s.MultipleOrderDetails = new(SubscriptionMultipleOrder2)
@@ -24,7 +22,7 @@ func (s *SubscriptionMultipleOrderInstruction1) AddMultipleOrderDetails() *Subsc
 }
 
 func (s *SubscriptionMultipleOrderInstruction1) AddIntermediaryDetails() *Intermediary4 {
-	newValue := new (Intermediary4)
+	newValue := new(Intermediary4)
 	s.IntermediaryDetails = append(s.IntermediaryDetails, newValue)
 	return newValue
 }
@@ -35,8 +33,7 @@ func (s *SubscriptionMultipleOrderInstruction1) AddCopyDetails() *CopyInformatio
 }
 
 func (s *SubscriptionMultipleOrderInstruction1) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

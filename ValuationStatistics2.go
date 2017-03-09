@@ -20,9 +20,7 @@ type ValuationStatistics2 struct {
 
 	// Information related to price variations, expressed using user-defined periods.
 	ByUserDefinedTimePeriod []*StatisticsByUserDefinedTimePeriod1 `xml:"ByUsrDfndTmPrd,omitempty"`
-
 }
-
 
 func (v *ValuationStatistics2) SetCurrency(value string) {
 	v.Currency = (*ActiveOrHistoricCurrencyCode)(&value)
@@ -48,8 +46,7 @@ func (v *ValuationStatistics2) AddByPredefinedTimePeriods() *StatisticsByPredefi
 }
 
 func (v *ValuationStatistics2) AddByUserDefinedTimePeriod() *StatisticsByUserDefinedTimePeriod1 {
-	newValue := new (StatisticsByUserDefinedTimePeriod1)
+	newValue := new(StatisticsByUserDefinedTimePeriod1)
 	v.ByUserDefinedTimePeriod = append(v.ByUserDefinedTimePeriod, newValue)
 	return newValue
 }
-

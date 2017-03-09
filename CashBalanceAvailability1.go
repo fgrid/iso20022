@@ -11,9 +11,7 @@ type CashBalanceAvailability1 struct {
 
 	// Indicates whether the availability balance is a credit or a debit balance. A zero balance is considered to be a credit balance
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd"`
-
 }
-
 
 func (c *CashBalanceAvailability1) AddDate() *CashBalanceAvailabilityDate1 {
 	c.Date = new(CashBalanceAvailabilityDate1)
@@ -27,4 +25,3 @@ func (c *CashBalanceAvailability1) SetAmount(value, currency string) {
 func (c *CashBalanceAvailability1) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

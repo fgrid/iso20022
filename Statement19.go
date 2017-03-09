@@ -20,9 +20,7 @@ type Statement19 struct {
 
 	// Indicates whether there is activity or information update reported in the statement.
 	ActivityIndicator *YesNoIndicator `xml:"ActvtyInd"`
-
 }
-
 
 func (s *Statement19) SetCounterpartyPortfolioTransferNotificationReference(value string) {
 	s.CounterpartyPortfolioTransferNotificationReference = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (s *Statement19) AddUpdateType() *UpdateType2Choice {
 func (s *Statement19) SetActivityIndicator(value string) {
 	s.ActivityIndicator = (*YesNoIndicator)(&value)
 }
-

@@ -35,9 +35,7 @@ type TaxInformation4 struct {
 
 	// Record of tax details.
 	Record []*TaxRecord1 `xml:"Rcrd,omitempty"`
-
 }
-
 
 func (t *TaxInformation4) AddCreditor() *TaxParty1 {
 	t.Creditor = new(TaxParty1)
@@ -83,8 +81,7 @@ func (t *TaxInformation4) SetSequenceNumber(value string) {
 }
 
 func (t *TaxInformation4) AddRecord() *TaxRecord1 {
-	newValue := new (TaxRecord1)
+	newValue := new(TaxRecord1)
 	t.Record = append(t.Record, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type PartyIdentification12Choice struct {
 
 	// Unique and unambiguous way to identify an organisation.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PartyIdentification12Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -27,4 +25,3 @@ func (p *PartyIdentification12Choice) AddNameAndAddress() *NameAndAddress5 {
 func (p *PartyIdentification12Choice) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

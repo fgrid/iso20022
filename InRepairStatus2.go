@@ -8,9 +8,7 @@ type InRepairStatus2 struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (i *InRepairStatus2) AddReasonDetails() *InRepairStatusReason3 {
 	i.ReasonDetails = new(InRepairStatusReason3)
@@ -20,4 +18,3 @@ func (i *InRepairStatus2) AddReasonDetails() *InRepairStatusReason3 {
 func (i *InRepairStatus2) SetNoSpecifiedReason(value string) {
 	i.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

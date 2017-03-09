@@ -8,9 +8,7 @@ type ErrorAction2 struct {
 
 	// Action to be processed for the related errors.
 	ActionToProcess *TerminalManagementErrorAction2Code `xml:"ActnToPrc"`
-
 }
-
 
 func (e *ErrorAction2) AddActionResult(value string) {
 	e.ActionResult = append(e.ActionResult, (*TerminalManagementActionResult1Code)(&value))
@@ -19,4 +17,3 @@ func (e *ErrorAction2) AddActionResult(value string) {
 func (e *ErrorAction2) SetActionToProcess(value string) {
 	e.ActionToProcess = (*TerminalManagementErrorAction2Code)(&value)
 }
-

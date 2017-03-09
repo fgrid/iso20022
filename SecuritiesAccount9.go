@@ -23,9 +23,7 @@ type SecuritiesAccount9 struct {
 
 	// Specifies the form of the financial instrument.
 	SecurityHoldingForm *FormOfSecurity1Code `xml:"SctyHldgForm,omitempty"`
-
 }
-
 
 func (s *SecuritiesAccount9) SetCreditDebitIndicator(value string) {
 	s.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -57,4 +55,3 @@ func (s *SecuritiesAccount9) SetOptionNumber(value string) {
 func (s *SecuritiesAccount9) SetSecurityHoldingForm(value string) {
 	s.SecurityHoldingForm = (*FormOfSecurity1Code)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.023.001.02 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.023.001.02 Document"`
 	Message *IdentificationVerificationRequestV02 `xml:"IdVrfctnReq"`
 }
 
@@ -31,9 +31,7 @@ type IdentificationVerificationRequestV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IdentificationVerificationRequestV02) AddAssignment() *iso20022.IdentificationAssignment2 {
 	i.Assignment = new(iso20022.IdentificationAssignment2)
@@ -41,14 +39,13 @@ func (i *IdentificationVerificationRequestV02) AddAssignment() *iso20022.Identif
 }
 
 func (i *IdentificationVerificationRequestV02) AddVerification() *iso20022.IdentificationVerification2 {
-	newValue := new (iso20022.IdentificationVerification2)
+	newValue := new(iso20022.IdentificationVerification2)
 	i.Verification = append(i.Verification, newValue)
 	return newValue
 }
 
 func (i *IdentificationVerificationRequestV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

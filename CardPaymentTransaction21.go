@@ -29,9 +29,7 @@ type CardPaymentTransaction21 struct {
 
 	// Result of the original transaction.
 	TransactionResult *CardPaymentTransactionResult1 `xml:"TxRslt,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransaction21) SetSaleReferenceIdentification(value string) {
 	c.SaleReferenceIdentification = (*Max35Text)(&value)
@@ -71,4 +69,3 @@ func (c *CardPaymentTransaction21) AddTransactionResult() *CardPaymentTransactio
 	c.TransactionResult = new(CardPaymentTransactionResult1)
 	return c.TransactionResult
 }
-

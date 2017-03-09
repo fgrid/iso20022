@@ -14,9 +14,7 @@ type DateAndPlaceOfBirth struct {
 
 	// Country where a person was born.
 	CountryOfBirth *CountryCode `xml:"CtryOfBirth"`
-
 }
-
 
 func (d *DateAndPlaceOfBirth) SetBirthDate(value string) {
 	d.BirthDate = (*ISODate)(&value)
@@ -33,4 +31,3 @@ func (d *DateAndPlaceOfBirth) SetCityOfBirth(value string) {
 func (d *DateAndPlaceOfBirth) SetCountryOfBirth(value string) {
 	d.CountryOfBirth = (*CountryCode)(&value)
 }
-

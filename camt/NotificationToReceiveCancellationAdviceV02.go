@@ -7,7 +7,7 @@ import (
 )
 
 type Document05800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.058.001.02 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.058.001.02 Document"`
 	Message *NotificationToReceiveCancellationAdviceV02 `xml:"NtfctnToRcvCxlAdvc"`
 }
 
@@ -27,9 +27,7 @@ type NotificationToReceiveCancellationAdviceV02 struct {
 
 	// Set of elements used to identify the original notification, to which the cancellation advice refers.
 	OriginalNotification *iso20022.OriginalNotification4 `xml:"OrgnlNtfctn"`
-
 }
-
 
 func (n *NotificationToReceiveCancellationAdviceV02) AddGroupHeader() *iso20022.GroupHeader43 {
 	n.GroupHeader = new(iso20022.GroupHeader43)
@@ -40,4 +38,3 @@ func (n *NotificationToReceiveCancellationAdviceV02) AddOriginalNotification() *
 	n.OriginalNotification = new(iso20022.OriginalNotification4)
 	return n.OriginalNotification
 }
-

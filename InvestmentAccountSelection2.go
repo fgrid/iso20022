@@ -8,9 +8,7 @@ type InvestmentAccountSelection2 struct {
 
 	// Various investment account information used to select a specific account.
 	OtherAccountSelectionData *InvestmentAccount29 `xml:"OthrAcctSelctnData"`
-
 }
-
 
 func (i *InvestmentAccountSelection2) AddAccountIdentification() *AccountIdentification1 {
 	i.AccountIdentification = new(AccountIdentification1)
@@ -21,4 +19,3 @@ func (i *InvestmentAccountSelection2) AddOtherAccountSelectionData() *Investment
 	i.OtherAccountSelectionData = new(InvestmentAccount29)
 	return i.OtherAccountSelectionData
 }
-

@@ -8,9 +8,7 @@ type CorporateAction9 struct {
 
 	// Identification of a corporate action assigned by an official central body/entity within a given market.
 	EventIdentification *Max35Text `xml:"EvtId"`
-
 }
-
 
 func (c *CorporateAction9) SetEventType(value string) {
 	c.EventType = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (c *CorporateAction9) SetEventType(value string) {
 func (c *CorporateAction9) SetEventIdentification(value string) {
 	c.EventIdentification = (*Max35Text)(&value)
 }
-

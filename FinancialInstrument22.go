@@ -35,9 +35,7 @@ type FinancialInstrument22 struct {
 
 	// Countries where the fund is registered for distribution.
 	RegisteredDistributionCountry []*CountryCode `xml:"RegdDstrbtnCtry,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument22) SetClassType(value string) {
 	f.ClassType = (*Max35Text)(&value)
@@ -82,4 +80,3 @@ func (f *FinancialInstrument22) SetCountryOfDomicile(value string) {
 func (f *FinancialInstrument22) AddRegisteredDistributionCountry(value string) {
 	f.RegisteredDistributionCountry = append(f.RegisteredDistributionCountry, (*CountryCode)(&value))
 }
-

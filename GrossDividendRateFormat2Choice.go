@@ -8,9 +8,7 @@ type GrossDividendRateFormat2Choice struct {
 
 	// Specifies different formats for the gross dividend rate.
 	RateTypeAndAmountAndRateStatus *RateTypeAndAmountAndStatus1 `xml:"RateTpAndAmtAndRateSts"`
-
 }
-
 
 func (g *GrossDividendRateFormat2Choice) SetAmount(value, currency string) {
 	g.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -20,4 +18,3 @@ func (g *GrossDividendRateFormat2Choice) AddRateTypeAndAmountAndRateStatus() *Ra
 	g.RateTypeAndAmountAndRateStatus = new(RateTypeAndAmountAndStatus1)
 	return g.RateTypeAndAmountAndRateStatus
 }
-

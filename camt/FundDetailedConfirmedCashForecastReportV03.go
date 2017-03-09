@@ -7,7 +7,7 @@ import (
 )
 
 type Document04300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.043.001.03 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.043.001.03 Document"`
 	Message *FundDetailedConfirmedCashForecastReportV03 `xml:"FndDtldConfdCshFcstRptV03"`
 }
 
@@ -48,9 +48,7 @@ type FundDetailedConfirmedCashForecastReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundDetailedConfirmedCashForecastReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	f.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -63,13 +61,13 @@ func (f *FundDetailedConfirmedCashForecastReportV03) AddPoolReference() *iso2002
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.PreviousReference = append(f.PreviousReference, newValue)
 	return newValue
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
@@ -80,7 +78,7 @@ func (f *FundDetailedConfirmedCashForecastReportV03) AddMessagePagination() *iso
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV03) AddFundCashForecastDetails() *iso20022.FundCashForecast4 {
-	newValue := new (iso20022.FundCashForecast4)
+	newValue := new(iso20022.FundCashForecast4)
 	f.FundCashForecastDetails = append(f.FundCashForecastDetails, newValue)
 	return newValue
 }
@@ -91,8 +89,7 @@ func (f *FundDetailedConfirmedCashForecastReportV03) AddConsolidatedNetCashForec
 }
 
 func (f *FundDetailedConfirmedCashForecastReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

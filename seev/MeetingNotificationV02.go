@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.02 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.001.001.02 Document"`
 	Message *MeetingNotificationV02 `xml:"MtgNtfctn"`
 }
 
@@ -62,9 +62,7 @@ type MeetingNotificationV02 struct {
 
 	// Specifies requirements relative to the use of Power of Attorney.
 	PowerOfAttorneyRequirements *iso20022.PowerOfAttorneyRequirements2 `xml:"PwrOfAttnyRqrmnts,omitempty"`
-
 }
-
 
 func (m *MeetingNotificationV02) AddMeetingNotificationIdentification() *iso20022.MessageIdentification1 {
 	m.MeetingNotificationIdentification = new(iso20022.MessageIdentification1)
@@ -87,7 +85,7 @@ func (m *MeetingNotificationV02) AddMeeting() *iso20022.MeetingNotice2 {
 }
 
 func (m *MeetingNotificationV02) AddMeetingDetails() *iso20022.Meeting2 {
-	newValue := new (iso20022.Meeting2)
+	newValue := new(iso20022.Meeting2)
 	m.MeetingDetails = append(m.MeetingDetails, newValue)
 	return newValue
 }
@@ -103,19 +101,19 @@ func (m *MeetingNotificationV02) AddIssuer() *iso20022.PartyIdentification9Choic
 }
 
 func (m *MeetingNotificationV02) AddIssuerAgent() *iso20022.IssuerAgent1 {
-	newValue := new (iso20022.IssuerAgent1)
+	newValue := new(iso20022.IssuerAgent1)
 	m.IssuerAgent = append(m.IssuerAgent, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV02) AddSecurity() *iso20022.SecurityPosition5 {
-	newValue := new (iso20022.SecurityPosition5)
+	newValue := new(iso20022.SecurityPosition5)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingNotificationV02) AddResolution() *iso20022.Resolution2 {
-	newValue := new (iso20022.Resolution2)
+	newValue := new(iso20022.Resolution2)
 	m.Resolution = append(m.Resolution, newValue)
 	return newValue
 }
@@ -134,4 +132,3 @@ func (m *MeetingNotificationV02) AddPowerOfAttorneyRequirements() *iso20022.Powe
 	m.PowerOfAttorneyRequirements = new(iso20022.PowerOfAttorneyRequirements2)
 	return m.PowerOfAttorneyRequirements
 }
-

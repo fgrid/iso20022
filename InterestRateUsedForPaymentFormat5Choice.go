@@ -14,9 +14,7 @@ type InterestRateUsedForPaymentFormat5Choice struct {
 
 	// Value of the rate not specified.
 	NotSpecifiedRate *RateType13Code `xml:"NotSpcfdRate"`
-
 }
-
 
 func (i *InterestRateUsedForPaymentFormat5Choice) SetRate(value string) {
 	i.Rate = (*PercentageRate)(&value)
@@ -34,4 +32,3 @@ func (i *InterestRateUsedForPaymentFormat5Choice) AddRateTypeAndAmountAndRateSta
 func (i *InterestRateUsedForPaymentFormat5Choice) SetNotSpecifiedRate(value string) {
 	i.NotSpecifiedRate = (*RateType13Code)(&value)
 }
-

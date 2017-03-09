@@ -14,9 +14,7 @@ type EncapsulatedBusinessMessage1 struct {
 
 	// The encapsulated ISO 20022 message.
 	Message *StrictPayload `xml:"Msg"`
-
 }
-
 
 func (e *EncapsulatedBusinessMessage1) AddHeader() *BusinessApplicationHeader1 {
 	e.Header = new(BusinessApplicationHeader1)
@@ -35,4 +33,3 @@ func (e *EncapsulatedBusinessMessage1) AddMessage() *StrictPayload {
 	e.Message = new(StrictPayload)
 	return e.Message
 }
-

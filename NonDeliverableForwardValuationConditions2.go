@@ -14,9 +14,7 @@ type NonDeliverableForwardValuationConditions2 struct {
 
 	// Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.
 	SettlementParty *PartyIdentification8Choice `xml:"SttlmPty,omitempty"`
-
 }
-
 
 func (n *NonDeliverableForwardValuationConditions2) SetSettlementCurrency(value string) {
 	n.SettlementCurrency = (*ActiveOrHistoricCurrencyCode)(&value)
@@ -34,4 +32,3 @@ func (n *NonDeliverableForwardValuationConditions2) AddSettlementParty() *PartyI
 	n.SettlementParty = new(PartyIdentification8Choice)
 	return n.SettlementParty
 }
-

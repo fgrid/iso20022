@@ -11,9 +11,7 @@ type PartyIdentification2Choice struct {
 
 	// Name and address of a party.
 	NameAndAddress *NameAndAddress5 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PartyIdentification2Choice) SetBICOrBEI(value string) {
 	p.BICOrBEI = (*AnyBICIdentifier)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification2Choice) AddNameAndAddress() *NameAndAddress5 {
 	p.NameAndAddress = new(NameAndAddress5)
 	return p.NameAndAddress
 }
-

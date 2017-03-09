@@ -8,17 +8,14 @@ type RequestDetails4 struct {
 
 	// Data being returned.
 	ReportData []*ReportParameter1 `xml:"RptData,omitempty"`
-
 }
-
 
 func (r *RequestDetails4) SetKey(value string) {
 	r.Key = (*Max35Text)(&value)
 }
 
 func (r *RequestDetails4) AddReportData() *ReportParameter1 {
-	newValue := new (ReportParameter1)
+	newValue := new(ReportParameter1)
 	r.ReportData = append(r.ReportData, newValue)
 	return newValue
 }
-

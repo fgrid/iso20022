@@ -11,9 +11,7 @@ type ResolutionInformation1 struct {
 
 	// Specifies the clearing channel to be used to process the payment instruction.
 	ClearingChannel *ClearingChannel2Code `xml:"ClrChanl,omitempty"`
-
 }
-
 
 func (r *ResolutionInformation1) SetInterbankSettlementAmount(value, currency string) {
 	r.InterbankSettlementAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (r *ResolutionInformation1) SetInterbankSettlementDate(value string) {
 func (r *ResolutionInformation1) SetClearingChannel(value string) {
 	r.ClearingChannel = (*ClearingChannel2Code)(&value)
 }
-

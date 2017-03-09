@@ -8,9 +8,7 @@ type TaxCapacityParty4Choice struct {
 
 	// Party tax capacity expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (t *TaxCapacityParty4Choice) SetCode(value string) {
 	t.Code = (*TaxLiability1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TaxCapacityParty4Choice) AddProprietary() *GenericIdentification30 {
 	t.Proprietary = new(GenericIdentification30)
 	return t.Proprietary
 }
-

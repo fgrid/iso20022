@@ -8,9 +8,7 @@ type CancellationReason18 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *RestrictedFINXMax210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (c *CancellationReason18) AddCode() *CancellationReason28Choice {
 	c.Code = new(CancellationReason28Choice)
@@ -20,4 +18,3 @@ func (c *CancellationReason18) AddCode() *CancellationReason28Choice {
 func (c *CancellationReason18) SetAdditionalReasonInformation(value string) {
 	c.AdditionalReasonInformation = (*RestrictedFINXMax210Text)(&value)
 }
-

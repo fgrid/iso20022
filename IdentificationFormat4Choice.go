@@ -11,9 +11,7 @@ type IdentificationFormat4Choice struct {
 
 	// Format expressed as a proprietary identification.
 	ProprietaryIdentification *GenericIdentification86 `xml:"PrtryId"`
-
 }
-
 
 func (i *IdentificationFormat4Choice) SetShortIdentification(value string) {
 	i.ShortIdentification = (*Exact3UpperCaseAlphaNumericText)(&value)
@@ -27,4 +25,3 @@ func (i *IdentificationFormat4Choice) AddProprietaryIdentification() *GenericIde
 	i.ProprietaryIdentification = new(GenericIdentification86)
 	return i.ProprietaryIdentification
 }
-

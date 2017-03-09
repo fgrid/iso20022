@@ -15,12 +15,10 @@ type CashOutForecast6 struct {
 	// Indicates whether the cash flow out is exceptional.
 	ExceptionalCashFlowIndicator *YesNoIndicator `xml:"XcptnlCshFlowInd,omitempty"`
 
-	// Additional balances for cash amounts and number of units. 
+	// Additional balances for cash amounts and number of units.
 	// In an estimated report, the total cash derived from orders placed as a number of units is an estimated cash amount and the total number of units derived from orders placed as a cash amount is an estimated number of units.
 	AdditionalBalance *FundBalance1 `xml:"AddtlBal,omitempty"`
-
 }
-
 
 func (c *CashOutForecast6) SetCashSettlementDate(value string) {
 	c.CashSettlementDate = (*ISODate)(&value)
@@ -43,4 +41,3 @@ func (c *CashOutForecast6) AddAdditionalBalance() *FundBalance1 {
 	c.AdditionalBalance = new(FundBalance1)
 	return c.AdditionalBalance
 }
-

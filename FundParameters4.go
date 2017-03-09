@@ -17,18 +17,16 @@ type FundParameters4 struct {
 
 	// Countries where the fund is registered for distribution.
 	RegisteredDistributionCountry *CountryCode `xml:"RegdDstrbtnCtry,omitempty"`
-
 }
 
-
 func (f *FundParameters4) AddFinancialInstrumentDetails() *FinancialInstrument17 {
-	newValue := new (FinancialInstrument17)
+	newValue := new(FinancialInstrument17)
 	f.FinancialInstrumentDetails = append(f.FinancialInstrumentDetails, newValue)
 	return newValue
 }
 
 func (f *FundParameters4) AddFundManagementCompany() *PartyIdentification2Choice {
-	newValue := new (PartyIdentification2Choice)
+	newValue := new(PartyIdentification2Choice)
 	f.FundManagementCompany = append(f.FundManagementCompany, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (f *FundParameters4) SetCountryOfDomicile(value string) {
 func (f *FundParameters4) SetRegisteredDistributionCountry(value string) {
 	f.RegisteredDistributionCountry = (*CountryCode)(&value)
 }
-

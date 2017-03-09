@@ -7,7 +7,7 @@ import (
 )
 
 type Document03500106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.035.001.06 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:sese.035.001.06 Document"`
 	Message *SecuritiesFinancingConfirmationV06 `xml:"SctiesFincgConf"`
 }
 
@@ -17,14 +17,14 @@ func (d *Document03500106) AddMessage() *SecuritiesFinancingConfirmationV06 {
 }
 
 // Scope
-// A securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction. 
-// 
+// A securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction.
+//
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants
-// - an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or
 // - a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.
-// 
-// 
+//
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -80,9 +80,7 @@ type SecuritiesFinancingConfirmationV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingConfirmationV06) AddTransactionIdentificationDetails() *iso20022.TransactionTypeAndAdditionalParameters10 {
 	s.TransactionIdentificationDetails = new(iso20022.TransactionTypeAndAdditionalParameters10)
@@ -160,8 +158,7 @@ func (s *SecuritiesFinancingConfirmationV06) AddOtherBusinessParties() *iso20022
 }
 
 func (s *SecuritiesFinancingConfirmationV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

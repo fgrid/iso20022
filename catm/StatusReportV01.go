@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:catm.001.001.01 Document"`
+	XMLName xml.Name         `xml:"urn:iso:std:iso:20022:tech:xsd:catm.001.001.01 Document"`
 	Message *StatusReportV01 `xml:"StsRpt"`
 }
 
@@ -30,9 +30,7 @@ type StatusReportV01 struct {
 
 	// Trailer of the message containing a MAC or a digital signature.
 	SecurityTrailer *iso20022.ContentInformationType1 `xml:"SctyTrlr"`
-
 }
-
 
 func (s *StatusReportV01) AddHeader() *iso20022.Header4 {
 	s.Header = new(iso20022.Header4)
@@ -48,4 +46,3 @@ func (s *StatusReportV01) AddSecurityTrailer() *iso20022.ContentInformationType1
 	s.SecurityTrailer = new(iso20022.ContentInformationType1)
 	return s.SecurityTrailer
 }
-

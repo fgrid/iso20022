@@ -8,9 +8,7 @@ type FXCancellation1Choice struct {
 
 	// FX Cancellation information expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (f *FXCancellation1Choice) SetIndicator(value string) {
 	f.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (f *FXCancellation1Choice) AddProprietary() *GenericIdentification20 {
 	f.Proprietary = new(GenericIdentification20)
 	return f.Proprietary
 }
-

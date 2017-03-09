@@ -68,9 +68,7 @@ type IndividualPerson20 struct {
 
 	// Additional regulatory information about the investor that is required in some markets to support anti-money laundering laws.
 	AdditionalRegulatoryInformation *RegulatoryInformation1 `xml:"AddtlRgltryInf,omitempty"`
-
 }
-
 
 func (i *IndividualPerson20) AddNamePrefix() *NamePrefix1Choice {
 	i.NamePrefix = new(NamePrefix1Choice)
@@ -131,13 +129,13 @@ func (i *IndividualPerson20) AddCountryAndResidentialStatus() *CountryAndResiden
 }
 
 func (i *IndividualPerson20) AddPostalAddress() *PostalAddress3 {
-	newValue := new (PostalAddress3)
+	newValue := new(PostalAddress3)
 	i.PostalAddress = append(i.PostalAddress, newValue)
 	return newValue
 }
 
 func (i *IndividualPerson20) AddCitizenship() *CitizenshipInformation {
-	newValue := new (CitizenshipInformation)
+	newValue := new(CitizenshipInformation)
 	i.Citizenship = append(i.Citizenship, newValue)
 	return newValue
 }
@@ -161,7 +159,7 @@ func (i *IndividualPerson20) AddSecondaryCommunicationAddress() *CommunicationAd
 }
 
 func (i *IndividualPerson20) AddOtherIdentification() *GenericIdentification44 {
-	newValue := new (GenericIdentification44)
+	newValue := new(GenericIdentification44)
 	i.OtherIdentification = append(i.OtherIdentification, newValue)
 	return newValue
 }
@@ -170,4 +168,3 @@ func (i *IndividualPerson20) AddAdditionalRegulatoryInformation() *RegulatoryInf
 	i.AdditionalRegulatoryInformation = new(RegulatoryInformation1)
 	return i.AdditionalRegulatoryInformation
 }
-

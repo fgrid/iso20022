@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.014.001.03 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.014.001.03 Document"`
 	Message *ForeignExchangeTradeInstructionV03 `xml:"FXTradInstr"`
 }
 
@@ -16,9 +16,9 @@ func (d *Document01400103) AddMessage() *ForeignExchangeTradeInstructionV03 {
 	return d.Message
 }
 
-// Scope
-// The ForeignExchangeTradeInstruction message is sent by a participant to a central settlement system to notify the creation of the foreign exchange trade agreed by both trading parties.
-// Usage
+// Scope
+// The ForeignExchangeTradeInstruction message is sent by a participant to a central settlement system to notify the creation of the foreign exchange trade agreed by both trading parties.
+// Usage
 // The ForeignExchangeTradeInstruction message is sent from a participant to a central settlement system to advise of the creation of a foreign exchange trade.
 type ForeignExchangeTradeInstructionV03 struct {
 
@@ -51,9 +51,7 @@ type ForeignExchangeTradeInstructionV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTradeInstructionV03) AddTradeInformation() *iso20022.TradeAgreement10 {
 	f.TradeInformation = new(iso20022.TradeAgreement10)
@@ -101,8 +99,7 @@ func (f *ForeignExchangeTradeInstructionV03) AddRegulatoryReporting() *iso20022.
 }
 
 func (f *ForeignExchangeTradeInstructionV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	f.SupplementaryData = append(f.SupplementaryData, newValue)
 	return newValue
 }
-

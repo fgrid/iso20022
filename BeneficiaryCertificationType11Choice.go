@@ -8,9 +8,7 @@ type BeneficiaryCertificationType11Choice struct {
 
 	// Proprietary identification of the type of certification required.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (b *BeneficiaryCertificationType11Choice) SetCode(value string) {
 	b.Code = (*BeneficiaryCertificationType5Code)(&value)
@@ -20,4 +18,3 @@ func (b *BeneficiaryCertificationType11Choice) AddProprietary() *GenericIdentifi
 	b.Proprietary = new(GenericIdentification47)
 	return b.Proprietary
 }
-

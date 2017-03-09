@@ -23,9 +23,7 @@ type PlainCardData1 struct {
 
 	// Card security code (CSC) associated with the card performing the transaction.
 	CardSecurityCode *CardSecurityInformation1 `xml:"CardSctyCd,omitempty"`
-
 }
-
 
 func (p *PlainCardData1) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -48,7 +46,7 @@ func (p *PlainCardData1) SetServiceCode(value string) {
 }
 
 func (p *PlainCardData1) AddTrackData() *TrackData1 {
-	newValue := new (TrackData1)
+	newValue := new(TrackData1)
 	p.TrackData = append(p.TrackData, newValue)
 	return newValue
 }
@@ -57,4 +55,3 @@ func (p *PlainCardData1) AddCardSecurityCode() *CardSecurityInformation1 {
 	p.CardSecurityCode = new(CardSecurityInformation1)
 	return p.CardSecurityCode
 }
-

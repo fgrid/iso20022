@@ -8,9 +8,7 @@ type ContactPerson1 struct {
 
 	// Identification of the institution that the contact person represents.
 	InstitutionIdentification *PartyIdentification2Choice `xml:"InstnId,omitempty"`
-
 }
-
 
 func (c *ContactPerson1) AddContactPerson() *ContactIdentification4 {
 	c.ContactPerson = new(ContactIdentification4)
@@ -21,4 +19,3 @@ func (c *ContactPerson1) AddInstitutionIdentification() *PartyIdentification2Cho
 	c.InstitutionIdentification = new(PartyIdentification2Choice)
 	return c.InstitutionIdentification
 }
-

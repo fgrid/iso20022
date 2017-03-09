@@ -20,7 +20,7 @@ type PaymentTransactionInformation28 struct {
 	ReversedInstructedAmount *ActiveOrHistoricCurrencyAndAmount `xml:"RvsdInstdAmt,omitempty"`
 
 	// Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.
-	// 
+	//
 	// Usage: The ChargeBearer applies to the reversal message, not to the original instruction.
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
@@ -29,9 +29,7 @@ type PaymentTransactionInformation28 struct {
 
 	// Set of key elements used to identify the original transaction that is being referred to.
 	OriginalTransactionReference *OriginalTransactionReference13 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransactionInformation28) SetReversalIdentification(value string) {
 	p.ReversalIdentification = (*Max35Text)(&value)
@@ -58,7 +56,7 @@ func (p *PaymentTransactionInformation28) SetChargeBearer(value string) {
 }
 
 func (p *PaymentTransactionInformation28) AddReversalReasonInformation() *ReversalReasonInformation6 {
-	newValue := new (ReversalReasonInformation6)
+	newValue := new(ReversalReasonInformation6)
 	p.ReversalReasonInformation = append(p.ReversalReasonInformation, newValue)
 	return newValue
 }
@@ -67,4 +65,3 @@ func (p *PaymentTransactionInformation28) AddOriginalTransactionReference() *Ori
 	p.OriginalTransactionReference = new(OriginalTransactionReference13)
 	return p.OriginalTransactionReference
 }
-

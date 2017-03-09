@@ -75,9 +75,7 @@ type SecuritiesFinancingTransactionDetails3 struct {
 
 	// Provides additional information about the second leg in narrative form.
 	SecondLegNarrative *Max140Text `xml:"ScndLegNrrtv,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingTransactionDetails3) SetSecuritiesFinancingTradeIdentification(value string) {
 	s.SecuritiesFinancingTradeIdentification = (*Max35Text)(&value)
@@ -192,4 +190,3 @@ func (s *SecuritiesFinancingTransactionDetails3) AddTerminationTransactionAmount
 func (s *SecuritiesFinancingTransactionDetails3) SetSecondLegNarrative(value string) {
 	s.SecondLegNarrative = (*Max140Text)(&value)
 }
-

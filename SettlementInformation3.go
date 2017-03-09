@@ -13,7 +13,7 @@ type SettlementInformation3 struct {
 	ClearingSystem *ClearingSystemIdentification1Choice `xml:"ClrSys,omitempty"`
 
 	// Specifies the agent through which the instructing agent will reimburse the instructed agent.
-	// 
+	//
 	// Usage: If the instructing and instructed agents have the same reimbursement agent, then only InstructingReimbursementAgent must be used.
 	InstructingReimbursementAgent *BranchAndFinancialInstitutionIdentification3 `xml:"InstgRmbrsmntAgt,omitempty"`
 
@@ -21,9 +21,9 @@ type SettlementInformation3 struct {
 	InstructingReimbursementAgentAccount *CashAccount7 `xml:"InstgRmbrsmntAgtAcct,omitempty"`
 
 	// Agent at which the instructed agent will be reimbursed.
-	// 
+	//
 	// Usage: If InstructedReimbursementAgent contains a branch of the InstructedAgent, then the instructed agent will claim reimbursement from that branch/will be paid by that branch.
-	// 
+	//
 	// Usage: If InstructingAgent and InstructedAgent have the same reimbursement agent, then only InstructingReimbursementAgent must be used.
 	InstructedReimbursementAgent *BranchAndFinancialInstitutionIdentification3 `xml:"InstdRmbrsmntAgt,omitempty"`
 
@@ -35,9 +35,7 @@ type SettlementInformation3 struct {
 
 	// Unambiguous identification of the account of the third reimbursement agent account at its servicing agent in the payment chain.
 	ThirdReimbursementAgentAccount *CashAccount7 `xml:"ThrdRmbrsmntAgtAcct,omitempty"`
-
 }
-
 
 func (s *SettlementInformation3) SetSettlementMethod(value string) {
 	s.SettlementMethod = (*SettlementMethod1Code)(&value)
@@ -82,4 +80,3 @@ func (s *SettlementInformation3) AddThirdReimbursementAgentAccount() *CashAccoun
 	s.ThirdReimbursementAgentAccount = new(CashAccount7)
 	return s.ThirdReimbursementAgentAccount
 }
-

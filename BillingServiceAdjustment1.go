@@ -10,7 +10,7 @@ type BillingServiceAdjustment1 struct {
 	Description *Max140Text `xml:"Desc"`
 
 	// Amount of the adjustment, expressed in the settlement currency.
-	// 
+	//
 	// Usage: If the amount would reduce charges due then the amount should be negatively signed.
 	Amount *AmountAndDirection34 `xml:"Amt"`
 
@@ -49,9 +49,7 @@ type BillingServiceAdjustment1 struct {
 
 	// New, adjusted service charge, expressed in the pricing currency.
 	NewChargeAmount *AmountAndDirection34 `xml:"NewChrgAmt,omitempty"`
-
 }
-
 
 func (b *BillingServiceAdjustment1) SetType(value string) {
 	b.Type = (*ServiceAdjustmentType1Code)(&value)
@@ -120,4 +118,3 @@ func (b *BillingServiceAdjustment1) AddNewChargeAmount() *AmountAndDirection34 {
 	b.NewChargeAmount = new(AmountAndDirection34)
 	return b.NewChargeAmount
 }
-

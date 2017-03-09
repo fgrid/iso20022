@@ -8,9 +8,7 @@ type ModificationReason2 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (m *ModificationReason2) AddCode() *ModificationReason2Choice {
 	m.Code = new(ModificationReason2Choice)
@@ -20,4 +18,3 @@ func (m *ModificationReason2) AddCode() *ModificationReason2Choice {
 func (m *ModificationReason2) SetAdditionalReasonInformation(value string) {
 	m.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

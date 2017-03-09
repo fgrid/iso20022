@@ -17,9 +17,7 @@ type ProxyAppointmentInformation1 struct {
 
 	// Specifies the proxy persons which are authorised by the issuer.
 	AuthorisedProxy []*Proxy1 `xml:"AuthrsdPrxy,omitempty"`
-
 }
-
 
 func (p *ProxyAppointmentInformation1) SetRegistrationMethod(value string) {
 	p.RegistrationMethod = (*Max350Text)(&value)
@@ -41,8 +39,7 @@ func (p *ProxyAppointmentInformation1) AddMarketDeadline() *DateFormat2Choice {
 }
 
 func (p *ProxyAppointmentInformation1) AddAuthorisedProxy() *Proxy1 {
-	newValue := new (Proxy1)
+	newValue := new(Proxy1)
 	p.AuthorisedProxy = append(p.AuthorisedProxy, newValue)
 	return newValue
 }
-

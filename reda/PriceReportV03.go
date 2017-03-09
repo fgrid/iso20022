@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.001.001.03 Document"`
+	XMLName xml.Name        `xml:"urn:iso:std:iso:20022:tech:xsd:reda.001.001.03 Document"`
 	Message *PriceReportV03 `xml:"PricRptV03"`
 }
 
@@ -26,7 +26,7 @@ func (d *Document00100103) AddMessage() *PriceReportV03 {
 // - report prices that are used for purposes other than the execution of investment funds orders.
 type PriceReportV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -46,9 +46,7 @@ type PriceReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PriceReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	p.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -61,7 +59,7 @@ func (p *PriceReportV03) AddPoolReference() *iso20022.AdditionalReference3 {
 }
 
 func (p *PriceReportV03) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	p.PreviousReference = append(p.PreviousReference, newValue)
 	return newValue
 }
@@ -77,14 +75,13 @@ func (p *PriceReportV03) AddMessagePagination() *iso20022.Pagination {
 }
 
 func (p *PriceReportV03) AddPriceValuationDetails() *iso20022.PriceValuation3 {
-	newValue := new (iso20022.PriceValuation3)
+	newValue := new(iso20022.PriceValuation3)
 	p.PriceValuationDetails = append(p.PriceValuationDetails, newValue)
 	return newValue
 }
 
 func (p *PriceReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

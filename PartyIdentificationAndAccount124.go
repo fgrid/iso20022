@@ -14,9 +14,7 @@ type PartyIdentificationAndAccount124 struct {
 
 	// Date and optionally the time, at which this transaction was processed by the party identified in this sequence.
 	ProcessingDate *DateAndDateTimeChoice `xml:"PrcgDt,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount124) AddPartyIdentification() *PartyIdentification70Choice {
 	p.PartyIdentification = new(PartyIdentification70Choice)
@@ -35,4 +33,3 @@ func (p *PartyIdentificationAndAccount124) AddProcessingDate() *DateAndDateTimeC
 	p.ProcessingDate = new(DateAndDateTimeChoice)
 	return p.ProcessingDate
 }
-

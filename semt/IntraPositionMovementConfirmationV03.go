@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.015.001.03 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.015.001.03 Document"`
 	Message *IntraPositionMovementConfirmationV03 `xml:"IntraPosMvmntConf"`
 }
 
@@ -55,9 +55,7 @@ type IntraPositionMovementConfirmationV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementConfirmationV03) AddAdditionalParameters() *iso20022.AdditionalParameters10 {
 	i.AdditionalParameters = new(iso20022.AdditionalParameters10)
@@ -95,8 +93,7 @@ func (i *IntraPositionMovementConfirmationV03) AddIntraPositionDetails() *iso200
 }
 
 func (i *IntraPositionMovementConfirmationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

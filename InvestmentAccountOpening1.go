@@ -14,9 +14,7 @@ type InvestmentAccountOpening1 struct {
 
 	// Unambiguous identification of the transfer as allocated by the counterparty.
 	CounterpartyReference *AdditionalReference2 `xml:"CtrPtyRef,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountOpening1) SetOpeningType(value string) {
 	i.OpeningType = (*AccountOpeningType1Code)(&value)
@@ -34,4 +32,3 @@ func (i *InvestmentAccountOpening1) AddCounterpartyReference() *AdditionalRefere
 	i.CounterpartyReference = new(AdditionalReference2)
 	return i.CounterpartyReference
 }
-

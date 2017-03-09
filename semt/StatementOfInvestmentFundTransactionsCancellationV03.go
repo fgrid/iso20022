@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.007.001.03 Document"`
+	XMLName xml.Name                                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.007.001.03 Document"`
 	Message *StatementOfInvestmentFundTransactionsCancellationV03 `xml:"StmtOfInvstmtFndTxsCxl"`
 }
 
@@ -37,9 +37,7 @@ type StatementOfInvestmentFundTransactionsCancellationV03 struct {
 
 	// The Statement of Investment Fund Transactions message to cancel.
 	StatementToBeCancelled *iso20022.StatementOfInvestmentFundTransactions3 `xml:"StmtToBeCanc,omitempty"`
-
 }
-
 
 func (s *StatementOfInvestmentFundTransactionsCancellationV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -65,4 +63,3 @@ func (s *StatementOfInvestmentFundTransactionsCancellationV03) AddStatementToBeC
 	s.StatementToBeCancelled = new(iso20022.StatementOfInvestmentFundTransactions3)
 	return s.StatementToBeCancelled
 }
-

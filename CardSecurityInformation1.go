@@ -8,9 +8,7 @@ type CardSecurityInformation1 struct {
 
 	// Card security code (CSC).
 	CSCValue *Min3Max4NumericText `xml:"CSCVal,omitempty"`
-
 }
-
 
 func (c *CardSecurityInformation1) SetCSCManagement(value string) {
 	c.CSCManagement = (*CSCManagement1Code)(&value)
@@ -19,4 +17,3 @@ func (c *CardSecurityInformation1) SetCSCManagement(value string) {
 func (c *CardSecurityInformation1) SetCSCValue(value string) {
 	c.CSCValue = (*Min3Max4NumericText)(&value)
 }
-

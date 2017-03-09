@@ -11,9 +11,7 @@ type PartyIdentification102 struct {
 
 	// Provides alternate identification for a party using an id type, a country code and a text field.
 	AlternateIdentification []*AlternatePartyIdentification9 `xml:"AltrnId,omitempty"`
-
 }
-
 
 func (p *PartyIdentification102) AddIdentification() *PartyIdentification111Choice {
 	p.Identification = new(PartyIdentification111Choice)
@@ -25,8 +23,7 @@ func (p *PartyIdentification102) SetProcessingIdentification(value string) {
 }
 
 func (p *PartyIdentification102) AddAlternateIdentification() *AlternatePartyIdentification9 {
-	newValue := new (AlternatePartyIdentification9)
+	newValue := new(AlternatePartyIdentification9)
 	p.AlternateIdentification = append(p.AlternateIdentification, newValue)
 	return newValue
 }
-

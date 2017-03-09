@@ -8,9 +8,7 @@ type VoteInstructionForMeetingResolution1Choice struct {
 
 	// Specifies the name and address of the shareholder to whom the rights to vote are transferred for resolutions added during the meeting.
 	Shareholder *NameAndAddress9 `xml:"Shrhldr"`
-
 }
-
 
 func (v *VoteInstructionForMeetingResolution1Choice) SetVoteIndication(value string) {
 	v.VoteIndication = (*VoteInstructionAtMeeting1Code)(&value)
@@ -20,4 +18,3 @@ func (v *VoteInstructionForMeetingResolution1Choice) AddShareholder() *NameAndAd
 	v.Shareholder = new(NameAndAddress9)
 	return v.Shareholder
 }
-

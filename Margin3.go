@@ -11,9 +11,7 @@ type Margin3 struct {
 
 	// Provides details on the margin type and amount.
 	OtherMargin []*Margin4 `xml:"OthrMrgn,omitempty"`
-
 }
-
 
 func (m *Margin3) AddInitialMargin() *Amount2 {
 	m.InitialMargin = new(Amount2)
@@ -21,14 +19,13 @@ func (m *Margin3) AddInitialMargin() *Amount2 {
 }
 
 func (m *Margin3) AddVariationMargin() *VariationMargin3 {
-	newValue := new (VariationMargin3)
+	newValue := new(VariationMargin3)
 	m.VariationMargin = append(m.VariationMargin, newValue)
 	return newValue
 }
 
 func (m *Margin3) AddOtherMargin() *Margin4 {
-	newValue := new (Margin4)
+	newValue := new(Margin4)
 	m.OtherMargin = append(m.OtherMargin, newValue)
 	return newValue
 }
-

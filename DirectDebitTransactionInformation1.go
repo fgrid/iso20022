@@ -39,8 +39,8 @@ type DirectDebitTransactionInformation1 struct {
 	// Further information, related to the processing of the payment instruction, that may need to be acted upon by the creditor agent, depending on agreement between creditor and the creditor agent.
 	InstructionForCreditorAgent *Max140Text `xml:"InstrForCdtrAgt,omitempty"`
 
-	// Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor.  
-	// 
+	// Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor.
+	//
 	// Usage: purpose is used by the end-customers, ie originating party, initiating party, debtor, creditor, final party, to provide information concerning the nature of the payment transaction. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
 	Purpose *Purpose1Choice `xml:"Purp,omitempty"`
 
@@ -55,9 +55,7 @@ type DirectDebitTransactionInformation1 struct {
 
 	// Information that enables the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an account receivable system.
 	RemittanceInformation *RemittanceInformation1 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation1) AddPaymentIdentification() *PaymentIdentification1 {
 	d.PaymentIdentification = new(PaymentIdentification1)
@@ -122,7 +120,7 @@ func (d *DirectDebitTransactionInformation1) AddPurpose() *Purpose1Choice {
 }
 
 func (d *DirectDebitTransactionInformation1) AddRegulatoryReporting() *RegulatoryReporting2 {
-	newValue := new (RegulatoryReporting2)
+	newValue := new(RegulatoryReporting2)
 	d.RegulatoryReporting = append(d.RegulatoryReporting, newValue)
 	return newValue
 }
@@ -133,7 +131,7 @@ func (d *DirectDebitTransactionInformation1) AddTax() *TaxInformation2 {
 }
 
 func (d *DirectDebitTransactionInformation1) AddRelatedRemittanceInformation() *RemittanceLocation1 {
-	newValue := new (RemittanceLocation1)
+	newValue := new(RemittanceLocation1)
 	d.RelatedRemittanceInformation = append(d.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -142,4 +140,3 @@ func (d *DirectDebitTransactionInformation1) AddRemittanceInformation() *Remitta
 	d.RemittanceInformation = new(RemittanceInformation1)
 	return d.RemittanceInformation
 }
-

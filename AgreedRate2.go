@@ -11,9 +11,7 @@ type AgreedRate2 struct {
 
 	// Currency into which the base currency is converted, in a currency exchange.
 	QuotedCurrency *CurrencyCode `xml:"QtdCcy"`
-
 }
-
 
 func (a *AgreedRate2) SetExchangeRate(value string) {
 	a.ExchangeRate = (*BaseOneRate)(&value)
@@ -26,4 +24,3 @@ func (a *AgreedRate2) SetUnitCurrency(value string) {
 func (a *AgreedRate2) SetQuotedCurrency(value string) {
 	a.QuotedCurrency = (*CurrencyCode)(&value)
 }
-

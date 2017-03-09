@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.008.001.02 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:seev.008.001.02 Document"`
 	Message *MeetingResultDisseminationV02 `xml:"MtgRsltDssmntn"`
 }
 
@@ -46,9 +46,7 @@ type MeetingResultDisseminationV02 struct {
 
 	// Information on where additionnal information can be received.
 	AdditionalInformation *iso20022.CommunicationAddress4 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (m *MeetingResultDisseminationV02) AddMeetingResultDisseminationIdentification() *iso20022.MessageIdentification1 {
 	m.MeetingResultDisseminationIdentification = new(iso20022.MessageIdentification1)
@@ -71,13 +69,13 @@ func (m *MeetingResultDisseminationV02) AddReportingParty() *iso20022.PartyIdent
 }
 
 func (m *MeetingResultDisseminationV02) AddSecurity() *iso20022.SecurityPosition5 {
-	newValue := new (iso20022.SecurityPosition5)
+	newValue := new(iso20022.SecurityPosition5)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingResultDisseminationV02) AddVoteResult() *iso20022.Vote5 {
-	newValue := new (iso20022.Vote5)
+	newValue := new(iso20022.Vote5)
 	m.VoteResult = append(m.VoteResult, newValue)
 	return newValue
 }
@@ -91,4 +89,3 @@ func (m *MeetingResultDisseminationV02) AddAdditionalInformation() *iso20022.Com
 	m.AdditionalInformation = new(iso20022.CommunicationAddress4)
 	return m.AdditionalInformation
 }
-

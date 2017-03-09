@@ -23,9 +23,7 @@ type SecurityIdentification1 struct {
 
 	// Countries where the fund is registered for distribution.
 	RegisteredDistributionCountry []*CountryCode `xml:"RegdDstrbtnCtry"`
-
 }
-
 
 func (s *SecurityIdentification1) AddIdentification() *SecurityIdentification7 {
 	s.Identification = new(SecurityIdentification7)
@@ -55,4 +53,3 @@ func (s *SecurityIdentification1) SetCountryOfDomicile(value string) {
 func (s *SecurityIdentification1) AddRegisteredDistributionCountry(value string) {
 	s.RegisteredDistributionCountry = append(s.RegisteredDistributionCountry, (*CountryCode)(&value))
 }
-

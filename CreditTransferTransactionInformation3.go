@@ -34,7 +34,7 @@ type CreditTransferTransactionInformation3 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification3 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the debtor agent and the intermediary agent 2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt1,omitempty"`
 
@@ -42,7 +42,7 @@ type CreditTransferTransactionInformation3 struct {
 	IntermediaryAgent1Account *CashAccount7 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent2 identifies the agent between the intermediary agent 1 and the intermediary agent 3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt2,omitempty"`
 
@@ -50,7 +50,7 @@ type CreditTransferTransactionInformation3 struct {
 	IntermediaryAgent2Account *CashAccount7 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent3 identifies the agent between the  intermediary agent 2 and the creditor agent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification3 `xml:"IntrmyAgt3,omitempty"`
 
@@ -87,22 +87,20 @@ type CreditTransferTransactionInformation3 struct {
 	// Ultimate financial institution to which an amount of money is due.
 	UltimateCreditor *BranchAndFinancialInstitutionIdentification3 `xml:"UltmtCdtr,omitempty"`
 
-	// Further information related to the processing of the payment instruction that may need to be acted upon by the creditor agent. 
-	// 
+	// Further information related to the processing of the payment instruction that may need to be acted upon by the creditor agent.
+	//
 	// Usage: The instruction can relate to a level of service, can be an instruction to be executed by the creditor's agent, or can be information required by the creditor's agent to process the instruction.
 	InstructionForCreditorAgent []*InstructionForCreditorAgent2 `xml:"InstrForCdtrAgt,omitempty"`
 
-	// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. 
-	// 
+	// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent.
+	//
 	// Usage: The next agent may not be the creditor agent.
 	// The instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.
 	InstructionForNextAgent []*InstructionForNextAgent1 `xml:"InstrForNxtAgt,omitempty"`
 
 	// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.
 	RemittanceInformation *RemittanceInformation2 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (c *CreditTransferTransactionInformation3) AddPaymentIdentification() *PaymentIdentification2 {
 	c.PaymentIdentification = new(PaymentIdentification2)
@@ -233,13 +231,13 @@ func (c *CreditTransferTransactionInformation3) AddUltimateCreditor() *BranchAnd
 }
 
 func (c *CreditTransferTransactionInformation3) AddInstructionForCreditorAgent() *InstructionForCreditorAgent2 {
-	newValue := new (InstructionForCreditorAgent2)
+	newValue := new(InstructionForCreditorAgent2)
 	c.InstructionForCreditorAgent = append(c.InstructionForCreditorAgent, newValue)
 	return newValue
 }
 
 func (c *CreditTransferTransactionInformation3) AddInstructionForNextAgent() *InstructionForNextAgent1 {
-	newValue := new (InstructionForNextAgent1)
+	newValue := new(InstructionForNextAgent1)
 	c.InstructionForNextAgent = append(c.InstructionForNextAgent, newValue)
 	return newValue
 }
@@ -248,4 +246,3 @@ func (c *CreditTransferTransactionInformation3) AddRemittanceInformation() *Remi
 	c.RemittanceInformation = new(RemittanceInformation2)
 	return c.RemittanceInformation
 }
-

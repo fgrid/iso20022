@@ -27,15 +27,13 @@ type CardTransactionEnvironment1 struct {
 	// Payment token information.
 	PaymentToken *CardPaymentToken4 `xml:"PmtTkn,omitempty"`
 
-	// Cardholder involved in the card transaction. 
+	// Cardholder involved in the card transaction.
 	// It correspond partially to the ISO 8583:2003, field number 49-71.
 	Cardholder *Cardholder9 `xml:"Crdhldr,omitempty"`
 
 	// Protection of cardholder sensitive data by a digital envelope using a cryptographic key.
 	ProtectedCardholderData *ContentInformationType10 `xml:"PrtctdCrdhldrData,omitempty"`
-
 }
-
 
 func (c *CardTransactionEnvironment1) AddAcquirer() *Acquirer6 {
 	c.Acquirer = new(Acquirer6)
@@ -85,4 +83,3 @@ func (c *CardTransactionEnvironment1) AddProtectedCardholderData() *ContentInfor
 	c.ProtectedCardholderData = new(ContentInformationType10)
 	return c.ProtectedCardholderData
 }
-

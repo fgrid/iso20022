@@ -11,9 +11,7 @@ type GenericPersonIdentification1 struct {
 
 	// Entity that assigns the identification.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (g *GenericPersonIdentification1) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (g *GenericPersonIdentification1) AddSchemeName() *PersonIdentificationSche
 func (g *GenericPersonIdentification1) SetIssuer(value string) {
 	g.Issuer = (*Max35Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02600104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.026.001.04 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:camt.026.001.04 Document"`
 	Message *UnableToApplyV04 `xml:"UblToApply"`
 }
 
@@ -52,9 +52,7 @@ type UnableToApplyV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (u *UnableToApplyV04) AddAssignment() *iso20022.CaseAssignment3 {
 	u.Assignment = new(iso20022.CaseAssignment3)
@@ -77,8 +75,7 @@ func (u *UnableToApplyV04) AddJustification() *iso20022.UnableToApplyJustificati
 }
 
 func (u *UnableToApplyV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	u.SupplementaryData = append(u.SupplementaryData, newValue)
 	return newValue
 }
-

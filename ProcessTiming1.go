@@ -20,9 +20,7 @@ type ProcessTiming1 struct {
 
 	// Definition of retry process if activation of the action fails.
 	ReTry *ProcessRetry1 `xml:"ReTry,omitempty"`
-
 }
-
 
 func (p *ProcessTiming1) SetWaitingTime(value string) {
 	p.WaitingTime = (*Max9NumericText)(&value)
@@ -48,4 +46,3 @@ func (p *ProcessTiming1) AddReTry() *ProcessRetry1 {
 	p.ReTry = new(ProcessRetry1)
 	return p.ReTry
 }
-

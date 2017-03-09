@@ -11,9 +11,7 @@ type Instalment1 struct {
 
 	// Amount of a single instalment related to an invoice.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (i *Instalment1) SetSequenceIdentification(value string) {
 	i.SequenceIdentification = (*Max70Text)(&value)
@@ -26,4 +24,3 @@ func (i *Instalment1) SetPaymentDueDate(value string) {
 func (i *Instalment1) SetAmount(value, currency string) {
 	i.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

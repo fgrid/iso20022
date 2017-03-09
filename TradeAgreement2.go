@@ -17,9 +17,7 @@ type TradeAgreement2 struct {
 
 	// Refers to the identification of a previous event in the life of a trade which is amended or cancelled.
 	RelatedReference *Max35Text `xml:"RltdRef"`
-
 }
-
 
 func (t *TradeAgreement2) SetTradeDate(value string) {
 	t.TradeDate = (*ISODate)(&value)
@@ -40,4 +38,3 @@ func (t *TradeAgreement2) SetAmendOrCancelReason(value string) {
 func (t *TradeAgreement2) SetRelatedReference(value string) {
 	t.RelatedReference = (*Max35Text)(&value)
 }
-

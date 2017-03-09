@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.008.001.02 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:trea.008.001.02 Document"`
 	Message *StatusNotificationV02 `xml:"trea.008.001.02"`
 }
 
@@ -24,12 +24,9 @@ type StatusNotificationV02 struct {
 
 	// Provides information on the status of a trade in a system.
 	TradeData *iso20022.TradeData1 `xml:"TradData"`
-
 }
-
 
 func (s *StatusNotificationV02) AddTradeData() *iso20022.TradeData1 {
 	s.TradeData = new(iso20022.TradeData1)
 	return s.TradeData
 }
-

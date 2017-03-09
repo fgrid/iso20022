@@ -8,9 +8,7 @@ type ModificationScope3 struct {
 
 	// Information about the nationality and the legal status (minor or major) of a person.
 	Citizenship *CitizenshipInformation `xml:"Ctznsh"`
-
 }
-
 
 func (m *ModificationScope3) SetModificationScopeIndication(value string) {
 	m.ModificationScopeIndication = (*DataModification2Code)(&value)
@@ -20,4 +18,3 @@ func (m *ModificationScope3) AddCitizenship() *CitizenshipInformation {
 	m.Citizenship = new(CitizenshipInformation)
 	return m.Citizenship
 }
-

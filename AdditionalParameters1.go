@@ -11,9 +11,7 @@ type AdditionalParameters1 struct {
 
 	// Specifies the geographical area, eg, Asia-Pacific, Europe, Middle-East.
 	GeographicalArea *Max35Text `xml:"GeoArea,omitempty"`
-
 }
-
 
 func (a *AdditionalParameters1) SetCountry(value string) {
 	a.Country = (*CountryCode)(&value)
@@ -26,4 +24,3 @@ func (a *AdditionalParameters1) SetCurrency(value string) {
 func (a *AdditionalParameters1) SetGeographicalArea(value string) {
 	a.GeographicalArea = (*Max35Text)(&value)
 }
-

@@ -20,9 +20,7 @@ type References6 struct {
 
 	// File name of a document logically related to the request.
 	AttachedDocumentName []*Max70Text `xml:"AttchdDocNm,omitempty"`
-
 }
-
 
 func (r *References6) SetRejectedRequestType(value string) {
 	r.RejectedRequestType = (*UseCases1Code)(&value)
@@ -50,4 +48,3 @@ func (r *References6) AddProcessIdentification() *MessageIdentification1 {
 func (r *References6) AddAttachedDocumentName(value string) {
 	r.AttachedDocumentName = append(r.AttachedDocumentName, (*Max70Text)(&value))
 }
-

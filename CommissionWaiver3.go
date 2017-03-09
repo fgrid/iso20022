@@ -11,9 +11,7 @@ type CommissionWaiver3 struct {
 
 	// Proportion of the commission that is waived, ie, if  the commission is 5% and half is waived, 2.5% should be stated in this field.
 	WaivedRate *PercentageRate `xml:"WvdRate"`
-
 }
-
 
 func (c *CommissionWaiver3) SetInstructionBasis(value string) {
 	c.InstructionBasis = (*WaivingInstruction1Code)(&value)
@@ -26,4 +24,3 @@ func (c *CommissionWaiver3) SetExtendedInstructionBasis(value string) {
 func (c *CommissionWaiver3) SetWaivedRate(value string) {
 	c.WaivedRate = (*PercentageRate)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.02 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.02 Document"`
 	Message *SecuritiesFinancingInstructionV02 `xml:"SctiesFincgInstr"`
 }
 
@@ -89,9 +89,7 @@ type SecuritiesFinancingInstructionV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingInstructionV02) SetTransactionIdentification(value string) {
 	s.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -108,7 +106,7 @@ func (s *SecuritiesFinancingInstructionV02) AddNumberCounts() *iso20022.NumberCo
 }
 
 func (s *SecuritiesFinancingInstructionV02) AddLinkages() *iso20022.Linkages9 {
-	newValue := new (iso20022.Linkages9)
+	newValue := new(iso20022.Linkages9)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -179,8 +177,7 @@ func (s *SecuritiesFinancingInstructionV02) AddOtherBusinessParties() *iso20022.
 }
 
 func (s *SecuritiesFinancingInstructionV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

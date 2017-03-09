@@ -20,9 +20,7 @@ type TaxIdentification2 struct {
 
 	// Country that issued the tax identification.
 	IssuerCountry *CountryCode `xml:"IssrCtry"`
-
 }
-
 
 func (t *TaxIdentification2) SetIdentification(value string) {
 	t.Identification = (*Max35Text)(&value)
@@ -48,4 +46,3 @@ func (t *TaxIdentification2) SetExpiryDate(value string) {
 func (t *TaxIdentification2) SetIssuerCountry(value string) {
 	t.IssuerCountry = (*CountryCode)(&value)
 }
-

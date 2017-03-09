@@ -14,9 +14,7 @@ type ATMCustomer1 struct {
 
 	// Result of the customer authentication for this transaction.
 	AuthenticationResult []*TransactionVerificationResult5 `xml:"AuthntcnRslt,omitempty"`
-
 }
-
 
 func (a *ATMCustomer1) AddProfile() *ATMCustomerProfile1 {
 	a.Profile = new(ATMCustomerProfile1)
@@ -28,14 +26,13 @@ func (a *ATMCustomer1) SetSelectedLanguage(value string) {
 }
 
 func (a *ATMCustomer1) AddAuthentication() *CardholderAuthentication8 {
-	newValue := new (CardholderAuthentication8)
+	newValue := new(CardholderAuthentication8)
 	a.Authentication = append(a.Authentication, newValue)
 	return newValue
 }
 
 func (a *ATMCustomer1) AddAuthenticationResult() *TransactionVerificationResult5 {
-	newValue := new (TransactionVerificationResult5)
+	newValue := new(TransactionVerificationResult5)
 	a.AuthenticationResult = append(a.AuthenticationResult, newValue)
 	return newValue
 }
-

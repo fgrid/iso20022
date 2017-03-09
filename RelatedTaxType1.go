@@ -8,9 +8,7 @@ type RelatedTaxType1 struct {
 
 	// The value of the related tax expressed as an amount.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (r *RelatedTaxType1) AddTaxType() *TaxType3FormatChoice {
 	r.TaxType = new(TaxType3FormatChoice)
@@ -20,4 +18,3 @@ func (r *RelatedTaxType1) AddTaxType() *TaxType3FormatChoice {
 func (r *RelatedTaxType1) SetAmount(value, currency string) {
 	r.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

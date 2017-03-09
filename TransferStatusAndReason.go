@@ -23,9 +23,7 @@ type TransferStatusAndReason struct {
 
 	// Party that initiates the status.
 	StatusInitiator *PartyIdentification1Choice `xml:"StsInitr,omitempty"`
-
 }
-
 
 func (t *TransferStatusAndReason) SetTransferReference(value string) {
 	t.TransferReference = (*Max35Text)(&value)
@@ -60,4 +58,3 @@ func (t *TransferStatusAndReason) AddStatusInitiator() *PartyIdentification1Choi
 	t.StatusInitiator = new(PartyIdentification1Choice)
 	return t.StatusInitiator
 }
-

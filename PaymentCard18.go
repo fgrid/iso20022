@@ -29,9 +29,7 @@ type PaymentCard18 struct {
 
 	// Number distinguishing two or more payment cards with the same account number.
 	SequenceNumber *Max3Text `xml:"SeqNb,omitempty"`
-
 }
-
 
 func (p *PaymentCard18) SetType(value string) {
 	p.Type = (*CardType1Code)(&value)
@@ -69,4 +67,3 @@ func (p *PaymentCard18) SetSecurityCode(value string) {
 func (p *PaymentCard18) SetSequenceNumber(value string) {
 	p.SequenceNumber = (*Max3Text)(&value)
 }
-

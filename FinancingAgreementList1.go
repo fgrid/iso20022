@@ -44,9 +44,7 @@ type FinancingAgreementList1 struct {
 
 	// Validation status of the list.
 	ValidationStatusInformation *ValidationStatusInformation1 `xml:"VldtnStsInf,omitempty"`
-
 }
-
 
 func (f *FinancingAgreementList1) SetIdentifier(value string) {
 	f.Identifier = (*Max35Text)(&value)
@@ -57,7 +55,7 @@ func (f *FinancingAgreementList1) SetDate(value string) {
 }
 
 func (f *FinancingAgreementList1) AddRelatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.RelatedDocument = append(f.RelatedDocument, newValue)
 	return newValue
 }
@@ -88,13 +86,13 @@ func (f *FinancingAgreementList1) AddGuaranteeIssuer() *QualifiedPartyIdentifica
 }
 
 func (f *FinancingAgreementList1) AddNotificationInformation() *FinancingNotificationParties1 {
-	newValue := new (FinancingNotificationParties1)
+	newValue := new(FinancingNotificationParties1)
 	f.NotificationInformation = append(f.NotificationInformation, newValue)
 	return newValue
 }
 
 func (f *FinancingAgreementList1) AddItem() *FinancingAgreementItem1 {
-	newValue := new (FinancingAgreementItem1)
+	newValue := new(FinancingAgreementItem1)
 	f.Item = append(f.Item, newValue)
 	return newValue
 }
@@ -115,4 +113,3 @@ func (f *FinancingAgreementList1) AddValidationStatusInformation() *ValidationSt
 	f.ValidationStatusInformation = new(ValidationStatusInformation1)
 	return f.ValidationStatusInformation
 }
-

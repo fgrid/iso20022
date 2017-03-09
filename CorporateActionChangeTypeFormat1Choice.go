@@ -8,9 +8,7 @@ type CorporateActionChangeTypeFormat1Choice struct {
 
 	// Proprietary identification of the type of changes.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionChangeTypeFormat1Choice) SetCode(value string) {
 	c.Code = (*CorporateActionChangeType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionChangeTypeFormat1Choice) AddProprietary() *GenericIdenti
 	c.Proprietary = new(GenericIdentification20)
 	return c.Proprietary
 }
-

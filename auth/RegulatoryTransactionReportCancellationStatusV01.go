@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.011.001.01 Document"`
+	XMLName xml.Name                                          `xml:"urn:iso:std:iso:20022:tech:xsd:auth.011.001.01 Document"`
 	Message *RegulatoryTransactionReportCancellationStatusV01 `xml:"RgltryTxRptCxlStsV01"`
 }
 
@@ -33,15 +33,13 @@ type RegulatoryTransactionReportCancellationStatusV01 struct {
 	ReportingInstitution *iso20022.PartyIdentification23Choice `xml:"RptgInstn"`
 
 	// Provides the status of the entire RegulatoryTransactionReportCancellationRequest document that was previously sent by a reporting institution.
-	// 
-	// 
+	//
+	//
 	ReportCancellationStatus *iso20022.ReportStatusAndReason2 `xml:"RptCxlSts"`
 
 	// Provides the cancellation status of one or more transactions within a RegulatoryTransactionReportCancellationRequest that was previously sent by a reporting institution.
 	IndividualTransactionCancellationStatus []*iso20022.TradeTransactionStatusAndReason2 `xml:"IndvTxCxlSts"`
-
 }
-
 
 func (r *RegulatoryTransactionReportCancellationStatusV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	r.Identification = new(iso20022.DocumentIdentification8)
@@ -59,8 +57,7 @@ func (r *RegulatoryTransactionReportCancellationStatusV01) AddReportCancellation
 }
 
 func (r *RegulatoryTransactionReportCancellationStatusV01) AddIndividualTransactionCancellationStatus() *iso20022.TradeTransactionStatusAndReason2 {
-	newValue := new (iso20022.TradeTransactionStatusAndReason2)
+	newValue := new(iso20022.TradeTransactionStatusAndReason2)
 	r.IndividualTransactionCancellationStatus = append(r.IndividualTransactionCancellationStatus, newValue)
 	return newValue
 }
-

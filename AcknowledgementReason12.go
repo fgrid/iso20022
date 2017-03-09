@@ -8,9 +8,7 @@ type AcknowledgementReason12 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (a *AcknowledgementReason12) AddCode() *AcknowledgementReason15Choice {
 	a.Code = new(AcknowledgementReason15Choice)
@@ -20,4 +18,3 @@ func (a *AcknowledgementReason12) AddCode() *AcknowledgementReason15Choice {
 func (a *AcknowledgementReason12) SetAdditionalReasonInformation(value string) {
 	a.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

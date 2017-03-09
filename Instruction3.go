@@ -26,9 +26,7 @@ type Instruction3 struct {
 
 	// Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.
 	SpecificInstructionRequest *SpecificInstructionRequest1 `xml:"SpcfcInstrReq,omitempty"`
-
 }
-
 
 func (i *Instruction3) SetInstructionIdentification(value string) {
 	i.InstructionIdentification = (*Max35Text)(&value)
@@ -58,7 +56,7 @@ func (i *Instruction3) AddVoteDetails() *VoteDetails3 {
 }
 
 func (i *Instruction3) AddMeetingAttendee() *IndividualPerson26 {
-	newValue := new (IndividualPerson26)
+	newValue := new(IndividualPerson26)
 	i.MeetingAttendee = append(i.MeetingAttendee, newValue)
 	return newValue
 }
@@ -67,4 +65,3 @@ func (i *Instruction3) AddSpecificInstructionRequest() *SpecificInstructionReque
 	i.SpecificInstructionRequest = new(SpecificInstructionRequest1)
 	return i.SpecificInstructionRequest
 }
-

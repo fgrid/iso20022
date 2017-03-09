@@ -41,9 +41,7 @@ type Identification24 struct {
 
 	// Identification assigned by the account servicer to unambiguously identify a corporate action event.
 	CorporateActionEventIdentification *RestrictedFINXMax16Text `xml:"CorpActnEvtId,omitempty"`
-
 }
-
 
 func (i *Identification24) SetAccountOwnerTransactionIdentification(value string) {
 	i.AccountOwnerTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -96,4 +94,3 @@ func (i *Identification24) SetPoolIdentification(value string) {
 func (i *Identification24) SetCorporateActionEventIdentification(value string) {
 	i.CorporateActionEventIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

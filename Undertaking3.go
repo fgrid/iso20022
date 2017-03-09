@@ -18,7 +18,7 @@ type Undertaking3 struct {
 	// Party named in the undertaking as the “applicant”.
 	Applicant []*PartyIdentification43 `xml:"Applcnt,omitempty"`
 
-	// Party that issues the undertaking (or counter-undertaking). 
+	// Party that issues the undertaking (or counter-undertaking).
 	Issuer *PartyIdentification43 `xml:"Issr"`
 
 	// Party in whose favour the undertaking (or counter-undertaking) is issued.
@@ -45,10 +45,10 @@ type Undertaking3 struct {
 	// Indicates whether or not the advising bank (confirmer) is requested to add its confirmation to the undertaking.
 	ConfirmationIndicator *YesNoIndicator `xml:"ConfInd,omitempty"`
 
-	// Indicates the type of party requested to add its confirmation to the undertaking. 
+	// Indicates the type of party requested to add its confirmation to the undertaking.
 	ConfirmationPartyType *ExternalTypeOfParty1Code `xml:"ConfPtyTp,omitempty"`
 
-	// Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking . 
+	// Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking .
 	AdditionalParty []*PartyAndType1 `xml:"AddtlPty,omitempty"`
 
 	// Rules and laws governing the undertaking.
@@ -69,10 +69,10 @@ type Undertaking3 struct {
 	// Indicates that partial demands/drawings are not permitted.
 	PartialDemandIndicator *YesNoIndicator `xml:"PrtlDmndInd,omitempty"`
 
-	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges. 
+	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.
 	ConfirmationChargesPayableBy *ExternalTypeOfParty1Code `xml:"ConfChrgsPyblBy,omitempty"`
 
-	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. 
+	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges.
 	TransferChargesPayableBy *ExternalTypeOfParty1Code `xml:"TrfChrgsPyblBy,omitempty"`
 
 	// Details related to a variation in amount that is automatically applied.
@@ -90,11 +90,9 @@ type Undertaking3 struct {
 	// Additional information related to the undertaking.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
 
-	// Details of the local or ancillary undertaking requested to be issued by a local or other issuing institution. 
+	// Details of the local or ancillary undertaking requested to be issued by a local or other issuing institution.
 	RequestedLocalUndertaking *Undertaking4 `xml:"ReqdLclUdrtkg,omitempty"`
-
 }
-
 
 func (u *Undertaking3) SetIdentification(value string) {
 	u.Identification = (*Max35Text)(&value)
@@ -114,7 +112,7 @@ func (u *Undertaking3) SetIssuanceType(value string) {
 }
 
 func (u *Undertaking3) AddApplicant() *PartyIdentification43 {
-	newValue := new (PartyIdentification43)
+	newValue := new(PartyIdentification43)
 	u.Applicant = append(u.Applicant, newValue)
 	return newValue
 }
@@ -125,7 +123,7 @@ func (u *Undertaking3) AddIssuer() *PartyIdentification43 {
 }
 
 func (u *Undertaking3) AddBeneficiary() *PartyIdentification43 {
-	newValue := new (PartyIdentification43)
+	newValue := new(PartyIdentification43)
 	u.Beneficiary = append(u.Beneficiary, newValue)
 	return newValue
 }
@@ -168,7 +166,7 @@ func (u *Undertaking3) SetConfirmationPartyType(value string) {
 }
 
 func (u *Undertaking3) AddAdditionalParty() *PartyAndType1 {
-	newValue := new (PartyAndType1)
+	newValue := new(PartyAndType1)
 	u.AdditionalParty = append(u.AdditionalParty, newValue)
 	return newValue
 }
@@ -179,7 +177,7 @@ func (u *Undertaking3) AddGovernanceRulesAndLaw() *GovernanceRules1 {
 }
 
 func (u *Undertaking3) AddUnderlyingTransaction() *UnderlyingTradeTransaction1 {
-	newValue := new (UnderlyingTradeTransaction1)
+	newValue := new(UnderlyingTradeTransaction1)
 	u.UnderlyingTransaction = append(u.UnderlyingTransaction, newValue)
 	return newValue
 }
@@ -190,7 +188,7 @@ func (u *Undertaking3) AddPresentationDetails() *Presentation1 {
 }
 
 func (u *Undertaking3) AddUndertakingTermsAndConditions() *Narrative1 {
-	newValue := new (Narrative1)
+	newValue := new(Narrative1)
 	u.UndertakingTermsAndConditions = append(u.UndertakingTermsAndConditions, newValue)
 	return newValue
 }
@@ -212,7 +210,7 @@ func (u *Undertaking3) SetTransferChargesPayableBy(value string) {
 }
 
 func (u *Undertaking3) AddAutomaticAmountVariation() *AutomaticVariation1 {
-	newValue := new (AutomaticVariation1)
+	newValue := new(AutomaticVariation1)
 	u.AutomaticAmountVariation = append(u.AutomaticAmountVariation, newValue)
 	return newValue
 }
@@ -227,7 +225,7 @@ func (u *Undertaking3) SetTransferIndicator(value string) {
 }
 
 func (u *Undertaking3) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	u.EnclosedFile = append(u.EnclosedFile, newValue)
 	return newValue
 }
@@ -240,4 +238,3 @@ func (u *Undertaking3) AddRequestedLocalUndertaking() *Undertaking4 {
 	u.RequestedLocalUndertaking = new(Undertaking4)
 	return u.RequestedLocalUndertaking
 }
-

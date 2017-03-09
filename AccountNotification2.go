@@ -6,7 +6,7 @@ type AccountNotification2 struct {
 	// Unique identification, as assigned by the account servicer, to unambiguously identify the account notification.
 	Identification *Max35Text `xml:"Id"`
 
-	// Sequential number of the notification, as assigned by the account servicer. 
+	// Sequential number of the notification, as assigned by the account servicer.
 	// Usage: The sequential number is increased incrementally for each notification sent electronically.
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
@@ -43,9 +43,7 @@ type AccountNotification2 struct {
 
 	// Further details of the account notification.
 	AdditionalNotificationInformation *Max500Text `xml:"AddtlNtfctnInf,omitempty"`
-
 }
-
 
 func (a *AccountNotification2) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -88,7 +86,7 @@ func (a *AccountNotification2) AddRelatedAccount() *CashAccount16 {
 }
 
 func (a *AccountNotification2) AddInterest() *AccountInterest2 {
-	newValue := new (AccountInterest2)
+	newValue := new(AccountInterest2)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
@@ -99,7 +97,7 @@ func (a *AccountNotification2) AddTransactionsSummary() *TotalTransactions2 {
 }
 
 func (a *AccountNotification2) AddEntry() *ReportEntry2 {
-	newValue := new (ReportEntry2)
+	newValue := new(ReportEntry2)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -107,4 +105,3 @@ func (a *AccountNotification2) AddEntry() *ReportEntry2 {
 func (a *AccountNotification2) SetAdditionalNotificationInformation(value string) {
 	a.AdditionalNotificationInformation = (*Max500Text)(&value)
 }
-

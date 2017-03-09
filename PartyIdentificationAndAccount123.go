@@ -20,9 +20,7 @@ type PartyIdentificationAndAccount123 struct {
 
 	// Contact person and contact information.
 	ContactPerson *ContactIdentification2 `xml:"CtctPrsn,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount123) AddPartyIdentification() *PartyIdentification70Choice {
 	p.PartyIdentification = new(PartyIdentification70Choice)
@@ -51,4 +49,3 @@ func (p *PartyIdentificationAndAccount123) AddContactPerson() *ContactIdentifica
 	p.ContactPerson = new(ContactIdentification2)
 	return p.ContactPerson
 }
-

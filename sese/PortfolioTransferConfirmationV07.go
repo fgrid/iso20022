@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300107 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.013.001.07 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:sese.013.001.07 Document"`
 	Message *PortfolioTransferConfirmationV07 `xml:"PrtflTrfConf"`
 }
 
@@ -76,9 +76,7 @@ type PortfolioTransferConfirmationV07 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (p *PortfolioTransferConfirmationV07) AddMessageReference() *iso20022.MessageIdentification1 {
 	p.MessageReference = new(iso20022.MessageIdentification1)
@@ -111,7 +109,7 @@ func (p *PortfolioTransferConfirmationV07) AddSecondaryIndividualInvestor() *iso
 }
 
 func (p *PortfolioTransferConfirmationV07) AddOtherIndividualInvestor() *iso20022.IndividualPerson8 {
-	newValue := new (iso20022.IndividualPerson8)
+	newValue := new(iso20022.IndividualPerson8)
 	p.OtherIndividualInvestor = append(p.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -127,7 +125,7 @@ func (p *PortfolioTransferConfirmationV07) AddSecondaryCorporateInvestor() *iso2
 }
 
 func (p *PortfolioTransferConfirmationV07) AddOtherCorporateInvestor() *iso20022.Organisation21 {
-	newValue := new (iso20022.Organisation21)
+	newValue := new(iso20022.Organisation21)
 	p.OtherCorporateInvestor = append(p.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -148,7 +146,7 @@ func (p *PortfolioTransferConfirmationV07) AddTransferee() *iso20022.PartyIdenti
 }
 
 func (p *PortfolioTransferConfirmationV07) AddIntermediaryInformation() *iso20022.Intermediary34 {
-	newValue := new (iso20022.Intermediary34)
+	newValue := new(iso20022.Intermediary34)
 	p.IntermediaryInformation = append(p.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -159,7 +157,7 @@ func (p *PortfolioTransferConfirmationV07) AddCashAccount() *iso20022.CashAccoun
 }
 
 func (p *PortfolioTransferConfirmationV07) AddProductTransfer() *iso20022.ISATransfer26 {
-	newValue := new (iso20022.ISATransfer26)
+	newValue := new(iso20022.ISATransfer26)
 	p.ProductTransfer = append(p.ProductTransfer, newValue)
 	return newValue
 }
@@ -170,8 +168,7 @@ func (p *PortfolioTransferConfirmationV07) AddMarketPracticeVersion() *iso20022.
 }
 
 func (p *PortfolioTransferConfirmationV07) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	p.Extension = append(p.Extension, newValue)
 	return newValue
 }
-

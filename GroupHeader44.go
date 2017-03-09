@@ -4,7 +4,7 @@ package iso20022
 type GroupHeader44 struct {
 
 	// Point to point reference, as assigned by the account servicing institution, and sent to the account owner or the party authorised to receive the message, to unambiguously identify the message.
-	// 
+	//
 	// Usage: The account servicing institution has to make sure that 'MessageIdentification' is unique per account owner for a pre-agreed period.
 	MessageIdentification *Max35Text `xml:"MsgId"`
 
@@ -13,9 +13,7 @@ type GroupHeader44 struct {
 
 	// Identification of the party that is receiving the message, when different from the account owner.
 	MessageRecipient *Party7Choice `xml:"MsgRcpt,omitempty"`
-
 }
-
 
 func (g *GroupHeader44) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -29,4 +27,3 @@ func (g *GroupHeader44) AddMessageRecipient() *Party7Choice {
 	g.MessageRecipient = new(Party7Choice)
 	return g.MessageRecipient
 }
-

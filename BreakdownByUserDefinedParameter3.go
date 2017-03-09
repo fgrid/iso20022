@@ -23,9 +23,7 @@ type BreakdownByUserDefinedParameter3 struct {
 
 	// Net cash as a result of the cash-in and cash-out flows specified for the user defined parameter.
 	NetCashForecast []*NetCashForecast4 `xml:"NetCshFcst,omitempty"`
-
 }
-
 
 func (b *BreakdownByUserDefinedParameter3) AddParty() *InvestmentAccount42 {
 	b.Party = new(InvestmentAccount42)
@@ -46,20 +44,19 @@ func (b *BreakdownByUserDefinedParameter3) AddUserDefined() *DataFormat2Choice {
 }
 
 func (b *BreakdownByUserDefinedParameter3) AddCashInForecast() *CashInForecast5 {
-	newValue := new (CashInForecast5)
+	newValue := new(CashInForecast5)
 	b.CashInForecast = append(b.CashInForecast, newValue)
 	return newValue
 }
 
 func (b *BreakdownByUserDefinedParameter3) AddCashOutForecast() *CashOutForecast5 {
-	newValue := new (CashOutForecast5)
+	newValue := new(CashOutForecast5)
 	b.CashOutForecast = append(b.CashOutForecast, newValue)
 	return newValue
 }
 
 func (b *BreakdownByUserDefinedParameter3) AddNetCashForecast() *NetCashForecast4 {
-	newValue := new (NetCashForecast4)
+	newValue := new(NetCashForecast4)
 	b.NetCashForecast = append(b.NetCashForecast, newValue)
 	return newValue
 }
-

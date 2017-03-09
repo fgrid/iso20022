@@ -8,9 +8,7 @@ type InvestorCapacity3Choice struct {
 
 	// Investor capacity expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (i *InvestorCapacity3Choice) SetCode(value string) {
 	i.Code = (*Eligibility1Code)(&value)
@@ -20,4 +18,3 @@ func (i *InvestorCapacity3Choice) AddProprietary() *GenericIdentification38 {
 	i.Proprietary = new(GenericIdentification38)
 	return i.Proprietary
 }
-

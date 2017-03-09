@@ -8,9 +8,7 @@ type SecuritiesRTGS5Choice struct {
 
 	// Securities RTGS information expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (s *SecuritiesRTGS5Choice) SetIndicator(value string) {
 	s.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (s *SecuritiesRTGS5Choice) AddProprietary() *GenericIdentification47 {
 	s.Proprietary = new(GenericIdentification47)
 	return s.Proprietary
 }
-

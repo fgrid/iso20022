@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.011.001.04 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:sese.011.001.04 Document"`
 	Message *TransferInstructionStatusReportV04 `xml:"TrfInstrStsRpt"`
 }
 
@@ -37,7 +37,7 @@ func (d *Document01100104) AddMessage() *TransferInstructionStatusReportV04 {
 // - a cancellation pending status and the reason for the status.
 type TransferInstructionStatusReportV04 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Unambiguous identification of the transfer allocated by the counterparty.
@@ -54,9 +54,7 @@ type TransferInstructionStatusReportV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (t *TransferInstructionStatusReportV04) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -84,8 +82,7 @@ func (t *TransferInstructionStatusReportV04) AddMarketPracticeVersion() *iso2002
 }
 
 func (t *TransferInstructionStatusReportV04) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	t.Extension = append(t.Extension, newValue)
 	return newValue
 }
-

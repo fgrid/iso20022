@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.002.001.02 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.002.001.02 Document"`
 	Message *TransferOutCancellationRequestV02 `xml:"TrfOutCxlReqV02"`
 }
 
@@ -45,9 +45,7 @@ type TransferOutCancellationRequestV02 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (t *TransferOutCancellationRequestV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	t.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -83,4 +81,3 @@ func (t *TransferOutCancellationRequestV02) AddCopyDetails() *iso20022.CopyInfor
 	t.CopyDetails = new(iso20022.CopyInformation2)
 	return t.CopyDetails
 }
-

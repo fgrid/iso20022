@@ -7,7 +7,7 @@ import (
 )
 
 type Document04600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.046.001.01 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.046.001.01 Document"`
 	Message *IntentToPayReportV01 `xml:"InttToPayRpt"`
 }
 
@@ -28,9 +28,7 @@ type IntentToPayReportV01 struct {
 
 	// Reports on the intention to pay per purchase order.
 	ReportedItems []*iso20022.ReportLine1 `xml:"RptdItms,omitempty"`
-
 }
-
 
 func (i *IntentToPayReportV01) AddReportIdentification() *iso20022.MessageIdentification1 {
 	i.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -38,8 +36,7 @@ func (i *IntentToPayReportV01) AddReportIdentification() *iso20022.MessageIdenti
 }
 
 func (i *IntentToPayReportV01) AddReportedItems() *iso20022.ReportLine1 {
-	newValue := new (iso20022.ReportLine1)
+	newValue := new(iso20022.ReportLine1)
 	i.ReportedItems = append(i.ReportedItems, newValue)
 	return newValue
 }
-

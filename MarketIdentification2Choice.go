@@ -8,9 +8,7 @@ type MarketIdentification2Choice struct {
 
 	// Description of the market when no Market Identifier Code is available.
 	Description *RestrictedFINXMax30Text `xml:"Desc"`
-
 }
-
 
 func (m *MarketIdentification2Choice) SetMarketIdentifierCode(value string) {
 	m.MarketIdentifierCode = (*MICIdentifier)(&value)
@@ -19,4 +17,3 @@ func (m *MarketIdentification2Choice) SetMarketIdentifierCode(value string) {
 func (m *MarketIdentification2Choice) SetDescription(value string) {
 	m.Description = (*RestrictedFINXMax30Text)(&value)
 }
-

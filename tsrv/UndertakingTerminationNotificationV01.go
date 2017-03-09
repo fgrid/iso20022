@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01 Document"`
 	Message *UndertakingTerminationNotificationV01 `xml:"UdrtkgTermntnNtfctn"`
 }
 
@@ -24,9 +24,7 @@ type UndertakingTerminationNotificationV01 struct {
 
 	// Digital signature of the notification.
 	DigitalSignature *iso20022.PartyAndSignature2 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (u *UndertakingTerminationNotificationV01) AddUndertakingTerminationNotificationDetails() *iso20022.UndertakingTerminationNotice1 {
 	u.UndertakingTerminationNotificationDetails = new(iso20022.UndertakingTerminationNotice1)
@@ -37,4 +35,3 @@ func (u *UndertakingTerminationNotificationV01) AddDigitalSignature() *iso20022.
 	u.DigitalSignature = new(iso20022.PartyAndSignature2)
 	return u.DigitalSignature
 }
-

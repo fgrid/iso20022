@@ -72,7 +72,7 @@ type OtherAmounts30 struct {
 	// Amount of consumption tax.
 	ConsumptionTax *AmountAndDirection44 `xml:"CsmptnTax,omitempty"`
 
-	// Amount of unpaid interest (on bonds which have defaulted and have subsequently 
+	// Amount of unpaid interest (on bonds which have defaulted and have subsequently
 	// restructured), which is capitalized and added to the original principal amount of the bond.
 	AccruedCapitalisationAmount *AmountAndDirection44 `xml:"AcrdCptlstnAmt,omitempty"`
 
@@ -81,9 +81,7 @@ type OtherAmounts30 struct {
 
 	// Value of the collateral available for the delivery settlement process at the account level.
 	CollateralMonitorAmount *AmountAndDirection44 `xml:"CollMntrAmt,omitempty"`
-
 }
-
 
 func (o *OtherAmounts30) AddAccruedInterestAmount() *AmountAndDirection44 {
 	o.AccruedInterestAmount = new(AmountAndDirection44)
@@ -214,4 +212,3 @@ func (o *OtherAmounts30) AddCollateralMonitorAmount() *AmountAndDirection44 {
 	o.CollateralMonitorAmount = new(AmountAndDirection44)
 	return o.CollateralMonitorAmount
 }
-

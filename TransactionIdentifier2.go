@@ -10,9 +10,7 @@ type TransactionIdentifier2 struct {
 	// Identification of the reconciliation.
 	// It correspond to the ISO 8583 field number 29 for the versions 1993 and 2003.
 	ReconciliationIdentification *Max35Text `xml:"RcncltnId,omitempty"`
-
 }
-
 
 func (t *TransactionIdentifier2) SetReconciliationDate(value string) {
 	t.ReconciliationDate = (*ISODate)(&value)
@@ -21,4 +19,3 @@ func (t *TransactionIdentifier2) SetReconciliationDate(value string) {
 func (t *TransactionIdentifier2) SetReconciliationIdentification(value string) {
 	t.ReconciliationIdentification = (*Max35Text)(&value)
 }
-

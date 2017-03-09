@@ -8,9 +8,7 @@ type CorporateMovementStatus2 struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *CorporateActionMovementRejectionStatus2 `xml:"RjctdSts"`
-
 }
-
 
 func (c *CorporateMovementStatus2) AddProcessedStatus() *CorporationActionMovementProcessingStatus2 {
 	c.ProcessedStatus = new(CorporationActionMovementProcessingStatus2)
@@ -21,4 +19,3 @@ func (c *CorporateMovementStatus2) AddRejectedStatus() *CorporateActionMovementR
 	c.RejectedStatus = new(CorporateActionMovementRejectionStatus2)
 	return c.RejectedStatus
 }
-

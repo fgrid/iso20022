@@ -8,9 +8,7 @@ type InstructionTypeStatus2Choice struct {
 
 	// Status applying to the instruction cancellation request received. The instruction cancellation is identified by the InstructionCancellationIdentification.
 	CancellationStatus *CancellationStatus2Choice `xml:"CxlSts"`
-
 }
-
 
 func (i *InstructionTypeStatus2Choice) AddInstructionStatus() *InstructionStatus5Choice {
 	i.InstructionStatus = new(InstructionStatus5Choice)
@@ -21,4 +19,3 @@ func (i *InstructionTypeStatus2Choice) AddCancellationStatus() *CancellationStat
 	i.CancellationStatus = new(CancellationStatus2Choice)
 	return i.CancellationStatus
 }
-

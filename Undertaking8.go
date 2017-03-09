@@ -14,9 +14,7 @@ type Undertaking8 struct {
 
 	// Unique and unambiguous identifier assigned by the beneficiary to the undertaking.
 	BeneficiaryReferenceNumber *Max35Text `xml:"BnfcryRefNb,omitempty"`
-
 }
-
 
 func (u *Undertaking8) SetIdentification(value string) {
 	u.Identification = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (u *Undertaking8) SetApplicantReferenceNumber(value string) {
 func (u *Undertaking8) SetBeneficiaryReferenceNumber(value string) {
 	u.BeneficiaryReferenceNumber = (*Max35Text)(&value)
 }
-

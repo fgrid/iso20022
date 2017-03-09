@@ -8,9 +8,7 @@ type EntryDetails1 struct {
 
 	// Set of elements used to provide information on the underlying transaction(s).
 	TransactionDetails []*EntryTransaction2 `xml:"TxDtls,omitempty"`
-
 }
-
 
 func (e *EntryDetails1) AddBatch() *BatchInformation2 {
 	e.Batch = new(BatchInformation2)
@@ -18,8 +16,7 @@ func (e *EntryDetails1) AddBatch() *BatchInformation2 {
 }
 
 func (e *EntryDetails1) AddTransactionDetails() *EntryTransaction2 {
-	newValue := new (EntryTransaction2)
+	newValue := new(EntryTransaction2)
 	e.TransactionDetails = append(e.TransactionDetails, newValue)
 	return newValue
 }
-

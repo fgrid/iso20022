@@ -29,9 +29,7 @@ type FundCashInBreakdown2 struct {
 
 	// Information related to the commission applied to an order, eg, back-end or front-end commission.
 	CommissionDetails []*Commission9 `xml:"ComssnDtls,omitempty"`
-
 }
-
 
 func (f *FundCashInBreakdown2) SetAmount(value, currency string) {
 	f.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -63,14 +61,13 @@ func (f *FundCashInBreakdown2) SetExtendedOriginalOrderQuantityType(value string
 }
 
 func (f *FundCashInBreakdown2) AddChargeDetails() *Charge16 {
-	newValue := new (Charge16)
+	newValue := new(Charge16)
 	f.ChargeDetails = append(f.ChargeDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashInBreakdown2) AddCommissionDetails() *Commission9 {
-	newValue := new (Commission9)
+	newValue := new(Commission9)
 	f.CommissionDetails = append(f.CommissionDetails, newValue)
 	return newValue
 }
-

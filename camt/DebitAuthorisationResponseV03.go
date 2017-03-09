@@ -7,7 +7,7 @@ import (
 )
 
 type Document03600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.036.001.03 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:camt.036.001.03 Document"`
 	Message *DebitAuthorisationResponseV03 `xml:"DbtAuthstnRspn"`
 }
 
@@ -37,9 +37,7 @@ type DebitAuthorisationResponseV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (d *DebitAuthorisationResponseV03) AddAssignment() *iso20022.CaseAssignment3 {
 	d.Assignment = new(iso20022.CaseAssignment3)
@@ -57,8 +55,7 @@ func (d *DebitAuthorisationResponseV03) AddConfirmation() *iso20022.DebitAuthori
 }
 
 func (d *DebitAuthorisationResponseV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	d.SupplementaryData = append(d.SupplementaryData, newValue)
 	return newValue
 }
-

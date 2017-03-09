@@ -35,9 +35,7 @@ type FinancingAgreementItem1 struct {
 
 	// Free form textual information related to the agreement.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (f *FinancingAgreementItem1) AddItemContext() *FinancialItemParameters1 {
 	f.ItemContext = new(FinancialItemParameters1)
@@ -66,7 +64,7 @@ func (f *FinancingAgreementItem1) SetReopenIndication(value string) {
 }
 
 func (f *FinancingAgreementItem1) AddGuarantee() *GuaranteeDetails1 {
-	newValue := new (GuaranteeDetails1)
+	newValue := new(GuaranteeDetails1)
 	f.Guarantee = append(f.Guarantee, newValue)
 	return newValue
 }
@@ -82,7 +80,7 @@ func (f *FinancingAgreementItem1) AddRelatedGuaranteeLetter() *QualifiedDocument
 }
 
 func (f *FinancingAgreementItem1) AddAssociatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.AssociatedDocument = append(f.AssociatedDocument, newValue)
 	return newValue
 }
@@ -90,4 +88,3 @@ func (f *FinancingAgreementItem1) AddAssociatedDocument() *QualifiedDocumentInfo
 func (f *FinancingAgreementItem1) AddAdditionalInformation(value string) {
 	f.AdditionalInformation = append(f.AdditionalInformation, (*Max2000Text)(&value))
 }
-

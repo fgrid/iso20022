@@ -11,9 +11,7 @@ type TransactionStatus5 struct {
 
 	// Additional information on the reason for the time-out.
 	Description *Max140Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (t *TransactionStatus5) SetStatus(value string) {
 	t.Status = (*BaselineStatus3Code)(&value)
@@ -26,4 +24,3 @@ func (t *TransactionStatus5) SetChangeDateTime(value string) {
 func (t *TransactionStatus5) SetDescription(value string) {
 	t.Description = (*Max140Text)(&value)
 }
-

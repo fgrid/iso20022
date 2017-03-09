@@ -41,9 +41,7 @@ type SummaryAmounts1 struct {
 
 	// Sum of fees/commissions.
 	TotalFees *ActiveCurrencyAndAmount `xml:"TtlFees,omitempty"`
-
 }
-
 
 func (s *SummaryAmounts1) SetThresholdAmount(value, currency string) {
 	s.ThresholdAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -96,4 +94,3 @@ func (s *SummaryAmounts1) SetTotalAccruedInterestAmount(value, currency string) 
 func (s *SummaryAmounts1) SetTotalFees(value, currency string) {
 	s.TotalFees = NewActiveCurrencyAndAmount(value, currency)
 }
-

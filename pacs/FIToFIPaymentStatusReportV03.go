@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.002.001.03 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.002.001.03 Document"`
 	Message *FIToFIPaymentStatusReportV03 `xml:"FIToFIPmtStsRpt"`
 }
 
@@ -33,9 +33,7 @@ type FIToFIPaymentStatusReportV03 struct {
 
 	// Information concerning the original transactions, to which the status report message refers.
 	TransactionInformationAndStatus []*iso20022.PaymentTransactionInformation26 `xml:"TxInfAndSts,omitempty"`
-
 }
-
 
 func (f *FIToFIPaymentStatusReportV03) AddGroupHeader() *iso20022.GroupHeader37 {
 	f.GroupHeader = new(iso20022.GroupHeader37)
@@ -48,8 +46,7 @@ func (f *FIToFIPaymentStatusReportV03) AddOriginalGroupInformationAndStatus() *i
 }
 
 func (f *FIToFIPaymentStatusReportV03) AddTransactionInformationAndStatus() *iso20022.PaymentTransactionInformation26 {
-	newValue := new (iso20022.PaymentTransactionInformation26)
+	newValue := new(iso20022.PaymentTransactionInformation26)
 	f.TransactionInformationAndStatus = append(f.TransactionInformationAndStatus, newValue)
 	return newValue
 }
-

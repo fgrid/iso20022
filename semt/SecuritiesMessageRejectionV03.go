@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.001.001.03 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:semt.001.001.03 Document"`
 	Message *SecuritiesMessageRejectionV03 `xml:"SctiesMsgRjctn"`
 }
 
@@ -27,7 +27,7 @@ func (d *Document00100103) AddMessage() *SecuritiesMessageRejectionV03 {
 // The SecuritiesMessageRejection message must not be used to reject an instruction message that cannot be processed for business reasons, for example, if information is missing in an instruction message or because securities are not available for settlement.
 type SecuritiesMessageRejectionV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message that was previously received.
@@ -35,9 +35,7 @@ type SecuritiesMessageRejectionV03 struct {
 
 	// Reason to reject the message.
 	Reason *iso20022.RejectionReason23 `xml:"Rsn"`
-
 }
-
 
 func (s *SecuritiesMessageRejectionV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -53,4 +51,3 @@ func (s *SecuritiesMessageRejectionV03) AddReason() *iso20022.RejectionReason23 
 	s.Reason = new(iso20022.RejectionReason23)
 	return s.Reason
 }
-

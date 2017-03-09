@@ -7,7 +7,7 @@ import (
 )
 
 type Document02600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.026.001.01 Document"`
+	XMLName xml.Name                                          `xml:"urn:iso:std:iso:20022:tech:xsd:seev.026.001.01 Document"`
 	Message *AgentCAStandingInstructionCancellationRequestV01 `xml:"AgtCAStgInstrCxlReq"`
 }
 
@@ -34,9 +34,7 @@ type AgentCAStandingInstructionCancellationRequestV01 struct {
 
 	// Information related to the standing instruction.
 	StandingInstructionDetails *iso20022.CorporateActionStandingInstruction1 `xml:"StgInstrDtls,omitempty"`
-
 }
-
 
 func (a *AgentCAStandingInstructionCancellationRequestV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -57,4 +55,3 @@ func (a *AgentCAStandingInstructionCancellationRequestV01) AddStandingInstructio
 	a.StandingInstructionDetails = new(iso20022.CorporateActionStandingInstruction1)
 	return a.StandingInstructionDetails
 }
-

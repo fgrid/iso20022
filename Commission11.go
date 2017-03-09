@@ -20,9 +20,7 @@ type Commission11 struct {
 
 	// Indicates if the CommercialAgreementReference is a new reference or not.
 	NewCommercialAgreementReferenceIndicator *YesNoIndicator `xml:"NewComrclAgrmtRefInd,omitempty"`
-
 }
-
 
 func (c *Commission11) SetAmount(value, currency string) {
 	c.Amount = NewActiveCurrencyAnd13DecimalAmount(value, currency)
@@ -47,4 +45,3 @@ func (c *Commission11) SetCommercialAgreementReference(value string) {
 func (c *Commission11) SetNewCommercialAgreementReferenceIndicator(value string) {
 	c.NewCommercialAgreementReferenceIndicator = (*YesNoIndicator)(&value)
 }
-

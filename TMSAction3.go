@@ -32,9 +32,7 @@ type TMSAction3 struct {
 
 	// Action to perform in case of error on the related action in progress.
 	ErrorAction []*ErrorAction2 `xml:"ErrActn,omitempty"`
-
 }
-
 
 func (t *TMSAction3) SetType(value string) {
 	t.Type = (*TerminalManagementAction1Code)(&value)
@@ -77,8 +75,7 @@ func (t *TMSAction3) AddKeyEnciphermentCertificate(value string) {
 }
 
 func (t *TMSAction3) AddErrorAction() *ErrorAction2 {
-	newValue := new (ErrorAction2)
+	newValue := new(ErrorAction2)
 	t.ErrorAction = append(t.ErrorAction, newValue)
 	return newValue
 }
-

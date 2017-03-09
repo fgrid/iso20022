@@ -10,7 +10,7 @@ type AccountReport9 struct {
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
 	// Legal sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent.
-	// 
+	//
 	// Usage : in those scenarios where eg a paper statement is a legal requirement, the paper statement may have a different numbering than the electronic sequential number. Paper statements can for instance only be sent if movement on the account has taken place, whereas electronic statements can be sent eg each day, regardless of whether movements have taken place or not.
 	LegalSequenceNumber *Number `xml:"LglSeqNb,omitempty"`
 
@@ -39,15 +39,13 @@ type AccountReport9 struct {
 	TransactionsSummary *TotalTransactions1 `xml:"TxsSummry,omitempty"`
 
 	// Specifies the elements of an entry in the report.
-	// 
+	//
 	// Usage: At least one reference must be provided to identify the entry and its underlying transaction(s).
 	Entry []*ReportEntry1 `xml:"Ntry,omitempty"`
 
 	// Further details on the account report.
 	AdditionalReportInformation *Max500Text `xml:"AddtlRptInf,omitempty"`
-
 }
-
 
 func (a *AccountReport9) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -85,13 +83,13 @@ func (a *AccountReport9) AddRelatedAccount() *CashAccount7 {
 }
 
 func (a *AccountReport9) AddInterest() *AccountInterest1 {
-	newValue := new (AccountInterest1)
+	newValue := new(AccountInterest1)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountReport9) AddBalance() *CashBalance1 {
-	newValue := new (CashBalance1)
+	newValue := new(CashBalance1)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -102,7 +100,7 @@ func (a *AccountReport9) AddTransactionsSummary() *TotalTransactions1 {
 }
 
 func (a *AccountReport9) AddEntry() *ReportEntry1 {
-	newValue := new (ReportEntry1)
+	newValue := new(ReportEntry1)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -110,4 +108,3 @@ func (a *AccountReport9) AddEntry() *ReportEntry1 {
 func (a *AccountReport9) SetAdditionalReportInformation(value string) {
 	a.AdditionalReportInformation = (*Max500Text)(&value)
 }
-

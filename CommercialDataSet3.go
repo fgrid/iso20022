@@ -26,9 +26,7 @@ type CommercialDataSet3 struct {
 
 	// Specifies how the transaction should be settled.
 	SettlementTerms *SettlementTerms2 `xml:"SttlmTerms"`
-
 }
-
 
 func (c *CommercialDataSet3) AddDataSetIdentification() *DocumentIdentification1 {
 	c.DataSetIdentification = new(DocumentIdentification1)
@@ -56,13 +54,13 @@ func (c *CommercialDataSet3) AddBillTo() *PartyIdentification26 {
 }
 
 func (c *CommercialDataSet3) AddGoods() *LineItem9 {
-	newValue := new (LineItem9)
+	newValue := new(LineItem9)
 	c.Goods = append(c.Goods, newValue)
 	return newValue
 }
 
 func (c *CommercialDataSet3) AddPaymentTerms() *PaymentTerms1 {
-	newValue := new (PaymentTerms1)
+	newValue := new(PaymentTerms1)
 	c.PaymentTerms = append(c.PaymentTerms, newValue)
 	return newValue
 }
@@ -71,4 +69,3 @@ func (c *CommercialDataSet3) AddSettlementTerms() *SettlementTerms2 {
 	c.SettlementTerms = new(SettlementTerms2)
 	return c.SettlementTerms
 }
-

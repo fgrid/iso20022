@@ -1,7 +1,7 @@
 package iso20022
 
 // Specifies a single instalment related to an invoice settlement and optional reconciliation information.
-	// Reconciliation information is used to indicate the amount to be allocated to a particular instalment of a financial document.
+// Reconciliation information is used to indicate the amount to be allocated to a particular instalment of a financial document.
 type Instalment2 struct {
 
 	// Specifies the progressive number of the single instalment related to an invoice.
@@ -15,9 +15,7 @@ type Instalment2 struct {
 
 	// Desired payment instrument to be used for the instalment.
 	PaymentInstrument *PaymentMeans1 `xml:"PmtInstrm,omitempty"`
-
 }
-
 
 func (i *Instalment2) SetSequenceIdentification(value string) {
 	i.SequenceIdentification = (*Max70Text)(&value)
@@ -35,4 +33,3 @@ func (i *Instalment2) AddPaymentInstrument() *PaymentMeans1 {
 	i.PaymentInstrument = new(PaymentMeans1)
 	return i.PaymentInstrument
 }
-

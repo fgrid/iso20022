@@ -7,7 +7,7 @@ import (
 )
 
 type Document03200104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.001.04 Document"`
+	XMLName xml.Name                                                  `xml:"urn:iso:std:iso:20022:tech:xsd:sese.032.001.04 Document"`
 	Message *SecuritiesSettlementTransactionGenerationNotificationV04 `xml:"SctiesSttlmTxGnrtnNtfctn"`
 }
 
@@ -22,15 +22,15 @@ func (d *Document03200104) AddMessage() *SecuritiesSettlementTransactionGenerati
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer
-// 
-// 
+//
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesSettlementTransactionGenerationNotificationV04 struct {
@@ -88,9 +88,7 @@ type SecuritiesSettlementTransactionGenerationNotificationV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddTransactionIdentificationDetails() *iso20022.SettlementTypeAndIdentification15 {
 	s.TransactionIdentificationDetails = new(iso20022.SettlementTypeAndIdentification15)
@@ -103,7 +101,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddNumberCoun
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddLinkages() *iso20022.Linkages17 {
-	newValue := new (iso20022.Linkages17)
+	newValue := new(iso20022.Linkages17)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -124,7 +122,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddFinancialI
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddQuantityAndAccountDetails() *iso20022.QuantityAndAccount25 {
-	newValue := new (iso20022.QuantityAndAccount25)
+	newValue := new(iso20022.QuantityAndAccount25)
 	s.QuantityAndAccountDetails = append(s.QuantityAndAccountDetails, newValue)
 	return newValue
 }
@@ -170,7 +168,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddAdditional
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddGeneratedReason() *iso20022.GeneratedReason1 {
-	newValue := new (iso20022.GeneratedReason1)
+	newValue := new(iso20022.GeneratedReason1)
 	s.GeneratedReason = append(s.GeneratedReason, newValue)
 	return newValue
 }
@@ -181,8 +179,7 @@ func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddStatusAndR
 }
 
 func (s *SecuritiesSettlementTransactionGenerationNotificationV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

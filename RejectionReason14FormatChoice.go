@@ -8,9 +8,7 @@ type RejectionReason14FormatChoice struct {
 
 	// Proprietary code to  express the reason of a rejection of a movement cancellation request.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (r *RejectionReason14FormatChoice) SetCode(value string) {
 	r.Code = (*RejectionReason14Code)(&value)
@@ -20,4 +18,3 @@ func (r *RejectionReason14FormatChoice) AddProprietary() *GenericIdentification1
 	r.Proprietary = new(GenericIdentification13)
 	return r.Proprietary
 }
-

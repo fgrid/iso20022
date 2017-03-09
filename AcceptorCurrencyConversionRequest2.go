@@ -8,9 +8,7 @@ type AcceptorCurrencyConversionRequest2 struct {
 
 	// Card payment transaction for which the currency conversion is requested.
 	Transaction *CardPaymentTransaction49 `xml:"Tx"`
-
 }
-
 
 func (a *AcceptorCurrencyConversionRequest2) AddEnvironment() *CardPaymentEnvironment44 {
 	a.Environment = new(CardPaymentEnvironment44)
@@ -21,4 +19,3 @@ func (a *AcceptorCurrencyConversionRequest2) AddTransaction() *CardPaymentTransa
 	a.Transaction = new(CardPaymentTransaction49)
 	return a.Transaction
 }
-

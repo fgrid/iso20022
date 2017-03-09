@@ -8,9 +8,7 @@ type TaxType2Choice struct {
 
 	// Specifies types of tax not present in a code list.
 	OtherTaxType *Max35Text `xml:"OthrTaxTp"`
-
 }
-
 
 func (t *TaxType2Choice) SetType(value string) {
 	t.Type = (*TaxType9Code)(&value)
@@ -19,4 +17,3 @@ func (t *TaxType2Choice) SetType(value string) {
 func (t *TaxType2Choice) SetOtherTaxType(value string) {
 	t.OtherTaxType = (*Max35Text)(&value)
 }
-

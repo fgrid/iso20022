@@ -35,9 +35,7 @@ type AdditionalInformation3 struct {
 
 	// Party that, in a settlement chain interacts with the depository.
 	ReceivingParty1 *PartyIdentificationAndAccount16 `xml:"RcvgPty1,omitempty"`
-
 }
-
 
 func (a *AdditionalInformation3) SetAccountOwnerTransactionIdentification(value string) {
 	a.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -92,4 +90,3 @@ func (a *AdditionalInformation3) AddReceivingParty1() *PartyIdentificationAndAcc
 	a.ReceivingParty1 = new(PartyIdentificationAndAccount16)
 	return a.ReceivingParty1
 }
-

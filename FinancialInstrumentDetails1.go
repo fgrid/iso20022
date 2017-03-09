@@ -11,9 +11,7 @@ type FinancialInstrumentDetails1 struct {
 
 	// Identification of the sub-balance.
 	SubBalance []*IntraPositionDetails3 `xml:"SubBal"`
-
 }
-
 
 func (f *FinancialInstrumentDetails1) AddFinancialInstrumentIdentification() *SecurityIdentification11 {
 	f.FinancialInstrumentIdentification = new(SecurityIdentification11)
@@ -26,8 +24,7 @@ func (f *FinancialInstrumentDetails1) AddFinancialInstrumentAttributes() *Financ
 }
 
 func (f *FinancialInstrumentDetails1) AddSubBalance() *IntraPositionDetails3 {
-	newValue := new (IntraPositionDetails3)
+	newValue := new(IntraPositionDetails3)
 	f.SubBalance = append(f.SubBalance, newValue)
 	return newValue
 }
-

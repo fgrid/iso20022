@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.016.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:seev.016.001.01 Document"`
 	Message *AgentCADistributionBreakdownAdviceV01 `xml:"AgtCADstrbtnBrkdwnAdvc"`
 }
 
@@ -31,9 +31,7 @@ type AgentCADistributionBreakdownAdviceV01 struct {
 
 	// Provides information about the CA option and the entitlements.
 	CorporateActionDistributionDetails *iso20022.EntitlementAdvice1 `xml:"CorpActnDstrbtnDtls"`
-
 }
-
 
 func (a *AgentCADistributionBreakdownAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -49,4 +47,3 @@ func (a *AgentCADistributionBreakdownAdviceV01) AddCorporateActionDistributionDe
 	a.CorporateActionDistributionDetails = new(iso20022.EntitlementAdvice1)
 	return a.CorporateActionDistributionDetails
 }
-

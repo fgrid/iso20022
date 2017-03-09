@@ -11,9 +11,7 @@ type CardTransaction1 struct {
 
 	// Card transaction details, which can be either globalised by the acquirer or individual transaction.
 	Transaction *CardTransaction1Choice `xml:"Tx,omitempty"`
-
 }
-
 
 func (c *CardTransaction1) AddCard() *PaymentCard4 {
 	c.Card = new(PaymentCard4)
@@ -29,4 +27,3 @@ func (c *CardTransaction1) AddTransaction() *CardTransaction1Choice {
 	c.Transaction = new(CardTransaction1Choice)
 	return c.Transaction
 }
-

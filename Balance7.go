@@ -8,9 +8,7 @@ type Balance7 struct {
 
 	// Total quantity of financial instruments of the balance.
 	Quantity *BalanceQuantity9Choice `xml:"Qty"`
-
 }
-
 
 func (b *Balance7) SetShortLongIndicator(value string) {
 	b.ShortLongIndicator = (*ShortLong1Code)(&value)
@@ -20,4 +18,3 @@ func (b *Balance7) AddQuantity() *BalanceQuantity9Choice {
 	b.Quantity = new(BalanceQuantity9Choice)
 	return b.Quantity
 }
-

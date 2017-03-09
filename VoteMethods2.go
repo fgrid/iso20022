@@ -14,22 +14,20 @@ type VoteMethods2 struct {
 
 	// Telephone number providing access to an automated voting system.
 	VoteByTelephone []*Max35Text `xml:"VoteByTel,omitempty"`
-
 }
-
 
 func (v *VoteMethods2) AddVoteThroughNetwork(value string) {
 	v.VoteThroughNetwork = append(v.VoteThroughNetwork, (*AnyBICIdentifier)(&value))
 }
 
 func (v *VoteMethods2) AddVoteByMail() *PostalAddress1 {
-	newValue := new (PostalAddress1)
+	newValue := new(PostalAddress1)
 	v.VoteByMail = append(v.VoteByMail, newValue)
 	return newValue
 }
 
 func (v *VoteMethods2) AddElectronicVote() *CommunicationAddress4 {
-	newValue := new (CommunicationAddress4)
+	newValue := new(CommunicationAddress4)
 	v.ElectronicVote = append(v.ElectronicVote, newValue)
 	return newValue
 }
@@ -37,4 +35,3 @@ func (v *VoteMethods2) AddElectronicVote() *CommunicationAddress4 {
 func (v *VoteMethods2) AddVoteByTelephone(value string) {
 	v.VoteByTelephone = append(v.VoteByTelephone, (*Max35Text)(&value))
 }
-

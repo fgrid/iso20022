@@ -8,9 +8,7 @@ type Quantity4Choice struct {
 
 	// Signed quantity of security.
 	SignedQuantity *SignedQuantityFormat2 `xml:"SgndQty"`
-
 }
-
 
 func (q *Quantity4Choice) AddOriginalAndCurrentFaceAmount() *OriginalAndCurrentQuantities2 {
 	q.OriginalAndCurrentFaceAmount = new(OriginalAndCurrentQuantities2)
@@ -21,4 +19,3 @@ func (q *Quantity4Choice) AddSignedQuantity() *SignedQuantityFormat2 {
 	q.SignedQuantity = new(SignedQuantityFormat2)
 	return q.SignedQuantity
 }
-

@@ -8,9 +8,7 @@ type CorporateActionDeactivationInstructionProcessingStatus1 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionDeactivationInstructionProcessingStatus1) AddStatus() *ProcessedStatus6FormatChoice {
 	c.Status = new(ProcessedStatus6FormatChoice)
@@ -20,4 +18,3 @@ func (c *CorporateActionDeactivationInstructionProcessingStatus1) AddStatus() *P
 func (c *CorporateActionDeactivationInstructionProcessingStatus1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

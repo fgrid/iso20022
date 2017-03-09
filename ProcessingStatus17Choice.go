@@ -59,9 +59,7 @@ type ProcessingStatus17Choice struct {
 
 	// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts,omitempty"`
-
 }
-
 
 func (p *ProcessingStatus17Choice) AddAcknowledgedAccepted() *ProprietaryReason1 {
 	p.AcknowledgedAccepted = new(ProprietaryReason1)
@@ -157,4 +155,3 @@ func (p *ProcessingStatus17Choice) AddProprietaryStatus() *ProprietaryStatusAndR
 	p.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return p.ProprietaryStatus
 }
-

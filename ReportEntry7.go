@@ -22,7 +22,7 @@ type ReportEntry7 struct {
 	Status *EntryStatus2Code `xml:"Sts"`
 
 	// Date and time when an entry is posted to an account on the account servicer's books.
-	// 
+	//
 	// Usage: Booking date is the expected booking date, unless the status is booked, in which case it is the actual booking date.
 	BookingDate *DateAndDateTimeChoice `xml:"BookgDt,omitempty"`
 
@@ -34,8 +34,8 @@ type ReportEntry7 struct {
 	// Unique reference as assigned by the account servicing institution to unambiguously identify the entry.
 	AccountServicerReference *Max35Text `xml:"AcctSvcrRef,omitempty"`
 
-	// Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest. 
-	// 
+	// Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest.
+	//
 	// Usage: This type of information is used in the US and is linked to particular instruments such as cheques.
 	// Example: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability2 `xml:"Avlbty,omitempty"`
@@ -50,21 +50,21 @@ type ReportEntry7 struct {
 	AdditionalInformationIndicator *MessageIdentification2 `xml:"AddtlInfInd,omitempty"`
 
 	// Provides information on the original amount.
-	// 
+	//
 	// Usage: This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. If required, the individual original amounts can be included in the same component on transaction details level.
 	AmountDetails *AmountAndCurrencyExchange3 `xml:"AmtDtls,omitempty"`
 
 	// Provides information on the charges, pre-advised or included in the entry amount .
-	// 
+	//
 	// Usage: This component is used on entry level in case of batch or aggregate bookings.
-	// 
+	//
 	Charges *Charges4 `xml:"Chrgs,omitempty"`
 
 	// Channel used to technically input the instruction related to the entry.
 	TechnicalInputChannel *TechnicalInputChannel1Choice `xml:"TechInptChanl,omitempty"`
 
 	// Provides details of the interest amount included in the entry amount.
-	// 
+	//
 	// Usage: This component is used on entry level in the case of batch or aggregate bookings.
 	Interest *TransactionInterest3 `xml:"Intrst,omitempty"`
 
@@ -76,9 +76,7 @@ type ReportEntry7 struct {
 
 	// Further details of the entry.
 	AdditionalEntryInformation *Max500Text `xml:"AddtlNtryInf,omitempty"`
-
 }
-
 
 func (r *ReportEntry7) SetEntryReference(value string) {
 	r.EntryReference = (*Max35Text)(&value)
@@ -115,7 +113,7 @@ func (r *ReportEntry7) SetAccountServicerReference(value string) {
 }
 
 func (r *ReportEntry7) AddAvailability() *CashBalanceAvailability2 {
-	newValue := new (CashBalanceAvailability2)
+	newValue := new(CashBalanceAvailability2)
 	r.Availability = append(r.Availability, newValue)
 	return newValue
 }
@@ -160,7 +158,7 @@ func (r *ReportEntry7) AddCardTransaction() *CardEntry2 {
 }
 
 func (r *ReportEntry7) AddEntryDetails() *EntryDetails6 {
-	newValue := new (EntryDetails6)
+	newValue := new(EntryDetails6)
 	r.EntryDetails = append(r.EntryDetails, newValue)
 	return newValue
 }
@@ -168,4 +166,3 @@ func (r *ReportEntry7) AddEntryDetails() *EntryDetails6 {
 func (r *ReportEntry7) SetAdditionalEntryInformation(value string) {
 	r.AdditionalEntryInformation = (*Max500Text)(&value)
 }
-

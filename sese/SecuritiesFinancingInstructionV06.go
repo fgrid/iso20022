@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.06 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.06 Document"`
 	Message *SecuritiesFinancingInstructionV06 `xml:"SctiesFincgInstr"`
 }
 
@@ -25,7 +25,7 @@ func (d *Document03300106) AddMessage() *SecuritiesFinancingInstructionV06 {
 // - a central securities depository participant which has an account with a central securities depository, or
 // - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
 // - a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of securities financing transactions to a central securities depository or another settlement market infrastructure.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -87,9 +87,7 @@ type SecuritiesFinancingInstructionV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingInstructionV06) SetTransactionIdentification(value string) {
 	s.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -106,7 +104,7 @@ func (s *SecuritiesFinancingInstructionV06) AddNumberCounts() *iso20022.NumberCo
 }
 
 func (s *SecuritiesFinancingInstructionV06) AddLinkages() *iso20022.Linkages37 {
-	newValue := new (iso20022.Linkages37)
+	newValue := new(iso20022.Linkages37)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -177,8 +175,7 @@ func (s *SecuritiesFinancingInstructionV06) AddOtherBusinessParties() *iso20022.
 }
 
 func (s *SecuritiesFinancingInstructionV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

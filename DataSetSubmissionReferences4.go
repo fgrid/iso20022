@@ -21,9 +21,7 @@ type DataSetSubmissionReferences4 struct {
 
 	// Identifies the status of the transaction by means of a code.
 	TransactionStatus *BaselineStatus3Code `xml:"TxSts"`
-
 }
-
 
 func (d *DataSetSubmissionReferences4) SetTransactionIdentification(value string) {
 	d.TransactionIdentification = (*Max35Text)(&value)
@@ -35,7 +33,7 @@ func (d *DataSetSubmissionReferences4) AddPurchaseOrderReference() *DocumentIden
 }
 
 func (d *DataSetSubmissionReferences4) AddUserTransactionReference() *DocumentIdentification5 {
-	newValue := new (DocumentIdentification5)
+	newValue := new(DocumentIdentification5)
 	d.UserTransactionReference = append(d.UserTransactionReference, newValue)
 	return newValue
 }
@@ -52,4 +50,3 @@ func (d *DataSetSubmissionReferences4) AddEstablishedBaselineIdentification() *D
 func (d *DataSetSubmissionReferences4) SetTransactionStatus(value string) {
 	d.TransactionStatus = (*BaselineStatus3Code)(&value)
 }
-

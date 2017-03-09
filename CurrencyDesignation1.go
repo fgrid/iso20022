@@ -11,9 +11,7 @@ type CurrencyDesignation1 struct {
 
 	// Additional information about the off-shore currency.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CurrencyDesignation1) SetCurrencyDesignation(value string) {
 	c.CurrencyDesignation = (*CurrencyDesignation1Code)(&value)
@@ -26,4 +24,3 @@ func (c *CurrencyDesignation1) SetLocation(value string) {
 func (c *CurrencyDesignation1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type IdentificationSource1Choice struct {
 
 	// Entity that issues the proprietary identification.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (i *IdentificationSource1Choice) SetDomestic(value string) {
 	i.Domestic = (*CountryCode)(&value)
@@ -19,4 +17,3 @@ func (i *IdentificationSource1Choice) SetDomestic(value string) {
 func (i *IdentificationSource1Choice) SetProprietary(value string) {
 	i.Proprietary = (*Max35Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.009.001.02 Document"`
+	XMLName xml.Name                                           `xml:"urn:iso:std:iso:20022:tech:xsd:auth.009.001.02 Document"`
 	Message *RegulatoryTransactionReportCancellationRequestV02 `xml:"RgltryTxRptCxlReq"`
 }
 
@@ -26,15 +26,15 @@ type RegulatoryTransactionReportCancellationRequestV02 struct {
 	Identification *iso20022.DocumentIdentification8 `xml:"Id"`
 
 	// Identification of the firm that executed the transaction.
-	// 
+	//
 	ReportingInstitution *iso20022.PartyIdentification23Choice `xml:"RptgInstn"`
 
-	// Identifies the intermediary which is reporting on behalf on the reporting institution. 
+	// Identifies the intermediary which is reporting on behalf on the reporting institution.
 	ReportingAgent *iso20022.PartyIdentification24Choice `xml:"RptgAgt,omitempty"`
 
 	// Provides all the details of the transaction report that needs to be cancelled. More than one set of details can be provided.
-	// 
-	// 
+	//
+	//
 	CancellationByTransactionDetails []*iso20022.TransactionDetails3 `xml:"CxlByTxDtls"`
 
 	// Provides the reference of the RegulatoryTransactionReport document that was previously sent and that needs to be cancelled in its entirety.
@@ -42,9 +42,7 @@ type RegulatoryTransactionReportCancellationRequestV02 struct {
 
 	// Provides the trade reference of the transaction report that needs to be cancelled. More than one reference may be provided.
 	CancellationByTradeReference []*iso20022.TransactionDetails2 `xml:"CxlByTradRef"`
-
 }
-
 
 func (r *RegulatoryTransactionReportCancellationRequestV02) AddIdentification() *iso20022.DocumentIdentification8 {
 	r.Identification = new(iso20022.DocumentIdentification8)
@@ -62,7 +60,7 @@ func (r *RegulatoryTransactionReportCancellationRequestV02) AddReportingAgent() 
 }
 
 func (r *RegulatoryTransactionReportCancellationRequestV02) AddCancellationByTransactionDetails() *iso20022.TransactionDetails3 {
-	newValue := new (iso20022.TransactionDetails3)
+	newValue := new(iso20022.TransactionDetails3)
 	r.CancellationByTransactionDetails = append(r.CancellationByTransactionDetails, newValue)
 	return newValue
 }
@@ -73,8 +71,7 @@ func (r *RegulatoryTransactionReportCancellationRequestV02) AddPreviousReference
 }
 
 func (r *RegulatoryTransactionReportCancellationRequestV02) AddCancellationByTradeReference() *iso20022.TransactionDetails2 {
-	newValue := new (iso20022.TransactionDetails2)
+	newValue := new(iso20022.TransactionDetails2)
 	r.CancellationByTradeReference = append(r.CancellationByTradeReference, newValue)
 	return newValue
 }
-

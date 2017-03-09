@@ -11,9 +11,7 @@ type InRepairStatus2Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoReason *NoReasonCode `xml:"NoRsn"`
-
 }
-
 
 func (i *InRepairStatus2Choice) AddReason() *InRepairStatusReason2 {
 	i.Reason = new(InRepairStatusReason2)
@@ -28,4 +26,3 @@ func (i *InRepairStatus2Choice) AddDataSourceScheme() *GenericIdentification1 {
 func (i *InRepairStatus2Choice) SetNoReason(value string) {
 	i.NoReason = (*NoReasonCode)(&value)
 }
-

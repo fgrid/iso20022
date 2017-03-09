@@ -17,9 +17,7 @@ type CardholderAuthentication1 struct {
 
 	// Identifies in electronic commerce transactions whether customer authentication is supported and data is available.
 	AuthenticationCollectionIndicator *Max35Text `xml:"AuthntcnColltnInd,omitempty"`
-
 }
-
 
 func (c *CardholderAuthentication1) SetAuthenticationMethod(value string) {
 	c.AuthenticationMethod = (*AuthenticationMethod1Code)(&value)
@@ -41,4 +39,3 @@ func (c *CardholderAuthentication1) AddCardholderOnLinePIN() *OnLinePIN1 {
 func (c *CardholderAuthentication1) SetAuthenticationCollectionIndicator(value string) {
 	c.AuthenticationCollectionIndicator = (*Max35Text)(&value)
 }
-

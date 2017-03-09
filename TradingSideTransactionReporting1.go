@@ -11,9 +11,7 @@ type TradingSideTransactionReporting1 struct {
 
 	// Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI). This is the UTI from the Trading Side party.
 	TradingSideUniqueTransactionIdentifier []*UniqueTransactionIdentifier2 `xml:"TradgSdUnqTxIdr,omitempty"`
-
 }
-
 
 func (t *TradingSideTransactionReporting1) SetReportingJurisdiction(value string) {
 	t.ReportingJurisdiction = (*Max35Text)(&value)
@@ -25,8 +23,7 @@ func (t *TradingSideTransactionReporting1) AddReportingParty() *PartyIdentificat
 }
 
 func (t *TradingSideTransactionReporting1) AddTradingSideUniqueTransactionIdentifier() *UniqueTransactionIdentifier2 {
-	newValue := new (UniqueTransactionIdentifier2)
+	newValue := new(UniqueTransactionIdentifier2)
 	t.TradingSideUniqueTransactionIdentifier = append(t.TradingSideUniqueTransactionIdentifier, newValue)
 	return newValue
 }
-

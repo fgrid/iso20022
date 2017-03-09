@@ -8,9 +8,7 @@ type ReportParameter1 struct {
 
 	// Value of the parameter being returned.
 	Value *Max350Text `xml:"Val"`
-
 }
-
 
 func (r *ReportParameter1) SetName(value string) {
 	r.Name = (*Max70Text)(&value)
@@ -19,4 +17,3 @@ func (r *ReportParameter1) SetName(value string) {
 func (r *ReportParameter1) SetValue(value string) {
 	r.Value = (*Max350Text)(&value)
 }
-

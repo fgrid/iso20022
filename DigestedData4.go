@@ -14,9 +14,7 @@ type DigestedData4 struct {
 
 	// Result of data-digesting process.
 	Digest *Max140Binary `xml:"Dgst"`
-
 }
-
 
 func (d *DigestedData4) SetVersion(value string) {
 	d.Version = (*Number)(&value)
@@ -35,4 +33,3 @@ func (d *DigestedData4) AddEncapsulatedContent() *EncapsulatedContent3 {
 func (d *DigestedData4) SetDigest(value string) {
 	d.Digest = (*Max140Binary)(&value)
 }
-

@@ -8,9 +8,7 @@ type CollateralSubstitutionResponse1 struct {
 
 	// Provides the accepted collateral substitution amount.
 	AcceptedAmount *ActiveCurrencyAndAmount `xml:"AccptdAmt,omitempty"`
-
 }
-
 
 func (c *CollateralSubstitutionResponse1) SetCollateralSubstitutionRequestIdentification(value string) {
 	c.CollateralSubstitutionRequestIdentification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (c *CollateralSubstitutionResponse1) SetCollateralSubstitutionRequestIdenti
 func (c *CollateralSubstitutionResponse1) SetAcceptedAmount(value, currency string) {
 	c.AcceptedAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

@@ -23,9 +23,7 @@ type PlainCardData14 struct {
 
 	// Track number 3 from magnetic stripe card.
 	Track3 *Max140Text `xml:"Trck3,omitempty"`
-
 }
-
 
 func (p *PlainCardData14) SetPAN(value string) {
 	p.PAN = (*Min8Max28NumericText)(&value)
@@ -54,4 +52,3 @@ func (p *PlainCardData14) SetTrack2(value string) {
 func (p *PlainCardData14) SetTrack3(value string) {
 	p.Track3 = (*Max140Text)(&value)
 }
-

@@ -32,9 +32,7 @@ type OriginalNotificationReference8 struct {
 
 	// Provides details of the expected amount on the account serviced by the account servicer.
 	OriginalItem []*OriginalItem5 `xml:"OrgnlItm"`
-
 }
-
 
 func (o *OriginalNotificationReference8) AddAccount() *CashAccount24 {
 	o.Account = new(CashAccount24)
@@ -80,8 +78,7 @@ func (o *OriginalNotificationReference8) AddIntermediaryAgent() *BranchAndFinanc
 }
 
 func (o *OriginalNotificationReference8) AddOriginalItem() *OriginalItem5 {
-	newValue := new (OriginalItem5)
+	newValue := new(OriginalItem5)
 	o.OriginalItem = append(o.OriginalItem, newValue)
 	return newValue
 }
-

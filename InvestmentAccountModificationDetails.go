@@ -8,9 +8,7 @@ type InvestmentAccountModificationDetails struct {
 
 	// Unique and unambiguous identifier of the account modification request.
 	AccountApplicationIdentification *Max35Text `xml:"AcctApplId,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountModificationDetails) SetModificationReason(value string) {
 	i.ModificationReason = (*Max350Text)(&value)
@@ -19,4 +17,3 @@ func (i *InvestmentAccountModificationDetails) SetModificationReason(value strin
 func (i *InvestmentAccountModificationDetails) SetAccountApplicationIdentification(value string) {
 	i.AccountApplicationIdentification = (*Max35Text)(&value)
 }
-

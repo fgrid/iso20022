@@ -8,9 +8,7 @@ type InvestmentFundTransactionInType1 struct {
 
 	// Additional information about the type of transaction.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *InvestmentFundTransactionInType1) SetStructured(value string) {
 	i.Structured = (*InvestmentFundTransactionInType3Code)(&value)
@@ -19,4 +17,3 @@ func (i *InvestmentFundTransactionInType1) SetStructured(value string) {
 func (i *InvestmentFundTransactionInType1) SetAdditionalInformation(value string) {
 	i.AdditionalInformation = (*Max350Text)(&value)
 }
-

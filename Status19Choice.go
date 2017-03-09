@@ -44,9 +44,7 @@ type Status19Choice struct {
 
 	// Provides the status of a securities settlement condition modification request.
 	SettlementConditionModificationStatus *SettlementConditionModificationStatus3Choice `xml:"SttlmCondModSts"`
-
 }
-
 
 func (s *Status19Choice) AddAffirmationStatus() *AffirmationStatus8Choice {
 	s.AffirmationStatus = new(AffirmationStatus8Choice)
@@ -117,4 +115,3 @@ func (s *Status19Choice) AddSettlementConditionModificationStatus() *SettlementC
 	s.SettlementConditionModificationStatus = new(SettlementConditionModificationStatus3Choice)
 	return s.SettlementConditionModificationStatus
 }
-

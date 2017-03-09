@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.005.001.01 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:semt.005.001.01 Document"`
 	Message *AccountingStatementOfHoldingsCancellation `xml:"semt.005.001.01"`
 }
 
@@ -35,9 +35,7 @@ type AccountingStatementOfHoldingsCancellation struct {
 
 	// The Accounting Statement of Holdings message to cancel.
 	StatementToBeCancelled *iso20022.AccountingStatementOfHoldings1 `xml:"StmtToBeCanc,omitempty"`
-
 }
-
 
 func (a *AccountingStatementOfHoldingsCancellation) AddPreviousReference() *iso20022.AdditionalReference2 {
 	a.PreviousReference = new(iso20022.AdditionalReference2)
@@ -58,4 +56,3 @@ func (a *AccountingStatementOfHoldingsCancellation) AddStatementToBeCancelled() 
 	a.StatementToBeCancelled = new(iso20022.AccountingStatementOfHoldings1)
 	return a.StatementToBeCancelled
 }
-

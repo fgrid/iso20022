@@ -8,9 +8,7 @@ type PaymentInstrument19Choice struct {
 
 	// Settlement instructions for a payment by draft.
 	BankersDraftDetails *Cheque4 `xml:"BkrsDrftDtls"`
-
 }
-
 
 func (p *PaymentInstrument19Choice) AddChequeDetails() *Cheque4 {
 	p.ChequeDetails = new(Cheque4)
@@ -21,4 +19,3 @@ func (p *PaymentInstrument19Choice) AddBankersDraftDetails() *Cheque4 {
 	p.BankersDraftDetails = new(Cheque4)
 	return p.BankersDraftDetails
 }
-

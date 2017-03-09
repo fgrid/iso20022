@@ -11,9 +11,7 @@ type OrderStatusAndReason4 struct {
 
 	// Party that initiates the status of the order.
 	StatusInitiator *PartyIdentification2Choice `xml:"StsInitr,omitempty"`
-
 }
-
 
 func (o *OrderStatusAndReason4) SetStatus(value string) {
 	o.Status = (*OrderStatus3Code)(&value)
@@ -28,4 +26,3 @@ func (o *OrderStatusAndReason4) AddStatusInitiator() *PartyIdentification2Choice
 	o.StatusInitiator = new(PartyIdentification2Choice)
 	return o.StatusInitiator
 }
-

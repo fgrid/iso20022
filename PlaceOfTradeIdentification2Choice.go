@@ -8,9 +8,7 @@ type PlaceOfTradeIdentification2Choice struct {
 
 	// Indicates that the trade was executed off -exchange.
 	OffMarket *OffMarket1Choice `xml:"OffMkt"`
-
 }
-
 
 func (p *PlaceOfTradeIdentification2Choice) SetMarketIdentification(value string) {
 	p.MarketIdentification = (*MICIdentifier)(&value)
@@ -20,4 +18,3 @@ func (p *PlaceOfTradeIdentification2Choice) AddOffMarket() *OffMarket1Choice {
 	p.OffMarket = new(OffMarket1Choice)
 	return p.OffMarket
 }
-

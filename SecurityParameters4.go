@@ -17,9 +17,7 @@ type SecurityParameters4 struct {
 
 	// Requested  key for downloading, depending on the key hierarchy used by the host.
 	RequestedKey *Max35Text `xml:"ReqdKey,omitempty"`
-
 }
-
 
 func (s *SecurityParameters4) AddKey() *CryptographicKey8 {
 	s.Key = new(CryptographicKey8)
@@ -42,4 +40,3 @@ func (s *SecurityParameters4) SetATMChallenge(value string) {
 func (s *SecurityParameters4) SetRequestedKey(value string) {
 	s.RequestedKey = (*Max35Text)(&value)
 }
-

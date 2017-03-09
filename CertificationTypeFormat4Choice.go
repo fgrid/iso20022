@@ -8,9 +8,7 @@ type CertificationTypeFormat4Choice struct {
 
 	// Proprietary identification of the certification format.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (c *CertificationTypeFormat4Choice) SetCode(value string) {
 	c.Code = (*CertificationFormatType1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CertificationTypeFormat4Choice) AddProprietary() *GenericIdentification
 	c.Proprietary = new(GenericIdentification47)
 	return c.Proprietary
 }
-

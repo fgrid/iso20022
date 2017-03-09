@@ -9,14 +9,12 @@ type ExpiryTerms2 struct {
 	// Details related to the automatic extension of the undertaking.
 	AutoExtension *AutoExtension1 `xml:"AutoXtnsn,omitempty"`
 
-	// Documentary condition that indicates when the undertaking will cease to be available. 
+	// Documentary condition that indicates when the undertaking will cease to be available.
 	Condition *Max2000Text `xml:"Cond,omitempty"`
 
 	// Indicates whether the expiry terms are without a fixed expiry date.
 	OpenEndedIndicator *YesNoIndicator `xml:"OpnEnddInd,omitempty"`
-
 }
-
 
 func (e *ExpiryTerms2) AddDateTime() *DateAndDateTimeChoice {
 	e.DateTime = new(DateAndDateTimeChoice)
@@ -35,4 +33,3 @@ func (e *ExpiryTerms2) SetCondition(value string) {
 func (e *ExpiryTerms2) SetOpenEndedIndicator(value string) {
 	e.OpenEndedIndicator = (*YesNoIndicator)(&value)
 }
-

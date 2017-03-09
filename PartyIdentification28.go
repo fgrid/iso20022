@@ -8,9 +8,7 @@ type PartyIdentification28 struct {
 
 	// Unique and unambiguous identifier assigned to a party using a proprietary identification scheme.
 	ProprietaryIdentification *GenericIdentification4 `xml:"PrtryId,omitempty"`
-
 }
-
 
 func (p *PartyIdentification28) SetName(value string) {
 	p.Name = (*Max70Text)(&value)
@@ -20,4 +18,3 @@ func (p *PartyIdentification28) AddProprietaryIdentification() *GenericIdentific
 	p.ProprietaryIdentification = new(GenericIdentification4)
 	return p.ProprietaryIdentification
 }
-

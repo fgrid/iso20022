@@ -13,7 +13,7 @@ type StatementResolutionEntry2 struct {
 	AccountServicerReference *Max35Text `xml:"AcctSvcrRef,omitempty"`
 
 	// Corrected debit or credit amount, compared to the original entry where the amount is incorrect.
-	// 
+	//
 	// Usage: This amount may only be present if an incorrect statement entry has been reported.
 	CorrectedAmount *ActiveOrHistoricCurrencyAndAmount `xml:"CrrctdAmt,omitempty"`
 
@@ -23,9 +23,7 @@ type StatementResolutionEntry2 struct {
 	// Underlying reason for the payment transaction.
 	// Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
 	Purpose *Purpose2Choice `xml:"Purp,omitempty"`
-
 }
-
 
 func (s *StatementResolutionEntry2) AddOriginalGroupInformation() *OriginalGroupInformation3 {
 	s.OriginalGroupInformation = new(OriginalGroupInformation3)
@@ -45,7 +43,7 @@ func (s *StatementResolutionEntry2) SetCorrectedAmount(value, currency string) {
 }
 
 func (s *StatementResolutionEntry2) AddCharges() *Charges3 {
-	newValue := new (Charges3)
+	newValue := new(Charges3)
 	s.Charges = append(s.Charges, newValue)
 	return newValue
 }
@@ -54,4 +52,3 @@ func (s *StatementResolutionEntry2) AddPurpose() *Purpose2Choice {
 	s.Purpose = new(Purpose2Choice)
 	return s.Purpose
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02800103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.028.001.03 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.028.001.03 Document"`
 	Message *StatusChangeRequestNotificationV03 `xml:"StsChngReqNtfctn"`
 }
 
@@ -30,7 +30,7 @@ type StatusChangeRequestNotificationV03 struct {
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -50,9 +50,7 @@ type StatusChangeRequestNotificationV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (s *StatusChangeRequestNotificationV03) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	s.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -75,7 +73,7 @@ func (s *StatusChangeRequestNotificationV03) AddTransactionStatus() *iso20022.Tr
 }
 
 func (s *StatusChangeRequestNotificationV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	s.UserTransactionReference = append(s.UserTransactionReference, newValue)
 	return newValue
 }
@@ -99,4 +97,3 @@ func (s *StatusChangeRequestNotificationV03) AddRequestForAction() *iso20022.Pen
 	s.RequestForAction = new(iso20022.PendingActivity2)
 	return s.RequestForAction
 }
-

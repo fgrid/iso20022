@@ -7,7 +7,7 @@ import (
 )
 
 type Document06300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.063.001.02 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.063.001.02 Document"`
 	Message *PayInEventAcknowledgementV02 `xml:"PayInEvtAck"`
 }
 
@@ -17,7 +17,7 @@ func (d *Document06300102) AddMessage() *PayInEventAcknowledgementV02 {
 }
 
 // The PayInEventAcknowledgement message is sent by a participant of a central system to the central system to confirm a PayInSchedule or a PayInCall has been received.
-// 
+//
 type PayInEventAcknowledgementV02 struct {
 
 	// Unique and unambiguous identifier for the message, as assigned by the sender.
@@ -31,9 +31,7 @@ type PayInEventAcknowledgementV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (p *PayInEventAcknowledgementV02) SetMessageIdentification(value string) {
 	p.MessageIdentification = (*iso20022.Max35Text)(&value)
@@ -49,8 +47,7 @@ func (p *PayInEventAcknowledgementV02) AddAcknowledgementDetails() *iso20022.Ack
 }
 
 func (p *PayInEventAcknowledgementV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	p.SupplementaryData = append(p.SupplementaryData, newValue)
 	return newValue
 }
-

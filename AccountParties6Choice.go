@@ -17,9 +17,7 @@ type AccountParties6Choice struct {
 
 	// Co-owner of the investment account when the ownership is assigned to more than one party.
 	JointOwner []*InvestmentAccountOwnershipInformation11 `xml:"JntOwnr"`
-
 }
-
 
 func (a *AccountParties6Choice) AddPrimaryOwner() *InvestmentAccountOwnershipInformation11 {
 	a.PrimaryOwner = new(InvestmentAccountOwnershipInformation11)
@@ -27,7 +25,7 @@ func (a *AccountParties6Choice) AddPrimaryOwner() *InvestmentAccountOwnershipInf
 }
 
 func (a *AccountParties6Choice) AddTrustee() *InvestmentAccountOwnershipInformation11 {
-	newValue := new (InvestmentAccountOwnershipInformation11)
+	newValue := new(InvestmentAccountOwnershipInformation11)
 	a.Trustee = append(a.Trustee, newValue)
 	return newValue
 }
@@ -43,8 +41,7 @@ func (a *AccountParties6Choice) AddNominee() *InvestmentAccountOwnershipInformat
 }
 
 func (a *AccountParties6Choice) AddJointOwner() *InvestmentAccountOwnershipInformation11 {
-	newValue := new (InvestmentAccountOwnershipInformation11)
+	newValue := new(InvestmentAccountOwnershipInformation11)
 	a.JointOwner = append(a.JointOwner, newValue)
 	return newValue
 }
-

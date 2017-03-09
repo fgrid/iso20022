@@ -8,9 +8,7 @@ type PriceDetails24 struct {
 
 	// Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.
 	GenericCashPriceReceivedPerProduct *PriceFormat56Choice `xml:"GncCshPricRcvdPerPdct,omitempty"`
-
 }
-
 
 func (p *PriceDetails24) AddGenericCashPricePaidPerProduct() *PriceFormat55Choice {
 	p.GenericCashPricePaidPerProduct = new(PriceFormat55Choice)
@@ -21,4 +19,3 @@ func (p *PriceDetails24) AddGenericCashPriceReceivedPerProduct() *PriceFormat56C
 	p.GenericCashPriceReceivedPerProduct = new(PriceFormat56Choice)
 	return p.GenericCashPriceReceivedPerProduct
 }
-

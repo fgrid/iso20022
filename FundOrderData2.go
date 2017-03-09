@@ -26,9 +26,7 @@ type FundOrderData2 struct {
 
 	// Currency into which the base currency is converted, in a currency exchange.
 	QuotedCurrency *ActiveOrHistoricCurrencyCode `xml:"QtdCcy,omitempty"`
-
 }
-
 
 func (f *FundOrderData2) SetTotalRedemptionAmount(value, currency string) {
 	f.TotalRedemptionAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -61,4 +59,3 @@ func (f *FundOrderData2) SetUnitCurrency(value string) {
 func (f *FundOrderData2) SetQuotedCurrency(value string) {
 	f.QuotedCurrency = (*ActiveOrHistoricCurrencyCode)(&value)
 }
-

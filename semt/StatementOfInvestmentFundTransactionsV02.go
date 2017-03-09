@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.006.001.02 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:semt.006.001.02 Document"`
 	Message *StatementOfInvestmentFundTransactionsV02 `xml:"StmtOfInvstmtFndTxsV02"`
 }
 
@@ -50,9 +50,7 @@ type StatementOfInvestmentFundTransactionsV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *StatementOfInvestmentFundTransactionsV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -60,13 +58,13 @@ func (s *StatementOfInvestmentFundTransactionsV02) AddMessageIdentification() *i
 }
 
 func (s *StatementOfInvestmentFundTransactionsV02) AddPreviousReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
 
 func (s *StatementOfInvestmentFundTransactionsV02) AddRelatedReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	s.RelatedReference = append(s.RelatedReference, newValue)
 	return newValue
 }
@@ -87,20 +85,19 @@ func (s *StatementOfInvestmentFundTransactionsV02) AddInvestmentAccountDetails()
 }
 
 func (s *StatementOfInvestmentFundTransactionsV02) AddTransactionOnAccount() *iso20022.InvestmentFundTransactionsByFund2 {
-	newValue := new (iso20022.InvestmentFundTransactionsByFund2)
+	newValue := new(iso20022.InvestmentFundTransactionsByFund2)
 	s.TransactionOnAccount = append(s.TransactionOnAccount, newValue)
 	return newValue
 }
 
 func (s *StatementOfInvestmentFundTransactionsV02) AddSubAccountDetails() *iso20022.SubAccountIdentification6 {
-	newValue := new (iso20022.SubAccountIdentification6)
+	newValue := new(iso20022.SubAccountIdentification6)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
 
 func (s *StatementOfInvestmentFundTransactionsV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

@@ -41,9 +41,7 @@ type UnitPrice6 struct {
 
 	// Information related to taxes that are paid back.
 	TaxRefundDetails []*Tax8 `xml:"TaxRfndDtls,omitempty"`
-
 }
-
 
 func (u *UnitPrice6) AddType() *PriceType2 {
 	u.Type = new(PriceType2)
@@ -55,13 +53,13 @@ func (u *UnitPrice6) SetPriceMethod(value string) {
 }
 
 func (u *UnitPrice6) AddValueInInvestmentCurrency() *PriceValue1 {
-	newValue := new (PriceValue1)
+	newValue := new(PriceValue1)
 	u.ValueInInvestmentCurrency = append(u.ValueInInvestmentCurrency, newValue)
 	return newValue
 }
 
 func (u *UnitPrice6) AddValueInAlternativeCurrency() *PriceValue1 {
-	newValue := new (PriceValue1)
+	newValue := new(PriceValue1)
 	u.ValueInAlternativeCurrency = append(u.ValueInAlternativeCurrency, newValue)
 	return newValue
 }
@@ -93,20 +91,19 @@ func (u *UnitPrice6) AddTaxableIncomePerShareCalculated() *TaxableIncomePerShare
 }
 
 func (u *UnitPrice6) AddChargeDetails() *Charge9 {
-	newValue := new (Charge9)
+	newValue := new(Charge9)
 	u.ChargeDetails = append(u.ChargeDetails, newValue)
 	return newValue
 }
 
 func (u *UnitPrice6) AddTaxLiabilityDetails() *Tax8 {
-	newValue := new (Tax8)
+	newValue := new(Tax8)
 	u.TaxLiabilityDetails = append(u.TaxLiabilityDetails, newValue)
 	return newValue
 }
 
 func (u *UnitPrice6) AddTaxRefundDetails() *Tax8 {
-	newValue := new (Tax8)
+	newValue := new(Tax8)
 	u.TaxRefundDetails = append(u.TaxRefundDetails, newValue)
 	return newValue
 }
-

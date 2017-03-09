@@ -56,9 +56,7 @@ type FundCashForecast7 struct {
 
 	// Net cash as a result of the cash-in and cash-out flows.
 	NetCashForecastDetails []*NetCashForecast4 `xml:"NetCshFcstDtls,omitempty"`
-
 }
-
 
 func (f *FundCashForecast7) SetIdentification(value string) {
 	f.Identification = (*Max35Text)(&value)
@@ -129,20 +127,19 @@ func (f *FundCashForecast7) SetPercentageOfShareClassTotalNAV(value string) {
 }
 
 func (f *FundCashForecast7) AddCashInForecastDetails() *CashInForecast6 {
-	newValue := new (CashInForecast6)
+	newValue := new(CashInForecast6)
 	f.CashInForecastDetails = append(f.CashInForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast7) AddCashOutForecastDetails() *CashOutForecast6 {
-	newValue := new (CashOutForecast6)
+	newValue := new(CashOutForecast6)
 	f.CashOutForecastDetails = append(f.CashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast7) AddNetCashForecastDetails() *NetCashForecast4 {
-	newValue := new (NetCashForecast4)
+	newValue := new(NetCashForecast4)
 	f.NetCashForecastDetails = append(f.NetCashForecastDetails, newValue)
 	return newValue
 }
-

@@ -1,7 +1,7 @@
 package iso20022
 
 // Identifies a document by a unique identification and a version together with the submitter of the document.
-	// Also specifies the type of document and an index for easy referencing.
+// Also specifies the type of document and an index for easy referencing.
 type DocumentIdentification10 struct {
 
 	// Identification of a set of data.
@@ -18,9 +18,7 @@ type DocumentIdentification10 struct {
 
 	// Index assigned to the document, to allow easy referencing.
 	DocumentIndex *Max3NumericText `xml:"DocIndx"`
-
 }
-
 
 func (d *DocumentIdentification10) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -42,4 +40,3 @@ func (d *DocumentIdentification10) AddSubmitter() *BICIdentification1 {
 func (d *DocumentIdentification10) SetDocumentIndex(value string) {
 	d.DocumentIndex = (*Max3NumericText)(&value)
 }
-

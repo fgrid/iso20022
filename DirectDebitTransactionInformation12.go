@@ -59,7 +59,7 @@ type DirectDebitTransactionInformation12 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt1,omitempty"`
 
@@ -67,7 +67,7 @@ type DirectDebitTransactionInformation12 struct {
 	IntermediaryAgent1Account *CashAccount24 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt2,omitempty"`
 
@@ -75,7 +75,7 @@ type DirectDebitTransactionInformation12 struct {
 	IntermediaryAgent2Account *CashAccount24 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor agent and creditor agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the intermediary agent 2 and the debtor agent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt3,omitempty"`
 
@@ -109,9 +109,7 @@ type DirectDebitTransactionInformation12 struct {
 
 	// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
 	RemittanceInformation *RemittanceInformation7 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation12) AddPaymentIdentification() *PaymentIdentification3 {
 	d.PaymentIdentification = new(PaymentIdentification3)
@@ -144,7 +142,7 @@ func (d *DirectDebitTransactionInformation12) SetChargeBearer(value string) {
 }
 
 func (d *DirectDebitTransactionInformation12) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	d.ChargesInformation = append(d.ChargesInformation, newValue)
 	return newValue
 }
@@ -259,13 +257,13 @@ func (d *DirectDebitTransactionInformation12) AddPurpose() *Purpose2Choice {
 }
 
 func (d *DirectDebitTransactionInformation12) AddRegulatoryReporting() *RegulatoryReporting3 {
-	newValue := new (RegulatoryReporting3)
+	newValue := new(RegulatoryReporting3)
 	d.RegulatoryReporting = append(d.RegulatoryReporting, newValue)
 	return newValue
 }
 
 func (d *DirectDebitTransactionInformation12) AddRelatedRemittanceInformation() *RemittanceLocation2 {
-	newValue := new (RemittanceLocation2)
+	newValue := new(RemittanceLocation2)
 	d.RelatedRemittanceInformation = append(d.RelatedRemittanceInformation, newValue)
 	return newValue
 }
@@ -274,4 +272,3 @@ func (d *DirectDebitTransactionInformation12) AddRemittanceInformation() *Remitt
 	d.RemittanceInformation = new(RemittanceInformation7)
 	return d.RemittanceInformation
 }
-

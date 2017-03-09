@@ -11,9 +11,7 @@ type AdditionalQueryParameters3 struct {
 
 	// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
 	FinancialInstrumentIdentification []*SecurityIdentification14 `xml:"FinInstrmId,omitempty"`
-
 }
-
 
 func (a *AdditionalQueryParameters3) AddStatus() *Status8Choice {
 	a.Status = new(Status8Choice)
@@ -21,14 +19,13 @@ func (a *AdditionalQueryParameters3) AddStatus() *Status8Choice {
 }
 
 func (a *AdditionalQueryParameters3) AddReason() *Reason6Choice {
-	newValue := new (Reason6Choice)
+	newValue := new(Reason6Choice)
 	a.Reason = append(a.Reason, newValue)
 	return newValue
 }
 
 func (a *AdditionalQueryParameters3) AddFinancialInstrumentIdentification() *SecurityIdentification14 {
-	newValue := new (SecurityIdentification14)
+	newValue := new(SecurityIdentification14)
 	a.FinancialInstrumentIdentification = append(a.FinancialInstrumentIdentification, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type ReferredDocumentInformation6 struct {
 
 	// Date associated with the referred document.
 	RelatedDate *ISODate `xml:"RltdDt,omitempty"`
-
 }
-
 
 func (r *ReferredDocumentInformation6) AddType() *ReferredDocumentType4 {
 	r.Type = new(ReferredDocumentType4)
@@ -27,4 +25,3 @@ func (r *ReferredDocumentInformation6) SetNumber(value string) {
 func (r *ReferredDocumentInformation6) SetRelatedDate(value string) {
 	r.RelatedDate = (*ISODate)(&value)
 }
-

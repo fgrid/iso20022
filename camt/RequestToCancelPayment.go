@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800201 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.008.002.01 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:camt.008.002.01 Document"`
 	Message *RequestToCancelPayment `xml:"camt.008.002.01"`
 }
 
@@ -42,9 +42,7 @@ type RequestToCancelPayment struct {
 
 	// Defines the reason for requesting the cancellation.
 	Justification *iso20022.DebitAuthorisationDetails `xml:"Justfn"`
-
 }
-
 
 func (r *RequestToCancelPayment) AddAssignment() *iso20022.CaseAssignment {
 	r.Assignment = new(iso20022.CaseAssignment)
@@ -65,4 +63,3 @@ func (r *RequestToCancelPayment) AddJustification() *iso20022.DebitAuthorisation
 	r.Justification = new(iso20022.DebitAuthorisationDetails)
 	return r.Justification
 }
-

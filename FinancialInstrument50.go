@@ -17,9 +17,7 @@ type FinancialInstrument50 struct {
 
 	// Sub-accounts that are grouped in a master or omnibus account.
 	SubAccountDetails *SubAccount5 `xml:"SubAcctDtls,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument50) AddIdentification() *SecurityIdentification23Choice {
 	f.Identification = new(SecurityIdentification23Choice)
@@ -43,4 +41,3 @@ func (f *FinancialInstrument50) AddSubAccountDetails() *SubAccount5 {
 	f.SubAccountDetails = new(SubAccount5)
 	return f.SubAccountDetails
 }
-

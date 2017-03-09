@@ -16,7 +16,7 @@ type CashAccount33 struct {
 	AccountServicer *FinancialInstitutionIdentification7Choice `xml:"AcctSvcr,omitempty"`
 
 	// Information identifying a specific branch of a financial institution.
-	// 
+	//
 	// Usage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
 	AccountServicerBranch *BranchData `xml:"AcctSvcrBrnch,omitempty"`
 
@@ -40,9 +40,7 @@ type CashAccount33 struct {
 
 	// Percentage of the dividend payment not to be reinvested, that is, to be paid in cash.
 	DividendPercentage *PercentageBoundedRate `xml:"DvddPctg,omitempty"`
-
 }
-
 
 func (c *CashAccount33) SetSettlementCurrency(value string) {
 	c.SettlementCurrency = (*ActiveCurrencyCode)(&value)
@@ -69,7 +67,7 @@ func (c *CashAccount33) AddAccountServicerBranch() *BranchData {
 }
 
 func (c *CashAccount33) AddAccountOwnerOtherIdentification() *GenericIdentification82 {
-	newValue := new (GenericIdentification82)
+	newValue := new(GenericIdentification82)
 	c.AccountOwnerOtherIdentification = append(c.AccountOwnerOtherIdentification, newValue)
 	return newValue
 }
@@ -101,4 +99,3 @@ func (c *CashAccount33) AddCashAccountDesignation() *AccountDesignation1Choice {
 func (c *CashAccount33) SetDividendPercentage(value string) {
 	c.DividendPercentage = (*PercentageBoundedRate)(&value)
 }
-

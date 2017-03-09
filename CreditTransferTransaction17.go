@@ -37,7 +37,7 @@ type CreditTransferTransaction17 struct {
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
 	IntermediaryAgent1 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt1,omitempty"`
 
@@ -45,7 +45,7 @@ type CreditTransferTransaction17 struct {
 	IntermediaryAgent1Account *CashAccount24 `xml:"IntrmyAgt1Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
 	IntermediaryAgent2 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt2,omitempty"`
 
@@ -53,7 +53,7 @@ type CreditTransferTransaction17 struct {
 	IntermediaryAgent2Account *CashAccount24 `xml:"IntrmyAgt2Acct,omitempty"`
 
 	// Agent between the debtor's agent and the creditor's agent.
-	// 
+	//
 	// Usage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.
 	IntermediaryAgent3 *BranchAndFinancialInstitutionIdentification5 `xml:"IntrmyAgt3,omitempty"`
 
@@ -93,8 +93,8 @@ type CreditTransferTransaction17 struct {
 	// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
 	InstructionForCreditorAgent []*InstructionForCreditorAgent2 `xml:"InstrForCdtrAgt,omitempty"`
 
-	// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. 
-	// 
+	// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent.
+	//
 	// Usage: The next agent may not be the creditor agent.
 	// The instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.
 	InstructionForNextAgent []*InstructionForNextAgent1 `xml:"InstrForNxtAgt,omitempty"`
@@ -107,9 +107,7 @@ type CreditTransferTransaction17 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CreditTransferTransaction17) AddPaymentIdentification() *PaymentIdentification3 {
 	c.PaymentIdentification = new(PaymentIdentification3)
@@ -244,13 +242,13 @@ func (c *CreditTransferTransaction17) AddUltimateCreditor() *BranchAndFinancialI
 }
 
 func (c *CreditTransferTransaction17) AddInstructionForCreditorAgent() *InstructionForCreditorAgent2 {
-	newValue := new (InstructionForCreditorAgent2)
+	newValue := new(InstructionForCreditorAgent2)
 	c.InstructionForCreditorAgent = append(c.InstructionForCreditorAgent, newValue)
 	return newValue
 }
 
 func (c *CreditTransferTransaction17) AddInstructionForNextAgent() *InstructionForNextAgent1 {
-	newValue := new (InstructionForNextAgent1)
+	newValue := new(InstructionForNextAgent1)
 	c.InstructionForNextAgent = append(c.InstructionForNextAgent, newValue)
 	return newValue
 }
@@ -266,8 +264,7 @@ func (c *CreditTransferTransaction17) AddUnderlyingCustomerCreditTransfer() *Cre
 }
 
 func (c *CreditTransferTransaction17) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

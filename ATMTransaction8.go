@@ -20,9 +20,7 @@ type ATMTransaction8 struct {
 
 	// Media mix to select.
 	Mix []*ATMMediaMix2 `xml:"Mix,omitempty"`
-
 }
-
 
 func (a *ATMTransaction8) SetAmount(value, currency string) {
 	a.Amount = NewImpliedCurrencyAndAmount(value, currency)
@@ -45,8 +43,7 @@ func (a *ATMTransaction8) SetMixType(value string) {
 }
 
 func (a *ATMTransaction8) AddMix() *ATMMediaMix2 {
-	newValue := new (ATMMediaMix2)
+	newValue := new(ATMMediaMix2)
 	a.Mix = append(a.Mix, newValue)
 	return newValue
 }
-

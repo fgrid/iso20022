@@ -8,9 +8,7 @@ type CancelledStatusReason6 struct {
 
 	// Provides additional information about the processed instruction.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (c *CancelledStatusReason6) AddReasonCode() *CancelledReason3Choice {
 	c.ReasonCode = new(CancelledReason3Choice)
@@ -20,4 +18,3 @@ func (c *CancelledStatusReason6) AddReasonCode() *CancelledReason3Choice {
 func (c *CancelledStatusReason6) SetAdditionalReasonInformation(value string) {
 	c.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

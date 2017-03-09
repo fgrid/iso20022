@@ -8,9 +8,7 @@ type CorporateActionDeactivationCancellationStatus1Choice struct {
 
 	// Provides information about the rejection status.
 	RejectedStatus *CorporateActionDeactivationCancellationRejectionStatus1 `xml:"RjctdSts"`
-
 }
-
 
 func (c *CorporateActionDeactivationCancellationStatus1Choice) AddProcessedStatus() *CorporateActionDeactivationCancellationProcessingStatus1 {
 	c.ProcessedStatus = new(CorporateActionDeactivationCancellationProcessingStatus1)
@@ -21,4 +19,3 @@ func (c *CorporateActionDeactivationCancellationStatus1Choice) AddRejectedStatus
 	c.RejectedStatus = new(CorporateActionDeactivationCancellationRejectionStatus1)
 	return c.RejectedStatus
 }
-

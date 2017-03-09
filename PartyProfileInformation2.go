@@ -38,9 +38,7 @@ type PartyProfileInformation2 struct {
 
 	// Specifies the customer’s money laundering risk.
 	RiskLevel *RiskLevel1Choice `xml:"RskLvl,omitempty"`
-
 }
-
 
 func (p *PartyProfileInformation2) SetCertificationIndicator(value string) {
 	p.CertificationIndicator = (*YesNoIndicator)(&value)
@@ -92,4 +90,3 @@ func (p *PartyProfileInformation2) AddRiskLevel() *RiskLevel1Choice {
 	p.RiskLevel = new(RiskLevel1Choice)
 	return p.RiskLevel
 }
-

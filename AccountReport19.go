@@ -7,11 +7,11 @@ type AccountReport19 struct {
 	Identification *Max35Text `xml:"Id"`
 
 	// Provides details on the page number of the report.
-	// 
+	//
 	// Usage: The pagination of the report is only allowed when agreed between the parties.
 	ReportPagination *Pagination `xml:"RptPgntn,omitempty"`
 
-	// Sequential number of the report, as assigned by the account servicer. 
+	// Sequential number of the report, as assigned by the account servicer.
 	// Usage: The sequential number is increased incrementally for each report sent electronically.
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
@@ -47,18 +47,16 @@ type AccountReport19 struct {
 
 	// Specifies an entry in the report.
 	// Usage: At least one reference must be provided to identify the entry and its underlying transaction(s).
-	// 
-	// Usage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. 
+	//
+	// Usage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted.
 	// Following elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:
 	// Creditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.
-	// 
+	//
 	Entry []*ReportEntry8 `xml:"Ntry,omitempty"`
 
 	// Further details of the account report.
 	AdditionalReportInformation *Max500Text `xml:"AddtlRptInf,omitempty"`
-
 }
-
 
 func (a *AccountReport19) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -106,13 +104,13 @@ func (a *AccountReport19) AddRelatedAccount() *CashAccount24 {
 }
 
 func (a *AccountReport19) AddInterest() *AccountInterest3 {
-	newValue := new (AccountInterest3)
+	newValue := new(AccountInterest3)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountReport19) AddBalance() *CashBalance7 {
-	newValue := new (CashBalance7)
+	newValue := new(CashBalance7)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -123,7 +121,7 @@ func (a *AccountReport19) AddTransactionsSummary() *TotalTransactions5 {
 }
 
 func (a *AccountReport19) AddEntry() *ReportEntry8 {
-	newValue := new (ReportEntry8)
+	newValue := new(ReportEntry8)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -131,4 +129,3 @@ func (a *AccountReport19) AddEntry() *ReportEntry8 {
 func (a *AccountReport19) SetAdditionalReportInformation(value string) {
 	a.AdditionalReportInformation = (*Max500Text)(&value)
 }
-

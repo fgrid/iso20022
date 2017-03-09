@@ -23,9 +23,7 @@ type ContactDetails2 struct {
 
 	// Contact details in an other form.
 	Other *Max35Text `xml:"Othr,omitempty"`
-
 }
-
 
 func (c *ContactDetails2) SetNamePrefix(value string) {
 	c.NamePrefix = (*NamePrefix1Code)(&value)
@@ -54,4 +52,3 @@ func (c *ContactDetails2) SetEmailAddress(value string) {
 func (c *ContactDetails2) SetOther(value string) {
 	c.Other = (*Max35Text)(&value)
 }
-

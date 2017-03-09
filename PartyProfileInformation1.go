@@ -35,9 +35,7 @@ type PartyProfileInformation1 struct {
 
 	// Indicates the main source of revenue.
 	SourceOfWealth *Max140Text `xml:"SrcOfWlth,omitempty"`
-
 }
-
 
 func (p *PartyProfileInformation1) SetCertificationIndicator(value string) {
 	p.CertificationIndicator = (*YesNoIndicator)(&value)
@@ -82,4 +80,3 @@ func (p *PartyProfileInformation1) SetSalaryRange(value string) {
 func (p *PartyProfileInformation1) SetSourceOfWealth(value string) {
 	p.SourceOfWealth = (*Max140Text)(&value)
 }
-

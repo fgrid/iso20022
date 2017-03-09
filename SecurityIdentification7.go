@@ -11,9 +11,7 @@ type SecurityIdentification7 struct {
 
 	// Textual description of a security instrument.
 	Description *Max140Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (s *SecurityIdentification7) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -27,4 +25,3 @@ func (s *SecurityIdentification7) AddOtherIdentification() *AlternateSecurityIde
 func (s *SecurityIdentification7) SetDescription(value string) {
 	s.Description = (*Max140Text)(&value)
 }
-

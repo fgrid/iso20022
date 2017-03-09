@@ -11,9 +11,7 @@ type SolicitationFeeRateFormat1Choice struct {
 
 	// Ratio expressed as an amount to quantity ratio.
 	AmountToQuantity *AmountAndQuantityRatio2 `xml:"AmtToQty"`
-
 }
-
 
 func (s *SolicitationFeeRateFormat1Choice) SetRate(value string) {
 	s.Rate = (*PercentageRate)(&value)
@@ -27,4 +25,3 @@ func (s *SolicitationFeeRateFormat1Choice) AddAmountToQuantity() *AmountAndQuant
 	s.AmountToQuantity = new(AmountAndQuantityRatio2)
 	return s.AmountToQuantity
 }
-

@@ -8,9 +8,7 @@ type TransferCancellationRejectedStatus1Choice struct {
 
 	// Proprietary identification for a reason of a rejected status in the report.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (t *TransferCancellationRejectedStatus1Choice) AddReason() *TransferCancellationRejectionReason1 {
 	t.Reason = new(TransferCancellationRejectionReason1)
@@ -21,4 +19,3 @@ func (t *TransferCancellationRejectedStatus1Choice) AddDataSourceScheme() *Gener
 	t.DataSourceScheme = new(GenericIdentification1)
 	return t.DataSourceScheme
 }
-

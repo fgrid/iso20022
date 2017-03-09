@@ -23,9 +23,7 @@ type InstructionProcessingStatus15Choice struct {
 
 	// Proprietary status related to an instruction.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts"`
-
 }
-
 
 func (i *InstructionProcessingStatus15Choice) AddCancelled() *CancelledStatus3Choice {
 	i.Cancelled = new(CancelledStatus3Choice)
@@ -61,4 +59,3 @@ func (i *InstructionProcessingStatus15Choice) AddProprietaryStatus() *Proprietar
 	i.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return i.ProprietaryStatus
 }
-

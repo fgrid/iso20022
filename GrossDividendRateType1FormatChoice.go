@@ -8,9 +8,7 @@ type GrossDividendRateType1FormatChoice struct {
 
 	// Proprietary code to  express the type of gross dividend rate.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (g *GrossDividendRateType1FormatChoice) SetCode(value string) {
 	g.Code = (*GrossDividendRateType1Code)(&value)
@@ -20,4 +18,3 @@ func (g *GrossDividendRateType1FormatChoice) AddProprietary() *GenericIdentifica
 	g.Proprietary = new(GenericIdentification13)
 	return g.Proprietary
 }
-

@@ -8,9 +8,7 @@ type DeliveryParameters3 struct {
 
 	// Certificate representing a security that is delivered.
 	IssuedCertificateNumber *Max35Text `xml:"IssdCertNb,omitempty"`
-
 }
-
 
 func (d *DeliveryParameters3) AddAddress() *NameAndAddress4 {
 	d.Address = new(NameAndAddress4)
@@ -20,4 +18,3 @@ func (d *DeliveryParameters3) AddAddress() *NameAndAddress4 {
 func (d *DeliveryParameters3) SetIssuedCertificateNumber(value string) {
 	d.IssuedCertificateNumber = (*Max35Text)(&value)
 }
-

@@ -26,9 +26,7 @@ type PostalAddress17 struct {
 
 	// Geographic location of the ATM specified by geographic coordinates or UTM coordinates.
 	GeoLocation *GeographicLocation1Choice `xml:"GLctn,omitempty"`
-
 }
-
 
 func (p *PostalAddress17) AddAddressLine(value string) {
 	p.AddressLine = append(p.AddressLine, (*Max70Text)(&value))
@@ -62,4 +60,3 @@ func (p *PostalAddress17) AddGeoLocation() *GeographicLocation1Choice {
 	p.GeoLocation = new(GeographicLocation1Choice)
 	return p.GeoLocation
 }
-

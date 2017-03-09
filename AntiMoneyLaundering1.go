@@ -38,9 +38,7 @@ type AntiMoneyLaundering1 struct {
 
 	// Unique transaction reference number for sender and the receiver.
 	TransactionReference *Max35Text `xml:"TxRef,omitempty"`
-
 }
-
 
 func (a *AntiMoneyLaundering1) SetSenderName(value string) {
 	a.SenderName = (*Max70Text)(&value)
@@ -91,4 +89,3 @@ func (a *AntiMoneyLaundering1) SetReceiverName(value string) {
 func (a *AntiMoneyLaundering1) SetTransactionReference(value string) {
 	a.TransactionReference = (*Max35Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type PriceValueChange1 struct {
 
 	// Rate by which the price has changed.
 	Rate *PercentageRate `xml:"Rate,omitempty"`
-
 }
-
 
 func (p *PriceValueChange1) SetAmount(value, currency string) {
 	p.Amount = NewActiveOrHistoricCurrencyAnd13DecimalAmount(value, currency)
@@ -26,4 +24,3 @@ func (p *PriceValueChange1) SetAmountSign(value string) {
 func (p *PriceValueChange1) SetRate(value string) {
 	p.Rate = (*PercentageRate)(&value)
 }
-

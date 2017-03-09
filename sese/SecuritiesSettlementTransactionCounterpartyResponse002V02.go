@@ -7,7 +7,7 @@ import (
 )
 
 type Document04000202 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.040.002.02 Document"`
+	XMLName xml.Name                                                   `xml:"urn:iso:std:iso:20022:tech:xsd:sese.040.002.02 Document"`
 	Message *SecuritiesSettlementTransactionCounterpartyResponse002V02 `xml:"SctiesSttlmTxCtrPtyRspn"`
 }
 
@@ -25,7 +25,7 @@ func (d *Document04000202) AddMessage() *SecuritiesSettlementTransactionCounterp
 // - a central securities depository participant which has an account with a central securities depository or a market infrastructure
 // - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message sent by the account owner to the account servicer,
@@ -45,9 +45,7 @@ type SecuritiesSettlementTransactionCounterpartyResponse002V02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionCounterpartyResponse002V02) AddTransactionIdentification() *iso20022.TransactionIdentification7 {
 	s.TransactionIdentification = new(iso20022.TransactionIdentification7)
@@ -65,8 +63,7 @@ func (s *SecuritiesSettlementTransactionCounterpartyResponse002V02) AddTransacti
 }
 
 func (s *SecuritiesSettlementTransactionCounterpartyResponse002V02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type RepurchaseType12Choice struct {
 
 	// Type of securities financing transaction process expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (r *RepurchaseType12Choice) SetCode(value string) {
 	r.Code = (*RepurchaseType3Code)(&value)
@@ -20,4 +18,3 @@ func (r *RepurchaseType12Choice) AddProprietary() *GenericIdentification30 {
 	r.Proprietary = new(GenericIdentification30)
 	return r.Proprietary
 }
-

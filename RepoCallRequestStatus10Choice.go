@@ -8,9 +8,7 @@ type RepoCallRequestStatus10Choice struct {
 
 	// Provides the status of the repurchase agreement call request.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (r *RepoCallRequestStatus10Choice) SetCode(value string) {
 	r.Code = (*RepoCallRequestStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (r *RepoCallRequestStatus10Choice) AddProprietary() *GenericIdentification4
 	r.Proprietary = new(GenericIdentification47)
 	return r.Proprietary
 }
-

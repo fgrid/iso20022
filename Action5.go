@@ -11,9 +11,7 @@ type Action5 struct {
 
 	// Message to send before the completion of the transaction.
 	RequestToPerform *MessageFunction7Code `xml:"ReqToPrfrm,omitempty"`
-
 }
-
 
 func (a *Action5) SetActionType(value string) {
 	a.ActionType = (*ActionType6Code)(&value)
@@ -27,4 +25,3 @@ func (a *Action5) AddMessageToPresent() *ActionMessage4 {
 func (a *Action5) SetRequestToPerform(value string) {
 	a.RequestToPerform = (*MessageFunction7Code)(&value)
 }
-

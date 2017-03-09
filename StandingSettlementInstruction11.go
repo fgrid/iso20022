@@ -17,9 +17,7 @@ type StandingSettlementInstruction11 struct {
 
 	// Receiving parties, other than the buyer, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).
 	OtherReceivingSettlementParties *SettlementParties36 `xml:"OthrRcvgSttlmPties,omitempty"`
-
 }
-
 
 func (s *StandingSettlementInstruction11) AddSettlementStandingInstructionDatabase() *SettlementStandingInstructionDatabase4Choice {
 	s.SettlementStandingInstructionDatabase = new(SettlementStandingInstructionDatabase4Choice)
@@ -45,4 +43,3 @@ func (s *StandingSettlementInstruction11) AddOtherReceivingSettlementParties() *
 	s.OtherReceivingSettlementParties = new(SettlementParties36)
 	return s.OtherReceivingSettlementParties
 }
-

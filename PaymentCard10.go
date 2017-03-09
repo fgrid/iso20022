@@ -17,9 +17,7 @@ type PaymentCard10 struct {
 
 	// Type of card product.
 	CardProductType *CardProductType1Code `xml:"CardPdctTp,omitempty"`
-
 }
-
 
 func (p *PaymentCard10) AddProtectedCardData() *ContentInformationType10 {
 	p.ProtectedCardData = new(ContentInformationType10)
@@ -42,4 +40,3 @@ func (p *PaymentCard10) SetCardBrand(value string) {
 func (p *PaymentCard10) SetCardProductType(value string) {
 	p.CardProductType = (*CardProductType1Code)(&value)
 }
-

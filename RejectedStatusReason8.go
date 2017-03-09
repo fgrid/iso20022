@@ -8,9 +8,7 @@ type RejectedStatusReason8 struct {
 
 	// Provides additional information about the processed instruction.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (r *RejectedStatusReason8) AddReasonCode() *RejectedReason1Choice {
 	r.ReasonCode = new(RejectedReason1Choice)
@@ -20,4 +18,3 @@ func (r *RejectedStatusReason8) AddReasonCode() *RejectedReason1Choice {
 func (r *RejectedStatusReason8) SetAdditionalReasonInformation(value string) {
 	r.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

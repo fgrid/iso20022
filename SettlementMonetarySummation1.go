@@ -32,9 +32,7 @@ type SettlementMonetarySummation1 struct {
 
 	// Monetary value of an amount being reported as information for this settlement.
 	InformationAmount []*CurrencyAndAmount `xml:"InfAmt,omitempty"`
-
 }
-
 
 func (s *SettlementMonetarySummation1) AddLineTotalAmount(value, currency string) {
 	s.LineTotalAmount = append(s.LineTotalAmount, NewCurrencyAndAmount(value, currency))
@@ -75,4 +73,3 @@ func (s *SettlementMonetarySummation1) AddGrandTotalAmount(value, currency strin
 func (s *SettlementMonetarySummation1) AddInformationAmount(value, currency string) {
 	s.InformationAmount = append(s.InformationAmount, NewCurrencyAndAmount(value, currency))
 }
-

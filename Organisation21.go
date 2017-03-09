@@ -29,9 +29,7 @@ type Organisation21 struct {
 
 	// Postal address of a party.
 	CorporateInvestorAddress *PostalAddress1 `xml:"CorpInvstrAdr"`
-
 }
-
 
 func (o *Organisation21) SetName(value string) {
 	o.Name = (*Max140Text)(&value)
@@ -70,4 +68,3 @@ func (o *Organisation21) AddCorporateInvestorAddress() *PostalAddress1 {
 	o.CorporateInvestorAddress = new(PostalAddress1)
 	return o.CorporateInvestorAddress
 }
-

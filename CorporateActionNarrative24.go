@@ -11,12 +11,10 @@ type CorporateActionNarrative24 struct {
 
 	// Provides the web address published for the event, that is, the address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
 	URLAddress *UpdatedURLlnformation `xml:"URLAdr,omitempty"`
-
 }
 
-
 func (c *CorporateActionNarrative24) AddOfferor() *UpdatedAdditionalInformation3 {
-	newValue := new (UpdatedAdditionalInformation3)
+	newValue := new(UpdatedAdditionalInformation3)
 	c.Offeror = append(c.Offeror, newValue)
 	return newValue
 }
@@ -30,4 +28,3 @@ func (c *CorporateActionNarrative24) AddURLAddress() *UpdatedURLlnformation {
 	c.URLAddress = new(UpdatedURLlnformation)
 	return c.URLAddress
 }
-

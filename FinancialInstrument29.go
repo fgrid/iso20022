@@ -26,9 +26,7 @@ type FinancialInstrument29 struct {
 
 	// When an account at fund level is blocked, this specifies details on how the holding is blocked.
 	BlockedHoldingDetails *BlockedHoldingDetails1 `xml:"BlckdHldgDtls,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument29) AddIdentification() *SecurityIdentification3Choice {
 	f.Identification = new(SecurityIdentification3Choice)
@@ -63,4 +61,3 @@ func (f *FinancialInstrument29) AddBlockedHoldingDetails() *BlockedHoldingDetail
 	f.BlockedHoldingDetails = new(BlockedHoldingDetails1)
 	return f.BlockedHoldingDetails
 }
-

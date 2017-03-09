@@ -8,9 +8,7 @@ type PartyIdentification35Choice struct {
 
 	// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 	ProprietaryIdentification *GenericIdentification29 `xml:"PrtryId"`
-
 }
-
 
 func (p *PartyIdentification35Choice) SetBIC(value string) {
 	p.BIC = (*AnyBICIdentifier)(&value)
@@ -20,4 +18,3 @@ func (p *PartyIdentification35Choice) AddProprietaryIdentification() *GenericIde
 	p.ProprietaryIdentification = new(GenericIdentification29)
 	return p.ProprietaryIdentification
 }
-

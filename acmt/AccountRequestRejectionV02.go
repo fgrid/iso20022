@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.011.001.02 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.011.001.02 Document"`
 	Message *AccountRequestRejectionV02 `xml:"AcctReqRjctn"`
 }
 
@@ -16,7 +16,7 @@ func (d *Document01100102) AddMessage() *AccountRequestRejectionV02 {
 	return d.Message
 }
 
-// The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid. 
+// The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.
 type AccountRequestRejectionV02 struct {
 
 	// Set of elements for the identification of the message and related references.
@@ -39,9 +39,7 @@ type AccountRequestRejectionV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AccountRequestRejectionV02) AddReferences() *iso20022.References6 {
 	a.References = new(iso20022.References6)
@@ -59,7 +57,7 @@ func (a *AccountRequestRejectionV02) AddAccountServicerIdentification() *iso2002
 }
 
 func (a *AccountRequestRejectionV02) AddAccountIdentification() *iso20022.AccountForAction1 {
-	newValue := new (iso20022.AccountForAction1)
+	newValue := new(iso20022.AccountForAction1)
 	a.AccountIdentification = append(a.AccountIdentification, newValue)
 	return newValue
 }
@@ -70,14 +68,13 @@ func (a *AccountRequestRejectionV02) AddOrganisationIdentification() *iso20022.O
 }
 
 func (a *AccountRequestRejectionV02) AddDigitalSignature() *iso20022.PartyAndSignature2 {
-	newValue := new (iso20022.PartyAndSignature2)
+	newValue := new(iso20022.PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
 
 func (a *AccountRequestRejectionV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

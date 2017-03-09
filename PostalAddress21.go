@@ -56,9 +56,7 @@ type PostalAddress21 struct {
 
 	// Country of the address.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PostalAddress21) AddAddressType() *AddressType2Choice {
 	p.AddressType = new(AddressType2Choice)
@@ -132,4 +130,3 @@ func (p *PostalAddress21) SetState(value string) {
 func (p *PostalAddress21) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

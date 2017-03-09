@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.002.001.06 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.002.001.06 Document"`
 	Message *AccountDetailsConfirmationV06 `xml:"AcctDtlsConf"`
 }
 
@@ -33,7 +33,7 @@ type AccountDetailsConfirmationV06 struct {
 	// Reference to a linked message that was previously received.
 	RelatedReference *iso20022.AdditionalReference6 `xml:"RltdRef,omitempty"`
 
-	// Information about the request or instruction which triggered this confirmation. 
+	// Information about the request or instruction which triggered this confirmation.
 	ConfirmationDetails *iso20022.AccountManagementConfirmation3 `xml:"ConfDtls"`
 
 	// Confirmation of the information related to the investment account.
@@ -71,9 +71,7 @@ type AccountDetailsConfirmationV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountDetailsConfirmationV06) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -106,7 +104,7 @@ func (a *AccountDetailsConfirmationV06) AddAccountParties() *iso20022.AccountPar
 }
 
 func (a *AccountDetailsConfirmationV06) AddIntermediaries() *iso20022.Intermediary36 {
-	newValue := new (iso20022.Intermediary36)
+	newValue := new(iso20022.Intermediary36)
 	a.Intermediaries = append(a.Intermediaries, newValue)
 	return newValue
 }
@@ -122,31 +120,31 @@ func (a *AccountDetailsConfirmationV06) AddNewIssueAllocation() *iso20022.NewIss
 }
 
 func (a *AccountDetailsConfirmationV06) AddSavingsInvestmentPlan() *iso20022.InvestmentPlan12 {
-	newValue := new (iso20022.InvestmentPlan12)
+	newValue := new(iso20022.InvestmentPlan12)
 	a.SavingsInvestmentPlan = append(a.SavingsInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountDetailsConfirmationV06) AddWithdrawalInvestmentPlan() *iso20022.InvestmentPlan12 {
-	newValue := new (iso20022.InvestmentPlan12)
+	newValue := new(iso20022.InvestmentPlan12)
 	a.WithdrawalInvestmentPlan = append(a.WithdrawalInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountDetailsConfirmationV06) AddCashSettlement() *iso20022.CashSettlement1 {
-	newValue := new (iso20022.CashSettlement1)
+	newValue := new(iso20022.CashSettlement1)
 	a.CashSettlement = append(a.CashSettlement, newValue)
 	return newValue
 }
 
 func (a *AccountDetailsConfirmationV06) AddServiceLevelAgreement() *iso20022.DocumentToSend3 {
-	newValue := new (iso20022.DocumentToSend3)
+	newValue := new(iso20022.DocumentToSend3)
 	a.ServiceLevelAgreement = append(a.ServiceLevelAgreement, newValue)
 	return newValue
 }
 
 func (a *AccountDetailsConfirmationV06) AddAdditionalInformation() *iso20022.AccountRestrictions1 {
-	newValue := new (iso20022.AccountRestrictions1)
+	newValue := new(iso20022.AccountRestrictions1)
 	a.AdditionalInformation = append(a.AdditionalInformation, newValue)
 	return newValue
 }
@@ -157,8 +155,7 @@ func (a *AccountDetailsConfirmationV06) AddMarketPracticeVersion() *iso20022.Mar
 }
 
 func (a *AccountDetailsConfirmationV06) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

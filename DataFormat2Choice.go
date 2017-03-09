@@ -8,9 +8,7 @@ type DataFormat2Choice struct {
 
 	// Specification of data for which there isn't a structured form.
 	Unstructured *Max140Text `xml:"Ustrd"`
-
 }
-
 
 func (d *DataFormat2Choice) AddStructured() *GenericIdentification1 {
 	d.Structured = new(GenericIdentification1)
@@ -20,4 +18,3 @@ func (d *DataFormat2Choice) AddStructured() *GenericIdentification1 {
 func (d *DataFormat2Choice) SetUnstructured(value string) {
 	d.Unstructured = (*Max140Text)(&value)
 }
-

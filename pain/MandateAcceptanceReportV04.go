@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.012.001.04 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:pain.012.001.04 Document"`
 	Message *MandateAcceptanceReportV04 `xml:"MndtAccptncRpt"`
 }
 
@@ -33,9 +33,7 @@ type MandateAcceptanceReportV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MandateAcceptanceReportV04) AddGroupHeader() *iso20022.GroupHeader47 {
 	m.GroupHeader = new(iso20022.GroupHeader47)
@@ -43,14 +41,13 @@ func (m *MandateAcceptanceReportV04) AddGroupHeader() *iso20022.GroupHeader47 {
 }
 
 func (m *MandateAcceptanceReportV04) AddUnderlyingAcceptanceDetails() *iso20022.MandateAcceptance4 {
-	newValue := new (iso20022.MandateAcceptance4)
+	newValue := new(iso20022.MandateAcceptance4)
 	m.UnderlyingAcceptanceDetails = append(m.UnderlyingAcceptanceDetails, newValue)
 	return newValue
 }
 
 func (m *MandateAcceptanceReportV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

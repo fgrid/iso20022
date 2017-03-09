@@ -8,9 +8,7 @@ type PendingActivity2 struct {
 
 	// Further information on the course of action that the receiver of the message must take.
 	Description *Max140Text `xml:"Desc,omitempty"`
-
 }
-
 
 func (p *PendingActivity2) SetType(value string) {
 	p.Type = (*Action2Code)(&value)
@@ -19,4 +17,3 @@ func (p *PendingActivity2) SetType(value string) {
 func (p *PendingActivity2) SetDescription(value string) {
 	p.Description = (*Max140Text)(&value)
 }
-

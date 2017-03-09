@@ -20,9 +20,7 @@ type ReportParameters1 struct {
 
 	// Indicates whether there is activity or information update reported in the statement.
 	ActivityIndicator *YesNoIndicator `xml:"ActvtyInd"`
-
 }
-
 
 func (r *ReportParameters1) SetNetPositionIdentification(value string) {
 	r.NetPositionIdentification = (*Max35Text)(&value)
@@ -48,4 +46,3 @@ func (r *ReportParameters1) SetReportNumber(value string) {
 func (r *ReportParameters1) SetActivityIndicator(value string) {
 	r.ActivityIndicator = (*YesNoIndicator)(&value)
 }
-

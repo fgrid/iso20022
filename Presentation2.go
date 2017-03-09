@@ -8,9 +8,7 @@ type Presentation2 struct {
 
 	// Date on which the beneficiary presented the demand.
 	BeneficiaryPresentationDate *ISODate `xml:"BnfcryPresntnDt,omitempty"`
-
 }
-
 
 func (p *Presentation2) AddPresenter() *PartyIdentification43 {
 	p.Presenter = new(PartyIdentification43)
@@ -20,4 +18,3 @@ func (p *Presentation2) AddPresenter() *PartyIdentification43 {
 func (p *Presentation2) SetBeneficiaryPresentationDate(value string) {
 	p.BeneficiaryPresentationDate = (*ISODate)(&value)
 }
-

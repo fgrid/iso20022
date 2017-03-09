@@ -53,9 +53,7 @@ type CorporateActionBalanceDetails33 struct {
 
 	// Balance of financial instruments that are pending receipt.
 	PendingReceiptBalance []*PendingBalance4 `xml:"PdgRctBal,omitempty"`
-
 }
-
 
 func (c *CorporateActionBalanceDetails33) AddTotalEligibleBalance() *Quantity22Choice {
 	c.TotalEligibleBalance = new(Quantity22Choice)
@@ -133,14 +131,13 @@ func (c *CorporateActionBalanceDetails33) AddObligatedBalance() *SignedQuantityF
 }
 
 func (c *CorporateActionBalanceDetails33) AddPendingDeliveryBalance() *PendingBalance4 {
-	newValue := new (PendingBalance4)
+	newValue := new(PendingBalance4)
 	c.PendingDeliveryBalance = append(c.PendingDeliveryBalance, newValue)
 	return newValue
 }
 
 func (c *CorporateActionBalanceDetails33) AddPendingReceiptBalance() *PendingBalance4 {
-	newValue := new (PendingBalance4)
+	newValue := new(PendingBalance4)
 	c.PendingReceiptBalance = append(c.PendingReceiptBalance, newValue)
 	return newValue
 }
-

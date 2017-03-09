@@ -17,12 +17,10 @@ type Cardholder4 struct {
 
 	// Identifies personal data related to the cardholder.
 	PersonalData *Max70Text `xml:"PrsnlData,omitempty"`
-
 }
 
-
 func (c *Cardholder4) AddIdentification() *CardholderIdentification1 {
-	newValue := new (CardholderIdentification1)
+	newValue := new(CardholderIdentification1)
 	c.Identification = append(c.Identification, newValue)
 	return newValue
 }
@@ -32,7 +30,7 @@ func (c *Cardholder4) SetName(value string) {
 }
 
 func (c *Cardholder4) AddAuthentication() *CardholderAuthentication4 {
-	newValue := new (CardholderAuthentication4)
+	newValue := new(CardholderAuthentication4)
 	c.Authentication = append(c.Authentication, newValue)
 	return newValue
 }
@@ -45,4 +43,3 @@ func (c *Cardholder4) AddAddressVerification() *AddressVerification1 {
 func (c *Cardholder4) SetPersonalData(value string) {
 	c.PersonalData = (*Max70Text)(&value)
 }
-

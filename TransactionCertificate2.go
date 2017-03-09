@@ -13,15 +13,13 @@ type TransactionCertificate2 struct {
 	TransactionType *Exact1NumericText `xml:"TxTp"`
 
 	// User community specific instrument.
-	// 
+	//
 	// Usage: This element is used to specify a local transaction type to further qualify the transaction type.
 	LocalInstrument *Exact5NumericText `xml:"LclInstrm"`
 
 	// Amount as provided in the transaction to be recorded under the contract.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (t *TransactionCertificate2) AddReferredDocument() *CertificateReference1 {
 	t.ReferredDocument = new(CertificateReference1)
@@ -43,4 +41,3 @@ func (t *TransactionCertificate2) SetLocalInstrument(value string) {
 func (t *TransactionCertificate2) SetAmount(value, currency string) {
 	t.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

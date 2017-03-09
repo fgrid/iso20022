@@ -8,9 +8,7 @@ type AmountAndRateFormat2Choice struct {
 
 	// The rate is not specified.
 	NotSpecifiedRate *RateType12FormatChoice `xml:"NotSpcfdRate"`
-
 }
-
 
 func (a *AmountAndRateFormat2Choice) SetAmount(value, currency string) {
 	a.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -20,4 +18,3 @@ func (a *AmountAndRateFormat2Choice) AddNotSpecifiedRate() *RateType12FormatChoi
 	a.NotSpecifiedRate = new(RateType12FormatChoice)
 	return a.NotSpecifiedRate
 }
-

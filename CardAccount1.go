@@ -21,9 +21,7 @@ type CardAccount1 struct {
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
 	Servicer *PartyIdentification72Choice `xml:"Svcr,omitempty"`
-
 }
-
 
 func (c *CardAccount1) SetSelectionMethod(value string) {
 	c.SelectionMethod = (*AccountChoiceMethod1Code)(&value)
@@ -51,4 +49,3 @@ func (c *CardAccount1) AddServicer() *PartyIdentification72Choice {
 	c.Servicer = new(PartyIdentification72Choice)
 	return c.Servicer
 }
-

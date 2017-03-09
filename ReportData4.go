@@ -6,7 +6,7 @@ type ReportData4 struct {
 	// Identification of the report as assigned by the sender.
 	MessageIdentification *Max35Text `xml:"MsgId"`
 
-	// Value date for which the pay-in schedule is generated. 
+	// Value date for which the pay-in schedule is generated.
 	ValueDate *ISODate `xml:"ValDt"`
 
 	// Date and time on which the report is generated. The offset with UTC may also be specified.
@@ -20,9 +20,7 @@ type ReportData4 struct {
 
 	// To indicate the requested CLS Settlement Session that the related trade is part of.
 	SettlementSessionIdentifier *Exact4AlphaNumericText `xml:"SttlmSsnIdr,omitempty"`
-
 }
-
 
 func (r *ReportData4) SetMessageIdentification(value string) {
 	r.MessageIdentification = (*Max35Text)(&value)
@@ -47,4 +45,3 @@ func (r *ReportData4) SetScheduleType(value string) {
 func (r *ReportData4) SetSettlementSessionIdentifier(value string) {
 	r.SettlementSessionIdentifier = (*Exact4AlphaNumericText)(&value)
 }
-

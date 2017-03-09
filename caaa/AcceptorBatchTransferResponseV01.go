@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:caaa.012.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:caaa.012.001.01 Document"`
 	Message *AcceptorBatchTransferResponseV01 `xml:"AccptrBtchTrfRspn"`
 }
 
@@ -30,9 +30,7 @@ type AcceptorBatchTransferResponseV01 struct {
 
 	// Trailer of the message containing a MAC or a digital signature.
 	SecurityTrailer *iso20022.ContentInformationType1 `xml:"SctyTrlr"`
-
 }
-
 
 func (a *AcceptorBatchTransferResponseV01) AddHeader() *iso20022.Header3 {
 	a.Header = new(iso20022.Header3)
@@ -40,7 +38,7 @@ func (a *AcceptorBatchTransferResponseV01) AddHeader() *iso20022.Header3 {
 }
 
 func (a *AcceptorBatchTransferResponseV01) AddDataSet() *iso20022.CardPaymentDataSet2 {
-	newValue := new (iso20022.CardPaymentDataSet2)
+	newValue := new(iso20022.CardPaymentDataSet2)
 	a.DataSet = append(a.DataSet, newValue)
 	return newValue
 }
@@ -49,4 +47,3 @@ func (a *AcceptorBatchTransferResponseV01) AddSecurityTrailer() *iso20022.Conten
 	a.SecurityTrailer = new(iso20022.ContentInformationType1)
 	return a.SecurityTrailer
 }
-

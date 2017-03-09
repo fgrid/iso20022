@@ -14,9 +14,7 @@ type EligiblePosition2 struct {
 
 	// Identifies owner of the voting rights.
 	RightsHolder []*PartyIdentification9Choice `xml:"RghtsHldr,omitempty"`
-
 }
-
 
 func (e *EligiblePosition2) SetAccountIdentification(value string) {
 	e.AccountIdentification = (*Max35Text)(&value)
@@ -28,14 +26,13 @@ func (e *EligiblePosition2) AddAccountOwner() *PartyIdentification9Choice {
 }
 
 func (e *EligiblePosition2) AddHoldingBalance() *HoldingBalance3 {
-	newValue := new (HoldingBalance3)
+	newValue := new(HoldingBalance3)
 	e.HoldingBalance = append(e.HoldingBalance, newValue)
 	return newValue
 }
 
 func (e *EligiblePosition2) AddRightsHolder() *PartyIdentification9Choice {
-	newValue := new (PartyIdentification9Choice)
+	newValue := new(PartyIdentification9Choice)
 	e.RightsHolder = append(e.RightsHolder, newValue)
 	return newValue
 }
-

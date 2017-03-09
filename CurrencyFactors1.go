@@ -17,9 +17,7 @@ type CurrencyFactors1 struct {
 
 	// Exchange rate used in the calculation of the pay-in schedule.
 	Rate *AgreedRate2 `xml:"Rate,omitempty"`
-
 }
-
 
 func (c *CurrencyFactors1) SetCurrency(value string) {
 	c.Currency = (*CurrencyCode)(&value)
@@ -41,4 +39,3 @@ func (c *CurrencyFactors1) AddRate() *AgreedRate2 {
 	c.Rate = new(AgreedRate2)
 	return c.Rate
 }
-

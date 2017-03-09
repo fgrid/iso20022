@@ -11,9 +11,7 @@ type BatchInformation1 struct {
 
 	// Number of individual transactions included in the batch.
 	NumberOfTransactions *Max15NumericText `xml:"NbOfTxs,omitempty"`
-
 }
-
 
 func (b *BatchInformation1) SetMessageIdentification(value string) {
 	b.MessageIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (b *BatchInformation1) SetPaymentInformationIdentification(value string) {
 func (b *BatchInformation1) SetNumberOfTransactions(value string) {
 	b.NumberOfTransactions = (*Max15NumericText)(&value)
 }
-

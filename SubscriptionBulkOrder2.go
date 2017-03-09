@@ -29,9 +29,7 @@ type SubscriptionBulkOrder2 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	BulkCashSettlementDetails *PaymentTransaction17 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (s *SubscriptionBulkOrder2) SetPlaceOfTrade(value string) {
 	s.PlaceOfTrade = (*CountryCode)(&value)
@@ -56,7 +54,7 @@ func (s *SubscriptionBulkOrder2) AddFinancialInstrumentDetails() *FinancialInstr
 }
 
 func (s *SubscriptionBulkOrder2) AddIndividualOrderDetails() *SubscriptionOrder3 {
-	newValue := new (SubscriptionOrder3)
+	newValue := new(SubscriptionOrder3)
 	s.IndividualOrderDetails = append(s.IndividualOrderDetails, newValue)
 	return newValue
 }
@@ -73,4 +71,3 @@ func (s *SubscriptionBulkOrder2) AddBulkCashSettlementDetails() *PaymentTransact
 	s.BulkCashSettlementDetails = new(PaymentTransaction17)
 	return s.BulkCashSettlementDetails
 }
-

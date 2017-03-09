@@ -7,7 +7,7 @@ type AccountStatement5 struct {
 	Identification *Max35Text `xml:"Id"`
 
 	// Provides details on the page number of the statement.
-	// 
+	//
 	// Usage: The pagination of the statement is only allowed when agreed between the parties.
 	StatementPagination *Pagination `xml:"StmtPgntn,omitempty"`
 
@@ -16,7 +16,7 @@ type AccountStatement5 struct {
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
 	// Legal sequential number of the statement, as assigned by the account servicer. It is increased incrementally for each statement sent.
-	// 
+	//
 	// Usage: Where a paper statement is a legal requirement, it may have a number different from the electronic sequential number. Paper statements could for instance only be sent if movement on the account has taken place, whereas electronic statements could be sent at the end of each reporting period, regardless of whether movements have taken place or not.
 	LegalSequenceNumber *Number `xml:"LglSeqNb,omitempty"`
 
@@ -49,19 +49,17 @@ type AccountStatement5 struct {
 
 	// Specify an entry in the statement.
 	// Usage: At least one reference must be provided to identify the entry and its underlying transaction(s).
-	// 
-	// 
-	// Usage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. 
+	//
+	//
+	// Usage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted.
 	// Following elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:
 	// Creditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.
-	// 
+	//
 	Entry []*ReportEntry7 `xml:"Ntry,omitempty"`
 
 	// Further details of the account statement.
 	AdditionalStatementInformation *Max500Text `xml:"AddtlStmtInf,omitempty"`
-
 }
-
 
 func (a *AccountStatement5) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -109,13 +107,13 @@ func (a *AccountStatement5) AddRelatedAccount() *CashAccount24 {
 }
 
 func (a *AccountStatement5) AddInterest() *AccountInterest3 {
-	newValue := new (AccountInterest3)
+	newValue := new(AccountInterest3)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountStatement5) AddBalance() *CashBalance3 {
-	newValue := new (CashBalance3)
+	newValue := new(CashBalance3)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -126,7 +124,7 @@ func (a *AccountStatement5) AddTransactionsSummary() *TotalTransactions4 {
 }
 
 func (a *AccountStatement5) AddEntry() *ReportEntry7 {
-	newValue := new (ReportEntry7)
+	newValue := new(ReportEntry7)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -134,4 +132,3 @@ func (a *AccountStatement5) AddEntry() *ReportEntry7 {
 func (a *AccountStatement5) SetAdditionalStatementInformation(value string) {
 	a.AdditionalStatementInformation = (*Max500Text)(&value)
 }
-

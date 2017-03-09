@@ -63,7 +63,7 @@ type FinancialInstrumentAttributes66 struct {
 	// Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) that will applicable after the redemption (factor) date.
 	NextFactor *RateFormat12Choice `xml:"NxtFctr,omitempty"`
 
-	// Provides the ratio between the quantity of warrants and the quantity of underlying securities. 
+	// Provides the ratio between the quantity of warrants and the quantity of underlying securities.
 	WarrantParity *QuantityToQuantityRatio1 `xml:"WarrtParity,omitempty"`
 
 	// Minimum nominal quantity of financial instrument.
@@ -71,9 +71,7 @@ type FinancialInstrumentAttributes66 struct {
 
 	// Ratio or multiplying factor used to convert one contract into a financial instrument quantity.
 	ContractSize *FinancialInstrumentQuantity1Choice `xml:"CtrctSz,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentAttributes66) AddFinancialInstrumentIdentification() *SecurityIdentification19 {
 	f.FinancialInstrumentIdentification = new(SecurityIdentification19)
@@ -179,4 +177,3 @@ func (f *FinancialInstrumentAttributes66) AddContractSize() *FinancialInstrument
 	f.ContractSize = new(FinancialInstrumentQuantity1Choice)
 	return f.ContractSize
 }
-

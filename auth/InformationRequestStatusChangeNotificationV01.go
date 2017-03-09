@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.003.001.01 Document"`
+	XMLName xml.Name                                       `xml:"urn:iso:std:iso:20022:tech:xsd:auth.003.001.01 Document"`
 	Message *InformationRequestStatusChangeNotificationV01 `xml:"InfReqStsChngNtfctn"`
 }
 
@@ -27,9 +27,7 @@ type InformationRequestStatusChangeNotificationV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *InformationRequestStatusChangeNotificationV01) SetOriginalBusinessQuery(value string) {
 	i.OriginalBusinessQuery = (*iso20022.Max35Text)(&value)
@@ -40,8 +38,7 @@ func (i *InformationRequestStatusChangeNotificationV01) SetConfidentialityStatus
 }
 
 func (i *InformationRequestStatusChangeNotificationV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

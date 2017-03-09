@@ -11,9 +11,7 @@ type AcceptorCurrencyConversionResponse2 struct {
 
 	// Details of the currency conversion.
 	CurrencyConversion *CurrencyConversion3 `xml:"CcyConvs"`
-
 }
-
 
 func (a *AcceptorCurrencyConversionResponse2) AddEnvironment() *CardPaymentEnvironment33 {
 	a.Environment = new(CardPaymentEnvironment33)
@@ -29,4 +27,3 @@ func (a *AcceptorCurrencyConversionResponse2) AddCurrencyConversion() *CurrencyC
 	a.CurrencyConversion = new(CurrencyConversion3)
 	return a.CurrencyConversion
 }
-

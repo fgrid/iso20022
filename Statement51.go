@@ -35,9 +35,7 @@ type Statement51 struct {
 
 	// Indicates whether the statement contains tax lot details.
 	TaxLotIndicator *YesNoIndicator `xml:"TaxLotInd,omitempty"`
-
 }
-
 
 func (s *Statement51) AddReportNumber() *Number3Choice {
 	s.ReportNumber = new(Number3Choice)
@@ -87,4 +85,3 @@ func (s *Statement51) SetSubAccountIndicator(value string) {
 func (s *Statement51) SetTaxLotIndicator(value string) {
 	s.TaxLotIndicator = (*YesNoIndicator)(&value)
 }
-

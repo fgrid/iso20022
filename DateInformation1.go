@@ -11,9 +11,7 @@ type DateInformation1 struct {
 
 	// Maximum number of trigger date occurrence cycles.
 	Number *Number `xml:"Nb"`
-
 }
-
 
 func (d *DateInformation1) SetStartDate(value string) {
 	d.StartDate = (*ISODate)(&value)
@@ -26,4 +24,3 @@ func (d *DateInformation1) SetFrequency(value string) {
 func (d *DateInformation1) SetNumber(value string) {
 	d.Number = (*Number)(&value)
 }
-

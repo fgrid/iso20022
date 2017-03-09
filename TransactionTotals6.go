@@ -29,9 +29,7 @@ type TransactionTotals6 struct {
 
 	// Sum number of all fee collection transactions.
 	FeeCollection *Number `xml:"FeeColltn,omitempty"`
-
 }
-
 
 func (t *TransactionTotals6) SetAuthorisation(value string) {
 	t.Authorisation = (*Number)(&value)
@@ -68,4 +66,3 @@ func (t *TransactionTotals6) SetTransferReversal(value string) {
 func (t *TransactionTotals6) SetFeeCollection(value string) {
 	t.FeeCollection = (*Number)(&value)
 }
-

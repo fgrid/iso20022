@@ -28,7 +28,7 @@ type SupportingDocumentRequestOrLetter1 struct {
 	Description *Max1025Text `xml:"Desc,omitempty"`
 
 	// Flag to indicate whether a response is required or not.
-	// 
+	//
 	// Usage: when the request is used to send a letter, there is no response required.
 	ResponseRequired *TrueFalseIndicator `xml:"RspnReqrd"`
 
@@ -40,9 +40,7 @@ type SupportingDocumentRequestOrLetter1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SupportingDocumentRequestOrLetter1) SetRequestOrLetterIdentification(value string) {
 	s.RequestOrLetterIdentification = (*Max35Text)(&value)
@@ -63,7 +61,7 @@ func (s *SupportingDocumentRequestOrLetter1) AddReceiver() *Party28Choice {
 }
 
 func (s *SupportingDocumentRequestOrLetter1) AddOriginalReferences() *OriginalMessage2 {
-	newValue := new (OriginalMessage2)
+	newValue := new(OriginalMessage2)
 	s.OriginalReferences = append(s.OriginalReferences, newValue)
 	return newValue
 }
@@ -89,14 +87,13 @@ func (s *SupportingDocumentRequestOrLetter1) SetDueDate(value string) {
 }
 
 func (s *SupportingDocumentRequestOrLetter1) AddAttachment() *DocumentGeneralInformation3 {
-	newValue := new (DocumentGeneralInformation3)
+	newValue := new(DocumentGeneralInformation3)
 	s.Attachment = append(s.Attachment, newValue)
 	return newValue
 }
 
 func (s *SupportingDocumentRequestOrLetter1) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

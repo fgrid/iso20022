@@ -17,9 +17,7 @@ type RecurringTransaction1 struct {
 
 	// Interest charged in percentage for the total amount of payments.
 	InterestCharges *ImpliedCurrencyAndAmount `xml:"IntrstChrgs,omitempty"`
-
 }
-
 
 func (r *RecurringTransaction1) SetSequenceNumber(value string) {
 	r.SequenceNumber = (*Max2NumericText)(&value)
@@ -40,4 +38,3 @@ func (r *RecurringTransaction1) SetTotalNumberOfPayments(value string) {
 func (r *RecurringTransaction1) SetInterestCharges(value, currency string) {
 	r.InterestCharges = NewImpliedCurrencyAndAmount(value, currency)
 }
-

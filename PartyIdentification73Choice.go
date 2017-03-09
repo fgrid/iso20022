@@ -11,9 +11,7 @@ type PartyIdentification73Choice struct {
 
 	// Party Identification specified as a list of values per element
 	PartyIdentification *PartyIdentification59 `xml:"PtyId"`
-
 }
-
 
 func (p *PartyIdentification73Choice) AddNameAndAddress() *NameAndAddress8 {
 	p.NameAndAddress = new(NameAndAddress8)
@@ -29,4 +27,3 @@ func (p *PartyIdentification73Choice) AddPartyIdentification() *PartyIdentificat
 	p.PartyIdentification = new(PartyIdentification59)
 	return p.PartyIdentification
 }
-

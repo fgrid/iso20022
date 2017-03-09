@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.027.001.01 Document"`
+	XMLName xml.Name         `xml:"urn:iso:std:iso:20022:tech:xsd:camt.027.001.01 Document"`
 	Message *ClaimNonReceipt `xml:"camt.027.001.01"`
 }
 
@@ -32,16 +32,14 @@ type ClaimNonReceipt struct {
 	Case *iso20022.Case `xml:"Case"`
 
 	// Identifies the payment instruction for which the Creditor has not received the funds.
-	// Note: 
+	// Note:
 	// In case of a missing cover, it must be the Field 20 of the received MT103.
 	// In case of a claim non receipt initiated by the Debtor, it must be the identification of the instruction (Field 20 of MT103, Instruction Identification of the Payment Initiation or the Bulk Credit Transfer).
 	Underlying *iso20022.PaymentInstructionExtract `xml:"Undrlyg"`
 
-	// Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover. 
+	// Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover.
 	MissingCover *iso20022.MissingCover `xml:"MssngCover,omitempty"`
-
 }
-
 
 func (c *ClaimNonReceipt) AddAssignment() *iso20022.CaseAssignment {
 	c.Assignment = new(iso20022.CaseAssignment)
@@ -62,4 +60,3 @@ func (c *ClaimNonReceipt) AddMissingCover() *iso20022.MissingCover {
 	c.MissingCover = new(iso20022.MissingCover)
 	return c.MissingCover
 }
-

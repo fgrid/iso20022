@@ -9,14 +9,12 @@ type Blocked1 struct {
 	// Indicates whether the account is blocked.
 	Blocked *YesNoIndicator `xml:"Blckd"`
 
-	// Specifies the reason the account is blocked. 
+	// Specifies the reason the account is blocked.
 	Reason *BlockedReason1Choice `xml:"Rsn,omitempty"`
-
 }
 
-
 func (b *Blocked1) AddOrderType() *FundOrderType1Choice {
-	newValue := new (FundOrderType1Choice)
+	newValue := new(FundOrderType1Choice)
 	b.OrderType = append(b.OrderType, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (b *Blocked1) AddReason() *BlockedReason1Choice {
 	b.Reason = new(BlockedReason1Choice)
 	return b.Reason
 }
-

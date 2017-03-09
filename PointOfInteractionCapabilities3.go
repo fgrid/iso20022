@@ -30,9 +30,7 @@ type PointOfInteractionCapabilities3 struct {
 	// Available language in the display and printer interface.
 	// Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
 	AvailableLanguage []*LanguageCode `xml:"AvlblLang,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionCapabilities3) AddCardReadingCapabilities(value string) {
 	p.CardReadingCapabilities = append(p.CardReadingCapabilities, (*CardDataReading1Code)(&value))
@@ -59,7 +57,7 @@ func (p *PointOfInteractionCapabilities3) SetOnLineCapabilities(value string) {
 }
 
 func (p *PointOfInteractionCapabilities3) AddDisplayCapabilities() *DisplayCapabilities2 {
-	newValue := new (DisplayCapabilities2)
+	newValue := new(DisplayCapabilities2)
 	p.DisplayCapabilities = append(p.DisplayCapabilities, newValue)
 	return newValue
 }
@@ -71,4 +69,3 @@ func (p *PointOfInteractionCapabilities3) SetPrintLineWidth(value string) {
 func (p *PointOfInteractionCapabilities3) AddAvailableLanguage(value string) {
 	p.AvailableLanguage = append(p.AvailableLanguage, (*LanguageCode)(&value))
 }
-

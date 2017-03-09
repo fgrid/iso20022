@@ -17,9 +17,7 @@ type LinkedCorporateAction1 struct {
 
 	// Reference assigned by the CSD to the linked coporate avent.
 	LinkedCorporateActionProcessingIdentification *Max35Text `xml:"LkdCorpActnPrcgId,omitempty"`
-
 }
-
 
 func (l *LinkedCorporateAction1) SetNotificationType(value string) {
 	l.NotificationType = (*CorporateActionNotificationType1Code)(&value)
@@ -42,4 +40,3 @@ func (l *LinkedCorporateAction1) SetLinkedIssuerCorporateActionIdentification(va
 func (l *LinkedCorporateAction1) SetLinkedCorporateActionProcessingIdentification(value string) {
 	l.LinkedCorporateActionProcessingIdentification = (*Max35Text)(&value)
 }
-

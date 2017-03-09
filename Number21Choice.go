@@ -8,9 +8,7 @@ type Number21Choice struct {
 
 	// Number of maximum 35 text, with the possibility to provide an issuer for the number identification.
 	Proprietary *GenericIdentification29 `xml:"Prtry"`
-
 }
-
 
 func (n *Number21Choice) SetNumberIdentification(value string) {
 	n.NumberIdentification = (*Max4NumericText)(&value)
@@ -20,4 +18,3 @@ func (n *Number21Choice) AddProprietary() *GenericIdentification29 {
 	n.Proprietary = new(GenericIdentification29)
 	return n.Proprietary
 }
-

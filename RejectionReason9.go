@@ -8,9 +8,7 @@ type RejectionReason9 struct {
 
 	// Provides additional information about the reason in narrative form.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (r *RejectionReason9) AddCode() *RejectionReason9Choice {
 	r.Code = new(RejectionReason9Choice)
@@ -20,4 +18,3 @@ func (r *RejectionReason9) AddCode() *RejectionReason9Choice {
 func (r *RejectionReason9) SetAdditionalReasonInformation(value string) {
 	r.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

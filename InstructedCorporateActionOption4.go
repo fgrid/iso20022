@@ -20,9 +20,7 @@ type InstructedCorporateActionOption4 struct {
 
 	// Specifies the type of deadline for instructing.
 	DeadlineType *DeadlineCode1Choice `xml:"DdlnTp"`
-
 }
-
 
 func (i *InstructedCorporateActionOption4) SetOptionNumber(value string) {
 	i.OptionNumber = (*Exact3NumericText)(&value)
@@ -51,4 +49,3 @@ func (i *InstructedCorporateActionOption4) AddDeadlineType() *DeadlineCode1Choic
 	i.DeadlineType = new(DeadlineCode1Choice)
 	return i.DeadlineType
 }
-

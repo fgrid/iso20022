@@ -7,7 +7,7 @@ import (
 )
 
 type Document05700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.057.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:setr.057.001.01 Document"`
 	Message *OrderConfirmationStatusReportV01 `xml:"OrdrConfStsRptV01"`
 }
 
@@ -38,7 +38,7 @@ func (d *Document05700101) AddMessage() *OrderConfirmationStatusReportV01 {
 // The individual order confirmation or confirmation amendment for which the status is given is identified with its order reference. The message identification of the message in which the individual order confirmation or confirmation amendment was conveyed may also be quoted in RelatedReference, but this is not recommended.
 type OrderConfirmationStatusReportV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message sent in a proprietary way or reference of a system.
@@ -52,9 +52,7 @@ type OrderConfirmationStatusReportV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (o *OrderConfirmationStatusReportV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	o.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -62,26 +60,25 @@ func (o *OrderConfirmationStatusReportV01) AddMessageIdentification() *iso20022.
 }
 
 func (o *OrderConfirmationStatusReportV01) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.OtherReference = append(o.OtherReference, newValue)
 	return newValue
 }
 
 func (o *OrderConfirmationStatusReportV01) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.RelatedReference = append(o.RelatedReference, newValue)
 	return newValue
 }
 
 func (o *OrderConfirmationStatusReportV01) AddIndividualOrderConfirmationDetailsReport() *iso20022.IndividualOrderConfirmationStatusAndReason1 {
-	newValue := new (iso20022.IndividualOrderConfirmationStatusAndReason1)
+	newValue := new(iso20022.IndividualOrderConfirmationStatusAndReason1)
 	o.IndividualOrderConfirmationDetailsReport = append(o.IndividualOrderConfirmationDetailsReport, newValue)
 	return newValue
 }
 
 func (o *OrderConfirmationStatusReportV01) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	o.Extension = append(o.Extension, newValue)
 	return newValue
 }
-

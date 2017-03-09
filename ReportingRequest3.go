@@ -26,9 +26,7 @@ type ReportingRequest3 struct {
 
 	// Provides details on the requested balance reporting.
 	RequestedBalanceType []*BalanceType12 `xml:"ReqdBalTp,omitempty"`
-
 }
-
 
 func (r *ReportingRequest3) SetIdentification(value string) {
 	r.Identification = (*Max35Text)(&value)
@@ -64,8 +62,7 @@ func (r *ReportingRequest3) AddRequestedTransactionType() *TransactionType1 {
 }
 
 func (r *ReportingRequest3) AddRequestedBalanceType() *BalanceType12 {
-	newValue := new (BalanceType12)
+	newValue := new(BalanceType12)
 	r.RequestedBalanceType = append(r.RequestedBalanceType, newValue)
 	return newValue
 }
-

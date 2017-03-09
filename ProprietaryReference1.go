@@ -8,9 +8,7 @@ type ProprietaryReference1 struct {
 
 	// Proprietary reference specification related to the underlying transaction.
 	Reference *Max35Text `xml:"Ref"`
-
 }
-
 
 func (p *ProprietaryReference1) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *ProprietaryReference1) SetType(value string) {
 func (p *ProprietaryReference1) SetReference(value string) {
 	p.Reference = (*Max35Text)(&value)
 }
-

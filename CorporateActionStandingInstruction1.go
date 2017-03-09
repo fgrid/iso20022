@@ -14,9 +14,7 @@ type CorporateActionStandingInstruction1 struct {
 
 	// Additional information about the standing instruction.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionStandingInstruction1) SetNetOrGross(value string) {
 	c.NetOrGross = (*StandingInstructionGrossNet1Code)(&value)
@@ -35,4 +33,3 @@ func (c *CorporateActionStandingInstruction1) AddSecuritiesDistributionDetails()
 func (c *CorporateActionStandingInstruction1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type AmountAndPeriod1 struct {
 
 	// End of period or indefinite if not specified.
 	EndDate *ISODate `xml:"EndDt,omitempty"`
-
 }
-
 
 func (a *AmountAndPeriod1) SetAmount(value, currency string) {
 	a.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (a *AmountAndPeriod1) SetStartDate(value string) {
 func (a *AmountAndPeriod1) SetEndDate(value string) {
 	a.EndDate = (*ISODate)(&value)
 }
-

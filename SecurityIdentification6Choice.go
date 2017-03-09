@@ -11,9 +11,7 @@ type SecurityIdentification6Choice struct {
 
 	// Provides the ability to describe the instrument through a description and main characteristics.
 	InstrumentDescription *SecurityInstrumentDescription2 `xml:"InstrmDesc"`
-
 }
-
 
 func (s *SecurityIdentification6Choice) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -28,4 +26,3 @@ func (s *SecurityIdentification6Choice) AddInstrumentDescription() *SecurityInst
 	s.InstrumentDescription = new(SecurityInstrumentDescription2)
 	return s.InstrumentDescription
 }
-

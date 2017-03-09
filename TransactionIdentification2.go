@@ -14,9 +14,7 @@ type TransactionIdentification2 struct {
 
 	// Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.
 	ProcessorTransactionIdentification *Max35Text `xml:"PrcrTxId,omitempty"`
-
 }
-
 
 func (t *TransactionIdentification2) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (t *TransactionIdentification2) SetMarketInfrastructureTransactionIdentific
 func (t *TransactionIdentification2) SetProcessorTransactionIdentification(value string) {
 	t.ProcessorTransactionIdentification = (*Max35Text)(&value)
 }
-

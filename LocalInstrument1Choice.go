@@ -8,9 +8,7 @@ type LocalInstrument1Choice struct {
 
 	// Specifies the local instrument as a proprietary code.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (l *LocalInstrument1Choice) SetCode(value string) {
 	l.Code = (*ExternalLocalInstrumentCode)(&value)
@@ -19,4 +17,3 @@ func (l *LocalInstrument1Choice) SetCode(value string) {
 func (l *LocalInstrument1Choice) SetProprietary(value string) {
 	l.Proprietary = (*Max35Text)(&value)
 }
-

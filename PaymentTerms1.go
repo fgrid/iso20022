@@ -14,9 +14,7 @@ type PaymentTerms1 struct {
 
 	// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
 	Amount *CurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (p *PaymentTerms1) SetOtherPaymentTerms(value string) {
 	p.OtherPaymentTerms = (*Max140Text)(&value)
@@ -34,4 +32,3 @@ func (p *PaymentTerms1) SetPercentage(value string) {
 func (p *PaymentTerms1) SetAmount(value, currency string) {
 	p.Amount = NewCurrencyAndAmount(value, currency)
 }
-

@@ -11,9 +11,7 @@ type References15 struct {
 
 	// Reference to a linked message that was previously received.
 	RelatedReference *AdditionalReference2 `xml:"RltdRef,omitempty"`
-
 }
-
 
 func (r *References15) AddPoolReference() *AdditionalReference2 {
 	r.PoolReference = new(AdditionalReference2)
@@ -29,4 +27,3 @@ func (r *References15) AddRelatedReference() *AdditionalReference2 {
 	r.RelatedReference = new(AdditionalReference2)
 	return r.RelatedReference
 }
-

@@ -11,9 +11,7 @@ type RequestType1 struct {
 
 	// Additional information, in free text form, to complement the requested information.
 	AdditionalInformation *Max500Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (r *RequestType1) SetNumber(value string) {
 	r.Number = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (r *RequestType1) AddType(value string) {
 func (r *RequestType1) SetAdditionalInformation(value string) {
 	r.AdditionalInformation = (*Max500Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type CashInOutForecast7 struct {
 
 	// Amount of the cash flow.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (c *CashInOutForecast7) SetCashSettlementDate(value string) {
 	c.CashSettlementDate = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (c *CashInOutForecast7) SetCashSettlementDate(value string) {
 func (c *CashInOutForecast7) SetAmount(value, currency string) {
 	c.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
 }
-

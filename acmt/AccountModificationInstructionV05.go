@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.003.001.05 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.003.001.05 Document"`
 	Message *AccountModificationInstructionV05 `xml:"AcctModInstr"`
 }
 
@@ -35,7 +35,7 @@ type AccountModificationInstructionV05 struct {
 	// Reference to a linked message that was previously sent.
 	PreviousReference *iso20022.AdditionalReference3 `xml:"PrvsRef,omitempty"`
 
-	// Provides detailed information about the application modification instruction. 
+	// Provides detailed information about the application modification instruction.
 	InstructionDetails *iso20022.InvestmentAccountModification1 `xml:"InstrDtls,omitempty"`
 
 	// Investment account selection information used to identify the account for which the information is modified.
@@ -66,7 +66,7 @@ type AccountModificationInstructionV05 struct {
 	ModifiedCashSettlement []*iso20022.InvestmentFundCashSettlementInformation8 `xml:"ModfdCshSttlm,omitempty"`
 
 	// Information related to documents to be added, deleted or updated.
-	// 
+	//
 	ModifiedServiceLevelAgreement []*iso20022.ModificationScope22 `xml:"ModfdSvcLvlAgrmt,omitempty"`
 
 	// Identifies the market practice to which the message conforms.
@@ -74,9 +74,7 @@ type AccountModificationInstructionV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountModificationInstructionV05) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -104,13 +102,13 @@ func (a *AccountModificationInstructionV05) AddModifiedInvestmentAccount() *iso2
 }
 
 func (a *AccountModificationInstructionV05) AddModifiedAccountParties() *iso20022.AccountParties11 {
-	newValue := new (iso20022.AccountParties11)
+	newValue := new(iso20022.AccountParties11)
 	a.ModifiedAccountParties = append(a.ModifiedAccountParties, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV05) AddModifiedIntermediaries() *iso20022.ModificationScope20 {
-	newValue := new (iso20022.ModificationScope20)
+	newValue := new(iso20022.ModificationScope20)
 	a.ModifiedIntermediaries = append(a.ModifiedIntermediaries, newValue)
 	return newValue
 }
@@ -126,25 +124,25 @@ func (a *AccountModificationInstructionV05) AddModifiedIssueAllocation() *iso200
 }
 
 func (a *AccountModificationInstructionV05) AddModifiedSavingsInvestmentPlan() *iso20022.ModificationScope25 {
-	newValue := new (iso20022.ModificationScope25)
+	newValue := new(iso20022.ModificationScope25)
 	a.ModifiedSavingsInvestmentPlan = append(a.ModifiedSavingsInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV05) AddModifiedWithdrawalInvestmentPlan() *iso20022.ModificationScope25 {
-	newValue := new (iso20022.ModificationScope25)
+	newValue := new(iso20022.ModificationScope25)
 	a.ModifiedWithdrawalInvestmentPlan = append(a.ModifiedWithdrawalInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV05) AddModifiedCashSettlement() *iso20022.InvestmentFundCashSettlementInformation8 {
-	newValue := new (iso20022.InvestmentFundCashSettlementInformation8)
+	newValue := new(iso20022.InvestmentFundCashSettlementInformation8)
 	a.ModifiedCashSettlement = append(a.ModifiedCashSettlement, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV05) AddModifiedServiceLevelAgreement() *iso20022.ModificationScope22 {
-	newValue := new (iso20022.ModificationScope22)
+	newValue := new(iso20022.ModificationScope22)
 	a.ModifiedServiceLevelAgreement = append(a.ModifiedServiceLevelAgreement, newValue)
 	return newValue
 }
@@ -155,8 +153,7 @@ func (a *AccountModificationInstructionV05) AddMarketPracticeVersion() *iso20022
 }
 
 func (a *AccountModificationInstructionV05) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

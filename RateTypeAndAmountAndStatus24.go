@@ -11,9 +11,7 @@ type RateTypeAndAmountAndStatus24 struct {
 
 	// Value expressed as a rate status.
 	RateStatus *RateStatus3Choice `xml:"RateSts,omitempty"`
-
 }
-
 
 func (r *RateTypeAndAmountAndStatus24) AddRateType() *RateType33Choice {
 	r.RateType = new(RateType33Choice)
@@ -28,4 +26,3 @@ func (r *RateTypeAndAmountAndStatus24) AddRateStatus() *RateStatus3Choice {
 	r.RateStatus = new(RateStatus3Choice)
 	return r.RateStatus
 }
-

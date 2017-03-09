@@ -8,9 +8,7 @@ type FixedOrRecurrentDate1Choice struct {
 
 	// Details related to recurrent dates on which the variation is triggered.
 	RecurrentDate *DateInformation1 `xml:"RcrntDt"`
-
 }
-
 
 func (f *FixedOrRecurrentDate1Choice) SetFixedDate(value string) {
 	f.FixedDate = (*ISODate)(&value)
@@ -20,4 +18,3 @@ func (f *FixedOrRecurrentDate1Choice) AddRecurrentDate() *DateInformation1 {
 	f.RecurrentDate = new(DateInformation1)
 	return f.RecurrentDate
 }
-

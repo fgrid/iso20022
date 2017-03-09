@@ -14,9 +14,7 @@ type SubAccountIdentification47 struct {
 
 	// Reporting per financial instrument.
 	FinancialInstrumentDetails []*FinancialInstrumentDetails23 `xml:"FinInstrmDtls,omitempty"`
-
 }
-
 
 func (s *SubAccountIdentification47) AddAccountOwner() *PartyIdentification109 {
 	s.AccountOwner = new(PartyIdentification109)
@@ -33,8 +31,7 @@ func (s *SubAccountIdentification47) SetActivityIndicator(value string) {
 }
 
 func (s *SubAccountIdentification47) AddFinancialInstrumentDetails() *FinancialInstrumentDetails23 {
-	newValue := new (FinancialInstrumentDetails23)
+	newValue := new(FinancialInstrumentDetails23)
 	s.FinancialInstrumentDetails = append(s.FinancialInstrumentDetails, newValue)
 	return newValue
 }
-

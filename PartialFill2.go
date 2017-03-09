@@ -26,9 +26,7 @@ type PartialFill2 struct {
 
 	// Minimum quantity that applies to every execution. The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the Match Increment.
 	MatchIncrementQuantity *QuantityOrAmount1Choice `xml:"MtchIncrmtQty,omitempty"`
-
 }
-
 
 func (p *PartialFill2) AddConfirmationQuantity() *Quantity6Choice {
 	p.ConfirmationQuantity = new(Quantity6Choice)
@@ -69,4 +67,3 @@ func (p *PartialFill2) AddMatchIncrementQuantity() *QuantityOrAmount1Choice {
 	p.MatchIncrementQuantity = new(QuantityOrAmount1Choice)
 	return p.MatchIncrementQuantity
 }
-

@@ -20,9 +20,7 @@ type Transfer16 struct {
 
 	// Additional specific settlement information for non-regulated traded funds.
 	NonStandardSettlementInformation *Max350Text `xml:"NonStdSttlmInf,omitempty"`
-
 }
-
 
 func (t *Transfer16) AddTransferDate() *DateFormat1Choice {
 	t.TransferDate = new(DateFormat1Choice)
@@ -50,4 +48,3 @@ func (t *Transfer16) SetOwnAccountTransferIndicator(value string) {
 func (t *Transfer16) SetNonStandardSettlementInformation(value string) {
 	t.NonStandardSettlementInformation = (*Max350Text)(&value)
 }
-

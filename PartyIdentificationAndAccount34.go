@@ -14,9 +14,7 @@ type PartyIdentificationAndAccount34 struct {
 
 	// Account to or from which a securities entry is made.
 	SafekeepingAccount *Max35Text `xml:"SfkpgAcct,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount34) AddIdentification() *PartyIdentification32Choice {
 	p.Identification = new(PartyIdentification32Choice)
@@ -35,4 +33,3 @@ func (p *PartyIdentificationAndAccount34) AddAlternateIdentification() *Alternat
 func (p *PartyIdentificationAndAccount34) SetSafekeepingAccount(value string) {
 	p.SafekeepingAccount = (*Max35Text)(&value)
 }
-

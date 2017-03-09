@@ -8,9 +8,7 @@ type DeadlineCode1Choice struct {
 
 	// Proprietary identification of the reference date of a corporate action.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (d *DeadlineCode1Choice) SetCode(value string) {
 	d.Code = (*CorporateActionDeadline1Code)(&value)
@@ -20,4 +18,3 @@ func (d *DeadlineCode1Choice) AddProprietary() *GenericIdentification20 {
 	d.Proprietary = new(GenericIdentification20)
 	return d.Proprietary
 }
-

@@ -44,9 +44,7 @@ type InterestAmount2 struct {
 
 	// Additionnal information related to interest request.
 	AdditionalInformation *Max210Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *InterestAmount2) SetAccruedInterestAmount(value, currency string) {
 	i.AccruedInterestAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -109,4 +107,3 @@ func (i *InterestAmount2) SetStandardSettlementInstructions(value string) {
 func (i *InterestAmount2) SetAdditionalInformation(value string) {
 	i.AdditionalInformation = (*Max210Text)(&value)
 }
-

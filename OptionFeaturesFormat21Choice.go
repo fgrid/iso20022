@@ -8,9 +8,7 @@ type OptionFeaturesFormat21Choice struct {
 
 	// Proprietary identification of the features that may apply to a corporate action option.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (o *OptionFeaturesFormat21Choice) SetCode(value string) {
 	o.Code = (*OptionFeatures8Code)(&value)
@@ -20,4 +18,3 @@ func (o *OptionFeaturesFormat21Choice) AddProprietary() *GenericIdentification47
 	o.Proprietary = new(GenericIdentification47)
 	return o.Proprietary
 }
-

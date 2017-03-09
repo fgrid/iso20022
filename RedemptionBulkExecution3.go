@@ -42,9 +42,7 @@ type RedemptionBulkExecution3 struct {
 
 	// Payment processes required to transfer cash from the debtor to the creditor.
 	BulkCashSettlementDetails *PaymentTransaction22 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkExecution3) SetMasterReference(value string) {
 	r.MasterReference = (*Max35Text)(&value)
@@ -77,7 +75,7 @@ func (r *RedemptionBulkExecution3) AddFinancialInstrumentDetails() *FinancialIns
 }
 
 func (r *RedemptionBulkExecution3) AddIndividualExecutionDetails() *RedemptionExecution5 {
-	newValue := new (RedemptionExecution5)
+	newValue := new(RedemptionExecution5)
 	r.IndividualExecutionDetails = append(r.IndividualExecutionDetails, newValue)
 	return newValue
 }
@@ -102,4 +100,3 @@ func (r *RedemptionBulkExecution3) AddBulkCashSettlementDetails() *PaymentTransa
 	r.BulkCashSettlementDetails = new(PaymentTransaction22)
 	return r.BulkCashSettlementDetails
 }
-

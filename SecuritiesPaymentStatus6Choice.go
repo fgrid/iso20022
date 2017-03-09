@@ -8,9 +8,7 @@ type SecuritiesPaymentStatus6Choice struct {
 
 	// Securities payment status expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (s *SecuritiesPaymentStatus6Choice) SetCode(value string) {
 	s.Code = (*SecuritiesPaymentStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (s *SecuritiesPaymentStatus6Choice) AddProprietary() *GenericIdentification
 	s.Proprietary = new(GenericIdentification47)
 	return s.Proprietary
 }
-

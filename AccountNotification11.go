@@ -7,11 +7,11 @@ type AccountNotification11 struct {
 	Identification *Max35Text `xml:"Id"`
 
 	// Provides details on the page number of the notification.
-	// 
+	//
 	// Usage: The pagination of the notification is only allowed when agreed between the parties.
 	NotificationPagination *Pagination `xml:"NtfctnPgntn,omitempty"`
 
-	// Sequential number of the notification, as assigned by the account servicer. 
+	// Sequential number of the notification, as assigned by the account servicer.
 	// Usage: The sequential number is increased incrementally for each notification sent electronically.
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
@@ -44,18 +44,16 @@ type AccountNotification11 struct {
 
 	// Specifies an entry in the debit credit notification.
 	// Usage: At least one reference must be provided to identify the entry and its underlying transaction(s).
-	// 
-	// Usage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. 
+	//
+	// Usage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted.
 	// Following elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:
 	// Creditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.
-	// 
+	//
 	Entry []*ReportEntry7 `xml:"Ntry,omitempty"`
 
 	// Further details of the account notification.
 	AdditionalNotificationInformation *Max500Text `xml:"AddtlNtfctnInf,omitempty"`
-
 }
-
 
 func (a *AccountNotification11) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -103,7 +101,7 @@ func (a *AccountNotification11) AddRelatedAccount() *CashAccount24 {
 }
 
 func (a *AccountNotification11) AddInterest() *AccountInterest3 {
-	newValue := new (AccountInterest3)
+	newValue := new(AccountInterest3)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
@@ -114,7 +112,7 @@ func (a *AccountNotification11) AddTransactionsSummary() *TotalTransactions4 {
 }
 
 func (a *AccountNotification11) AddEntry() *ReportEntry7 {
-	newValue := new (ReportEntry7)
+	newValue := new(ReportEntry7)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -122,4 +120,3 @@ func (a *AccountNotification11) AddEntry() *ReportEntry7 {
 func (a *AccountNotification11) SetAdditionalNotificationInformation(value string) {
 	a.AdditionalNotificationInformation = (*Max500Text)(&value)
 }
-

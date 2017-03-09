@@ -38,9 +38,7 @@ type SwitchSubscriptionLegOrder2 struct {
 
 	// Information related to physical delivery of the securities.
 	PhysicalDeliveryDetails *NameAndAddress4 `xml:"PhysDlvryDtls,omitempty"`
-
 }
-
 
 func (s *SwitchSubscriptionLegOrder2) SetLegIdentification(value string) {
 	s.LegIdentification = (*Max35Text)(&value)
@@ -69,19 +67,19 @@ func (s *SwitchSubscriptionLegOrder2) SetRequestedNAVCurrency(value string) {
 }
 
 func (s *SwitchSubscriptionLegOrder2) AddChargeDetails() *Charge8 {
-	newValue := new (Charge8)
+	newValue := new(Charge8)
 	s.ChargeDetails = append(s.ChargeDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchSubscriptionLegOrder2) AddCommissionDetails() *Commission6 {
-	newValue := new (Commission6)
+	newValue := new(Commission6)
 	s.CommissionDetails = append(s.CommissionDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchSubscriptionLegOrder2) AddTaxDetails() *Tax6 {
-	newValue := new (Tax6)
+	newValue := new(Tax6)
 	s.TaxDetails = append(s.TaxDetails, newValue)
 	return newValue
 }
@@ -99,4 +97,3 @@ func (s *SwitchSubscriptionLegOrder2) AddPhysicalDeliveryDetails() *NameAndAddre
 	s.PhysicalDeliveryDetails = new(NameAndAddress4)
 	return s.PhysicalDeliveryDetails
 }
-

@@ -11,9 +11,7 @@ type TreasuryProfile1 struct {
 
 	// Tax rate.
 	Rate *PercentageRate `xml:"Rate"`
-
 }
-
 
 func (t *TreasuryProfile1) SetDate(value string) {
 	t.Date = (*ISODate)(&value)
@@ -27,4 +25,3 @@ func (t *TreasuryProfile1) AddTraderType() *PartyRole5Choice {
 func (t *TreasuryProfile1) SetRate(value string) {
 	t.Rate = (*PercentageRate)(&value)
 }
-

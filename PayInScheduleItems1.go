@@ -8,9 +8,7 @@ type PayInScheduleItems1 struct {
 
 	// Time by which the amount must be paid in.
 	Deadline *ISODateTime `xml:"Ddln"`
-
 }
-
 
 func (p *PayInScheduleItems1) SetAmount(value, currency string) {
 	p.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (p *PayInScheduleItems1) SetAmount(value, currency string) {
 func (p *PayInScheduleItems1) SetDeadline(value string) {
 	p.Deadline = (*ISODateTime)(&value)
 }
-

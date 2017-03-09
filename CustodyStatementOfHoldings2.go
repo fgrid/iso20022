@@ -20,9 +20,7 @@ type CustodyStatementOfHoldings2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CustodyStatementOfHoldings2) AddStatementGeneralDetails() *Statement7 {
 	c.StatementGeneralDetails = new(Statement7)
@@ -35,13 +33,13 @@ func (c *CustodyStatementOfHoldings2) AddAccountDetails() *SafekeepingAccount2 {
 }
 
 func (c *CustodyStatementOfHoldings2) AddBalanceForAccount() *AggregateBalanceInformation4 {
-	newValue := new (AggregateBalanceInformation4)
+	newValue := new(AggregateBalanceInformation4)
 	c.BalanceForAccount = append(c.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (c *CustodyStatementOfHoldings2) AddSubAccountDetails() *SubAccountIdentification5 {
-	newValue := new (SubAccountIdentification5)
+	newValue := new(SubAccountIdentification5)
 	c.SubAccountDetails = append(c.SubAccountDetails, newValue)
 	return newValue
 }
@@ -52,8 +50,7 @@ func (c *CustodyStatementOfHoldings2) AddTotalValues() *TotalValueInPageAndState
 }
 
 func (c *CustodyStatementOfHoldings2) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

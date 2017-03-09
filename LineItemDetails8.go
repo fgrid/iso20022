@@ -47,9 +47,7 @@ type LineItemDetails8 struct {
 
 	// Variance on price for the goods.
 	PriceTolerance *PercentageTolerance1 `xml:"PricTlrnce,omitempty"`
-
 }
-
 
 func (l *LineItemDetails8) SetLineItemIdentification(value string) {
 	l.LineItemIdentification = (*Max70Text)(&value)
@@ -60,19 +58,19 @@ func (l *LineItemDetails8) SetProductName(value string) {
 }
 
 func (l *LineItemDetails8) AddProductIdentifier() *ProductIdentifier2Choice {
-	newValue := new (ProductIdentifier2Choice)
+	newValue := new(ProductIdentifier2Choice)
 	l.ProductIdentifier = append(l.ProductIdentifier, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails8) AddProductCharacteristics() *ProductCharacteristics1Choice {
-	newValue := new (ProductCharacteristics1Choice)
+	newValue := new(ProductCharacteristics1Choice)
 	l.ProductCharacteristics = append(l.ProductCharacteristics, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails8) AddProductCategory() *ProductCategory1Choice {
-	newValue := new (ProductCategory1Choice)
+	newValue := new(ProductCategory1Choice)
 	l.ProductCategory = append(l.ProductCategory, newValue)
 	return newValue
 }
@@ -122,4 +120,3 @@ func (l *LineItemDetails8) AddPriceTolerance() *PercentageTolerance1 {
 	l.PriceTolerance = new(PercentageTolerance1)
 	return l.PriceTolerance
 }
-

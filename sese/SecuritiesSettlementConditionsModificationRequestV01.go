@@ -7,7 +7,7 @@ import (
 )
 
 type Document03000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.030.001.01 Document"`
+	XMLName xml.Name                                              `xml:"urn:iso:std:iso:20022:tech:xsd:sese.030.001.01 Document"`
 	Message *SecuritiesSettlementConditionsModificationRequestV01 `xml:"SctiesSttlmCondsModReq"`
 }
 
@@ -59,9 +59,7 @@ type SecuritiesSettlementConditionsModificationRequestV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementConditionsModificationRequestV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	s.Identification = new(iso20022.DocumentIdentification11)
@@ -79,13 +77,13 @@ func (s *SecuritiesSettlementConditionsModificationRequestV01) AddSafekeepingAcc
 }
 
 func (s *SecuritiesSettlementConditionsModificationRequestV01) AddRequestDetails() *iso20022.RequestDetails1 {
-	newValue := new (iso20022.RequestDetails1)
+	newValue := new(iso20022.RequestDetails1)
 	s.RequestDetails = append(s.RequestDetails, newValue)
 	return newValue
 }
 
 func (s *SecuritiesSettlementConditionsModificationRequestV01) AddAdditionalInformation() *iso20022.AdditionalInformation3 {
-	newValue := new (iso20022.AdditionalInformation3)
+	newValue := new(iso20022.AdditionalInformation3)
 	s.AdditionalInformation = append(s.AdditionalInformation, newValue)
 	return newValue
 }
@@ -101,8 +99,7 @@ func (s *SecuritiesSettlementConditionsModificationRequestV01) AddMessageRecipie
 }
 
 func (s *SecuritiesSettlementConditionsModificationRequestV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

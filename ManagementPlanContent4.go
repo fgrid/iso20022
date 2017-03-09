@@ -11,9 +11,7 @@ type ManagementPlanContent4 struct {
 
 	// Terminal management action to be performed by the point of interaction (POI).
 	Action []*TMSAction4 `xml:"Actn"`
-
 }
-
 
 func (m *ManagementPlanContent4) SetTMChallenge(value string) {
 	m.TMChallenge = (*Max140Binary)(&value)
@@ -24,8 +22,7 @@ func (m *ManagementPlanContent4) AddKeyEnciphermentCertificate(value string) {
 }
 
 func (m *ManagementPlanContent4) AddAction() *TMSAction4 {
-	newValue := new (TMSAction4)
+	newValue := new(TMSAction4)
 	m.Action = append(m.Action, newValue)
 	return newValue
 }
-

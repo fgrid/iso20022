@@ -8,9 +8,7 @@ type CorporateActionNotificationAdvice1 struct {
 
 	// Provides information about an option of a CA event.
 	CorporateActionOptionDetails []*CorporateActionOption1 `xml:"CorpActnOptnDtls,omitempty"`
-
 }
-
 
 func (c *CorporateActionNotificationAdvice1) AddCorporateActionDetails() *CorporateAction2 {
 	c.CorporateActionDetails = new(CorporateAction2)
@@ -18,8 +16,7 @@ func (c *CorporateActionNotificationAdvice1) AddCorporateActionDetails() *Corpor
 }
 
 func (c *CorporateActionNotificationAdvice1) AddCorporateActionOptionDetails() *CorporateActionOption1 {
-	newValue := new (CorporateActionOption1)
+	newValue := new(CorporateActionOption1)
 	c.CorporateActionOptionDetails = append(c.CorporateActionOptionDetails, newValue)
 	return newValue
 }
-

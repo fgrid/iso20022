@@ -14,9 +14,7 @@ type MovementInstruction1 struct {
 
 	// Provides information about the proceeds, ie, outturned resources.
 	ProceedsMovementDetails []*ProceedsMovement1 `xml:"PrcdsMvmntDtls,omitempty"`
-
 }
-
 
 func (m *MovementInstruction1) AddMovementGeneralInformation() *CorporateActionMovement1 {
 	m.MovementGeneralInformation = new(CorporateActionMovement1)
@@ -24,20 +22,19 @@ func (m *MovementInstruction1) AddMovementGeneralInformation() *CorporateActionM
 }
 
 func (m *MovementInstruction1) AddUnderlyingSecuritiesMovementDetails() *UnderlyingSecurityMovement1 {
-	newValue := new (UnderlyingSecurityMovement1)
+	newValue := new(UnderlyingSecurityMovement1)
 	m.UnderlyingSecuritiesMovementDetails = append(m.UnderlyingSecuritiesMovementDetails, newValue)
 	return newValue
 }
 
 func (m *MovementInstruction1) AddUnderlyingCashMovementDetails() *CashMovement2 {
-	newValue := new (CashMovement2)
+	newValue := new(CashMovement2)
 	m.UnderlyingCashMovementDetails = append(m.UnderlyingCashMovementDetails, newValue)
 	return newValue
 }
 
 func (m *MovementInstruction1) AddProceedsMovementDetails() *ProceedsMovement1 {
-	newValue := new (ProceedsMovement1)
+	newValue := new(ProceedsMovement1)
 	m.ProceedsMovementDetails = append(m.ProceedsMovementDetails, newValue)
 	return newValue
 }
-

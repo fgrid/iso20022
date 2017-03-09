@@ -11,9 +11,7 @@ type TransactionIdentifications32 struct {
 
 	// Unique reference agreed upon by the two trade counterparties to identify the trade.
 	CommonIdentification *Max35Text `xml:"CmonId,omitempty"`
-
 }
-
 
 func (t *TransactionIdentifications32) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (t *TransactionIdentifications32) SetAccountServicerTransactionIdentificati
 func (t *TransactionIdentifications32) SetCommonIdentification(value string) {
 	t.CommonIdentification = (*Max35Text)(&value)
 }
-

@@ -41,9 +41,7 @@ type SwitchOrder2 struct {
 
 	// Information needed to process a currency exchange or conversion.
 	ForeignExchangeDetails *ForeignExchangeTerms5 `xml:"FXDtls,omitempty"`
-
 }
-
 
 func (s *SwitchOrder2) SetOrderDateTime(value string) {
 	s.OrderDateTime = (*ISODateTime)(&value)
@@ -84,13 +82,13 @@ func (s *SwitchOrder2) AddCancellationRight() *CancellationRight1 {
 }
 
 func (s *SwitchOrder2) AddRedemptionLegDetails() *SwitchRedemptionLegOrder2 {
-	newValue := new (SwitchRedemptionLegOrder2)
+	newValue := new(SwitchRedemptionLegOrder2)
 	s.RedemptionLegDetails = append(s.RedemptionLegDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchOrder2) AddSubscriptionLegDetails() *SwitchSubscriptionLegOrder2 {
-	newValue := new (SwitchSubscriptionLegOrder2)
+	newValue := new(SwitchSubscriptionLegOrder2)
 	s.SubscriptionLegDetails = append(s.SubscriptionLegDetails, newValue)
 	return newValue
 }
@@ -104,4 +102,3 @@ func (s *SwitchOrder2) AddForeignExchangeDetails() *ForeignExchangeTerms5 {
 	s.ForeignExchangeDetails = new(ForeignExchangeTerms5)
 	return s.ForeignExchangeDetails
 }
-

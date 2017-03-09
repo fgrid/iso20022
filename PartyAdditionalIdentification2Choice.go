@@ -8,9 +8,7 @@ type PartyAdditionalIdentification2Choice struct {
 
 	// Official identification of an organisation in a specific register.
 	RegistrationIdentification *OrganisationIdentification5 `xml:"RegnId"`
-
 }
-
 
 func (p *PartyAdditionalIdentification2Choice) SetBirthDate(value string) {
 	p.BirthDate = (*ISODate)(&value)
@@ -20,4 +18,3 @@ func (p *PartyAdditionalIdentification2Choice) AddRegistrationIdentification() *
 	p.RegistrationIdentification = new(OrganisationIdentification5)
 	return p.RegistrationIdentification
 }
-

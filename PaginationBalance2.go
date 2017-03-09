@@ -8,9 +8,7 @@ type PaginationBalance2 struct {
 
 	// Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement
 	ClosingBalance *ClosingBalance3Choice `xml:"ClsgBal,omitempty"`
-
 }
-
 
 func (p *PaginationBalance2) AddOpeningBalance() *OpeningBalance3Choice {
 	p.OpeningBalance = new(OpeningBalance3Choice)
@@ -21,4 +19,3 @@ func (p *PaginationBalance2) AddClosingBalance() *ClosingBalance3Choice {
 	p.ClosingBalance = new(ClosingBalance3Choice)
 	return p.ClosingBalance
 }
-

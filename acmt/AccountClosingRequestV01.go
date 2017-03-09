@@ -7,7 +7,7 @@ import (
 )
 
 type Document01900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.019.001.01 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.019.001.01 Document"`
 	Message *AccountClosingRequestV01 `xml:"AcctClsgReq"`
 }
 
@@ -46,9 +46,7 @@ type AccountClosingRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountClosingRequestV01) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -66,7 +64,7 @@ func (a *AccountClosingRequestV01) AddAccountServicerIdentification() *iso20022.
 }
 
 func (a *AccountClosingRequestV01) AddOrganisationIdentification() *iso20022.OrganisationIdentification6 {
-	newValue := new (iso20022.OrganisationIdentification6)
+	newValue := new(iso20022.OrganisationIdentification6)
 	a.OrganisationIdentification = append(a.OrganisationIdentification, newValue)
 	return newValue
 }
@@ -87,8 +85,7 @@ func (a *AccountClosingRequestV01) AddTransferAccountServicerIdentification() *i
 }
 
 func (a *AccountClosingRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

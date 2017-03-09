@@ -8,9 +8,7 @@ type AcquirerNetworkManagementInitiation1 struct {
 
 	// Network management transaction.
 	Transaction *CardTransaction11 `xml:"Tx"`
-
 }
-
 
 func (a *AcquirerNetworkManagementInitiation1) AddEnvironment() *CardTransactionEnvironment6 {
 	a.Environment = new(CardTransactionEnvironment6)
@@ -21,4 +19,3 @@ func (a *AcquirerNetworkManagementInitiation1) AddTransaction() *CardTransaction
 	a.Transaction = new(CardTransaction11)
 	return a.Transaction
 }
-

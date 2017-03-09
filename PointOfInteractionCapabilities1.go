@@ -17,9 +17,7 @@ type PointOfInteractionCapabilities1 struct {
 
 	// Number of columns of the printer component.
 	PrintLineWidth *Max3NumericText `xml:"PrtLineWidth,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionCapabilities1) AddCardReadingCapabilities(value string) {
 	p.CardReadingCapabilities = append(p.CardReadingCapabilities, (*CardDataReading1Code)(&value))
@@ -34,7 +32,7 @@ func (p *PointOfInteractionCapabilities1) SetOnLineCapabilities(value string) {
 }
 
 func (p *PointOfInteractionCapabilities1) AddDisplayCapabilities() *DisplayCapabilities1 {
-	newValue := new (DisplayCapabilities1)
+	newValue := new(DisplayCapabilities1)
 	p.DisplayCapabilities = append(p.DisplayCapabilities, newValue)
 	return newValue
 }
@@ -42,4 +40,3 @@ func (p *PointOfInteractionCapabilities1) AddDisplayCapabilities() *DisplayCapab
 func (p *PointOfInteractionCapabilities1) SetPrintLineWidth(value string) {
 	p.PrintLineWidth = (*Max3NumericText)(&value)
 }
-

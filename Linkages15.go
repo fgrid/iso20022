@@ -8,9 +8,7 @@ type Linkages15 struct {
 
 	// Reference to the linked transaction.
 	Reference *IdentificationReference8Choice `xml:"Ref"`
-
 }
-
 
 func (l *Linkages15) AddMessageNumber() *DocumentNumber4Choice {
 	l.MessageNumber = new(DocumentNumber4Choice)
@@ -21,4 +19,3 @@ func (l *Linkages15) AddReference() *IdentificationReference8Choice {
 	l.Reference = new(IdentificationReference8Choice)
 	return l.Reference
 }
-

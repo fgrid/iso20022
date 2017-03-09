@@ -12,21 +12,19 @@ type CashBalance3 struct {
 	// Amount of money of the cash balance.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
 
-	// Indicates whether the balance is a credit or a debit balance. 
+	// Indicates whether the balance is a credit or a debit balance.
 	// Usage: A zero balance is considered to be a credit balance.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd"`
 
 	// Indicates the date (and time) of the balance.
 	Date *DateAndDateTimeChoice `xml:"Dt"`
 
-	// Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest. 
-	// 
+	// Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest.
+	//
 	// Usage: This type of information is used in the US and is linked to particular instruments such as cheques.
 	// Example: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability2 `xml:"Avlbty,omitempty"`
-
 }
-
 
 func (c *CashBalance3) AddType() *BalanceType12 {
 	c.Type = new(BalanceType12)
@@ -52,8 +50,7 @@ func (c *CashBalance3) AddDate() *DateAndDateTimeChoice {
 }
 
 func (c *CashBalance3) AddAvailability() *CashBalanceAvailability2 {
-	newValue := new (CashBalanceAvailability2)
+	newValue := new(CashBalanceAvailability2)
 	c.Availability = append(c.Availability, newValue)
 	return newValue
 }
-

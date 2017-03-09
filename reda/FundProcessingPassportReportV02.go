@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.004.001.02 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:reda.004.001.02 Document"`
 	Message *FundProcessingPassportReportV02 `xml:"FndPrcgPsptRpt"`
 }
 
@@ -30,11 +30,9 @@ type FundProcessingPassportReportV02 struct {
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	//     Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters
-	//     should provide on their investment funds in order to facilitate their trading. 
+	//     should provide on their investment funds in order to facilitate their trading.
 	FundProcessingPassport []*iso20022.FundProcessingPassport1 `xml:"FPP"`
-
 }
-
 
 func (f *FundProcessingPassportReportV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	f.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -42,8 +40,7 @@ func (f *FundProcessingPassportReportV02) AddMessageIdentification() *iso20022.M
 }
 
 func (f *FundProcessingPassportReportV02) AddFundProcessingPassport() *iso20022.FundProcessingPassport1 {
-	newValue := new (iso20022.FundProcessingPassport1)
+	newValue := new(iso20022.FundProcessingPassport1)
 	f.FundProcessingPassport = append(f.FundProcessingPassport, newValue)
 	return newValue
 }
-

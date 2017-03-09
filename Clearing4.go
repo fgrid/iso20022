@@ -15,9 +15,7 @@ type Clearing4 struct {
 
 	// In case of trades that are not guaranteed by the central counterparty (this is when the central counterparty has not done the novation), provides details such as the trade counterparty member identification or the trade counterparty clearing member identification.
 	NonGuaranteedTrade *NonGuaranteedTrade3 `xml:"NonGrntedTrad,omitempty"`
-
 }
-
 
 func (c *Clearing4) SetSettlementNettingEligibleCode(value string) {
 	c.SettlementNettingEligibleCode = (*NettingEligible1Code)(&value)
@@ -36,4 +34,3 @@ func (c *Clearing4) AddNonGuaranteedTrade() *NonGuaranteedTrade3 {
 	c.NonGuaranteedTrade = new(NonGuaranteedTrade3)
 	return c.NonGuaranteedTrade
 }
-

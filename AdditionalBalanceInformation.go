@@ -8,9 +8,7 @@ type AdditionalBalanceInformation struct {
 
 	// Reason a security is not available or additional information about the financial instrument for which the balance is given, for example, unregistered, registered in nominee name.
 	SubBalanceType *SecuritiesBalanceType2Code `xml:"SubBalTp"`
-
 }
-
 
 func (a *AdditionalBalanceInformation) AddQuantity() *SubBalanceQuantity1Choice {
 	a.Quantity = new(SubBalanceQuantity1Choice)
@@ -20,4 +18,3 @@ func (a *AdditionalBalanceInformation) AddQuantity() *SubBalanceQuantity1Choice 
 func (a *AdditionalBalanceInformation) SetSubBalanceType(value string) {
 	a.SubBalanceType = (*SecuritiesBalanceType2Code)(&value)
 }
-

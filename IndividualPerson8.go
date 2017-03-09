@@ -26,9 +26,7 @@ type IndividualPerson8 struct {
 
 	// Postal address of a party.
 	IndividualInvestorAddress *PostalAddress1 `xml:"IndvInvstrAdr"`
-
 }
-
 
 func (i *IndividualPerson8) SetName(value string) {
 	i.Name = (*Max35Text)(&value)
@@ -62,4 +60,3 @@ func (i *IndividualPerson8) AddIndividualInvestorAddress() *PostalAddress1 {
 	i.IndividualInvestorAddress = new(PostalAddress1)
 	return i.IndividualInvestorAddress
 }
-

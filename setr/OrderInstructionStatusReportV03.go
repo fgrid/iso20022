@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.016.001.03 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:setr.016.001.03 Document"`
 	Message *OrderInstructionStatusReportV03 `xml:"OrdrInstrStsRptV03"`
 }
 
@@ -50,7 +50,7 @@ func (d *Document01600103) AddMessage() *OrderInstructionStatusReportV03 {
 // - information related to the order, for example, settlement amount, number of units, expected trade date, etc.
 type OrderInstructionStatusReportV03 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message sent in a proprietary way or reference of a system.
@@ -70,9 +70,7 @@ type OrderInstructionStatusReportV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (o *OrderInstructionStatusReportV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	o.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -80,13 +78,13 @@ func (o *OrderInstructionStatusReportV03) AddMessageIdentification() *iso20022.M
 }
 
 func (o *OrderInstructionStatusReportV03) AddOtherReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.OtherReference = append(o.OtherReference, newValue)
 	return newValue
 }
 
 func (o *OrderInstructionStatusReportV03) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	o.RelatedReference = append(o.RelatedReference, newValue)
 	return newValue
 }
@@ -97,20 +95,19 @@ func (o *OrderInstructionStatusReportV03) AddOrderDetailsReport() *iso20022.Orde
 }
 
 func (o *OrderInstructionStatusReportV03) AddIndividualOrderDetailsReport() *iso20022.IndividualOrderStatusAndReason2 {
-	newValue := new (iso20022.IndividualOrderStatusAndReason2)
+	newValue := new(iso20022.IndividualOrderStatusAndReason2)
 	o.IndividualOrderDetailsReport = append(o.IndividualOrderDetailsReport, newValue)
 	return newValue
 }
 
 func (o *OrderInstructionStatusReportV03) AddSwitchOrderDetailsReport() *iso20022.SwitchOrderStatusAndReason1 {
-	newValue := new (iso20022.SwitchOrderStatusAndReason1)
+	newValue := new(iso20022.SwitchOrderStatusAndReason1)
 	o.SwitchOrderDetailsReport = append(o.SwitchOrderDetailsReport, newValue)
 	return newValue
 }
 
 func (o *OrderInstructionStatusReportV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	o.Extension = append(o.Extension, newValue)
 	return newValue
 }
-

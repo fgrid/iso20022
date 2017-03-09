@@ -47,9 +47,7 @@ type SettlementObligation8 struct {
 
 	// Provides additional information about the settlement obligation details.
 	AdditionalSettlementObligationDetails []*SettlementObligation5 `xml:"AddtlSttlmOblgtnDtls,omitempty"`
-
 }
-
 
 func (s *SettlementObligation8) SetSettlementObligationIdentification(value string) {
 	s.SettlementObligationIdentification = (*Max35Text)(&value)
@@ -117,8 +115,7 @@ func (s *SettlementObligation8) AddSettlementParties() *SettlementParties4Choice
 }
 
 func (s *SettlementObligation8) AddAdditionalSettlementObligationDetails() *SettlementObligation5 {
-	newValue := new (SettlementObligation5)
+	newValue := new(SettlementObligation5)
 	s.AdditionalSettlementObligationDetails = append(s.AdditionalSettlementObligationDetails, newValue)
 	return newValue
 }
-

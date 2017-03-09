@@ -8,9 +8,7 @@ type LotteryTypeFormat1Choice struct {
 
 	// Proprietary identification of the type of lottery announced.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (l *LotteryTypeFormat1Choice) SetCode(value string) {
 	l.Code = (*LotteryType1Code)(&value)
@@ -20,4 +18,3 @@ func (l *LotteryTypeFormat1Choice) AddProprietary() *GenericIdentification20 {
 	l.Proprietary = new(GenericIdentification20)
 	return l.Proprietary
 }
-

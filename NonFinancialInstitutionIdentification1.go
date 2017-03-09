@@ -23,9 +23,7 @@ type NonFinancialInstitutionIdentification1 struct {
 
 	// Unique and unambiguous identifier for an organisation that is allocated by an institution.
 	ProprietaryIdentification *GenericIdentification3 `xml:"PrtryId,omitempty"`
-
 }
-
 
 func (n *NonFinancialInstitutionIdentification1) SetBEI(value string) {
 	n.BEI = (*BEIIdentifier)(&value)
@@ -55,4 +53,3 @@ func (n *NonFinancialInstitutionIdentification1) AddProprietaryIdentification() 
 	n.ProprietaryIdentification = new(GenericIdentification3)
 	return n.ProprietaryIdentification
 }
-

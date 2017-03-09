@@ -9,12 +9,10 @@ type CashAvailability1 struct {
 	// Identifies the available amount.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
 
-	// Indicates whether the availability balance is a credit or a debit balance. 
+	// Indicates whether the availability balance is a credit or a debit balance.
 	// Usage: A zero balance is considered to be a credit balance.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd"`
-
 }
-
 
 func (c *CashAvailability1) AddDate() *CashAvailabilityDate1Choice {
 	c.Date = new(CashAvailabilityDate1Choice)
@@ -28,4 +26,3 @@ func (c *CashAvailability1) SetAmount(value, currency string) {
 func (c *CashAvailability1) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

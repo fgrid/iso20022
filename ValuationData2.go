@@ -14,9 +14,7 @@ type ValuationData2 struct {
 
 	// Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.
 	SettlementParty *PartyIdentification8Choice `xml:"SttlmPty,omitempty"`
-
 }
-
 
 func (v *ValuationData2) SetValuationReference(value string) {
 	v.ValuationReference = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (v *ValuationData2) AddSettlementParty() *PartyIdentification8Choice {
 	v.SettlementParty = new(PartyIdentification8Choice)
 	return v.SettlementParty
 }
-

@@ -8,9 +8,7 @@ type UnderlyingFinancialInstrument2 struct {
 
 	// Underlying financial instrument attributes to which an trade confirmation is related.
 	Attributes *FinancialInstrumentAttributes44 `xml:"Attrbts,omitempty"`
-
 }
-
 
 func (u *UnderlyingFinancialInstrument2) AddIdentification() *SecurityIdentification14 {
 	u.Identification = new(SecurityIdentification14)
@@ -21,4 +19,3 @@ func (u *UnderlyingFinancialInstrument2) AddAttributes() *FinancialInstrumentAtt
 	u.Attributes = new(FinancialInstrumentAttributes44)
 	return u.Attributes
 }
-

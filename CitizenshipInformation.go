@@ -8,9 +8,7 @@ type CitizenshipInformation struct {
 
 	// Indicates whether the person is a legal minor. It may depend on the nationality, the domicile country or the transaction in which the person is involved.
 	MinorIndicator *YesNoIndicator `xml:"MnrInd"`
-
 }
-
 
 func (c *CitizenshipInformation) SetNationality(value string) {
 	c.Nationality = (*NationalityCode)(&value)
@@ -19,4 +17,3 @@ func (c *CitizenshipInformation) SetNationality(value string) {
 func (c *CitizenshipInformation) SetMinorIndicator(value string) {
 	c.MinorIndicator = (*YesNoIndicator)(&value)
 }
-

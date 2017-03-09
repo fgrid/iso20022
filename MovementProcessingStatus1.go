@@ -8,9 +8,7 @@ type MovementProcessingStatus1 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (m *MovementProcessingStatus1) AddStatus() *ProcessedStatus3FormatChoice {
 	m.Status = new(ProcessedStatus3FormatChoice)
@@ -20,4 +18,3 @@ func (m *MovementProcessingStatus1) AddStatus() *ProcessedStatus3FormatChoice {
 func (m *MovementProcessingStatus1) SetAdditionalInformation(value string) {
 	m.AdditionalInformation = (*Max350Text)(&value)
 }
-

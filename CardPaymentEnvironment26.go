@@ -12,9 +12,7 @@ type CardPaymentEnvironment26 struct {
 
 	// Point of interaction (POI) performing the transaction.
 	POI *PointOfInteraction3 `xml:"POI,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment26) AddAcquirer() *Acquirer3 {
 	c.Acquirer = new(Acquirer3)
@@ -30,4 +28,3 @@ func (c *CardPaymentEnvironment26) AddPOI() *PointOfInteraction3 {
 	c.POI = new(PointOfInteraction3)
 	return c.POI
 }
-

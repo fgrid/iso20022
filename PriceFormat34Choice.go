@@ -17,9 +17,7 @@ type PriceFormat34Choice struct {
 
 	// Price expressed in index points.
 	IndexPoints *DecimalNumber `xml:"IndxPts"`
-
 }
-
 
 func (p *PriceFormat34Choice) AddPercentagePrice() *PercentagePrice1 {
 	p.PercentagePrice = new(PercentagePrice1)
@@ -44,4 +42,3 @@ func (p *PriceFormat34Choice) AddAmountPricePerAmount() *AmountPricePerAmount2 {
 func (p *PriceFormat34Choice) SetIndexPoints(value string) {
 	p.IndexPoints = (*DecimalNumber)(&value)
 }
-

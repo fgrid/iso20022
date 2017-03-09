@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.011.001.02 Document"`
+	XMLName xml.Name                                             `xml:"urn:iso:std:iso:20022:tech:xsd:setr.011.001.02 Document"`
 	Message *SubscriptionMultipleOrderCancellationInstructionV02 `xml:"setr.011.001.02"`
 }
 
@@ -37,9 +37,7 @@ type SubscriptionMultipleOrderCancellationInstructionV02 struct {
 
 	// Common information related to all the orders to be cancelled.
 	OrderToBeCancelled *iso20022.SubscriptionMultipleOrderInstruction1 `xml:"OrdrToBeCanc,omitempty"`
-
 }
-
 
 func (s *SubscriptionMultipleOrderCancellationInstructionV02) AddMasterReference() *iso20022.AdditionalReference3 {
 	s.MasterReference = new(iso20022.AdditionalReference3)
@@ -60,4 +58,3 @@ func (s *SubscriptionMultipleOrderCancellationInstructionV02) AddOrderToBeCancel
 	s.OrderToBeCancelled = new(iso20022.SubscriptionMultipleOrderInstruction1)
 	return s.OrderToBeCancelled
 }
-

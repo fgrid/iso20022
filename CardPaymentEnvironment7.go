@@ -11,9 +11,7 @@ type CardPaymentEnvironment7 struct {
 
 	// Identification of the POI requesting the reconciliation.
 	POIIdentification *GenericIdentification32 `xml:"POIId,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment7) AddAcquirer() *Acquirer1 {
 	c.Acquirer = new(Acquirer1)
@@ -29,4 +27,3 @@ func (c *CardPaymentEnvironment7) AddPOIIdentification() *GenericIdentification3
 	c.POIIdentification = new(GenericIdentification32)
 	return c.POIIdentification
 }
-

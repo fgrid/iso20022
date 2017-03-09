@@ -23,9 +23,7 @@ type SafekeepingAccount1 struct {
 
 	// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
 	AccountServicer *PartyIdentification1Choice `xml:"AcctSvcr,omitempty"`
-
 }
-
 
 func (s *SafekeepingAccount1) AddIdentification() *AccountIdentificationFormatChoice {
 	s.Identification = new(AccountIdentificationFormatChoice)
@@ -45,7 +43,7 @@ func (s *SafekeepingAccount1) SetDesignation(value string) {
 }
 
 func (s *SafekeepingAccount1) AddIntermediaryInformation() *Intermediary1 {
-	newValue := new (Intermediary1)
+	newValue := new(Intermediary1)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -59,4 +57,3 @@ func (s *SafekeepingAccount1) AddAccountServicer() *PartyIdentification1Choice {
 	s.AccountServicer = new(PartyIdentification1Choice)
 	return s.AccountServicer
 }
-

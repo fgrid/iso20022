@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.013.001.01 Document"`
+	XMLName xml.Name                 `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.013.001.01 Document"`
 	Message *AccountReportRequestV01 `xml:"AcctRptReq"`
 }
 
@@ -28,8 +28,8 @@ type AccountReportRequestV01 struct {
 	// Unique and unambiguous identification of the account between the account owner and the account servicer.
 	AccountIdentification *iso20022.AccountForAction1 `xml:"AcctId"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification4 `xml:"AcctSvcrId"`
 
 	// Identification of the organisation requesting the report.
@@ -40,9 +40,7 @@ type AccountReportRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountReportRequestV01) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -60,7 +58,7 @@ func (a *AccountReportRequestV01) AddAccountServicerIdentification() *iso20022.B
 }
 
 func (a *AccountReportRequestV01) AddOrganisationIdentification() *iso20022.OrganisationIdentification6 {
-	newValue := new (iso20022.OrganisationIdentification6)
+	newValue := new(iso20022.OrganisationIdentification6)
 	a.OrganisationIdentification = append(a.OrganisationIdentification, newValue)
 	return newValue
 }
@@ -71,8 +69,7 @@ func (a *AccountReportRequestV01) AddContractDates() *iso20022.AccountContract2 
 }
 
 func (a *AccountReportRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

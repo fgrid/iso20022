@@ -24,7 +24,7 @@ type CorporateAction10 struct {
 	// Number of the coupon attached/associated with a security.
 	CouponNumber []*IdentificationFormat1Choice `xml:"CpnNb,omitempty"`
 
-	// Indicates whether certification/breakdown is required. 
+	// Indicates whether certification/breakdown is required.
 	// Yes = certification required.
 	// No = no certification required.
 	CertificationBreakdownIndicator *YesNoIndicator `xml:"CertfctnBrkdwnInd,omitempty"`
@@ -40,7 +40,7 @@ type CorporateAction10 struct {
 	// Indicates whether the holder is entitled to accrued interest.
 	AccruedInterestIndicator *YesNoIndicator `xml:"AcrdIntrstInd,omitempty"`
 
-	// Indicates whether a letter of guaranteed delivery can be submitted in order to participate in the offer on full eligible position. It is not intended for use in situations arising from failed or late trades. 
+	// Indicates whether a letter of guaranteed delivery can be submitted in order to participate in the offer on full eligible position. It is not intended for use in situations arising from failed or late trades.
 	LetterOfGuaranteedDeliveryIndicator *YesNoIndicator `xml:"LttrOfGrntedDlvryInd,omitempty"`
 
 	// Specifies the conditions in which a dividend is paid.
@@ -90,9 +90,7 @@ type CorporateAction10 struct {
 
 	// Provides additional information. This field may only be used when the information to be transmitted, cannot be coded.
 	AdditionalInformation *CorporateActionNarrative24 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateAction10) AddDateDetails() *CorporateActionDate27 {
 	c.DateDetails = new(CorporateActionDate27)
@@ -124,7 +122,7 @@ func (c *CorporateAction10) SetInterestAccruedNumberOfDays(value string) {
 }
 
 func (c *CorporateAction10) AddCouponNumber() *IdentificationFormat1Choice {
-	newValue := new (IdentificationFormat1Choice)
+	newValue := new(IdentificationFormat1Choice)
 	c.CouponNumber = append(c.CouponNumber, newValue)
 	return newValue
 }
@@ -165,7 +163,7 @@ func (c *CorporateAction10) AddPaymentOccurrenceType() *DistributionTypeFormat3C
 }
 
 func (c *CorporateAction10) AddOfferType() *OfferTypeFormat3Choice {
-	newValue := new (OfferTypeFormat3Choice)
+	newValue := new(OfferTypeFormat3Choice)
 	c.OfferType = append(c.OfferType, newValue)
 	return newValue
 }
@@ -176,19 +174,19 @@ func (c *CorporateAction10) AddRenounceableEntitlementStatusType() *Renounceable
 }
 
 func (c *CorporateAction10) AddEventStage() *CorporateActionEventStageFormat3Choice {
-	newValue := new (CorporateActionEventStageFormat3Choice)
+	newValue := new(CorporateActionEventStageFormat3Choice)
 	c.EventStage = append(c.EventStage, newValue)
 	return newValue
 }
 
 func (c *CorporateAction10) AddAdditionalBusinessProcessIndicator() *AdditionalBusinessProcessFormat1Choice {
-	newValue := new (AdditionalBusinessProcessFormat1Choice)
+	newValue := new(AdditionalBusinessProcessFormat1Choice)
 	c.AdditionalBusinessProcessIndicator = append(c.AdditionalBusinessProcessIndicator, newValue)
 	return newValue
 }
 
 func (c *CorporateAction10) AddChangeType() *CorporateActionChangeTypeFormat1Choice {
-	newValue := new (CorporateActionChangeTypeFormat1Choice)
+	newValue := new(CorporateActionChangeTypeFormat1Choice)
 	c.ChangeType = append(c.ChangeType, newValue)
 	return newValue
 }
@@ -231,4 +229,3 @@ func (c *CorporateAction10) AddAdditionalInformation() *CorporateActionNarrative
 	c.AdditionalInformation = new(CorporateActionNarrative24)
 	return c.AdditionalInformation
 }
-

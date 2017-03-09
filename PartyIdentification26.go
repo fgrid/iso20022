@@ -11,9 +11,7 @@ type PartyIdentification26 struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	PostalAddress *PostalAddress5 `xml:"PstlAdr"`
-
 }
-
 
 func (p *PartyIdentification26) SetName(value string) {
 	p.Name = (*Max70Text)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification26) AddPostalAddress() *PostalAddress5 {
 	p.PostalAddress = new(PostalAddress5)
 	return p.PostalAddress
 }
-

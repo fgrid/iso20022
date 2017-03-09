@@ -7,7 +7,7 @@ import (
 )
 
 type Document02300206 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.023.002.06 Document"`
+	XMLName xml.Name                                          `xml:"urn:iso:std:iso:20022:tech:xsd:sese.023.002.06 Document"`
 	Message *SecuritiesSettlementTransactionInstruction002V06 `xml:"SctiesSttlmTxInstr"`
 }
 
@@ -25,7 +25,7 @@ func (d *Document02300206) AddMessage() *SecuritiesSettlementTransactionInstruct
 // - a central securities depository participant which has an account with a central securities depository, or
 // - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
 // - a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of transactions to a central securities depository or another settlement market infrastructure.
-// 
+//
 // Usage
 // The instruction may be linked to other settlement instructions, for example, for a turnaround or back-to-back, or other transactions, for example, foreign exchange deal, using the linkage functionality.
 // The message may also be used to:
@@ -88,9 +88,7 @@ type SecuritiesSettlementTransactionInstruction002V06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionInstruction002V06) SetTransactionIdentification(value string) {
 	s.TransactionIdentification = (*iso20022.RestrictedFINXMax16Text)(&value)
@@ -107,7 +105,7 @@ func (s *SecuritiesSettlementTransactionInstruction002V06) AddNumberCounts() *is
 }
 
 func (s *SecuritiesSettlementTransactionInstruction002V06) AddLinkages() *iso20022.Linkages43 {
-	newValue := new (iso20022.Linkages43)
+	newValue := new(iso20022.Linkages43)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -178,8 +176,7 @@ func (s *SecuritiesSettlementTransactionInstruction002V06) AddAdditionalPhysical
 }
 
 func (s *SecuritiesSettlementTransactionInstruction002V06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -8,17 +8,14 @@ type RejectionOrRepairStatus35Choice struct {
 
 	// Specifies the reason for the status.
 	Reason []*RejectionOrRepairReason29 `xml:"Rsn"`
-
 }
-
 
 func (r *RejectionOrRepairStatus35Choice) SetNoSpecifiedReason(value string) {
 	r.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (r *RejectionOrRepairStatus35Choice) AddReason() *RejectionOrRepairReason29 {
-	newValue := new (RejectionOrRepairReason29)
+	newValue := new(RejectionOrRepairReason29)
 	r.Reason = append(r.Reason, newValue)
 	return newValue
 }
-

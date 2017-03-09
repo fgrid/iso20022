@@ -11,9 +11,7 @@ type ResponseStatus3Choice struct {
 
 	// The status of an instruction, advice or request.
 	Pending *PendingStatus20Choice `xml:"Pdg"`
-
 }
-
 
 func (r *ResponseStatus3Choice) AddConsented() *ConsentStatus2Choice {
 	r.Consented = new(ConsentStatus2Choice)
@@ -29,4 +27,3 @@ func (r *ResponseStatus3Choice) AddPending() *PendingStatus20Choice {
 	r.Pending = new(PendingStatus20Choice)
 	return r.Pending
 }
-

@@ -13,9 +13,7 @@ type CryptographicKey3 struct {
 
 	// Version of the cryptographic key.
 	Version *Exact10Text `xml:"Vrsn"`
-
 }
-
 
 func (c *CryptographicKey3) SetIdentification(value string) {
 	c.Identification = (*Max140Text)(&value)
@@ -28,4 +26,3 @@ func (c *CryptographicKey3) SetAdditionalIdentification(value string) {
 func (c *CryptographicKey3) SetVersion(value string) {
 	c.Version = (*Exact10Text)(&value)
 }
-

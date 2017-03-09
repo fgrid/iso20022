@@ -29,12 +29,10 @@ type RequiredSubmission4 struct {
 
 	// Specifies if the certificate data set is required in relation to specific line items, and which line items.
 	LineItemIdentification []*Max70Text `xml:"LineItmId,omitempty"`
-
 }
 
-
 func (r *RequiredSubmission4) AddSubmitter() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.Submitter = append(r.Submitter, newValue)
 	return newValue
 }
@@ -72,4 +70,3 @@ func (r *RequiredSubmission4) AddMatchManufacturer() *PartyIdentification27 {
 func (r *RequiredSubmission4) AddLineItemIdentification(value string) {
 	r.LineItemIdentification = append(r.LineItemIdentification, (*Max70Text)(&value))
 }
-

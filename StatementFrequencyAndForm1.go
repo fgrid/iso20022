@@ -14,9 +14,7 @@ type StatementFrequencyAndForm1 struct {
 
 	// Specifies the format for statements.
 	Format *CommunicationFormat1Choice `xml:"Frmt"`
-
 }
-
 
 func (s *StatementFrequencyAndForm1) SetFrequency(value string) {
 	s.Frequency = (*Frequency7Code)(&value)
@@ -35,4 +33,3 @@ func (s *StatementFrequencyAndForm1) AddFormat() *CommunicationFormat1Choice {
 	s.Format = new(CommunicationFormat1Choice)
 	return s.Format
 }
-

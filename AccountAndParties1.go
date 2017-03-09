@@ -11,9 +11,7 @@ type AccountAndParties1 struct {
 
 	// Identifies the authority request type as a code.
 	AuthorityRequestType []*AuthorityRequestType1 `xml:"AuthrtyReqTp"`
-
 }
-
 
 func (a *AccountAndParties1) AddIdentification() *CashAccount25 {
 	a.Identification = new(CashAccount25)
@@ -26,8 +24,7 @@ func (a *AccountAndParties1) AddInvestigatedParties() *InvestigatedParties1Choic
 }
 
 func (a *AccountAndParties1) AddAuthorityRequestType() *AuthorityRequestType1 {
-	newValue := new (AuthorityRequestType1)
+	newValue := new(AuthorityRequestType1)
 	a.AuthorityRequestType = append(a.AuthorityRequestType, newValue)
 	return newValue
 }
-

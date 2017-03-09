@@ -8,9 +8,7 @@ type MissingCover2 struct {
 
 	// Set of elements provided to update incorrect settlement information for the cover related to the received payment instruction.
 	CoverCorrection *SettlementInformation15 `xml:"CoverCrrctn,omitempty"`
-
 }
-
 
 func (m *MissingCover2) SetMissingCoverIndicator(value string) {
 	m.MissingCoverIndicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (m *MissingCover2) AddCoverCorrection() *SettlementInformation15 {
 	m.CoverCorrection = new(SettlementInformation15)
 	return m.CoverCorrection
 }
-

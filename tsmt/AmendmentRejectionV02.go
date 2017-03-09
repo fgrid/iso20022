@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.007.001.02 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.007.001.02 Document"`
 	Message *AmendmentRejectionV02 `xml:"AmdmntRjctn"`
 }
 
@@ -41,11 +41,9 @@ type AmendmentRejectionV02 struct {
 	// Sequence number of the rejected baseline amendment.
 	RejectedAmendmentNumber *iso20022.Count1 `xml:"RjctdAmdmntNb"`
 
-	// Specifies the reaons for rejecting the amendment.                                                    
+	// Specifies the reaons for rejecting the amendment.
 	RejectionReason *iso20022.RejectionReason1Choice `xml:"RjctnRsn"`
-
 }
-
 
 func (a *AmendmentRejectionV02) AddRejectionIdentification() *iso20022.MessageIdentification1 {
 	a.RejectionIdentification = new(iso20022.MessageIdentification1)
@@ -76,4 +74,3 @@ func (a *AmendmentRejectionV02) AddRejectionReason() *iso20022.RejectionReason1C
 	a.RejectionReason = new(iso20022.RejectionReason1Choice)
 	return a.RejectionReason
 }
-

@@ -8,9 +8,7 @@ type BankTransactionCodeStructure6 struct {
 
 	// Specifies the sub-product family within a specific family.
 	SubFamilyCode *ExternalBankTransactionSubFamily1Code `xml:"SubFmlyCd"`
-
 }
-
 
 func (b *BankTransactionCodeStructure6) SetCode(value string) {
 	b.Code = (*ExternalBankTransactionFamily1Code)(&value)
@@ -19,4 +17,3 @@ func (b *BankTransactionCodeStructure6) SetCode(value string) {
 func (b *BankTransactionCodeStructure6) SetSubFamilyCode(value string) {
 	b.SubFamilyCode = (*ExternalBankTransactionSubFamily1Code)(&value)
 }
-

@@ -26,9 +26,7 @@ type AccountReport15 struct {
 
 	// Identification of  the transfer account servicer.
 	TransferAccountServicerIdentification *BranchAndFinancialInstitutionIdentification5 `xml:"TrfAcctSvcrId,omitempty"`
-
 }
-
 
 func (a *AccountReport15) AddAccount() *CustomerAccount5 {
 	a.Account = new(CustomerAccount5)
@@ -46,13 +44,13 @@ func (a *AccountReport15) AddContractDates() *AccountContract3 {
 }
 
 func (a *AccountReport15) AddMandate() *OperationMandate2 {
-	newValue := new (OperationMandate2)
+	newValue := new(OperationMandate2)
 	a.Mandate = append(a.Mandate, newValue)
 	return newValue
 }
 
 func (a *AccountReport15) AddGroup() *Group1 {
-	newValue := new (Group1)
+	newValue := new(Group1)
 	a.Group = append(a.Group, newValue)
 	return newValue
 }
@@ -71,4 +69,3 @@ func (a *AccountReport15) AddTransferAccountServicerIdentification() *BranchAndF
 	a.TransferAccountServicerIdentification = new(BranchAndFinancialInstitutionIdentification5)
 	return a.TransferAccountServicerIdentification
 }
-

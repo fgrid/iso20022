@@ -25,7 +25,7 @@ type SecuritiesTradeDetails2 struct {
 	EffectiveSettlementDate *SettlementDate3Choice `xml:"FctvSttlmDt"`
 
 	// Specifies the price of the traded financial instrument.
-	// This is the deal price of the individual trade transaction. 
+	// This is the deal price of the individual trade transaction.
 	// If there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).
 	DealPrice *Price2 `xml:"DealPric,omitempty"`
 
@@ -55,9 +55,7 @@ type SecuritiesTradeDetails2 struct {
 
 	// Provides additional settlement processing information which can not be included within the structured fields of the message.
 	SettlementInstructionProcessingAdditionalDetails *Max350Text `xml:"SttlmInstrPrcgAddtlDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails2) AddTradeIdentification(value string) {
 	s.TradeIdentification = append(s.TradeIdentification, (*Max35Text)(&value))
@@ -106,13 +104,13 @@ func (s *SecuritiesTradeDetails2) AddOpeningClosing() *OpeningClosing1Choice {
 }
 
 func (s *SecuritiesTradeDetails2) AddReporting() *Reporting2Choice {
-	newValue := new (Reporting2Choice)
+	newValue := new(Reporting2Choice)
 	s.Reporting = append(s.Reporting, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTradeDetails2) AddTradeTransactionCondition() *TradeTransactionCondition1Choice {
-	newValue := new (TradeTransactionCondition1Choice)
+	newValue := new(TradeTransactionCondition1Choice)
 	s.TradeTransactionCondition = append(s.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -139,4 +137,3 @@ func (s *SecuritiesTradeDetails2) SetFXAdditionalDetails(value string) {
 func (s *SecuritiesTradeDetails2) SetSettlementInstructionProcessingAdditionalDetails(value string) {
 	s.SettlementInstructionProcessingAdditionalDetails = (*Max350Text)(&value)
 }
-

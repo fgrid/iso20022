@@ -8,9 +8,7 @@ type AccountingAccount1 struct {
 
 	// Template describing the mask of the structure for the format of the accounting account identifier for example AABBBBCC where AA represents the country, BBBB the service classification, CC the sales area.
 	CostReferencePattern *Max35Text `xml:"CostRefPttrn,omitempty"`
-
 }
-
 
 func (a *AccountingAccount1) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (a *AccountingAccount1) SetIdentification(value string) {
 func (a *AccountingAccount1) SetCostReferencePattern(value string) {
 	a.CostReferencePattern = (*Max35Text)(&value)
 }
-

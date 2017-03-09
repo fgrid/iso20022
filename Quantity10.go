@@ -8,9 +8,7 @@ type Quantity10 struct {
 
 	// Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).
 	Value *DecimalNumber `xml:"Val"`
-
 }
-
 
 func (q *Quantity10) AddUnitOfMeasure() *UnitOfMeasure3Choice {
 	q.UnitOfMeasure = new(UnitOfMeasure3Choice)
@@ -20,4 +18,3 @@ func (q *Quantity10) AddUnitOfMeasure() *UnitOfMeasure3Choice {
 func (q *Quantity10) SetValue(value string) {
 	q.Value = (*DecimalNumber)(&value)
 }
-

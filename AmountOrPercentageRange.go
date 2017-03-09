@@ -8,17 +8,14 @@ type AmountOrPercentageRange struct {
 
 	// Indicates one of the constraints of a range of business values.
 	Term []*Term1 `xml:"Term,omitempty"`
-
 }
-
 
 func (a *AmountOrPercentageRange) SetOperation(value string) {
 	a.Operation = (*Operation1Code)(&value)
 }
 
 func (a *AmountOrPercentageRange) AddTerm() *Term1 {
-	newValue := new (Term1)
+	newValue := new(Term1)
 	a.Term = append(a.Term, newValue)
 	return newValue
 }
-

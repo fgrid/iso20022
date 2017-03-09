@@ -11,7 +11,7 @@ type GroupHeader62 struct {
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
 
 	// User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.
-	// 
+	//
 	// Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.
 	// The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
 	Authorisation []*Authorisation1Choice `xml:"Authstn,omitempty"`
@@ -20,7 +20,7 @@ type GroupHeader62 struct {
 	CopyIndicator *CopyDuplicate1Code `xml:"CpyInd,omitempty"`
 
 	// Party that initiates the payment.
-	// 
+	//
 	// Usage: This can either be the debtor or the party that initiates the credit transfer on behalf of the debtor.
 	InitiatingParty *PartyIdentification43 `xml:"InitgPty"`
 
@@ -29,9 +29,7 @@ type GroupHeader62 struct {
 
 	// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
 	ForwardingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"FwdgAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader62) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -42,7 +40,7 @@ func (g *GroupHeader62) SetCreationDateTime(value string) {
 }
 
 func (g *GroupHeader62) AddAuthorisation() *Authorisation1Choice {
-	newValue := new (Authorisation1Choice)
+	newValue := new(Authorisation1Choice)
 	g.Authorisation = append(g.Authorisation, newValue)
 	return newValue
 }
@@ -65,4 +63,3 @@ func (g *GroupHeader62) AddForwardingAgent() *BranchAndFinancialInstitutionIdent
 	g.ForwardingAgent = new(BranchAndFinancialInstitutionIdentification5)
 	return g.ForwardingAgent
 }
-

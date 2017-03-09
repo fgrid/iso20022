@@ -47,9 +47,7 @@ type ReceiveInformation16 struct {
 
 	// Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
 	ClientReference *AdditionalReference7 `xml:"ClntRef,omitempty"`
-
 }
-
 
 func (r *ReceiveInformation16) AddTransferee() *PartyIdentification70Choice {
 	r.Transferee = new(PartyIdentification70Choice)
@@ -62,7 +60,7 @@ func (r *ReceiveInformation16) AddTransfereeRegisteredAccount() *Account19 {
 }
 
 func (r *ReceiveInformation16) AddIntermediaryInformation() *Intermediary34 {
-	newValue := new (Intermediary34)
+	newValue := new(Intermediary34)
 	r.IntermediaryInformation = append(r.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -89,25 +87,25 @@ func (r *ReceiveInformation16) AddSettlementPartiesDetails() *ReceivingPartiesAn
 }
 
 func (r *ReceiveInformation16) AddChargeDetails() *Charge29 {
-	newValue := new (Charge29)
+	newValue := new(Charge29)
 	r.ChargeDetails = append(r.ChargeDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation16) AddCommissionDetails() *Commission23 {
-	newValue := new (Commission23)
+	newValue := new(Commission23)
 	r.CommissionDetails = append(r.CommissionDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation16) AddTaxDetails() *Tax28 {
-	newValue := new (Tax28)
+	newValue := new(Tax28)
 	r.TaxDetails = append(r.TaxDetails, newValue)
 	return newValue
 }
 
 func (r *ReceiveInformation16) AddForeignExchangeDetails() *ForeignExchangeTerms26 {
-	newValue := new (ForeignExchangeTerms26)
+	newValue := new(ForeignExchangeTerms26)
 	r.ForeignExchangeDetails = append(r.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -125,4 +123,3 @@ func (r *ReceiveInformation16) AddClientReference() *AdditionalReference7 {
 	r.ClientReference = new(AdditionalReference7)
 	return r.ClientReference
 }
-

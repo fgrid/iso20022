@@ -17,9 +17,7 @@ type IndividualPerson30 struct {
 
 	// Date on which the person is born.
 	BirthDate *ISODate `xml:"BirthDt,omitempty"`
-
 }
-
 
 func (i *IndividualPerson30) SetGivenName(value string) {
 	i.GivenName = (*Max35Text)(&value)
@@ -40,4 +38,3 @@ func (i *IndividualPerson30) SetGender(value string) {
 func (i *IndividualPerson30) SetBirthDate(value string) {
 	i.BirthDate = (*ISODate)(&value)
 }
-

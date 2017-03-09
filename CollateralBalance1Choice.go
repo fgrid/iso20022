@@ -11,9 +11,7 @@ type CollateralBalance1Choice struct {
 
 	// Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the segregated independent amount only.
 	SegregatedIndependentAmount *MarginCollateral1 `xml:"SgrtdIndpdntAmt"`
-
 }
-
 
 func (c *CollateralBalance1Choice) SetTotalCollateral(value, currency string) {
 	c.TotalCollateral = NewActiveCurrencyAndAmount(value, currency)
@@ -28,4 +26,3 @@ func (c *CollateralBalance1Choice) AddSegregatedIndependentAmount() *MarginColla
 	c.SegregatedIndependentAmount = new(MarginCollateral1)
 	return c.SegregatedIndependentAmount
 }
-

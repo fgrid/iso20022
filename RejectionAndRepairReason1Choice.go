@@ -8,9 +8,7 @@ type RejectionAndRepairReason1Choice struct {
 
 	// Specifies the reason why the instruction/request has a repair or rejection status.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (r *RejectionAndRepairReason1Choice) SetCode(value string) {
 	r.Code = (*RejectionReason21Code)(&value)
@@ -20,4 +18,3 @@ func (r *RejectionAndRepairReason1Choice) AddProprietary() *GenericIdentificatio
 	r.Proprietary = new(GenericIdentification20)
 	return r.Proprietary
 }
-

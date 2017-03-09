@@ -23,9 +23,7 @@ type SecuritiesOption23 struct {
 
 	// Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege.
 	BackEndOddLotQuantity *FinancialInstrumentQuantity20Choice `xml:"BckEndOddLotQty,omitempty"`
-
 }
-
 
 func (s *SecuritiesOption23) AddMaximumExercisableQuantity() *FinancialInstrumentQuantity19Choice {
 	s.MaximumExercisableQuantity = new(FinancialInstrumentQuantity19Choice)
@@ -61,4 +59,3 @@ func (s *SecuritiesOption23) AddBackEndOddLotQuantity() *FinancialInstrumentQuan
 	s.BackEndOddLotQuantity = new(FinancialInstrumentQuantity20Choice)
 	return s.BackEndOddLotQuantity
 }
-

@@ -17,9 +17,7 @@ type CashOutForecast1 struct {
 
 	// Breakdown of cash out amounts, eg,  by transaction or order type.
 	CashOutBreakdownDetails []*FundCashOutBreakdown1 `xml:"CshOutBrkdwnDtls,omitempty"`
-
 }
-
 
 func (c *CashOutForecast1) SetSettlementDate(value string) {
 	c.SettlementDate = (*ISODate)(&value)
@@ -39,8 +37,7 @@ func (c *CashOutForecast1) SetExceptionalCashFlowIndicator(value string) {
 }
 
 func (c *CashOutForecast1) AddCashOutBreakdownDetails() *FundCashOutBreakdown1 {
-	newValue := new (FundCashOutBreakdown1)
+	newValue := new(FundCashOutBreakdown1)
 	c.CashOutBreakdownDetails = append(c.CashOutBreakdownDetails, newValue)
 	return newValue
 }
-

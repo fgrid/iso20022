@@ -20,9 +20,7 @@ type FinancialInstrumentDetails2 struct {
 
 	// Transaction details.
 	Transaction []*Transaction6 `xml:"Tx"`
-
 }
-
 
 func (f *FinancialInstrumentDetails2) AddFinancialInstrumentIdentification() *SecurityIdentification11 {
 	f.FinancialInstrumentIdentification = new(SecurityIdentification11)
@@ -50,8 +48,7 @@ func (f *FinancialInstrumentDetails2) AddClosingBalance() *ClosingBalance1 {
 }
 
 func (f *FinancialInstrumentDetails2) AddTransaction() *Transaction6 {
-	newValue := new (Transaction6)
+	newValue := new(Transaction6)
 	f.Transaction = append(f.Transaction, newValue)
 	return newValue
 }
-

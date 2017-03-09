@@ -11,9 +11,7 @@ type SubAccount1 struct {
 
 	// Specifies additional properties of the account.
 	Characteristic *Max35Text `xml:"Chrtc,omitempty"`
-
 }
-
 
 func (s *SubAccount1) AddIdentification() *AccountIdentification1 {
 	s.Identification = new(AccountIdentification1)
@@ -27,4 +25,3 @@ func (s *SubAccount1) SetName(value string) {
 func (s *SubAccount1) SetCharacteristic(value string) {
 	s.Characteristic = (*Max35Text)(&value)
 }
-

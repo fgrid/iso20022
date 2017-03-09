@@ -41,9 +41,7 @@ type BillingStatement2 struct {
 
 	// One or more sections that identify line item service adjustments to the account. They reflect adjustments to statements from prior reporting periods.
 	ServiceAdjustment []*BillingServiceAdjustment1 `xml:"SvcAdjstmnt,omitempty"`
-
 }
-
 
 func (b *BillingStatement2) SetStatementIdentification(value string) {
 	b.StatementIdentification = (*Max35Text)(&value)
@@ -68,50 +66,49 @@ func (b *BillingStatement2) AddAccountCharacteristics() *CashAccountCharacterist
 }
 
 func (b *BillingStatement2) AddRateData() *BillingRate1 {
-	newValue := new (BillingRate1)
+	newValue := new(BillingRate1)
 	b.RateData = append(b.RateData, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddCurrencyExchange() *CurrencyExchange6 {
-	newValue := new (CurrencyExchange6)
+	newValue := new(CurrencyExchange6)
 	b.CurrencyExchange = append(b.CurrencyExchange, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddBalance() *BillingBalance1 {
-	newValue := new (BillingBalance1)
+	newValue := new(BillingBalance1)
 	b.Balance = append(b.Balance, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddCompensation() *BillingCompensation1 {
-	newValue := new (BillingCompensation1)
+	newValue := new(BillingCompensation1)
 	b.Compensation = append(b.Compensation, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddService() *BillingService2 {
-	newValue := new (BillingService2)
+	newValue := new(BillingService2)
 	b.Service = append(b.Service, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddTaxRegion() *BillingTaxRegion1 {
-	newValue := new (BillingTaxRegion1)
+	newValue := new(BillingTaxRegion1)
 	b.TaxRegion = append(b.TaxRegion, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddBalanceAdjustment() *BalanceAdjustment1 {
-	newValue := new (BalanceAdjustment1)
+	newValue := new(BalanceAdjustment1)
 	b.BalanceAdjustment = append(b.BalanceAdjustment, newValue)
 	return newValue
 }
 
 func (b *BillingStatement2) AddServiceAdjustment() *BillingServiceAdjustment1 {
-	newValue := new (BillingServiceAdjustment1)
+	newValue := new(BillingServiceAdjustment1)
 	b.ServiceAdjustment = append(b.ServiceAdjustment, newValue)
 	return newValue
 }
-

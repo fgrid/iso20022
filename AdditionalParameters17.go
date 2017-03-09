@@ -23,9 +23,7 @@ type AdditionalParameters17 struct {
 
 	// Unique identification assigned to the instruction by the triparty agent.
 	TripartyCollateralInstructionIdentification *Max35Text `xml:"TrptyCollInstrId,omitempty"`
-
 }
-
 
 func (a *AdditionalParameters17) SetPreConfirmation(value string) {
 	a.PreConfirmation = (*PreConfirmation1Code)(&value)
@@ -54,4 +52,3 @@ func (a *AdditionalParameters17) SetClientCollateralInstructionIdentification(va
 func (a *AdditionalParameters17) SetTripartyCollateralInstructionIdentification(value string) {
 	a.TripartyCollateralInstructionIdentification = (*Max35Text)(&value)
 }
-

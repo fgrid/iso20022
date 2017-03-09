@@ -41,9 +41,7 @@ type References18Choice struct {
 
 	// Unambiguous identification of the message to be cancelled.
 	OtherMessageIdentification *Max35Text `xml:"OthrMsgId"`
-
 }
-
 
 func (r *References18Choice) AddSecuritiesSettlementTransactionConfirmationIdentification() *SettlementTypeAndIdentification13 {
 	r.SecuritiesSettlementTransactionConfirmationIdentification = new(SettlementTypeAndIdentification13)
@@ -100,4 +98,3 @@ func (r *References18Choice) AddSecuritiesSettlementTransactionGenerationNotific
 func (r *References18Choice) SetOtherMessageIdentification(value string) {
 	r.OtherMessageIdentification = (*Max35Text)(&value)
 }
-

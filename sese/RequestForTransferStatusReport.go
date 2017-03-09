@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.009.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:sese.009.001.01 Document"`
 	Message *RequestForTransferStatusReport `xml:"sese.009.001.01"`
 }
 
@@ -26,15 +26,12 @@ func (d *Document00900101) AddMessage() *RequestForTransferStatusReport {
 type RequestForTransferStatusReport struct {
 
 	// Information to identify the transfer for which the status is requested.
-	// 
+	//
 	RequestDetails []*iso20022.MessageAndBusinessReference1 `xml:"ReqDtls"`
-
 }
 
-
 func (r *RequestForTransferStatusReport) AddRequestDetails() *iso20022.MessageAndBusinessReference1 {
-	newValue := new (iso20022.MessageAndBusinessReference1)
+	newValue := new(iso20022.MessageAndBusinessReference1)
 	r.RequestDetails = append(r.RequestDetails, newValue)
 	return newValue
 }
-

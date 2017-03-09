@@ -11,9 +11,7 @@ type IncentivePremiumType1Choice struct {
 
 	// Indicates that the premium is given per attendee.
 	PerAttendee *YesNoIndicator `xml:"PerAttndee"`
-
 }
-
 
 func (i *IncentivePremiumType1Choice) SetPerSecurity(value string) {
 	i.PerSecurity = (*Number)(&value)
@@ -26,4 +24,3 @@ func (i *IncentivePremiumType1Choice) SetPerVote(value string) {
 func (i *IncentivePremiumType1Choice) SetPerAttendee(value string) {
 	i.PerAttendee = (*YesNoIndicator)(&value)
 }
-

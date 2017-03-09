@@ -14,9 +14,7 @@ type MandateAmendment1 struct {
 
 	// Set of elements used to provide the original mandate data.
 	OriginalMandate *OriginalMandate1Choice `xml:"OrgnlMndt"`
-
 }
-
 
 func (m *MandateAmendment1) AddOriginalMessageInformation() *OriginalMessageInformation1 {
 	m.OriginalMessageInformation = new(OriginalMessageInformation1)
@@ -37,4 +35,3 @@ func (m *MandateAmendment1) AddOriginalMandate() *OriginalMandate1Choice {
 	m.OriginalMandate = new(OriginalMandate1Choice)
 	return m.OriginalMandate
 }
-

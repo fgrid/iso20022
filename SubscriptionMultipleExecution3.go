@@ -39,9 +39,7 @@ type SubscriptionMultipleExecution3 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	BulkCashSettlementDetails *PaymentTransaction24 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (s *SubscriptionMultipleExecution3) SetMasterReference(value string) {
 	s.MasterReference = (*Max35Text)(&value)
@@ -79,7 +77,7 @@ func (s *SubscriptionMultipleExecution3) AddBeneficiaryDetails() *IndividualPers
 }
 
 func (s *SubscriptionMultipleExecution3) AddIndividualExecutionDetails() *SubscriptionExecution6 {
-	newValue := new (SubscriptionExecution6)
+	newValue := new(SubscriptionExecution6)
 	s.IndividualExecutionDetails = append(s.IndividualExecutionDetails, newValue)
 	return newValue
 }
@@ -96,4 +94,3 @@ func (s *SubscriptionMultipleExecution3) AddBulkCashSettlementDetails() *Payment
 	s.BulkCashSettlementDetails = new(PaymentTransaction24)
 	return s.BulkCashSettlementDetails
 }
-

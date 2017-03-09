@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.010.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.010.001.01 Document"`
 	Message *AccountRequestAcknowledgementV01 `xml:"AcctReqAck"`
 }
 
@@ -31,15 +31,13 @@ type AccountRequestAcknowledgementV01 struct {
 	// Identifier for an organisation.
 	OrganisationIdentification []*iso20022.OrganisationIdentification6 `xml:"OrgId"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification4 `xml:"AcctSvcrId"`
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountRequestAcknowledgementV01) AddReferences() *iso20022.References5 {
 	a.References = new(iso20022.References5)
@@ -47,13 +45,13 @@ func (a *AccountRequestAcknowledgementV01) AddReferences() *iso20022.References5
 }
 
 func (a *AccountRequestAcknowledgementV01) AddAccountIdentification() *iso20022.AccountForAction1 {
-	newValue := new (iso20022.AccountForAction1)
+	newValue := new(iso20022.AccountForAction1)
 	a.AccountIdentification = append(a.AccountIdentification, newValue)
 	return newValue
 }
 
 func (a *AccountRequestAcknowledgementV01) AddOrganisationIdentification() *iso20022.OrganisationIdentification6 {
-	newValue := new (iso20022.OrganisationIdentification6)
+	newValue := new(iso20022.OrganisationIdentification6)
 	a.OrganisationIdentification = append(a.OrganisationIdentification, newValue)
 	return newValue
 }
@@ -64,8 +62,7 @@ func (a *AccountRequestAcknowledgementV01) AddAccountServicerIdentification() *i
 }
 
 func (a *AccountRequestAcknowledgementV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

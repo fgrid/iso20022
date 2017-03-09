@@ -14,9 +14,7 @@ type ReferredDocumentInformation2 struct {
 
 	// Amount of money and currency of a document referred to invoice to be financed.
 	DocumentAmount *ActiveCurrencyAndAmount `xml:"DocAmt,omitempty"`
-
 }
-
 
 func (r *ReferredDocumentInformation2) AddType() *ReferredDocumentType1 {
 	r.Type = new(ReferredDocumentType1)
@@ -34,4 +32,3 @@ func (r *ReferredDocumentInformation2) SetRelatedDate(value string) {
 func (r *ReferredDocumentInformation2) SetDocumentAmount(value, currency string) {
 	r.DocumentAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

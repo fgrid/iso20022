@@ -41,9 +41,7 @@ type EntitlementAssessment1 struct {
 
 	// Number of votes assigned to one security.
 	EntitlementRatio *DecimalNumber `xml:"EntitlmntRatio,omitempty"`
-
 }
-
 
 func (e *EntitlementAssessment1) AddSecuritiesBlockingDeadline() *DateFormat2Choice {
 	e.SecuritiesBlockingDeadline = new(DateFormat2Choice)
@@ -106,4 +104,3 @@ func (e *EntitlementAssessment1) SetEntitlementDescription(value string) {
 func (e *EntitlementAssessment1) SetEntitlementRatio(value string) {
 	e.EntitlementRatio = (*DecimalNumber)(&value)
 }
-

@@ -11,9 +11,7 @@ type ATMInquiryRequest1 struct {
 
 	// Inquiry information for the transaction.
 	Transaction *ATMTransaction6 `xml:"Tx"`
-
 }
-
 
 func (a *ATMInquiryRequest1) AddEnvironment() *ATMEnvironment4 {
 	a.Environment = new(ATMEnvironment4)
@@ -29,4 +27,3 @@ func (a *ATMInquiryRequest1) AddTransaction() *ATMTransaction6 {
 	a.Transaction = new(ATMTransaction6)
 	return a.Transaction
 }
-

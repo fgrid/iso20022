@@ -14,9 +14,7 @@ type TotalValueInPageAndStatement1 struct {
 
 	// Total value of the holdings eligible for collateral purposes reported in this statement (a statement may comprise one or more messages).
 	TotalEligibleCollateralValue *AmountAndDirection6 `xml:"TtlElgblCollVal,omitempty"`
-
 }
-
 
 func (t *TotalValueInPageAndStatement1) AddTotalHoldingsValueOfPage() *AmountAndDirection6 {
 	t.TotalHoldingsValueOfPage = new(AmountAndDirection6)
@@ -37,4 +35,3 @@ func (t *TotalValueInPageAndStatement1) AddTotalEligibleCollateralValue() *Amoun
 	t.TotalEligibleCollateralValue = new(AmountAndDirection6)
 	return t.TotalEligibleCollateralValue
 }
-

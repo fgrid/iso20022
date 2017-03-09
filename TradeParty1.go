@@ -11,9 +11,7 @@ type TradeParty1 struct {
 
 	// Entity involved in an activity.
 	TaxParty []*TaxParty3 `xml:"TaxPty,omitempty"`
-
 }
-
 
 func (t *TradeParty1) AddPartyIdentification() *PartyIdentification45 {
 	t.PartyIdentification = new(PartyIdentification45)
@@ -26,8 +24,7 @@ func (t *TradeParty1) AddLegalOrganisation() *LegalOrganisation1 {
 }
 
 func (t *TradeParty1) AddTaxParty() *TaxParty3 {
-	newValue := new (TaxParty3)
+	newValue := new(TaxParty3)
 	t.TaxParty = append(t.TaxParty, newValue)
 	return newValue
 }
-

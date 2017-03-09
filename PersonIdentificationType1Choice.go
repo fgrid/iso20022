@@ -26,9 +26,7 @@ type PersonIdentificationType1Choice struct {
 
 	// Identifier issued to a person for which no specific identifier has been defined.
 	OtherIdentification *GenericIdentification4 `xml:"OthrId"`
-
 }
-
 
 func (p *PersonIdentificationType1Choice) SetPassportNumber(value string) {
 	p.PassportNumber = (*Max35Text)(&value)
@@ -62,4 +60,3 @@ func (p *PersonIdentificationType1Choice) AddOtherIdentification() *GenericIdent
 	p.OtherIdentification = new(GenericIdentification4)
 	return p.OtherIdentification
 }
-

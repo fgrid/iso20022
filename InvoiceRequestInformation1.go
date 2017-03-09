@@ -29,9 +29,7 @@ type InvoiceRequestInformation1 struct {
 
 	// Information about a document related to the invoice to be financed, in structured form.
 	ReferredDocument []*ReferredDocumentInformation2 `xml:"RfrdDoc,omitempty"`
-
 }
-
 
 func (i *InvoiceRequestInformation1) AddInvoiceGeneralInformation() *DocumentGeneralInformation1 {
 	i.InvoiceGeneralInformation = new(DocumentGeneralInformation1)
@@ -48,7 +46,7 @@ func (i *InvoiceRequestInformation1) SetCreditDebitNoteAmount(value, currency st
 }
 
 func (i *InvoiceRequestInformation1) AddInstalmentInformation() *Instalment1 {
-	newValue := new (Instalment1)
+	newValue := new(Instalment1)
 	i.InstalmentInformation = append(i.InstalmentInformation, newValue)
 	return newValue
 }
@@ -74,8 +72,7 @@ func (i *InvoiceRequestInformation1) AddInvoicePaymentInformation() *PaymentInfo
 }
 
 func (i *InvoiceRequestInformation1) AddReferredDocument() *ReferredDocumentInformation2 {
-	newValue := new (ReferredDocumentInformation2)
+	newValue := new(ReferredDocumentInformation2)
 	i.ReferredDocument = append(i.ReferredDocument, newValue)
 	return newValue
 }
-

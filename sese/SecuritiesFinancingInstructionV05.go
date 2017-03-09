@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.05 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.033.001.05 Document"`
 	Message *SecuritiesFinancingInstructionV05 `xml:"SctiesFincgInstr"`
 }
 
@@ -25,14 +25,14 @@ func (d *Document03300105) AddMessage() *SecuritiesFinancingInstructionV05 {
 // - a central securities depository participant which has an account with a central securities depository, or
 // - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
 // - a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of securities financing transactions to a central securities depository or another settlement market infrastructure.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesFinancingInstructionV05 struct {
@@ -90,9 +90,7 @@ type SecuritiesFinancingInstructionV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesFinancingInstructionV05) SetTransactionIdentification(value string) {
 	s.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -109,7 +107,7 @@ func (s *SecuritiesFinancingInstructionV05) AddNumberCounts() *iso20022.NumberCo
 }
 
 func (s *SecuritiesFinancingInstructionV05) AddLinkages() *iso20022.Linkages17 {
-	newValue := new (iso20022.Linkages17)
+	newValue := new(iso20022.Linkages17)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -180,8 +178,7 @@ func (s *SecuritiesFinancingInstructionV05) AddOtherBusinessParties() *iso20022.
 }
 
 func (s *SecuritiesFinancingInstructionV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

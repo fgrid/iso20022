@@ -8,9 +8,7 @@ type TradeDate3Choice struct {
 
 	// Date expressed as a code.
 	DateCode *DateType1Code `xml:"DtCd"`
-
 }
-
 
 func (t *TradeDate3Choice) SetDate(value string) {
 	t.Date = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (t *TradeDate3Choice) SetDate(value string) {
 func (t *TradeDate3Choice) SetDateCode(value string) {
 	t.DateCode = (*DateType1Code)(&value)
 }
-

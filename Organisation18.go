@@ -10,7 +10,7 @@ type Organisation18 struct {
 	// It correspond to the ISO 8583 field number 43.
 	CommonName *Max70Text `xml:"CmonNm"`
 
-	// Location of the card acceptor. 
+	// Location of the card acceptor.
 	// It correspond to the ISO 8583 field number 43.
 	Location *CommunicationAddress5 `xml:"Lctn"`
 
@@ -19,9 +19,7 @@ type Organisation18 struct {
 
 	// Additional card acceptor data required by a card scheme.
 	SchemeData *Max140Text `xml:"SchmeData,omitempty"`
-
 }
-
 
 func (o *Organisation18) AddIdentification() *GenericIdentification32 {
 	o.Identification = new(GenericIdentification32)
@@ -44,4 +42,3 @@ func (o *Organisation18) SetSelectedLanguage(value string) {
 func (o *Organisation18) SetSchemeData(value string) {
 	o.SchemeData = (*Max140Text)(&value)
 }
-

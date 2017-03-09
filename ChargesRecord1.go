@@ -6,7 +6,7 @@ type ChargesRecord1 struct {
 	// Transaction charges to be paid by the charge bearer.
 	Amount *ActiveOrHistoricCurrencyAndAmount `xml:"Amt"`
 
-	// Indicates whether the charges amount is a credit or a debit amount. 
+	// Indicates whether the charges amount is a credit or a debit amount.
 	// Usage: A zero amount is considered to be a credit.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd,omitempty"`
 
@@ -24,9 +24,7 @@ type ChargesRecord1 struct {
 
 	// Provides details on the tax applied to charges.
 	Tax *TaxCharges2 `xml:"Tax,omitempty"`
-
 }
-
 
 func (c *ChargesRecord1) SetAmount(value, currency string) {
 	c.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -58,4 +56,3 @@ func (c *ChargesRecord1) AddTax() *TaxCharges2 {
 	c.Tax = new(TaxCharges2)
 	return c.Tax
 }
-

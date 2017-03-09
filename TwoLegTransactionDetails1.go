@@ -35,9 +35,7 @@ type TwoLegTransactionDetails1 struct {
 
 	// Specifies the type of the second leg transaction.
 	TwoLegTransactionType *TwoLegTransactionType1Choice `xml:"TwoLegTxTp,omitempty"`
-
 }
-
 
 func (t *TwoLegTransactionDetails1) AddTradeDate() *TradeDate1Choice {
 	t.TradeDate = new(TradeDate1Choice)
@@ -58,7 +56,7 @@ func (t *TwoLegTransactionDetails1) AddGrossTradeAmount() *AmountAndDirection29 
 }
 
 func (t *TwoLegTransactionDetails1) AddOtherAmounts() *OtherAmounts16 {
-	newValue := new (OtherAmounts16)
+	newValue := new(OtherAmounts16)
 	t.OtherAmounts = append(t.OtherAmounts, newValue)
 	return newValue
 }
@@ -91,4 +89,3 @@ func (t *TwoLegTransactionDetails1) AddTwoLegTransactionType() *TwoLegTransactio
 	t.TwoLegTransactionType = new(TwoLegTransactionType1Choice)
 	return t.TwoLegTransactionType
 }
-

@@ -11,9 +11,7 @@ type CorporateActionOption120 struct {
 
 	// Quantity of securities to which this instruction applies.
 	InstructedQuantity *Quantity20Choice `xml:"InstdQty"`
-
 }
-
 
 func (c *CorporateActionOption120) AddOptionNumber() *OptionNumber1Choice {
 	c.OptionNumber = new(OptionNumber1Choice)
@@ -29,4 +27,3 @@ func (c *CorporateActionOption120) AddInstructedQuantity() *Quantity20Choice {
 	c.InstructedQuantity = new(Quantity20Choice)
 	return c.InstructedQuantity
 }
-

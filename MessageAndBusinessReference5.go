@@ -14,9 +14,7 @@ type MessageAndBusinessReference5 struct {
 
 	// Unique and unambiguous identifiers of one or more individual order instructions.
 	OrderReference []*InvestmentFundOrder3 `xml:"OrdrRef,omitempty"`
-
 }
-
 
 func (m *MessageAndBusinessReference5) AddOtherReference() *AdditionalReference3 {
 	m.OtherReference = new(AdditionalReference3)
@@ -34,8 +32,7 @@ func (m *MessageAndBusinessReference5) AddRelatedReference() *AdditionalReferenc
 }
 
 func (m *MessageAndBusinessReference5) AddOrderReference() *InvestmentFundOrder3 {
-	newValue := new (InvestmentFundOrder3)
+	newValue := new(InvestmentFundOrder3)
 	m.OrderReference = append(m.OrderReference, newValue)
 	return newValue
 }
-

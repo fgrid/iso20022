@@ -11,9 +11,7 @@ type UnitOrFaceAmountOrCodeChoice struct {
 
 	// Quantity expressed as a code.
 	Code *Quantity1Code `xml:"Cd"`
-
 }
-
 
 func (u *UnitOrFaceAmountOrCodeChoice) SetUnit(value string) {
 	u.Unit = (*DecimalNumber)(&value)
@@ -26,4 +24,3 @@ func (u *UnitOrFaceAmountOrCodeChoice) SetFaceAmount(value, currency string) {
 func (u *UnitOrFaceAmountOrCodeChoice) SetCode(value string) {
 	u.Code = (*Quantity1Code)(&value)
 }
-

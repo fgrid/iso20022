@@ -11,9 +11,7 @@ type SubstitutionResponse1 struct {
 
 	// Provides details about the rejected collateral substitution.
 	CollateralSubstitutionRejectionDetails *CollateralSubstitutionResponse2 `xml:"CollSbstitnRjctnDtls,omitempty"`
-
 }
-
 
 func (s *SubstitutionResponse1) SetResponseType(value string) {
 	s.ResponseType = (*Status4Code)(&value)
@@ -28,4 +26,3 @@ func (s *SubstitutionResponse1) AddCollateralSubstitutionRejectionDetails() *Col
 	s.CollateralSubstitutionRejectionDetails = new(CollateralSubstitutionResponse2)
 	return s.CollateralSubstitutionRejectionDetails
 }
-

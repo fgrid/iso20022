@@ -14,9 +14,7 @@ type CollateralValuation7 struct {
 
 	// Nominal amount of money of the security pledged as collateral, when the collateral cannot be identified through an individual or basket ISIN.
 	NominalAmount *ActiveCurrencyAndAmount `xml:"NmnlAmt,omitempty"`
-
 }
-
 
 func (c *CollateralValuation7) SetPoolStatus(value string) {
 	c.PoolStatus = (*CollateralPool1Code)(&value)
@@ -33,4 +31,3 @@ func (c *CollateralValuation7) SetSector(value string) {
 func (c *CollateralValuation7) SetNominalAmount(value, currency string) {
 	c.NominalAmount = NewActiveCurrencyAndAmount(value, currency)
 }
-

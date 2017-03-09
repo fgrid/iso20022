@@ -29,9 +29,7 @@ type Statement4 struct {
 
 	// Indicates whether the statement is audited.
 	AuditedIndicator *YesNoIndicator `xml:"AudtdInd"`
-
 }
-
 
 func (s *Statement4) SetReference(value string) {
 	s.Reference = (*Max35Text)(&value)
@@ -73,4 +71,3 @@ func (s *Statement4) SetReportNumber(value string) {
 func (s *Statement4) SetAuditedIndicator(value string) {
 	s.AuditedIndicator = (*YesNoIndicator)(&value)
 }
-

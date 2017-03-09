@@ -12,11 +12,9 @@ type Period4Choice struct {
 	// Date which the range date period ends.
 	ToDate *ISODate `xml:"ToDt"`
 
-	// Time span defined by a start date and time, and an end date and time.
+	// Time span defined by a start date, and an end date.
 	FromDateToDate *Period2 `xml:"FrDtToDt"`
-
 }
-
 
 func (p *Period4Choice) SetDate(value string) {
 	p.Date = (*ISODate)(&value)
@@ -34,4 +32,3 @@ func (p *Period4Choice) AddFromDateToDate() *Period2 {
 	p.FromDateToDate = new(Period2)
 	return p.FromDateToDate
 }
-

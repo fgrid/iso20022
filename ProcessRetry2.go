@@ -8,9 +8,7 @@ type ProcessRetry2 struct {
 
 	// Maximum number of retries.
 	MaximumNumber *Number `xml:"MaxNb,omitempty"`
-
 }
-
 
 func (p *ProcessRetry2) SetDelay(value string) {
 	p.Delay = (*Max9NumericText)(&value)
@@ -19,4 +17,3 @@ func (p *ProcessRetry2) SetDelay(value string) {
 func (p *ProcessRetry2) SetMaximumNumber(value string) {
 	p.MaximumNumber = (*Number)(&value)
 }
-

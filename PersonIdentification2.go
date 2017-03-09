@@ -29,9 +29,7 @@ type PersonIdentification2 struct {
 
 	// Entity that assigns the identifier.
 	Issuer *Max35Text `xml:"Issr,omitempty"`
-
 }
-
 
 func (p *PersonIdentification2) SetDriversLicenseNumber(value string) {
 	p.DriversLicenseNumber = (*Max35Text)(&value)
@@ -69,4 +67,3 @@ func (p *PersonIdentification2) AddOtherIdentification() *GenericIdentification4
 func (p *PersonIdentification2) SetIssuer(value string) {
 	p.Issuer = (*Max35Text)(&value)
 }
-

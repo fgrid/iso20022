@@ -23,9 +23,7 @@ type Obligation3 struct {
 
 	// Indicates the close of business date on which the initiating party is valuing the margin call.
 	ValuationDate *DateAndDateTimeChoice `xml:"ValtnDt"`
-
 }
-
 
 func (o *Obligation3) AddPartyA() *PartyIdentification33Choice {
 	o.PartyA = new(PartyIdentification33Choice)
@@ -60,4 +58,3 @@ func (o *Obligation3) AddValuationDate() *DateAndDateTimeChoice {
 	o.ValuationDate = new(DateAndDateTimeChoice)
 	return o.ValuationDate
 }
-

@@ -14,9 +14,7 @@ type Participation2 struct {
 
 	// Date of calculation of the total number of oustanding securities.
 	CalculationDate *ISODate `xml:"ClctnDt,omitempty"`
-
 }
-
 
 func (p *Participation2) SetTotalNumberOfVotingRights(value string) {
 	p.TotalNumberOfVotingRights = (*Number)(&value)
@@ -33,4 +31,3 @@ func (p *Participation2) SetTotalNumberOfSecuritiesOutstanding(value, currency s
 func (p *Participation2) SetCalculationDate(value string) {
 	p.CalculationDate = (*ISODate)(&value)
 }
-

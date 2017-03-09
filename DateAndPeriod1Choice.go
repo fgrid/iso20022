@@ -8,9 +8,7 @@ type DateAndPeriod1Choice struct {
 
 	// Period for the statement.
 	StatementPeriod *Period2Choice `xml:"StmtPrd"`
-
 }
-
 
 func (d *DateAndPeriod1Choice) AddStatementDate() *DateAndDateTimeChoice {
 	d.StatementDate = new(DateAndDateTimeChoice)
@@ -21,4 +19,3 @@ func (d *DateAndPeriod1Choice) AddStatementPeriod() *Period2Choice {
 	d.StatementPeriod = new(Period2Choice)
 	return d.StatementPeriod
 }
-

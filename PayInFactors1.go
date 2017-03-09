@@ -8,17 +8,14 @@ type PayInFactors1 struct {
 
 	// Currency specific pay-in factors.
 	CurrencyFactors []*CurrencyFactors1 `xml:"CcyFctrs"`
-
 }
-
 
 func (p *PayInFactors1) SetAggregateShortPositionLimit(value, currency string) {
 	p.AggregateShortPositionLimit = NewActiveCurrencyAndAmount(value, currency)
 }
 
 func (p *PayInFactors1) AddCurrencyFactors() *CurrencyFactors1 {
-	newValue := new (CurrencyFactors1)
+	newValue := new(CurrencyFactors1)
 	p.CurrencyFactors = append(p.CurrencyFactors, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type UnderlyingRatio1 struct {
 
 	// Related security into which the security can be converted.
 	RelatedFinancialInstrumentIdentification []*SecurityIdentification14 `xml:"RltdFinInstrmId,omitempty"`
-
 }
-
 
 func (u *UnderlyingRatio1) AddUnderlyingQuantityDenominator() *FinancialInstrumentQuantity1Choice {
 	u.UnderlyingQuantityDenominator = new(FinancialInstrumentQuantity1Choice)
@@ -26,8 +24,7 @@ func (u *UnderlyingRatio1) AddUnderlyingQuantityNumerator() *FinancialInstrument
 }
 
 func (u *UnderlyingRatio1) AddRelatedFinancialInstrumentIdentification() *SecurityIdentification14 {
-	newValue := new (SecurityIdentification14)
+	newValue := new(SecurityIdentification14)
 	u.RelatedFinancialInstrumentIdentification = append(u.RelatedFinancialInstrumentIdentification, newValue)
 	return newValue
 }
-

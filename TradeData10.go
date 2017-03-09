@@ -26,9 +26,7 @@ type TradeData10 struct {
 
 	// Specifies the product for which the status of the confirmation is reported, unless overwritten by a product type assigned to an individual trade.
 	ProductType *Max35Text `xml:"PdctTp,omitempty"`
-
 }
-
 
 func (t *TradeData10) SetMessageIdentification(value string) {
 	t.MessageIdentification = (*Max35Text)(&value)
@@ -63,4 +61,3 @@ func (t *TradeData10) SetPreviousStatusSubType(value string) {
 func (t *TradeData10) SetProductType(value string) {
 	t.ProductType = (*Max35Text)(&value)
 }
-

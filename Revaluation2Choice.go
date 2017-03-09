@@ -8,9 +8,7 @@ type Revaluation2Choice struct {
 
 	// Reevaluation is determined using a data source scheme.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (r *Revaluation2Choice) SetIndicator(value string) {
 	r.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (r *Revaluation2Choice) AddProprietary() *GenericIdentification38 {
 	r.Proprietary = new(GenericIdentification38)
 	return r.Proprietary
 }
-

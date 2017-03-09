@@ -8,9 +8,7 @@ type FXStandingInstruction3Choice struct {
 
 	// FX Standing instruction information expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (f *FXStandingInstruction3Choice) SetIndicator(value string) {
 	f.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (f *FXStandingInstruction3Choice) AddProprietary() *GenericIdentification38
 	f.Proprietary = new(GenericIdentification38)
 	return f.Proprietary
 }
-

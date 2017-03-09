@@ -8,9 +8,7 @@ type CancelledCompleteReason1 struct {
 
 	// Additional information about the cancelled complete status reason.
 	AdditionalReasonInformation *Max350Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (c *CancelledCompleteReason1) AddReason() *CancellationCompleteReason1Choice {
 	c.Reason = new(CancellationCompleteReason1Choice)
@@ -20,4 +18,3 @@ func (c *CancelledCompleteReason1) AddReason() *CancellationCompleteReason1Choic
 func (c *CancelledCompleteReason1) SetAdditionalReasonInformation(value string) {
 	c.AdditionalReasonInformation = (*Max350Text)(&value)
 }
-

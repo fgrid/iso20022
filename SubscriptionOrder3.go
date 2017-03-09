@@ -59,16 +59,14 @@ type SubscriptionOrder3 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	CashSettlementDetails *PaymentTransaction17 `xml:"CshSttlmDtls,omitempty"`
-
 }
-
 
 func (s *SubscriptionOrder3) SetOrderReference(value string) {
 	s.OrderReference = (*Max35Text)(&value)
 }
 
 func (s *SubscriptionOrder3) AddOrderType() *FundOrderType1 {
-	newValue := new (FundOrderType1)
+	newValue := new(FundOrderType1)
 	s.OrderType = append(s.OrderType, newValue)
 	return newValue
 }
@@ -118,19 +116,19 @@ func (s *SubscriptionOrder3) SetAccumulationRightReference(value string) {
 }
 
 func (s *SubscriptionOrder3) AddChargeDetails() *Charge8 {
-	newValue := new (Charge8)
+	newValue := new(Charge8)
 	s.ChargeDetails = append(s.ChargeDetails, newValue)
 	return newValue
 }
 
 func (s *SubscriptionOrder3) AddCommissionDetails() *Commission6 {
-	newValue := new (Commission6)
+	newValue := new(Commission6)
 	s.CommissionDetails = append(s.CommissionDetails, newValue)
 	return newValue
 }
 
 func (s *SubscriptionOrder3) AddTaxDetails() *Tax6 {
-	newValue := new (Tax6)
+	newValue := new(Tax6)
 	s.TaxDetails = append(s.TaxDetails, newValue)
 	return newValue
 }
@@ -153,4 +151,3 @@ func (s *SubscriptionOrder3) AddCashSettlementDetails() *PaymentTransaction17 {
 	s.CashSettlementDetails = new(PaymentTransaction17)
 	return s.CashSettlementDetails
 }
-

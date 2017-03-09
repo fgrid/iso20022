@@ -38,9 +38,7 @@ type SwitchExecution3 struct {
 
 	// Currency exchange related to the execution of an investment fund order.
 	ForeignExchangeDetails []*ForeignExchangeTerms4 `xml:"FXDtls,omitempty"`
-
 }
-
 
 func (s *SwitchExecution3) SetOrderDateTime(value string) {
 	s.OrderDateTime = (*ISODateTime)(&value)
@@ -76,13 +74,13 @@ func (s *SwitchExecution3) SetResultingCashOut(value, currency string) {
 }
 
 func (s *SwitchExecution3) AddRedemptionLegDetails() *SwitchRedemptionLegExecution2 {
-	newValue := new (SwitchRedemptionLegExecution2)
+	newValue := new(SwitchRedemptionLegExecution2)
 	s.RedemptionLegDetails = append(s.RedemptionLegDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchExecution3) AddSubscriptionLegDetails() *SwitchSubscriptionLegExecution2 {
-	newValue := new (SwitchSubscriptionLegExecution2)
+	newValue := new(SwitchSubscriptionLegExecution2)
 	s.SubscriptionLegDetails = append(s.SubscriptionLegDetails, newValue)
 	return newValue
 }
@@ -93,8 +91,7 @@ func (s *SwitchExecution3) AddCashSettlementDetails() *PaymentTransaction14 {
 }
 
 func (s *SwitchExecution3) AddForeignExchangeDetails() *ForeignExchangeTerms4 {
-	newValue := new (ForeignExchangeTerms4)
+	newValue := new(ForeignExchangeTerms4)
 	s.ForeignExchangeDetails = append(s.ForeignExchangeDetails, newValue)
 	return newValue
 }
-

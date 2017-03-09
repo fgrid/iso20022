@@ -8,9 +8,7 @@ type SecuritiesBalanceType7Choice struct {
 
 	// Sub-balance expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (s *SecuritiesBalanceType7Choice) SetCode(value string) {
 	s.Code = (*SecuritiesBalanceType13Code)(&value)
@@ -20,4 +18,3 @@ func (s *SecuritiesBalanceType7Choice) AddProprietary() *GenericIdentification30
 	s.Proprietary = new(GenericIdentification30)
 	return s.Proprietary
 }
-

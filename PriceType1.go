@@ -8,9 +8,7 @@ type PriceType1 struct {
 
 	// Additional information about the type of charge.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PriceType1) SetStructured(value string) {
 	p.Structured = (*TypeOfPrice7Code)(&value)
@@ -19,4 +17,3 @@ func (p *PriceType1) SetStructured(value string) {
 func (p *PriceType1) SetAdditionalInformation(value string) {
 	p.AdditionalInformation = (*Max350Text)(&value)
 }
-

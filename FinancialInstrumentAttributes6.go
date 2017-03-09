@@ -68,9 +68,7 @@ type FinancialInstrumentAttributes6 struct {
 
 	// Ratio or multiplying factor used to convert one contract into a financial instrument quantity.
 	ContractSize *FinancialInstrumentQuantity1Choice `xml:"CtrctSz,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentAttributes6) AddSecurityIdentification() *SecurityIdentification11 {
 	f.SecurityIdentification = new(SecurityIdentification11)
@@ -167,4 +165,3 @@ func (f *FinancialInstrumentAttributes6) AddContractSize() *FinancialInstrumentQ
 	f.ContractSize = new(FinancialInstrumentQuantity1Choice)
 	return f.ContractSize
 }
-

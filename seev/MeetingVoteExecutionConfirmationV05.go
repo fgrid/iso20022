@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.007.001.05 Document"`
+	XMLName xml.Name                             `xml:"urn:iso:std:iso:20022:tech:xsd:seev.007.001.05 Document"`
 	Message *MeetingVoteExecutionConfirmationV05 `xml:"MtgVoteExctnConf"`
 }
 
@@ -30,7 +30,7 @@ type MeetingVoteExecutionConfirmationV05 struct {
 	// Series of elements which allow to identify a meeting.
 	MeetingReference *iso20022.MeetingReference7 `xml:"MtgRef"`
 
-	// Identifies the securities for which the meeting is organised. 
+	// Identifies the securities for which the meeting is organised.
 	FinancialInstrumentIdentification *iso20022.SecurityIdentification14 `xml:"FinInstrmId"`
 
 	// Specifies how a party has voted for each agenda item.
@@ -38,9 +38,7 @@ type MeetingVoteExecutionConfirmationV05 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MeetingVoteExecutionConfirmationV05) AddRelatedReference() *iso20022.MessageIdentification {
 	m.RelatedReference = new(iso20022.MessageIdentification)
@@ -58,14 +56,13 @@ func (m *MeetingVoteExecutionConfirmationV05) AddFinancialInstrumentIdentificati
 }
 
 func (m *MeetingVoteExecutionConfirmationV05) AddVoteInstructions() *iso20022.DetailedInstructionStatus10 {
-	newValue := new (iso20022.DetailedInstructionStatus10)
+	newValue := new(iso20022.DetailedInstructionStatus10)
 	m.VoteInstructions = append(m.VoteInstructions, newValue)
 	return newValue
 }
 
 func (m *MeetingVoteExecutionConfirmationV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

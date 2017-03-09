@@ -14,9 +14,7 @@ type AuthorisationResult7 struct {
 
 	// Additional information relevant for the destination.
 	AdditionalInformation []*ActionMessage3 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *AuthorisationResult7) AddAuthorisationEntity() *GenericIdentification75 {
 	a.AuthorisationEntity = new(GenericIdentification75)
@@ -33,8 +31,7 @@ func (a *AuthorisationResult7) SetAuthorisationCode(value string) {
 }
 
 func (a *AuthorisationResult7) AddAdditionalInformation() *ActionMessage3 {
-	newValue := new (ActionMessage3)
+	newValue := new(ActionMessage3)
 	a.AdditionalInformation = append(a.AdditionalInformation, newValue)
 	return newValue
 }
-

@@ -9,9 +9,7 @@ type EquivalentAmount2 struct {
 
 	// Specifies the currency of the to be transferred amount, which is different from the currency of the debtor's account.
 	CurrencyOfTransfer *ActiveOrHistoricCurrencyCode `xml:"CcyOfTrf"`
-
 }
-
 
 func (e *EquivalentAmount2) SetAmount(value, currency string) {
 	e.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -20,4 +18,3 @@ func (e *EquivalentAmount2) SetAmount(value, currency string) {
 func (e *EquivalentAmount2) SetCurrencyOfTransfer(value string) {
 	e.CurrencyOfTransfer = (*ActiveOrHistoricCurrencyCode)(&value)
 }
-

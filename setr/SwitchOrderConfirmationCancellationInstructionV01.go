@@ -7,7 +7,7 @@ import (
 )
 
 type Document05500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.055.001.01 Document"`
+	XMLName xml.Name                                           `xml:"urn:iso:std:iso:20022:tech:xsd:setr.055.001.01 Document"`
 	Message *SwitchOrderConfirmationCancellationInstructionV01 `xml:"SwtchOrdrConfCxlInstrV01"`
 }
 
@@ -28,7 +28,7 @@ func (d *Document05500101) AddMessage() *SwitchOrderConfirmationCancellationInst
 // It is also possible to instruct the cancellation of the confirmation message by quoting its message identification in PreviousReference, but this is not recommended.
 type SwitchOrderConfirmationCancellationInstructionV01 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Collective reference identifying a set of messages.
@@ -48,9 +48,7 @@ type SwitchOrderConfirmationCancellationInstructionV01 struct {
 
 	// Information provided when the message is a copy of a previous message.
 	CopyDetails *iso20022.CopyInformation2 `xml:"CpyDtls,omitempty"`
-
 }
-
 
 func (s *SwitchOrderConfirmationCancellationInstructionV01) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	s.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -63,7 +61,7 @@ func (s *SwitchOrderConfirmationCancellationInstructionV01) AddPoolReference() *
 }
 
 func (s *SwitchOrderConfirmationCancellationInstructionV01) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	s.PreviousReference = append(s.PreviousReference, newValue)
 	return newValue
 }
@@ -87,4 +85,3 @@ func (s *SwitchOrderConfirmationCancellationInstructionV01) AddCopyDetails() *is
 	s.CopyDetails = new(iso20022.CopyInformation2)
 	return s.CopyDetails
 }
-

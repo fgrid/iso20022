@@ -8,9 +8,7 @@ type AgreedAmount1Choice struct {
 
 	// Provides details about the agreed amount for the segregated independent amount.
 	SegregatedIndependentAmount *Amount1 `xml:"SgrtdIndpdntAmt"`
-
 }
-
 
 func (a *AgreedAmount1Choice) AddAgreedAmountDetails() *AgreedAmount1 {
 	a.AgreedAmountDetails = new(AgreedAmount1)
@@ -21,4 +19,3 @@ func (a *AgreedAmount1Choice) AddSegregatedIndependentAmount() *Amount1 {
 	a.SegregatedIndependentAmount = new(Amount1)
 	return a.SegregatedIndependentAmount
 }
-

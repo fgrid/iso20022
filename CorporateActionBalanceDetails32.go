@@ -44,9 +44,7 @@ type CorporateActionBalanceDetails32 struct {
 
 	// Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner).
 	RegisteredBalance *BalanceFormat5Choice `xml:"RegdBal,omitempty"`
-
 }
-
 
 func (c *CorporateActionBalanceDetails32) AddTotalEligibleBalance() *Quantity17Choice {
 	c.TotalEligibleBalance = new(Quantity17Choice)
@@ -79,13 +77,13 @@ func (c *CorporateActionBalanceDetails32) AddOnLoanBalance() *BalanceFormat5Choi
 }
 
 func (c *CorporateActionBalanceDetails32) AddPendingDeliveryBalance() *BalanceFormat5Choice {
-	newValue := new (BalanceFormat5Choice)
+	newValue := new(BalanceFormat5Choice)
 	c.PendingDeliveryBalance = append(c.PendingDeliveryBalance, newValue)
 	return newValue
 }
 
 func (c *CorporateActionBalanceDetails32) AddPendingReceiptBalance() *BalanceFormat5Choice {
-	newValue := new (BalanceFormat5Choice)
+	newValue := new(BalanceFormat5Choice)
 	c.PendingReceiptBalance = append(c.PendingReceiptBalance, newValue)
 	return newValue
 }
@@ -119,4 +117,3 @@ func (c *CorporateActionBalanceDetails32) AddRegisteredBalance() *BalanceFormat5
 	c.RegisteredBalance = new(BalanceFormat5Choice)
 	return c.RegisteredBalance
 }
-

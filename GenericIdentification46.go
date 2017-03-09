@@ -8,9 +8,7 @@ type GenericIdentification46 struct {
 
 	// Specifies the nature of the identifier.
 	Type *OtherIdentification1Choice `xml:"Tp"`
-
 }
-
 
 func (g *GenericIdentification46) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (g *GenericIdentification46) AddType() *OtherIdentification1Choice {
 	g.Type = new(OtherIdentification1Choice)
 	return g.Type
 }
-

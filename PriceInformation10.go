@@ -14,9 +14,7 @@ type PriceInformation10 struct {
 
 	// Difference or change between the previous price value and the current price value.
 	AmountOfChange *PriceValueAndRate4 `xml:"AmtOfChng,omitempty"`
-
 }
-
 
 func (p *PriceInformation10) SetCurrentPrice(value, currency string) {
 	p.CurrentPrice = NewActiveOrHistoricCurrencyAnd13DecimalAmount(value, currency)
@@ -35,4 +33,3 @@ func (p *PriceInformation10) AddAmountOfChange() *PriceValueAndRate4 {
 	p.AmountOfChange = new(PriceValueAndRate4)
 	return p.AmountOfChange
 }
-

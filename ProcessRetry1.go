@@ -11,9 +11,7 @@ type ProcessRetry1 struct {
 
 	// Time of the last retry.
 	LastReTryTime *ISOTime `xml:"LastReTryTm,omitempty"`
-
 }
-
 
 func (p *ProcessRetry1) SetDelay(value string) {
 	p.Delay = (*Max9NumericText)(&value)
@@ -26,4 +24,3 @@ func (p *ProcessRetry1) SetMaximumNumber(value string) {
 func (p *ProcessRetry1) SetLastReTryTime(value string) {
 	p.LastReTryTime = (*ISOTime)(&value)
 }
-

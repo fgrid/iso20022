@@ -11,9 +11,7 @@ type Recipient3Choice struct {
 
 	// Identification of a cryptographic symetric key, previously exchanged between the initiator and the recipient.
 	KeyIdentifier *KEKIdentifier1 `xml:"KeyIdr"`
-
 }
-
 
 func (r *Recipient3Choice) AddKeyTransport() *KeyTransport3 {
 	r.KeyTransport = new(KeyTransport3)
@@ -29,4 +27,3 @@ func (r *Recipient3Choice) AddKeyIdentifier() *KEKIdentifier1 {
 	r.KeyIdentifier = new(KEKIdentifier1)
 	return r.KeyIdentifier
 }
-

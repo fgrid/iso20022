@@ -7,7 +7,7 @@ import (
 )
 
 type Document00700201 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.007.002.01 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:camt.007.002.01 Document"`
 	Message *RequestToModifyPayment `xml:"camt.007.002.01"`
 }
 
@@ -56,11 +56,9 @@ type RequestToModifyPayment struct {
 	// Identifies the Payment Transaction to modify.
 	Underlying *iso20022.PaymentInstructionExtract `xml:"Undrlyg"`
 
-	// 
+	//
 	Modification *iso20022.RequestedModification `xml:"Mod"`
-
 }
-
 
 func (r *RequestToModifyPayment) AddAssignment() *iso20022.CaseAssignment {
 	r.Assignment = new(iso20022.CaseAssignment)
@@ -81,4 +79,3 @@ func (r *RequestToModifyPayment) AddModification() *iso20022.RequestedModificati
 	r.Modification = new(iso20022.RequestedModification)
 	return r.Modification
 }
-

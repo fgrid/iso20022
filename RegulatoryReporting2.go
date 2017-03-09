@@ -11,9 +11,7 @@ type RegulatoryReporting2 struct {
 
 	// Details related to the regulatory reporting information.
 	RegulatoryDetails *StructuredRegulatoryReporting2 `xml:"RgltryDtls,omitempty"`
-
 }
-
 
 func (r *RegulatoryReporting2) SetDebitCreditReportingIndicator(value string) {
 	r.DebitCreditReportingIndicator = (*RegulatoryReportingType1Code)(&value)
@@ -28,4 +26,3 @@ func (r *RegulatoryReporting2) AddRegulatoryDetails() *StructuredRegulatoryRepor
 	r.RegulatoryDetails = new(StructuredRegulatoryReporting2)
 	return r.RegulatoryDetails
 }
-

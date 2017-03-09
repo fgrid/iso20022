@@ -14,9 +14,7 @@ type BalanceDetails5 struct {
 
 	// Detailed balance information.
 	DetailedBalance []*BalanceDetails6 `xml:"DtldBal,omitempty"`
-
 }
-
 
 func (b *BalanceDetails5) AddType() *BalanceType6Choice {
 	b.Type = new(BalanceType6Choice)
@@ -33,8 +31,7 @@ func (b *BalanceDetails5) AddAmount() *AmountAndDirection31 {
 }
 
 func (b *BalanceDetails5) AddDetailedBalance() *BalanceDetails6 {
-	newValue := new (BalanceDetails6)
+	newValue := new(BalanceDetails6)
 	b.DetailedBalance = append(b.DetailedBalance, newValue)
 	return newValue
 }
-

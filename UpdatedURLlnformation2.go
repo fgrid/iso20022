@@ -11,9 +11,7 @@ type UpdatedURLlnformation2 struct {
 
 	// Provides the web address, that is, the address for the Universal Resource Locator (URL), to use over the www (HTTP) service where additional information may be found.
 	URLAddress *Max256Text `xml:"URLAdr"`
-
 }
-
 
 func (u *UpdatedURLlnformation2) SetUpdateDescription(value string) {
 	u.UpdateDescription = (*Max140Text)(&value)
@@ -26,4 +24,3 @@ func (u *UpdatedURLlnformation2) SetUpdateDate(value string) {
 func (u *UpdatedURLlnformation2) SetURLAddress(value string) {
 	u.URLAddress = (*Max256Text)(&value)
 }
-

@@ -24,9 +24,7 @@ type DocumentGeneralInformation3 struct {
 
 	// Attached binary file for this document.
 	AttachedBinaryFile *BinaryFile1 `xml:"AttchdBinryFile"`
-
 }
-
 
 func (d *DocumentGeneralInformation3) SetDocumentType(value string) {
 	d.DocumentType = (*ExternalDocumentType1Code)(&value)
@@ -57,4 +55,3 @@ func (d *DocumentGeneralInformation3) AddAttachedBinaryFile() *BinaryFile1 {
 	d.AttachedBinaryFile = new(BinaryFile1)
 	return d.AttachedBinaryFile
 }
-

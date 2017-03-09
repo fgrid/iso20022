@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.015.001.04 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.015.001.04 Document"`
 	Message *IntraPositionMovementConfirmationV04 `xml:"IntraPosMvmntConf"`
 }
 
@@ -17,19 +17,19 @@ func (d *Document01500104) AddMessage() *IntraPositionMovementConfirmationV04 {
 }
 
 // Scope
-// An account servicer sends a IntraPositionMovementConfirmation to an account owner to confirm the movement of securities within its holding from one sub-balance to another, for example, blocking of securities. 
+// An account servicer sends a IntraPositionMovementConfirmation to an account owner to confirm the movement of securities within its holding from one sub-balance to another, for example, blocking of securities.
 // The account servicer/owner relationship may be:
 // - a central securities depository or another settlement market infrastructure acting on behalf of their participants
-// - an agent (sub-custodian) acting on behalf of their global custodian customer, or 
+// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
 // - a custodian acting on behalf of an investment management institution or a broker/dealer.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type IntraPositionMovementConfirmationV04 struct {
@@ -57,9 +57,7 @@ type IntraPositionMovementConfirmationV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (i *IntraPositionMovementConfirmationV04) AddAdditionalParameters() *iso20022.AdditionalParameters10 {
 	i.AdditionalParameters = new(iso20022.AdditionalParameters10)
@@ -97,8 +95,7 @@ func (i *IntraPositionMovementConfirmationV04) AddIntraPositionDetails() *iso200
 }
 
 func (i *IntraPositionMovementConfirmationV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	i.SupplementaryData = append(i.SupplementaryData, newValue)
 	return newValue
 }
-

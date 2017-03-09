@@ -17,12 +17,10 @@ type OtherParties18 struct {
 
 	// Foreign Financial Institution which has been authorised by local authorities to act as account management institution in the country.
 	QualifiedForeignIntermediary *PartyIdentificationAndAccount77 `xml:"QlfdFrgnIntrmy,omitempty"`
-
 }
 
-
 func (o *OtherParties18) AddInvestor() *PartyIdentificationAndAccount79 {
-	newValue := new (PartyIdentificationAndAccount79)
+	newValue := new(PartyIdentificationAndAccount79)
 	o.Investor = append(o.Investor, newValue)
 	return newValue
 }
@@ -46,4 +44,3 @@ func (o *OtherParties18) AddQualifiedForeignIntermediary() *PartyIdentificationA
 	o.QualifiedForeignIntermediary = new(PartyIdentificationAndAccount77)
 	return o.QualifiedForeignIntermediary
 }
-

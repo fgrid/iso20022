@@ -62,16 +62,14 @@ type RedemptionOrder4 struct {
 
 	// Payment transaction resulting from the investment fund order execution.
 	CashSettlementDetails *PaymentTransaction15 `xml:"CshSttlmDtls,omitempty"`
-
 }
-
 
 func (r *RedemptionOrder4) SetOrderReference(value string) {
 	r.OrderReference = (*Max35Text)(&value)
 }
 
 func (r *RedemptionOrder4) AddOrderType() *FundOrderType1 {
-	newValue := new (FundOrderType1)
+	newValue := new(FundOrderType1)
 	r.OrderType = append(r.OrderType, newValue)
 	return newValue
 }
@@ -116,19 +114,19 @@ func (r *RedemptionOrder4) SetGroup1Or2Units(value string) {
 }
 
 func (r *RedemptionOrder4) AddChargeDetails() *Charge8 {
-	newValue := new (Charge8)
+	newValue := new(Charge8)
 	r.ChargeDetails = append(r.ChargeDetails, newValue)
 	return newValue
 }
 
 func (r *RedemptionOrder4) AddCommissionDetails() *Commission6 {
-	newValue := new (Commission6)
+	newValue := new(Commission6)
 	r.CommissionDetails = append(r.CommissionDetails, newValue)
 	return newValue
 }
 
 func (r *RedemptionOrder4) AddTaxDetails() *Tax6 {
-	newValue := new (Tax6)
+	newValue := new(Tax6)
 	r.TaxDetails = append(r.TaxDetails, newValue)
 	return newValue
 }
@@ -159,4 +157,3 @@ func (r *RedemptionOrder4) AddCashSettlementDetails() *PaymentTransaction15 {
 	r.CashSettlementDetails = new(PaymentTransaction15)
 	return r.CashSettlementDetails
 }
-

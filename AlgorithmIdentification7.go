@@ -8,9 +8,7 @@ type AlgorithmIdentification7 struct {
 
 	// Parameters of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).
 	Parameter *Parameter2 `xml:"Param,omitempty"`
-
 }
-
 
 func (a *AlgorithmIdentification7) SetAlgorithm(value string) {
 	a.Algorithm = (*Algorithm7Code)(&value)
@@ -20,4 +18,3 @@ func (a *AlgorithmIdentification7) AddParameter() *Parameter2 {
 	a.Parameter = new(Parameter2)
 	return a.Parameter
 }
-

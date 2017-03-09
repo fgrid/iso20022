@@ -14,9 +14,7 @@ type CashParties32 struct {
 
 	// Financial institution servicing an account for the creditor.
 	CreditorAgent *PartyIdentificationAndAccount134 `xml:"CdtrAgt,omitempty"`
-
 }
-
 
 func (c *CashParties32) AddDebtor() *PartyIdentificationAndAccount133 {
 	c.Debtor = new(PartyIdentificationAndAccount133)
@@ -37,4 +35,3 @@ func (c *CashParties32) AddCreditorAgent() *PartyIdentificationAndAccount134 {
 	c.CreditorAgent = new(PartyIdentificationAndAccount134)
 	return c.CreditorAgent
 }
-

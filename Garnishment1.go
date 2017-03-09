@@ -1,6 +1,6 @@
 package iso20022
 
-// Provides remittance information about a payment for garnishment-related purposes. 
+// Provides remittance information about a payment for garnishment-related purposes.
 type Garnishment1 struct {
 
 	// Specifies the type of garnishment.
@@ -21,14 +21,12 @@ type Garnishment1 struct {
 	// Amount of money remitted for the referred document.
 	RemittedAmount *ActiveOrHistoricCurrencyAndAmount `xml:"RmtdAmt,omitempty"`
 
-	// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available. 
+	// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
 	FamilyMedicalInsuranceIndicator *TrueFalseIndicator `xml:"FmlyMdclInsrncInd,omitempty"`
 
 	// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
 	EmployeeTerminationIndicator *TrueFalseIndicator `xml:"MplyeeTermntnInd,omitempty"`
-
 }
-
 
 func (g *Garnishment1) AddType() *GarnishmentType1 {
 	g.Type = new(GarnishmentType1)
@@ -64,4 +62,3 @@ func (g *Garnishment1) SetFamilyMedicalInsuranceIndicator(value string) {
 func (g *Garnishment1) SetEmployeeTerminationIndicator(value string) {
 	g.EmployeeTerminationIndicator = (*TrueFalseIndicator)(&value)
 }
-

@@ -17,9 +17,7 @@ type Undertaking11 struct {
 
 	// Details related to the delivery channel for the amended local undertaking.
 	DeliveryChannel *CommunicationChannel1 `xml:"DlvryChanl,omitempty"`
-
 }
-
 
 func (u *Undertaking11) AddNewUndertakingAmount() *UndertakingAmount2 {
 	u.NewUndertakingAmount = new(UndertakingAmount2)
@@ -45,4 +43,3 @@ func (u *Undertaking11) AddDeliveryChannel() *CommunicationChannel1 {
 	u.DeliveryChannel = new(CommunicationChannel1)
 	return u.DeliveryChannel
 }
-

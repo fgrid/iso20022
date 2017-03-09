@@ -11,9 +11,7 @@ type SettlementInformation2 struct {
 
 	// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.
 	ClearingSystem *ClearingSystemIdentification1Choice `xml:"ClrSys,omitempty"`
-
 }
-
 
 func (s *SettlementInformation2) SetSettlementMethod(value string) {
 	s.SettlementMethod = (*SettlementMethod2Code)(&value)
@@ -28,4 +26,3 @@ func (s *SettlementInformation2) AddClearingSystem() *ClearingSystemIdentificati
 	s.ClearingSystem = new(ClearingSystemIdentification1Choice)
 	return s.ClearingSystem
 }
-

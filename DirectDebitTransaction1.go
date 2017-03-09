@@ -4,7 +4,7 @@ package iso20022
 type DirectDebitTransaction1 struct {
 
 	// Set of elements used to provide further details related to a direct debit mandate signed between the creditor and the debtor.
-	// 
+	//
 	// Usage: Mandate related information is to be used only when the direct debit relates to a mandate signed between the debtor and the creditor.
 	MandateRelatedInformation *MandateRelatedInformation1 `xml:"MndtRltdInf,omitempty"`
 
@@ -12,15 +12,13 @@ type DirectDebitTransaction1 struct {
 	CreditorSchemeIdentification *PartyIdentification8 `xml:"CdtrSchmeId,omitempty"`
 
 	// Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.
-	// 
+	//
 	// Usage: The direct debit pre-notification is used to reconcile separately sent collection information with the direct debit transaction information.
 	PreNotificationIdentification *Max35Text `xml:"PreNtfctnId,omitempty"`
 
 	// Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.
 	PreNotificationDate *ISODate `xml:"PreNtfctnDt,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransaction1) AddMandateRelatedInformation() *MandateRelatedInformation1 {
 	d.MandateRelatedInformation = new(MandateRelatedInformation1)
@@ -39,4 +37,3 @@ func (d *DirectDebitTransaction1) SetPreNotificationIdentification(value string)
 func (d *DirectDebitTransaction1) SetPreNotificationDate(value string) {
 	d.PreNotificationDate = (*ISODate)(&value)
 }
-

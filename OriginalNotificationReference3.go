@@ -32,9 +32,7 @@ type OriginalNotificationReference3 struct {
 
 	// Provides details of the expected amount on the account serviced by the account servicer.
 	OriginalItemAndStatus []*OriginalItemAndStatus3 `xml:"OrgnlItmAndSts"`
-
 }
-
 
 func (o *OriginalNotificationReference3) AddAccount() *CashAccount24 {
 	o.Account = new(CashAccount24)
@@ -80,8 +78,7 @@ func (o *OriginalNotificationReference3) AddIntermediaryAgent() *BranchAndFinanc
 }
 
 func (o *OriginalNotificationReference3) AddOriginalItemAndStatus() *OriginalItemAndStatus3 {
-	newValue := new (OriginalItemAndStatus3)
+	newValue := new(OriginalItemAndStatus3)
 	o.OriginalItemAndStatus = append(o.OriginalItemAndStatus, newValue)
 	return newValue
 }
-

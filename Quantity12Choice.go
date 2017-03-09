@@ -8,9 +8,7 @@ type Quantity12Choice struct {
 
 	// Percentage rate of assets to be transferred.
 	PercentageRate *PercentageRate `xml:"PctgRate,omitempty"`
-
 }
-
 
 func (q *Quantity12Choice) SetUnit(value string) {
 	q.Unit = (*DecimalNumber)(&value)
@@ -19,4 +17,3 @@ func (q *Quantity12Choice) SetUnit(value string) {
 func (q *Quantity12Choice) SetPercentageRate(value string) {
 	q.PercentageRate = (*PercentageRate)(&value)
 }
-

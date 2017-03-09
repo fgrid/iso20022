@@ -21,9 +21,7 @@ type CardPaymentEnvironment20 struct {
 
 	// Replacement of the message element Cardholder by a digital envelope using a cryptographic key.
 	ProtectedCardholderData *ContentInformationType7 `xml:"PrtctdCrdhldrData,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment20) AddAcquirer() *Acquirer2 {
 	c.Acquirer = new(Acquirer2)
@@ -54,4 +52,3 @@ func (c *CardPaymentEnvironment20) AddProtectedCardholderData() *ContentInformat
 	c.ProtectedCardholderData = new(ContentInformationType7)
 	return c.ProtectedCardholderData
 }
-

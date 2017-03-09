@@ -14,9 +14,7 @@ type MessageAndBusinessReference2 struct {
 
 	// Account information of the order message for which the status is requested.
 	InvestmentAccount *InvestmentAccount13 `xml:"InvstmtAcct,omitempty"`
-
 }
-
 
 func (m *MessageAndBusinessReference2) AddOtherReference() *AdditionalReference3 {
 	m.OtherReference = new(AdditionalReference3)
@@ -36,4 +34,3 @@ func (m *MessageAndBusinessReference2) AddInvestmentAccount() *InvestmentAccount
 	m.InvestmentAccount = new(InvestmentAccount13)
 	return m.InvestmentAccount
 }
-

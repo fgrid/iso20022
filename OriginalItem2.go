@@ -17,9 +17,7 @@ type OriginalItem2 struct {
 
 	// Provides further information in order to identify a previous payment notification.
 	OriginalItemReference *OriginalItemReference1 `xml:"OrgnlItmRef,omitempty"`
-
 }
-
 
 func (o *OriginalItem2) SetOriginalItemIdentification(value string) {
 	o.OriginalItemIdentification = (*Max35Text)(&value)
@@ -41,4 +39,3 @@ func (o *OriginalItem2) AddOriginalItemReference() *OriginalItemReference1 {
 	o.OriginalItemReference = new(OriginalItemReference1)
 	return o.OriginalItemReference
 }
-

@@ -8,9 +8,7 @@ type ProcessingPosition2FormatChoice struct {
 
 	// Proprietary code to  express the processing position.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (p *ProcessingPosition2FormatChoice) SetCode(value string) {
 	p.Code = (*ProcessingPosition2Code)(&value)
@@ -20,4 +18,3 @@ func (p *ProcessingPosition2FormatChoice) AddProprietary() *GenericIdentificatio
 	p.Proprietary = new(GenericIdentification13)
 	return p.Proprietary
 }
-

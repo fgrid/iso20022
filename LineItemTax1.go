@@ -20,9 +20,7 @@ type LineItemTax1 struct {
 
 	// Category name, expressed as text, of the tax, levy or duty.
 	CategoryName []*Max35Text `xml:"CtgyNm,omitempty"`
-
 }
-
 
 func (l *LineItemTax1) AddCalculatedAmount(value, currency string) {
 	l.CalculatedAmount = append(l.CalculatedAmount, NewCurrencyAndAmount(value, currency))
@@ -48,4 +46,3 @@ func (l *LineItemTax1) SetCategoryCode(value string) {
 func (l *LineItemTax1) AddCategoryName(value string) {
 	l.CategoryName = append(l.CategoryName, (*Max35Text)(&value))
 }
-

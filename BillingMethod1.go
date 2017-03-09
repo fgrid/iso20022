@@ -12,13 +12,11 @@ type BillingMethod1 struct {
 	// Specifies the total charge for a service (including taxes).
 	TotalCharge *BillingServicesAmount2 `xml:"TtlChrg"`
 
-	// Provides for the specific tax identification within the same tax region. 
-	// 
+	// Provides for the specific tax identification within the same tax region.
+	//
 	// Usage: This element allows for a maximum of three regional taxes on the same service.
 	TaxIdentification []*BillingServicesTax1 `xml:"TaxId"`
-
 }
-
 
 func (b *BillingMethod1) AddServiceChargeHostAmount() *AmountAndDirection34 {
 	b.ServiceChargeHostAmount = new(AmountAndDirection34)
@@ -36,8 +34,7 @@ func (b *BillingMethod1) AddTotalCharge() *BillingServicesAmount2 {
 }
 
 func (b *BillingMethod1) AddTaxIdentification() *BillingServicesTax1 {
-	newValue := new (BillingServicesTax1)
+	newValue := new(BillingServicesTax1)
 	b.TaxIdentification = append(b.TaxIdentification, newValue)
 	return newValue
 }
-

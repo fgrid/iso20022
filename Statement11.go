@@ -29,9 +29,7 @@ type Statement11 struct {
 
 	// Indicates whether the statement reports holdings at subsafekeeping account level.
 	SubAccountIndicator *YesNoIndicator `xml:"SubAcctInd"`
-
 }
-
 
 func (s *Statement11) AddReportNumber() *Number3Choice {
 	s.ReportNumber = new(Number3Choice)
@@ -73,4 +71,3 @@ func (s *Statement11) SetActivityIndicator(value string) {
 func (s *Statement11) SetSubAccountIndicator(value string) {
 	s.SubAccountIndicator = (*YesNoIndicator)(&value)
 }
-

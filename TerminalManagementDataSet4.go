@@ -11,9 +11,7 @@ type TerminalManagementDataSet4 struct {
 
 	// Content of the status report.
 	Content *StatusReportContent2 `xml:"Cntt"`
-
 }
-
 
 func (t *TerminalManagementDataSet4) AddIdentification() *DataSetIdentification3 {
 	t.Identification = new(DataSetIdentification3)
@@ -28,4 +26,3 @@ func (t *TerminalManagementDataSet4) AddContent() *StatusReportContent2 {
 	t.Content = new(StatusReportContent2)
 	return t.Content
 }
-

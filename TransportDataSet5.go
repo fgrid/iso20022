@@ -23,9 +23,7 @@ type TransportDataSet5 struct {
 
 	// Specifies the shipment date, the charges, the routing and the goods that are described in the transport document.
 	TransportInformation *TransportDetails4 `xml:"TrnsprtInf"`
-
 }
-
 
 func (t *TransportDataSet5) AddDataSetIdentification() *DocumentIdentification1 {
 	t.DataSetIdentification = new(DocumentIdentification1)
@@ -61,4 +59,3 @@ func (t *TransportDataSet5) AddTransportInformation() *TransportDetails4 {
 	t.TransportInformation = new(TransportDetails4)
 	return t.TransportInformation
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document03800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.038.001.01 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:seev.038.001.01 Document"`
 	Message *CorporateActionNarrativeV01 `xml:"CorpActnNrrtv"`
 }
 
@@ -25,7 +25,7 @@ func (d *Document03800101) AddMessage() *CorporateActionNarrativeV01 {
 // - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).
 // ISO 15022 - 20022 COEXISTENCE
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
-// 
+//
 type CorporateActionNarrativeV01 struct {
 
 	// Information that unambiguously identifies a CorporateActionNarrative message as know by the account servicer.
@@ -51,9 +51,7 @@ type CorporateActionNarrativeV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrativeV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	c.Identification = new(iso20022.DocumentIdentification11)
@@ -91,8 +89,7 @@ func (c *CorporateActionNarrativeV01) AddMessageRecipient() *iso20022.PartyIdent
 }
 
 func (c *CorporateActionNarrativeV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

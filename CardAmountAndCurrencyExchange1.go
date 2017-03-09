@@ -11,9 +11,7 @@ type CardAmountAndCurrencyExchange1 struct {
 
 	// Identification or qualification of the type of amount.
 	Type *TypeOfAmount3Code `xml:"Tp,omitempty"`
-
 }
-
 
 func (c *CardAmountAndCurrencyExchange1) SetAmount(value, currency string) {
 	c.Amount = NewActiveCurrencyAndAmount(value, currency)
@@ -27,4 +25,3 @@ func (c *CardAmountAndCurrencyExchange1) AddCurrencyExchange() *CurrencyExchange
 func (c *CardAmountAndCurrencyExchange1) SetType(value string) {
 	c.Type = (*TypeOfAmount3Code)(&value)
 }
-

@@ -8,9 +8,7 @@ type MissingOrIncorrectInformation struct {
 
 	// Indicates the incorrect information.
 	IncorrectInformation []*UnableToApplyIncorrectInfo1Code `xml:"IncrrctInf,omitempty"`
-
 }
-
 
 func (m *MissingOrIncorrectInformation) AddMissingInformation(value string) {
 	m.MissingInformation = append(m.MissingInformation, (*UnableToApplyMissingInfo1Code)(&value))
@@ -19,4 +17,3 @@ func (m *MissingOrIncorrectInformation) AddMissingInformation(value string) {
 func (m *MissingOrIncorrectInformation) AddIncorrectInformation(value string) {
 	m.IncorrectInformation = append(m.IncorrectInformation, (*UnableToApplyIncorrectInfo1Code)(&value))
 }
-

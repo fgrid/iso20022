@@ -14,9 +14,7 @@ type TradePartyIdentification4 struct {
 
 	// Specifies the party which originated a treasury trade. This party may be the same as the submitting party.
 	TradeParty *PartyIdentification8Choice `xml:"TradPty"`
-
 }
-
 
 func (t *TradePartyIdentification4) AddFundInformation() *FundIdentification2 {
 	t.FundInformation = new(FundIdentification2)
@@ -36,4 +34,3 @@ func (t *TradePartyIdentification4) AddTradeParty() *PartyIdentification8Choice 
 	t.TradeParty = new(PartyIdentification8Choice)
 	return t.TradeParty
 }
-

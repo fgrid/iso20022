@@ -35,9 +35,7 @@ type PaymentContext7 struct {
 
 	// Payment options the card acceptor can support.
 	SupportedOption []*SupportedPaymentOption1Code `xml:"SpprtdOptn,omitempty"`
-
 }
-
 
 func (p *PaymentContext7) SetCardPresent(value string) {
 	p.CardPresent = (*TrueFalseIndicator)(&value)
@@ -82,4 +80,3 @@ func (p *PaymentContext7) SetFallbackIndicator(value string) {
 func (p *PaymentContext7) AddSupportedOption(value string) {
 	p.SupportedOption = append(p.SupportedOption, (*SupportedPaymentOption1Code)(&value))
 }
-

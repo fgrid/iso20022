@@ -32,9 +32,7 @@ type IndividualOrderConfirmationStatusAndReason1 struct {
 
 	// Financial instrument information of the individual order confirmation for which the status is given.
 	FinancialInstrumentDetails *FinancialInstrument10 `xml:"FinInstrmDtls,omitempty"`
-
 }
-
 
 func (i *IndividualOrderConfirmationStatusAndReason1) SetMasterReference(value string) {
 	i.MasterReference = (*Max35Text)(&value)
@@ -53,13 +51,13 @@ func (i *IndividualOrderConfirmationStatusAndReason1) SetDealReference(value str
 }
 
 func (i *IndividualOrderConfirmationStatusAndReason1) AddConfirmationRejected() *ConfirmationRejectedStatus1 {
-	newValue := new (ConfirmationRejectedStatus1)
+	newValue := new(ConfirmationRejectedStatus1)
 	i.ConfirmationRejected = append(i.ConfirmationRejected, newValue)
 	return newValue
 }
 
 func (i *IndividualOrderConfirmationStatusAndReason1) AddAmendmentRejected() *ConfirmationRejectedStatus1 {
-	newValue := new (ConfirmationRejectedStatus1)
+	newValue := new(ConfirmationRejectedStatus1)
 	i.AmendmentRejected = append(i.AmendmentRejected, newValue)
 	return newValue
 }
@@ -82,4 +80,3 @@ func (i *IndividualOrderConfirmationStatusAndReason1) AddFinancialInstrumentDeta
 	i.FinancialInstrumentDetails = new(FinancialInstrument10)
 	return i.FinancialInstrumentDetails
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document04200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.042.001.03 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.042.001.03 Document"`
 	Message *TransactionReportRequestV03 `xml:"TxRptReq"`
 }
 
@@ -28,9 +28,7 @@ type TransactionReportRequestV03 struct {
 
 	// Parameters to be used as criteria for the content of the transaction report.
 	ReportSpecification *iso20022.ReportSpecification4 `xml:"RptSpcfctn"`
-
 }
-
 
 func (t *TransactionReportRequestV03) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	t.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -41,4 +39,3 @@ func (t *TransactionReportRequestV03) AddReportSpecification() *iso20022.ReportS
 	t.ReportSpecification = new(iso20022.ReportSpecification4)
 	return t.ReportSpecification
 }
-

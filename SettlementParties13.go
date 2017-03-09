@@ -20,9 +20,7 @@ type SettlementParties13 struct {
 
 	// Party that, in a settlement chain interacts with the party 4.
 	Party5 *PartyIdentificationAndAccount44 `xml:"Pty5,omitempty"`
-
 }
-
 
 func (s *SettlementParties13) AddDepository() *PartyIdentification46 {
 	s.Depository = new(PartyIdentification46)
@@ -53,4 +51,3 @@ func (s *SettlementParties13) AddParty5() *PartyIdentificationAndAccount44 {
 	s.Party5 = new(PartyIdentificationAndAccount44)
 	return s.Party5
 }
-

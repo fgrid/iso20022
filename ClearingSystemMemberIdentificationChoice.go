@@ -59,9 +59,7 @@ type ClearingSystemMemberIdentificationChoice struct {
 
 	// Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA).
 	AustralianSmallNetworkIdentification *SmallNetworkIdentifier `xml:"AUBSBs"`
-
 }
-
 
 func (c *ClearingSystemMemberIdentificationChoice) SetCHIPSUniversalIdentification(value string) {
 	c.CHIPSUniversalIdentification = (*CHIPSUniversalIdentifier)(&value)
@@ -138,4 +136,3 @@ func (c *ClearingSystemMemberIdentificationChoice) SetAustralianExtensiveBranchN
 func (c *ClearingSystemMemberIdentificationChoice) SetAustralianSmallNetworkIdentification(value string) {
 	c.AustralianSmallNetworkIdentification = (*SmallNetworkIdentifier)(&value)
 }
-

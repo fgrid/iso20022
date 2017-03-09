@@ -12,11 +12,9 @@ type CorporateActionRate73 struct {
 	// Requested tax rate that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.
 	RequestedWithholdingTaxRate []*RateAndAmountFormat45Choice `xml:"ReqdWhldgTaxRate,omitempty"`
 
-	// Requested rate at which the income will be withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. 
+	// Requested rate at which the income will be withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible.
 	RequestedSecondLevelTaxRate []*RateAndAmountFormat45Choice `xml:"ReqdScndLvlTaxRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate73) SetProposedRate(value string) {
 	c.ProposedRate = (*PercentageRate)(&value)
@@ -28,14 +26,13 @@ func (c *CorporateActionRate73) AddOversubscriptionRate() *RateAndAmountFormat43
 }
 
 func (c *CorporateActionRate73) AddRequestedWithholdingTaxRate() *RateAndAmountFormat45Choice {
-	newValue := new (RateAndAmountFormat45Choice)
+	newValue := new(RateAndAmountFormat45Choice)
 	c.RequestedWithholdingTaxRate = append(c.RequestedWithholdingTaxRate, newValue)
 	return newValue
 }
 
 func (c *CorporateActionRate73) AddRequestedSecondLevelTaxRate() *RateAndAmountFormat45Choice {
-	newValue := new (RateAndAmountFormat45Choice)
+	newValue := new(RateAndAmountFormat45Choice)
 	c.RequestedSecondLevelTaxRate = append(c.RequestedSecondLevelTaxRate, newValue)
 	return newValue
 }
-

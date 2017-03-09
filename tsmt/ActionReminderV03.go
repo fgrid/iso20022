@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.024.001.03 Document"`
+	XMLName xml.Name           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.024.001.03 Document"`
 	Message *ActionReminderV03 `xml:"ActnRmndr"`
 }
 
@@ -41,7 +41,7 @@ type ActionReminderV03 struct {
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -55,9 +55,7 @@ type ActionReminderV03 struct {
 
 	// Next processing step required.
 	PendingRequestForAction *iso20022.PendingActivity2 `xml:"PdgReqForActn"`
-
 }
-
 
 func (a *ActionReminderV03) AddReminderIdentification() *iso20022.MessageIdentification1 {
 	a.ReminderIdentification = new(iso20022.MessageIdentification1)
@@ -80,7 +78,7 @@ func (a *ActionReminderV03) AddTransactionStatus() *iso20022.TransactionStatus4 
 }
 
 func (a *ActionReminderV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	a.UserTransactionReference = append(a.UserTransactionReference, newValue)
 	return newValue
 }
@@ -94,4 +92,3 @@ func (a *ActionReminderV03) AddPendingRequestForAction() *iso20022.PendingActivi
 	a.PendingRequestForAction = new(iso20022.PendingActivity2)
 	return a.PendingRequestForAction
 }
-

@@ -11,9 +11,7 @@ type Amendment6 struct {
 
 	// Additional information related to the notification.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *Amendment6) AddUndertakingAmendmentMessage() *UndertakingAmendmentMessage1 {
 	a.UndertakingAmendmentMessage = new(UndertakingAmendmentMessage1)
@@ -27,4 +25,3 @@ func (a *Amendment6) SetApplicantReferenceNumber(value string) {
 func (a *Amendment6) AddAdditionalInformation(value string) {
 	a.AdditionalInformation = append(a.AdditionalInformation, (*Max2000Text)(&value))
 }
-

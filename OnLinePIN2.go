@@ -11,9 +11,7 @@ type OnLinePIN2 struct {
 
 	// Additional information required to verify the PIN.
 	AdditionalInput *Max35Text `xml:"AddtlInpt,omitempty"`
-
 }
-
 
 func (o *OnLinePIN2) AddEncryptedPINBlock() *ContentInformationType5 {
 	o.EncryptedPINBlock = new(ContentInformationType5)
@@ -27,4 +25,3 @@ func (o *OnLinePIN2) SetPINFormat(value string) {
 func (o *OnLinePIN2) SetAdditionalInput(value string) {
 	o.AdditionalInput = (*Max35Text)(&value)
 }
-

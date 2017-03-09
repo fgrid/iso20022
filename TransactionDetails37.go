@@ -62,9 +62,7 @@ type TransactionDetails37 struct {
 
 	// Provides additional details on the transaction which can not be included within the structured fields of the message.
 	TransactionAdditionalDetails *Max350Text `xml:"TxAddtlDtls,omitempty"`
-
 }
-
 
 func (t *TransactionDetails37) AddTransactionActivity() *TransactionActivity1Choice {
 	t.TransactionActivity = new(TransactionActivity1Choice)
@@ -159,4 +157,3 @@ func (t *TransactionDetails37) SetReversalIndicator(value string) {
 func (t *TransactionDetails37) SetTransactionAdditionalDetails(value string) {
 	t.TransactionAdditionalDetails = (*Max350Text)(&value)
 }
-

@@ -16,9 +16,7 @@ type CardTransactionAmount1 struct {
 	// Details of the transaction amount, for informational purpose, for instance to be included within cardholder statement.
 	// It corresponds partially to ISO 8583 field number 54.
 	DetailedAmount []*DetailedAmount9 `xml:"DtldAmt,omitempty"`
-
 }
-
 
 func (c *CardTransactionAmount1) SetTotalAmount(value, currency string) {
 	c.TotalAmount = NewCurrencyAndAmount(value, currency)
@@ -34,8 +32,7 @@ func (c *CardTransactionAmount1) AddCardholderBillingTransactionAmount() *Detail
 }
 
 func (c *CardTransactionAmount1) AddDetailedAmount() *DetailedAmount9 {
-	newValue := new (DetailedAmount9)
+	newValue := new(DetailedAmount9)
 	c.DetailedAmount = append(c.DetailedAmount, newValue)
 	return newValue
 }
-

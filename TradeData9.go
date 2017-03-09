@@ -32,9 +32,7 @@ type TradeData9 struct {
 
 	// Additional information on the previous status of a trade in a central system.
 	PreviousStatusSubType *StatusSubType1Code `xml:"PrvsStsSubTp,omitempty"`
-
 }
-
 
 func (t *TradeData9) SetMatchingSystemUniqueReference(value string) {
 	t.MatchingSystemUniqueReference = (*Max35Text)(&value)
@@ -77,4 +75,3 @@ func (t *TradeData9) SetAllegedTrade(value string) {
 func (t *TradeData9) SetPreviousStatusSubType(value string) {
 	t.PreviousStatusSubType = (*StatusSubType1Code)(&value)
 }
-

@@ -8,9 +8,7 @@ type AdjustmentType1Choice struct {
 
 	// Specifies a type of adjustment not present in the code list.
 	OtherAdjustmentType *Max35Text `xml:"OthrAdjstmntTp"`
-
 }
-
 
 func (a *AdjustmentType1Choice) SetType(value string) {
 	a.Type = (*AdjustmentType2Code)(&value)
@@ -19,4 +17,3 @@ func (a *AdjustmentType1Choice) SetType(value string) {
 func (a *AdjustmentType1Choice) SetOtherAdjustmentType(value string) {
 	a.OtherAdjustmentType = (*Max35Text)(&value)
 }
-

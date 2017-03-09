@@ -20,9 +20,7 @@ type PaymentMeans1 struct {
 
 	// Debtor financial institution of the payer party specified for this payment means.
 	PayerFinancialInstitution *BranchAndFinancialInstitutionIdentification4 `xml:"PyerFI,omitempty"`
-
 }
-
 
 func (p *PaymentMeans1) AddPaymentType() *PaymentTypeInformation19 {
 	p.PaymentType = new(PaymentTypeInformation19)
@@ -52,4 +50,3 @@ func (p *PaymentMeans1) AddPayerFinancialInstitution() *BranchAndFinancialInstit
 	p.PayerFinancialInstitution = new(BranchAndFinancialInstitutionIdentification4)
 	return p.PayerFinancialInstitution
 }
-

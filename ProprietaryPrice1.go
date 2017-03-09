@@ -8,9 +8,7 @@ type ProprietaryPrice1 struct {
 
 	// Proprietary price specification related to the underlying transaction.
 	Price *CurrencyAndAmount `xml:"Pric"`
-
 }
-
 
 func (p *ProprietaryPrice1) SetType(value string) {
 	p.Type = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (p *ProprietaryPrice1) SetType(value string) {
 func (p *ProprietaryPrice1) SetPrice(value, currency string) {
 	p.Price = NewCurrencyAndAmount(value, currency)
 }
-

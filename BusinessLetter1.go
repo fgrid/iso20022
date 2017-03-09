@@ -1,11 +1,11 @@
 package iso20022
 
 // Defines a business letter containing identifications of involved entities and their roles, references to documents, free form text and signatures.
-	// The semantics of this information are defined by usual business practices for the exchange and tracing of business letters. The described references and party identifiers permit to establish a linked informal trace of sequences of letters.
-	// This message component contains three types of elements that can be referenced using IDREF:
-	// (1) - all elements defining qualified parties,
-	// (2) - all elements defining qualified documents or references to them,
-	// (3) - the LegalContext element.
+// The semantics of this information are defined by usual business practices for the exchange and tracing of business letters. The described references and party identifiers permit to establish a linked informal trace of sequences of letters.
+// This message component contains three types of elements that can be referenced using IDREF:
+// (1) - all elements defining qualified parties,
+// (2) - all elements defining qualified documents or references to them,
+// (3) - the LegalContext element.
 type BusinessLetter1 struct {
 
 	// Application context defined by users. This is typically the name of a product.
@@ -70,9 +70,7 @@ type BusinessLetter1 struct {
 
 	// Digital signatures and signing parties of this letter or parts of it.
 	DigitalSignature []*QualifiedPartyAndXMLSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (b *BusinessLetter1) SetApplicationContext(value string) {
 	b.ApplicationContext = (*Max35Text)(&value)
@@ -88,13 +86,13 @@ func (b *BusinessLetter1) SetDate(value string) {
 }
 
 func (b *BusinessLetter1) AddRelatedLetter() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	b.RelatedLetter = append(b.RelatedLetter, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddRelatedMessage() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	b.RelatedMessage = append(b.RelatedMessage, newValue)
 	return newValue
 }
@@ -113,55 +111,55 @@ func (b *BusinessLetter1) AddOriginator() *QualifiedPartyIdentification1 {
 }
 
 func (b *BusinessLetter1) AddPrimaryRecipient() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	b.PrimaryRecipient = append(b.PrimaryRecipient, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddSender() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	b.Sender = append(b.Sender, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddAuthorisationUser() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	b.AuthorisationUser = append(b.AuthorisationUser, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddResponseRecipient() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	b.ResponseRecipient = append(b.ResponseRecipient, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddCopyRecipient() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	b.CopyRecipient = append(b.CopyRecipient, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddOtherParty() *QualifiedPartyIdentification1 {
-	newValue := new (QualifiedPartyIdentification1)
+	newValue := new(QualifiedPartyIdentification1)
 	b.OtherParty = append(b.OtherParty, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddAssociatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	b.AssociatedDocument = append(b.AssociatedDocument, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddGoverningContract() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	b.GoverningContract = append(b.GoverningContract, newValue)
 	return newValue
 }
 
 func (b *BusinessLetter1) AddLegalContext() *GovernanceRules2 {
-	newValue := new (GovernanceRules2)
+	newValue := new(GovernanceRules2)
 	b.LegalContext = append(b.LegalContext, newValue)
 	return newValue
 }
@@ -180,8 +178,7 @@ func (b *BusinessLetter1) AddValidationStatusInformation() *ValidationStatusInfo
 }
 
 func (b *BusinessLetter1) AddDigitalSignature() *QualifiedPartyAndXMLSignature1 {
-	newValue := new (QualifiedPartyAndXMLSignature1)
+	newValue := new(QualifiedPartyAndXMLSignature1)
 	b.DigitalSignature = append(b.DigitalSignature, newValue)
 	return newValue
 }
-

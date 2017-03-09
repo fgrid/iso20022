@@ -8,9 +8,7 @@ type StatementFrequencyReason2Choice struct {
 
 	// Statement frequency expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (s *StatementFrequencyReason2Choice) SetCode(value string) {
 	s.Code = (*EventFrequency9Code)(&value)
@@ -20,4 +18,3 @@ func (s *StatementFrequencyReason2Choice) AddProprietary() *GenericIdentificatio
 	s.Proprietary = new(GenericIdentification47)
 	return s.Proprietary
 }
-

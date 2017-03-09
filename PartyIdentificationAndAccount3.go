@@ -8,9 +8,7 @@ type PartyIdentificationAndAccount3 struct {
 
 	// Identification of the account owned by the party.
 	AccountIdentification *AccountIdentification1 `xml:"AcctId,omitempty"`
-
 }
-
 
 func (p *PartyIdentificationAndAccount3) AddPartyIdentification() *PartyIdentification2Choice {
 	p.PartyIdentification = new(PartyIdentification2Choice)
@@ -21,4 +19,3 @@ func (p *PartyIdentificationAndAccount3) AddAccountIdentification() *AccountIden
 	p.AccountIdentification = new(AccountIdentification1)
 	return p.AccountIdentification
 }
-

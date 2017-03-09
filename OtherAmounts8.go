@@ -35,9 +35,7 @@ type OtherAmounts8 struct {
 
 	// Amount of consumption tax.
 	ConsumptionTax *AmountAndDirection23 `xml:"CsmptnTax,omitempty"`
-
 }
-
 
 func (o *OtherAmounts8) AddAccruedInterestAmount() *AmountAndDirection23 {
 	o.AccruedInterestAmount = new(AmountAndDirection23)
@@ -93,4 +91,3 @@ func (o *OtherAmounts8) AddConsumptionTax() *AmountAndDirection23 {
 	o.ConsumptionTax = new(AmountAndDirection23)
 	return o.ConsumptionTax
 }
-

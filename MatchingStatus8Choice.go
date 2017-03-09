@@ -8,9 +8,7 @@ type MatchingStatus8Choice struct {
 
 	// Provides the matching status of the instruction.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (m *MatchingStatus8Choice) SetCode(value string) {
 	m.Code = (*MatchingStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (m *MatchingStatus8Choice) AddProprietary() *GenericIdentification38 {
 	m.Proprietary = new(GenericIdentification38)
 	return m.Proprietary
 }
-

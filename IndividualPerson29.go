@@ -17,9 +17,7 @@ type IndividualPerson29 struct {
 
 	// Address of the person.
 	PostalAddress []*PostalAddress21 `xml:"PstlAdr"`
-
 }
-
 
 func (i *IndividualPerson29) AddNamePrefix() *NamePrefix1Choice {
 	i.NamePrefix = new(NamePrefix1Choice)
@@ -39,8 +37,7 @@ func (i *IndividualPerson29) SetName(value string) {
 }
 
 func (i *IndividualPerson29) AddPostalAddress() *PostalAddress21 {
-	newValue := new (PostalAddress21)
+	newValue := new(PostalAddress21)
 	i.PostalAddress = append(i.PostalAddress, newValue)
 	return newValue
 }
-

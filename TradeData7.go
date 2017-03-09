@@ -47,9 +47,7 @@ type TradeData7 struct {
 
 	// To indicate if the trade is split.
 	SplitTradeIndicator *YesNoIndicator `xml:"SpltTradInd,omitempty"`
-
 }
-
 
 func (t *TradeData7) SetMessageIdentification(value string) {
 	t.MessageIdentification = (*Max35Text)(&value)
@@ -112,4 +110,3 @@ func (t *TradeData7) SetSettlementSessionIdentifier(value string) {
 func (t *TradeData7) SetSplitTradeIndicator(value string) {
 	t.SplitTradeIndicator = (*YesNoIndicator)(&value)
 }
-

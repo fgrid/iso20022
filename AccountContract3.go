@@ -20,9 +20,7 @@ type AccountContract3 struct {
 
 	// Indicates removal of the account. After removal, an account will not appear anymore in reports.
 	RemovalIndicator *YesNoIndicator `xml:"RmvlInd,omitempty"`
-
 }
-
 
 func (a *AccountContract3) SetTargetGoLiveDate(value string) {
 	a.TargetGoLiveDate = (*ISODate)(&value)
@@ -47,4 +45,3 @@ func (a *AccountContract3) SetUrgencyFlag(value string) {
 func (a *AccountContract3) SetRemovalIndicator(value string) {
 	a.RemovalIndicator = (*YesNoIndicator)(&value)
 }
-

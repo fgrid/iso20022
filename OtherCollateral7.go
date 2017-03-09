@@ -53,9 +53,7 @@ type OtherCollateral7 struct {
 
 	// Account to or from which a securities entry is made.
 	SafekeepingAccount *SecuritiesAccount19 `xml:"SfkpgAcct,omitempty"`
-
 }
-
 
 func (o *OtherCollateral7) SetCollateralIdentification(value string) {
 	o.CollateralIdentification = (*Max35Text)(&value)
@@ -130,4 +128,3 @@ func (o *OtherCollateral7) AddSafekeepingAccount() *SecuritiesAccount19 {
 	o.SafekeepingAccount = new(SecuritiesAccount19)
 	return o.SafekeepingAccount
 }
-

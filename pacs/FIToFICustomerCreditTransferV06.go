@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.008.001.06 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.008.001.06 Document"`
 	Message *FIToFICustomerCreditTransferV06 `xml:"FIToFICstmrCdtTrf"`
 }
 
@@ -36,9 +36,7 @@ type FIToFICustomerCreditTransferV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (f *FIToFICustomerCreditTransferV06) AddGroupHeader() *iso20022.GroupHeader70 {
 	f.GroupHeader = new(iso20022.GroupHeader70)
@@ -46,14 +44,13 @@ func (f *FIToFICustomerCreditTransferV06) AddGroupHeader() *iso20022.GroupHeader
 }
 
 func (f *FIToFICustomerCreditTransferV06) AddCreditTransferTransactionInformation() *iso20022.CreditTransferTransaction25 {
-	newValue := new (iso20022.CreditTransferTransaction25)
+	newValue := new(iso20022.CreditTransferTransaction25)
 	f.CreditTransferTransactionInformation = append(f.CreditTransferTransactionInformation, newValue)
 	return newValue
 }
 
 func (f *FIToFICustomerCreditTransferV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	f.SupplementaryData = append(f.SupplementaryData, newValue)
 	return newValue
 }
-

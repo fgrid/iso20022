@@ -7,7 +7,7 @@ import (
 )
 
 type Document02100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.021.001.01 Document"`
+	XMLName xml.Name                                       `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.021.001.01 Document"`
 	Message *AccountClosingAdditionalInformationRequestV01 `xml:"AcctClsgAddtlInfReq"`
 }
 
@@ -31,8 +31,8 @@ type AccountClosingAdditionalInformationRequestV01 struct {
 	// Unique and unambiguous identification of the account between the account owner and the account servicer.
 	AccountIdentification *iso20022.AccountForAction1 `xml:"AcctId"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification4 `xml:"AcctSvcrId"`
 
 	// Identification of the account to which the remaining positive balance of the account to be closed must be transferred or account from which funds can be moved to the account to be closed and which balance is negative. This account must be held in the same financial institution as the account to be closed if the transfer account is used to compensate a negative balance. For a positive balance to be transferred, an account in another financial institution might be used. In that case the account servicer is mandatory.
@@ -43,9 +43,7 @@ type AccountClosingAdditionalInformationRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountClosingAdditionalInformationRequestV01) AddReferences() *iso20022.References3 {
 	a.References = new(iso20022.References3)
@@ -53,7 +51,7 @@ func (a *AccountClosingAdditionalInformationRequestV01) AddReferences() *iso2002
 }
 
 func (a *AccountClosingAdditionalInformationRequestV01) AddOrganisationIdentification() *iso20022.OrganisationIdentification6 {
-	newValue := new (iso20022.OrganisationIdentification6)
+	newValue := new(iso20022.OrganisationIdentification6)
 	a.OrganisationIdentification = append(a.OrganisationIdentification, newValue)
 	return newValue
 }
@@ -79,8 +77,7 @@ func (a *AccountClosingAdditionalInformationRequestV01) AddTransferAccountServic
 }
 
 func (a *AccountClosingAdditionalInformationRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

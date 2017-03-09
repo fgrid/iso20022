@@ -11,9 +11,7 @@ type CaseStatus2 struct {
 
 	// Free text justification of the status.
 	Reason *Max140Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (c *CaseStatus2) SetDateTime(value string) {
 	c.DateTime = (*ISODateTime)(&value)
@@ -26,4 +24,3 @@ func (c *CaseStatus2) SetCaseStatus(value string) {
 func (c *CaseStatus2) SetReason(value string) {
 	c.Reason = (*Max140Text)(&value)
 }
-

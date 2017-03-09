@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.003.001.03 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.003.001.03 Document"`
 	Message *AccountModificationInstructionV03 `xml:"AcctModInstr"`
 }
 
@@ -35,7 +35,7 @@ type AccountModificationInstructionV03 struct {
 	// Reference to a linked message that was previously sent.
 	PreviousReference *iso20022.AdditionalReference3 `xml:"PrvsRef,omitempty"`
 
-	// Provide detailed information about the application modification instruction. 
+	// Provide detailed information about the application modification instruction.
 	InstructionDetails *iso20022.InvestmentAccountModificationDetails `xml:"InstrDtls,omitempty"`
 
 	// Investment account selection information used to identify the account for which the information is modified..
@@ -66,14 +66,12 @@ type AccountModificationInstructionV03 struct {
 	ModifiedCashSettlement []*iso20022.InvestmentFundCashSettlementInformation6 `xml:"ModfdCshSttlm,omitempty"`
 
 	// Information related to documents to be added, deleted or updated.
-	// 
+	//
 	ModifiedServiceLevelAgreement []*iso20022.ModificationScope10 `xml:"ModfdSvcLvlAgrmt,omitempty"`
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountModificationInstructionV03) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -101,13 +99,13 @@ func (a *AccountModificationInstructionV03) AddModifiedInvestmentAccount() *iso2
 }
 
 func (a *AccountModificationInstructionV03) AddModifiedAccountParties() *iso20022.AccountParties7 {
-	newValue := new (iso20022.AccountParties7)
+	newValue := new(iso20022.AccountParties7)
 	a.ModifiedAccountParties = append(a.ModifiedAccountParties, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV03) AddModifiedIntermediaries() *iso20022.ModificationScope7 {
-	newValue := new (iso20022.ModificationScope7)
+	newValue := new(iso20022.ModificationScope7)
 	a.ModifiedIntermediaries = append(a.ModifiedIntermediaries, newValue)
 	return newValue
 }
@@ -123,32 +121,31 @@ func (a *AccountModificationInstructionV03) AddModifiedIssueAllocation() *iso200
 }
 
 func (a *AccountModificationInstructionV03) AddModifiedSavingsInvestmentPlan() *iso20022.ModificationScope16 {
-	newValue := new (iso20022.ModificationScope16)
+	newValue := new(iso20022.ModificationScope16)
 	a.ModifiedSavingsInvestmentPlan = append(a.ModifiedSavingsInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV03) AddModifiedWithdrawalInvestmentPlan() *iso20022.ModificationScope16 {
-	newValue := new (iso20022.ModificationScope16)
+	newValue := new(iso20022.ModificationScope16)
 	a.ModifiedWithdrawalInvestmentPlan = append(a.ModifiedWithdrawalInvestmentPlan, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV03) AddModifiedCashSettlement() *iso20022.InvestmentFundCashSettlementInformation6 {
-	newValue := new (iso20022.InvestmentFundCashSettlementInformation6)
+	newValue := new(iso20022.InvestmentFundCashSettlementInformation6)
 	a.ModifiedCashSettlement = append(a.ModifiedCashSettlement, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV03) AddModifiedServiceLevelAgreement() *iso20022.ModificationScope10 {
-	newValue := new (iso20022.ModificationScope10)
+	newValue := new(iso20022.ModificationScope10)
 	a.ModifiedServiceLevelAgreement = append(a.ModifiedServiceLevelAgreement, newValue)
 	return newValue
 }
 
 func (a *AccountModificationInstructionV03) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

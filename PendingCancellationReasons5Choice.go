@@ -8,9 +8,7 @@ type PendingCancellationReasons5Choice struct {
 
 	// Specifies the reason why the cancellation request is pending.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (p *PendingCancellationReasons5Choice) SetCode(value string) {
 	p.Code = (*PendingReason7Code)(&value)
@@ -20,4 +18,3 @@ func (p *PendingCancellationReasons5Choice) AddProprietary() *GenericIdentificat
 	p.Proprietary = new(GenericIdentification47)
 	return p.Proprietary
 }
-

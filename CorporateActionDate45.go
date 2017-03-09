@@ -11,9 +11,7 @@ type CorporateActionDate45 struct {
 
 	// Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.
 	LotteryDate *DateFormat31Choice `xml:"LtryDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate45) AddRecordDate() *DateFormat31Choice {
 	c.RecordDate = new(DateFormat31Choice)
@@ -29,4 +27,3 @@ func (c *CorporateActionDate45) AddLotteryDate() *DateFormat31Choice {
 	c.LotteryDate = new(DateFormat31Choice)
 	return c.LotteryDate
 }
-

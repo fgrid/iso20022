@@ -11,9 +11,7 @@ type PaymentCancellationReason2 struct {
 
 	// Further details on the cancellation request reason.
 	AdditionalInformation []*Max105Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PaymentCancellationReason2) AddOriginator() *PartyIdentification43 {
 	p.Originator = new(PartyIdentification43)
@@ -28,4 +26,3 @@ func (p *PaymentCancellationReason2) AddReason() *CancellationReason14Choice {
 func (p *PaymentCancellationReason2) AddAdditionalInformation(value string) {
 	p.AdditionalInformation = append(p.AdditionalInformation, (*Max105Text)(&value))
 }
-

@@ -27,9 +27,7 @@ type CardAccount2 struct {
 
 	//  Date of the balance.
 	BalanceDate *ISODate `xml:"BalDt,omitempty"`
-
 }
-
 
 func (c *CardAccount2) SetSelectedAccountType(value string) {
 	c.SelectedAccountType = (*CardAccountType2Code)(&value)
@@ -66,4 +64,3 @@ func (c *CardAccount2) AddBalance() *AmountAndDirection41 {
 func (c *CardAccount2) SetBalanceDate(value string) {
 	c.BalanceDate = (*ISODate)(&value)
 }
-

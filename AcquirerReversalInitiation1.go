@@ -8,9 +8,7 @@ type AcquirerReversalInitiation1 struct {
 
 	// Reversal transaction.
 	Transaction *CardTransaction7 `xml:"Tx"`
-
 }
-
 
 func (a *AcquirerReversalInitiation1) AddEnvironment() *CardTransactionEnvironment3 {
 	a.Environment = new(CardTransactionEnvironment3)
@@ -21,4 +19,3 @@ func (a *AcquirerReversalInitiation1) AddTransaction() *CardTransaction7 {
 	a.Transaction = new(CardTransaction7)
 	return a.Transaction
 }
-

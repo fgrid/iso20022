@@ -53,9 +53,7 @@ type LineItemDetails7 struct {
 
 	// Total amount of the line item after adjustments have been applied.
 	TotalAmount *CurrencyAndAmount `xml:"TtlAmt"`
-
 }
-
 
 func (l *LineItemDetails7) SetLineItemIdentification(value string) {
 	l.LineItemIdentification = (*Max70Text)(&value)
@@ -86,19 +84,19 @@ func (l *LineItemDetails7) SetProductName(value string) {
 }
 
 func (l *LineItemDetails7) AddProductIdentifier() *ProductIdentifier2Choice {
-	newValue := new (ProductIdentifier2Choice)
+	newValue := new(ProductIdentifier2Choice)
 	l.ProductIdentifier = append(l.ProductIdentifier, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails7) AddProductCharacteristics() *ProductCharacteristics1Choice {
-	newValue := new (ProductCharacteristics1Choice)
+	newValue := new(ProductCharacteristics1Choice)
 	l.ProductCharacteristics = append(l.ProductCharacteristics, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails7) AddProductCategory() *ProductCategory1Choice {
-	newValue := new (ProductCategory1Choice)
+	newValue := new(ProductCategory1Choice)
 	l.ProductCategory = append(l.ProductCategory, newValue)
 	return newValue
 }
@@ -118,13 +116,13 @@ func (l *LineItemDetails7) AddRoutingSummary() *TransportMeans1 {
 }
 
 func (l *LineItemDetails7) AddIncoterms() *Incoterms1 {
-	newValue := new (Incoterms1)
+	newValue := new(Incoterms1)
 	l.Incoterms = append(l.Incoterms, newValue)
 	return newValue
 }
 
 func (l *LineItemDetails7) AddAdjustment() *Adjustment3 {
-	newValue := new (Adjustment3)
+	newValue := new(Adjustment3)
 	l.Adjustment = append(l.Adjustment, newValue)
 	return newValue
 }
@@ -135,7 +133,7 @@ func (l *LineItemDetails7) AddFreightCharges() *Charge12 {
 }
 
 func (l *LineItemDetails7) AddTax() *Tax13 {
-	newValue := new (Tax13)
+	newValue := new(Tax13)
 	l.Tax = append(l.Tax, newValue)
 	return newValue
 }
@@ -143,4 +141,3 @@ func (l *LineItemDetails7) AddTax() *Tax13 {
 func (l *LineItemDetails7) SetTotalAmount(value, currency string) {
 	l.TotalAmount = NewCurrencyAndAmount(value, currency)
 }
-

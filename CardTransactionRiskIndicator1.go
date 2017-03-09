@@ -11,9 +11,7 @@ type CardTransactionRiskIndicator1 struct {
 
 	// Recommended action for the issuer.
 	RecommendedAction []*ActionType4Code `xml:"RcmmnddActn,omitempty"`
-
 }
-
 
 func (c *CardTransactionRiskIndicator1) AddReason(value string) {
 	c.Reason = append(c.Reason, (*CardTransactionRiskReason1Code)(&value))
@@ -26,4 +24,3 @@ func (c *CardTransactionRiskIndicator1) SetLevel(value string) {
 func (c *CardTransactionRiskIndicator1) AddRecommendedAction(value string) {
 	c.RecommendedAction = append(c.RecommendedAction, (*ActionType4Code)(&value))
 }
-

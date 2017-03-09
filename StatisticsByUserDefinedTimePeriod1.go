@@ -17,9 +17,7 @@ type StatisticsByUserDefinedTimePeriod1 struct {
 
 	// Rate of income from the financial instrument, usually calculated as total dividends or coupon interest available to investors in the last year,divided by the current price.
 	Yield *PercentageRate `xml:"Yld,omitempty"`
-
 }
-
 
 func (s *StatisticsByUserDefinedTimePeriod1) AddPeriod() *DateTimePeriodDetails {
 	s.Period = new(DateTimePeriodDetails)
@@ -44,4 +42,3 @@ func (s *StatisticsByUserDefinedTimePeriod1) AddPriceChange() *PriceValue2 {
 func (s *StatisticsByUserDefinedTimePeriod1) SetYield(value string) {
 	s.Yield = (*PercentageRate)(&value)
 }
-

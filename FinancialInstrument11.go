@@ -11,9 +11,7 @@ type FinancialInstrument11 struct {
 
 	// Specifies whether the financial instrument is transferred as an asset or as cash.
 	TransferType *TransferType1Code `xml:"TrfTp"`
-
 }
-
 
 func (f *FinancialInstrument11) AddIdentification() *SecurityIdentification3Choice {
 	f.Identification = new(SecurityIdentification3Choice)
@@ -27,4 +25,3 @@ func (f *FinancialInstrument11) SetName(value string) {
 func (f *FinancialInstrument11) SetTransferType(value string) {
 	f.TransferType = (*TransferType1Code)(&value)
 }
-

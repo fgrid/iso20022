@@ -8,9 +8,7 @@ type OriginalMandate1Choice struct {
 
 	// Set of elements used to provide the original mandate data.
 	OriginalMandate *MandateInformation1 `xml:"OrgnlMndt"`
-
 }
-
 
 func (o *OriginalMandate1Choice) SetOriginalMandateIdentification(value string) {
 	o.OriginalMandateIdentification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (o *OriginalMandate1Choice) AddOriginalMandate() *MandateInformation1 {
 	o.OriginalMandate = new(MandateInformation1)
 	return o.OriginalMandate
 }
-

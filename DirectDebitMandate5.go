@@ -22,7 +22,7 @@ type DirectDebitMandate5 struct {
 	DebtorAgent *FinancialInstitutionIdentification7Choice `xml:"DbtrAgt"`
 
 	// Information identifying a specific branch of a financial institution.
-	// 
+	//
 	// Usage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
 	DebtorAgentBranch *BranchData `xml:"DbtrAgtBrnch,omitempty"`
 
@@ -30,7 +30,7 @@ type DirectDebitMandate5 struct {
 	CreditorAgent *FinancialInstitutionIdentification7Choice `xml:"CdtrAgt,omitempty"`
 
 	// Information identifying a specific branch of a financial institution.
-	// 
+	//
 	// Usage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
 	CreditorAgentBranch *BranchData `xml:"CdtrAgtBrnch,omitempty"`
 
@@ -39,9 +39,7 @@ type DirectDebitMandate5 struct {
 
 	// Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.
 	MandateIdentification *Max35Text `xml:"MndtId,omitempty"`
-
 }
-
 
 func (d *DirectDebitMandate5) AddDebtorAccount() *AccountIdentificationAndName5 {
 	d.DebtorAccount = new(AccountIdentificationAndName5)
@@ -93,4 +91,3 @@ func (d *DirectDebitMandate5) SetRegistrationIdentification(value string) {
 func (d *DirectDebitMandate5) SetMandateIdentification(value string) {
 	d.MandateIdentification = (*Max35Text)(&value)
 }
-

@@ -8,9 +8,7 @@ type TMSActionIdentification1 struct {
 
 	// Data set on which the action has been performed.
 	DataSetIdentification *DataSetIdentification2 `xml:"DataSetId,omitempty"`
-
 }
-
 
 func (t *TMSActionIdentification1) SetActionType(value string) {
 	t.ActionType = (*TerminalManagementAction1Code)(&value)
@@ -20,4 +18,3 @@ func (t *TMSActionIdentification1) AddDataSetIdentification() *DataSetIdentifica
 	t.DataSetIdentification = new(DataSetIdentification2)
 	return t.DataSetIdentification
 }
-

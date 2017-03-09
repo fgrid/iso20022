@@ -17,9 +17,7 @@ type ATMTransaction12 struct {
 
 	// Maintenance command to perform on the ATM.
 	Command []*ATMCommand1 `xml:"Cmd,omitempty"`
-
 }
-
 
 func (a *ATMTransaction12) SetTypeOfOperation(value string) {
 	a.TypeOfOperation = (*ATMOperation1Code)(&value)
@@ -40,8 +38,7 @@ func (a *ATMTransaction12) AddTransactionResponse() *ResponseType3 {
 }
 
 func (a *ATMTransaction12) AddCommand() *ATMCommand1 {
-	newValue := new (ATMCommand1)
+	newValue := new(ATMCommand1)
 	a.Command = append(a.Command, newValue)
 	return newValue
 }
-

@@ -23,9 +23,7 @@ type PaymentCard17 struct {
 
 	// Balance of the captured card or epurse if available.
 	RetainedCardBalance *CurrencyAndAmount `xml:"RtndCardBal,omitempty"`
-
 }
-
 
 func (p *PaymentCard17) SetCardDataEntryMode(value string) {
 	p.CardDataEntryMode = (*CardDataReading1Code)(&value)
@@ -56,4 +54,3 @@ func (p *PaymentCard17) SetCardCurrencyCode(value string) {
 func (p *PaymentCard17) SetRetainedCardBalance(value, currency string) {
 	p.RetainedCardBalance = NewCurrencyAndAmount(value, currency)
 }
-

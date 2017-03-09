@@ -17,9 +17,7 @@ type SettlementTypeAndAdditionalParameters5 struct {
 
 	// Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.
 	ReconciliationIndicator *YesNoIndicator `xml:"RcncltnInd,omitempty"`
-
 }
-
 
 func (s *SettlementTypeAndAdditionalParameters5) SetSecuritiesMovementType(value string) {
 	s.SecuritiesMovementType = (*ReceiveDelivery1Code)(&value)
@@ -40,4 +38,3 @@ func (s *SettlementTypeAndAdditionalParameters5) SetCorporateActionEventIdentifi
 func (s *SettlementTypeAndAdditionalParameters5) SetReconciliationIndicator(value string) {
 	s.ReconciliationIndicator = (*YesNoIndicator)(&value)
 }
-

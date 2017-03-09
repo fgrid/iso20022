@@ -81,7 +81,7 @@ type CorporateActionDate44 struct {
 	// Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event, also known as Buyer Protection Deadline.
 	ElectionToCounterpartyMarketDeadline *DateFormat31Choice `xml:"ElctnToCtrPtyMktDdln,omitempty"`
 
-	// Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline 
+	// Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline
 	ElectionToCounterpartyResponseDeadline *DateFormat31Choice `xml:"ElctnToCtrPtyRspnDdln,omitempty"`
 
 	// Date/time at which an event/offer is terminated or lapsed.
@@ -107,9 +107,7 @@ type CorporateActionDate44 struct {
 
 	// Date for the hearing between the plaintiff and defendant, as set by the court.
 	HearingDate *DateFormat30Choice `xml:"HrgDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate44) AddAnnouncementDate() *DateFormat31Choice {
 	c.AnnouncementDate = new(DateFormat31Choice)
@@ -285,4 +283,3 @@ func (c *CorporateActionDate44) AddHearingDate() *DateFormat30Choice {
 	c.HearingDate = new(DateFormat30Choice)
 	return c.HearingDate
 }
-

@@ -14,9 +14,7 @@ type SettlementParties4 struct {
 
 	// Party that interacts with the Party2.
 	Party3 *PartyIdentificationAndAccount14 `xml:"Pty3,omitempty"`
-
 }
-
 
 func (s *SettlementParties4) AddDepository() *PartyIdentification35 {
 	s.Depository = new(PartyIdentification35)
@@ -37,4 +35,3 @@ func (s *SettlementParties4) AddParty3() *PartyIdentificationAndAccount14 {
 	s.Party3 = new(PartyIdentificationAndAccount14)
 	return s.Party3
 }
-

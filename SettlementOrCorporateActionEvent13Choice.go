@@ -8,9 +8,7 @@ type SettlementOrCorporateActionEvent13Choice struct {
 
 	// Specifies the type of corporate event.
 	CorporateActionEventType *CorporateActionEventType30Choice `xml:"CorpActnEvtTp"`
-
 }
-
 
 func (s *SettlementOrCorporateActionEvent13Choice) AddSecuritiesTransactionType() *SecuritiesTransactionType18Choice {
 	s.SecuritiesTransactionType = new(SecuritiesTransactionType18Choice)
@@ -21,4 +19,3 @@ func (s *SettlementOrCorporateActionEvent13Choice) AddCorporateActionEventType()
 	s.CorporateActionEventType = new(CorporateActionEventType30Choice)
 	return s.CorporateActionEventType
 }
-

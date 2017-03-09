@@ -20,9 +20,7 @@ type BuyIn2 struct {
 
 	// Provides details about the cash compensation required, in case the central counterparty could not buy the securities to cover the trade(s) that failed.
 	RequiredCashCompensation *CashCompensation1 `xml:"ReqrdCshCompstn,omitempty"`
-
 }
-
 
 func (b *BuyIn2) SetBuyInNotificationIdentification(value string) {
 	b.BuyInNotificationIdentification = (*Max35Text)(&value)
@@ -50,4 +48,3 @@ func (b *BuyIn2) AddRequiredCashCompensation() *CashCompensation1 {
 	b.RequiredCashCompensation = new(CashCompensation1)
 	return b.RequiredCashCompensation
 }
-

@@ -14,9 +14,7 @@ type IdentificationModification2 struct {
 
 	// Additional information, in free text form, to complement the modification information.
 	AdditionalInformation *Max140Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *IdentificationModification2) SetIdentification(value string) {
 	i.Identification = (*Max35Text)(&value)
@@ -35,4 +33,3 @@ func (i *IdentificationModification2) AddUpdatedPartyAndAccountIdentification() 
 func (i *IdentificationModification2) SetAdditionalInformation(value string) {
 	i.AdditionalInformation = (*Max140Text)(&value)
 }
-

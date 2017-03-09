@@ -8,9 +8,7 @@ type RepairReason11 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *RestrictedFINXMax210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (r *RepairReason11) AddCode() *RepairReason13Choice {
 	r.Code = new(RepairReason13Choice)
@@ -20,4 +18,3 @@ func (r *RepairReason11) AddCode() *RepairReason13Choice {
 func (r *RepairReason11) SetAdditionalReasonInformation(value string) {
 	r.AdditionalReasonInformation = (*RestrictedFINXMax210Text)(&value)
 }
-

@@ -17,9 +17,7 @@ type SettlementInformation15 struct {
 
 	// Unambiguous identification of the account of the instructed reimbursement agent account at its servicing agent in the payment chain.
 	InstructedReimbursementAgentAccount *CashAccount16 `xml:"InstdRmbrsmntAgtAcct,omitempty"`
-
 }
-
 
 func (s *SettlementInformation15) AddInstructingReimbursementAgent() *BranchAndFinancialInstitutionIdentification4 {
 	s.InstructingReimbursementAgent = new(BranchAndFinancialInstitutionIdentification4)
@@ -40,4 +38,3 @@ func (s *SettlementInformation15) AddInstructedReimbursementAgentAccount() *Cash
 	s.InstructedReimbursementAgentAccount = new(CashAccount16)
 	return s.InstructedReimbursementAgentAccount
 }
-

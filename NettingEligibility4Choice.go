@@ -8,9 +8,7 @@ type NettingEligibility4Choice struct {
 
 	// Netting eligibility expressed as a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (n *NettingEligibility4Choice) SetIndicator(value string) {
 	n.Indicator = (*YesNoIndicator)(&value)
@@ -20,4 +18,3 @@ func (n *NettingEligibility4Choice) AddProprietary() *GenericIdentification30 {
 	n.Proprietary = new(GenericIdentification30)
 	return n.Proprietary
 }
-

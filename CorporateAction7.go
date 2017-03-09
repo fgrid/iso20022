@@ -24,7 +24,7 @@ type CorporateAction7 struct {
 	// Number of the coupon attached/associated with a security.
 	CouponNumber []*IdentificationFormat1Choice `xml:"CpnNb,omitempty"`
 
-	// Indicates whether certification/breakdown is required. 
+	// Indicates whether certification/breakdown is required.
 	// Yes = certification required.
 	// No = no certification required.
 	CertificationBreakdownIndicator *YesNoIndicator `xml:"CertfctnBrkdwnInd,omitempty"`
@@ -87,9 +87,7 @@ type CorporateAction7 struct {
 
 	// Provides additional information. This field may only be used when the information to be transmitted, cannot be coded.
 	AdditionalInformation *CorporateActionNarrative3 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateAction7) AddDateDetails() *CorporateActionDate22 {
 	c.DateDetails = new(CorporateActionDate22)
@@ -121,7 +119,7 @@ func (c *CorporateAction7) SetInterestAccruedNumberOfDays(value string) {
 }
 
 func (c *CorporateAction7) AddCouponNumber() *IdentificationFormat1Choice {
-	newValue := new (IdentificationFormat1Choice)
+	newValue := new(IdentificationFormat1Choice)
 	c.CouponNumber = append(c.CouponNumber, newValue)
 	return newValue
 }
@@ -158,7 +156,7 @@ func (c *CorporateAction7) AddPaymentOccurrenceType() *DistributionTypeFormat3Ch
 }
 
 func (c *CorporateAction7) AddOfferType() *OfferTypeFormat1Choice {
-	newValue := new (OfferTypeFormat1Choice)
+	newValue := new(OfferTypeFormat1Choice)
 	c.OfferType = append(c.OfferType, newValue)
 	return newValue
 }
@@ -169,19 +167,19 @@ func (c *CorporateAction7) AddRenounceableEntitlementStatusType() *RenounceableE
 }
 
 func (c *CorporateAction7) AddEventStage() *CorporateActionEventStageFormat3Choice {
-	newValue := new (CorporateActionEventStageFormat3Choice)
+	newValue := new(CorporateActionEventStageFormat3Choice)
 	c.EventStage = append(c.EventStage, newValue)
 	return newValue
 }
 
 func (c *CorporateAction7) AddAdditionalBusinessProcessIndicator() *AdditionalBusinessProcessFormat1Choice {
-	newValue := new (AdditionalBusinessProcessFormat1Choice)
+	newValue := new(AdditionalBusinessProcessFormat1Choice)
 	c.AdditionalBusinessProcessIndicator = append(c.AdditionalBusinessProcessIndicator, newValue)
 	return newValue
 }
 
 func (c *CorporateAction7) AddChangeType() *CorporateActionChangeTypeFormat1Choice {
-	newValue := new (CorporateActionChangeTypeFormat1Choice)
+	newValue := new(CorporateActionChangeTypeFormat1Choice)
 	c.ChangeType = append(c.ChangeType, newValue)
 	return newValue
 }
@@ -224,4 +222,3 @@ func (c *CorporateAction7) AddAdditionalInformation() *CorporateActionNarrative3
 	c.AdditionalInformation = new(CorporateActionNarrative3)
 	return c.AdditionalInformation
 }
-

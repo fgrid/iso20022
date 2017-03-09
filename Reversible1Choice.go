@@ -8,9 +8,7 @@ type Reversible1Choice struct {
 
 	// Closing of the securities lending contract expressed as a proprietary code.
 	Proprietary *GenericIdentification38 `xml:"Prtry"`
-
 }
-
 
 func (r *Reversible1Choice) SetCode(value string) {
 	r.Code = (*Reversible1Code)(&value)
@@ -20,4 +18,3 @@ func (r *Reversible1Choice) AddProprietary() *GenericIdentification38 {
 	r.Proprietary = new(GenericIdentification38)
 	return r.Proprietary
 }
-

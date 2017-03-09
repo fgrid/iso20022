@@ -8,9 +8,7 @@ type DisputeNotification1Choice struct {
 
 	// Provides the dispute notification details for the segregated independent amount only.
 	SegregatedIndependentAmountDisputeDetails *SegregatedIndependentAmountDispute1 `xml:"SgrtdIndpdntAmtDsptDtls"`
-
 }
-
 
 func (d *DisputeNotification1Choice) AddDisputeNotificationDetails() *DisputeNotification1 {
 	d.DisputeNotificationDetails = new(DisputeNotification1)
@@ -21,4 +19,3 @@ func (d *DisputeNotification1Choice) AddSegregatedIndependentAmountDisputeDetail
 	d.SegregatedIndependentAmountDisputeDetails = new(SegregatedIndependentAmountDispute1)
 	return d.SegregatedIndependentAmountDisputeDetails
 }
-

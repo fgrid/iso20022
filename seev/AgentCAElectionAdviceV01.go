@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.012.001.01 Document"`
+	XMLName xml.Name                  `xml:"urn:iso:std:iso:20022:tech:xsd:seev.012.001.01 Document"`
 	Message *AgentCAElectionAdviceV01 `xml:"AgtCAElctnAdvc"`
 }
 
@@ -43,9 +43,7 @@ type AgentCAElectionAdviceV01 struct {
 
 	// Contact responsible for the transaction identified in the message.
 	ContactDetails *iso20022.ContactPerson1 `xml:"CtctDtls,omitempty"`
-
 }
-
 
 func (a *AgentCAElectionAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -76,4 +74,3 @@ func (a *AgentCAElectionAdviceV01) AddContactDetails() *iso20022.ContactPerson1 
 	a.ContactDetails = new(iso20022.ContactPerson1)
 	return a.ContactDetails
 }
-

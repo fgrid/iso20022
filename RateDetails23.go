@@ -59,9 +59,7 @@ type RateDetails23 struct {
 
 	// Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.
 	EqualisationRate *ActiveCurrencyAnd13DecimalAmount `xml:"EqulstnRate,omitempty"`
-
 }
-
 
 func (r *RateDetails23) AddAdditionalTax() *RateAndAmountFormat39Choice {
 	r.AdditionalTax = new(RateAndAmountFormat39Choice)
@@ -83,7 +81,7 @@ func (r *RateDetails23) AddFullyFrankedRate() *RateAndAmountFormat39Choice {
 }
 
 func (r *RateDetails23) AddGrossDividendRate() *GrossDividendRateFormat22Choice {
-	newValue := new (GrossDividendRateFormat22Choice)
+	newValue := new(GrossDividendRateFormat22Choice)
 	r.GrossDividendRate = append(r.GrossDividendRate, newValue)
 	return newValue
 }
@@ -99,13 +97,13 @@ func (r *RateDetails23) AddThirdPartyIncentiveRate() *RateAndAmountFormat39Choic
 }
 
 func (r *RateDetails23) AddInterestRateUsedForPayment() *InterestRateUsedForPaymentFormat7Choice {
-	newValue := new (InterestRateUsedForPaymentFormat7Choice)
+	newValue := new(InterestRateUsedForPaymentFormat7Choice)
 	r.InterestRateUsedForPayment = append(r.InterestRateUsedForPayment, newValue)
 	return newValue
 }
 
 func (r *RateDetails23) AddNetDividendRate() *NetDividendRateFormat24Choice {
-	newValue := new (NetDividendRateFormat24Choice)
+	newValue := new(NetDividendRateFormat24Choice)
 	r.NetDividendRate = append(r.NetDividendRate, newValue)
 	return newValue
 }
@@ -125,19 +123,19 @@ func (r *RateDetails23) AddSolicitationFeeRate() *SolicitationFeeRateFormat8Choi
 }
 
 func (r *RateDetails23) AddTaxCreditRate() *TaxCreditRateFormat7Choice {
-	newValue := new (TaxCreditRateFormat7Choice)
+	newValue := new(TaxCreditRateFormat7Choice)
 	r.TaxCreditRate = append(r.TaxCreditRate, newValue)
 	return newValue
 }
 
 func (r *RateDetails23) AddWithholdingTaxRate() *RateAndAmountFormat40Choice {
-	newValue := new (RateAndAmountFormat40Choice)
+	newValue := new(RateAndAmountFormat40Choice)
 	r.WithholdingTaxRate = append(r.WithholdingTaxRate, newValue)
 	return newValue
 }
 
 func (r *RateDetails23) AddSecondLevelTax() *RateAndAmountFormat40Choice {
-	newValue := new (RateAndAmountFormat40Choice)
+	newValue := new(RateAndAmountFormat40Choice)
 	r.SecondLevelTax = append(r.SecondLevelTax, newValue)
 	return newValue
 }
@@ -158,4 +156,3 @@ func (r *RateDetails23) SetTaxReclaimRate(value string) {
 func (r *RateDetails23) SetEqualisationRate(value, currency string) {
 	r.EqualisationRate = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

@@ -8,9 +8,7 @@ type DiscountAmountType1Choice struct {
 
 	// Specifies the amount type, in a free-text form.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (d *DiscountAmountType1Choice) SetCode(value string) {
 	d.Code = (*ExternalDiscountAmountType1Code)(&value)
@@ -19,4 +17,3 @@ func (d *DiscountAmountType1Choice) SetCode(value string) {
 func (d *DiscountAmountType1Choice) SetProprietary(value string) {
 	d.Proprietary = (*Max35Text)(&value)
 }
-

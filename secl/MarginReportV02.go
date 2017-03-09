@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:secl.005.001.02 Document"`
+	XMLName xml.Name         `xml:"urn:iso:std:iso:20022:tech:xsd:secl.005.001.02 Document"`
 	Message *MarginReportV02 `xml:"MrgnRpt"`
 }
 
@@ -21,9 +21,9 @@ func (d *Document00500102) AddMessage() *MarginReportV02 {
 // - the exposure resulting from the trade positions
 // - the value of the collateral held by the CCP (market value of this collateral) and
 // - the resulting difference representing the risk encountered by the CCP.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // There are four possibilities to report the above information. Indeed, the margin report may be structured as follows:
 // - per clearing member: the report will only show the information for the clearing member, or
@@ -47,11 +47,9 @@ type MarginReportV02 struct {
 	// Provides the margin report details.
 	ReportDetails []*iso20022.MarginReport2 `xml:"RptDtls"`
 
-	// Additional information that can't be captured in the structured fields and/or any other specific block. 
+	// Additional information that can't be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MarginReportV02) AddReportParameters() *iso20022.ReportParameters3 {
 	m.ReportParameters = new(iso20022.ReportParameters3)
@@ -74,14 +72,13 @@ func (m *MarginReportV02) AddReportSummary() *iso20022.MarginCalculation1 {
 }
 
 func (m *MarginReportV02) AddReportDetails() *iso20022.MarginReport2 {
-	newValue := new (iso20022.MarginReport2)
+	newValue := new(iso20022.MarginReport2)
 	m.ReportDetails = append(m.ReportDetails, newValue)
 	return newValue
 }
 
 func (m *MarginReportV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

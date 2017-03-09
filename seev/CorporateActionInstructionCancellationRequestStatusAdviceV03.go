@@ -7,7 +7,7 @@ import (
 )
 
 type Document04100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.041.001.03 Document"`
+	XMLName xml.Name                                                      `xml:"urn:iso:std:iso:20022:tech:xsd:seev.041.001.03 Document"`
 	Message *CorporateActionInstructionCancellationRequestStatusAdviceV03 `xml:"CorpActnInstrCxlReqStsAdvc"`
 }
 
@@ -49,9 +49,7 @@ type CorporateActionInstructionCancellationRequestStatusAdviceV03 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddInstructionCancellationRequestIdentification() *iso20022.DocumentIdentification9 {
 	c.InstructionCancellationRequestIdentification = new(iso20022.DocumentIdentification9)
@@ -59,7 +57,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddInstru
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddOtherDocumentIdentification() *iso20022.DocumentIdentification14 {
-	newValue := new (iso20022.DocumentIdentification14)
+	newValue := new(iso20022.DocumentIdentification14)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
@@ -70,7 +68,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddCorpor
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddInstructionCancellationRequestStatus() *iso20022.InstructionCancellationRequestStatus5Choice {
-	newValue := new (iso20022.InstructionCancellationRequestStatus5Choice)
+	newValue := new(iso20022.InstructionCancellationRequestStatus5Choice)
 	c.InstructionCancellationRequestStatus = append(c.InstructionCancellationRequestStatus, newValue)
 	return newValue
 }
@@ -86,8 +84,7 @@ func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddAdditi
 }
 
 func (c *CorporateActionInstructionCancellationRequestStatusAdviceV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

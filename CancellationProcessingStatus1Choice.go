@@ -8,9 +8,7 @@ type CancellationProcessingStatus1Choice struct {
 
 	// Provides the status of a cancellation request.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (c *CancellationProcessingStatus1Choice) SetCode(value string) {
 	c.Code = (*CancellationProcessingStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CancellationProcessingStatus1Choice) AddProprietary() *GenericIdentific
 	c.Proprietary = new(GenericIdentification20)
 	return c.Proprietary
 }
-

@@ -14,9 +14,7 @@ type TransactionVerificationResult4 struct {
 
 	// Additional result of the verification.
 	AdditionalResult *Max500Text `xml:"AddtlRslt,omitempty"`
-
 }
-
 
 func (t *TransactionVerificationResult4) SetMethod(value string) {
 	t.Method = (*AuthenticationMethod6Code)(&value)
@@ -33,4 +31,3 @@ func (t *TransactionVerificationResult4) SetResult(value string) {
 func (t *TransactionVerificationResult4) SetAdditionalResult(value string) {
 	t.AdditionalResult = (*Max500Text)(&value)
 }
-

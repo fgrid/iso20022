@@ -8,9 +8,7 @@ type AdditionalStatus2 struct {
 
 	// Additional information about the reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (a *AdditionalStatus2) AddReason() *CancellationRejectionStatus1Choice {
 	a.Reason = new(CancellationRejectionStatus1Choice)
@@ -20,4 +18,3 @@ func (a *AdditionalStatus2) AddReason() *CancellationRejectionStatus1Choice {
 func (a *AdditionalStatus2) SetAdditionalInformation(value string) {
 	a.AdditionalInformation = (*Max350Text)(&value)
 }
-

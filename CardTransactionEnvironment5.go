@@ -13,9 +13,7 @@ type CardTransactionEnvironment5 struct {
 
 	// Institution in charge of the settlement of the transaction.
 	SettlementInstitution *GenericIdentification73 `xml:"SttlmInstn"`
-
 }
-
 
 func (c *CardTransactionEnvironment5) AddSendingInstitution() *GenericIdentification73 {
 	c.SendingInstitution = new(GenericIdentification73)
@@ -31,4 +29,3 @@ func (c *CardTransactionEnvironment5) AddSettlementInstitution() *GenericIdentif
 	c.SettlementInstitution = new(GenericIdentification73)
 	return c.SettlementInstitution
 }
-

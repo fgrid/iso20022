@@ -29,9 +29,7 @@ type SettlementTypeAndAdditionalParameters9 struct {
 
 	// Unique identification assigned to the instruction by the triparty agent.
 	TripartyCollateralInstructionIdentification *Max35Text `xml:"TrptyCollInstrId,omitempty"`
-
 }
-
 
 func (s *SettlementTypeAndAdditionalParameters9) SetSecuritiesMovementType(value string) {
 	s.SecuritiesMovementType = (*ReceiveDelivery1Code)(&value)
@@ -68,4 +66,3 @@ func (s *SettlementTypeAndAdditionalParameters9) SetTripartyAgentCollateralTrans
 func (s *SettlementTypeAndAdditionalParameters9) SetTripartyCollateralInstructionIdentification(value string) {
 	s.TripartyCollateralInstructionIdentification = (*Max35Text)(&value)
 }
-

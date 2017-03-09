@@ -14,9 +14,7 @@ type RemittanceInformation8 struct {
 
 	// Set of elements used to provide information on the original transactions, to which the remittance message refers.
 	OriginalPaymentInformation *OriginalPaymentInformation6 `xml:"OrgnlPmtInf"`
-
 }
-
 
 func (r *RemittanceInformation8) SetRemittanceIdentification(value string) {
 	r.RemittanceIdentification = (*Max35Text)(&value)
@@ -27,7 +25,7 @@ func (r *RemittanceInformation8) AddUnstructured(value string) {
 }
 
 func (r *RemittanceInformation8) AddStructured() *StructuredRemittanceInformation10 {
-	newValue := new (StructuredRemittanceInformation10)
+	newValue := new(StructuredRemittanceInformation10)
 	r.Structured = append(r.Structured, newValue)
 	return newValue
 }
@@ -36,4 +34,3 @@ func (r *RemittanceInformation8) AddOriginalPaymentInformation() *OriginalPaymen
 	r.OriginalPaymentInformation = new(OriginalPaymentInformation6)
 	return r.OriginalPaymentInformation
 }
-

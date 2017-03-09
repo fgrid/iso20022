@@ -17,9 +17,7 @@ type Unit1 struct {
 
 	// Information related to the price of the transferred units.
 	PriceDetails *UnitPrice3 `xml:"PricDtls,omitempty"`
-
 }
-
 
 func (u *Unit1) AddUnitsNumber() *FinancialInstrumentQuantity1 {
 	u.UnitsNumber = new(FinancialInstrumentQuantity1)
@@ -42,4 +40,3 @@ func (u *Unit1) AddPriceDetails() *UnitPrice3 {
 	u.PriceDetails = new(UnitPrice3)
 	return u.PriceDetails
 }
-

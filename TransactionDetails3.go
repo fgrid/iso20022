@@ -50,9 +50,7 @@ type TransactionDetails3 struct {
 
 	// Additional domestic regulatory transaction information.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TransactionDetails3) SetTradeReference(value string) {
 	t.TradeReference = (*Max70Text)(&value)
@@ -81,7 +79,7 @@ func (t *TransactionDetails3) SetSide(value string) {
 }
 
 func (t *TransactionDetails3) AddTransactionReportMarker() *PartyIdentification24Choice {
-	newValue := new (PartyIdentification24Choice)
+	newValue := new(PartyIdentification24Choice)
 	t.TransactionReportMarker = append(t.TransactionReportMarker, newValue)
 	return newValue
 }
@@ -126,4 +124,3 @@ func (t *TransactionDetails3) AddProxyHolder() *PartyIdentification2Choice {
 func (t *TransactionDetails3) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max350Text)(&value)
 }
-

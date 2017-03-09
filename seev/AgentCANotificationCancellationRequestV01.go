@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.010.001.01 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:seev.010.001.01 Document"`
 	Message *AgentCANotificationCancellationRequestV01 `xml:"AgtCANtfctnCxlReq"`
 }
 
@@ -35,9 +35,7 @@ type AgentCANotificationCancellationRequestV01 struct {
 
 	// Detailed information of the notification advice to be cancelled.
 	CorporateActionNotificationDetails *iso20022.CorporateActionNotificationAdvice1 `xml:"CorpActnNtfctnDtls,omitempty"`
-
 }
-
 
 func (a *AgentCANotificationCancellationRequestV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -58,4 +56,3 @@ func (a *AgentCANotificationCancellationRequestV01) AddCorporateActionNotificati
 	a.CorporateActionNotificationDetails = new(iso20022.CorporateActionNotificationAdvice1)
 	return a.CorporateActionNotificationDetails
 }
-

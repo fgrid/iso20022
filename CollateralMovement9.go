@@ -8,9 +8,7 @@ type CollateralMovement9 struct {
 
 	// Date by which the collateral movement must be executed.
 	Date *ISODate `xml:"Dt,omitempty"`
-
 }
-
 
 func (c *CollateralMovement9) SetCollateralType(value string) {
 	c.CollateralType = (*CollateralType1Code)(&value)
@@ -19,4 +17,3 @@ func (c *CollateralMovement9) SetCollateralType(value string) {
 func (c *CollateralMovement9) SetDate(value string) {
 	c.Date = (*ISODate)(&value)
 }
-

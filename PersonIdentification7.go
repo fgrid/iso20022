@@ -38,9 +38,7 @@ type PersonIdentification7 struct {
 
 	// Unique identification of a person, as assigned by an institution, using an identification scheme.
 	Other []*GenericIdentification4 `xml:"Othr,omitempty"`
-
 }
-
 
 func (p *PersonIdentification7) SetDriversLicenseNumber(value string) {
 	p.DriversLicenseNumber = (*Max35Text)(&value)
@@ -88,8 +86,7 @@ func (p *PersonIdentification7) AddDateAndPlaceOfBirth() *DateAndPlaceOfBirth {
 }
 
 func (p *PersonIdentification7) AddOther() *GenericIdentification4 {
-	newValue := new (GenericIdentification4)
+	newValue := new(GenericIdentification4)
 	p.Other = append(p.Other, newValue)
 	return newValue
 }
-

@@ -17,9 +17,7 @@ type StatisticsByPredefinedTimePeriods2 struct {
 
 	// Change in price over a five year period.
 	FiveYearPriceChange *PriceValueChange1 `xml:"FiveYrPricChng,omitempty"`
-
 }
-
 
 func (s *StatisticsByPredefinedTimePeriods2) AddHighestPriceValue12Months() *PriceValue5 {
 	s.HighestPriceValue12Months = new(PriceValue5)
@@ -45,4 +43,3 @@ func (s *StatisticsByPredefinedTimePeriods2) AddFiveYearPriceChange() *PriceValu
 	s.FiveYearPriceChange = new(PriceValueChange1)
 	return s.FiveYearPriceChange
 }
-

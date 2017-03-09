@@ -8,9 +8,7 @@ type NetDividendRate2 struct {
 
 	// Value expressed as an amount.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (n *NetDividendRate2) AddRateType() *NetDividendRateType1FormatChoice {
 	n.RateType = new(NetDividendRateType1FormatChoice)
@@ -20,4 +18,3 @@ func (n *NetDividendRate2) AddRateType() *NetDividendRateType1FormatChoice {
 func (n *NetDividendRate2) SetAmount(value, currency string) {
 	n.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

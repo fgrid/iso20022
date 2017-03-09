@@ -11,9 +11,7 @@ type AmountsAndValueDate1 struct {
 
 	// Date on which the trade is settled, ie, the amounts are due.
 	SettlementDate *ISODate `xml:"SttlmDt"`
-
 }
-
 
 func (a *AmountsAndValueDate1) SetTradingSideBuyAmount(value, currency string) {
 	a.TradingSideBuyAmount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -26,4 +24,3 @@ func (a *AmountsAndValueDate1) SetTradingSideSellAmount(value, currency string) 
 func (a *AmountsAndValueDate1) SetSettlementDate(value string) {
 	a.SettlementDate = (*ISODate)(&value)
 }
-

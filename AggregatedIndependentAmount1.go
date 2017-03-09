@@ -14,9 +14,7 @@ type AggregatedIndependentAmount1 struct {
 
 	// Any other amount that should be considered to calculate the independent amount.
 	OtherAmount []*IndependentAmount2 `xml:"OthrAmt,omitempty"`
-
 }
-
 
 func (a *AggregatedIndependentAmount1) AddTrade() *IndependentAmount1 {
 	a.Trade = new(IndependentAmount1)
@@ -34,8 +32,7 @@ func (a *AggregatedIndependentAmount1) AddNetOpenPosition() *IndependentAmount1 
 }
 
 func (a *AggregatedIndependentAmount1) AddOtherAmount() *IndependentAmount2 {
-	newValue := new (IndependentAmount2)
+	newValue := new(IndependentAmount2)
 	a.OtherAmount = append(a.OtherAmount, newValue)
 	return newValue
 }
-

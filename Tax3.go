@@ -20,9 +20,7 @@ type Tax3 struct {
 
 	// Reason for a tax exemption.
 	ExemptionReason *TaxExemptionReasonFormatChoice `xml:"XmptnRsn,omitempty"`
-
 }
-
 
 func (t *Tax3) AddType() *TaxTypeFormat2Choice {
 	t.Type = new(TaxTypeFormat2Choice)
@@ -50,4 +48,3 @@ func (t *Tax3) AddExemptionReason() *TaxExemptionReasonFormatChoice {
 	t.ExemptionReason = new(TaxExemptionReasonFormatChoice)
 	return t.ExemptionReason
 }
-

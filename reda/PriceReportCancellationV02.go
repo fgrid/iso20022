@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:reda.002.001.02 Document"`
+	XMLName xml.Name                    `xml:"urn:iso:std:iso:20022:tech:xsd:reda.002.001.02 Document"`
 	Message *PriceReportCancellationV02 `xml:"reda.002.001.02"`
 }
 
@@ -32,9 +32,7 @@ type PriceReportCancellationV02 struct {
 
 	// Common information related to all the price reports to be cancelled.
 	PriceReportToBeCancelled *iso20022.PriceReport1 `xml:"PricRptToBeCanc,omitempty"`
-
 }
-
 
 func (p *PriceReportCancellationV02) AddPoolReference() *iso20022.AdditionalReference3 {
 	p.PoolReference = new(iso20022.AdditionalReference3)
@@ -50,4 +48,3 @@ func (p *PriceReportCancellationV02) AddPriceReportToBeCancelled() *iso20022.Pri
 	p.PriceReportToBeCancelled = new(iso20022.PriceReport1)
 	return p.PriceReportToBeCancelled
 }
-

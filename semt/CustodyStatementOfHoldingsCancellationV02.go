@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.004.001.02 Document"`
+	XMLName xml.Name                                   `xml:"urn:iso:std:iso:20022:tech:xsd:semt.004.001.02 Document"`
 	Message *CustodyStatementOfHoldingsCancellationV02 `xml:"CtdyStmtOfHldgsCxlV02"`
 }
 
@@ -37,9 +37,7 @@ type CustodyStatementOfHoldingsCancellationV02 struct {
 
 	// The Custody Statement of Holdings message to cancel.
 	StatementToBeCancelled *iso20022.CustodyStatementOfHoldings2 `xml:"StmtToBeCanc,omitempty"`
-
 }
-
 
 func (c *CustodyStatementOfHoldingsCancellationV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	c.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -65,4 +63,3 @@ func (c *CustodyStatementOfHoldingsCancellationV02) AddStatementToBeCancelled() 
 	c.StatementToBeCancelled = new(iso20022.CustodyStatementOfHoldings2)
 	return c.StatementToBeCancelled
 }
-

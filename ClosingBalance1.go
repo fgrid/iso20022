@@ -8,9 +8,7 @@ type ClosingBalance1 struct {
 
 	// Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).
 	ClosingBalance *ClosingBalance1Choice `xml:"ClsgBal"`
-
 }
-
 
 func (c *ClosingBalance1) SetShortLongIndicator(value string) {
 	c.ShortLongIndicator = (*ShortLong1Code)(&value)
@@ -20,4 +18,3 @@ func (c *ClosingBalance1) AddClosingBalance() *ClosingBalance1Choice {
 	c.ClosingBalance = new(ClosingBalance1Choice)
 	return c.ClosingBalance
 }
-

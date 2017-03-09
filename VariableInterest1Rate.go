@@ -8,9 +8,7 @@ type VariableInterest1Rate struct {
 
 	// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
 	BasisPointSpread *Number `xml:"BsisPtSprd,omitempty"`
-
 }
-
 
 func (v *VariableInterest1Rate) SetIndex(value string) {
 	v.Index = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (v *VariableInterest1Rate) SetIndex(value string) {
 func (v *VariableInterest1Rate) SetBasisPointSpread(value string) {
 	v.BasisPointSpread = (*Number)(&value)
 }
-

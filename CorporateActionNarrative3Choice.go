@@ -8,9 +8,7 @@ type CorporateActionNarrative3Choice struct {
 
 	// Proprietary identification of the narrative type of the message.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionNarrative3Choice) SetCode(value string) {
 	c.Code = (*CorporateActionNarrative1Code)(&value)
@@ -20,4 +18,3 @@ func (c *CorporateActionNarrative3Choice) AddProprietary() *GenericIdentificatio
 	c.Proprietary = new(GenericIdentification30)
 	return c.Proprietary
 }
-

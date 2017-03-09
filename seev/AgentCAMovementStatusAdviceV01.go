@@ -7,7 +7,7 @@ import (
 )
 
 type Document02200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.022.001.01 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:seev.022.001.01 Document"`
 	Message *AgentCAMovementStatusAdviceV01 `xml:"AgtCAMvmntStsAdvc"`
 }
 
@@ -55,9 +55,7 @@ type AgentCAMovementStatusAdviceV01 struct {
 
 	// Status of the movement cancellation request.
 	MovementCancellationStatusDetails *iso20022.CorporateMovementStatus2 `xml:"MvmntCxlStsDtls"`
-
 }
-
 
 func (a *AgentCAMovementStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -98,4 +96,3 @@ func (a *AgentCAMovementStatusAdviceV01) AddMovementCancellationStatusDetails() 
 	a.MovementCancellationStatusDetails = new(iso20022.CorporateMovementStatus2)
 	return a.MovementCancellationStatusDetails
 }
-

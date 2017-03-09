@@ -8,9 +8,7 @@ type PaymentSchedule1Choice struct {
 
 	// Specifies a payment sub-schedule, that is the amount of money that must be paid no sooner than the expected date and no later than the latest shipment date.
 	SubSchedule []*PaymentDateRange2 `xml:"SubSchdl"`
-
 }
-
 
 func (p *PaymentSchedule1Choice) AddDateRange() *PaymentDateRange1 {
 	p.DateRange = new(PaymentDateRange1)
@@ -18,8 +16,7 @@ func (p *PaymentSchedule1Choice) AddDateRange() *PaymentDateRange1 {
 }
 
 func (p *PaymentSchedule1Choice) AddSubSchedule() *PaymentDateRange2 {
-	newValue := new (PaymentDateRange2)
+	newValue := new(PaymentDateRange2)
 	p.SubSchedule = append(p.SubSchedule, newValue)
 	return newValue
 }
-

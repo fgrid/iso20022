@@ -20,12 +20,10 @@ type StructuredRemittanceInformation8 struct {
 
 	// Additional information, in free text form, to complement the structured remittance information.
 	AdditionalRemittanceInformation []*Max140Text `xml:"AddtlRmtInf,omitempty"`
-
 }
 
-
 func (s *StructuredRemittanceInformation8) AddReferredDocumentInformation() *ReferredDocumentInformation3 {
-	newValue := new (ReferredDocumentInformation3)
+	newValue := new(ReferredDocumentInformation3)
 	s.ReferredDocumentInformation = append(s.ReferredDocumentInformation, newValue)
 	return newValue
 }
@@ -53,4 +51,3 @@ func (s *StructuredRemittanceInformation8) AddInvoicee() *PartyIdentification43 
 func (s *StructuredRemittanceInformation8) AddAdditionalRemittanceInformation(value string) {
 	s.AdditionalRemittanceInformation = append(s.AdditionalRemittanceInformation, (*Max140Text)(&value))
 }
-

@@ -7,11 +7,11 @@ type AccountReport16 struct {
 	Identification *Max35Text `xml:"Id"`
 
 	// Provides details on the page number of the report.
-	// 
+	//
 	// Usage: The pagination of the report is only allowed when agreed between the parties.
 	ReportPagination *Pagination `xml:"RptPgntn,omitempty"`
 
-	// Sequential number of the report, as assigned by the account servicer. 
+	// Sequential number of the report, as assigned by the account servicer.
 	// Usage: The sequential number is increased incrementally for each report sent electronically.
 	ElectronicSequenceNumber *Number `xml:"ElctrncSeqNb,omitempty"`
 
@@ -51,9 +51,7 @@ type AccountReport16 struct {
 
 	// Further details of the account report.
 	AdditionalReportInformation *Max500Text `xml:"AddtlRptInf,omitempty"`
-
 }
-
 
 func (a *AccountReport16) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -101,13 +99,13 @@ func (a *AccountReport16) AddRelatedAccount() *CashAccount24 {
 }
 
 func (a *AccountReport16) AddInterest() *AccountInterest3 {
-	newValue := new (AccountInterest3)
+	newValue := new(AccountInterest3)
 	a.Interest = append(a.Interest, newValue)
 	return newValue
 }
 
 func (a *AccountReport16) AddBalance() *CashBalance3 {
-	newValue := new (CashBalance3)
+	newValue := new(CashBalance3)
 	a.Balance = append(a.Balance, newValue)
 	return newValue
 }
@@ -118,7 +116,7 @@ func (a *AccountReport16) AddTransactionsSummary() *TotalTransactions4 {
 }
 
 func (a *AccountReport16) AddEntry() *ReportEntry4 {
-	newValue := new (ReportEntry4)
+	newValue := new(ReportEntry4)
 	a.Entry = append(a.Entry, newValue)
 	return newValue
 }
@@ -126,4 +124,3 @@ func (a *AccountReport16) AddEntry() *ReportEntry4 {
 func (a *AccountReport16) SetAdditionalReportInformation(value string) {
 	a.AdditionalReportInformation = (*Max500Text)(&value)
 }
-

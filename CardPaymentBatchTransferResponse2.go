@@ -8,19 +8,16 @@ type CardPaymentBatchTransferResponse2 struct {
 
 	// Information related to the previously sent set of transaction.
 	DataSet []*CardPaymentDataSet9 `xml:"DataSet,omitempty"`
-
 }
 
-
 func (c *CardPaymentBatchTransferResponse2) AddTransactionTotals() *TransactionTotals2 {
-	newValue := new (TransactionTotals2)
+	newValue := new(TransactionTotals2)
 	c.TransactionTotals = append(c.TransactionTotals, newValue)
 	return newValue
 }
 
 func (c *CardPaymentBatchTransferResponse2) AddDataSet() *CardPaymentDataSet9 {
-	newValue := new (CardPaymentDataSet9)
+	newValue := new(CardPaymentDataSet9)
 	c.DataSet = append(c.DataSet, newValue)
 	return newValue
 }
-

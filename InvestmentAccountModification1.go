@@ -14,9 +14,7 @@ type InvestmentAccountModification1 struct {
 
 	// Unambiguous identification of the transfer as allocated by the counterparty.
 	CounterpartyReference *AdditionalReference2 `xml:"CtrPtyRef,omitempty"`
-
 }
-
 
 func (i *InvestmentAccountModification1) SetModificationReason(value string) {
 	i.ModificationReason = (*Max350Text)(&value)
@@ -34,4 +32,3 @@ func (i *InvestmentAccountModification1) AddCounterpartyReference() *AdditionalR
 	i.CounterpartyReference = new(AdditionalReference2)
 	return i.CounterpartyReference
 }
-

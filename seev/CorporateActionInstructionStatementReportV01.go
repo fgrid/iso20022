@@ -7,7 +7,7 @@ import (
 )
 
 type Document04200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.042.001.01 Document"`
+	XMLName xml.Name                                      `xml:"urn:iso:std:iso:20022:tech:xsd:seev.042.001.01 Document"`
 	Message *CorporateActionInstructionStatementReportV01 `xml:"CorpActnInstrStmtRpt"`
 }
 
@@ -47,9 +47,7 @@ type CorporateActionInstructionStatementReportV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionStatementReportV01) AddIdentification() *iso20022.DocumentIdentification11 {
 	c.Identification = new(iso20022.DocumentIdentification11)
@@ -67,7 +65,7 @@ func (c *CorporateActionInstructionStatementReportV01) AddStatementGeneralDetail
 }
 
 func (c *CorporateActionInstructionStatementReportV01) AddAccountAndStatementDetails() *iso20022.AccountIdentification6 {
-	newValue := new (iso20022.AccountIdentification6)
+	newValue := new(iso20022.AccountIdentification6)
 	c.AccountAndStatementDetails = append(c.AccountAndStatementDetails, newValue)
 	return newValue
 }
@@ -83,8 +81,7 @@ func (c *CorporateActionInstructionStatementReportV01) AddMessageRecipient() *is
 }
 
 func (c *CorporateActionInstructionStatementReportV01) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	c.Extension = append(c.Extension, newValue)
 	return newValue
 }
-

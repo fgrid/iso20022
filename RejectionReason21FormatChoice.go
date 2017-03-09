@@ -8,9 +8,7 @@ type RejectionReason21FormatChoice struct {
 
 	// Provides the interest rejection reason using a proprietary code.
 	Proprietary *GenericIdentification30 `xml:"Prtry"`
-
 }
-
 
 func (r *RejectionReason21FormatChoice) SetCode(value string) {
 	r.Code = (*InterestRejectionReason1Code)(&value)
@@ -20,4 +18,3 @@ func (r *RejectionReason21FormatChoice) AddProprietary() *GenericIdentification3
 	r.Proprietary = new(GenericIdentification30)
 	return r.Proprietary
 }
-

@@ -11,9 +11,7 @@ type ATMWithdrawalRequest1 struct {
 
 	// Withdrawal transaction for which the authorisation is requested.
 	Transaction *ATMTransaction1 `xml:"Tx"`
-
 }
-
 
 func (a *ATMWithdrawalRequest1) AddEnvironment() *ATMEnvironment1 {
 	a.Environment = new(ATMEnvironment1)
@@ -29,4 +27,3 @@ func (a *ATMWithdrawalRequest1) AddTransaction() *ATMTransaction1 {
 	a.Transaction = new(ATMTransaction1)
 	return a.Transaction
 }
-

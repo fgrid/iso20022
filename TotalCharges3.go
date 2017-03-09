@@ -8,17 +8,14 @@ type TotalCharges3 struct {
 
 	// Information related to a specific charge.
 	ChargeDetails []*Charge18 `xml:"ChrgDtls"`
-
 }
-
 
 func (t *TotalCharges3) SetTotalAmountOfCharges(value, currency string) {
 	t.TotalAmountOfCharges = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
 
 func (t *TotalCharges3) AddChargeDetails() *Charge18 {
-	newValue := new (Charge18)
+	newValue := new(Charge18)
 	t.ChargeDetails = append(t.ChargeDetails, newValue)
 	return newValue
 }
-

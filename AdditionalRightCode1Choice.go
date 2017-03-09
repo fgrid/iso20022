@@ -8,9 +8,7 @@ type AdditionalRightCode1Choice struct {
 
 	// This code can be used in case another reason is required.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (a *AdditionalRightCode1Choice) SetCode(value string) {
 	a.Code = (*AdditionalRight1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AdditionalRightCode1Choice) AddProprietary() *GenericIdentification13 {
 	a.Proprietary = new(GenericIdentification13)
 	return a.Proprietary
 }
-

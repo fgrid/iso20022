@@ -14,9 +14,7 @@ type BillingServiceParameters2 struct {
 
 	// Amount of the calculated charge expressed in the pricing currency, exclusive of any tax.
 	ServiceChargeAmount *AmountAndDirection34 `xml:"SvcChrgAmt"`
-
 }
-
 
 func (b *BillingServiceParameters2) AddBankService() *BillingServiceIdentification2 {
 	b.BankService = new(BillingServiceIdentification2)
@@ -36,4 +34,3 @@ func (b *BillingServiceParameters2) AddServiceChargeAmount() *AmountAndDirection
 	b.ServiceChargeAmount = new(AmountAndDirection34)
 	return b.ServiceChargeAmount
 }
-

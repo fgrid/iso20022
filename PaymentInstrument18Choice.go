@@ -14,9 +14,7 @@ type PaymentInstrument18Choice struct {
 
 	// Indicates whether the payment is done via draft.
 	BankersDraft *YesNoIndicator `xml:"BkrsDrft"`
-
 }
-
 
 func (p *PaymentInstrument18Choice) AddPaymentCardDetails() *PaymentCard18 {
 	p.PaymentCardDetails = new(PaymentCard18)
@@ -35,4 +33,3 @@ func (p *PaymentInstrument18Choice) SetCheque(value string) {
 func (p *PaymentInstrument18Choice) SetBankersDraft(value string) {
 	p.BankersDraft = (*YesNoIndicator)(&value)
 }
-

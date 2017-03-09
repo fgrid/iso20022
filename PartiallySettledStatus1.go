@@ -14,9 +14,7 @@ type PartiallySettledStatus1 struct {
 
 	// Additional information about the partially settled status reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PartiallySettledStatus1) SetReason(value string) {
 	p.Reason = (*SettledStatusReason1Code)(&value)
@@ -34,4 +32,3 @@ func (p *PartiallySettledStatus1) AddDataSourceScheme() *GenericIdentification1 
 func (p *PartiallySettledStatus1) SetAdditionalInformation(value string) {
 	p.AdditionalInformation = (*Max350Text)(&value)
 }
-

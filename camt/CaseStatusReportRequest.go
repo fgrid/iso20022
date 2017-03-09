@@ -7,7 +7,7 @@ import (
 )
 
 type Document03800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.038.001.01 Document"`
+	XMLName xml.Name                 `xml:"urn:iso:std:iso:20022:tech:xsd:camt.038.001.01 Document"`
 	Message *CaseStatusReportRequest `xml:"camt.038.001.01"`
 }
 
@@ -36,9 +36,7 @@ type CaseStatusReportRequest struct {
 
 	// Identifies the case.
 	Case *iso20022.Case `xml:"Case"`
-
 }
-
 
 func (c *CaseStatusReportRequest) AddRequestHeader() *iso20022.ReportHeader {
 	c.RequestHeader = new(iso20022.ReportHeader)
@@ -49,4 +47,3 @@ func (c *CaseStatusReportRequest) AddCase() *iso20022.Case {
 	c.Case = new(iso20022.Case)
 	return c.Case
 }
-

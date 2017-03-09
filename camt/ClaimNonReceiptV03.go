@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.027.001.03 Document"`
+	XMLName xml.Name            `xml:"urn:iso:std:iso:20022:tech:xsd:camt.027.001.03 Document"`
 	Message *ClaimNonReceiptV03 `xml:"ClmNonRct"`
 }
 
@@ -46,9 +46,7 @@ type ClaimNonReceiptV03 struct {
 
 	// Provides the cover related information of a claim non receipt investigation. The absence of the component means that the message is not a cover related investigation.
 	CoverDetails *iso20022.MissingCover2 `xml:"CoverDtls,omitempty"`
-
 }
-
 
 func (c *ClaimNonReceiptV03) AddAssignment() *iso20022.CaseAssignment2 {
 	c.Assignment = new(iso20022.CaseAssignment2)
@@ -69,4 +67,3 @@ func (c *ClaimNonReceiptV03) AddCoverDetails() *iso20022.MissingCover2 {
 	c.CoverDetails = new(iso20022.MissingCover2)
 	return c.CoverDetails
 }
-

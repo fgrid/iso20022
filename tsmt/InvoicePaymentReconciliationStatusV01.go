@@ -7,7 +7,7 @@ import (
 )
 
 type Document05400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.054.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.054.001.01 Document"`
 	Message *InvoicePaymentReconciliationStatusV01 `xml:"InvcPmtRcncltnSts"`
 }
 
@@ -39,9 +39,7 @@ type InvoicePaymentReconciliationStatusV01 struct {
 
 	// Referenced or related business message.
 	AttachedMessage []*iso20022.EncapsulatedBusinessMessage1 `xml:"AttchdMsg,omitempty"`
-
 }
-
 
 func (i *InvoicePaymentReconciliationStatusV01) AddHeader() *iso20022.BusinessLetter1 {
 	i.Header = new(iso20022.BusinessLetter1)
@@ -49,7 +47,7 @@ func (i *InvoicePaymentReconciliationStatusV01) AddHeader() *iso20022.BusinessLe
 }
 
 func (i *InvoicePaymentReconciliationStatusV01) AddReconciliationList() *iso20022.ReconciliationList1 {
-	newValue := new (iso20022.ReconciliationList1)
+	newValue := new(iso20022.ReconciliationList1)
 	i.ReconciliationList = append(i.ReconciliationList, newValue)
 	return newValue
 }
@@ -67,8 +65,7 @@ func (i *InvoicePaymentReconciliationStatusV01) SetControlSum(value string) {
 }
 
 func (i *InvoicePaymentReconciliationStatusV01) AddAttachedMessage() *iso20022.EncapsulatedBusinessMessage1 {
-	newValue := new (iso20022.EncapsulatedBusinessMessage1)
+	newValue := new(iso20022.EncapsulatedBusinessMessage1)
 	i.AttachedMessage = append(i.AttachedMessage, newValue)
 	return newValue
 }
-

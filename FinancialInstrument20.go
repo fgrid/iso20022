@@ -38,9 +38,7 @@ type FinancialInstrument20 struct {
 
 	// Indicates whether the investment fund class is subject to the European Union Saving Directive.
 	EUSavingsDirective *EUSavingsDirective1Code `xml:"EUSvgsDrctv"`
-
 }
-
 
 func (f *FinancialInstrument20) SetPhysicalBearerSecurities(value string) {
 	f.PhysicalBearerSecurities = (*YesNoIndicator)(&value)
@@ -89,4 +87,3 @@ func (f *FinancialInstrument20) SetSwitchFee(value string) {
 func (f *FinancialInstrument20) SetEUSavingsDirective(value string) {
 	f.EUSavingsDirective = (*EUSavingsDirective1Code)(&value)
 }
-

@@ -8,9 +8,7 @@ type InvestmentAccountCategory1Choice struct {
 
 	// Category of investment account expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (i *InvestmentAccountCategory1Choice) SetCode(value string) {
 	i.Code = (*InvestmentAccountCategory1Code)(&value)
@@ -20,4 +18,3 @@ func (i *InvestmentAccountCategory1Choice) AddProprietary() *GenericIdentificati
 	i.Proprietary = new(GenericIdentification47)
 	return i.Proprietary
 }
-

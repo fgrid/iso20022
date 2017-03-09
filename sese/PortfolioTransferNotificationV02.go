@@ -7,7 +7,7 @@ import (
 )
 
 type Document03700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.037.001.02 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:sese.037.001.02 Document"`
 	Message *PortfolioTransferNotificationV02 `xml:"PrtflTrfNtfctn"`
 }
 
@@ -44,9 +44,7 @@ type PortfolioTransferNotificationV02 struct {
 
 	// Details of transfer.
 	TransferNotificationDetails []*iso20022.SecuritiesTradeDetails19 `xml:"TrfNtfctnDtls,omitempty"`
-
 }
-
 
 func (p *PortfolioTransferNotificationV02) AddPagination() *iso20022.Pagination {
 	p.Pagination = new(iso20022.Pagination)
@@ -69,8 +67,7 @@ func (p *PortfolioTransferNotificationV02) AddSafekeepingAccount() *iso20022.Sec
 }
 
 func (p *PortfolioTransferNotificationV02) AddTransferNotificationDetails() *iso20022.SecuritiesTradeDetails19 {
-	newValue := new (iso20022.SecuritiesTradeDetails19)
+	newValue := new(iso20022.SecuritiesTradeDetails19)
 	p.TransferNotificationDetails = append(p.TransferNotificationDetails, newValue)
 	return newValue
 }
-

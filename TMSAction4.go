@@ -59,9 +59,7 @@ type TMSAction4 struct {
 
 	// Additional information about the maintenance action.
 	AdditionalInformation []*Max3000Binary `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TMSAction4) SetType(value string) {
 	t.Type = (*TerminalManagementAction1Code)(&value)
@@ -138,7 +136,7 @@ func (t *TMSAction4) AddKeyEnciphermentCertificate(value string) {
 }
 
 func (t *TMSAction4) AddErrorAction() *ErrorAction2 {
-	newValue := new (ErrorAction2)
+	newValue := new(ErrorAction2)
 	t.ErrorAction = append(t.ErrorAction, newValue)
 	return newValue
 }
@@ -146,4 +144,3 @@ func (t *TMSAction4) AddErrorAction() *ErrorAction2 {
 func (t *TMSAction4) AddAdditionalInformation(value string) {
 	t.AdditionalInformation = append(t.AdditionalInformation, (*Max3000Binary)(&value))
 }
-

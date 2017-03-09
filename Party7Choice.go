@@ -8,9 +8,7 @@ type Party7Choice struct {
 
 	// Identification of a financial institution.
 	Agent *BranchAndFinancialInstitutionIdentification4 `xml:"Agt"`
-
 }
-
 
 func (p *Party7Choice) AddParty() *PartyIdentification32 {
 	p.Party = new(PartyIdentification32)
@@ -21,4 +19,3 @@ func (p *Party7Choice) AddAgent() *BranchAndFinancialInstitutionIdentification4 
 	p.Agent = new(BranchAndFinancialInstitutionIdentification4)
 	return p.Agent
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.028.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:camt.028.001.01 Document"`
 	Message *AdditionalPaymentInformation `xml:"camt.028.001.01"`
 }
 
@@ -40,9 +40,7 @@ type AdditionalPaymentInformation struct {
 
 	// Additional information to the underlying payment instruction.
 	Information *iso20022.PaymentComplementaryInformation `xml:"Inf"`
-
 }
-
 
 func (a *AdditionalPaymentInformation) AddAssignment() *iso20022.CaseAssignment {
 	a.Assignment = new(iso20022.CaseAssignment)
@@ -63,4 +61,3 @@ func (a *AdditionalPaymentInformation) AddInformation() *iso20022.PaymentComplem
 	a.Information = new(iso20022.PaymentComplementaryInformation)
 	return a.Information
 }
-

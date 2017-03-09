@@ -14,9 +14,7 @@ type FinancialInstrumentQuantity20Choice struct {
 
 	// Quantity expressed as a code.
 	Code *Quantity5Code `xml:"Cd"`
-
 }
-
 
 func (f *FinancialInstrumentQuantity20Choice) SetUnit(value string) {
 	f.Unit = (*DecimalNumber)(&value)
@@ -33,4 +31,3 @@ func (f *FinancialInstrumentQuantity20Choice) SetAmortisedValue(value, currency 
 func (f *FinancialInstrumentQuantity20Choice) SetCode(value string) {
 	f.Code = (*Quantity5Code)(&value)
 }
-

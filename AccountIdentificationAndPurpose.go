@@ -8,9 +8,7 @@ type AccountIdentificationAndPurpose struct {
 
 	// Specifies the purpose of the account.
 	Purpose *SecuritiesAccountPurposeType1Code `xml:"Purp"`
-
 }
-
 
 func (a *AccountIdentificationAndPurpose) AddIdentification() *AccountIdentification1 {
 	a.Identification = new(AccountIdentification1)
@@ -20,4 +18,3 @@ func (a *AccountIdentificationAndPurpose) AddIdentification() *AccountIdentifica
 func (a *AccountIdentificationAndPurpose) SetPurpose(value string) {
 	a.Purpose = (*SecuritiesAccountPurposeType1Code)(&value)
 }
-

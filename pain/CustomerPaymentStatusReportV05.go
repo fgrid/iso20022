@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.002.001.05 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:pain.002.001.05 Document"`
 	Message *CustomerPaymentStatusReportV05 `xml:"CstmrPmtStsRpt"`
 }
 
@@ -36,9 +36,7 @@ type CustomerPaymentStatusReportV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CustomerPaymentStatusReportV05) AddGroupHeader() *iso20022.GroupHeader52 {
 	c.GroupHeader = new(iso20022.GroupHeader52)
@@ -51,14 +49,13 @@ func (c *CustomerPaymentStatusReportV05) AddOriginalGroupInformationAndStatus() 
 }
 
 func (c *CustomerPaymentStatusReportV05) AddOriginalPaymentInformationAndStatus() *iso20022.OriginalPaymentInstruction6 {
-	newValue := new (iso20022.OriginalPaymentInstruction6)
+	newValue := new(iso20022.OriginalPaymentInstruction6)
 	c.OriginalPaymentInformationAndStatus = append(c.OriginalPaymentInformationAndStatus, newValue)
 	return newValue
 }
 
 func (c *CustomerPaymentStatusReportV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

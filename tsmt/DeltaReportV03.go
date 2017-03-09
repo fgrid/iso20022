@@ -7,7 +7,7 @@ import (
 )
 
 type Document01500103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.015.001.03 Document"`
+	XMLName xml.Name        `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.015.001.03 Document"`
 	Message *DeltaReportV03 `xml:"DltaRpt"`
 }
 
@@ -26,14 +26,14 @@ func (d *Document01500103) AddMessage() *DeltaReportV03 {
 // - the party that has requested the amendment of a baseline established in the lodge mode. In the outlined scenario the message is used to confirm the changes to the baseline and to list the differences between the amended baseline and the baseline established earlier.
 type DeltaReportV03 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -45,16 +45,16 @@ type DeltaReportV03 struct {
 	// Reference to the transaction for each financial institution which is a party to the transaction.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
-	// Party that buys goods or services, or a financial instrument. 
+	// Party that buys goods or services, or a financial instrument.
 	Buyer *iso20022.PartyIdentification26 `xml:"Buyr"`
 
-	// Party that sells goods or services, or a financial instrument. 
+	// Party that sells goods or services, or a financial instrument.
 	Seller *iso20022.PartyIdentification26 `xml:"Sellr"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Reference to the identification of the baseline included in the amendment request.
@@ -65,9 +65,7 @@ type DeltaReportV03 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (d *DeltaReportV03) AddReportIdentification() *iso20022.MessageIdentification1 {
 	d.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -95,7 +93,7 @@ func (d *DeltaReportV03) AddAmendmentNumber() *iso20022.Count1 {
 }
 
 func (d *DeltaReportV03) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	d.UserTransactionReference = append(d.UserTransactionReference, newValue)
 	return newValue
 }
@@ -126,7 +124,7 @@ func (d *DeltaReportV03) AddSubmitterProposedBaselineReference() *iso20022.Docum
 }
 
 func (d *DeltaReportV03) AddUpdatedElement() *iso20022.ComparisonResult2 {
-	newValue := new (iso20022.ComparisonResult2)
+	newValue := new(iso20022.ComparisonResult2)
 	d.UpdatedElement = append(d.UpdatedElement, newValue)
 	return newValue
 }
@@ -135,4 +133,3 @@ func (d *DeltaReportV03) AddRequestForAction() *iso20022.PendingActivity2 {
 	d.RequestForAction = new(iso20022.PendingActivity2)
 	return d.RequestForAction
 }
-

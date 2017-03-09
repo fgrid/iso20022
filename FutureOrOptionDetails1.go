@@ -62,9 +62,7 @@ type FutureOrOptionDetails1 struct {
 
 	// Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.
 	SpreadTransaction *YesNoIndicator `xml:"SprdTx,omitempty"`
-
 }
-
 
 func (f *FutureOrOptionDetails1) SetFutureAndOptionContractType(value string) {
 	f.FutureAndOptionContractType = (*FutureAndOptionContractType1Code)(&value)
@@ -124,13 +122,13 @@ func (f *FutureOrOptionDetails1) AddFirstDealingDate() *DateAndDateTime1Choice {
 }
 
 func (f *FutureOrOptionDetails1) AddRatio() *UnderlyingRatio1 {
-	newValue := new (UnderlyingRatio1)
+	newValue := new(UnderlyingRatio1)
 	f.Ratio = append(f.Ratio, newValue)
 	return newValue
 }
 
 func (f *FutureOrOptionDetails1) AddRating() *Rating1 {
-	newValue := new (Rating1)
+	newValue := new(Rating1)
 	f.Rating = append(f.Rating, newValue)
 	return newValue
 }
@@ -152,4 +150,3 @@ func (f *FutureOrOptionDetails1) SetLastTransaction(value string) {
 func (f *FutureOrOptionDetails1) SetSpreadTransaction(value string) {
 	f.SpreadTransaction = (*YesNoIndicator)(&value)
 }
-

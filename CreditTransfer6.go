@@ -41,9 +41,7 @@ type CreditTransfer6 struct {
 
 	// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
 	CreditorAccount *AccountIdentificationAndName3 `xml:"CdtrAcct"`
-
 }
-
 
 func (c *CreditTransfer6) SetReference(value string) {
 	c.Reference = (*Max35Text)(&value)
@@ -108,4 +106,3 @@ func (c *CreditTransfer6) AddCreditorAccount() *AccountIdentificationAndName3 {
 	c.CreditorAccount = new(AccountIdentificationAndName3)
 	return c.CreditorAccount
 }
-

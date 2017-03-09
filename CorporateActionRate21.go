@@ -11,9 +11,7 @@ type CorporateActionRate21 struct {
 
 	// Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities.
 	NewToOld *RatioFormat4Choice `xml:"NewToOd,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate21) AddAdditionalQuantityForSubscribedResultantSecurities() *RatioFormat3Choice {
 	c.AdditionalQuantityForSubscribedResultantSecurities = new(RatioFormat3Choice)
@@ -29,4 +27,3 @@ func (c *CorporateActionRate21) AddNewToOld() *RatioFormat4Choice {
 	c.NewToOld = new(RatioFormat4Choice)
 	return c.NewToOld
 }
-

@@ -11,9 +11,7 @@ type Consignment2 struct {
 
 	// Particular aircraft, vehicle, vessel or other device used for the transport of a consignment.
 	TransportMeans []*TransportMeans3 `xml:"TrnsprtMeans,omitempty"`
-
 }
-
 
 func (c *Consignment2) AddConsignor() *TradeParty1 {
 	c.Consignor = new(TradeParty1)
@@ -26,8 +24,7 @@ func (c *Consignment2) AddConsignee() *TradeParty1 {
 }
 
 func (c *Consignment2) AddTransportMeans() *TransportMeans3 {
-	newValue := new (TransportMeans3)
+	newValue := new(TransportMeans3)
 	c.TransportMeans = append(c.TransportMeans, newValue)
 	return newValue
 }
-

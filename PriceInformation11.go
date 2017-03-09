@@ -14,9 +14,7 @@ type PriceInformation11 struct {
 
 	// Place from which the price was obtained.
 	SourceOfPrice *MarketIdentification79 `xml:"SrcOfPric,omitempty"`
-
 }
-
 
 func (p *PriceInformation11) AddValue() *Price4 {
 	p.Value = new(Price4)
@@ -37,4 +35,3 @@ func (p *PriceInformation11) AddSourceOfPrice() *MarketIdentification79 {
 	p.SourceOfPrice = new(MarketIdentification79)
 	return p.SourceOfPrice
 }
-

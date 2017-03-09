@@ -8,9 +8,7 @@ type BasicCollateralValuation1Details struct {
 
 	// Place where the valuation haircut was calculated.
 	HaircutSource *PartyIdentification15 `xml:"HrcutSrc,omitempty"`
-
 }
-
 
 func (b *BasicCollateralValuation1Details) SetValuationHaircut(value string) {
 	b.ValuationHaircut = (*PercentageRate)(&value)
@@ -20,4 +18,3 @@ func (b *BasicCollateralValuation1Details) AddHaircutSource() *PartyIdentificati
 	b.HaircutSource = new(PartyIdentification15)
 	return b.HaircutSource
 }
-

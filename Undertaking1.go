@@ -15,13 +15,13 @@ type Undertaking1 struct {
 	// Type of undertaking, for example, performance, payment.
 	Type *UndertakingType1Choice `xml:"Tp"`
 
-	// Party obligated to reimburse the issuer. 
+	// Party obligated to reimburse the issuer.
 	Obligor *PartyIdentification43 `xml:"Oblgr"`
 
 	// Party to be named in the undertaking as the “applicant” when different from the obligor.
 	Applicant []*PartyIdentification43 `xml:"Applcnt,omitempty"`
 
-	// Party that issues the undertaking (or counter-undertaking). 
+	// Party that issues the undertaking (or counter-undertaking).
 	Issuer *PartyIdentification43 `xml:"Issr"`
 
 	// Ultimate party in whose favour the undertaking is to be issued.
@@ -51,7 +51,7 @@ type Undertaking1 struct {
 	// Details related to the expiry terms of the undertaking.
 	ExpiryDetails *ExpiryDetails2 `xml:"XpryDtls"`
 
-	// Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking. 
+	// Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking.
 	AdditionalParty []*PartyAndType1 `xml:"AddtlPty,omitempty"`
 
 	// Rules and laws governing the undertaking.
@@ -72,13 +72,13 @@ type Undertaking1 struct {
 	// Indicates whether partial demands/drawings are permitted.
 	PartialDemandIndicator *YesNoIndicator `xml:"PrtlDmndInd,omitempty"`
 
-	// Indicates whether the undertaking is transferable. 
+	// Indicates whether the undertaking is transferable.
 	TransferIndicator *YesNoIndicator `xml:"TrfInd,omitempty"`
 
-	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. 
+	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges.
 	TransferChargesPayableBy *ExternalTypeOfParty1Code `xml:"TrfChrgsPyblBy,omitempty"`
 
-	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges. 
+	// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.
 	ConfirmationChargesPayableBy *ExternalTypeOfParty1Code `xml:"ConfChrgsPyblBy,omitempty"`
 
 	// Details related to a variation in amount that is automatically applied.
@@ -101,9 +101,7 @@ type Undertaking1 struct {
 
 	// Additional information related to the application for an undertaking.
 	AdditionalApplicationInformation []*Max2000Text `xml:"AddtlApplInf,omitempty"`
-
 }
-
 
 func (u *Undertaking1) SetApplicantReferenceNumber(value string) {
 	u.ApplicantReferenceNumber = (*Max35Text)(&value)
@@ -128,7 +126,7 @@ func (u *Undertaking1) AddObligor() *PartyIdentification43 {
 }
 
 func (u *Undertaking1) AddApplicant() *PartyIdentification43 {
-	newValue := new (PartyIdentification43)
+	newValue := new(PartyIdentification43)
 	u.Applicant = append(u.Applicant, newValue)
 	return newValue
 }
@@ -139,7 +137,7 @@ func (u *Undertaking1) AddIssuer() *PartyIdentification43 {
 }
 
 func (u *Undertaking1) AddBeneficiary() *PartyIdentification43 {
-	newValue := new (PartyIdentification43)
+	newValue := new(PartyIdentification43)
 	u.Beneficiary = append(u.Beneficiary, newValue)
 	return newValue
 }
@@ -183,7 +181,7 @@ func (u *Undertaking1) AddExpiryDetails() *ExpiryDetails2 {
 }
 
 func (u *Undertaking1) AddAdditionalParty() *PartyAndType1 {
-	newValue := new (PartyAndType1)
+	newValue := new(PartyAndType1)
 	u.AdditionalParty = append(u.AdditionalParty, newValue)
 	return newValue
 }
@@ -194,7 +192,7 @@ func (u *Undertaking1) AddGovernanceRulesAndLaw() *GovernanceRules1 {
 }
 
 func (u *Undertaking1) AddUnderlyingTransaction() *UnderlyingTradeTransaction1 {
-	newValue := new (UnderlyingTradeTransaction1)
+	newValue := new(UnderlyingTradeTransaction1)
 	u.UnderlyingTransaction = append(u.UnderlyingTransaction, newValue)
 	return newValue
 }
@@ -230,7 +228,7 @@ func (u *Undertaking1) SetConfirmationChargesPayableBy(value string) {
 }
 
 func (u *Undertaking1) AddAutomaticAmountVariation() *AutomaticVariation1 {
-	newValue := new (AutomaticVariation1)
+	newValue := new(AutomaticVariation1)
 	u.AutomaticAmountVariation = append(u.AutomaticAmountVariation, newValue)
 	return newValue
 }
@@ -256,7 +254,7 @@ func (u *Undertaking1) AddObligorSettlementAccount() *CashAccount28 {
 }
 
 func (u *Undertaking1) AddEnclosedFile() *Document9 {
-	newValue := new (Document9)
+	newValue := new(Document9)
 	u.EnclosedFile = append(u.EnclosedFile, newValue)
 	return newValue
 }
@@ -264,4 +262,3 @@ func (u *Undertaking1) AddEnclosedFile() *Document9 {
 func (u *Undertaking1) AddAdditionalApplicationInformation(value string) {
 	u.AdditionalApplicationInformation = append(u.AdditionalApplicationInformation, (*Max2000Text)(&value))
 }
-

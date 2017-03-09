@@ -14,9 +14,7 @@ type BillingServicesTax3 struct {
 
 	// Specifies the tax obligation for taxable services within a tax region for a specific tax identifier (such as national value added tax equals 34,00), and expressed in the tax region’s host currency.
 	TotalTaxAmount *AmountAndDirection34 `xml:"TtlTaxAmt"`
-
 }
-
 
 func (b *BillingServicesTax3) SetNumber(value string) {
 	b.Number = (*Max35Text)(&value)
@@ -34,4 +32,3 @@ func (b *BillingServicesTax3) AddTotalTaxAmount() *AmountAndDirection34 {
 	b.TotalTaxAmount = new(AmountAndDirection34)
 	return b.TotalTaxAmount
 }
-

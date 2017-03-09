@@ -11,9 +11,7 @@ type PaymentTerminalParameters1 struct {
 
 	// Others manufacturer configuration parameters of the point of interaction.
 	OtherParameters *Max10000Binary `xml:"OthrParams,omitempty"`
-
 }
-
 
 func (p *PaymentTerminalParameters1) AddClockSynchronisation() *ClockSynchronisation1 {
 	p.ClockSynchronisation = new(ClockSynchronisation1)
@@ -27,4 +25,3 @@ func (p *PaymentTerminalParameters1) AddTimeZoneLine(value string) {
 func (p *PaymentTerminalParameters1) SetOtherParameters(value string) {
 	p.OtherParameters = (*Max10000Binary)(&value)
 }
-

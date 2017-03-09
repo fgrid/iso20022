@@ -8,17 +8,14 @@ type UnmatchedStatus20Choice struct {
 
 	// Specifies the reason of the unmatched status.
 	Reason []*UnmatchedReason19 `xml:"Rsn"`
-
 }
-
 
 func (u *UnmatchedStatus20Choice) SetNoSpecifiedReason(value string) {
 	u.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (u *UnmatchedStatus20Choice) AddReason() *UnmatchedReason19 {
-	newValue := new (UnmatchedReason19)
+	newValue := new(UnmatchedReason19)
 	u.Reason = append(u.Reason, newValue)
 	return newValue
 }
-

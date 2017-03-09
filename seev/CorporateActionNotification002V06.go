@@ -7,7 +7,7 @@ import (
 )
 
 type Document03100206 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.031.002.06 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:seev.031.002.06 Document"`
 	Message *CorporateActionNotification002V06 `xml:"CorpActnNtfctn"`
 }
 
@@ -17,8 +17,8 @@ func (d *Document03100206) AddMessage() *CorporateActionNotification002V06 {
 }
 
 // Scope
-// An account servicer sends the CorporateActionNotification message to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.
-// It may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.
+// An account servicer sends the CorporateActionNotification message to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.
+// It may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.
 // It may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.
 // Usage
 // The message may also be used to:
@@ -76,26 +76,24 @@ type CorporateActionNotification002V06 struct {
 	// Party/agent responsible for maintaining the register of a security.
 	Registrar *iso20022.PartyIdentification104Choice `xml:"Regar,omitempty"`
 
-	// A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. 
+	// A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.
 	ResellingAgent []*iso20022.PartyIdentification104Choice `xml:"RsellngAgt,omitempty"`
 
 	// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
 	PhysicalSecuritiesAgent *iso20022.PartyIdentification104Choice `xml:"PhysSctiesAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. 
+	// A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person.
 	DropAgent *iso20022.PartyIdentification104Choice `xml:"DrpAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change. 
+	// A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change.
 	SolicitationAgent []*iso20022.PartyIdentification104Choice `xml:"SlctnAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. 
+	// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
 	InformationAgent *iso20022.PartyIdentification104Choice `xml:"InfAgt,omitempty"`
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionNotification002V06) AddPagination() *iso20022.Pagination {
 	c.Pagination = new(iso20022.Pagination)
@@ -118,13 +116,13 @@ func (c *CorporateActionNotification002V06) AddInstructionIdentification() *iso2
 }
 
 func (c *CorporateActionNotification002V06) AddOtherDocumentIdentification() *iso20022.DocumentIdentification38 {
-	newValue := new (iso20022.DocumentIdentification38)
+	newValue := new(iso20022.DocumentIdentification38)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
 
 func (c *CorporateActionNotification002V06) AddEventsLinkage() *iso20022.CorporateActionEventReference4 {
-	newValue := new (iso20022.CorporateActionEventReference4)
+	newValue := new(iso20022.CorporateActionEventReference4)
 	c.EventsLinkage = append(c.EventsLinkage, newValue)
 	return newValue
 }
@@ -150,7 +148,7 @@ func (c *CorporateActionNotification002V06) AddCorporateActionDetails() *iso2002
 }
 
 func (c *CorporateActionNotification002V06) AddCorporateActionOptionDetails() *iso20022.CorporateActionOption127 {
-	newValue := new (iso20022.CorporateActionOption127)
+	newValue := new(iso20022.CorporateActionOption127)
 	c.CorporateActionOptionDetails = append(c.CorporateActionOptionDetails, newValue)
 	return newValue
 }
@@ -161,19 +159,19 @@ func (c *CorporateActionNotification002V06) AddAdditionalInformation() *iso20022
 }
 
 func (c *CorporateActionNotification002V06) AddIssuerAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.IssuerAgent = append(c.IssuerAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionNotification002V06) AddPayingAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.PayingAgent = append(c.PayingAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionNotification002V06) AddSubPayingAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.SubPayingAgent = append(c.SubPayingAgent, newValue)
 	return newValue
 }
@@ -184,7 +182,7 @@ func (c *CorporateActionNotification002V06) AddRegistrar() *iso20022.PartyIdenti
 }
 
 func (c *CorporateActionNotification002V06) AddResellingAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.ResellingAgent = append(c.ResellingAgent, newValue)
 	return newValue
 }
@@ -200,7 +198,7 @@ func (c *CorporateActionNotification002V06) AddDropAgent() *iso20022.PartyIdenti
 }
 
 func (c *CorporateActionNotification002V06) AddSolicitationAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.SolicitationAgent = append(c.SolicitationAgent, newValue)
 	return newValue
 }
@@ -211,8 +209,7 @@ func (c *CorporateActionNotification002V06) AddInformationAgent() *iso20022.Part
 }
 
 func (c *CorporateActionNotification002V06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

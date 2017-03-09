@@ -11,9 +11,7 @@ type CancellationRejectionStatus1 struct {
 
 	// Additional information about the reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CancellationRejectionStatus1) SetReason(value string) {
 	c.Reason = (*RejectionReason2Code)(&value)
@@ -26,4 +24,3 @@ func (c *CancellationRejectionStatus1) SetExtendedReason(value string) {
 func (c *CancellationRejectionStatus1) SetAdditionalInformation(value string) {
 	c.AdditionalInformation = (*Max350Text)(&value)
 }
-

@@ -17,9 +17,7 @@ type ConfirmationPartyDetails5 struct {
 
 	// Indicates whether the confirmation party is a member of the investor protection association required, eg, as per regulation.
 	InvestorProtectionAssociationMembership *YesNoIndicator `xml:"InvstrPrtcnAssoctnMmbsh,omitempty"`
-
 }
-
 
 func (c *ConfirmationPartyDetails5) AddIdentification() *PartyIdentification32Choice {
 	c.Identification = new(PartyIdentification32Choice)
@@ -43,4 +41,3 @@ func (c *ConfirmationPartyDetails5) AddAdditionalInformation() *PartyTextInforma
 func (c *ConfirmationPartyDetails5) SetInvestorProtectionAssociationMembership(value string) {
 	c.InvestorProtectionAssociationMembership = (*YesNoIndicator)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.004.001.01 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.004.001.01 Document"`
 	Message *PaymentReturnV01 `xml:"pacs.004.001.01"`
 }
 
@@ -34,9 +34,7 @@ type PaymentReturnV01 struct {
 
 	// Information concerning the original transactions, to which the return message refers.
 	TransactionInformation []*iso20022.PaymentTransactionInformation2 `xml:"TxInf,omitempty"`
-
 }
-
 
 func (p *PaymentReturnV01) AddGroupHeader() *iso20022.GroupHeader6 {
 	p.GroupHeader = new(iso20022.GroupHeader6)
@@ -49,8 +47,7 @@ func (p *PaymentReturnV01) AddOriginalGroupInformation() *iso20022.OriginalGroup
 }
 
 func (p *PaymentReturnV01) AddTransactionInformation() *iso20022.PaymentTransactionInformation2 {
-	newValue := new (iso20022.PaymentTransactionInformation2)
+	newValue := new(iso20022.PaymentTransactionInformation2)
 	p.TransactionInformation = append(p.TransactionInformation, newValue)
 	return newValue
 }
-

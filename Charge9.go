@@ -11,9 +11,7 @@ type Charge9 struct {
 
 	// Calculation basis for the charge or fee.
 	CalculationBasis *CalculationBasis1 `xml:"ClctnBsis,omitempty"`
-
 }
-
 
 func (c *Charge9) AddType() *ChargeType2 {
 	c.Type = new(ChargeType2)
@@ -28,4 +26,3 @@ func (c *Charge9) AddCalculationBasis() *CalculationBasis1 {
 	c.CalculationBasis = new(CalculationBasis1)
 	return c.CalculationBasis
 }
-

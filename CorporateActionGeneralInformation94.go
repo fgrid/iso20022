@@ -14,9 +14,7 @@ type CorporateActionGeneralInformation94 struct {
 
 	// Type of corporate action event.
 	EventType *CorporateActionEventType36Choice `xml:"EvtTp"`
-
 }
-
 
 func (c *CorporateActionGeneralInformation94) SetCorporateActionEventIdentification(value string) {
 	c.CorporateActionEventIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -34,4 +32,3 @@ func (c *CorporateActionGeneralInformation94) AddEventType() *CorporateActionEve
 	c.EventType = new(CorporateActionEventType36Choice)
 	return c.EventType
 }
-

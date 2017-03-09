@@ -11,9 +11,7 @@ type UpdatedAdditionalInformation8 struct {
 
 	// Provides additional textual information.
 	AdditionalInformation []*Max8000Text `xml:"AddtlInf"`
-
 }
-
 
 func (u *UpdatedAdditionalInformation8) SetUpdateDescription(value string) {
 	u.UpdateDescription = (*Max140Text)(&value)
@@ -26,4 +24,3 @@ func (u *UpdatedAdditionalInformation8) SetUpdateDate(value string) {
 func (u *UpdatedAdditionalInformation8) AddAdditionalInformation(value string) {
 	u.AdditionalInformation = append(u.AdditionalInformation, (*Max8000Text)(&value))
 }
-

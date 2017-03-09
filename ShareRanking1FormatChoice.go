@@ -8,9 +8,7 @@ type ShareRanking1FormatChoice struct {
 
 	// Proprietary code to express the share ranking.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (s *ShareRanking1FormatChoice) SetCode(value string) {
 	s.Code = (*ShareRanking1Code)(&value)
@@ -20,4 +18,3 @@ func (s *ShareRanking1FormatChoice) AddProprietary() *GenericIdentification13 {
 	s.Proprietary = new(GenericIdentification13)
 	return s.Proprietary
 }
-

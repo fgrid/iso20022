@@ -26,9 +26,7 @@ type ATMTransaction11 struct {
 
 	// Additional information about reconciliation.
 	AdditionalTransactionInformation *Max140Text `xml:"AddtlTxInf,omitempty"`
-
 }
-
 
 func (a *ATMTransaction11) SetTypeOfOperation(value string) {
 	a.TypeOfOperation = (*ATMOperation1Code)(&value)
@@ -44,19 +42,19 @@ func (a *ATMTransaction11) SetReconciliationIdentification(value string) {
 }
 
 func (a *ATMTransaction11) AddATMTotals() *ATMTotals1 {
-	newValue := new (ATMTotals1)
+	newValue := new(ATMTotals1)
 	a.ATMTotals = append(a.ATMTotals, newValue)
 	return newValue
 }
 
 func (a *ATMTransaction11) AddCassette() *ATMCassette1 {
-	newValue := new (ATMCassette1)
+	newValue := new(ATMCassette1)
 	a.Cassette = append(a.Cassette, newValue)
 	return newValue
 }
 
 func (a *ATMTransaction11) AddTransactionTotals() *ATMTotals3 {
-	newValue := new (ATMTotals3)
+	newValue := new(ATMTotals3)
 	a.TransactionTotals = append(a.TransactionTotals, newValue)
 	return newValue
 }
@@ -68,4 +66,3 @@ func (a *ATMTransaction11) SetRetainedCard(value string) {
 func (a *ATMTransaction11) SetAdditionalTransactionInformation(value string) {
 	a.AdditionalTransactionInformation = (*Max140Text)(&value)
 }
-

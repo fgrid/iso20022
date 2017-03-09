@@ -20,9 +20,7 @@ type ATMCassetteCounters1 struct {
 
 	// Current amount in the cassette.
 	CurrentAmount *ImpliedCurrencyAndAmount `xml:"CurAmt,omitempty"`
-
 }
-
 
 func (a *ATMCassetteCounters1) SetUnitValue(value, currency string) {
 	a.UnitValue = NewImpliedCurrencyAndAmount(value, currency)
@@ -37,7 +35,7 @@ func (a *ATMCassetteCounters1) SetItemType(value string) {
 }
 
 func (a *ATMCassetteCounters1) AddCounter() *ATMCassetteCounters2 {
-	newValue := new (ATMCassetteCounters2)
+	newValue := new(ATMCassetteCounters2)
 	a.Counter = append(a.Counter, newValue)
 	return newValue
 }
@@ -49,4 +47,3 @@ func (a *ATMCassetteCounters1) SetCurrentNumber(value string) {
 func (a *ATMCassetteCounters1) SetCurrentAmount(value, currency string) {
 	a.CurrentAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

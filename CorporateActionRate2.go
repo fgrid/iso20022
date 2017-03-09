@@ -102,9 +102,7 @@ type CorporateActionRate2 struct {
 
 	// Rate applicable to the event announced, eg, redemption rate for a redemption event.
 	ApplicableRate *RateFormat1Choice `xml:"AplblRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate2) AddWithholdingTax() *RateFormat1Choice {
 	c.WithholdingTax = new(RateFormat1Choice)
@@ -269,4 +267,3 @@ func (c *CorporateActionRate2) AddApplicableRate() *RateFormat1Choice {
 	c.ApplicableRate = new(RateFormat1Choice)
 	return c.ApplicableRate
 }
-

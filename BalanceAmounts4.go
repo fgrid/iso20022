@@ -17,9 +17,7 @@ type BalanceAmounts4 struct {
 
 	// Interest amount that has accrued in between coupon payment periods.
 	AccruedInterestAmount *AmountAndDirection14 `xml:"AcrdIntrstAmt,omitempty"`
-
 }
-
 
 func (b *BalanceAmounts4) AddHoldingValue() *AmountAndDirection14 {
 	b.HoldingValue = new(AmountAndDirection14)
@@ -45,4 +43,3 @@ func (b *BalanceAmounts4) AddAccruedInterestAmount() *AmountAndDirection14 {
 	b.AccruedInterestAmount = new(AmountAndDirection14)
 	return b.AccruedInterestAmount
 }
-

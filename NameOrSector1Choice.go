@@ -8,9 +8,7 @@ type NameOrSector1Choice struct {
 
 	// Represents the counterparty institutional section (such as non-financial corporation, central bank, ...).
 	Sector *SNA2008SectorIdentifier `xml:"Sctr"`
-
 }
-
 
 func (n *NameOrSector1Choice) SetName(value string) {
 	n.Name = (*Max70Text)(&value)
@@ -19,4 +17,3 @@ func (n *NameOrSector1Choice) SetName(value string) {
 func (n *NameOrSector1Choice) SetSector(value string) {
 	n.Sector = (*SNA2008SectorIdentifier)(&value)
 }
-

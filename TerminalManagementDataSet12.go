@@ -14,9 +14,7 @@ type TerminalManagementDataSet12 struct {
 
 	// Temporary encryption key that the host will use for protecting keys to download.
 	SessionKey *CryptographicKey5 `xml:"SsnKey,omitempty"`
-
 }
-
 
 func (t *TerminalManagementDataSet12) AddIdentification() *DataSetIdentification4 {
 	t.Identification = new(DataSetIdentification4)
@@ -35,4 +33,3 @@ func (t *TerminalManagementDataSet12) AddSessionKey() *CryptographicKey5 {
 	t.SessionKey = new(CryptographicKey5)
 	return t.SessionKey
 }
-

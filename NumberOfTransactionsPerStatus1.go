@@ -11,9 +11,7 @@ type NumberOfTransactionsPerStatus1 struct {
 
 	// Total of all individual amounts included in the message, irrespective of currencies, detailed per status.
 	DetailedControlSum *DecimalNumber `xml:"DtldCtrlSum,omitempty"`
-
 }
-
 
 func (n *NumberOfTransactionsPerStatus1) SetDetailedNumberOfTransactions(value string) {
 	n.DetailedNumberOfTransactions = (*Max15NumericText)(&value)
@@ -26,4 +24,3 @@ func (n *NumberOfTransactionsPerStatus1) SetDetailedStatus(value string) {
 func (n *NumberOfTransactionsPerStatus1) SetDetailedControlSum(value string) {
 	n.DetailedControlSum = (*DecimalNumber)(&value)
 }
-

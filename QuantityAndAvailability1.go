@@ -8,9 +8,7 @@ type QuantityAndAvailability1 struct {
 
 	// Indicates whether the quantity of securities on the sub-balance is available.
 	AvailabilityIndicator *YesNoIndicator `xml:"AvlbtyInd"`
-
 }
-
 
 func (q *QuantityAndAvailability1) AddQuantity() *FinancialInstrumentQuantity1Choice {
 	q.Quantity = new(FinancialInstrumentQuantity1Choice)
@@ -20,4 +18,3 @@ func (q *QuantityAndAvailability1) AddQuantity() *FinancialInstrumentQuantity1Ch
 func (q *QuantityAndAvailability1) SetAvailabilityIndicator(value string) {
 	q.AvailabilityIndicator = (*YesNoIndicator)(&value)
 }
-

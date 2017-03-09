@@ -14,9 +14,7 @@ type CashOutForecast4 struct {
 
 	// Indicates whether the cash flow out is exceptional.
 	ExceptionalCashFlowIndicator *YesNoIndicator `xml:"XcptnlCshFlowInd,omitempty"`
-
 }
-
 
 func (c *CashOutForecast4) SetCashSettlementDate(value string) {
 	c.CashSettlementDate = (*ISODate)(&value)
@@ -34,4 +32,3 @@ func (c *CashOutForecast4) AddSubTotalUnitsNumber() *FinancialInstrumentQuantity
 func (c *CashOutForecast4) SetExceptionalCashFlowIndicator(value string) {
 	c.ExceptionalCashFlowIndicator = (*YesNoIndicator)(&value)
 }
-

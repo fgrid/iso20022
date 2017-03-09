@@ -10,7 +10,7 @@ type PaymentTransactionInformation5 struct {
 	OriginalPaymentInformationIdentification *Max35Text `xml:"OrgnlPmtInfId,omitempty"`
 
 	// Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.
-	// 
+	//
 	// Usage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction.
 	OriginalInstructionIdentification *Max35Text `xml:"OrgnlInstrId,omitempty"`
 
@@ -27,7 +27,7 @@ type PaymentTransactionInformation5 struct {
 	ReversedInterbankSettlementAmount *CurrencyAndAmount `xml:"RvsdIntrBkSttlmAmt"`
 
 	// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-	// 
+	//
 	// Usage: the InterbankSettlementDate is the interbank settlement date of the reversal message, and not of the original instruction.
 	InterbankSettlementDate *ISODate `xml:"IntrBkSttlmDt,omitempty"`
 
@@ -41,7 +41,7 @@ type PaymentTransactionInformation5 struct {
 	CompensationAmount *CurrencyAndAmount `xml:"CompstnAmt,omitempty"`
 
 	// Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.
-	// 
+	//
 	// Usage: The ChargeBearer applies to the reversal message, not to the original instruction.
 	ChargeBearer *ChargeBearerType1Code `xml:"ChrgBr,omitempty"`
 
@@ -59,9 +59,7 @@ type PaymentTransactionInformation5 struct {
 
 	// Set of key elements of the original transaction being referred to.
 	OriginalTransactionReference *OriginalTransactionReference1 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransactionInformation5) SetReversalIdentification(value string) {
 	p.ReversalIdentification = (*Max35Text)(&value)
@@ -112,7 +110,7 @@ func (p *PaymentTransactionInformation5) SetChargeBearer(value string) {
 }
 
 func (p *PaymentTransactionInformation5) AddChargesInformation() *ChargesInformation1 {
-	newValue := new (ChargesInformation1)
+	newValue := new(ChargesInformation1)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -128,7 +126,7 @@ func (p *PaymentTransactionInformation5) AddInstructedAgent() *BranchAndFinancia
 }
 
 func (p *PaymentTransactionInformation5) AddReversalReasonInformation() *ReversalReasonInformation1 {
-	newValue := new (ReversalReasonInformation1)
+	newValue := new(ReversalReasonInformation1)
 	p.ReversalReasonInformation = append(p.ReversalReasonInformation, newValue)
 	return newValue
 }
@@ -137,4 +135,3 @@ func (p *PaymentTransactionInformation5) AddOriginalTransactionReference() *Orig
 	p.OriginalTransactionReference = new(OriginalTransactionReference1)
 	return p.OriginalTransactionReference
 }
-

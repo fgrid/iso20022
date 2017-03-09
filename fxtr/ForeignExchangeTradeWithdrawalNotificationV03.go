@@ -7,7 +7,7 @@ import (
 )
 
 type Document01300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.03 Document"`
+	XMLName xml.Name                                       `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.03 Document"`
 	Message *ForeignExchangeTradeWithdrawalNotificationV03 `xml:"FXTradWdrwlNtfctn"`
 }
 
@@ -36,9 +36,7 @@ type ForeignExchangeTradeWithdrawalNotificationV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTradeWithdrawalNotificationV03) SetMessageIdentification(value string) {
 	f.MessageIdentification = (*iso20022.Max35Text)(&value)
@@ -58,8 +56,7 @@ func (f *ForeignExchangeTradeWithdrawalNotificationV03) SetSettlementSessionIden
 }
 
 func (f *ForeignExchangeTradeWithdrawalNotificationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	f.SupplementaryData = append(f.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type FinancialInstitutionIdentification4Choice struct {
 
 	// Name and address of an institution.
 	NameAndAddress *NameAndAddress6 `xml:"NmAndAdr"`
-
 }
-
 
 func (f *FinancialInstitutionIdentification4Choice) SetBIC(value string) {
 	f.BIC = (*BICIdentifier)(&value)
@@ -20,4 +18,3 @@ func (f *FinancialInstitutionIdentification4Choice) AddNameAndAddress() *NameAnd
 	f.NameAndAddress = new(NameAndAddress6)
 	return f.NameAndAddress
 }
-

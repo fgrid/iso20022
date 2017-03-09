@@ -26,9 +26,7 @@ type CorporateActionNarrative36 struct {
 
 	// Provides additional information about the type of certification/breakdown required.
 	CertificationBreakdown *UpdatedAdditionalInformation5 `xml:"CertfctnBrkdwn,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative36) AddAdditionalText() *UpdatedAdditionalInformation6 {
 	c.AdditionalText = new(UpdatedAdditionalInformation6)
@@ -69,4 +67,3 @@ func (c *CorporateActionNarrative36) AddCertificationBreakdown() *UpdatedAdditio
 	c.CertificationBreakdown = new(UpdatedAdditionalInformation5)
 	return c.CertificationBreakdown
 }
-

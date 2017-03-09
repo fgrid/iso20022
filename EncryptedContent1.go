@@ -11,9 +11,7 @@ type EncryptedContent1 struct {
 
 	// Encrypted data, result of the content encryption.
 	EncryptedData *Max10000Binary `xml:"NcrptdData"`
-
 }
-
 
 func (e *EncryptedContent1) SetContentType(value string) {
 	e.ContentType = (*ContentType1Code)(&value)
@@ -27,4 +25,3 @@ func (e *EncryptedContent1) AddContentEncryptionAlgorithm() *AlgorithmIdentifica
 func (e *EncryptedContent1) SetEncryptedData(value string) {
 	e.EncryptedData = (*Max10000Binary)(&value)
 }
-

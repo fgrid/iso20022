@@ -8,9 +8,7 @@ type BalanceQuantity1Choice struct {
 
 	// Total quantity of financial instruments of the balance.
 	QuantityAsDSS *GenericIdentification6 `xml:"QtyAsDSS"`
-
 }
-
 
 func (b *BalanceQuantity1Choice) AddQuantity() *FinancialInstrumentQuantityChoice {
 	b.Quantity = new(FinancialInstrumentQuantityChoice)
@@ -21,4 +19,3 @@ func (b *BalanceQuantity1Choice) AddQuantityAsDSS() *GenericIdentification6 {
 	b.QuantityAsDSS = new(GenericIdentification6)
 	return b.QuantityAsDSS
 }
-

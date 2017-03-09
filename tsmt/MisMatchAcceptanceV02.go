@@ -7,7 +7,7 @@ import (
 )
 
 type Document02000102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.020.001.02 Document"`
+	XMLName xml.Name               `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.020.001.02 Document"`
 	Message *MisMatchAcceptanceV02 `xml:"MisMtchAccptnc"`
 }
 
@@ -36,11 +36,9 @@ type MisMatchAcceptanceV02 struct {
 	// Reference to the transaction for the requesting financial institution.
 	SubmitterTransactionReference *iso20022.SimpleIdentificationInformation `xml:"SubmitrTxRef,omitempty"`
 
-	// Reference to the identification of the report that contained the difference. 
+	// Reference to the identification of the report that contained the difference.
 	DataSetMatchReportReference *iso20022.MessageIdentification1 `xml:"DataSetMtchRptRef"`
-
 }
-
 
 func (m *MisMatchAcceptanceV02) AddAcceptanceIdentification() *iso20022.MessageIdentification1 {
 	m.AcceptanceIdentification = new(iso20022.MessageIdentification1)
@@ -61,4 +59,3 @@ func (m *MisMatchAcceptanceV02) AddDataSetMatchReportReference() *iso20022.Messa
 	m.DataSetMatchReportReference = new(iso20022.MessageIdentification1)
 	return m.DataSetMatchReportReference
 }
-

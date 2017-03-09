@@ -11,9 +11,7 @@ type DocumentToSend2 struct {
 
 	// Communication method to be used.
 	MethodOfTransmission *CommunicationMethod3Choice `xml:"MtdOfTrnsmssn"`
-
 }
-
 
 func (d *DocumentToSend2) SetType(value string) {
 	d.Type = (*Max140Text)(&value)
@@ -28,4 +26,3 @@ func (d *DocumentToSend2) AddMethodOfTransmission() *CommunicationMethod3Choice 
 	d.MethodOfTransmission = new(CommunicationMethod3Choice)
 	return d.MethodOfTransmission
 }
-

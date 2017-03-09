@@ -8,9 +8,7 @@ type InstructionProcessingStatus3 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *InstructionProcessingStatus3) SetStatus(value string) {
 	i.Status = (*Status7Code)(&value)
@@ -19,4 +17,3 @@ func (i *InstructionProcessingStatus3) SetStatus(value string) {
 func (i *InstructionProcessingStatus3) SetAdditionalInformation(value string) {
 	i.AdditionalInformation = (*Max350Text)(&value)
 }
-

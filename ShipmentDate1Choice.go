@@ -8,9 +8,7 @@ type ShipmentDate1Choice struct {
 
 	// Actual date whereby the goods were shipped.
 	ActualShipmentDate *ISODate `xml:"ActlShipmntDt"`
-
 }
-
 
 func (s *ShipmentDate1Choice) SetProposedShipmentDate(value string) {
 	s.ProposedShipmentDate = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (s *ShipmentDate1Choice) SetProposedShipmentDate(value string) {
 func (s *ShipmentDate1Choice) SetActualShipmentDate(value string) {
 	s.ActualShipmentDate = (*ISODate)(&value)
 }
-

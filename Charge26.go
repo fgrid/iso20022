@@ -8,9 +8,7 @@ type Charge26 struct {
 
 	// Charge amount or charge rate applied.
 	ChargeApplied *AmountOrRate3Choice `xml:"ChrgApld"`
-
 }
-
 
 func (c *Charge26) AddType() *ChargeType4Choice {
 	c.Type = new(ChargeType4Choice)
@@ -21,4 +19,3 @@ func (c *Charge26) AddChargeApplied() *AmountOrRate3Choice {
 	c.ChargeApplied = new(AmountOrRate3Choice)
 	return c.ChargeApplied
 }
-

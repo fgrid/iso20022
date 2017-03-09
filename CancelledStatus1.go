@@ -11,9 +11,7 @@ type CancelledStatus1 struct {
 
 	// Proprietary identification of a reason for a cancelled status in the report.
 	DataSourceScheme *GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
-
 
 func (c *CancelledStatus1) SetNoReason(value string) {
 	c.NoReason = (*NoReasonCode)(&value)
@@ -28,4 +26,3 @@ func (c *CancelledStatus1) AddDataSourceScheme() *GenericIdentification1 {
 	c.DataSourceScheme = new(GenericIdentification1)
 	return c.DataSourceScheme
 }
-

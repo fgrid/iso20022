@@ -23,9 +23,7 @@ type ATMSecurityConfiguration3 struct {
 
 	// Format of data before encryption, if the format is not plaintext or implicit.
 	EncryptionFormat []*EncryptionFormat1Code `xml:"NcrptnFrmt,omitempty"`
-
 }
-
 
 func (a *ATMSecurityConfiguration3) SetAsymmetricEncryption(value string) {
 	a.AsymmetricEncryption = (*TrueFalseIndicator)(&value)
@@ -54,4 +52,3 @@ func (a *ATMSecurityConfiguration3) AddSymmetricEncryptionAlgorithm(value string
 func (a *ATMSecurityConfiguration3) AddEncryptionFormat(value string) {
 	a.EncryptionFormat = append(a.EncryptionFormat, (*EncryptionFormat1Code)(&value))
 }
-

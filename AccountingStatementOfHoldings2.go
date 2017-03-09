@@ -20,9 +20,7 @@ type AccountingStatementOfHoldings2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountingStatementOfHoldings2) AddStatementGeneralDetails() *Statement6 {
 	a.StatementGeneralDetails = new(Statement6)
@@ -35,13 +33,13 @@ func (a *AccountingStatementOfHoldings2) AddAccountDetails() *SafekeepingAccount
 }
 
 func (a *AccountingStatementOfHoldings2) AddBalanceForAccount() *AggregateBalanceInformation3 {
-	newValue := new (AggregateBalanceInformation3)
+	newValue := new(AggregateBalanceInformation3)
 	a.BalanceForAccount = append(a.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (a *AccountingStatementOfHoldings2) AddSubAccountDetails() *SubAccountIdentification3 {
-	newValue := new (SubAccountIdentification3)
+	newValue := new(SubAccountIdentification3)
 	a.SubAccountDetails = append(a.SubAccountDetails, newValue)
 	return newValue
 }
@@ -52,8 +50,7 @@ func (a *AccountingStatementOfHoldings2) AddTotalValues() *TotalValueInPageAndSt
 }
 
 func (a *AccountingStatementOfHoldings2) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

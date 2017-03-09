@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:setr.027.001.03 Document"`
+	XMLName xml.Name                        `xml:"urn:iso:std:iso:20022:tech:xsd:setr.027.001.03 Document"`
 	Message *SecuritiesTradeConfirmationV03 `xml:"SctiesTradConf"`
 }
 
@@ -18,16 +18,16 @@ func (d *Document02700103) AddMessage() *SecuritiesTradeConfirmationV03 {
 
 // SCOPE
 // Sent by an executing party to an instructing party directly or through Central Matching Utility (CMU) to provide trade confirmation on a per-account basis based on instructions provided by the instructing party in the SecuritiesAllocationInstruction message.
-// 
+//
 // It may also be used to provide trade confirmation on the trade level from an executing party or an instructing party to the custodian or an affirming party directly or through CMU.
-// 
+//
 // The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors.
 // The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.
 // The custodian or the affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.
-// 
+//
 // USAGE
 // Initiator:  In local matching, the initiator of this message is always the executing party.  In central matching the initiator may be either the executing party or instructing party.
-// Respondent: instructing party, a custodian or an affirming party responds with SecuritiesTradeConfirmationResponse (accept or reject) message. 
+// Respondent: instructing party, a custodian or an affirming party responds with SecuritiesTradeConfirmationResponse (accept or reject) message.
 type SecuritiesTradeConfirmationV03 struct {
 
 	// Information that unambiguously identifies an SecuritiesTradeConfirmation message as known by the account owner (or the instructing party acting on its behalf).
@@ -36,7 +36,7 @@ type SecuritiesTradeConfirmationV03 struct {
 	// Count of the number of transactions linked.
 	NumberCount *iso20022.NumberCount1Choice `xml:"NbCnt,omitempty"`
 
-	// Reference to the transaction identifier issued by a business party and/or market infrastructure. It may also be used to reference a previous transaction, for example, a block/allocation instruction, or tie a set of messages together. 
+	// Reference to the transaction identifier issued by a business party and/or market infrastructure. It may also be used to reference a previous transaction, for example, a block/allocation instruction, or tie a set of messages together.
 	References []*iso20022.Linkages15 `xml:"Refs,omitempty"`
 
 	// Details of the trade.
@@ -87,10 +87,10 @@ type SecuritiesTradeConfirmationV03 struct {
 	// Other business parties relevant to the transaction.
 	OtherBusinessParties *iso20022.OtherParties18 `xml:"OthrBizPties,omitempty"`
 
-	// Identifies a transaction that the trading parties are agreeing to repurchase, sell back or return the same or similar securities at a later time. 
-	// The two leg transaction details defines the closing leg conditions of a two leg transaction. It is also used to define the anticipated closing leg conditions at the time of opening the closed-end transaction. 
-	// 
-	// 
+	// Identifies a transaction that the trading parties are agreeing to repurchase, sell back or return the same or similar securities at a later time.
+	// The two leg transaction details defines the closing leg conditions of a two leg transaction. It is also used to define the anticipated closing leg conditions at the time of opening the closed-end transaction.
+	//
+	//
 	TwoLegTransactionDetails *iso20022.TwoLegTransactionDetails1 `xml:"TwoLegTxDtls,omitempty"`
 
 	// Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or area they conduct business.
@@ -98,9 +98,7 @@ type SecuritiesTradeConfirmationV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeConfirmationV03) AddIdentification() *iso20022.TransactiontIdentification4 {
 	s.Identification = new(iso20022.TransactiontIdentification4)
@@ -113,7 +111,7 @@ func (s *SecuritiesTradeConfirmationV03) AddNumberCount() *iso20022.NumberCount1
 }
 
 func (s *SecuritiesTradeConfirmationV03) AddReferences() *iso20022.Linkages15 {
-	newValue := new (iso20022.Linkages15)
+	newValue := new(iso20022.Linkages15)
 	s.References = append(s.References, newValue)
 	return newValue
 }
@@ -134,7 +132,7 @@ func (s *SecuritiesTradeConfirmationV03) AddFinancialInstrumentAttributes() *iso
 }
 
 func (s *SecuritiesTradeConfirmationV03) AddUnderlyingFinancialInstrument() *iso20022.UnderlyingFinancialInstrument2 {
-	newValue := new (iso20022.UnderlyingFinancialInstrument2)
+	newValue := new(iso20022.UnderlyingFinancialInstrument2)
 	s.UnderlyingFinancialInstrument = append(s.UnderlyingFinancialInstrument, newValue)
 	return newValue
 }
@@ -145,7 +143,7 @@ func (s *SecuritiesTradeConfirmationV03) AddStipulations() *iso20022.FinancialIn
 }
 
 func (s *SecuritiesTradeConfirmationV03) AddConfirmationParties() *iso20022.ConfirmationParties2 {
-	newValue := new (iso20022.ConfirmationParties2)
+	newValue := new(iso20022.ConfirmationParties2)
 	s.ConfirmationParties = append(s.ConfirmationParties, newValue)
 	return newValue
 }
@@ -186,13 +184,13 @@ func (s *SecuritiesTradeConfirmationV03) AddSettlementAmount() *iso20022.AmountA
 }
 
 func (s *SecuritiesTradeConfirmationV03) AddOtherAmounts() *iso20022.OtherAmounts16 {
-	newValue := new (iso20022.OtherAmounts16)
+	newValue := new(iso20022.OtherAmounts16)
 	s.OtherAmounts = append(s.OtherAmounts, newValue)
 	return newValue
 }
 
 func (s *SecuritiesTradeConfirmationV03) AddOtherPrices() *iso20022.OtherPrices2 {
-	newValue := new (iso20022.OtherPrices2)
+	newValue := new(iso20022.OtherPrices2)
 	s.OtherPrices = append(s.OtherPrices, newValue)
 	return newValue
 }
@@ -213,8 +211,7 @@ func (s *SecuritiesTradeConfirmationV03) AddRegulatoryStipulations() *iso20022.R
 }
 
 func (s *SecuritiesTradeConfirmationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

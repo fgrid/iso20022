@@ -17,9 +17,7 @@ type TransferReference9 struct {
 
 	// Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.
 	CancellationReference *Max35Text `xml:"CxlRef,omitempty"`
-
 }
-
 
 func (t *TransferReference9) SetMasterReference(value string) {
 	t.MasterReference = (*Max35Text)(&value)
@@ -42,4 +40,3 @@ func (t *TransferReference9) AddCounterpartyReference() *AdditionalReference7 {
 func (t *TransferReference9) SetCancellationReference(value string) {
 	t.CancellationReference = (*Max35Text)(&value)
 }
-

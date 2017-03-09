@@ -26,9 +26,7 @@ type MandateRelatedInformation6 struct {
 
 	// Regularity with which direct debit instructions are to be created and processed.
 	Frequency *Frequency1Code `xml:"Frqcy,omitempty"`
-
 }
-
 
 func (m *MandateRelatedInformation6) SetMandateIdentification(value string) {
 	m.MandateIdentification = (*Max35Text)(&value)
@@ -62,4 +60,3 @@ func (m *MandateRelatedInformation6) SetFinalCollectionDate(value string) {
 func (m *MandateRelatedInformation6) SetFrequency(value string) {
 	m.Frequency = (*Frequency1Code)(&value)
 }
-

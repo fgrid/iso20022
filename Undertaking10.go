@@ -8,9 +8,7 @@ type Undertaking10 struct {
 
 	// Details related to the requested new expiry terms for the counter-undertaking.
 	NewExpiryDetails *ExpiryDetails1 `xml:"NewXpryDtls,omitempty"`
-
 }
-
 
 func (u *Undertaking10) AddNewUndertakingAmount() *UndertakingAmount2 {
 	u.NewUndertakingAmount = new(UndertakingAmount2)
@@ -21,4 +19,3 @@ func (u *Undertaking10) AddNewExpiryDetails() *ExpiryDetails1 {
 	u.NewExpiryDetails = new(ExpiryDetails1)
 	return u.NewExpiryDetails
 }
-

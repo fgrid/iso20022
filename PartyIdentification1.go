@@ -11,9 +11,7 @@ type PartyIdentification1 struct {
 
 	// Unique and unambiguous identification of a party.
 	Identification *Party1Choice `xml:"Id,omitempty"`
-
 }
-
 
 func (p *PartyIdentification1) SetName(value string) {
 	p.Name = (*Max70Text)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification1) AddIdentification() *Party1Choice {
 	p.Identification = new(Party1Choice)
 	return p.Identification
 }
-

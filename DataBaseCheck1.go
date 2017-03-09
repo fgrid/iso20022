@@ -8,9 +8,7 @@ type DataBaseCheck1 struct {
 
 	// Identification of the database.
 	Identification *Max35Text `xml:"Id"`
-
 }
-
 
 func (d *DataBaseCheck1) SetDatabaseCheck(value string) {
 	d.DatabaseCheck = (*YesNoIndicator)(&value)
@@ -19,4 +17,3 @@ func (d *DataBaseCheck1) SetDatabaseCheck(value string) {
 func (d *DataBaseCheck1) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
 }
-

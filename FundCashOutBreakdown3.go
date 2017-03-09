@@ -12,7 +12,7 @@ type FundCashOutBreakdown3 struct {
 	// Indicates whether the cash flow is an item that did not appear on the previously sent report, for example, because it was received close to cut-off time.
 	NewAmountIndicator *YesNoIndicator `xml:"NewAmtInd,omitempty"`
 
-	// Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out. 
+	// Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out.
 	InvestmentFundTransactionOutType *InvestmentFundTransactionOutType1Choice `xml:"InvstmtFndTxOutTp"`
 
 	// Specifies how the original order was expressed that resulted in the cash-out movement, that is cash or units.
@@ -26,9 +26,7 @@ type FundCashOutBreakdown3 struct {
 
 	// Settlement currency for the transaction.
 	SettlementCurrency *ActiveCurrencyCode `xml:"SttlmCcy,omitempty"`
-
 }
-
 
 func (f *FundCashOutBreakdown3) SetAmount(value, currency string) {
 	f.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -54,13 +52,13 @@ func (f *FundCashOutBreakdown3) AddOriginalOrderQuantityType() *QuantityType1Cho
 }
 
 func (f *FundCashOutBreakdown3) AddChargeDetails() *Charge26 {
-	newValue := new (Charge26)
+	newValue := new(Charge26)
 	f.ChargeDetails = append(f.ChargeDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashOutBreakdown3) AddCommissionDetails() *Commission21 {
-	newValue := new (Commission21)
+	newValue := new(Commission21)
 	f.CommissionDetails = append(f.CommissionDetails, newValue)
 	return newValue
 }
@@ -68,4 +66,3 @@ func (f *FundCashOutBreakdown3) AddCommissionDetails() *Commission21 {
 func (f *FundCashOutBreakdown3) SetSettlementCurrency(value string) {
 	f.SettlementCurrency = (*ActiveCurrencyCode)(&value)
 }
-

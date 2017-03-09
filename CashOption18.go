@@ -36,9 +36,7 @@ type CashOption18 struct {
 
 	// Provides information about the prices related to a corporate action option.
 	PriceDetails *PriceDetails7 `xml:"PricDtls,omitempty"`
-
 }
-
 
 func (c *CashOption18) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -92,4 +90,3 @@ func (c *CashOption18) AddPriceDetails() *PriceDetails7 {
 	c.PriceDetails = new(PriceDetails7)
 	return c.PriceDetails
 }
-

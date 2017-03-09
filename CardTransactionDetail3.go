@@ -38,9 +38,7 @@ type CardTransactionDetail3 struct {
 	// Data related to an integrated circuit card application.
 	// It corresponds to ISO 8583 field number 55 for the versions 93 and 2003.
 	ICCRelatedData *Max10000Binary `xml:"ICCRltdData,omitempty"`
-
 }
-
 
 func (c *CardTransactionDetail3) AddTransactionAmounts() *CardTransactionAmount3 {
 	c.TransactionAmounts = new(CardTransactionAmount3)
@@ -48,13 +46,13 @@ func (c *CardTransactionDetail3) AddTransactionAmounts() *CardTransactionAmount3
 }
 
 func (c *CardTransactionDetail3) AddTransactionFees() *DetailedAmount11 {
-	newValue := new (DetailedAmount11)
+	newValue := new(DetailedAmount11)
 	c.TransactionFees = append(c.TransactionFees, newValue)
 	return newValue
 }
 
 func (c *CardTransactionDetail3) AddAdditionalAmounts() *DetailedAmount10 {
-	newValue := new (DetailedAmount10)
+	newValue := new(DetailedAmount10)
 	c.AdditionalAmounts = append(c.AdditionalAmounts, newValue)
 	return newValue
 }
@@ -94,4 +92,3 @@ func (c *CardTransactionDetail3) AddAntiMoneyLaundering() *AntiMoneyLaundering1 
 func (c *CardTransactionDetail3) SetICCRelatedData(value string) {
 	c.ICCRelatedData = (*Max10000Binary)(&value)
 }
-

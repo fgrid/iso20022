@@ -8,9 +8,7 @@ type ServiceLevel8Choice struct {
 
 	// Specifies a pre-agreed service or level of service between the parties, as a proprietary code.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (s *ServiceLevel8Choice) SetCode(value string) {
 	s.Code = (*ExternalServiceLevel1Code)(&value)
@@ -19,4 +17,3 @@ func (s *ServiceLevel8Choice) SetCode(value string) {
 func (s *ServiceLevel8Choice) SetProprietary(value string) {
 	s.Proprietary = (*Max35Text)(&value)
 }
-

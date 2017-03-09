@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.014.001.02 Document"`
+	XMLName xml.Name          `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.014.001.02 Document"`
 	Message *AccountReportV02 `xml:"AcctRpt"`
 }
 
@@ -25,8 +25,8 @@ type AccountReportV02 struct {
 	// Identifies the business sender of the message, if it is not the account owner or account servicing financial institution.
 	From *iso20022.OrganisationIdentification8 `xml:"Fr,omitempty"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
-	// 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+	//
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification5 `xml:"AcctSvcrId"`
 
 	// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
@@ -40,9 +40,7 @@ type AccountReportV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (a *AccountReportV02) AddReferences() *iso20022.References5 {
 	a.References = new(iso20022.References5)
@@ -65,20 +63,19 @@ func (a *AccountReportV02) AddOrganisation() *iso20022.Organisation12 {
 }
 
 func (a *AccountReportV02) AddReport() *iso20022.AccountReport15 {
-	newValue := new (iso20022.AccountReport15)
+	newValue := new(iso20022.AccountReport15)
 	a.Report = append(a.Report, newValue)
 	return newValue
 }
 
 func (a *AccountReportV02) AddDigitalSignature() *iso20022.PartyAndSignature2 {
-	newValue := new (iso20022.PartyAndSignature2)
+	newValue := new(iso20022.PartyAndSignature2)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
 
 func (a *AccountReportV02) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	a.SupplementaryData = append(a.SupplementaryData, newValue)
 	return newValue
 }
-

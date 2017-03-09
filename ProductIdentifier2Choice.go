@@ -8,9 +8,7 @@ type ProductIdentifier2Choice struct {
 
 	// Specifies the type of product identifier not present in the code list.
 	OtherProductIdentifier *GenericIdentification4 `xml:"OthrPdctIdr"`
-
 }
-
 
 func (p *ProductIdentifier2Choice) AddStructuredProductIdentifier() *ProductIdentifier2 {
 	p.StructuredProductIdentifier = new(ProductIdentifier2)
@@ -21,4 +19,3 @@ func (p *ProductIdentifier2Choice) AddOtherProductIdentifier() *GenericIdentific
 	p.OtherProductIdentifier = new(GenericIdentification4)
 	return p.OtherProductIdentifier
 }
-

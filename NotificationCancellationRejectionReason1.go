@@ -8,12 +8,10 @@ type NotificationCancellationRejectionReason1 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
 
-
 func (n *NotificationCancellationRejectionReason1) AddReason() *RejectionReason11FormatChoice {
-	newValue := new (RejectionReason11FormatChoice)
+	newValue := new(RejectionReason11FormatChoice)
 	n.Reason = append(n.Reason, newValue)
 	return newValue
 }
@@ -21,4 +19,3 @@ func (n *NotificationCancellationRejectionReason1) AddReason() *RejectionReason1
 func (n *NotificationCancellationRejectionReason1) SetAdditionalInformation(value string) {
 	n.AdditionalInformation = (*Max350Text)(&value)
 }
-

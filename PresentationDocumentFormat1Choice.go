@@ -4,14 +4,12 @@ package iso20022
 type PresentationDocumentFormat1Choice struct {
 
 	// Presentation document.
-	// 
+	//
 	Code *ExternalUndertakingDocumentType1Code `xml:"Cd"`
 
 	// Document format expressed as a proprietary code.
 	Proprietary *GenericIdentification1 `xml:"Prtry"`
-
 }
-
 
 func (p *PresentationDocumentFormat1Choice) SetCode(value string) {
 	p.Code = (*ExternalUndertakingDocumentType1Code)(&value)
@@ -21,4 +19,3 @@ func (p *PresentationDocumentFormat1Choice) AddProprietary() *GenericIdentificat
 	p.Proprietary = new(GenericIdentification1)
 	return p.Proprietary
 }
-

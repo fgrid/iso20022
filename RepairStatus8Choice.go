@@ -8,17 +8,14 @@ type RepairStatus8Choice struct {
 
 	// Specifies the reason of the repair status.
 	Reason []*RepairReason6 `xml:"Rsn"`
-
 }
-
 
 func (r *RepairStatus8Choice) SetNoSpecifiedReason(value string) {
 	r.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (r *RepairStatus8Choice) AddReason() *RepairReason6 {
-	newValue := new (RepairReason6)
+	newValue := new(RepairReason6)
 	r.Reason = append(r.Reason, newValue)
 	return newValue
 }
-

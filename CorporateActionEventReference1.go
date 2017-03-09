@@ -8,9 +8,7 @@ type CorporateActionEventReference1 struct {
 
 	// Specifies when this corporate action event is to be processed relative to a linked corporate action event.
 	LinkageType *ProcessingPosition1Choice `xml:"LkgTp,omitempty"`
-
 }
-
 
 func (c *CorporateActionEventReference1) AddEventIdentification() *CorporateActionEventReference1Choice {
 	c.EventIdentification = new(CorporateActionEventReference1Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionEventReference1) AddLinkageType() *ProcessingPosition1Ch
 	c.LinkageType = new(ProcessingPosition1Choice)
 	return c.LinkageType
 }
-

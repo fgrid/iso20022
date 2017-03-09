@@ -3,7 +3,7 @@ package iso20022
 // Unique and unambiguous identification of the original message references.
 type OriginalMessage2 struct {
 
-	// Original message sender used to identify the message. 
+	// Original message sender used to identify the message.
 	OriginalSender *Party28Choice `xml:"OrgnlSndr,omitempty"`
 
 	// Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.
@@ -18,11 +18,9 @@ type OriginalMessage2 struct {
 	// Specifies the identification of original package of instructions, entries or records.
 	OriginalPackageIdentification *Max35Text `xml:"OrgnlPackgId,omitempty"`
 
-	// Specifies the identification of original entry, instruction or record within the package. 
+	// Specifies the identification of original entry, instruction or record within the package.
 	OriginalRecordIdentification *Max35Text `xml:"OrgnlRcrdId"`
-
 }
-
 
 func (o *OriginalMessage2) AddOriginalSender() *Party28Choice {
 	o.OriginalSender = new(Party28Choice)
@@ -48,4 +46,3 @@ func (o *OriginalMessage2) SetOriginalPackageIdentification(value string) {
 func (o *OriginalMessage2) SetOriginalRecordIdentification(value string) {
 	o.OriginalRecordIdentification = (*Max35Text)(&value)
 }
-

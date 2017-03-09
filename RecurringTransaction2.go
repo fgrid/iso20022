@@ -32,9 +32,7 @@ type RecurringTransaction2 struct {
 
 	// Charges related to the transaction.
 	Charges *ImpliedCurrencyAndAmount `xml:"Chrgs,omitempty"`
-
 }
-
 
 func (r *RecurringTransaction2) AddInstalmentPlan(value string) {
 	r.InstalmentPlan = append(r.InstalmentPlan, (*InstalmentPlan1Code)(&value))
@@ -75,4 +73,3 @@ func (r *RecurringTransaction2) SetFirstAmount(value, currency string) {
 func (r *RecurringTransaction2) SetCharges(value, currency string) {
 	r.Charges = NewImpliedCurrencyAndAmount(value, currency)
 }
-

@@ -14,9 +14,7 @@ type OrderStatusAndReason8 struct {
 
 	// Party that initiates the status of the order cancellation.
 	StatusInitiator *PartyIdentification2Choice `xml:"StsInitr,omitempty"`
-
 }
-
 
 func (o *OrderStatusAndReason8) SetMasterReference(value string) {
 	o.MasterReference = (*Max35Text)(&value)
@@ -35,4 +33,3 @@ func (o *OrderStatusAndReason8) AddStatusInitiator() *PartyIdentification2Choice
 	o.StatusInitiator = new(PartyIdentification2Choice)
 	return o.StatusInitiator
 }
-

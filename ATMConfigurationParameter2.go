@@ -14,9 +14,7 @@ type ATMConfigurationParameter2 struct {
 
 	// Cryptographic key involved in the security command.
 	KeyProperties []*KEKIdentifier4 `xml:"KeyProps,omitempty"`
-
 }
-
 
 func (a *ATMConfigurationParameter2) SetKeyCategory(value string) {
 	a.KeyCategory = (*CryptographicKeyType4Code)(&value)
@@ -31,8 +29,7 @@ func (a *ATMConfigurationParameter2) AddCertificate(value string) {
 }
 
 func (a *ATMConfigurationParameter2) AddKeyProperties() *KEKIdentifier4 {
-	newValue := new (KEKIdentifier4)
+	newValue := new(KEKIdentifier4)
 	a.KeyProperties = append(a.KeyProperties, newValue)
 	return newValue
 }
-

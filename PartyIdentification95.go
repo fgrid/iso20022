@@ -8,9 +8,7 @@ type PartyIdentification95 struct {
 
 	// Identification of the organisation with a Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 "Financial Services - Legal Entity Identifier (LEI)".
 	LegalEntityIdentifier *LEIIdentifier `xml:"LglNttyIdr,omitempty"`
-
 }
-
 
 func (p *PartyIdentification95) AddIdentification() *PartyIdentification70Choice {
 	p.Identification = new(PartyIdentification70Choice)
@@ -20,4 +18,3 @@ func (p *PartyIdentification95) AddIdentification() *PartyIdentification70Choice
 func (p *PartyIdentification95) SetLegalEntityIdentifier(value string) {
 	p.LegalEntityIdentifier = (*LEIIdentifier)(&value)
 }
-

@@ -8,9 +8,7 @@ type PairedOrTurnedQuantity3Choice struct {
 
 	// Quantity of financial instruments of the linked transaction to be turned.
 	TurnedQuantity *FinancialInstrumentQuantity1Choice `xml:"TrndQty,omitempty"`
-
 }
-
 
 func (p *PairedOrTurnedQuantity3Choice) AddPairedOffQuantity() *FinancialInstrumentQuantity1Choice {
 	p.PairedOffQuantity = new(FinancialInstrumentQuantity1Choice)
@@ -21,4 +19,3 @@ func (p *PairedOrTurnedQuantity3Choice) AddTurnedQuantity() *FinancialInstrument
 	p.TurnedQuantity = new(FinancialInstrumentQuantity1Choice)
 	return p.TurnedQuantity
 }
-

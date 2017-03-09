@@ -32,9 +32,7 @@ type CorporateActionDate55 struct {
 
 	// Specifies the party borrowing stocks and the associated stock lending deadline assigned to the borrower.
 	BorrowerStockLendingDeadline []*BorrowerLendingDeadline2 `xml:"BrrwrStockLndgDdln,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate55) AddEarlyResponseDeadline() *DateFormat34Choice {
 	c.EarlyResponseDeadline = new(DateFormat34Choice)
@@ -82,8 +80,7 @@ func (c *CorporateActionDate55) AddStockLendingDeadline() *DateFormat34Choice {
 }
 
 func (c *CorporateActionDate55) AddBorrowerStockLendingDeadline() *BorrowerLendingDeadline2 {
-	newValue := new (BorrowerLendingDeadline2)
+	newValue := new(BorrowerLendingDeadline2)
 	c.BorrowerStockLendingDeadline = append(c.BorrowerStockLendingDeadline, newValue)
 	return newValue
 }
-

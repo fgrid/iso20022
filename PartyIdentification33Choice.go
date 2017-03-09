@@ -11,9 +11,7 @@ type PartyIdentification33Choice struct {
 
 	// Name by which a party is known and which is usually used to identify that party.
 	NameAndAddress *NameAndAddress6 `xml:"NmAndAdr"`
-
 }
-
 
 func (p *PartyIdentification33Choice) SetAnyBIC(value string) {
 	p.AnyBIC = (*AnyBICIdentifier)(&value)
@@ -28,4 +26,3 @@ func (p *PartyIdentification33Choice) AddNameAndAddress() *NameAndAddress6 {
 	p.NameAndAddress = new(NameAndAddress6)
 	return p.NameAndAddress
 }
-

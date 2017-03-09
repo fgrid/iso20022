@@ -7,7 +7,7 @@ import (
 )
 
 type Document02700102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.027.001.02 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.027.001.02 Document"`
 	Message *StatusChangeRequestAcceptanceV02 `xml:"StsChngReqAccptnc"`
 }
 
@@ -37,9 +37,7 @@ type StatusChangeRequestAcceptanceV02 struct {
 
 	// Specifies the status accepted.
 	AcceptedStatus *iso20022.TransactionStatus3 `xml:"AccptdSts"`
-
 }
-
 
 func (s *StatusChangeRequestAcceptanceV02) AddAcceptanceIdentification() *iso20022.MessageIdentification1 {
 	s.AcceptanceIdentification = new(iso20022.MessageIdentification1)
@@ -60,4 +58,3 @@ func (s *StatusChangeRequestAcceptanceV02) AddAcceptedStatus() *iso20022.Transac
 	s.AcceptedStatus = new(iso20022.TransactionStatus3)
 	return s.AcceptedStatus
 }
-

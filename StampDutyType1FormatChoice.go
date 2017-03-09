@@ -8,9 +8,7 @@ type StampDutyType1FormatChoice struct {
 
 	// Proprietary code to express the stamp duty information.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (s *StampDutyType1FormatChoice) SetCode(value string) {
 	s.Code = (*StampDutyType1Code)(&value)
@@ -20,4 +18,3 @@ func (s *StampDutyType1FormatChoice) AddProprietary() *GenericIdentification13 {
 	s.Proprietary = new(GenericIdentification13)
 	return s.Proprietary
 }
-

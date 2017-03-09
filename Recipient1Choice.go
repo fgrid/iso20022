@@ -8,9 +8,7 @@ type Recipient1Choice struct {
 
 	// Encryption key using previously distributed symmetric key.
 	KEK *KEK1 `xml:"KEK,omitempty"`
-
 }
-
 
 func (r *Recipient1Choice) AddKeyTransport() *KeyTransport1 {
 	r.KeyTransport = new(KeyTransport1)
@@ -21,4 +19,3 @@ func (r *Recipient1Choice) AddKEK() *KEK1 {
 	r.KEK = new(KEK1)
 	return r.KEK
 }
-

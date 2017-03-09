@@ -20,9 +20,7 @@ type References6Choice struct {
 
 	// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
 	TradeIdentification *Max35Text `xml:"TradId"`
-
 }
-
 
 func (r *References6Choice) SetAccountServicerTransactionIdentification(value string) {
 	r.AccountServicerTransactionIdentification = (*Max35Text)(&value)
@@ -47,4 +45,3 @@ func (r *References6Choice) SetCommonIdentification(value string) {
 func (r *References6Choice) SetTradeIdentification(value string) {
 	r.TradeIdentification = (*Max35Text)(&value)
 }
-

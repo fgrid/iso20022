@@ -14,9 +14,7 @@ type Entitlement1 struct {
 
 	// Provides information about the cash distribution.
 	CashDistributionDetails []*CashEntitlement1 `xml:"CshDstrbtnDtls,omitempty"`
-
 }
-
 
 func (e *Entitlement1) AddAccountOwnerIdentification() *PartyIdentification2Choice {
 	e.AccountOwnerIdentification = new(PartyIdentification2Choice)
@@ -28,14 +26,13 @@ func (e *Entitlement1) SetAccountIdentification(value string) {
 }
 
 func (e *Entitlement1) AddSecuritiesDistributionDetails() *SecuritiesEntitlement1 {
-	newValue := new (SecuritiesEntitlement1)
+	newValue := new(SecuritiesEntitlement1)
 	e.SecuritiesDistributionDetails = append(e.SecuritiesDistributionDetails, newValue)
 	return newValue
 }
 
 func (e *Entitlement1) AddCashDistributionDetails() *CashEntitlement1 {
-	newValue := new (CashEntitlement1)
+	newValue := new(CashEntitlement1)
 	e.CashDistributionDetails = append(e.CashDistributionDetails, newValue)
 	return newValue
 }
-

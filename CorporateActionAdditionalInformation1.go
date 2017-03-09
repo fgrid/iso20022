@@ -12,8 +12,8 @@ type CorporateActionAdditionalInformation1 struct {
 	// Identification of the receiver of outturned resources (cash/securities) in case the resources need to be delivered outside the CSD.
 	ReceiverIdentification *PartyIdentification2Choice `xml:"RcvrId,omitempty"`
 
-	// Whether or not certification is required from the account owner. 
-	// Y: certification required 
+	// Whether or not certification is required from the account owner.
+	// Y: certification required
 	// N: no certification required
 	CertificationIndicator *YesNoIndicator `xml:"CertfctnInd,omitempty"`
 
@@ -25,12 +25,10 @@ type CorporateActionAdditionalInformation1 struct {
 
 	// Provides additional details pertaining to the corporate action instruction.
 	AdditionalInstruction *Max350Text `xml:"AddtlInstr,omitempty"`
-
 }
 
-
 func (c *CorporateActionAdditionalInformation1) AddBeneficialOwnerDetails() *BeneficialOwner1 {
-	newValue := new (BeneficialOwner1)
+	newValue := new(BeneficialOwner1)
 	c.BeneficialOwnerDetails = append(c.BeneficialOwnerDetails, newValue)
 	return newValue
 }
@@ -54,7 +52,7 @@ func (c *CorporateActionAdditionalInformation1) AddCertificationType() *Benefici
 }
 
 func (c *CorporateActionAdditionalInformation1) AddDeliveryDetails() *ProceedsDelivery1 {
-	newValue := new (ProceedsDelivery1)
+	newValue := new(ProceedsDelivery1)
 	c.DeliveryDetails = append(c.DeliveryDetails, newValue)
 	return newValue
 }
@@ -62,4 +60,3 @@ func (c *CorporateActionAdditionalInformation1) AddDeliveryDetails() *ProceedsDe
 func (c *CorporateActionAdditionalInformation1) SetAdditionalInstruction(value string) {
 	c.AdditionalInstruction = (*Max350Text)(&value)
 }
-

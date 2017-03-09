@@ -11,9 +11,7 @@ type BalanceAmounts6 struct {
 
 	// Difference between holding value and the book value.
 	UnrealisedGainLoss *AmountAndDirection14 `xml:"UrlsdGnLoss,omitempty"`
-
 }
-
 
 func (b *BalanceAmounts6) AddHoldingValue() *AmountAndDirection14 {
 	b.HoldingValue = new(AmountAndDirection14)
@@ -29,4 +27,3 @@ func (b *BalanceAmounts6) AddUnrealisedGainLoss() *AmountAndDirection14 {
 	b.UnrealisedGainLoss = new(AmountAndDirection14)
 	return b.UnrealisedGainLoss
 }
-

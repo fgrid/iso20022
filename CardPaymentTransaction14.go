@@ -56,9 +56,7 @@ type CardPaymentTransaction14 struct {
 
 	// Additional information related to the transaction.
 	AdditionalTransactionData []*Max70Text `xml:"AddtlTxData,omitempty"`
-
 }
-
 
 func (c *CardPaymentTransaction14) SetTransactionType(value string) {
 	c.TransactionType = (*CardPaymentServiceType4Code)(&value)
@@ -136,4 +134,3 @@ func (c *CardPaymentTransaction14) AddTransactionVerificationResult() *Transacti
 func (c *CardPaymentTransaction14) AddAdditionalTransactionData(value string) {
 	c.AdditionalTransactionData = append(c.AdditionalTransactionData, (*Max70Text)(&value))
 }
-

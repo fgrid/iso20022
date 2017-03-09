@@ -7,7 +7,7 @@ import (
 )
 
 type Document01100104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.011.001.04 Document"`
+	XMLName xml.Name           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.011.001.04 Document"`
 	Message *BaselineReportV04 `xml:"BaselnRpt"`
 }
 
@@ -31,7 +31,7 @@ func (d *Document01100104) AddMessage() *BaselineReportV04 {
 // - to the submitter of the data set(s) and to the counterparty in case of a data set match for a transaction established in the push-through mode.The message can be sent after a successful data-set match or after the acceptance of mis-matched data sets to inform about the actual status of the dynamic part of the baseline.
 type BaselineReportV04 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Reference to the related message at the origin of the report or sent at the same time than the report.
@@ -42,10 +42,10 @@ type BaselineReportV04 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established.  
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification6 `xml:"EstblishdBaselnId"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -54,16 +54,16 @@ type BaselineReportV04 struct {
 	// Reference to the transaction for each financial institution which is a party to the transaction.
 	UserTransactionReference []*iso20022.DocumentIdentification5 `xml:"UsrTxRef,omitempty"`
 
-	// Party that buys goods or services, or a financial instrument. 
+	// Party that buys goods or services, or a financial instrument.
 	Buyer *iso20022.PartyIdentification26 `xml:"Buyr"`
 
-	// Party that sells goods or services, or a financial instrument. 
+	// Party that sells goods or services, or a financial instrument.
 	Seller *iso20022.PartyIdentification26 `xml:"Sellr"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Information on the goods
@@ -71,9 +71,7 @@ type BaselineReportV04 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (b *BaselineReportV04) AddReportIdentification() *iso20022.MessageIdentification1 {
 	b.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -106,7 +104,7 @@ func (b *BaselineReportV04) AddTransactionStatus() *iso20022.TransactionStatus4 
 }
 
 func (b *BaselineReportV04) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	b.UserTransactionReference = append(b.UserTransactionReference, newValue)
 	return newValue
 }
@@ -140,4 +138,3 @@ func (b *BaselineReportV04) AddRequestForAction() *iso20022.PendingActivity2 {
 	b.RequestForAction = new(iso20022.PendingActivity2)
 	return b.RequestForAction
 }
-

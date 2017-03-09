@@ -8,9 +8,7 @@ type AllegementStatus4Choice struct {
 
 	// Status of the allegement reported.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (a *AllegementStatus4Choice) SetCode(value string) {
 	a.Code = (*AllegementStatus1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AllegementStatus4Choice) AddProprietary() *GenericIdentification47 {
 	a.Proprietary = new(GenericIdentification47)
 	return a.Proprietary
 }
-

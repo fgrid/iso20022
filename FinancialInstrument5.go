@@ -26,9 +26,7 @@ type FinancialInstrument5 struct {
 
 	// Indicates whether the fund has two prices.
 	DualFundIndicator *YesNoIndicator `xml:"DualFndInd"`
-
 }
-
 
 func (f *FinancialInstrument5) AddIdentification() *SecurityIdentification1Choice {
 	f.Identification = new(SecurityIdentification1Choice)
@@ -62,4 +60,3 @@ func (f *FinancialInstrument5) SetDistributionPolicy(value string) {
 func (f *FinancialInstrument5) SetDualFundIndicator(value string) {
 	f.DualFundIndicator = (*YesNoIndicator)(&value)
 }
-

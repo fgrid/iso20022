@@ -20,9 +20,7 @@ type MeetingReference6 struct {
 
 	// Place of the company meeting for the scheduled meeting date.
 	Location []*PostalAddress1 `xml:"Lctn,omitempty"`
-
 }
-
 
 func (m *MeetingReference6) SetMeetingIdentification(value string) {
 	m.MeetingIdentification = (*Max35Text)(&value)
@@ -46,8 +44,7 @@ func (m *MeetingReference6) AddClassification() *MeetingTypeClassification1Choic
 }
 
 func (m *MeetingReference6) AddLocation() *PostalAddress1 {
-	newValue := new (PostalAddress1)
+	newValue := new(PostalAddress1)
 	m.Location = append(m.Location, newValue)
 	return newValue
 }
-

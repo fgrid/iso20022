@@ -8,9 +8,7 @@ type DocumentNumber2 struct {
 
 	// References of transaction for which the status is requested.
 	References []*Identification2 `xml:"Refs"`
-
 }
-
 
 func (d *DocumentNumber2) AddNumber() *DocumentNumber1Choice {
 	d.Number = new(DocumentNumber1Choice)
@@ -18,8 +16,7 @@ func (d *DocumentNumber2) AddNumber() *DocumentNumber1Choice {
 }
 
 func (d *DocumentNumber2) AddReferences() *Identification2 {
-	newValue := new (Identification2)
+	newValue := new(Identification2)
 	d.References = append(d.References, newValue)
 	return newValue
 }
-

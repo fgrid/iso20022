@@ -8,9 +8,7 @@ type TransactionIdentifier1 struct {
 
 	// Identification of the transaction that has to be unique for a time period.
 	TransactionReference *Max35Text `xml:"TxRef"`
-
 }
-
 
 func (t *TransactionIdentifier1) SetTransactionDateTime(value string) {
 	t.TransactionDateTime = (*ISODateTime)(&value)
@@ -19,4 +17,3 @@ func (t *TransactionIdentifier1) SetTransactionDateTime(value string) {
 func (t *TransactionIdentifier1) SetTransactionReference(value string) {
 	t.TransactionReference = (*Max35Text)(&value)
 }
-

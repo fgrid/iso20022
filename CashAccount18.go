@@ -14,9 +14,7 @@ type CashAccount18 struct {
 
 	// The cash balance type.
 	BalanceType *CashBalanceType1FormatType `xml:"BalTp,omitempty"`
-
 }
-
 
 func (c *CashAccount18) SetCreditDebitIndicator(value string) {
 	c.CreditDebitIndicator = (*CreditDebitCode)(&value)
@@ -36,4 +34,3 @@ func (c *CashAccount18) AddBalanceType() *CashBalanceType1FormatType {
 	c.BalanceType = new(CashBalanceType1FormatType)
 	return c.BalanceType
 }
-

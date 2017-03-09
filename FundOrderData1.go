@@ -29,9 +29,7 @@ type FundOrderData1 struct {
 
 	// Currency into which the base currency is converted, in a currency exchange.
 	QuotedCurrency *ActiveOrHistoricCurrencyCode `xml:"QtdCcy,omitempty"`
-
 }
-
 
 func (f *FundOrderData1) AddInvestmentAccountDetails() *InvestmentAccount13 {
 	f.InvestmentAccountDetails = new(InvestmentAccount13)
@@ -71,4 +69,3 @@ func (f *FundOrderData1) SetUnitCurrency(value string) {
 func (f *FundOrderData1) SetQuotedCurrency(value string) {
 	f.QuotedCurrency = (*ActiveOrHistoricCurrencyCode)(&value)
 }
-

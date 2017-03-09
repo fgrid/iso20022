@@ -14,9 +14,7 @@ type ReportHeader struct {
 
 	// Creation date and time of the report generation.
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
-
 }
-
 
 func (r *ReportHeader) SetIdentification(value string) {
 	r.Identification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (r *ReportHeader) SetTo(value string) {
 func (r *ReportHeader) SetCreationDateTime(value string) {
 	r.CreationDateTime = (*ISODateTime)(&value)
 }
-

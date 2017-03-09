@@ -7,7 +7,7 @@ import (
 )
 
 type Document00500101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:catp.005.001.01 Document"`
+	XMLName xml.Name      `xml:"urn:iso:std:iso:20022:tech:xsd:catp.005.001.01 Document"`
 	Message *ATMRejectV01 `xml:"ATMRjct"`
 }
 
@@ -24,9 +24,7 @@ type ATMRejectV01 struct {
 
 	// Information related to the reject of a message from an ATM or an ATM manager.
 	ATMReject *iso20022.ATMReject1 `xml:"ATMRjct"`
-
 }
-
 
 func (a *ATMRejectV01) AddHeader() *iso20022.Header22 {
 	a.Header = new(iso20022.Header22)
@@ -37,4 +35,3 @@ func (a *ATMRejectV01) AddATMReject() *iso20022.ATMReject1 {
 	a.ATMReject = new(iso20022.ATMReject1)
 	return a.ATMReject
 }
-

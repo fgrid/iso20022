@@ -11,9 +11,7 @@ type UnderlyingTransaction14 struct {
 
 	// Provides details on the original transactions to which the cancellation request message refers.
 	TransactionInformationAndStatus []*PaymentTransaction67 `xml:"TxInfAndSts,omitempty"`
-
 }
-
 
 func (u *UnderlyingTransaction14) AddOriginalGroupInformationAndStatus() *OriginalGroupHeader5 {
 	u.OriginalGroupInformationAndStatus = new(OriginalGroupHeader5)
@@ -21,14 +19,13 @@ func (u *UnderlyingTransaction14) AddOriginalGroupInformationAndStatus() *Origin
 }
 
 func (u *UnderlyingTransaction14) AddOriginalPaymentInformationAndStatus() *OriginalPaymentInstruction17 {
-	newValue := new (OriginalPaymentInstruction17)
+	newValue := new(OriginalPaymentInstruction17)
 	u.OriginalPaymentInformationAndStatus = append(u.OriginalPaymentInformationAndStatus, newValue)
 	return newValue
 }
 
 func (u *UnderlyingTransaction14) AddTransactionInformationAndStatus() *PaymentTransaction67 {
-	newValue := new (PaymentTransaction67)
+	newValue := new(PaymentTransaction67)
 	u.TransactionInformationAndStatus = append(u.TransactionInformationAndStatus, newValue)
 	return newValue
 }
-

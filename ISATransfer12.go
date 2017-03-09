@@ -38,9 +38,7 @@ type ISATransfer12 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (i *ISATransfer12) AddPrimaryIndividualInvestor() *IndividualPerson8 {
 	i.PrimaryIndividualInvestor = new(IndividualPerson8)
@@ -53,7 +51,7 @@ func (i *ISATransfer12) AddSecondaryIndividualInvestor() *IndividualPerson8 {
 }
 
 func (i *ISATransfer12) AddOtherIndividualInvestor() *IndividualPerson8 {
-	newValue := new (IndividualPerson8)
+	newValue := new(IndividualPerson8)
 	i.OtherIndividualInvestor = append(i.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -69,7 +67,7 @@ func (i *ISATransfer12) AddSecondaryCorporateInvestor() *Organisation4 {
 }
 
 func (i *ISATransfer12) AddOtherCorporateInvestor() *Organisation4 {
-	newValue := new (Organisation4)
+	newValue := new(Organisation4)
 	i.OtherCorporateInvestor = append(i.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -100,8 +98,7 @@ func (i *ISATransfer12) AddProductTransferAndReference() *ISATransfer17 {
 }
 
 func (i *ISATransfer12) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	i.Extension = append(i.Extension, newValue)
 	return newValue
 }
-

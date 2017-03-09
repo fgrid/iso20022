@@ -8,9 +8,7 @@ type QualifiedPartyAndXMLSignature1 struct {
 
 	// Digital signature in XML-DSIG format and reference to signing party.
 	Signature *SignatureEnvelope `xml:"Sgntr"`
-
 }
-
 
 func (q *QualifiedPartyAndXMLSignature1) AddParty() *QualifiedPartyIdentification1 {
 	q.Party = new(QualifiedPartyIdentification1)
@@ -21,4 +19,3 @@ func (q *QualifiedPartyAndXMLSignature1) AddSignature() *SignatureEnvelope {
 	q.Signature = new(SignatureEnvelope)
 	return q.Signature
 }
-

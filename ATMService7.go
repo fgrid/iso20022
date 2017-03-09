@@ -11,16 +11,14 @@ type ATMService7 struct {
 
 	// Preferred withdrawal transaction chosen by the customer.
 	PreferredWithdrawal *ATMTransaction8 `xml:"PrefrdWdrwl,omitempty"`
-
 }
-
 
 func (a *ATMService7) SetServiceType(value string) {
 	a.ServiceType = (*ATMServiceType4Code)(&value)
 }
 
 func (a *ATMService7) AddLimits() *ATMTransactionAmounts3 {
-	newValue := new (ATMTransactionAmounts3)
+	newValue := new(ATMTransactionAmounts3)
 	a.Limits = append(a.Limits, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (a *ATMService7) AddPreferredWithdrawal() *ATMTransaction8 {
 	a.PreferredWithdrawal = new(ATMTransaction8)
 	return a.PreferredWithdrawal
 }
-

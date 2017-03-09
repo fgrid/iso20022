@@ -17,9 +17,7 @@ type CurrencyControlPackageStatus1 struct {
 
 	// Provides the status of the individual records in the package.
 	RecordStatus []*CurrencyControlRecordStatus1 `xml:"RcrdSts,omitempty"`
-
 }
-
 
 func (c *CurrencyControlPackageStatus1) SetPackageIdentification(value string) {
 	c.PackageIdentification = (*Max35Text)(&value)
@@ -30,7 +28,7 @@ func (c *CurrencyControlPackageStatus1) SetStatus(value string) {
 }
 
 func (c *CurrencyControlPackageStatus1) AddStatusReason() *ValidationStatusReason1 {
-	newValue := new (ValidationStatusReason1)
+	newValue := new(ValidationStatusReason1)
 	c.StatusReason = append(c.StatusReason, newValue)
 	return newValue
 }
@@ -40,8 +38,7 @@ func (c *CurrencyControlPackageStatus1) SetStatusDateTime(value string) {
 }
 
 func (c *CurrencyControlPackageStatus1) AddRecordStatus() *CurrencyControlRecordStatus1 {
-	newValue := new (CurrencyControlRecordStatus1)
+	newValue := new(CurrencyControlRecordStatus1)
 	c.RecordStatus = append(c.RecordStatus, newValue)
 	return newValue
 }
-

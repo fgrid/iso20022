@@ -23,9 +23,7 @@ type PointOfInteractionCapabilities5 struct {
 
 	// True if the ATM is able to capture card.
 	CardCaptureCapable *TrueFalseIndicator `xml:"CardCaptrCpbl,omitempty"`
-
 }
-
 
 func (p *PointOfInteractionCapabilities5) AddCardReadData(value string) {
 	p.CardReadData = append(p.CardReadData, (*CardDataReading4Code)(&value))
@@ -54,4 +52,3 @@ func (p *PointOfInteractionCapabilities5) SetMaxScriptLength(value string) {
 func (p *PointOfInteractionCapabilities5) SetCardCaptureCapable(value string) {
 	p.CardCaptureCapable = (*TrueFalseIndicator)(&value)
 }
-

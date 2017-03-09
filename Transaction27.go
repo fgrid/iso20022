@@ -44,9 +44,7 @@ type Transaction27 struct {
 
 	// Status and reason for the transaction.
 	StatusAndReason []*Status9Choice `xml:"StsAndRsn,omitempty"`
-
 }
-
 
 func (t *Transaction27) SetAccountOwnerTransactionIdentification(value string) {
 	t.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -102,8 +100,7 @@ func (t *Transaction27) AddTransactionDetails() *TransactionDetails56 {
 }
 
 func (t *Transaction27) AddStatusAndReason() *Status9Choice {
-	newValue := new (Status9Choice)
+	newValue := new(Status9Choice)
 	t.StatusAndReason = append(t.StatusAndReason, newValue)
 	return newValue
 }
-

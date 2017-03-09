@@ -26,9 +26,7 @@ type ATMEquipment3 struct {
 
 	// Version of the firmware.
 	FirmwareVersion *Max35Text `xml:"FrmwrVrsn,omitempty"`
-
 }
-
 
 func (a *ATMEquipment3) SetManufacturer(value string) {
 	a.Manufacturer = (*Max35Text)(&value)
@@ -62,4 +60,3 @@ func (a *ATMEquipment3) SetFirmwareIdentification(value string) {
 func (a *ATMEquipment3) SetFirmwareVersion(value string) {
 	a.FirmwareVersion = (*Max35Text)(&value)
 }
-

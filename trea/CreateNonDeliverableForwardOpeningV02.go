@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:trea.001.001.02 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:trea.001.001.02 Document"`
 	Message *CreateNonDeliverableForwardOpeningV02 `xml:"CretNDFOpngV02"`
 }
 
@@ -39,9 +39,7 @@ type CreateNonDeliverableForwardOpeningV02 struct {
 
 	// Specifies the valuation conditions of the non deliverable trade which is created.
 	ValuationConditions *iso20022.NonDeliverableForwardValuationConditions2 `xml:"ValtnConds"`
-
 }
-
 
 func (c *CreateNonDeliverableForwardOpeningV02) AddTradeInformation() *iso20022.TradeAgreement1 {
 	c.TradeInformation = new(iso20022.TradeAgreement1)
@@ -72,4 +70,3 @@ func (c *CreateNonDeliverableForwardOpeningV02) AddValuationConditions() *iso200
 	c.ValuationConditions = new(iso20022.NonDeliverableForwardValuationConditions2)
 	return c.ValuationConditions
 }
-

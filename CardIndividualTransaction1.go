@@ -15,7 +15,7 @@ type CardIndividualTransaction1 struct {
 	// Unique reference of the sales as provided by the merchant.
 	SaleReferenceNumber *Max35Text `xml:"SaleRefNb,omitempty"`
 
-	// Sequential number of the card transaction, as assigned by the POI (Point of Interaction). 
+	// Sequential number of the card transaction, as assigned by the POI (Point of Interaction).
 	// Usage: The sequential number is increased incrementally for each transaction.
 	SequenceNumber *Max35Text `xml:"SeqNb,omitempty"`
 
@@ -31,9 +31,7 @@ type CardIndividualTransaction1 struct {
 	// Sequential number of the validation of the cash deposit.
 	// Usage: The sequential number is increased incrementally for each transaction.
 	ValidationSequenceNumber *Max35Text `xml:"VldtnSeqNb,omitempty"`
-
 }
-
 
 func (c *CardIndividualTransaction1) SetAdditionalService(value string) {
 	c.AdditionalService = (*CardPaymentServiceType2Code)(&value)
@@ -72,4 +70,3 @@ func (c *CardIndividualTransaction1) SetValidationDate(value string) {
 func (c *CardIndividualTransaction1) SetValidationSequenceNumber(value string) {
 	c.ValidationSequenceNumber = (*Max35Text)(&value)
 }
-

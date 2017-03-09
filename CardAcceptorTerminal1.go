@@ -3,7 +3,7 @@ package iso20022
 // Payment terminal or ATM performing the transaction.
 type CardAcceptorTerminal1 struct {
 
-	// Identification of the terminal. 
+	// Identification of the terminal.
 	// It correspond to the ISO 8583 field number 41.
 	Identification *GenericIdentification32 `xml:"Id"`
 
@@ -12,9 +12,7 @@ type CardAcceptorTerminal1 struct {
 
 	// Capabilities of the terminal performing the transaction.
 	Capabilities *PointOfInteractionCapabilities4 `xml:"Cpblties"`
-
 }
-
 
 func (c *CardAcceptorTerminal1) AddIdentification() *GenericIdentification32 {
 	c.Identification = new(GenericIdentification32)
@@ -30,4 +28,3 @@ func (c *CardAcceptorTerminal1) AddCapabilities() *PointOfInteractionCapabilitie
 	c.Capabilities = new(PointOfInteractionCapabilities4)
 	return c.Capabilities
 }
-

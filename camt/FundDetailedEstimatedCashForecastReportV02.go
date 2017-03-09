@@ -7,7 +7,7 @@ import (
 )
 
 type Document04200102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.042.001.02 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.042.001.02 Document"`
 	Message *FundDetailedEstimatedCashForecastReportV02 `xml:"camt.042.001.02"`
 }
 
@@ -33,15 +33,13 @@ type FundDetailedEstimatedCashForecastReportV02 struct {
 	RelatedReference []*iso20022.AdditionalReference3 `xml:"RltdRef,omitempty"`
 
 	// Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.
-	// 
-	// 
+	//
+	//
 	EstimatedFundCashForecastDetails []*iso20022.EstimatedFundCashForecast2 `xml:"EstmtdFndCshFcstDtls"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (f *FundDetailedEstimatedCashForecastReportV02) AddPoolReference() *iso20022.AdditionalReference3 {
 	f.PoolReference = new(iso20022.AdditionalReference3)
@@ -49,26 +47,25 @@ func (f *FundDetailedEstimatedCashForecastReportV02) AddPoolReference() *iso2002
 }
 
 func (f *FundDetailedEstimatedCashForecastReportV02) AddPreviousReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.PreviousReference = append(f.PreviousReference, newValue)
 	return newValue
 }
 
 func (f *FundDetailedEstimatedCashForecastReportV02) AddRelatedReference() *iso20022.AdditionalReference3 {
-	newValue := new (iso20022.AdditionalReference3)
+	newValue := new(iso20022.AdditionalReference3)
 	f.RelatedReference = append(f.RelatedReference, newValue)
 	return newValue
 }
 
 func (f *FundDetailedEstimatedCashForecastReportV02) AddEstimatedFundCashForecastDetails() *iso20022.EstimatedFundCashForecast2 {
-	newValue := new (iso20022.EstimatedFundCashForecast2)
+	newValue := new(iso20022.EstimatedFundCashForecast2)
 	f.EstimatedFundCashForecastDetails = append(f.EstimatedFundCashForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundDetailedEstimatedCashForecastReportV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	f.Extension = append(f.Extension, newValue)
 	return newValue
 }
-

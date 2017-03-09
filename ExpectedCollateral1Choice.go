@@ -8,9 +8,7 @@ type ExpectedCollateral1Choice struct {
 
 	// Provides the expected collateral type and direction for the segregated independent amount.
 	SegregatedIndependentAmount *ExpectedCollateralMovement1 `xml:"SgrtdIndpdntAmt"`
-
 }
-
 
 func (e *ExpectedCollateral1Choice) AddExpectedCollateralDetails() *ExpectedCollateral1 {
 	e.ExpectedCollateralDetails = new(ExpectedCollateral1)
@@ -21,4 +19,3 @@ func (e *ExpectedCollateral1Choice) AddSegregatedIndependentAmount() *ExpectedCo
 	e.SegregatedIndependentAmount = new(ExpectedCollateralMovement1)
 	return e.SegregatedIndependentAmount
 }
-

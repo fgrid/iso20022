@@ -11,9 +11,7 @@ type TaxCreditRateFormat9Choice struct {
 
 	// Specifies different formats for the tax credit rate.
 	RateTypeAndAmountAndRateStatus *RateTypeAndAmountAndStatus34 `xml:"RateTpAndAmtAndRateSts"`
-
 }
-
 
 func (t *TaxCreditRateFormat9Choice) SetRate(value string) {
 	t.Rate = (*PercentageRate)(&value)
@@ -27,4 +25,3 @@ func (t *TaxCreditRateFormat9Choice) AddRateTypeAndAmountAndRateStatus() *RateTy
 	t.RateTypeAndAmountAndRateStatus = new(RateTypeAndAmountAndStatus34)
 	return t.RateTypeAndAmountAndRateStatus
 }
-

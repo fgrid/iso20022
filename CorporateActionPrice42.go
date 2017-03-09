@@ -8,9 +8,7 @@ type CorporateActionPrice42 struct {
 
 	// Minimum or floor price at which a holder can bid, for example, on a Dutch auction offer.
 	MinimumPrice *PriceFormat23Choice `xml:"MinPric,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice42) AddMaximumPrice() *PriceFormat23Choice {
 	c.MaximumPrice = new(PriceFormat23Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionPrice42) AddMinimumPrice() *PriceFormat23Choice {
 	c.MinimumPrice = new(PriceFormat23Choice)
 	return c.MinimumPrice
 }
-

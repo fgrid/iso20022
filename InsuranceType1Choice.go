@@ -8,9 +8,7 @@ type InsuranceType1Choice struct {
 
 	// Type of insurance contract expressed as a proprietary code.
 	Proprietary *GenericIdentification41 `xml:"Prtry"`
-
 }
-
 
 func (i *InsuranceType1Choice) SetCode(value string) {
 	i.Code = (*Insurance1Code)(&value)
@@ -20,4 +18,3 @@ func (i *InsuranceType1Choice) AddProprietary() *GenericIdentification41 {
 	i.Proprietary = new(GenericIdentification41)
 	return i.Proprietary
 }
-

@@ -35,9 +35,7 @@ type Resolution3 struct {
 
 	// Number of votes assigned per resolution to one security.
 	Entitlement *Entitlement1Choice `xml:"Entitlmnt,omitempty"`
-
 }
-
 
 func (r *Resolution3) SetIssuerLabel(value string) {
 	r.IssuerLabel = (*Max35Text)(&value)
@@ -83,4 +81,3 @@ func (r *Resolution3) AddEntitlement() *Entitlement1Choice {
 	r.Entitlement = new(Entitlement1Choice)
 	return r.Entitlement
 }
-

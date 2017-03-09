@@ -11,9 +11,7 @@ type InvestmentAccount20 struct {
 
 	// Purpose of the account/source fund type. This is typically linked to an investment product, eg, wrapper, PEP, ISA.
 	ExtendedType *Extended350Code `xml:"XtndedTp,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount20) AddAccountIdentification() *AccountIdentification1 {
 	i.AccountIdentification = new(AccountIdentification1)
@@ -27,4 +25,3 @@ func (i *InvestmentAccount20) SetType(value string) {
 func (i *InvestmentAccount20) SetExtendedType(value string) {
 	i.ExtendedType = (*Extended350Code)(&value)
 }
-

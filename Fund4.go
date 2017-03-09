@@ -29,9 +29,7 @@ type Fund4 struct {
 
 	// Consolidated net cash flow expressed as a percentage of the total NAV for the fund/sub fund.
 	PercentageOfFundTotalNAV *PercentageRate `xml:"PctgOfFndTtlNAV,omitempty"`
-
 }
-
 
 func (f *Fund4) SetName(value string) {
 	f.Name = (*Max350Text)(&value)
@@ -71,4 +69,3 @@ func (f *Fund4) AddPreviousTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 func (f *Fund4) SetPercentageOfFundTotalNAV(value string) {
 	f.PercentageOfFundTotalNAV = (*PercentageRate)(&value)
 }
-

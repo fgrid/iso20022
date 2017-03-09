@@ -17,9 +17,7 @@ type InstructionCancellationRequestStatus5Choice struct {
 
 	// Proprietary status related to an instruction cancellation request.
 	ProprietaryStatus *ProprietaryStatusAndReason1 `xml:"PrtrySts"`
-
 }
-
 
 func (i *InstructionCancellationRequestStatus5Choice) AddCancellationCompleted() *CancelledStatus3Choice {
 	i.CancellationCompleted = new(CancelledStatus3Choice)
@@ -45,4 +43,3 @@ func (i *InstructionCancellationRequestStatus5Choice) AddProprietaryStatus() *Pr
 	i.ProprietaryStatus = new(ProprietaryStatusAndReason1)
 	return i.ProprietaryStatus
 }
-

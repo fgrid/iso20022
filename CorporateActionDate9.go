@@ -14,9 +14,7 @@ type CorporateActionDate9 struct {
 
 	// Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.
 	EarliestPaymentDate *DateFormat6Choice `xml:"EarlstPmtDt,omitempty"`
-
 }
-
 
 func (c *CorporateActionDate9) AddPaymentDate() *DateFormat6Choice {
 	c.PaymentDate = new(DateFormat6Choice)
@@ -37,4 +35,3 @@ func (c *CorporateActionDate9) AddEarliestPaymentDate() *DateFormat6Choice {
 	c.EarliestPaymentDate = new(DateFormat6Choice)
 	return c.EarliestPaymentDate
 }
-

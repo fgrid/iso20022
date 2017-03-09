@@ -7,7 +7,7 @@ type TimeFrame3 struct {
 	OtherTimeFrameDescription *Max350Text `xml:"OthrTmFrameDesc,omitempty"`
 
 	// An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition
-	// 
+	//
 	// Where = T is the date that the price is applied to a transaction,
 	TradeMinus *Number `xml:"TMns,omitempty"`
 
@@ -16,9 +16,7 @@ type TimeFrame3 struct {
 
 	// Refer to Order Desk
 	ReferToOrderDesk *ReferToFundOrderDesk1Code `xml:"RefrToOrdrDsk,omitempty"`
-
 }
-
 
 func (t *TimeFrame3) SetOtherTimeFrameDescription(value string) {
 	t.OtherTimeFrameDescription = (*Max350Text)(&value)
@@ -35,4 +33,3 @@ func (t *TimeFrame3) SetNonWorkingDayAdjustment(value string) {
 func (t *TimeFrame3) SetReferToOrderDesk(value string) {
 	t.ReferToOrderDesk = (*ReferToFundOrderDesk1Code)(&value)
 }
-

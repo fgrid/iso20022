@@ -14,9 +14,7 @@ type SettlementTax1 struct {
 
 	// Date of the tax point when this tax, levy or duty becomes applicable.
 	TaxPointDate *ISODate `xml:"TaxPtDt,omitempty"`
-
 }
-
 
 func (s *SettlementTax1) AddTypeCode() *TaxTypeFormat1Choice {
 	s.TypeCode = new(TaxTypeFormat1Choice)
@@ -34,4 +32,3 @@ func (s *SettlementTax1) AddBasisAmount(value, currency string) {
 func (s *SettlementTax1) SetTaxPointDate(value string) {
 	s.TaxPointDate = (*ISODate)(&value)
 }
-

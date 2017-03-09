@@ -11,9 +11,7 @@ type GenericIdentification5 struct {
 
 	// Additional information.
 	Narrative *Max35Text `xml:"Nrrtv,omitempty"`
-
 }
-
 
 func (g *GenericIdentification5) SetIssuer(value string) {
 	g.Issuer = (*Max8Text)(&value)
@@ -26,4 +24,3 @@ func (g *GenericIdentification5) SetInformation(value string) {
 func (g *GenericIdentification5) SetNarrative(value string) {
 	g.Narrative = (*Max35Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.008.001.04 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:seev.008.001.04 Document"`
 	Message *MeetingResultDisseminationV04 `xml:"MtgRsltDssmntn"`
 }
 
@@ -49,9 +49,7 @@ type MeetingResultDisseminationV04 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	Extension []*iso20022.Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (m *MeetingResultDisseminationV04) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -74,13 +72,13 @@ func (m *MeetingResultDisseminationV04) AddReportingParty() *iso20022.PartyIdent
 }
 
 func (m *MeetingResultDisseminationV04) AddSecurity() *iso20022.SecurityPosition6 {
-	newValue := new (iso20022.SecurityPosition6)
+	newValue := new(iso20022.SecurityPosition6)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
 
 func (m *MeetingResultDisseminationV04) AddVoteResult() *iso20022.Vote5 {
-	newValue := new (iso20022.Vote5)
+	newValue := new(iso20022.Vote5)
 	m.VoteResult = append(m.VoteResult, newValue)
 	return newValue
 }
@@ -96,8 +94,7 @@ func (m *MeetingResultDisseminationV04) AddAdditionalInformation() *iso20022.Com
 }
 
 func (m *MeetingResultDisseminationV04) AddExtension() *iso20022.Extension2 {
-	newValue := new (iso20022.Extension2)
+	newValue := new(iso20022.Extension2)
 	m.Extension = append(m.Extension, newValue)
 	return newValue
 }
-

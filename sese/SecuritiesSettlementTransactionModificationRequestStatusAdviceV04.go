@@ -7,7 +7,7 @@ import (
 )
 
 type Document03900104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.039.001.04 Document"`
+	XMLName xml.Name                                                           `xml:"urn:iso:std:iso:20022:tech:xsd:sese.039.001.04 Document"`
 	Message *SecuritiesSettlementTransactionModificationRequestStatusAdviceV04 `xml:"SctiesSttlmTxModReqStsAdvc"`
 }
 
@@ -21,7 +21,7 @@ func (d *Document03900104) AddMessage() *SecuritiesSettlementTransactionModifica
 // The account servicer may be:
 // - a central securities depository or another settlement market infrastructure managing securities settlement transactions on behalf of their participants
 // - an custodian acting as an accounting and/or settlement agent.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message sent by the account owner to the account servicer,
@@ -50,9 +50,7 @@ type SecuritiesSettlementTransactionModificationRequestStatusAdviceV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionModificationRequestStatusAdviceV04) AddModificationRequestReference() *iso20022.Identification14 {
 	s.ModificationRequestReference = new(iso20022.Identification14)
@@ -85,8 +83,7 @@ func (s *SecuritiesSettlementTransactionModificationRequestStatusAdviceV04) AddT
 }
 
 func (s *SecuritiesSettlementTransactionModificationRequestStatusAdviceV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type TransactionQuantities1Choice struct {
 
 	// Proprietary quantities specification defined in the underlying transaction.
 	Proprietary *ProprietaryQuantity1 `xml:"Prtry"`
-
 }
-
 
 func (t *TransactionQuantities1Choice) AddQuantity() *FinancialInstrumentQuantityChoice {
 	t.Quantity = new(FinancialInstrumentQuantityChoice)
@@ -21,4 +19,3 @@ func (t *TransactionQuantities1Choice) AddProprietary() *ProprietaryQuantity1 {
 	t.Proprietary = new(ProprietaryQuantity1)
 	return t.Proprietary
 }
-

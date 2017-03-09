@@ -11,16 +11,14 @@ type PaymentInstrumentType1 struct {
 
 	// Additional information, in free text form, to complement the requested information.
 	AdditionalInformation *Max500Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *PaymentInstrumentType1) SetCardNumber(value string) {
 	p.CardNumber = (*Min8Max28NumericText)(&value)
 }
 
 func (p *PaymentInstrumentType1) AddAuthorityRequestType() *AuthorityRequestType1 {
-	newValue := new (AuthorityRequestType1)
+	newValue := new(AuthorityRequestType1)
 	p.AuthorityRequestType = append(p.AuthorityRequestType, newValue)
 	return newValue
 }
@@ -28,4 +26,3 @@ func (p *PaymentInstrumentType1) AddAuthorityRequestType() *AuthorityRequestType
 func (p *PaymentInstrumentType1) SetAdditionalInformation(value string) {
 	p.AdditionalInformation = (*Max500Text)(&value)
 }
-

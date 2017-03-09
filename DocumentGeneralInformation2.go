@@ -20,9 +20,7 @@ type DocumentGeneralInformation2 struct {
 
 	// Attached binary file for this document.
 	AttachedBinaryFile []*BinaryFile1 `xml:"AttchdBinryFile,omitempty"`
-
 }
-
 
 func (d *DocumentGeneralInformation2) SetDocumentType(value string) {
 	d.DocumentType = (*ExternalDocumentType1Code)(&value)
@@ -45,8 +43,7 @@ func (d *DocumentGeneralInformation2) SetURL(value string) {
 }
 
 func (d *DocumentGeneralInformation2) AddAttachedBinaryFile() *BinaryFile1 {
-	newValue := new (BinaryFile1)
+	newValue := new(BinaryFile1)
 	d.AttachedBinaryFile = append(d.AttachedBinaryFile, newValue)
 	return newValue
 }
-

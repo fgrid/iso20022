@@ -17,9 +17,7 @@ type InvoiceTotals1 struct {
 
 	// Due date for the payment of the invoice.
 	PaymentDueDate *ISODate `xml:"PmtDueDt"`
-
 }
-
 
 func (i *InvoiceTotals1) SetTotalTaxableAmount(value, currency string) {
 	i.TotalTaxableAmount = NewActiveCurrencyAndAmount(value, currency)
@@ -41,4 +39,3 @@ func (i *InvoiceTotals1) SetTotalInvoiceAmount(value, currency string) {
 func (i *InvoiceTotals1) SetPaymentDueDate(value string) {
 	i.PaymentDueDate = (*ISODate)(&value)
 }
-

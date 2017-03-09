@@ -11,9 +11,7 @@ type IntraPositionDetails17 struct {
 
 	// Intra-position movement(s) having been performed.
 	IntraPositionMovement []*IntraPositionMovementDetails5 `xml:"IntraPosMvmnt"`
-
 }
-
 
 func (i *IntraPositionDetails17) AddSafekeepingPlace() *SafekeepingPlaceFormat3Choice {
 	i.SafekeepingPlace = new(SafekeepingPlaceFormat3Choice)
@@ -26,8 +24,7 @@ func (i *IntraPositionDetails17) AddBalanceFrom() *SecuritiesBalanceType3Choice 
 }
 
 func (i *IntraPositionDetails17) AddIntraPositionMovement() *IntraPositionMovementDetails5 {
-	newValue := new (IntraPositionMovementDetails5)
+	newValue := new(IntraPositionMovementDetails5)
 	i.IntraPositionMovement = append(i.IntraPositionMovement, newValue)
 	return newValue
 }
-

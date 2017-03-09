@@ -23,9 +23,7 @@ type Tax25 struct {
 
 	// Information used to calculate the tax.
 	TaxCalculationDetails *TaxCalculationInformation8 `xml:"TaxClctnDtls,omitempty"`
-
 }
-
 
 func (t *Tax25) AddType() *TaxType1Choice {
 	t.Type = new(TaxType1Choice)
@@ -59,4 +57,3 @@ func (t *Tax25) AddTaxCalculationDetails() *TaxCalculationInformation8 {
 	t.TaxCalculationDetails = new(TaxCalculationInformation8)
 	return t.TaxCalculationDetails
 }
-

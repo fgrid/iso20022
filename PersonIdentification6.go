@@ -8,9 +8,7 @@ type PersonIdentification6 struct {
 
 	// Personal identification type.
 	PersonIdentificationType *PersonIdentificationType1Choice `xml:"PrsnIdTp"`
-
 }
-
 
 func (p *PersonIdentification6) SetIssuer(value string) {
 	p.Issuer = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (p *PersonIdentification6) AddPersonIdentificationType() *PersonIdentificat
 	p.PersonIdentificationType = new(PersonIdentificationType1Choice)
 	return p.PersonIdentificationType
 }
-

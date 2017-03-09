@@ -8,9 +8,7 @@ type SettlementDate10Choice struct {
 
 	// Date and time at which the securities are to be delivered or received.
 	DateCode *SettlementDateCode8Choice `xml:"DtCd"`
-
 }
-
 
 func (s *SettlementDate10Choice) AddDate() *DateAndDateTimeChoice {
 	s.Date = new(DateAndDateTimeChoice)
@@ -21,4 +19,3 @@ func (s *SettlementDate10Choice) AddDateCode() *SettlementDateCode8Choice {
 	s.DateCode = new(SettlementDateCode8Choice)
 	return s.DateCode
 }
-

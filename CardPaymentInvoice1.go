@@ -14,9 +14,7 @@ type CardPaymentInvoice1 struct {
 
 	// Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.
 	LineItem []*LineItem10 `xml:"LineItm,omitempty"`
-
 }
-
 
 func (c *CardPaymentInvoice1) AddInvoiceHeader() *InvoiceHeader1 {
 	c.InvoiceHeader = new(InvoiceHeader1)
@@ -34,8 +32,7 @@ func (c *CardPaymentInvoice1) AddTradeDelivery() *TradeDelivery1 {
 }
 
 func (c *CardPaymentInvoice1) AddLineItem() *LineItem10 {
-	newValue := new (LineItem10)
+	newValue := new(LineItem10)
 	c.LineItem = append(c.LineItem, newValue)
 	return newValue
 }
-

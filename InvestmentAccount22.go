@@ -35,12 +35,10 @@ type InvestmentAccount22 struct {
 
 	// Party related to an account that is not the legal account owner, eg, the power of attorney.
 	AccountServicer *PartyIdentification2Choice `xml:"AcctSvcr,omitempty"`
-
 }
 
-
 func (i *InvestmentAccount22) AddOwnerIdentification() *PartyIdentification2Choice {
-	newValue := new (PartyIdentification2Choice)
+	newValue := new(PartyIdentification2Choice)
 	i.OwnerIdentification = append(i.OwnerIdentification, newValue)
 	return newValue
 }
@@ -59,7 +57,7 @@ func (i *InvestmentAccount22) SetAccountDesignation(value string) {
 }
 
 func (i *InvestmentAccount22) AddIntermediaryInformation() *Intermediary11 {
-	newValue := new (Intermediary11)
+	newValue := new(Intermediary11)
 	i.IntermediaryInformation = append(i.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -89,4 +87,3 @@ func (i *InvestmentAccount22) AddAccountServicer() *PartyIdentification2Choice {
 	i.AccountServicer = new(PartyIdentification2Choice)
 	return i.AccountServicer
 }
-

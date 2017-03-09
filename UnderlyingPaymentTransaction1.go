@@ -20,9 +20,7 @@ type UnderlyingPaymentTransaction1 struct {
 
 	// Date, as provided in the original transaction, on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
 	OriginalInterbankSettlementDate *ISODate `xml:"OrgnlIntrBkSttlmDt"`
-
 }
-
 
 func (u *UnderlyingPaymentTransaction1) AddOriginalGroupInformation() *UnderlyingGroupInformation1 {
 	u.OriginalGroupInformation = new(UnderlyingGroupInformation1)
@@ -48,4 +46,3 @@ func (u *UnderlyingPaymentTransaction1) SetOriginalInterbankSettlementAmount(val
 func (u *UnderlyingPaymentTransaction1) SetOriginalInterbankSettlementDate(value string) {
 	u.OriginalInterbankSettlementDate = (*ISODate)(&value)
 }
-

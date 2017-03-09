@@ -8,9 +8,7 @@ type RejectedReason4Choice struct {
 
 	// Rejected reason expressed as a proprietary code.
 	Proprietary *GenericIdentification29 `xml:"Prtry"`
-
 }
-
 
 func (r *RejectedReason4Choice) SetCode(value string) {
 	r.Code = (*RejectedStatusReason6Code)(&value)
@@ -20,4 +18,3 @@ func (r *RejectedReason4Choice) AddProprietary() *GenericIdentification29 {
 	r.Proprietary = new(GenericIdentification29)
 	return r.Proprietary
 }
-

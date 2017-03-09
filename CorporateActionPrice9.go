@@ -8,9 +8,7 @@ type CorporateActionPrice9 struct {
 
 	// Indicates whether the price is an indicative price or a market price.
 	IndicativeOrMarketPrice *IndicativeOrMarketPrice2Choice `xml:"IndctvOrMktPric,omitempty"`
-
 }
-
 
 func (c *CorporateActionPrice9) AddCashInLieuOfSharePrice() *PriceFormat5Choice {
 	c.CashInLieuOfSharePrice = new(PriceFormat5Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionPrice9) AddIndicativeOrMarketPrice() *IndicativeOrMarket
 	c.IndicativeOrMarketPrice = new(IndicativeOrMarketPrice2Choice)
 	return c.IndicativeOrMarketPrice
 }
-

@@ -72,9 +72,7 @@ type SwitchOrder4 struct {
 
 	// Specifies whether the trade is negotiated.
 	NegotiatedTrade *NegotiatedTrade1Code `xml:"NgtdTrad,omitempty"`
-
 }
-
 
 func (s *SwitchOrder4) SetMasterReference(value string) {
 	s.MasterReference = (*Max35Text)(&value)
@@ -135,7 +133,7 @@ func (s *SwitchOrder4) SetResultingCashOut(value, currency string) {
 }
 
 func (s *SwitchOrder4) AddRelatedPartyDetails() *Intermediary8 {
-	newValue := new (Intermediary8)
+	newValue := new(Intermediary8)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -149,13 +147,13 @@ func (s *SwitchOrder4) SetExtendedCancellationRight(value string) {
 }
 
 func (s *SwitchOrder4) AddRedemptionLegDetails() *SwitchRedemptionLegOrder3 {
-	newValue := new (SwitchRedemptionLegOrder3)
+	newValue := new(SwitchRedemptionLegOrder3)
 	s.RedemptionLegDetails = append(s.RedemptionLegDetails, newValue)
 	return newValue
 }
 
 func (s *SwitchOrder4) AddSubscriptionLegDetails() *SwitchSubscriptionLegOrder3 {
-	newValue := new (SwitchSubscriptionLegOrder3)
+	newValue := new(SwitchSubscriptionLegOrder3)
 	s.SubscriptionLegDetails = append(s.SubscriptionLegDetails, newValue)
 	return newValue
 }
@@ -177,4 +175,3 @@ func (s *SwitchOrder4) SetFinancialAdvice(value string) {
 func (s *SwitchOrder4) SetNegotiatedTrade(value string) {
 	s.NegotiatedTrade = (*NegotiatedTrade1Code)(&value)
 }
-

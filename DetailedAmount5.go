@@ -17,9 +17,7 @@ type DetailedAmount5 struct {
 
 	// Value added tax amount.
 	ValueAddedTax []*DetailedAmount4 `xml:"ValAddedTax,omitempty"`
-
 }
-
 
 func (d *DetailedAmount5) SetCashBack(value, currency string) {
 	d.CashBack = NewImpliedCurrencyAndAmount(value, currency)
@@ -30,20 +28,19 @@ func (d *DetailedAmount5) SetGratuity(value, currency string) {
 }
 
 func (d *DetailedAmount5) AddFees() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.Fees = append(d.Fees, newValue)
 	return newValue
 }
 
 func (d *DetailedAmount5) AddRebate() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.Rebate = append(d.Rebate, newValue)
 	return newValue
 }
 
 func (d *DetailedAmount5) AddValueAddedTax() *DetailedAmount4 {
-	newValue := new (DetailedAmount4)
+	newValue := new(DetailedAmount4)
 	d.ValueAddedTax = append(d.ValueAddedTax, newValue)
 	return newValue
 }
-

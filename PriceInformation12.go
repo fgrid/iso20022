@@ -17,9 +17,7 @@ type PriceInformation12 struct {
 
 	// Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.
 	QuotationDate *DateAndDateTimeChoice `xml:"QtnDt,omitempty"`
-
 }
-
 
 func (p *PriceInformation12) AddType() *TypeOfPrice28Choice {
 	p.Type = new(TypeOfPrice28Choice)
@@ -45,4 +43,3 @@ func (p *PriceInformation12) AddQuotationDate() *DateAndDateTimeChoice {
 	p.QuotationDate = new(DateAndDateTimeChoice)
 	return p.QuotationDate
 }
-

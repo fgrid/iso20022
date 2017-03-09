@@ -14,9 +14,7 @@ type CaseAssignment struct {
 
 	// Date and time at which the assignment was created.
 	CreationDateTime *ISODateTime `xml:"CreDtTm"`
-
 }
-
 
 func (c *CaseAssignment) SetIdentification(value string) {
 	c.Identification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (c *CaseAssignment) SetAssignee(value string) {
 func (c *CaseAssignment) SetCreationDateTime(value string) {
 	c.CreationDateTime = (*ISODateTime)(&value)
 }
-

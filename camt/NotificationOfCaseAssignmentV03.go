@@ -7,7 +7,7 @@ import (
 )
 
 type Document03000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.030.001.03 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:camt.030.001.03 Document"`
 	Message *NotificationOfCaseAssignmentV03 `xml:"NtfctnOfCaseAssgnmt"`
 }
 
@@ -47,9 +47,7 @@ type NotificationOfCaseAssignmentV03 struct {
 
 	// Information about the type of action taken.
 	Notification *iso20022.CaseForwardingNotification3 `xml:"Ntfctn"`
-
 }
-
 
 func (n *NotificationOfCaseAssignmentV03) AddHeader() *iso20022.ReportHeader2 {
 	n.Header = new(iso20022.ReportHeader2)
@@ -70,4 +68,3 @@ func (n *NotificationOfCaseAssignmentV03) AddNotification() *iso20022.CaseForwar
 	n.Notification = new(iso20022.CaseForwardingNotification3)
 	return n.Notification
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.003.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:pacs.003.001.01 Document"`
 	Message *FIToFICustomerDirectDebitV01 `xml:"pacs.003.001.01"`
 }
 
@@ -24,7 +24,7 @@ func (d *Document00300101) AddMessage() *FIToFICustomerDirectDebitV01 {
 // The FIToFICustomerDirectDebit message does not allow for grouping: the PaymentInformation block must be present once per occurrence of a DirectDebitTransactionInformation block.
 // The FItoFICustomerDirectDebit message may or may not contain mandate related information, i.e. extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.
 // The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.
-// 
+//
 type FIToFICustomerDirectDebitV01 struct {
 
 	// Set of characteristics shared by all individual transactions included in the message.
@@ -32,9 +32,7 @@ type FIToFICustomerDirectDebitV01 struct {
 
 	// Set of elements providing information specific to the individual direct debit(s).
 	DirectDebitTransactionInformation []*iso20022.DirectDebitTransactionInformation2 `xml:"DrctDbtTxInf"`
-
 }
-
 
 func (f *FIToFICustomerDirectDebitV01) AddGroupHeader() *iso20022.GroupHeader3 {
 	f.GroupHeader = new(iso20022.GroupHeader3)
@@ -42,8 +40,7 @@ func (f *FIToFICustomerDirectDebitV01) AddGroupHeader() *iso20022.GroupHeader3 {
 }
 
 func (f *FIToFICustomerDirectDebitV01) AddDirectDebitTransactionInformation() *iso20022.DirectDebitTransactionInformation2 {
-	newValue := new (iso20022.DirectDebitTransactionInformation2)
+	newValue := new(iso20022.DirectDebitTransactionInformation2)
 	f.DirectDebitTransactionInformation = append(f.DirectDebitTransactionInformation, newValue)
 	return newValue
 }
-

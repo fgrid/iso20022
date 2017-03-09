@@ -59,9 +59,7 @@ type TransactionDetails25 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (t *TransactionDetails25) AddTransactionActivity() *TransactionActivity1Choice {
 	t.TransactionActivity = new(TransactionActivity1Choice)
@@ -151,8 +149,7 @@ func (t *TransactionDetails25) SetTransactionAdditionalDetails(value string) {
 }
 
 func (t *TransactionDetails25) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	t.SupplementaryData = append(t.SupplementaryData, newValue)
 	return newValue
 }
-

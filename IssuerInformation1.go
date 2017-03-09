@@ -8,9 +8,7 @@ type IssuerInformation1 struct {
 
 	// Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.
 	URLAddress *Max256Text `xml:"URLAdr,omitempty"`
-
 }
-
 
 func (i *IssuerInformation1) AddIdentification() *PartyIdentification9Choice {
 	i.Identification = new(PartyIdentification9Choice)
@@ -20,4 +18,3 @@ func (i *IssuerInformation1) AddIdentification() *PartyIdentification9Choice {
 func (i *IssuerInformation1) SetURLAddress(value string) {
 	i.URLAddress = (*Max256Text)(&value)
 }
-

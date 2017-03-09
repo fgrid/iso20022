@@ -8,9 +8,7 @@ type CertificateReference1 struct {
 
 	// Date of the underlying payment instruction or statement entry.
 	Date *ISODate `xml:"Dt"`
-
 }
-
 
 func (c *CertificateReference1) AddIdentification() *CertificateIdentification1 {
 	c.Identification = new(CertificateIdentification1)
@@ -20,4 +18,3 @@ func (c *CertificateReference1) AddIdentification() *CertificateIdentification1 
 func (c *CertificateReference1) SetDate(value string) {
 	c.Date = (*ISODate)(&value)
 }
-

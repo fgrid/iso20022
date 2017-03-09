@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.016.001.03 Document"`
+	XMLName xml.Name                                        `xml:"urn:iso:std:iso:20022:tech:xsd:fxtr.016.001.03 Document"`
 	Message *ForeignExchangeTradeInstructionCancellationV03 `xml:"FXTradInstrCxl"`
 }
 
@@ -16,9 +16,9 @@ func (d *Document01600103) AddMessage() *ForeignExchangeTradeInstructionCancella
 	return d.Message
 }
 
-// Scope
-// The ForeignExchangeTradeInstructionCancellation message is sent by a participant to a central settlement system to notify the cancellation of the foreign exchange trade previously confirmed by the sender.
-// Usage
+// Scope
+// The ForeignExchangeTradeInstructionCancellation message is sent by a participant to a central settlement system to notify the cancellation of the foreign exchange trade previously confirmed by the sender.
+// Usage
 // The ForeignExchangeTradeInstructionCancellation message is sent from a participant to a central settlement system to advise of the cancellation of a previously sent notification. The "Related Reference" must be used to link it to the previous notification.
 type ForeignExchangeTradeInstructionCancellationV03 struct {
 
@@ -51,9 +51,7 @@ type ForeignExchangeTradeInstructionCancellationV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTradeInstructionCancellationV03) AddTradeInformation() *iso20022.TradeAgreement11 {
 	f.TradeInformation = new(iso20022.TradeAgreement11)
@@ -101,8 +99,7 @@ func (f *ForeignExchangeTradeInstructionCancellationV03) AddRegulatoryReporting(
 }
 
 func (f *ForeignExchangeTradeInstructionCancellationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	f.SupplementaryData = append(f.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -36,9 +36,7 @@ type CardAccount4 struct {
 
 	// Indicates if this is the default account.
 	DefaultAccountIndicator *TrueFalseIndicator `xml:"DfltAcctInd,omitempty"`
-
 }
-
 
 func (c *CardAccount4) SetSelectionMethod(value string) {
 	c.SelectionMethod = (*AccountChoiceMethod1Code)(&value)
@@ -87,4 +85,3 @@ func (c *CardAccount4) SetBalanceDisplayFlag(value string) {
 func (c *CardAccount4) SetDefaultAccountIndicator(value string) {
 	c.DefaultAccountIndicator = (*TrueFalseIndicator)(&value)
 }
-

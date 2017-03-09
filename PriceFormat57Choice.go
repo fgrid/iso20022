@@ -11,9 +11,7 @@ type PriceFormat57Choice struct {
 
 	// Value of the price not specified.
 	NotSpecifiedPrice *PriceValueType10Code `xml:"NotSpcfdPric"`
-
 }
-
 
 func (p *PriceFormat57Choice) AddPercentagePrice() *PercentagePrice1 {
 	p.PercentagePrice = new(PercentagePrice1)
@@ -28,4 +26,3 @@ func (p *PriceFormat57Choice) AddAmountPrice() *AmountPrice5 {
 func (p *PriceFormat57Choice) SetNotSpecifiedPrice(value string) {
 	p.NotSpecifiedPrice = (*PriceValueType10Code)(&value)
 }
-

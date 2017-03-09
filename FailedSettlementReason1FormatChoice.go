@@ -8,9 +8,7 @@ type FailedSettlementReason1FormatChoice struct {
 
 	// Proprietary code for specifying the reason of a settlement failure.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (f *FailedSettlementReason1FormatChoice) SetCode(value string) {
 	f.Code = (*FailedSettlementReason1Code)(&value)
@@ -20,4 +18,3 @@ func (f *FailedSettlementReason1FormatChoice) AddProprietary() *GenericIdentific
 	f.Proprietary = new(GenericIdentification13)
 	return f.Proprietary
 }
-

@@ -44,9 +44,7 @@ type InsuranceDataSet1 struct {
 
 	// Currency in which claims, if valid, will be paid.
 	ClaimsPayableIn *CurrencyCode `xml:"ClmsPyblIn,omitempty"`
-
 }
-
 
 func (i *InsuranceDataSet1) AddDataSetIdentification() *DocumentIdentification1 {
 	i.DataSetIdentification = new(DocumentIdentification1)
@@ -109,4 +107,3 @@ func (i *InsuranceDataSet1) AddClaimsPayableAt() *PostalAddress5 {
 func (i *InsuranceDataSet1) SetClaimsPayableIn(value string) {
 	i.ClaimsPayableIn = (*CurrencyCode)(&value)
 }
-

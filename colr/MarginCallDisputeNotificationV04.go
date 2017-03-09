@@ -7,7 +7,7 @@ import (
 )
 
 type Document00900104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:colr.009.001.04 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:colr.009.001.04 Document"`
 	Message *MarginCallDisputeNotificationV04 `xml:"MrgnCallDsptNtfctn"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document00900104) AddMessage() *MarginCallDisputeNotificationV04 {
 
 // Scope
 // The MarginCallDisputeNotification message is sent by the collateral taker or its collateral manager to the collateral giver or its collateral manager to acknowledge the notification of the dispute (either full or partial dispute) of the MarginCallRequest. The message will detail the amount of the dispute and the reason.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // When there is a dispute by the collateral giver to the collateral taker a MarginCallDisputeNotification message is sent with the disputed amount (full or partial) stating the reason why the margin call is being disputed.
 type MarginCallDisputeNotificationV04 struct {
@@ -36,9 +36,7 @@ type MarginCallDisputeNotificationV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MarginCallDisputeNotificationV04) SetTransactionIdentification(value string) {
 	m.TransactionIdentification = (*iso20022.Max35Text)(&value)
@@ -55,8 +53,7 @@ func (m *MarginCallDisputeNotificationV04) AddDisputeNotification() *iso20022.Di
 }
 
 func (m *MarginCallDisputeNotificationV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

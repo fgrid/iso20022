@@ -8,9 +8,7 @@ type MarginCallResult2 struct {
 
 	// Provides the summation of the call amounts for the segregated independent amount.
 	SegregatedIndependentAmount *Result1 `xml:"SgrtdIndpdntAmt,omitempty"`
-
 }
-
 
 func (m *MarginCallResult2) AddVariationMarginResult() *Result1 {
 	m.VariationMarginResult = new(Result1)
@@ -21,4 +19,3 @@ func (m *MarginCallResult2) AddSegregatedIndependentAmount() *Result1 {
 	m.SegregatedIndependentAmount = new(Result1)
 	return m.SegregatedIndependentAmount
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.02 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.02 Document"`
 	Message *AccountingStatementOfHoldingsV02 `xml:"AcctgStmtOfHldgsV02"`
 }
 
@@ -29,7 +29,7 @@ func (d *Document00300102) AddMessage() *AccountingStatementOfHoldingsV02 {
 // The AccountingStatementOfHoldings message should not be used for trading purposes.
 type AccountingStatementOfHoldingsV02 struct {
 
-	// Reference that uniquely identifies a message from a business application standpoint. 
+	// Reference that uniquely identifies a message from a business application standpoint.
 	MessageIdentification *iso20022.MessageIdentification1 `xml:"MsgId"`
 
 	// Reference to a linked message that was previously sent.
@@ -58,9 +58,7 @@ type AccountingStatementOfHoldingsV02 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (a *AccountingStatementOfHoldingsV02) AddMessageIdentification() *iso20022.MessageIdentification1 {
 	a.MessageIdentification = new(iso20022.MessageIdentification1)
@@ -68,13 +66,13 @@ func (a *AccountingStatementOfHoldingsV02) AddMessageIdentification() *iso20022.
 }
 
 func (a *AccountingStatementOfHoldingsV02) AddPreviousReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	a.PreviousReference = append(a.PreviousReference, newValue)
 	return newValue
 }
 
 func (a *AccountingStatementOfHoldingsV02) AddRelatedReference() *iso20022.AdditionalReference2 {
-	newValue := new (iso20022.AdditionalReference2)
+	newValue := new(iso20022.AdditionalReference2)
 	a.RelatedReference = append(a.RelatedReference, newValue)
 	return newValue
 }
@@ -95,13 +93,13 @@ func (a *AccountingStatementOfHoldingsV02) AddAccountDetails() *iso20022.Safekee
 }
 
 func (a *AccountingStatementOfHoldingsV02) AddBalanceForAccount() *iso20022.AggregateBalanceInformation3 {
-	newValue := new (iso20022.AggregateBalanceInformation3)
+	newValue := new(iso20022.AggregateBalanceInformation3)
 	a.BalanceForAccount = append(a.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (a *AccountingStatementOfHoldingsV02) AddSubAccountDetails() *iso20022.SubAccountIdentification3 {
-	newValue := new (iso20022.SubAccountIdentification3)
+	newValue := new(iso20022.SubAccountIdentification3)
 	a.SubAccountDetails = append(a.SubAccountDetails, newValue)
 	return newValue
 }
@@ -112,8 +110,7 @@ func (a *AccountingStatementOfHoldingsV02) AddTotalValues() *iso20022.TotalValue
 }
 
 func (a *AccountingStatementOfHoldingsV02) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	a.Extension = append(a.Extension, newValue)
 	return newValue
 }
-

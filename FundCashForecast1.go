@@ -41,9 +41,7 @@ type FundCashForecast1 struct {
 
 	// Cash movements from or to a fund as a result of investment funds transactions.
 	NetCashForecastDetails []*NetCashForecast1 `xml:"NetCshFcstDtls,omitempty"`
-
 }
-
 
 func (f *FundCashForecast1) AddTradeDateTime() *DateAndDateTimeChoice {
 	f.TradeDateTime = new(DateAndDateTimeChoice)
@@ -91,20 +89,19 @@ func (f *FundCashForecast1) SetExceptionalNetCashFlowIndicator(value string) {
 }
 
 func (f *FundCashForecast1) AddCashInForecastDetails() *CashInForecast2 {
-	newValue := new (CashInForecast2)
+	newValue := new(CashInForecast2)
 	f.CashInForecastDetails = append(f.CashInForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast1) AddCashOutForecastDetails() *CashOutForecast2 {
-	newValue := new (CashOutForecast2)
+	newValue := new(CashOutForecast2)
 	f.CashOutForecastDetails = append(f.CashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast1) AddNetCashForecastDetails() *NetCashForecast1 {
-	newValue := new (NetCashForecast1)
+	newValue := new(NetCashForecast1)
 	f.NetCashForecastDetails = append(f.NetCashForecastDetails, newValue)
 	return newValue
 }
-

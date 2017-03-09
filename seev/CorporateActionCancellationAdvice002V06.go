@@ -7,7 +7,7 @@ import (
 )
 
 type Document03900206 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.039.002.06 Document"`
+	XMLName xml.Name                                 `xml:"urn:iso:std:iso:20022:tech:xsd:seev.039.002.06 Document"`
 	Message *CorporateActionCancellationAdvice002V06 `xml:"CorpActnCxlAdvc"`
 }
 
@@ -50,26 +50,24 @@ type CorporateActionCancellationAdvice002V06 struct {
 	// Party/agent responsible for maintaining the register of a security.
 	Registrar *iso20022.PartyIdentification104Choice `xml:"Regar,omitempty"`
 
-	// A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. 
+	// A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.
 	ResellingAgent []*iso20022.PartyIdentification104Choice `xml:"RsellngAgt,omitempty"`
 
 	// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
 	PhysicalSecuritiesAgent *iso20022.PartyIdentification104Choice `xml:"PhysSctiesAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. 
+	// A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person.
 	DropAgent *iso20022.PartyIdentification104Choice `xml:"DrpAgt,omitempty"`
 
 	// A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change.
 	SolicitationAgent []*iso20022.PartyIdentification104Choice `xml:"SlctnAgt,omitempty"`
 
-	// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. 
+	// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
 	InformationAgent *iso20022.PartyIdentification104Choice `xml:"InfAgt,omitempty"`
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionCancellationAdvice002V06) AddCancellationAdviceGeneralInformation() *iso20022.CorporateActionCancellation4 {
 	c.CancellationAdviceGeneralInformation = new(iso20022.CorporateActionCancellation4)
@@ -92,19 +90,19 @@ func (c *CorporateActionCancellationAdvice002V06) AddCorporateActionDetails() *i
 }
 
 func (c *CorporateActionCancellationAdvice002V06) AddIssuerAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.IssuerAgent = append(c.IssuerAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionCancellationAdvice002V06) AddPayingAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.PayingAgent = append(c.PayingAgent, newValue)
 	return newValue
 }
 
 func (c *CorporateActionCancellationAdvice002V06) AddSubPayingAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.SubPayingAgent = append(c.SubPayingAgent, newValue)
 	return newValue
 }
@@ -115,7 +113,7 @@ func (c *CorporateActionCancellationAdvice002V06) AddRegistrar() *iso20022.Party
 }
 
 func (c *CorporateActionCancellationAdvice002V06) AddResellingAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.ResellingAgent = append(c.ResellingAgent, newValue)
 	return newValue
 }
@@ -131,7 +129,7 @@ func (c *CorporateActionCancellationAdvice002V06) AddDropAgent() *iso20022.Party
 }
 
 func (c *CorporateActionCancellationAdvice002V06) AddSolicitationAgent() *iso20022.PartyIdentification104Choice {
-	newValue := new (iso20022.PartyIdentification104Choice)
+	newValue := new(iso20022.PartyIdentification104Choice)
 	c.SolicitationAgent = append(c.SolicitationAgent, newValue)
 	return newValue
 }
@@ -142,8 +140,7 @@ func (c *CorporateActionCancellationAdvice002V06) AddInformationAgent() *iso2002
 }
 
 func (c *CorporateActionCancellationAdvice002V06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

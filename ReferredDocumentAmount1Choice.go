@@ -17,9 +17,7 @@ type ReferredDocumentAmount1Choice struct {
 
 	// Quantity of cash resulting from the calculation of the tax.
 	TaxAmount *CurrencyAndAmount `xml:"TaxAmt"`
-
 }
-
 
 func (r *ReferredDocumentAmount1Choice) SetDuePayableAmount(value, currency string) {
 	r.DuePayableAmount = NewCurrencyAndAmount(value, currency)
@@ -40,4 +38,3 @@ func (r *ReferredDocumentAmount1Choice) SetCreditNoteAmount(value, currency stri
 func (r *ReferredDocumentAmount1Choice) SetTaxAmount(value, currency string) {
 	r.TaxAmount = NewCurrencyAndAmount(value, currency)
 }
-

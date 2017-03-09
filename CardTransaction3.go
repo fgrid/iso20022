@@ -1,7 +1,7 @@
 package iso20022
 
 // Identification of the original transaction.
-	// It corresponds to ISO 8583, field number 90 for the version 87, and 56 for the other versions.
+// It corresponds to ISO 8583, field number 90 for the version 87, and 56 for the other versions.
 type CardTransaction3 struct {
 
 	// Date and time of the transaction transported unchanged by the acquirer from the card acceptor to the issuer. Corresponds to the CAPE data element TransactionIdentification/ TransactionDateTime.
@@ -13,9 +13,7 @@ type CardTransaction3 struct {
 
 	// Identification of the entity, initiator of the transaction.
 	InitiatorIdentification *Max35Text `xml:"InitrId"`
-
 }
-
 
 func (c *CardTransaction3) SetAcceptorTransactionDateTime(value string) {
 	c.AcceptorTransactionDateTime = (*ISODateTime)(&value)
@@ -28,4 +26,3 @@ func (c *CardTransaction3) SetInitiatorTransactionIdentification(value string) {
 func (c *CardTransaction3) SetInitiatorIdentification(value string) {
 	c.InitiatorIdentification = (*Max35Text)(&value)
 }
-

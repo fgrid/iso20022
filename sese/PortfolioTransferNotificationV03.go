@@ -7,7 +7,7 @@ import (
 )
 
 type Document03700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.037.001.03 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:sese.037.001.03 Document"`
 	Message *PortfolioTransferNotificationV03 `xml:"PrtflTrfNtfctn"`
 }
 
@@ -19,7 +19,7 @@ func (d *Document03700103) AddMessage() *PortfolioTransferNotificationV03 {
 // Scope
 // An account servicer sends a PortfolioTransferNotification to another account servicer to exchange transfer settlement details information during a retail or institutional client portfolio transfer.
 // The account servicers will typically be local agents or global custodians acting on behalf of an investment management institution, a broker/dealer or a retail client.
-// 
+//
 // Usage
 // By exchange of transfer settlement details, it is understood the providing, by the delivering account servicer to the receiving account servicer, of the settlement details (trade date, settlement date, delivering settlement chain, quantities, etc.) of the individual transfers that will take place during a full or partial portfolio transfer. This delivering account servicer message may also include, for validation, the receiving settlement chain as provided by the client. In case the receiving settlement chain is not available to the delivering account servicer, the receiving account servicer may in return provide to the delivering account servicer the receiving settlement chain using the same message.
 // The message may also be used to:
@@ -27,7 +27,7 @@ func (d *Document03700103) AddMessage() *PortfolioTransferNotificationV03 {
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type PortfolioTransferNotificationV03 struct {
@@ -46,9 +46,7 @@ type PortfolioTransferNotificationV03 struct {
 
 	// Details of transfer.
 	TransferNotificationDetails []*iso20022.SecuritiesTradeDetails24 `xml:"TrfNtfctnDtls,omitempty"`
-
 }
-
 
 func (p *PortfolioTransferNotificationV03) AddPagination() *iso20022.Pagination {
 	p.Pagination = new(iso20022.Pagination)
@@ -71,8 +69,7 @@ func (p *PortfolioTransferNotificationV03) AddSafekeepingAccount() *iso20022.Sec
 }
 
 func (p *PortfolioTransferNotificationV03) AddTransferNotificationDetails() *iso20022.SecuritiesTradeDetails24 {
-	newValue := new (iso20022.SecuritiesTradeDetails24)
+	newValue := new(iso20022.SecuritiesTradeDetails24)
 	p.TransferNotificationDetails = append(p.TransferNotificationDetails, newValue)
 	return newValue
 }
-

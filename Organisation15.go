@@ -38,9 +38,7 @@ type Organisation15 struct {
 
 	// Additional regulatory information about the investor that is required in some markets to support anti-money laundering laws.
 	AdditionalRegulatoryInformation *RegulatoryInformation1 `xml:"AddtlRgltryInf,omitempty"`
-
 }
-
 
 func (o *Organisation15) SetName(value string) {
 	o.Name = (*Max140Text)(&value)
@@ -76,7 +74,7 @@ func (o *Organisation15) SetNationalRegistrationNumber(value string) {
 }
 
 func (o *Organisation15) AddModifiedPostalAddress() *ModificationScope1 {
-	newValue := new (ModificationScope1)
+	newValue := new(ModificationScope1)
 	o.ModifiedPostalAddress = append(o.ModifiedPostalAddress, newValue)
 	return newValue
 }
@@ -95,4 +93,3 @@ func (o *Organisation15) AddAdditionalRegulatoryInformation() *RegulatoryInforma
 	o.AdditionalRegulatoryInformation = new(RegulatoryInformation1)
 	return o.AdditionalRegulatoryInformation
 }
-

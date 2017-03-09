@@ -75,12 +75,10 @@ type OtherAmounts12 struct {
 	// Amount of consumption tax.
 	ConsumptionTax *AmountAndDirection9 `xml:"CsmptnTax,omitempty"`
 
-	// Amount of unpaid interest (on bonds which have defaulted and have subsequently 
+	// Amount of unpaid interest (on bonds which have defaulted and have subsequently
 	// restructured), which is capitalized and added to the original principal amount of the bond.
 	AccruedCapitalisationAmount *AmountAndDirection9 `xml:"AcrdCptlstnAmt,omitempty"`
-
 }
-
 
 func (o *OtherAmounts12) AddAccruedInterestAmount() *AmountAndDirection9 {
 	o.AccruedInterestAmount = new(AmountAndDirection9)
@@ -206,4 +204,3 @@ func (o *OtherAmounts12) AddAccruedCapitalisationAmount() *AmountAndDirection9 {
 	o.AccruedCapitalisationAmount = new(AmountAndDirection9)
 	return o.AccruedCapitalisationAmount
 }
-

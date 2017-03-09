@@ -95,9 +95,7 @@ type LineItem10 struct {
 
 	// Note included in this line item.
 	IncludedNote []*AdditionalInformation1 `xml:"InclNote,omitempty"`
-
 }
-
 
 func (l *LineItem10) SetIdentification(value string) {
 	l.Identification = (*Max35Text)(&value)
@@ -119,7 +117,7 @@ func (l *LineItem10) AddContractIdentification() *DocumentIdentification22 {
 }
 
 func (l *LineItem10) AddPurchaseAccountingAccount() *AccountingAccount1 {
-	newValue := new (AccountingAccount1)
+	newValue := new(AccountingAccount1)
 	l.PurchaseAccountingAccount = append(l.PurchaseAccountingAccount, newValue)
 	return newValue
 }
@@ -134,7 +132,7 @@ func (l *LineItem10) AddNetPriceQuantity() *Quantity4 {
 }
 
 func (l *LineItem10) AddNetPriceAllowanceCharge() *LineItemAllowanceCharge1 {
-	newValue := new (LineItemAllowanceCharge1)
+	newValue := new(LineItemAllowanceCharge1)
 	l.NetPriceAllowanceCharge = append(l.NetPriceAllowanceCharge, newValue)
 	return newValue
 }
@@ -159,25 +157,25 @@ func (l *LineItem10) AddGrossWeight() *Quantity3 {
 }
 
 func (l *LineItem10) AddLogisticsCharge() *ChargesDetails2 {
-	newValue := new (ChargesDetails2)
+	newValue := new(ChargesDetails2)
 	l.LogisticsCharge = append(l.LogisticsCharge, newValue)
 	return newValue
 }
 
 func (l *LineItem10) AddTax() *LineItemTax1 {
-	newValue := new (LineItemTax1)
+	newValue := new(LineItemTax1)
 	l.Tax = append(l.Tax, newValue)
 	return newValue
 }
 
 func (l *LineItem10) AddAllowanceCharge() *LineItemAllowanceCharge1 {
-	newValue := new (LineItemAllowanceCharge1)
+	newValue := new(LineItemAllowanceCharge1)
 	l.AllowanceCharge = append(l.AllowanceCharge, newValue)
 	return newValue
 }
 
 func (l *LineItem10) AddFinancialAdjustment() *Adjustment4 {
-	newValue := new (Adjustment4)
+	newValue := new(Adjustment4)
 	l.FinancialAdjustment = append(l.FinancialAdjustment, newValue)
 	return newValue
 }
@@ -197,7 +195,7 @@ func (l *LineItem10) AddPerPackageUnitQuantity() *Quantity3 {
 }
 
 func (l *LineItem10) AddPackaging() *Packaging1 {
-	newValue := new (Packaging1)
+	newValue := new(Packaging1)
 	l.Packaging = append(l.Packaging, newValue)
 	return newValue
 }
@@ -250,8 +248,7 @@ func (l *LineItem10) AddMonetarySummation() *LineItemMonetarySummation1 {
 }
 
 func (l *LineItem10) AddIncludedNote() *AdditionalInformation1 {
-	newValue := new (AdditionalInformation1)
+	newValue := new(AdditionalInformation1)
 	l.IncludedNote = append(l.IncludedNote, newValue)
 	return newValue
 }
-

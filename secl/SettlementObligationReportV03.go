@@ -7,7 +7,7 @@ import (
 )
 
 type Document01000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:secl.010.001.03 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:secl.010.001.03 Document"`
 	Message *SettlementObligationReportV03 `xml:"SttlmOblgtnRpt"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document01000103) AddMessage() *SettlementObligationReportV03 {
 
 // Scope
 // The SettlementObligationReport message is sent by the central counterparty (CCP) to a clearing member to report on the settlement obligation that will be submitted for settlement.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The SettlementObligationReport message may also be sent to a third party processing the settlement obligation(s) on behalf of more than one clearing member.
 // The Settlement Obligation Report message is provided per delivery account and per instrument. The report can be provided for one specific delivering party or one specific receiving party. It can also be generated per non clearing member.
@@ -48,11 +48,9 @@ type SettlementObligationReportV03 struct {
 	// Provides details about the receiving parties involved in the settlement chain.
 	SettlementParties *iso20022.SettlementParties2Choice `xml:"SttlmPties,omitempty"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SettlementObligationReportV03) AddReportParameters() *iso20022.ReportParameters4 {
 	s.ReportParameters = new(iso20022.ReportParameters4)
@@ -80,7 +78,7 @@ func (s *SettlementObligationReportV03) AddDeliveryAccount() *iso20022.Securitie
 }
 
 func (s *SettlementObligationReportV03) AddReportDetails() *iso20022.Report5 {
-	newValue := new (iso20022.Report5)
+	newValue := new(iso20022.Report5)
 	s.ReportDetails = append(s.ReportDetails, newValue)
 	return newValue
 }
@@ -91,8 +89,7 @@ func (s *SettlementObligationReportV03) AddSettlementParties() *iso20022.Settlem
 }
 
 func (s *SettlementObligationReportV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

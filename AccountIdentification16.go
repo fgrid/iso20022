@@ -14,9 +14,7 @@ type AccountIdentification16 struct {
 
 	// Detailed account holdings information report for a corporate action event.
 	CorporateActionEventAndBalance []*CorporateActionEventAndBalance3 `xml:"CorpActnEvtAndBal,omitempty"`
-
 }
-
 
 func (a *AccountIdentification16) SetSafekeepingAccount(value string) {
 	a.SafekeepingAccount = (*Max35Text)(&value)
@@ -33,8 +31,7 @@ func (a *AccountIdentification16) AddSafekeepingPlace() *SafekeepingPlaceFormat2
 }
 
 func (a *AccountIdentification16) AddCorporateActionEventAndBalance() *CorporateActionEventAndBalance3 {
-	newValue := new (CorporateActionEventAndBalance3)
+	newValue := new(CorporateActionEventAndBalance3)
 	a.CorporateActionEventAndBalance = append(a.CorporateActionEventAndBalance, newValue)
 	return newValue
 }
-

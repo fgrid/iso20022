@@ -11,9 +11,7 @@ type StatusReport2 struct {
 
 	// Data related to a status report of a point of interaction (POI).
 	DataSet []*TerminalManagementDataSet4 `xml:"DataSet"`
-
 }
-
 
 func (s *StatusReport2) AddPOIIdentification() *GenericIdentification35 {
 	s.POIIdentification = new(GenericIdentification35)
@@ -26,8 +24,7 @@ func (s *StatusReport2) AddTerminalManagerIdentification() *GenericIdentificatio
 }
 
 func (s *StatusReport2) AddDataSet() *TerminalManagementDataSet4 {
-	newValue := new (TerminalManagementDataSet4)
+	newValue := new(TerminalManagementDataSet4)
 	s.DataSet = append(s.DataSet, newValue)
 	return newValue
 }
-

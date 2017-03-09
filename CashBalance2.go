@@ -18,14 +18,12 @@ type CashBalance2 struct {
 	// Specifies the date (and time) of the balance.
 	Date *DateAndDateTimeChoice `xml:"Dt"`
 
-	// Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. 
-	// 
+	// Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest.
+	//
 	// Usage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.
 	// Example : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).
 	Availability []*CashBalanceAvailability1 `xml:"Avlbty,omitempty"`
-
 }
-
 
 func (c *CashBalance2) AddType() *BalanceType2Choice {
 	c.Type = new(BalanceType2Choice)
@@ -51,8 +49,7 @@ func (c *CashBalance2) AddDate() *DateAndDateTimeChoice {
 }
 
 func (c *CashBalance2) AddAvailability() *CashBalanceAvailability1 {
-	newValue := new (CashBalanceAvailability1)
+	newValue := new(CashBalanceAvailability1)
 	c.Availability = append(c.Availability, newValue)
 	return newValue
 }
-

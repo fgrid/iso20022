@@ -11,9 +11,7 @@ type AttendanceCard2 struct {
 
 	// Name and address of a party.
 	OtherAddress *NameAndAddress9 `xml:"OthrAdr,omitempty"`
-
 }
-
 
 func (a *AttendanceCard2) SetAttendanceCardLabelling(value string) {
 	a.AttendanceCardLabelling = (*Max105Text)(&value)
@@ -27,4 +25,3 @@ func (a *AttendanceCard2) AddOtherAddress() *NameAndAddress9 {
 	a.OtherAddress = new(NameAndAddress9)
 	return a.OtherAddress
 }
-

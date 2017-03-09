@@ -11,9 +11,7 @@ type DocumentIdentification32 struct {
 
 	// Specifies when this document is to be processed relative to an other referred document.
 	LinkageType *ProcessingPosition7Choice `xml:"LkgTp,omitempty"`
-
 }
-
 
 func (d *DocumentIdentification32) AddIdentification() *DocumentIdentification3Choice {
 	d.Identification = new(DocumentIdentification3Choice)
@@ -29,4 +27,3 @@ func (d *DocumentIdentification32) AddLinkageType() *ProcessingPosition7Choice {
 	d.LinkageType = new(ProcessingPosition7Choice)
 	return d.LinkageType
 }
-

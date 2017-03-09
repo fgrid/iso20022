@@ -14,9 +14,7 @@ type GenericIdentification144 struct {
 
 	// Value of the balance.
 	Balance *RestrictedFINDecimalNumber `xml:"Bal"`
-
 }
-
 
 func (g *GenericIdentification144) SetIdentification(value string) {
 	g.Identification = (*Exact4AlphaNumericText)(&value)
@@ -33,4 +31,3 @@ func (g *GenericIdentification144) SetSchemeName(value string) {
 func (g *GenericIdentification144) SetBalance(value string) {
 	g.Balance = (*RestrictedFINDecimalNumber)(&value)
 }
-

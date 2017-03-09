@@ -7,7 +7,7 @@ import (
 )
 
 type Document02900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.029.001.02 Document"`
+	XMLName xml.Name                         `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.029.001.02 Document"`
 	Message *StatusChangeRequestRejectionV02 `xml:"StsChngReqRjctn"`
 }
 
@@ -40,9 +40,7 @@ type StatusChangeRequestRejectionV02 struct {
 
 	// Reason why the user cannot accept the request.
 	RejectionReason *iso20022.Reason2 `xml:"RjctnRsn"`
-
 }
-
 
 func (s *StatusChangeRequestRejectionV02) AddRejectionIdentification() *iso20022.MessageIdentification1 {
 	s.RejectionIdentification = new(iso20022.MessageIdentification1)
@@ -68,4 +66,3 @@ func (s *StatusChangeRequestRejectionV02) AddRejectionReason() *iso20022.Reason2
 	s.RejectionReason = new(iso20022.Reason2)
 	return s.RejectionReason
 }
-

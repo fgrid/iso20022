@@ -29,9 +29,7 @@ type ATMCassetteCounters2 struct {
 
 	// Total number of media presented to the customer.
 	PresentedNumber *Number `xml:"PresntdNb,omitempty"`
-
 }
-
 
 func (a *ATMCassetteCounters2) SetType(value string) {
 	a.Type = (*ATMCounterType1Code)(&value)
@@ -68,4 +66,3 @@ func (a *ATMCassetteCounters2) SetRejectedNumber(value string) {
 func (a *ATMCassetteCounters2) SetPresentedNumber(value string) {
 	a.PresentedNumber = (*Number)(&value)
 }
-

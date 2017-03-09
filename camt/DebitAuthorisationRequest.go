@@ -7,7 +7,7 @@ import (
 )
 
 type Document03700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.037.001.01 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:camt.037.001.01 Document"`
 	Message *DebitAuthorisationRequest `xml:"camt.037.001.01"`
 }
 
@@ -40,9 +40,7 @@ type DebitAuthorisationRequest struct {
 
 	// Detailed information about the request.
 	Detail *iso20022.DebitAuthorisationDetails `xml:"Dtl"`
-
 }
-
 
 func (d *DebitAuthorisationRequest) AddAssignment() *iso20022.CaseAssignment {
 	d.Assignment = new(iso20022.CaseAssignment)
@@ -63,4 +61,3 @@ func (d *DebitAuthorisationRequest) AddDetail() *iso20022.DebitAuthorisationDeta
 	d.Detail = new(iso20022.DebitAuthorisationDetails)
 	return d.Detail
 }
-

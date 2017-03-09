@@ -37,14 +37,12 @@ type DirectDebitTransactionInformation15 struct {
 	DebtorAgentAccount *CashAccount24 `xml:"DbtrAgtAcct,omitempty"`
 
 	// Further information related to the processing of the payment instruction, that may need to be acted upon by the debtor agent, depending on agreement between debtor and the debtor agent.
-	// 
+	//
 	InstructionForDebtorAgent *Max210Text `xml:"InstrForDbtrAgt,omitempty"`
 
 	// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.
 	RemittanceInformation *RemittanceInformation2 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (d *DirectDebitTransactionInformation15) AddPaymentIdentification() *PaymentIdentification3 {
 	d.PaymentIdentification = new(PaymentIdentification3)
@@ -106,4 +104,3 @@ func (d *DirectDebitTransactionInformation15) AddRemittanceInformation() *Remitt
 	d.RemittanceInformation = new(RemittanceInformation2)
 	return d.RemittanceInformation
 }
-

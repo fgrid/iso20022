@@ -32,9 +32,7 @@ type AccountParties9 struct {
 
 	// Settler role in the hedge funds industry.
 	Settler []*InvestmentAccountOwnershipInformation9 `xml:"Sttlr,omitempty"`
-
 }
-
 
 func (a *AccountParties9) AddPrincipalAccountParty() *AccountParties4Choice {
 	a.PrincipalAccountParty = new(AccountParties4Choice)
@@ -42,56 +40,55 @@ func (a *AccountParties9) AddPrincipalAccountParty() *AccountParties4Choice {
 }
 
 func (a *AccountParties9) AddSecondaryOwner() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.SecondaryOwner = append(a.SecondaryOwner, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddBeneficiary() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.Beneficiary = append(a.Beneficiary, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddPowerOfAttorney() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.PowerOfAttorney = append(a.PowerOfAttorney, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddLegalGuardian() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.LegalGuardian = append(a.LegalGuardian, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddSuccessorOnDeath() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.SuccessorOnDeath = append(a.SuccessorOnDeath, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddAdministrator() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.Administrator = append(a.Administrator, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddOtherParty() *ExtendedParty6 {
-	newValue := new (ExtendedParty6)
+	newValue := new(ExtendedParty6)
 	a.OtherParty = append(a.OtherParty, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddGranter() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.Granter = append(a.Granter, newValue)
 	return newValue
 }
 
 func (a *AccountParties9) AddSettler() *InvestmentAccountOwnershipInformation9 {
-	newValue := new (InvestmentAccountOwnershipInformation9)
+	newValue := new(InvestmentAccountOwnershipInformation9)
 	a.Settler = append(a.Settler, newValue)
 	return newValue
 }
-

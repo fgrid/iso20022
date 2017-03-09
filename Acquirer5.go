@@ -8,9 +8,7 @@ type Acquirer5 struct {
 
 	// Version of the payment acquirer parameters of the POI.
 	ParametersVersion *Max256Text `xml:"ParamsVrsn,omitempty"`
-
 }
-
 
 func (a *Acquirer5) AddIdentification() *GenericIdentification53 {
 	a.Identification = new(GenericIdentification53)
@@ -20,4 +18,3 @@ func (a *Acquirer5) AddIdentification() *GenericIdentification53 {
 func (a *Acquirer5) SetParametersVersion(value string) {
 	a.ParametersVersion = (*Max256Text)(&value)
 }
-

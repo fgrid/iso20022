@@ -20,9 +20,7 @@ type Charge15 struct {
 
 	// Calculation basis for the charge or fee.
 	ExtendedCalculationBasis *Extended350Code `xml:"XtndedClctnBsis,omitempty"`
-
 }
-
 
 func (c *Charge15) SetType(value string) {
 	c.Type = (*ChargeType9Code)(&value)
@@ -47,4 +45,3 @@ func (c *Charge15) SetCalculationBasis(value string) {
 func (c *Charge15) SetExtendedCalculationBasis(value string) {
 	c.ExtendedCalculationBasis = (*Extended350Code)(&value)
 }
-

@@ -20,9 +20,7 @@ type ReportParameters3 struct {
 
 	// Sequential number of the report.
 	ReportNumber *Exact5NumericText `xml:"RptNb,omitempty"`
-
 }
-
 
 func (r *ReportParameters3) SetReportIdentification(value string) {
 	r.ReportIdentification = (*Max35Text)(&value)
@@ -48,4 +46,3 @@ func (r *ReportParameters3) SetFrequency(value string) {
 func (r *ReportParameters3) SetReportNumber(value string) {
 	r.ReportNumber = (*Exact5NumericText)(&value)
 }
-

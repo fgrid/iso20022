@@ -17,9 +17,7 @@ type ForeignExchangeTerms1 struct {
 
 	// Party that proposes a  foreign exchange rate.
 	QuotingInstitution *PartyIdentification10Choice `xml:"QtgInstn,omitempty"`
-
 }
-
 
 func (f *ForeignExchangeTerms1) SetUnitCurrency(value string) {
 	f.UnitCurrency = (*ActiveOrHistoricCurrencyCode)(&value)
@@ -41,4 +39,3 @@ func (f *ForeignExchangeTerms1) AddQuotingInstitution() *PartyIdentification10Ch
 	f.QuotingInstitution = new(PartyIdentification10Choice)
 	return f.QuotingInstitution
 }
-

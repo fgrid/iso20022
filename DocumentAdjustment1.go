@@ -14,9 +14,7 @@ type DocumentAdjustment1 struct {
 
 	// Provides further details on the document adjustment.
 	AdditionalInformation *Max140Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (d *DocumentAdjustment1) SetAmount(value, currency string) {
 	d.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -33,4 +31,3 @@ func (d *DocumentAdjustment1) SetReason(value string) {
 func (d *DocumentAdjustment1) SetAdditionalInformation(value string) {
 	d.AdditionalInformation = (*Max140Text)(&value)
 }
-

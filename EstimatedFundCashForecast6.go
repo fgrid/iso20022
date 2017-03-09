@@ -56,9 +56,7 @@ type EstimatedFundCashForecast6 struct {
 
 	// Net cash as a result of the cash-in and cash-out flows.
 	EstimatedNetCashForecastDetails []*NetCashForecast4 `xml:"EstmtdNetCshFcstDtls,omitempty"`
-
 }
-
 
 func (e *EstimatedFundCashForecast6) SetIdentification(value string) {
 	e.Identification = (*Max35Text)(&value)
@@ -129,20 +127,19 @@ func (e *EstimatedFundCashForecast6) SetEstimatedPercentageOfShareClassTotalNAV(
 }
 
 func (e *EstimatedFundCashForecast6) AddEstimatedCashInForecastDetails() *CashInForecast6 {
-	newValue := new (CashInForecast6)
+	newValue := new(CashInForecast6)
 	e.EstimatedCashInForecastDetails = append(e.EstimatedCashInForecastDetails, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast6) AddEstimatedCashOutForecastDetails() *CashOutForecast6 {
-	newValue := new (CashOutForecast6)
+	newValue := new(CashOutForecast6)
 	e.EstimatedCashOutForecastDetails = append(e.EstimatedCashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (e *EstimatedFundCashForecast6) AddEstimatedNetCashForecastDetails() *NetCashForecast4 {
-	newValue := new (NetCashForecast4)
+	newValue := new(NetCashForecast4)
 	e.EstimatedNetCashForecastDetails = append(e.EstimatedNetCashForecastDetails, newValue)
 	return newValue
 }
-

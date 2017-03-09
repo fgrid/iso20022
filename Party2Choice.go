@@ -8,9 +8,7 @@ type Party2Choice struct {
 
 	// Unique and unambiguous identification of a person, eg, passport.
 	PrivateIdentification []*PersonIdentification3 `xml:"PrvtId"`
-
 }
-
 
 func (p *Party2Choice) AddOrganisationIdentification() *OrganisationIdentification2 {
 	p.OrganisationIdentification = new(OrganisationIdentification2)
@@ -18,8 +16,7 @@ func (p *Party2Choice) AddOrganisationIdentification() *OrganisationIdentificati
 }
 
 func (p *Party2Choice) AddPrivateIdentification() *PersonIdentification3 {
-	newValue := new (PersonIdentification3)
+	newValue := new(PersonIdentification3)
 	p.PrivateIdentification = append(p.PrivateIdentification, newValue)
 	return newValue
 }
-

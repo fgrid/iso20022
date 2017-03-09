@@ -11,9 +11,7 @@ type AccountIdentification5 struct {
 
 	// Specifies the type of account.
 	Type *GenericIdentification30 `xml:"Tp,omitempty"`
-
 }
-
 
 func (a *AccountIdentification5) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (a *AccountIdentification5) AddType() *GenericIdentification30 {
 	a.Type = new(GenericIdentification30)
 	return a.Type
 }
-

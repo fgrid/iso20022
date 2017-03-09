@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.002.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:seev.002.001.03 Document"`
 	Message *MeetingCancellationV03 `xml:"MtgCxl"`
 }
 
@@ -41,9 +41,7 @@ type MeetingCancellationV03 struct {
 
 	// Defines the justification for the cancellation.
 	Reason *iso20022.MeetingCancellationReason2 `xml:"Rsn"`
-
 }
-
 
 func (m *MeetingCancellationV03) AddIdentification() *iso20022.MessageIdentification1 {
 	m.Identification = new(iso20022.MessageIdentification1)
@@ -66,7 +64,7 @@ func (m *MeetingCancellationV03) AddNotifyingParty() *iso20022.PartyIdentificati
 }
 
 func (m *MeetingCancellationV03) AddSecurity() *iso20022.SecurityPosition6 {
-	newValue := new (iso20022.SecurityPosition6)
+	newValue := new(iso20022.SecurityPosition6)
 	m.Security = append(m.Security, newValue)
 	return newValue
 }
@@ -75,4 +73,3 @@ func (m *MeetingCancellationV03) AddReason() *iso20022.MeetingCancellationReason
 	m.Reason = new(iso20022.MeetingCancellationReason2)
 	return m.Reason
 }
-

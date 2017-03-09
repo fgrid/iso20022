@@ -11,12 +11,10 @@ type RequiredSubmission6 struct {
 
 	// Description of the certificate type required.
 	CertificateTypeDescription *Max140Text `xml:"CertTpDesc"`
-
 }
 
-
 func (r *RequiredSubmission6) AddSubmitter() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.Submitter = append(r.Submitter, newValue)
 	return newValue
 }
@@ -28,4 +26,3 @@ func (r *RequiredSubmission6) SetCertificateType(value string) {
 func (r *RequiredSubmission6) SetCertificateTypeDescription(value string) {
 	r.CertificateTypeDescription = (*Max140Text)(&value)
 }
-

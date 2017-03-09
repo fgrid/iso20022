@@ -91,9 +91,7 @@ type SubscriptionOrder7 struct {
 
 	// Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.
 	Equalisation *Equalisation1 `xml:"Equlstn,omitempty"`
-
 }
-
 
 func (s *SubscriptionOrder7) SetOrderReference(value string) {
 	s.OrderReference = (*Max35Text)(&value)
@@ -104,7 +102,7 @@ func (s *SubscriptionOrder7) SetClientReference(value string) {
 }
 
 func (s *SubscriptionOrder7) AddOrderType() *FundOrderType2 {
-	newValue := new (FundOrderType2)
+	newValue := new(FundOrderType2)
 	s.OrderType = append(s.OrderType, newValue)
 	return newValue
 }
@@ -166,19 +164,19 @@ func (s *SubscriptionOrder7) SetAccumulationRightReference(value string) {
 }
 
 func (s *SubscriptionOrder7) AddChargeDetails() *Charge17 {
-	newValue := new (Charge17)
+	newValue := new(Charge17)
 	s.ChargeDetails = append(s.ChargeDetails, newValue)
 	return newValue
 }
 
 func (s *SubscriptionOrder7) AddCommissionDetails() *Commission10 {
-	newValue := new (Commission10)
+	newValue := new(Commission10)
 	s.CommissionDetails = append(s.CommissionDetails, newValue)
 	return newValue
 }
 
 func (s *SubscriptionOrder7) AddTaxDetails() *Tax16 {
-	newValue := new (Tax16)
+	newValue := new(Tax16)
 	s.TaxDetails = append(s.TaxDetails, newValue)
 	return newValue
 }
@@ -207,7 +205,7 @@ func (s *SubscriptionOrder7) SetNonStandardSettlementInformation(value string) {
 }
 
 func (s *SubscriptionOrder7) AddStaffClientBreakdown() *InvestmentFundsOrderBreakdown1 {
-	newValue := new (InvestmentFundsOrderBreakdown1)
+	newValue := new(InvestmentFundsOrderBreakdown1)
 	s.StaffClientBreakdown = append(s.StaffClientBreakdown, newValue)
 	return newValue
 }
@@ -221,7 +219,7 @@ func (s *SubscriptionOrder7) SetNegotiatedTrade(value string) {
 }
 
 func (s *SubscriptionOrder7) AddRelatedPartyDetails() *Intermediary8 {
-	newValue := new (Intermediary8)
+	newValue := new(Intermediary8)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
@@ -230,4 +228,3 @@ func (s *SubscriptionOrder7) AddEqualisation() *Equalisation1 {
 	s.Equalisation = new(Equalisation1)
 	return s.Equalisation
 }
-

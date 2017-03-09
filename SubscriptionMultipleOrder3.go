@@ -42,9 +42,7 @@ type SubscriptionMultipleOrder3 struct {
 
 	// Payment processes required to transfer cash from the debtor to the creditor.
 	BulkCashSettlementDetails *PaymentTransaction23 `xml:"BlkCshSttlmDtls,omitempty"`
-
 }
-
 
 func (s *SubscriptionMultipleOrder3) SetMasterReference(value string) {
 	s.MasterReference = (*Max35Text)(&value)
@@ -87,7 +85,7 @@ func (s *SubscriptionMultipleOrder3) AddBeneficiaryDetails() *IndividualPerson9 
 }
 
 func (s *SubscriptionMultipleOrder3) AddIndividualOrderDetails() *SubscriptionOrder6 {
-	newValue := new (SubscriptionOrder6)
+	newValue := new(SubscriptionOrder6)
 	s.IndividualOrderDetails = append(s.IndividualOrderDetails, newValue)
 	return newValue
 }
@@ -104,4 +102,3 @@ func (s *SubscriptionMultipleOrder3) AddBulkCashSettlementDetails() *PaymentTran
 	s.BulkCashSettlementDetails = new(PaymentTransaction23)
 	return s.BulkCashSettlementDetails
 }
-

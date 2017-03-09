@@ -11,9 +11,7 @@ type SubscriptionBulkOrderInstruction2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SubscriptionBulkOrderInstruction2) AddBulkOrderDetails() *SubscriptionBulkOrder3 {
 	s.BulkOrderDetails = new(SubscriptionBulkOrder3)
@@ -21,14 +19,13 @@ func (s *SubscriptionBulkOrderInstruction2) AddBulkOrderDetails() *SubscriptionB
 }
 
 func (s *SubscriptionBulkOrderInstruction2) AddRelatedPartyDetails() *Intermediary8 {
-	newValue := new (Intermediary8)
+	newValue := new(Intermediary8)
 	s.RelatedPartyDetails = append(s.RelatedPartyDetails, newValue)
 	return newValue
 }
 
 func (s *SubscriptionBulkOrderInstruction2) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

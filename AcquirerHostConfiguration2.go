@@ -8,9 +8,7 @@ type AcquirerHostConfiguration2 struct {
 
 	// Types of message to sent to this host.
 	MessageToSend []*MessageFunction3Code `xml:"MsgToSnd,omitempty"`
-
 }
-
 
 func (a *AcquirerHostConfiguration2) SetHostIdentification(value string) {
 	a.HostIdentification = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (a *AcquirerHostConfiguration2) SetHostIdentification(value string) {
 func (a *AcquirerHostConfiguration2) AddMessageToSend(value string) {
 	a.MessageToSend = append(a.MessageToSend, (*MessageFunction3Code)(&value))
 }
-

@@ -44,9 +44,7 @@ type IdentificationReference11Choice struct {
 
 	// Unambiguous identification of a collateral transaction as assigned by the instructing party.
 	CollateralTransactionIdentification *Max35Text `xml:"CollTxId"`
-
 }
-
 
 func (i *IdentificationReference11Choice) SetInstructingPartyTransactionIdentification(value string) {
 	i.InstructingPartyTransactionIdentification = (*Max35Text)(&value)
@@ -103,4 +101,3 @@ func (i *IdentificationReference11Choice) SetCancellationRequestIdentification(v
 func (i *IdentificationReference11Choice) SetCollateralTransactionIdentification(value string) {
 	i.CollateralTransactionIdentification = (*Max35Text)(&value)
 }
-

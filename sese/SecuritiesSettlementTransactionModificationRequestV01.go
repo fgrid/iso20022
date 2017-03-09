@@ -7,7 +7,7 @@ import (
 )
 
 type Document03800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.038.001.01 Document"`
+	XMLName xml.Name                                               `xml:"urn:iso:std:iso:20022:tech:xsd:sese.038.001.01 Document"`
 	Message *SecuritiesSettlementTransactionModificationRequestV01 `xml:"SctiesSttlmTxModReq"`
 }
 
@@ -37,9 +37,7 @@ type SecuritiesSettlementTransactionModificationRequestV01 struct {
 
 	// Specifies the type of update requested.
 	UpdateType []*iso20022.UpdateType5Choice `xml:"UpdTp"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionModificationRequestV01) AddModifiedTransactionDetails() *iso20022.TransactionDetails41 {
 	s.ModifiedTransactionDetails = new(iso20022.TransactionDetails41)
@@ -47,8 +45,7 @@ func (s *SecuritiesSettlementTransactionModificationRequestV01) AddModifiedTrans
 }
 
 func (s *SecuritiesSettlementTransactionModificationRequestV01) AddUpdateType() *iso20022.UpdateType5Choice {
-	newValue := new (iso20022.UpdateType5Choice)
+	newValue := new(iso20022.UpdateType5Choice)
 	s.UpdateType = append(s.UpdateType, newValue)
 	return newValue
 }
-

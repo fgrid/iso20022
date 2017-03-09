@@ -11,9 +11,7 @@ type Case3 struct {
 
 	// Indicates whether or not the case was previously closed and is now re-opened.
 	ReopenCaseIndication *YesNoIndicator `xml:"ReopCaseIndctn,omitempty"`
-
 }
-
 
 func (c *Case3) SetIdentification(value string) {
 	c.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (c *Case3) AddCreator() *Party12Choice {
 func (c *Case3) SetReopenCaseIndication(value string) {
 	c.ReopenCaseIndication = (*YesNoIndicator)(&value)
 }
-

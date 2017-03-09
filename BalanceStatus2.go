@@ -5,11 +5,8 @@ type BalanceStatus2 struct {
 
 	// Balance in each currency calculated at the value date and time indicated in the report.
 	Balance *ActiveCurrencyAndAmount `xml:"Bal"`
-
 }
-
 
 func (b *BalanceStatus2) SetBalance(value, currency string) {
 	b.Balance = NewActiveCurrencyAndAmount(value, currency)
 }
-

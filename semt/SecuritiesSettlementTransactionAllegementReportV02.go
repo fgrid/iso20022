@@ -7,7 +7,7 @@ import (
 )
 
 type Document01900102 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.019.001.02 Document"`
+	XMLName xml.Name                                            `xml:"urn:iso:std:iso:20022:tech:xsd:semt.019.001.02 Document"`
 	Message *SecuritiesSettlementTransactionAllegementReportV02 `xml:"SctiesSttlmTxAllgmtRpt"`
 }
 
@@ -46,9 +46,7 @@ type SecuritiesSettlementTransactionAllegementReportV02 struct {
 
 	// Details of the allegement.
 	AllegementDetails []*iso20022.SecuritiesTradeDetails17 `xml:"AllgmtDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionAllegementReportV02) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -71,8 +69,7 @@ func (s *SecuritiesSettlementTransactionAllegementReportV02) AddSafekeepingAccou
 }
 
 func (s *SecuritiesSettlementTransactionAllegementReportV02) AddAllegementDetails() *iso20022.SecuritiesTradeDetails17 {
-	newValue := new (iso20022.SecuritiesTradeDetails17)
+	newValue := new(iso20022.SecuritiesTradeDetails17)
 	s.AllegementDetails = append(s.AllegementDetails, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type IntermediateSecuritiesDistributionTypeFormat6Choice struct {
 
 	// Proprietary identification of the type of intermediate security distribution.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (i *IntermediateSecuritiesDistributionTypeFormat6Choice) SetCode(value string) {
 	i.Code = (*IntermediateSecurityDistributionType4Code)(&value)
@@ -20,4 +18,3 @@ func (i *IntermediateSecuritiesDistributionTypeFormat6Choice) AddProprietary() *
 	i.Proprietary = new(GenericIdentification20)
 	return i.Proprietary
 }
-

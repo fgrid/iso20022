@@ -20,9 +20,7 @@ type IndividualPerson13 struct {
 
 	// Specifies details related to the attendance card.
 	AttendanceCardDetails *AttendanceCard1 `xml:"AttndncCardDtls"`
-
 }
-
 
 func (i *IndividualPerson13) SetBirthName(value string) {
 	i.BirthName = (*Max35Text)(&value)
@@ -51,4 +49,3 @@ func (i *IndividualPerson13) AddAttendanceCardDetails() *AttendanceCard1 {
 	i.AttendanceCardDetails = new(AttendanceCard1)
 	return i.AttendanceCardDetails
 }
-

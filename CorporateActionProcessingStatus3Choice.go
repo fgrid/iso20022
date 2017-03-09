@@ -8,9 +8,7 @@ type CorporateActionProcessingStatus3Choice struct {
 
 	// Information related to an identification, for example, party identification or account identification.
 	Proprietary *GenericIdentification25 `xml:"Prtry"`
-
 }
-
 
 func (c *CorporateActionProcessingStatus3Choice) AddCode() *CorporateActionProcessingStatus1Choice {
 	c.Code = new(CorporateActionProcessingStatus1Choice)
@@ -21,4 +19,3 @@ func (c *CorporateActionProcessingStatus3Choice) AddProprietary() *GenericIdenti
 	c.Proprietary = new(GenericIdentification25)
 	return c.Proprietary
 }
-

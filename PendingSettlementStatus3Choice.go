@@ -14,9 +14,7 @@ type PendingSettlementStatus3Choice struct {
 
 	// Indicates that there is no reason available or to report.
 	NoSpecifiedReason *NoReasonCode `xml:"NoSpcfdRsn"`
-
 }
-
 
 func (p *PendingSettlementStatus3Choice) SetReason(value string) {
 	p.Reason = (*PendingSettlementStatusReason2Code)(&value)
@@ -34,4 +32,3 @@ func (p *PendingSettlementStatus3Choice) AddDataSourceScheme() *GenericIdentific
 func (p *PendingSettlementStatus3Choice) SetNoSpecifiedReason(value string) {
 	p.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
-

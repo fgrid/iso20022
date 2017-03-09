@@ -59,9 +59,7 @@ type VoteParameters3 struct {
 
 	// Additional information on specific requirements for allowing a person to vote.
 	AdditionalVotingRequirements *Max350Text `xml:"AddtlVtngRqrmnts,omitempty"`
-
 }
-
 
 func (v *VoteParameters3) SetSecuritiesQuantityRequiredToVote(value string) {
 	v.SecuritiesQuantityRequiredToVote = (*DecimalNumber)(&value)
@@ -151,4 +149,3 @@ func (v *VoteParameters3) AddVoteWithPremiumMarketDeadline() *DateFormat2Choice 
 func (v *VoteParameters3) SetAdditionalVotingRequirements(value string) {
 	v.AdditionalVotingRequirements = (*Max350Text)(&value)
 }
-

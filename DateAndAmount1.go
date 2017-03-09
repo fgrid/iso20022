@@ -8,9 +8,7 @@ type DateAndAmount1 struct {
 
 	// Amount of money.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (d *DateAndAmount1) SetDate(value string) {
 	d.Date = (*ISODate)(&value)
@@ -19,4 +17,3 @@ func (d *DateAndAmount1) SetDate(value string) {
 func (d *DateAndAmount1) SetAmount(value, currency string) {
 	d.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

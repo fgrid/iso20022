@@ -11,9 +11,7 @@ type GenericIdentification6 struct {
 
 	// Value of the balance.
 	Balance *Number `xml:"Bal"`
-
 }
-
 
 func (g *GenericIdentification6) SetIssuer(value string) {
 	g.Issuer = (*Max8Text)(&value)
@@ -26,4 +24,3 @@ func (g *GenericIdentification6) SetInformation(value string) {
 func (g *GenericIdentification6) SetBalance(value string) {
 	g.Balance = (*Number)(&value)
 }
-

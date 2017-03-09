@@ -11,9 +11,7 @@ type FundIdentification4 struct {
 
 	// Identification of the custodian which services the account of the fund.
 	CustodianIdentification *PartyIdentification73Choice `xml:"CtdnId,omitempty"`
-
 }
-
 
 func (f *FundIdentification4) AddFundIdentification() *PartyIdentification60 {
 	f.FundIdentification = new(PartyIdentification60)
@@ -28,4 +26,3 @@ func (f *FundIdentification4) AddCustodianIdentification() *PartyIdentification7
 	f.CustodianIdentification = new(PartyIdentification73Choice)
 	return f.CustodianIdentification
 }
-

@@ -32,9 +32,7 @@ type OriginalPaymentInstruction3 struct {
 
 	// Provides information on the original transactions to which the cancellation request message refers.
 	TransactionInformationAndStatus []*PaymentTransaction39 `xml:"TxInfAndSts,omitempty"`
-
 }
-
 
 func (o *OriginalPaymentInstruction3) SetOriginalPaymentInformationCancellationIdentification(value string) {
 	o.OriginalPaymentInformationCancellationIdentification = (*Max35Text)(&value)
@@ -67,20 +65,19 @@ func (o *OriginalPaymentInstruction3) SetPaymentInformationCancellationStatus(va
 }
 
 func (o *OriginalPaymentInstruction3) AddCancellationStatusReasonInformation() *CancellationStatusReason2 {
-	newValue := new (CancellationStatusReason2)
+	newValue := new(CancellationStatusReason2)
 	o.CancellationStatusReasonInformation = append(o.CancellationStatusReasonInformation, newValue)
 	return newValue
 }
 
 func (o *OriginalPaymentInstruction3) AddNumberOfTransactionsPerCancellationStatus() *NumberOfCancellationsPerStatus1 {
-	newValue := new (NumberOfCancellationsPerStatus1)
+	newValue := new(NumberOfCancellationsPerStatus1)
 	o.NumberOfTransactionsPerCancellationStatus = append(o.NumberOfTransactionsPerCancellationStatus, newValue)
 	return newValue
 }
 
 func (o *OriginalPaymentInstruction3) AddTransactionInformationAndStatus() *PaymentTransaction39 {
-	newValue := new (PaymentTransaction39)
+	newValue := new(PaymentTransaction39)
 	o.TransactionInformationAndStatus = append(o.TransactionInformationAndStatus, newValue)
 	return newValue
 }
-

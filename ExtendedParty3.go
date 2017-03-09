@@ -8,9 +8,7 @@ type ExtendedParty3 struct {
 
 	// Detailed ownership information about a party.
 	OtherPartyDetails *InvestmentAccountOwnershipInformation6 `xml:"OthrPtyDtls"`
-
 }
-
 
 func (e *ExtendedParty3) SetExtendedPartyRole(value string) {
 	e.ExtendedPartyRole = (*Extended350Code)(&value)
@@ -20,4 +18,3 @@ func (e *ExtendedParty3) AddOtherPartyDetails() *InvestmentAccountOwnershipInfor
 	e.OtherPartyDetails = new(InvestmentAccountOwnershipInformation6)
 	return e.OtherPartyDetails
 }
-

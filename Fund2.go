@@ -44,9 +44,7 @@ type Fund2 struct {
 
 	// Net cash as a result of the cash-in and cash-out flows.
 	NetCashForecastDetails []*NetCashForecast5 `xml:"NetCshFcstDtls,omitempty"`
-
 }
-
 
 func (f *Fund2) SetName(value string) {
 	f.Name = (*Max350Text)(&value)
@@ -98,20 +96,19 @@ func (f *Fund2) SetPercentageOfFundTotalNAV(value string) {
 }
 
 func (f *Fund2) AddCashInForecastDetails() *CashInOutForecast7 {
-	newValue := new (CashInOutForecast7)
+	newValue := new(CashInOutForecast7)
 	f.CashInForecastDetails = append(f.CashInForecastDetails, newValue)
 	return newValue
 }
 
 func (f *Fund2) AddCashOutForecastDetails() *CashInOutForecast7 {
-	newValue := new (CashInOutForecast7)
+	newValue := new(CashInOutForecast7)
 	f.CashOutForecastDetails = append(f.CashOutForecastDetails, newValue)
 	return newValue
 }
 
 func (f *Fund2) AddNetCashForecastDetails() *NetCashForecast5 {
-	newValue := new (NetCashForecast5)
+	newValue := new(NetCashForecast5)
 	f.NetCashForecastDetails = append(f.NetCashForecastDetails, newValue)
 	return newValue
 }
-

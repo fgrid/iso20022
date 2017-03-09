@@ -7,7 +7,7 @@ import (
 )
 
 type Document01900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.019.001.01 Document"`
+	XMLName xml.Name                                     `xml:"urn:iso:std:iso:20022:tech:xsd:sese.019.001.01 Document"`
 	Message *RequestForPEPOrISAOrPortfolioInformationV01 `xml:"ReqForPEPOrISAOrPrtflInfV01"`
 }
 
@@ -66,9 +66,7 @@ type RequestForPEPOrISAOrPortfolioInformationV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*iso20022.Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddMessageReference() *iso20022.MessageIdentification1 {
 	r.MessageReference = new(iso20022.MessageIdentification1)
@@ -101,7 +99,7 @@ func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddSecondaryIndividualInve
 }
 
 func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddOtherIndividualInvestor() *iso20022.IndividualPerson8 {
-	newValue := new (iso20022.IndividualPerson8)
+	newValue := new(iso20022.IndividualPerson8)
 	r.OtherIndividualInvestor = append(r.OtherIndividualInvestor, newValue)
 	return newValue
 }
@@ -117,7 +115,7 @@ func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddSecondaryCorporateInves
 }
 
 func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddOtherCorporateInvestor() *iso20022.Organisation4 {
-	newValue := new (iso20022.Organisation4)
+	newValue := new(iso20022.Organisation4)
 	r.OtherCorporateInvestor = append(r.OtherCorporateInvestor, newValue)
 	return newValue
 }
@@ -138,14 +136,13 @@ func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddNewPlanManager() *iso20
 }
 
 func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddProductTransfer() *iso20022.PEPISATransfer5 {
-	newValue := new (iso20022.PEPISATransfer5)
+	newValue := new(iso20022.PEPISATransfer5)
 	r.ProductTransfer = append(r.ProductTransfer, newValue)
 	return newValue
 }
 
 func (r *RequestForPEPOrISAOrPortfolioInformationV01) AddExtension() *iso20022.Extension1 {
-	newValue := new (iso20022.Extension1)
+	newValue := new(iso20022.Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

@@ -17,9 +17,7 @@ type PostalAddress5 struct {
 
 	// Nation with its own government.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PostalAddress5) SetStreetName(value string) {
 	p.StreetName = (*Max70Text)(&value)
@@ -40,4 +38,3 @@ func (p *PostalAddress5) SetCountrySubDivision(value string) {
 func (p *PostalAddress5) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

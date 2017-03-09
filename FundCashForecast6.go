@@ -62,9 +62,7 @@ type FundCashForecast6 struct {
 
 	// Net cash movements per financial instrument.
 	NetCashForecastDetails []*NetCashForecast4 `xml:"NetCshFcstDtls,omitempty"`
-
 }
-
 
 func (f *FundCashForecast6) SetIdentification(value string) {
 	f.Identification = (*Max35Text)(&value)
@@ -135,32 +133,31 @@ func (f *FundCashForecast6) SetPercentageOfShareClassTotalNAV(value string) {
 }
 
 func (f *FundCashForecast6) AddBreakdownByParty() *BreakdownByParty3 {
-	newValue := new (BreakdownByParty3)
+	newValue := new(BreakdownByParty3)
 	f.BreakdownByParty = append(f.BreakdownByParty, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast6) AddBreakdownByCountry() *BreakdownByCountry2 {
-	newValue := new (BreakdownByCountry2)
+	newValue := new(BreakdownByCountry2)
 	f.BreakdownByCountry = append(f.BreakdownByCountry, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast6) AddBreakdownByCurrency() *BreakdownByCurrency2 {
-	newValue := new (BreakdownByCurrency2)
+	newValue := new(BreakdownByCurrency2)
 	f.BreakdownByCurrency = append(f.BreakdownByCurrency, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast6) AddBreakdownByUserDefinedParameter() *BreakdownByUserDefinedParameter3 {
-	newValue := new (BreakdownByUserDefinedParameter3)
+	newValue := new(BreakdownByUserDefinedParameter3)
 	f.BreakdownByUserDefinedParameter = append(f.BreakdownByUserDefinedParameter, newValue)
 	return newValue
 }
 
 func (f *FundCashForecast6) AddNetCashForecastDetails() *NetCashForecast4 {
-	newValue := new (NetCashForecast4)
+	newValue := new(NetCashForecast4)
 	f.NetCashForecastDetails = append(f.NetCashForecastDetails, newValue)
 	return newValue
 }
-

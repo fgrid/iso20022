@@ -8,9 +8,7 @@ type SettlementSystemMethod1Choice struct {
 
 	// Settlement system expressed as a proprietary code.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (s *SettlementSystemMethod1Choice) SetCode(value string) {
 	s.Code = (*SettlementSystemMethod1Code)(&value)
@@ -20,4 +18,3 @@ func (s *SettlementSystemMethod1Choice) AddProprietary() *GenericIdentification2
 	s.Proprietary = new(GenericIdentification20)
 	return s.Proprietary
 }
-

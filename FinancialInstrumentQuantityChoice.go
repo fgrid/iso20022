@@ -11,9 +11,7 @@ type FinancialInstrumentQuantityChoice struct {
 
 	// Quantity expressed as an amount representing the current amortised face amount of a bond, eg, a periodic reduction of a bond's principal amount.
 	AmortisedValue *ImpliedCurrencyAndAmount `xml:"AmtsdVal"`
-
 }
-
 
 func (f *FinancialInstrumentQuantityChoice) SetUnit(value string) {
 	f.Unit = (*DecimalNumber)(&value)
@@ -26,4 +24,3 @@ func (f *FinancialInstrumentQuantityChoice) SetFaceAmount(value, currency string
 func (f *FinancialInstrumentQuantityChoice) SetAmortisedValue(value, currency string) {
 	f.AmortisedValue = NewImpliedCurrencyAndAmount(value, currency)
 }
-

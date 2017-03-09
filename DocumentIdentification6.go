@@ -1,7 +1,7 @@
 package iso20022
 
 // Identifies a document by a unique identification and a version.
-	// Also provides reference to a baseline amendment number.
+// Also provides reference to a baseline amendment number.
 type DocumentIdentification6 struct {
 
 	// Identification of a set of data.
@@ -12,9 +12,7 @@ type DocumentIdentification6 struct {
 
 	// Number that is assigned sequentially by the TSU to a baseline amendment.
 	AmendmentSequenceNumber *Max3NumericText `xml:"AmdmntSeqNb,omitempty"`
-
 }
-
 
 func (d *DocumentIdentification6) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (d *DocumentIdentification6) SetVersion(value string) {
 func (d *DocumentIdentification6) SetAmendmentSequenceNumber(value string) {
 	d.AmendmentSequenceNumber = (*Max3NumericText)(&value)
 }
-

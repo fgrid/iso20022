@@ -11,9 +11,7 @@ type ATMWithdrawalCompletionAdvice1 struct {
 
 	// Withdrawal transaction for which the completion is sent.
 	Transaction *ATMTransaction3 `xml:"Tx"`
-
 }
-
 
 func (a *ATMWithdrawalCompletionAdvice1) AddEnvironment() *ATMEnvironment3 {
 	a.Environment = new(ATMEnvironment3)
@@ -29,4 +27,3 @@ func (a *ATMWithdrawalCompletionAdvice1) AddTransaction() *ATMTransaction3 {
 	a.Transaction = new(ATMTransaction3)
 	return a.Transaction
 }
-

@@ -11,9 +11,7 @@ type ChargesDetails2 struct {
 
 	// Amount of money asked or paid for the charge.
 	Amount *CurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (c *ChargesDetails2) SetType(value string) {
 	c.Type = (*ChargeType8Code)(&value)
@@ -26,4 +24,3 @@ func (c *ChargesDetails2) SetOtherChargesType(value string) {
 func (c *ChargesDetails2) SetAmount(value, currency string) {
 	c.Amount = NewCurrencyAndAmount(value, currency)
 }
-

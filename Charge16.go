@@ -14,9 +14,7 @@ type Charge16 struct {
 
 	// Rate used to calculate the amount of the charge or fee.
 	Rate *PercentageRate `xml:"Rate"`
-
 }
-
 
 func (c *Charge16) SetType(value string) {
 	c.Type = (*ChargeType10Code)(&value)
@@ -33,4 +31,3 @@ func (c *Charge16) SetAmount(value, currency string) {
 func (c *Charge16) SetRate(value string) {
 	c.Rate = (*PercentageRate)(&value)
 }
-

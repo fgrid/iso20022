@@ -8,9 +8,7 @@ type ReferredDocumentInformation1 struct {
 
 	// Unique and unambiguous identification number of the referred document.
 	ReferredDocumentNumber *Max35Text `xml:"RfrdDocNb,omitempty"`
-
 }
-
 
 func (r *ReferredDocumentInformation1) AddReferredDocumentType() *ReferredDocumentType1 {
 	r.ReferredDocumentType = new(ReferredDocumentType1)
@@ -20,4 +18,3 @@ func (r *ReferredDocumentInformation1) AddReferredDocumentType() *ReferredDocume
 func (r *ReferredDocumentInformation1) SetReferredDocumentNumber(value string) {
 	r.ReferredDocumentNumber = (*Max35Text)(&value)
 }
-

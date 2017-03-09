@@ -8,9 +8,7 @@ type Pledgee1 struct {
 
 	// Legal entity identification as an alternate identification for a party.
 	LEI *LEIIdentifier `xml:"LEI,omitempty"`
-
 }
-
 
 func (p *Pledgee1) AddPledgeeTypeAndIdentification() *PledgeeFormat3Choice {
 	p.PledgeeTypeAndIdentification = new(PledgeeFormat3Choice)
@@ -20,4 +18,3 @@ func (p *Pledgee1) AddPledgeeTypeAndIdentification() *PledgeeFormat3Choice {
 func (p *Pledgee1) SetLEI(value string) {
 	p.LEI = (*LEIIdentifier)(&value)
 }
-

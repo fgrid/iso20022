@@ -11,9 +11,7 @@ type NetDividendRate1Choice struct {
 
 	// Value is expressed as an amount related to an underlying securities, eg, underlying security for which an interest is paid.
 	RateTypeAmount *NetDividendRate2 `xml:"RateTpAmt"`
-
 }
-
 
 func (n *NetDividendRate1Choice) AddNotSpecifiedRate() *RateValueType6FormatChoice {
 	n.NotSpecifiedRate = new(RateValueType6FormatChoice)
@@ -28,4 +26,3 @@ func (n *NetDividendRate1Choice) AddRateTypeAmount() *NetDividendRate2 {
 	n.RateTypeAmount = new(NetDividendRate2)
 	return n.RateTypeAmount
 }
-

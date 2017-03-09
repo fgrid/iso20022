@@ -4,7 +4,7 @@ package iso20022
 type PaymentTransaction58 struct {
 
 	// Unique identification, as assigned by the assigner, to unambiguously identify a cancellation request.
-	// 
+	//
 	// Usage: The cancellation request identification can be used for reconciliation or to link tasks relating to the cancellation request.
 	CancellationIdentification *Max35Text `xml:"CxlId,omitempty"`
 
@@ -18,7 +18,7 @@ type PaymentTransaction58 struct {
 	OriginalEndToEndIdentification *Max35Text `xml:"OrgnlEndToEndId,omitempty"`
 
 	// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.
-	// 
+	//
 	// Usage: This amount has to be transported unchanged through the transaction chain.
 	OriginalInstructedAmount *ActiveOrHistoricCurrencyAndAmount `xml:"OrgnlInstdAmt,omitempty"`
 
@@ -36,9 +36,7 @@ type PaymentTransaction58 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction58) SetCancellationIdentification(value string) {
 	p.CancellationIdentification = (*Max35Text)(&value)
@@ -70,7 +68,7 @@ func (p *PaymentTransaction58) SetOriginalRequestedCollectionDate(value string) 
 }
 
 func (p *PaymentTransaction58) AddCancellationReasonInformation() *PaymentCancellationReason2 {
-	newValue := new (PaymentCancellationReason2)
+	newValue := new(PaymentCancellationReason2)
 	p.CancellationReasonInformation = append(p.CancellationReasonInformation, newValue)
 	return newValue
 }
@@ -81,8 +79,7 @@ func (p *PaymentTransaction58) AddOriginalTransactionReference() *OriginalTransa
 }
 
 func (p *PaymentTransaction58) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	p.SupplementaryData = append(p.SupplementaryData, newValue)
 	return newValue
 }
-

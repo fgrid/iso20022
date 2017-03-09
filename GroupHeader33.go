@@ -37,9 +37,7 @@ type GroupHeader33 struct {
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
 	InstructedAgent *BranchAndFinancialInstitutionIdentification4 `xml:"InstdAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader33) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -88,4 +86,3 @@ func (g *GroupHeader33) AddInstructedAgent() *BranchAndFinancialInstitutionIdent
 	g.InstructedAgent = new(BranchAndFinancialInstitutionIdentification4)
 	return g.InstructedAgent
 }
-

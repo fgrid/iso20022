@@ -11,9 +11,7 @@ type Presentation4 struct {
 
 	// Additional information related to the presentation.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (p *Presentation4) AddMedium() *PresentationMedium1Choice {
 	p.Medium = new(PresentationMedium1Choice)
@@ -21,7 +19,7 @@ func (p *Presentation4) AddMedium() *PresentationMedium1Choice {
 }
 
 func (p *Presentation4) AddDocument() *Document11 {
-	newValue := new (Document11)
+	newValue := new(Document11)
 	p.Document = append(p.Document, newValue)
 	return newValue
 }
@@ -29,4 +27,3 @@ func (p *Presentation4) AddDocument() *Document11 {
 func (p *Presentation4) AddAdditionalInformation(value string) {
 	p.AdditionalInformation = append(p.AdditionalInformation, (*Max2000Text)(&value))
 }
-

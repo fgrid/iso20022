@@ -11,9 +11,7 @@ type Authorisation1 struct {
 
 	// Maximum amount allowed over a specific period of time.
 	MaximumAmountByPeriod []*MaximumAmountByPeriod1 `xml:"MaxAmtByPrd,omitempty"`
-
 }
-
 
 func (a *Authorisation1) SetMinimumAmountPerTransaction(value, currency string) {
 	a.MinimumAmountPerTransaction = NewActiveCurrencyAndAmount(value, currency)
@@ -24,8 +22,7 @@ func (a *Authorisation1) SetMaximumAmountPerTransaction(value, currency string) 
 }
 
 func (a *Authorisation1) AddMaximumAmountByPeriod() *MaximumAmountByPeriod1 {
-	newValue := new (MaximumAmountByPeriod1)
+	newValue := new(MaximumAmountByPeriod1)
 	a.MaximumAmountByPeriod = append(a.MaximumAmountByPeriod, newValue)
 	return newValue
 }
-

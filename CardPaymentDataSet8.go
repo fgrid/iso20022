@@ -14,9 +14,7 @@ type CardPaymentDataSet8 struct {
 
 	// Transaction that has been rejected.
 	Transaction *CardPaymentTransactionAdviceResponse5 `xml:"Tx"`
-
 }
-
 
 func (c *CardPaymentDataSet8) SetTransactionSequenceCounter(value string) {
 	c.TransactionSequenceCounter = (*Max9NumericText)(&value)
@@ -36,4 +34,3 @@ func (c *CardPaymentDataSet8) AddTransaction() *CardPaymentTransactionAdviceResp
 	c.Transaction = new(CardPaymentTransactionAdviceResponse5)
 	return c.Transaction
 }
-

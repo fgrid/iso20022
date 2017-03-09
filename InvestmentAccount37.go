@@ -72,14 +72,12 @@ type InvestmentAccount37 struct {
 	// Date the investor signs the open account form.
 	AccountSignatureDateTime *DateAndDateTimeChoice `xml:"AcctSgntrDtTm,omitempty"`
 
-	// Specifies the means by which the investor submits the open account form. 
+	// Specifies the means by which the investor submits the open account form.
 	TransactionChannelType *TransactionChannelType1Choice `xml:"TxChanlTp,omitempty"`
 
 	// Specifies the category of the investment account.
 	InvestmentAccountCategory *InvestmentAccountCategory1Choice `xml:"InvstmtAcctCtgy,omitempty"`
-
 }
-
 
 func (i *InvestmentAccount37) AddIdentification() *AccountIdentification1 {
 	i.Identification = new(AccountIdentification1)
@@ -127,7 +125,7 @@ func (i *InvestmentAccount37) SetIncomePreference(value string) {
 }
 
 func (i *InvestmentAccount37) AddReinvestmentDetails() *Reinvestment1 {
-	newValue := new (Reinvestment1)
+	newValue := new(Reinvestment1)
 	i.ReinvestmentDetails = append(i.ReinvestmentDetails, newValue)
 	return newValue
 }
@@ -154,7 +152,7 @@ func (i *InvestmentAccount37) SetFundFamilyName(value string) {
 }
 
 func (i *InvestmentAccount37) AddFundDetails() *FinancialInstrument29 {
-	newValue := new (FinancialInstrument29)
+	newValue := new(FinancialInstrument29)
 	i.FundDetails = append(i.FundDetails, newValue)
 	return newValue
 }
@@ -170,7 +168,7 @@ func (i *InvestmentAccount37) AddAccountServicer() *PartyIdentification2Choice {
 }
 
 func (i *InvestmentAccount37) AddBlockedStatus() *Blocked1 {
-	newValue := new (Blocked1)
+	newValue := new(Blocked1)
 	i.BlockedStatus = append(i.BlockedStatus, newValue)
 	return newValue
 }
@@ -198,4 +196,3 @@ func (i *InvestmentAccount37) AddInvestmentAccountCategory() *InvestmentAccountC
 	i.InvestmentAccountCategory = new(InvestmentAccountCategory1Choice)
 	return i.InvestmentAccountCategory
 }
-

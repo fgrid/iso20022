@@ -17,9 +17,7 @@ type TransactionCertificateContract1 struct {
 
 	// Further details on the transaction certificate contract.
 	AdditionalInformation *Max1025Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (t *TransactionCertificateContract1) AddContractReference() *ContractRegistrationReference1Choice {
 	t.ContractReference = new(ContractRegistrationReference1Choice)
@@ -41,4 +39,3 @@ func (t *TransactionCertificateContract1) SetExpectedAdvancePaymentReturnDate(va
 func (t *TransactionCertificateContract1) SetAdditionalInformation(value string) {
 	t.AdditionalInformation = (*Max1025Text)(&value)
 }
-

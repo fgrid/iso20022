@@ -8,9 +8,7 @@ type Account2 struct {
 
 	// Institution servicing an account and assigning the account identifier to the account owner.
 	AccountServicer *PartyIdentification2Choice `xml:"AcctSvcr"`
-
 }
-
 
 func (a *Account2) AddIdentification() *AccountIdentification1 {
 	a.Identification = new(AccountIdentification1)
@@ -21,4 +19,3 @@ func (a *Account2) AddAccountServicer() *PartyIdentification2Choice {
 	a.AccountServicer = new(PartyIdentification2Choice)
 	return a.AccountServicer
 }
-

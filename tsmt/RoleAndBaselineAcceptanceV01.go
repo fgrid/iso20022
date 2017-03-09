@@ -7,7 +7,7 @@ import (
 )
 
 type Document04900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.049.001.01 Document"`
+	XMLName xml.Name                      `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.049.001.01 Document"`
 	Message *RoleAndBaselineAcceptanceV01 `xml:"RoleAndBaselnAccptnc"`
 }
 
@@ -30,11 +30,9 @@ type RoleAndBaselineAcceptanceV01 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
-
 }
-
 
 func (r *RoleAndBaselineAcceptanceV01) AddAcceptanceIdentification() *iso20022.MessageIdentification1 {
 	r.AcceptanceIdentification = new(iso20022.MessageIdentification1)
@@ -50,4 +48,3 @@ func (r *RoleAndBaselineAcceptanceV01) AddTransactionIdentification() *iso20022.
 	r.TransactionIdentification = new(iso20022.SimpleIdentificationInformation)
 	return r.TransactionIdentification
 }
-

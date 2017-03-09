@@ -41,9 +41,7 @@ type Report4 struct {
 
 	// Indicates whether there is activity or an information update reported in the report.
 	ActivityIndicator *YesNoIndicator `xml:"ActvtyInd,omitempty"`
-
 }
-
 
 func (r *Report4) SetReportNumber(value string) {
 	r.ReportNumber = (*Max5NumericText)(&value)
@@ -104,4 +102,3 @@ func (r *Report4) SetAuditedIndicator(value string) {
 func (r *Report4) SetActivityIndicator(value string) {
 	r.ActivityIndicator = (*YesNoIndicator)(&value)
 }
-

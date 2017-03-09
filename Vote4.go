@@ -29,9 +29,7 @@ type Vote4 struct {
 
 	// Number of votes for which no action has been taken.
 	NoAction *Number `xml:"NoActn,omitempty"`
-
 }
-
 
 func (v *Vote4) SetIssuerLabel(value string) {
 	v.IssuerLabel = (*Max35Text)(&value)
@@ -68,4 +66,3 @@ func (v *Vote4) SetDiscretionary(value string) {
 func (v *Vote4) SetNoAction(value string) {
 	v.NoAction = (*Number)(&value)
 }
-

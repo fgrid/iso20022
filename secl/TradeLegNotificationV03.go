@@ -7,7 +7,7 @@ import (
 )
 
 type Document00100103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:secl.001.001.03 Document"`
+	XMLName xml.Name                 `xml:"urn:iso:std:iso:20022:tech:xsd:secl.001.001.03 Document"`
 	Message *TradeLegNotificationV03 `xml:"TradLegNtfctn"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document00100103) AddMessage() *TradeLegNotificationV03 {
 
 // Scope
 // The TradeLegNotification message is sent by the central counterparty (CCP) to a clearing member to report the trade that has been executed by the trading platform.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The CCP reports both sides of the trade from the clearing member perspective. The CCP sends a message to the global clearing member of the seller and a message to the global clearing member of the buyer. Note: An individual clearing member only clear its own trades.
 type TradeLegNotificationV03 struct {
@@ -46,11 +46,9 @@ type TradeLegNotificationV03 struct {
 	// Provides details about the settlement details of the trade leg such the settlement amount or the place of settlement.
 	SettlementDetails *iso20022.Settlement1 `xml:"SttlmDtls"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (t *TradeLegNotificationV03) AddClearingMember() *iso20022.PartyIdentification35Choice {
 	t.ClearingMember = new(iso20022.PartyIdentification35Choice)
@@ -88,8 +86,7 @@ func (t *TradeLegNotificationV03) AddSettlementDetails() *iso20022.Settlement1 {
 }
 
 func (t *TradeLegNotificationV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	t.SupplementaryData = append(t.SupplementaryData, newValue)
 	return newValue
 }
-

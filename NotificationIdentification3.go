@@ -8,9 +8,7 @@ type NotificationIdentification3 struct {
 
 	// Date and time at which the last notification document (message) was created by the sender.
 	CreationDateTime *DateAndDateTimeChoice `xml:"CreDtTm,omitempty"`
-
 }
-
 
 func (n *NotificationIdentification3) SetIdentification(value string) {
 	n.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (n *NotificationIdentification3) AddCreationDateTime() *DateAndDateTimeChoi
 	n.CreationDateTime = new(DateAndDateTimeChoice)
 	return n.CreationDateTime
 }
-

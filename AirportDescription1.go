@@ -8,9 +8,7 @@ type AirportDescription1 struct {
 
 	// Identifies the airport by its name. For example: Heathrow.
 	AirportName *Max35Text `xml:"AirprtNm,omitempty"`
-
 }
-
 
 func (a *AirportDescription1) SetTown(value string) {
 	a.Town = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (a *AirportDescription1) SetTown(value string) {
 func (a *AirportDescription1) SetAirportName(value string) {
 	a.AirportName = (*Max35Text)(&value)
 }
-

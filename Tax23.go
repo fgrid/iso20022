@@ -8,9 +8,7 @@ type Tax23 struct {
 
 	// Specifies the tax as an amount or percentage.
 	AmountOrPercentage *AmountOrPercentage2Choice `xml:"AmtOrPctg"`
-
 }
-
 
 func (t *Tax23) AddType() *TaxType2Choice {
 	t.Type = new(TaxType2Choice)
@@ -21,4 +19,3 @@ func (t *Tax23) AddAmountOrPercentage() *AmountOrPercentage2Choice {
 	t.AmountOrPercentage = new(AmountOrPercentage2Choice)
 	return t.AmountOrPercentage
 }
-

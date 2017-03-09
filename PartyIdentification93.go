@@ -23,9 +23,7 @@ type PartyIdentification93 struct {
 
 	// Provides additional information about the type of certification/breakdown required.
 	CertificationBreakdown *Max350Text `xml:"CertfctnBrkdwn,omitempty"`
-
 }
-
 
 func (p *PartyIdentification93) AddOwnerIdentification() *PartyIdentification71Choice {
 	p.OwnerIdentification = new(PartyIdentification71Choice)
@@ -33,7 +31,7 @@ func (p *PartyIdentification93) AddOwnerIdentification() *PartyIdentification71C
 }
 
 func (p *PartyIdentification93) AddAlternateIdentification() *AlternatePartyIdentification7 {
-	newValue := new (AlternatePartyIdentification7)
+	newValue := new(AlternatePartyIdentification7)
 	p.AlternateIdentification = append(p.AlternateIdentification, newValue)
 	return newValue
 }
@@ -52,7 +50,7 @@ func (p *PartyIdentification93) AddOwnedSecuritiesQuantity() *FinancialInstrumen
 }
 
 func (p *PartyIdentification93) AddCertificationType() *BeneficiaryCertificationType10Choice {
-	newValue := new (BeneficiaryCertificationType10Choice)
+	newValue := new(BeneficiaryCertificationType10Choice)
 	p.CertificationType = append(p.CertificationType, newValue)
 	return newValue
 }
@@ -60,4 +58,3 @@ func (p *PartyIdentification93) AddCertificationType() *BeneficiaryCertification
 func (p *PartyIdentification93) SetCertificationBreakdown(value string) {
 	p.CertificationBreakdown = (*Max350Text)(&value)
 }
-

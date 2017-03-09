@@ -7,7 +7,7 @@ import (
 )
 
 type Document01400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:pain.014.001.01 Document"`
+	XMLName xml.Name                                         `xml:"urn:iso:std:iso:20022:tech:xsd:pain.014.001.01 Document"`
 	Message *CreditorPaymentActivationRequestStatusReportV01 `xml:"CdtrPmtActvtnReqStsRpt"`
 }
 
@@ -29,9 +29,7 @@ type CreditorPaymentActivationRequestStatusReportV01 struct {
 
 	// Information concerning the original payment information, to which the status report message refers.
 	OriginalPaymentInformationAndStatus []*iso20022.OriginalPaymentInformation5 `xml:"OrgnlPmtInfAndSts,omitempty"`
-
 }
-
 
 func (c *CreditorPaymentActivationRequestStatusReportV01) AddGroupHeader() *iso20022.GroupHeader46 {
 	c.GroupHeader = new(iso20022.GroupHeader46)
@@ -44,8 +42,7 @@ func (c *CreditorPaymentActivationRequestStatusReportV01) AddOriginalGroupInform
 }
 
 func (c *CreditorPaymentActivationRequestStatusReportV01) AddOriginalPaymentInformationAndStatus() *iso20022.OriginalPaymentInformation5 {
-	newValue := new (iso20022.OriginalPaymentInformation5)
+	newValue := new(iso20022.OriginalPaymentInformation5)
 	c.OriginalPaymentInformationAndStatus = append(c.OriginalPaymentInformationAndStatus, newValue)
 	return newValue
 }
-

@@ -17,9 +17,7 @@ type ATMTransaction4 struct {
 
 	// Maintenance command to perform on the ATM.
 	Command []*ATMCommand1 `xml:"Cmd,omitempty"`
-
 }
-
 
 func (a *ATMTransaction4) AddTransactionIdentification() *TransactionIdentifier1 {
 	a.TransactionIdentification = new(TransactionIdentifier1)
@@ -39,8 +37,7 @@ func (a *ATMTransaction4) SetICCRelatedData(value string) {
 }
 
 func (a *ATMTransaction4) AddCommand() *ATMCommand1 {
-	newValue := new (ATMCommand1)
+	newValue := new(ATMCommand1)
 	a.Command = append(a.Command, newValue)
 	return newValue
 }
-

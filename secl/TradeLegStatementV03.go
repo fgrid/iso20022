@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:secl.003.001.03 Document"`
+	XMLName xml.Name              `xml:"urn:iso:std:iso:20022:tech:xsd:secl.003.001.03 Document"`
 	Message *TradeLegStatementV03 `xml:"TradLegStmt"`
 }
 
@@ -18,9 +18,9 @@ func (d *Document00300103) AddMessage() *TradeLegStatementV03 {
 
 // Scope
 // The TradeLegStatement message is sent by the central counterparty (CCP) to a clearing member to report all trades that have been executed by the trading platform.
-// 
+//
 // The message definition is intended for use with the ISO20022 Business Application Header.
-// 
+//
 // Usage
 // The TradeLegStatement message may be either sent:
 // - during the day (to report trades execution by batch) or
@@ -42,11 +42,9 @@ type TradeLegStatementV03 struct {
 	// Provides the statement details.
 	StatementDetails []*iso20022.TradeLegStatement3 `xml:"StmtDtls"`
 
-	// Additional information that can not be captured in the structured fields and/or any other specific block. 
+	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (t *TradeLegStatementV03) AddStatementParameters() *iso20022.Statement31 {
 	t.StatementParameters = new(iso20022.Statement31)
@@ -69,14 +67,13 @@ func (t *TradeLegStatementV03) AddClearingAccount() *iso20022.SecuritiesAccount1
 }
 
 func (t *TradeLegStatementV03) AddStatementDetails() *iso20022.TradeLegStatement3 {
-	newValue := new (iso20022.TradeLegStatement3)
+	newValue := new(iso20022.TradeLegStatement3)
 	t.StatementDetails = append(t.StatementDetails, newValue)
 	return newValue
 }
 
 func (t *TradeLegStatementV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	t.SupplementaryData = append(t.SupplementaryData, newValue)
 	return newValue
 }
-

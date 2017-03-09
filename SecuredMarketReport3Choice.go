@@ -8,17 +8,14 @@ type SecuredMarketReport3Choice struct {
 
 	// Provides the details of the secured market transaction as reported by the reporting agent
 	Transaction []*SecuredMarketTransaction3 `xml:"Tx"`
-
 }
-
 
 func (s *SecuredMarketReport3Choice) SetDataSetAction(value string) {
 	s.DataSetAction = (*ReportPeriodActivity1Code)(&value)
 }
 
 func (s *SecuredMarketReport3Choice) AddTransaction() *SecuredMarketTransaction3 {
-	newValue := new (SecuredMarketTransaction3)
+	newValue := new(SecuredMarketTransaction3)
 	s.Transaction = append(s.Transaction, newValue)
 	return newValue
 }
-

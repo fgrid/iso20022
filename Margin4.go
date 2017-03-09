@@ -11,9 +11,7 @@ type Margin4 struct {
 
 	// Specifies whether the margin type position is short or long, that is, whether the balance is a negative or positive balance.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd,omitempty"`
-
 }
-
 
 func (m *Margin4) AddType() *MarginType1Choice {
 	m.Type = new(MarginType1Choice)
@@ -28,4 +26,3 @@ func (m *Margin4) AddAmount() *Amount2 {
 func (m *Margin4) SetCreditDebitIndicator(value string) {
 	m.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

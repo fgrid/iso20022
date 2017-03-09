@@ -8,17 +8,14 @@ type FailingStatus11Choice struct {
 
 	// Specifies the reason of the failing status.
 	Reason []*FailingReason9 `xml:"Rsn"`
-
 }
-
 
 func (f *FailingStatus11Choice) SetNoSpecifiedReason(value string) {
 	f.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (f *FailingStatus11Choice) AddReason() *FailingReason9 {
-	newValue := new (FailingReason9)
+	newValue := new(FailingReason9)
 	f.Reason = append(f.Reason, newValue)
 	return newValue
 }
-

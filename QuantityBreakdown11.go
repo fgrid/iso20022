@@ -14,9 +14,7 @@ type QuantityBreakdown11 struct {
 
 	// Price at which the lot was purchased.
 	LotPrice *Price4 `xml:"LotPric,omitempty"`
-
 }
-
 
 func (q *QuantityBreakdown11) AddLotNumber() *GenericIdentification37 {
 	q.LotNumber = new(GenericIdentification37)
@@ -37,4 +35,3 @@ func (q *QuantityBreakdown11) AddLotPrice() *Price4 {
 	q.LotPrice = new(Price4)
 	return q.LotPrice
 }
-

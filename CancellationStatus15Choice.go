@@ -8,17 +8,14 @@ type CancellationStatus15Choice struct {
 
 	// Specifies the reason of the cancellation status.
 	Reason []*CancellationReason10 `xml:"Rsn"`
-
 }
-
 
 func (c *CancellationStatus15Choice) SetNoSpecifiedReason(value string) {
 	c.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (c *CancellationStatus15Choice) AddReason() *CancellationReason10 {
-	newValue := new (CancellationReason10)
+	newValue := new(CancellationReason10)
 	c.Reason = append(c.Reason, newValue)
 	return newValue
 }
-

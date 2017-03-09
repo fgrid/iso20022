@@ -17,9 +17,7 @@ type ReportParameters5 struct {
 
 	// Indicates the date of calculation of the deficit (if any).
 	CalculationDate *ISODateTime `xml:"ClctnDt,omitempty"`
-
 }
-
 
 func (r *ReportParameters5) SetReportIdentification(value string) {
 	r.ReportIdentification = (*Max35Text)(&value)
@@ -41,4 +39,3 @@ func (r *ReportParameters5) SetReportCurrency(value string) {
 func (r *ReportParameters5) SetCalculationDate(value string) {
 	r.CalculationDate = (*ISODateTime)(&value)
 }
-

@@ -8,9 +8,7 @@ type ProductCategory1 struct {
 
 	// Specifies the category of a product.
 	Category *Max35Text `xml:"Ctgy"`
-
 }
-
 
 func (p *ProductCategory1) SetType(value string) {
 	p.Type = (*ProductCategory1Code)(&value)
@@ -19,4 +17,3 @@ func (p *ProductCategory1) SetType(value string) {
 func (p *ProductCategory1) SetCategory(value string) {
 	p.Category = (*Max35Text)(&value)
 }
-

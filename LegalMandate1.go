@@ -8,9 +8,7 @@ type LegalMandate1 struct {
 
 	// Specifies any additional information describing how or why the paragraph of law should be applied.
 	Disclaimer *Max350Text `xml:"Dsclmr,omitempty"`
-
 }
-
 
 func (l *LegalMandate1) SetParagraph(value string) {
 	l.Paragraph = (*Max35Text)(&value)
@@ -19,4 +17,3 @@ func (l *LegalMandate1) SetParagraph(value string) {
 func (l *LegalMandate1) SetDisclaimer(value string) {
 	l.Disclaimer = (*Max350Text)(&value)
 }
-

@@ -6,7 +6,7 @@ type MaintenanceDelegation1 struct {
 	// Maintenance service to be delegated.
 	MaintenanceService []*DataSetCategory6Code `xml:"MntncSvc"`
 
-	// Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate. 
+	// Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate.
 	PartialDelegation *TrueFalseIndicator `xml:"PrtlDlgtn,omitempty"`
 
 	// Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.
@@ -32,9 +32,7 @@ type MaintenanceDelegation1 struct {
 
 	// Configuration parameters of the terminal manager to be sent by the MTM.
 	ParameterDataSet *TerminalManagementDataSet14 `xml:"ParamDataSet,omitempty"`
-
 }
-
 
 func (m *MaintenanceDelegation1) AddMaintenanceService(value string) {
 	m.MaintenanceService = append(m.MaintenanceService, (*DataSetCategory6Code)(&value))
@@ -66,13 +64,13 @@ func (m *MaintenanceDelegation1) AddCertificate(value string) {
 }
 
 func (m *MaintenanceDelegation1) AddPOIIdentificationAssociation() *MaintenanceIdentificationAssociation1 {
-	newValue := new (MaintenanceIdentificationAssociation1)
+	newValue := new(MaintenanceIdentificationAssociation1)
 	m.POIIdentificationAssociation = append(m.POIIdentificationAssociation, newValue)
 	return newValue
 }
 
 func (m *MaintenanceDelegation1) AddSymmetricKey() *KEKIdentifier2 {
-	newValue := new (KEKIdentifier2)
+	newValue := new(KEKIdentifier2)
 	m.SymmetricKey = append(m.SymmetricKey, newValue)
 	return newValue
 }
@@ -81,4 +79,3 @@ func (m *MaintenanceDelegation1) AddParameterDataSet() *TerminalManagementDataSe
 	m.ParameterDataSet = new(TerminalManagementDataSet14)
 	return m.ParameterDataSet
 }
-

@@ -14,9 +14,7 @@ type InRepairStatusReason3 struct {
 
 	// Additional information about the in-repair status reason.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (i *InRepairStatusReason3) SetReason(value string) {
 	i.Reason = (*InRepairStatusReason1Code)(&value)
@@ -34,4 +32,3 @@ func (i *InRepairStatusReason3) AddDataSourceScheme() *GenericIdentification1 {
 func (i *InRepairStatusReason3) SetAdditionalInformation(value string) {
 	i.AdditionalInformation = (*Max350Text)(&value)
 }
-

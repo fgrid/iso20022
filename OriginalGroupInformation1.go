@@ -16,7 +16,7 @@ type OriginalGroupInformation1 struct {
 	OriginalCreationDateTime *ISODateTime `xml:"OrgnlCreDtTm,omitempty"`
 
 	// Party that sent the file for which the status has been generated.
-	// 
+	//
 	// Usage: this field will only be used when the content of the message could not be decoded at the receiving side.
 	FileOriginator *Max35Text `xml:"FileOrgtr,omitempty"`
 
@@ -34,9 +34,7 @@ type OriginalGroupInformation1 struct {
 
 	// Detailed information on the number of transactions for each identical individual transaction status.
 	NumberOfTransactionsPerStatus []*NumberOfTransactionsPerStatus1 `xml:"NbOfTxsPerSts,omitempty"`
-
 }
-
 
 func (o *OriginalGroupInformation1) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -71,14 +69,13 @@ func (o *OriginalGroupInformation1) SetGroupStatus(value string) {
 }
 
 func (o *OriginalGroupInformation1) AddStatusReasonInformation() *StatusReasonInformation1 {
-	newValue := new (StatusReasonInformation1)
+	newValue := new(StatusReasonInformation1)
 	o.StatusReasonInformation = append(o.StatusReasonInformation, newValue)
 	return newValue
 }
 
 func (o *OriginalGroupInformation1) AddNumberOfTransactionsPerStatus() *NumberOfTransactionsPerStatus1 {
-	newValue := new (NumberOfTransactionsPerStatus1)
+	newValue := new(NumberOfTransactionsPerStatus1)
 	o.NumberOfTransactionsPerStatus = append(o.NumberOfTransactionsPerStatus, newValue)
 	return newValue
 }
-

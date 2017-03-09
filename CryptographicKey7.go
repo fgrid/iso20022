@@ -41,9 +41,7 @@ type CryptographicKey7 struct {
 
 	// Reason for which the key has been stopped.
 	FailureReason *FailureReason6Code `xml:"FailrRsn,omitempty"`
-
 }
-
 
 func (c *CryptographicKey7) SetName(value string) {
 	c.Name = (*Max140Text)(&value)
@@ -96,4 +94,3 @@ func (c *CryptographicKey7) SetCurrentStatus(value string) {
 func (c *CryptographicKey7) SetFailureReason(value string) {
 	c.FailureReason = (*FailureReason6Code)(&value)
 }
-

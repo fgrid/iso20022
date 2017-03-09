@@ -7,7 +7,7 @@ import (
 )
 
 type Document02800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.028.001.01 Document"`
+	XMLName xml.Name                                     `xml:"urn:iso:std:iso:20022:tech:xsd:auth.028.001.01 Document"`
 	Message *MoneyMarketStatisticalReportStatusAdviceV01 `xml:"MnyMktSttstclRptStsAdvc"`
 }
 
@@ -27,9 +27,7 @@ type MoneyMarketStatisticalReportStatusAdviceV01 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MoneyMarketStatisticalReportStatusAdviceV01) AddStatusReportHeader() *iso20022.MoneyMarketStatusReportHeader1 {
 	m.StatusReportHeader = new(iso20022.MoneyMarketStatusReportHeader1)
@@ -37,14 +35,13 @@ func (m *MoneyMarketStatisticalReportStatusAdviceV01) AddStatusReportHeader() *i
 }
 
 func (m *MoneyMarketStatisticalReportStatusAdviceV01) AddTransactionStatus() *iso20022.MoneyMarketTransactionStatus2 {
-	newValue := new (iso20022.MoneyMarketTransactionStatus2)
+	newValue := new(iso20022.MoneyMarketTransactionStatus2)
 	m.TransactionStatus = append(m.TransactionStatus, newValue)
 	return newValue
 }
 
 func (m *MoneyMarketStatisticalReportStatusAdviceV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

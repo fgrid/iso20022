@@ -17,9 +17,7 @@ type FinancialInstitutionIdentification3 struct {
 
 	// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 	ProprietaryIdentification *GenericIdentification3 `xml:"PrtryId,omitempty"`
-
 }
-
 
 func (f *FinancialInstitutionIdentification3) SetBIC(value string) {
 	f.BIC = (*BICIdentifier)(&value)
@@ -43,4 +41,3 @@ func (f *FinancialInstitutionIdentification3) AddProprietaryIdentification() *Ge
 	f.ProprietaryIdentification = new(GenericIdentification3)
 	return f.ProprietaryIdentification
 }
-

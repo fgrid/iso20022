@@ -29,9 +29,7 @@ type MaintenanceDelegation2 struct {
 
 	// Association of the TM identifier and the MTM identifier of a POI.
 	POIIdentificationAssociation []*MaintenanceIdentificationAssociation1 `xml:"POIIdAssoctn,omitempty"`
-
 }
-
 
 func (m *MaintenanceDelegation2) AddMaintenanceService(value string) {
 	m.MaintenanceService = append(m.MaintenanceService, (*DataSetCategory6Code)(&value))
@@ -67,8 +65,7 @@ func (m *MaintenanceDelegation2) AddProtectedDelegationProof() *ContentInformati
 }
 
 func (m *MaintenanceDelegation2) AddPOIIdentificationAssociation() *MaintenanceIdentificationAssociation1 {
-	newValue := new (MaintenanceIdentificationAssociation1)
+	newValue := new(MaintenanceIdentificationAssociation1)
 	m.POIIdentificationAssociation = append(m.POIIdentificationAssociation, newValue)
 	return newValue
 }
-

@@ -14,9 +14,7 @@ type OriginalGroupInformation4 struct {
 
 	// Detailed information on the cancellation reason.
 	CancellationReasonInformation []*CancellationReasonInformation1 `xml:"CxlRsnInf,omitempty"`
-
 }
-
 
 func (o *OriginalGroupInformation4) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (o *OriginalGroupInformation4) SetOriginalCreationDateTime(value string) {
 }
 
 func (o *OriginalGroupInformation4) AddCancellationReasonInformation() *CancellationReasonInformation1 {
-	newValue := new (CancellationReasonInformation1)
+	newValue := new(CancellationReasonInformation1)
 	o.CancellationReasonInformation = append(o.CancellationReasonInformation, newValue)
 	return newValue
 }
-

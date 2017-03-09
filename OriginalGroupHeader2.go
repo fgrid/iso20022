@@ -14,9 +14,7 @@ type OriginalGroupHeader2 struct {
 
 	// Provides detailed information on the return reason.
 	ReturnReasonInformation []*PaymentReturnReason1 `xml:"RtrRsnInf,omitempty"`
-
 }
-
 
 func (o *OriginalGroupHeader2) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (o *OriginalGroupHeader2) SetOriginalCreationDateTime(value string) {
 }
 
 func (o *OriginalGroupHeader2) AddReturnReasonInformation() *PaymentReturnReason1 {
-	newValue := new (PaymentReturnReason1)
+	newValue := new(PaymentReturnReason1)
 	o.ReturnReasonInformation = append(o.ReturnReasonInformation, newValue)
 	return newValue
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document02900101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.01 Document"`
+	XMLName xml.Name                   `xml:"urn:iso:std:iso:20022:tech:xsd:camt.029.001.01 Document"`
 	Message *ResolutionOfInvestigation `xml:"camt.029.001.01"`
 }
 
@@ -50,9 +50,7 @@ type ResolutionOfInvestigation struct {
 
 	// References a transaction intitiated to fix the case under investigation.
 	CorrectionTransaction *iso20022.PaymentInstructionExtract `xml:"CrrctnTx,omitempty"`
-
 }
-
 
 func (r *ResolutionOfInvestigation) AddAssignment() *iso20022.CaseAssignment {
 	r.Assignment = new(iso20022.CaseAssignment)
@@ -73,4 +71,3 @@ func (r *ResolutionOfInvestigation) AddCorrectionTransaction() *iso20022.Payment
 	r.CorrectionTransaction = new(iso20022.PaymentInstructionExtract)
 	return r.CorrectionTransaction
 }
-

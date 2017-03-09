@@ -17,9 +17,7 @@ type Signer3 struct {
 
 	// Digital signature.
 	Signature *Max3000Binary `xml:"Sgntr"`
-
 }
-
 
 func (s *Signer3) SetVersion(value string) {
 	s.Version = (*Number)(&value)
@@ -43,4 +41,3 @@ func (s *Signer3) AddSignatureAlgorithm() *AlgorithmIdentification17 {
 func (s *Signer3) SetSignature(value string) {
 	s.Signature = (*Max3000Binary)(&value)
 }
-

@@ -8,9 +8,7 @@ type PendingReason20 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *RestrictedFINXMax210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (p *PendingReason20) AddCode() *PendingReason37Choice {
 	p.Code = new(PendingReason37Choice)
@@ -20,4 +18,3 @@ func (p *PendingReason20) AddCode() *PendingReason37Choice {
 func (p *PendingReason20) SetAdditionalReasonInformation(value string) {
 	p.AdditionalReasonInformation = (*RestrictedFINXMax210Text)(&value)
 }
-

@@ -11,9 +11,7 @@ type ATMPINManagementResponse1 struct {
 
 	// Response to the PIN management transaction.
 	Transaction *ATMTransaction10 `xml:"Tx"`
-
 }
-
 
 func (a *ATMPINManagementResponse1) AddEnvironment() *ATMEnvironment2 {
 	a.Environment = new(ATMEnvironment2)
@@ -29,4 +27,3 @@ func (a *ATMPINManagementResponse1) AddTransaction() *ATMTransaction10 {
 	a.Transaction = new(ATMTransaction10)
 	return a.Transaction
 }
-

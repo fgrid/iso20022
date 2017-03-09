@@ -8,9 +8,7 @@ type TradeDate5Choice struct {
 
 	// Date expressed as a code.
 	DateCode *TradeDateCode3Choice `xml:"DtCd"`
-
 }
-
 
 func (t *TradeDate5Choice) AddDate() *DateAndDateTimeChoice {
 	t.Date = new(DateAndDateTimeChoice)
@@ -21,4 +19,3 @@ func (t *TradeDate5Choice) AddDateCode() *TradeDateCode3Choice {
 	t.DateCode = new(TradeDateCode3Choice)
 	return t.DateCode
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01700103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.017.001.03 Document"`
+	XMLName xml.Name                           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.017.001.03 Document"`
 	Message *ForwardDataSetSubmissionReportV03 `xml:"FwdDataSetSubmissnRpt"`
 }
 
@@ -23,7 +23,7 @@ func (d *Document01700103) AddMessage() *ForwardDataSetSubmissionReportV03 {
 // The ForwardDataSetSubmission message can be sent by the matching application to forward the details of a DataSetSubmission message that it has obtained.
 type ForwardDataSetSubmissionReportV03 struct {
 
-	// Identifies the report. 
+	// Identifies the report.
 	ReportIdentification *iso20022.MessageIdentification1 `xml:"RptId"`
 
 	// Identifies the transactions that this submission relates to and provides associated information.
@@ -35,10 +35,10 @@ type ForwardDataSetSubmissionReportV03 struct {
 	// The financial institution that has submitted the data sets to the matching engine.
 	Submitter *iso20022.BICIdentification1 `xml:"Submitr"`
 
-	// The financial institution of the buyer, uniquely identified by its BIC. 
+	// The financial institution of the buyer, uniquely identified by its BIC.
 	BuyerBank *iso20022.BICIdentification1 `xml:"BuyrBk"`
 
-	// The financial institution of the seller, uniquely identified by its BIC. 
+	// The financial institution of the seller, uniquely identified by its BIC.
 	SellerBank *iso20022.BICIdentification1 `xml:"SellrBk"`
 
 	// Commercial information that has been submitted to the matching application by the other party.
@@ -58,9 +58,7 @@ type ForwardDataSetSubmissionReportV03 struct {
 
 	// Next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (f *ForwardDataSetSubmissionReportV03) AddReportIdentification() *iso20022.MessageIdentification1 {
 	f.ReportIdentification = new(iso20022.MessageIdentification1)
@@ -68,7 +66,7 @@ func (f *ForwardDataSetSubmissionReportV03) AddReportIdentification() *iso20022.
 }
 
 func (f *ForwardDataSetSubmissionReportV03) AddRelatedTransactionReferences() *iso20022.DataSetSubmissionReferences4 {
-	newValue := new (iso20022.DataSetSubmissionReferences4)
+	newValue := new(iso20022.DataSetSubmissionReferences4)
 	f.RelatedTransactionReferences = append(f.RelatedTransactionReferences, newValue)
 	return newValue
 }
@@ -109,13 +107,13 @@ func (f *ForwardDataSetSubmissionReportV03) AddInsuranceDataSet() *iso20022.Insu
 }
 
 func (f *ForwardDataSetSubmissionReportV03) AddCertificateDataSet() *iso20022.CertificateDataSet1 {
-	newValue := new (iso20022.CertificateDataSet1)
+	newValue := new(iso20022.CertificateDataSet1)
 	f.CertificateDataSet = append(f.CertificateDataSet, newValue)
 	return newValue
 }
 
 func (f *ForwardDataSetSubmissionReportV03) AddOtherCertificateDataSet() *iso20022.OtherCertificateDataSet1 {
-	newValue := new (iso20022.OtherCertificateDataSet1)
+	newValue := new(iso20022.OtherCertificateDataSet1)
 	f.OtherCertificateDataSet = append(f.OtherCertificateDataSet, newValue)
 	return newValue
 }
@@ -124,4 +122,3 @@ func (f *ForwardDataSetSubmissionReportV03) AddRequestForAction() *iso20022.Pend
 	f.RequestForAction = new(iso20022.PendingActivity2)
 	return f.RequestForAction
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document00300108 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.08 Document"`
+	XMLName xml.Name                              `xml:"urn:iso:std:iso:20022:tech:xsd:semt.003.001.08 Document"`
 	Message *SecuritiesBalanceAccountingReportV08 `xml:"SctiesBalAcctgRpt"`
 }
 
@@ -21,14 +21,14 @@ func (d *Document00300108) AddMessage() *SecuritiesBalanceAccountingReportV08 {
 // The account servicer/owner relationship may be:
 // - an accounting agent acting on behalf of an account owner, or
 // - a transfer agent acting on behalf of a fund manager or an account owner's designated agent.
-// 
+//
 // Usage
 // The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner.
-// The message can be sent either audited or un-audited and may be provided on a trade date, contractual or settlement date basis. 
+// The message can be sent either audited or un-audited and may be provided on a trade date, contractual or settlement date basis.
 // This message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, the message can be used to either specify holdings at
-// - the main account level, or, 
+// - the main account level, or,
 // - the sub-account level.
-// This message can be used to report where the financial instruments are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated. 
+// This message can be used to report where the financial instruments are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.
 // The SecuritiesBalanceAccountingReport message should not be used for trading purposes.
 // There may be one or more intermediary parties, for example, an intermediary or a concentrator between the account owner and account servicer.
 // The message may also be used to:
@@ -36,7 +36,7 @@ func (d *Document00300108) AddMessage() *SecuritiesBalanceAccountingReportV08 {
 // - provide a third party with a copy of a message for information,
 // - re-send to a third party a copy of a message for information
 // using the relevant elements in the Business Application Header.
-// 
+//
 // ISO 15022 - 20022 Coexistence
 // This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.
 type SecuritiesBalanceAccountingReportV08 struct {
@@ -70,9 +70,7 @@ type SecuritiesBalanceAccountingReportV08 struct {
 
 	// Total valuation amounts provided in another currency than the base currency of the account.
 	AlternateReportingCurrencyTotalAmounts *iso20022.TotalValueInPageAndStatement2 `xml:"AltrnRptgCcyTtlAmts,omitempty"`
-
 }
-
 
 func (s *SecuritiesBalanceAccountingReportV08) AddPagination() *iso20022.Pagination {
 	s.Pagination = new(iso20022.Pagination)
@@ -100,19 +98,19 @@ func (s *SecuritiesBalanceAccountingReportV08) AddSafekeepingAccount() *iso20022
 }
 
 func (s *SecuritiesBalanceAccountingReportV08) AddIntermediaryInformation() *iso20022.Intermediary23 {
-	newValue := new (iso20022.Intermediary23)
+	newValue := new(iso20022.Intermediary23)
 	s.IntermediaryInformation = append(s.IntermediaryInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceAccountingReportV08) AddBalanceForAccount() *iso20022.AggregateBalanceInformation26 {
-	newValue := new (iso20022.AggregateBalanceInformation26)
+	newValue := new(iso20022.AggregateBalanceInformation26)
 	s.BalanceForAccount = append(s.BalanceForAccount, newValue)
 	return newValue
 }
 
 func (s *SecuritiesBalanceAccountingReportV08) AddSubAccountDetails() *iso20022.SubAccountIdentification38 {
-	newValue := new (iso20022.SubAccountIdentification38)
+	newValue := new(iso20022.SubAccountIdentification38)
 	s.SubAccountDetails = append(s.SubAccountDetails, newValue)
 	return newValue
 }
@@ -126,4 +124,3 @@ func (s *SecuritiesBalanceAccountingReportV08) AddAlternateReportingCurrencyTota
 	s.AlternateReportingCurrencyTotalAmounts = new(iso20022.TotalValueInPageAndStatement2)
 	return s.AlternateReportingCurrencyTotalAmounts
 }
-

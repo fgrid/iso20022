@@ -11,9 +11,7 @@ type ElementIdentification3 struct {
 
 	// Contents of the element.
 	ElementValue *Max140Text `xml:"ElmtVal,omitempty"`
-
 }
-
 
 func (e *ElementIdentification3) SetElementPath(value string) {
 	e.ElementPath = (*Max350Text)(&value)
@@ -26,4 +24,3 @@ func (e *ElementIdentification3) SetElementName(value string) {
 func (e *ElementIdentification3) SetElementValue(value string) {
 	e.ElementValue = (*Max140Text)(&value)
 }
-

@@ -41,9 +41,7 @@ type FinancialInstrument48 struct {
 
 	// Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
 	RequestedSettlementDate *ISODate `xml:"ReqdSttlmDt,omitempty"`
-
 }
-
 
 func (f *FinancialInstrument48) AddIdentification() *SecurityIdentification23Choice {
 	f.Identification = new(SecurityIdentification23Choice)
@@ -102,4 +100,3 @@ func (f *FinancialInstrument48) AddDeliveringAgentDetails() *PartyIdentification
 func (f *FinancialInstrument48) SetRequestedSettlementDate(value string) {
 	f.RequestedSettlementDate = (*ISODate)(&value)
 }
-

@@ -11,9 +11,7 @@ type Account9Choice struct {
 
 	// Account to be used for taxes if different from the account for payment.
 	TaxAccount *CashAccountIdentification6Choice `xml:"TaxAcct"`
-
 }
-
 
 func (a *Account9Choice) AddCashAccount() *CashAccountIdentification6Choice {
 	a.CashAccount = new(CashAccountIdentification6Choice)
@@ -29,4 +27,3 @@ func (a *Account9Choice) AddTaxAccount() *CashAccountIdentification6Choice {
 	a.TaxAccount = new(CashAccountIdentification6Choice)
 	return a.TaxAccount
 }
-

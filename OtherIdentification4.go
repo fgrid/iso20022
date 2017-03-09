@@ -8,9 +8,7 @@ type OtherIdentification4 struct {
 
 	// Identification source
 	Type *IdentificationSource5Choice `xml:"Tp"`
-
 }
-
 
 func (o *OtherIdentification4) SetIdentification(value string) {
 	o.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (o *OtherIdentification4) AddType() *IdentificationSource5Choice {
 	o.Type = new(IdentificationSource5Choice)
 	return o.Type
 }
-

@@ -8,9 +8,7 @@ type InterestRate2Choice struct {
 
 	// Provides details about the variable rate.
 	Floating *FloatingInterestRate4 `xml:"Fltg"`
-
 }
-
 
 func (i *InterestRate2Choice) SetFixed(value string) {
 	i.Fixed = (*PercentageRate)(&value)
@@ -20,4 +18,3 @@ func (i *InterestRate2Choice) AddFloating() *FloatingInterestRate4 {
 	i.Floating = new(FloatingInterestRate4)
 	return i.Floating
 }
-

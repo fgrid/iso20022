@@ -41,9 +41,7 @@ type Vote6 struct {
 
 	// Resolution withdrawn at the meeting.
 	Withdrawn *YesNoIndicator `xml:"Wdrwn,omitempty"`
-
 }
-
 
 func (v *Vote6) SetIssuerLabel(value string) {
 	v.IssuerLabel = (*Max35Text)(&value)
@@ -96,4 +94,3 @@ func (v *Vote6) SetNoAction(value string) {
 func (v *Vote6) SetWithdrawn(value string) {
 	v.Withdrawn = (*YesNoIndicator)(&value)
 }
-

@@ -11,9 +11,7 @@ type DeliveryParameters4 struct {
 
 	// Contact person and contact information.
 	ContactPerson *ContactIdentification2 `xml:"CtctPrsn,omitempty"`
-
 }
-
 
 func (d *DeliveryParameters4) SetRegisteredAddressIndicator(value string) {
 	d.RegisteredAddressIndicator = (*YesNoIndicator)(&value)
@@ -28,4 +26,3 @@ func (d *DeliveryParameters4) AddContactPerson() *ContactIdentification2 {
 	d.ContactPerson = new(ContactIdentification2)
 	return d.ContactPerson
 }
-

@@ -23,9 +23,7 @@ type ATMAccountStatement2 struct {
 
 	// Alternative text of the statement to print or display.
 	LongText *Max256Text `xml:"LngTxt,omitempty"`
-
 }
-
 
 func (a *ATMAccountStatement2) SetTransactionDate(value string) {
 	a.TransactionDate = (*ISODate)(&value)
@@ -54,4 +52,3 @@ func (a *ATMAccountStatement2) SetCurrency(value string) {
 func (a *ATMAccountStatement2) SetLongText(value string) {
 	a.LongText = (*Max256Text)(&value)
 }
-

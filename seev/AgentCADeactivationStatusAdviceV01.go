@@ -7,7 +7,7 @@ import (
 )
 
 type Document03000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.030.001.01 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:seev.030.001.01 Document"`
 	Message *AgentCADeactivationStatusAdviceV01 `xml:"AgtCADeactvtnStsAdvc"`
 }
 
@@ -39,9 +39,7 @@ type AgentCADeactivationStatusAdviceV01 struct {
 
 	// Status of the deactivation cancellation request sent by the issuer (agent).
 	DeactivationCancellationRequestStatus *iso20022.CorporateActionDeactivationCancellationStatus1Choice `xml:"DeactvtnCxlReqSts"`
-
 }
-
 
 func (a *AgentCADeactivationStatusAdviceV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -64,7 +62,7 @@ func (a *AgentCADeactivationStatusAdviceV01) AddCorporateActionGeneralInformatio
 }
 
 func (a *AgentCADeactivationStatusAdviceV01) AddDeactivationInstructionStatus() *iso20022.CorporateActionDeactivationInstructionStatus1 {
-	newValue := new (iso20022.CorporateActionDeactivationInstructionStatus1)
+	newValue := new(iso20022.CorporateActionDeactivationInstructionStatus1)
 	a.DeactivationInstructionStatus = append(a.DeactivationInstructionStatus, newValue)
 	return newValue
 }
@@ -73,4 +71,3 @@ func (a *AgentCADeactivationStatusAdviceV01) AddDeactivationCancellationRequestS
 	a.DeactivationCancellationRequestStatus = new(iso20022.CorporateActionDeactivationCancellationStatus1Choice)
 	return a.DeactivationCancellationRequestStatus
 }
-

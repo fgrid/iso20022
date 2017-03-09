@@ -15,9 +15,7 @@ type SettlementTimeRequest2 struct {
 
 	// Time by when the payment must be settled to avoid rejection.
 	RejectTime *ISOTime `xml:"RjctTm,omitempty"`
-
 }
-
 
 func (s *SettlementTimeRequest2) SetCLSTime(value string) {
 	s.CLSTime = (*ISOTime)(&value)
@@ -34,4 +32,3 @@ func (s *SettlementTimeRequest2) SetFromTime(value string) {
 func (s *SettlementTimeRequest2) SetRejectTime(value string) {
 	s.RejectTime = (*ISOTime)(&value)
 }
-

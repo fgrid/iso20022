@@ -17,9 +17,7 @@ type BillingServicesTax1 struct {
 
 	// Amount of the tax obligation expressed in the tax region's pricing currency.
 	PricingAmount *AmountAndDirection34 `xml:"PricgAmt,omitempty"`
-
 }
-
 
 func (b *BillingServicesTax1) SetNumber(value string) {
 	b.Number = (*Max35Text)(&value)
@@ -42,4 +40,3 @@ func (b *BillingServicesTax1) AddPricingAmount() *AmountAndDirection34 {
 	b.PricingAmount = new(AmountAndDirection34)
 	return b.PricingAmount
 }
-

@@ -14,9 +14,7 @@ type AggregationTransaction1 struct {
 
 	// Individual payment that has been aggregated.
 	IndividualPayment []*DetailedAmount6 `xml:"IndvPmt,omitempty"`
-
 }
-
 
 func (a *AggregationTransaction1) SetFirstPaymentDateTime(value string) {
 	a.FirstPaymentDateTime = (*ISODateTime)(&value)
@@ -31,8 +29,7 @@ func (a *AggregationTransaction1) SetNumberOfPayments(value string) {
 }
 
 func (a *AggregationTransaction1) AddIndividualPayment() *DetailedAmount6 {
-	newValue := new (DetailedAmount6)
+	newValue := new(DetailedAmount6)
 	a.IndividualPayment = append(a.IndividualPayment, newValue)
 	return newValue
 }
-

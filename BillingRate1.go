@@ -9,18 +9,16 @@ type BillingRate1 struct {
 	// Value of the rate or factor identified in the rate identification.
 	Value *PercentageRate `xml:"Val"`
 
-	// Number of days in the statement period. 
-	// 
+	// Number of days in the statement period.
+	//
 	// Usage: Used along with DaysInYear for time dependent per annum rate value.
 	DaysInPeriod *Number `xml:"DaysInPrd,omitempty"`
 
 	// Number of days in the year.
-	// 
+	//
 	// Usage: Used along with DaysInPeriod for time dependent per annum rate value.
 	DaysInYear *Number `xml:"DaysInYr,omitempty"`
-
 }
-
 
 func (b *BillingRate1) AddIdentification() *BillingRateIdentification1Choice {
 	b.Identification = new(BillingRateIdentification1Choice)
@@ -38,4 +36,3 @@ func (b *BillingRate1) SetDaysInPeriod(value string) {
 func (b *BillingRate1) SetDaysInYear(value string) {
 	b.DaysInYear = (*Number)(&value)
 }
-

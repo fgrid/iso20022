@@ -11,9 +11,7 @@ type ReturnReasonInformation1 struct {
 
 	// Further details on the return reason.
 	AdditionalReturnReasonInformation []*Max105Text `xml:"AddtlRtrRsnInf,omitempty"`
-
 }
-
 
 func (r *ReturnReasonInformation1) AddReturnOriginator() *PartyIdentification8 {
 	r.ReturnOriginator = new(PartyIdentification8)
@@ -28,4 +26,3 @@ func (r *ReturnReasonInformation1) AddReturnReason() *ReturnReason1Choice {
 func (r *ReturnReasonInformation1) AddAdditionalReturnReasonInformation(value string) {
 	r.AdditionalReturnReasonInformation = append(r.AdditionalReturnReasonInformation, (*Max105Text)(&value))
 }
-

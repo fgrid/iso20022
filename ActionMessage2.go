@@ -14,9 +14,7 @@ type ActionMessage2 struct {
 
 	// Digital signature of the message.
 	MessageContentSignature *Max140Binary `xml:"MsgCnttSgntr,omitempty"`
-
 }
-
 
 func (a *ActionMessage2) SetMessageDestination(value string) {
 	a.MessageDestination = (*UserInterface4Code)(&value)
@@ -33,4 +31,3 @@ func (a *ActionMessage2) SetMessageContent(value string) {
 func (a *ActionMessage2) SetMessageContentSignature(value string) {
 	a.MessageContentSignature = (*Max140Binary)(&value)
 }
-

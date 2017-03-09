@@ -23,9 +23,7 @@ type ATMEnvironment2 struct {
 
 	// Sensitive data associated with the card performing the transaction.
 	PlainCardData *PlainCardData14 `xml:"PlainCardData,omitempty"`
-
 }
-
 
 func (a *ATMEnvironment2) AddAcquirer() *Acquirer7 {
 	a.Acquirer = new(Acquirer7)
@@ -61,4 +59,3 @@ func (a *ATMEnvironment2) AddPlainCardData() *PlainCardData14 {
 	a.PlainCardData = new(PlainCardData14)
 	return a.PlainCardData
 }
-

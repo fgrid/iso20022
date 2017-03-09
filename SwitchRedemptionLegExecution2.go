@@ -65,9 +65,7 @@ type SwitchRedemptionLegExecution2 struct {
 
 	// Information related to physical delivery of the securities.
 	PhysicalDeliveryDetails *DeliveryParameters3 `xml:"PhysDlvryDtls,omitempty"`
-
 }
-
 
 func (s *SwitchRedemptionLegExecution2) SetLegIdentification(value string) {
 	s.LegIdentification = (*Max35Text)(&value)
@@ -162,4 +160,3 @@ func (s *SwitchRedemptionLegExecution2) AddPhysicalDeliveryDetails() *DeliveryPa
 	s.PhysicalDeliveryDetails = new(DeliveryParameters3)
 	return s.PhysicalDeliveryDetails
 }
-

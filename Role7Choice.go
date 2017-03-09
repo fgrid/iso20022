@@ -11,9 +11,7 @@ type Role7Choice struct {
 
 	// Role of the party in the activity.
 	Text *RestrictedFINXMax350Text `xml:"Txt"`
-
 }
-
 
 func (r *Role7Choice) SetCode(value string) {
 	r.Code = (*InvestmentFundRole2Code)(&value)
@@ -27,4 +25,3 @@ func (r *Role7Choice) AddProprietary() *GenericIdentification47 {
 func (r *Role7Choice) SetText(value string) {
 	r.Text = (*RestrictedFINXMax350Text)(&value)
 }
-

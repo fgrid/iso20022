@@ -4,7 +4,7 @@ package iso20022
 type GroupHeader2 struct {
 
 	// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.
-	// 
+	//
 	// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
 	MessageIdentification *Max35Text `xml:"MsgId"`
 
@@ -37,9 +37,7 @@ type GroupHeader2 struct {
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
 	InstructedAgent *BranchAndFinancialInstitutionIdentification3 `xml:"InstdAgt,omitempty"`
-
 }
-
 
 func (g *GroupHeader2) SetMessageIdentification(value string) {
 	g.MessageIdentification = (*Max35Text)(&value)
@@ -88,4 +86,3 @@ func (g *GroupHeader2) AddInstructedAgent() *BranchAndFinancialInstitutionIdenti
 	g.InstructedAgent = new(BranchAndFinancialInstitutionIdentification3)
 	return g.InstructedAgent
 }
-

@@ -17,9 +17,7 @@ type SubBalanceInformation9 struct {
 
 	// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
 	AdditionalBalanceBreakdownDetails []*AdditionalBalanceInformation9 `xml:"AddtlBalBrkdwnDtls,omitempty"`
-
 }
-
 
 func (s *SubBalanceInformation9) AddSubBalanceType() *SubBalanceType5Choice {
 	s.SubBalanceType = new(SubBalanceType5Choice)
@@ -36,14 +34,13 @@ func (s *SubBalanceInformation9) SetSubBalanceAdditionalDetails(value string) {
 }
 
 func (s *SubBalanceInformation9) AddQuantityBreakdown() *QuantityBreakdown13 {
-	newValue := new (QuantityBreakdown13)
+	newValue := new(QuantityBreakdown13)
 	s.QuantityBreakdown = append(s.QuantityBreakdown, newValue)
 	return newValue
 }
 
 func (s *SubBalanceInformation9) AddAdditionalBalanceBreakdownDetails() *AdditionalBalanceInformation9 {
-	newValue := new (AdditionalBalanceInformation9)
+	newValue := new(AdditionalBalanceInformation9)
 	s.AdditionalBalanceBreakdownDetails = append(s.AdditionalBalanceBreakdownDetails, newValue)
 	return newValue
 }
-

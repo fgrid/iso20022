@@ -11,9 +11,7 @@ type TaxParty1 struct {
 
 	// Type of tax payer.
 	TaxType *Max35Text `xml:"TaxTp,omitempty"`
-
 }
-
 
 func (t *TaxParty1) SetTaxIdentification(value string) {
 	t.TaxIdentification = (*Max35Text)(&value)
@@ -26,4 +24,3 @@ func (t *TaxParty1) SetRegistrationIdentification(value string) {
 func (t *TaxParty1) SetTaxType(value string) {
 	t.TaxType = (*Max35Text)(&value)
 }
-

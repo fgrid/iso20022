@@ -11,9 +11,7 @@ type CorporateActionNarrative30 struct {
 
 	// Provides information required for the certification/breakdown.
 	CertificationBreakdown []*Max350Text `xml:"CertfctnBrkdwn,omitempty"`
-
 }
-
 
 func (c *CorporateActionNarrative30) AddRegistrationDetails(value string) {
 	c.RegistrationDetails = append(c.RegistrationDetails, (*Max350Text)(&value))
@@ -26,4 +24,3 @@ func (c *CorporateActionNarrative30) AddPartyContactNarrative(value string) {
 func (c *CorporateActionNarrative30) AddCertificationBreakdown(value string) {
 	c.CertificationBreakdown = append(c.CertificationBreakdown, (*Max350Text)(&value))
 }
-

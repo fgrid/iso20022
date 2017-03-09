@@ -14,9 +14,7 @@ type OriginalGroupInformation21 struct {
 
 	// Set of elements used to provide detailed information on the return reason.
 	ReturnReasonInformation []*ReturnReasonInformation9 `xml:"RtrRsnInf,omitempty"`
-
 }
-
 
 func (o *OriginalGroupInformation21) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (o *OriginalGroupInformation21) SetOriginalCreationDateTime(value string) {
 }
 
 func (o *OriginalGroupInformation21) AddReturnReasonInformation() *ReturnReasonInformation9 {
-	newValue := new (ReturnReasonInformation9)
+	newValue := new(ReturnReasonInformation9)
 	o.ReturnReasonInformation = append(o.ReturnReasonInformation, newValue)
 	return newValue
 }
-

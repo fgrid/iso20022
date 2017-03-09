@@ -14,9 +14,7 @@ type OriginalGroupHeader3 struct {
 
 	// Provides detailed information on the reversal reason.
 	ReversalReasonInformation []*PaymentReversalReason7 `xml:"RvslRsnInf,omitempty"`
-
 }
-
 
 func (o *OriginalGroupHeader3) SetOriginalMessageIdentification(value string) {
 	o.OriginalMessageIdentification = (*Max35Text)(&value)
@@ -31,8 +29,7 @@ func (o *OriginalGroupHeader3) SetOriginalCreationDateTime(value string) {
 }
 
 func (o *OriginalGroupHeader3) AddReversalReasonInformation() *PaymentReversalReason7 {
-	newValue := new (PaymentReversalReason7)
+	newValue := new(PaymentReversalReason7)
 	o.ReversalReasonInformation = append(o.ReversalReasonInformation, newValue)
 	return newValue
 }
-

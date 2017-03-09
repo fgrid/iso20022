@@ -8,9 +8,7 @@ type QuantityToQuantityRatio1 struct {
 
 	// Denominator of the quotient of quantities.
 	Quantity2 *DecimalNumber `xml:"Qty2"`
-
 }
-
 
 func (q *QuantityToQuantityRatio1) SetQuantity1(value string) {
 	q.Quantity1 = (*DecimalNumber)(&value)
@@ -19,4 +17,3 @@ func (q *QuantityToQuantityRatio1) SetQuantity1(value string) {
 func (q *QuantityToQuantityRatio1) SetQuantity2(value string) {
 	q.Quantity2 = (*DecimalNumber)(&value)
 }
-

@@ -8,9 +8,7 @@ type GenericIdentification80 struct {
 
 	// Name or number assigned by an entity to enable recognition of that entity.
 	Identification *Max35Text `xml:"Id,omitempty"`
-
 }
-
 
 func (g *GenericIdentification80) AddType() *GenericIdentification30 {
 	g.Type = new(GenericIdentification30)
@@ -20,4 +18,3 @@ func (g *GenericIdentification80) AddType() *GenericIdentification30 {
 func (g *GenericIdentification80) SetIdentification(value string) {
 	g.Identification = (*Max35Text)(&value)
 }
-

@@ -23,9 +23,7 @@ type References50Choice struct {
 
 	// Identification of a transaction that cannot be identified using a standard reference element present in the message.
 	OtherTransactionIdentification *RestrictedFINXMax16Text `xml:"OthrTxId"`
-
 }
-
 
 func (r *References50Choice) SetSecuritiesSettlementTransactionIdentification(value string) {
 	r.SecuritiesSettlementTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
@@ -54,4 +52,3 @@ func (r *References50Choice) SetPoolIdentification(value string) {
 func (r *References50Choice) SetOtherTransactionIdentification(value string) {
 	r.OtherTransactionIdentification = (*RestrictedFINXMax16Text)(&value)
 }
-

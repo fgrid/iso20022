@@ -14,9 +14,7 @@ type CardPaymentEnvironment31 struct {
 
 	// Identification of the POI (Point Of Interaction) requesting the diagnostic.
 	POIIdentification *GenericIdentification32 `xml:"POIId,omitempty"`
-
 }
-
 
 func (c *CardPaymentEnvironment31) AddAcquirer() *Acquirer2 {
 	c.Acquirer = new(Acquirer2)
@@ -36,4 +34,3 @@ func (c *CardPaymentEnvironment31) AddPOIIdentification() *GenericIdentification
 	c.POIIdentification = new(GenericIdentification32)
 	return c.POIIdentification
 }
-

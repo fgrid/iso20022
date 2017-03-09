@@ -14,9 +14,7 @@ type CorporateActionCashMovements2 struct {
 
 	// Provides information about the account which is debited/credited as a result of the movement.
 	AccountDetails []*CashAccount19 `xml:"AcctDtls"`
-
 }
-
 
 func (c *CorporateActionCashMovements2) SetPostingIdentification(value string) {
 	c.PostingIdentification = (*Max35Text)(&value)
@@ -32,8 +30,7 @@ func (c *CorporateActionCashMovements2) SetPostingAmount(value, currency string)
 }
 
 func (c *CorporateActionCashMovements2) AddAccountDetails() *CashAccount19 {
-	newValue := new (CashAccount19)
+	newValue := new(CashAccount19)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
-

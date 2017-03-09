@@ -7,7 +7,7 @@ import (
 )
 
 type Document00200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.002.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.002.001.01 Document"`
 	Message *InvoiceFinancingRequestStatusV01 `xml:"InvcFincgReqSts"`
 }
 
@@ -38,14 +38,12 @@ type InvoiceFinancingRequestStatusV01 struct {
 	StatusIdentification *iso20022.MessageIdentification1 `xml:"StsId"`
 
 	// Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.
-	// 
+	//
 	OriginalRequestInformationAndStatus *iso20022.OriginalRequestInformation1 `xml:"OrgnlReqInfAndSts"`
 
 	// Information concerning the business status of a financing request.
 	FinancingInformationAndStatus *iso20022.FinancingInformationAndStatus1 `xml:"FincgInfAndSts,omitempty"`
-
 }
-
 
 func (i *InvoiceFinancingRequestStatusV01) AddStatusIdentification() *iso20022.MessageIdentification1 {
 	i.StatusIdentification = new(iso20022.MessageIdentification1)
@@ -61,4 +59,3 @@ func (i *InvoiceFinancingRequestStatusV01) AddFinancingInformationAndStatus() *i
 	i.FinancingInformationAndStatus = new(iso20022.FinancingInformationAndStatus1)
 	return i.FinancingInformationAndStatus
 }
-

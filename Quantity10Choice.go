@@ -8,9 +8,7 @@ type Quantity10Choice struct {
 
 	// Original and current value of an asset-back instrument.
 	OriginalAndCurrentFace *OriginalAndCurrentQuantities4 `xml:"OrgnlAndCurFace"`
-
 }
-
 
 func (q *Quantity10Choice) AddQuantity() *FinancialInstrumentQuantity15Choice {
 	q.Quantity = new(FinancialInstrumentQuantity15Choice)
@@ -21,4 +19,3 @@ func (q *Quantity10Choice) AddOriginalAndCurrentFace() *OriginalAndCurrentQuanti
 	q.OriginalAndCurrentFace = new(OriginalAndCurrentQuantities4)
 	return q.OriginalAndCurrentFace
 }
-

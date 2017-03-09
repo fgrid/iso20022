@@ -20,9 +20,7 @@ type CardPaymentDataSet1 struct {
 
 	// Set of transaction to capture.
 	TransactionToCapture []*CardPaymentDataSetTransaction1 `xml:"TxToCaptr,omitempty"`
-
 }
-
 
 func (c *CardPaymentDataSet1) AddDataSetIdentification() *DataSetIdentification1 {
 	c.DataSetIdentification = new(DataSetIdentification1)
@@ -30,7 +28,7 @@ func (c *CardPaymentDataSet1) AddDataSetIdentification() *DataSetIdentification1
 }
 
 func (c *CardPaymentDataSet1) AddTraceability() *Traceability1 {
-	newValue := new (Traceability1)
+	newValue := new(Traceability1)
 	c.Traceability = append(c.Traceability, newValue)
 	return newValue
 }
@@ -41,7 +39,7 @@ func (c *CardPaymentDataSet1) AddDataSetInitiator() *GenericIdentification32 {
 }
 
 func (c *CardPaymentDataSet1) AddTransactionTotals() *TransactionTotals1 {
-	newValue := new (TransactionTotals1)
+	newValue := new(TransactionTotals1)
 	c.TransactionTotals = append(c.TransactionTotals, newValue)
 	return newValue
 }
@@ -52,8 +50,7 @@ func (c *CardPaymentDataSet1) AddCommonData() *CommonData1 {
 }
 
 func (c *CardPaymentDataSet1) AddTransactionToCapture() *CardPaymentDataSetTransaction1 {
-	newValue := new (CardPaymentDataSetTransaction1)
+	newValue := new(CardPaymentDataSetTransaction1)
 	c.TransactionToCapture = append(c.TransactionToCapture, newValue)
 	return newValue
 }
-

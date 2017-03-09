@@ -19,7 +19,7 @@ type SecuritiesTradeDetails58 struct {
 	EffectiveSettlementDate *SettlementDate14Choice `xml:"FctvSttlmDt"`
 
 	// Specifies the price of the traded financial instrument.
-	// This is the deal price of the individual trade transaction. 
+	// This is the deal price of the individual trade transaction.
 	// If there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).
 	DealPrice *Price3 `xml:"DealPric,omitempty"`
 
@@ -43,9 +43,7 @@ type SecuritiesTradeDetails58 struct {
 
 	// Provides additional details pertaining to foreign exchange instructions.
 	FXAdditionalDetails *RestrictedFINXMax350Text `xml:"FxAddtlDtls,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails58) AddPlaceOfTrade() *PlaceOfTradeIdentification2 {
 	s.PlaceOfTrade = new(PlaceOfTradeIdentification2)
@@ -78,7 +76,7 @@ func (s *SecuritiesTradeDetails58) AddDealPrice() *Price3 {
 }
 
 func (s *SecuritiesTradeDetails58) AddReporting() *Reporting9Choice {
-	newValue := new (Reporting9Choice)
+	newValue := new(Reporting9Choice)
 	s.Reporting = append(s.Reporting, newValue)
 	return newValue
 }
@@ -88,7 +86,7 @@ func (s *SecuritiesTradeDetails58) SetNumberOfDaysAccrued(value string) {
 }
 
 func (s *SecuritiesTradeDetails58) AddTradeTransactionCondition() *TradeTransactionCondition6Choice {
-	newValue := new (TradeTransactionCondition6Choice)
+	newValue := new(TradeTransactionCondition6Choice)
 	s.TradeTransactionCondition = append(s.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -110,4 +108,3 @@ func (s *SecuritiesTradeDetails58) SetSettlementInstructionProcessingAdditionalD
 func (s *SecuritiesTradeDetails58) SetFXAdditionalDetails(value string) {
 	s.FXAdditionalDetails = (*RestrictedFINXMax350Text)(&value)
 }
-

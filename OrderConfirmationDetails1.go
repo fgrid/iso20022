@@ -14,9 +14,7 @@ type OrderConfirmationDetails1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (o *OrderConfirmationDetails1) SetAmendmentIndicator(value string) {
 	o.AmendmentIndicator = (*YesNoIndicator)(&value)
@@ -28,14 +26,13 @@ func (o *OrderConfirmationDetails1) AddBulkExecutionDetails() *RedemptionBulkExe
 }
 
 func (o *OrderConfirmationDetails1) AddRelatedPartyDetails() *Intermediary9 {
-	newValue := new (Intermediary9)
+	newValue := new(Intermediary9)
 	o.RelatedPartyDetails = append(o.RelatedPartyDetails, newValue)
 	return newValue
 }
 
 func (o *OrderConfirmationDetails1) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	o.Extension = append(o.Extension, newValue)
 	return newValue
 }
-

@@ -11,9 +11,7 @@ type BranchData struct {
 
 	// Information that locates and identifies a specific address, as defined by postal services.
 	PostalAddress *PostalAddress1 `xml:"PstlAdr,omitempty"`
-
 }
-
 
 func (b *BranchData) SetIdentification(value string) {
 	b.Identification = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (b *BranchData) AddPostalAddress() *PostalAddress1 {
 	b.PostalAddress = new(PostalAddress1)
 	return b.PostalAddress
 }
-

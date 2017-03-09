@@ -7,7 +7,7 @@ import (
 )
 
 type Document00800101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.008.001.01 Document"`
+	XMLName xml.Name                          `xml:"urn:iso:std:iso:20022:tech:xsd:tsin.008.001.01 Document"`
 	Message *InvoiceAssignmentNotificationV01 `xml:"InvcAssgnmtNtfctn"`
 }
 
@@ -41,9 +41,7 @@ type InvoiceAssignmentNotificationV01 struct {
 
 	// Referenced or related business message.
 	AttachedMessage []*iso20022.EncapsulatedBusinessMessage1 `xml:"AttchdMsg,omitempty"`
-
 }
-
 
 func (i *InvoiceAssignmentNotificationV01) AddHeader() *iso20022.BusinessLetter1 {
 	i.Header = new(iso20022.BusinessLetter1)
@@ -51,7 +49,7 @@ func (i *InvoiceAssignmentNotificationV01) AddHeader() *iso20022.BusinessLetter1
 }
 
 func (i *InvoiceAssignmentNotificationV01) AddNotificationList() *iso20022.FinancingItemList1 {
-	newValue := new (iso20022.FinancingItemList1)
+	newValue := new(iso20022.FinancingItemList1)
 	i.NotificationList = append(i.NotificationList, newValue)
 	return newValue
 }
@@ -69,8 +67,7 @@ func (i *InvoiceAssignmentNotificationV01) SetControlSum(value string) {
 }
 
 func (i *InvoiceAssignmentNotificationV01) AddAttachedMessage() *iso20022.EncapsulatedBusinessMessage1 {
-	newValue := new (iso20022.EncapsulatedBusinessMessage1)
+	newValue := new(iso20022.EncapsulatedBusinessMessage1)
 	i.AttachedMessage = append(i.AttachedMessage, newValue)
 	return newValue
 }
-

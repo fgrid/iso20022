@@ -14,9 +14,7 @@ type KEKIdentifier3 struct {
 
 	// Value to check the key, for instance, result of the encryption of the null binary string.
 	KeyCheckValue *Max35Binary `xml:"KeyChckVal,omitempty"`
-
 }
-
 
 func (k *KEKIdentifier3) SetName(value string) {
 	k.Name = (*Max140Text)(&value)
@@ -33,4 +31,3 @@ func (k *KEKIdentifier3) SetVersion(value string) {
 func (k *KEKIdentifier3) SetKeyCheckValue(value string) {
 	k.KeyCheckValue = (*Max35Binary)(&value)
 }
-

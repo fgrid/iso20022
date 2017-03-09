@@ -8,19 +8,16 @@ type CashSettlement1 struct {
 
 	// Method of payment other than a cash account.
 	OtherCashSettlementDetails []*PaymentInstrument13 `xml:"OthrCshSttlmDtls,omitempty"`
-
 }
 
-
 func (c *CashSettlement1) AddCashAccountDetails() *CashAccount33 {
-	newValue := new (CashAccount33)
+	newValue := new(CashAccount33)
 	c.CashAccountDetails = append(c.CashAccountDetails, newValue)
 	return newValue
 }
 
 func (c *CashSettlement1) AddOtherCashSettlementDetails() *PaymentInstrument13 {
-	newValue := new (PaymentInstrument13)
+	newValue := new(PaymentInstrument13)
 	c.OtherCashSettlementDetails = append(c.OtherCashSettlementDetails, newValue)
 	return newValue
 }
-

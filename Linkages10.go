@@ -14,9 +14,7 @@ type Linkages10 struct {
 
 	// Party that generates the reference.
 	ReferenceOwner *PartyIdentification36Choice `xml:"RefOwnr,omitempty"`
-
 }
-
 
 func (l *Linkages10) AddProcessingPosition() *ProcessingPosition2Choice {
 	l.ProcessingPosition = new(ProcessingPosition2Choice)
@@ -37,4 +35,3 @@ func (l *Linkages10) AddReferenceOwner() *PartyIdentification36Choice {
 	l.ReferenceOwner = new(PartyIdentification36Choice)
 	return l.ReferenceOwner
 }
-

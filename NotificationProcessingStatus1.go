@@ -8,9 +8,7 @@ type NotificationProcessingStatus1 struct {
 
 	// Additional information about the status.
 	AdditionalInformation *Max350Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (n *NotificationProcessingStatus1) AddStatus() *ProcessedStatus1FormatChoice {
 	n.Status = new(ProcessedStatus1FormatChoice)
@@ -20,4 +18,3 @@ func (n *NotificationProcessingStatus1) AddStatus() *ProcessedStatus1FormatChoic
 func (n *NotificationProcessingStatus1) SetAdditionalInformation(value string) {
 	n.AdditionalInformation = (*Max350Text)(&value)
 }
-

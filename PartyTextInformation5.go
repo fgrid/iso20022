@@ -8,9 +8,7 @@ type PartyTextInformation5 struct {
 
 	// Provides additional information regarding the party, eg, the contact unit or person responsible for the transaction identified in the message.
 	PartyContactDetails *Max140Text `xml:"PtyCtctDtls,omitempty"`
-
 }
-
 
 func (p *PartyTextInformation5) SetDeclarationDetails(value string) {
 	p.DeclarationDetails = (*Max350Text)(&value)
@@ -19,4 +17,3 @@ func (p *PartyTextInformation5) SetDeclarationDetails(value string) {
 func (p *PartyTextInformation5) SetPartyContactDetails(value string) {
 	p.PartyContactDetails = (*Max140Text)(&value)
 }
-

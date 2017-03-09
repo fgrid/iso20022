@@ -8,9 +8,7 @@ type SecurityIdentification11Choice struct {
 
 	// Identification of a security by proprietary or domestic identification scheme.
 	OtherIdentification *AlternateIdentification1 `xml:"OthrId"`
-
 }
-
 
 func (s *SecurityIdentification11Choice) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -20,4 +18,3 @@ func (s *SecurityIdentification11Choice) AddOtherIdentification() *AlternateIden
 	s.OtherIdentification = new(AlternateIdentification1)
 	return s.OtherIdentification
 }
-

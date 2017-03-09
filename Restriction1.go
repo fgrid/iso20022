@@ -11,9 +11,7 @@ type Restriction1 struct {
 
 	// Date until when the restriction is valid.
 	ValidUntil *ISODateTime `xml:"VldUntil,omitempty"`
-
 }
-
 
 func (r *Restriction1) AddRestrictionType() *CodeOrProprietary1Choice {
 	r.RestrictionType = new(CodeOrProprietary1Choice)
@@ -27,4 +25,3 @@ func (r *Restriction1) SetValidFrom(value string) {
 func (r *Restriction1) SetValidUntil(value string) {
 	r.ValidUntil = (*ISODateTime)(&value)
 }
-

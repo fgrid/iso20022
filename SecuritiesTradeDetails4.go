@@ -49,7 +49,7 @@ type SecuritiesTradeDetails4 struct {
 	LateDeliveryDate *DateAndDateTimeChoice `xml:"LateDlvryDt,omitempty"`
 
 	// Specifies the price of the traded financial instrument.
-	// This is the deal price of the individual trade transaction. 
+	// This is the deal price of the individual trade transaction.
 	// If there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).
 	DealPrice *Price2 `xml:"DealPric,omitempty"`
 
@@ -103,9 +103,7 @@ type SecuritiesTradeDetails4 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension2 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (s *SecuritiesTradeDetails4) SetAccountOwnerTransactionIdentification(value string) {
 	s.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -192,7 +190,7 @@ func (s *SecuritiesTradeDetails4) AddFinancialInstrumentAttributes() *FinancialI
 }
 
 func (s *SecuritiesTradeDetails4) AddTradeTransactionCondition() *TradeTransactionCondition1Choice {
-	newValue := new (TradeTransactionCondition1Choice)
+	newValue := new(TradeTransactionCondition1Choice)
 	s.TradeTransactionCondition = append(s.TradeTransactionCondition, newValue)
 	return newValue
 }
@@ -208,7 +206,7 @@ func (s *SecuritiesTradeDetails4) AddTypeOfPrice() *TypeOfPrice3Choice {
 }
 
 func (s *SecuritiesTradeDetails4) AddReporting() *Reporting1Choice {
-	newValue := new (Reporting1Choice)
+	newValue := new(Reporting1Choice)
 	s.Reporting = append(s.Reporting, newValue)
 	return newValue
 }
@@ -259,8 +257,7 @@ func (s *SecuritiesTradeDetails4) AddOtherBusinessParties() *OtherParties3 {
 }
 
 func (s *SecuritiesTradeDetails4) AddExtension() *Extension2 {
-	newValue := new (Extension2)
+	newValue := new(Extension2)
 	s.Extension = append(s.Extension, newValue)
 	return newValue
 }
-

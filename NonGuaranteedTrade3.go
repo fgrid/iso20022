@@ -14,9 +14,7 @@ type NonGuaranteedTrade3 struct {
 
 	// Provides details about the receiving parties involved in the settlement chain.
 	ReceivingParties *ReceivingPartiesAndAccount11 `xml:"RcvgPties,omitempty"`
-
 }
-
 
 func (n *NonGuaranteedTrade3) AddTradeCounterpartyMemberIdentification() *PartyIdentification35Choice {
 	n.TradeCounterpartyMemberIdentification = new(PartyIdentification35Choice)
@@ -37,4 +35,3 @@ func (n *NonGuaranteedTrade3) AddReceivingParties() *ReceivingPartiesAndAccount1
 	n.ReceivingParties = new(ReceivingPartiesAndAccount11)
 	return n.ReceivingParties
 }
-

@@ -41,12 +41,10 @@ type InvestmentAccount54 struct {
 
 	// Chain of parties involved in the settlement of a transaction.
 	SettlementPartiesDetails *DeliveringPartiesAndAccount14 `xml:"SttlmPtiesDtls,omitempty"`
-
 }
 
-
 func (i *InvestmentAccount54) AddOwnerIdentification() *PartyIdentification70Choice {
-	newValue := new (PartyIdentification70Choice)
+	newValue := new(PartyIdentification70Choice)
 	i.OwnerIdentification = append(i.OwnerIdentification, newValue)
 	return newValue
 }
@@ -64,7 +62,7 @@ func (i *InvestmentAccount54) SetAccountDesignation(value string) {
 }
 
 func (i *InvestmentAccount54) AddIntermediaryInformation() *Intermediary34 {
-	newValue := new (Intermediary34)
+	newValue := new(Intermediary34)
 	i.IntermediaryInformation = append(i.IntermediaryInformation, newValue)
 	return newValue
 }
@@ -104,4 +102,3 @@ func (i *InvestmentAccount54) AddSettlementPartiesDetails() *DeliveringPartiesAn
 	i.SettlementPartiesDetails = new(DeliveringPartiesAndAccount14)
 	return i.SettlementPartiesDetails
 }
-

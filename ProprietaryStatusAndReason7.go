@@ -8,9 +8,7 @@ type ProprietaryStatusAndReason7 struct {
 
 	// Proprietary identification of the reason related to a proprietary status.
 	ProprietaryReason []*ProprietaryReason5 `xml:"PrtryRsn,omitempty"`
-
 }
-
 
 func (p *ProprietaryStatusAndReason7) AddProprietaryStatus() *GenericIdentification47 {
 	p.ProprietaryStatus = new(GenericIdentification47)
@@ -18,8 +16,7 @@ func (p *ProprietaryStatusAndReason7) AddProprietaryStatus() *GenericIdentificat
 }
 
 func (p *ProprietaryStatusAndReason7) AddProprietaryReason() *ProprietaryReason5 {
-	newValue := new (ProprietaryReason5)
+	newValue := new(ProprietaryReason5)
 	p.ProprietaryReason = append(p.ProprietaryReason, newValue)
 	return newValue
 }
-

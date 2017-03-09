@@ -23,9 +23,7 @@ type CardTransactionEnvironment2 struct {
 
 	// Postal address for delivery of goods or services.
 	ShippingAddress *PostalAddress18 `xml:"ShppgAdr,omitempty"`
-
 }
-
 
 func (c *CardTransactionEnvironment2) SetAcquirerIdentification(value string) {
 	c.AcquirerIdentification = (*Max35Text)(&value)
@@ -57,4 +55,3 @@ func (c *CardTransactionEnvironment2) AddShippingAddress() *PostalAddress18 {
 	c.ShippingAddress = new(PostalAddress18)
 	return c.ShippingAddress
 }
-

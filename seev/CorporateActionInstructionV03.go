@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.033.001.03 Document"`
+	XMLName xml.Name                       `xml:"urn:iso:std:iso:20022:tech:xsd:seev.033.001.03 Document"`
 	Message *CorporateActionInstructionV03 `xml:"CorpActnInstr"`
 }
 
@@ -61,9 +61,7 @@ type CorporateActionInstructionV03 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionV03) SetChangeInstructionIndicator(value string) {
 	c.ChangeInstructionIndicator = (*iso20022.YesNoIndicator)(&value)
@@ -80,13 +78,13 @@ func (c *CorporateActionInstructionV03) AddInstructionCancellationRequestIdentif
 }
 
 func (c *CorporateActionInstructionV03) AddOtherDocumentIdentification() *iso20022.DocumentIdentification13 {
-	newValue := new (iso20022.DocumentIdentification13)
+	newValue := new(iso20022.DocumentIdentification13)
 	c.OtherDocumentIdentification = append(c.OtherDocumentIdentification, newValue)
 	return newValue
 }
 
 func (c *CorporateActionInstructionV03) AddEventsLinkage() *iso20022.CorporateActionEventReference1 {
-	newValue := new (iso20022.CorporateActionEventReference1)
+	newValue := new(iso20022.CorporateActionEventReference1)
 	c.EventsLinkage = append(c.EventsLinkage, newValue)
 	return newValue
 }
@@ -102,7 +100,7 @@ func (c *CorporateActionInstructionV03) AddAccountDetails() *iso20022.AccountAnd
 }
 
 func (c *CorporateActionInstructionV03) AddBeneficialOwnerDetails() *iso20022.PartyIdentification56 {
-	newValue := new (iso20022.PartyIdentification56)
+	newValue := new(iso20022.PartyIdentification56)
 	c.BeneficialOwnerDetails = append(c.BeneficialOwnerDetails, newValue)
 	return newValue
 }
@@ -118,8 +116,7 @@ func (c *CorporateActionInstructionV03) AddAdditionalInformation() *iso20022.Cor
 }
 
 func (c *CorporateActionInstructionV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

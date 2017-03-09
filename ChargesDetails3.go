@@ -8,9 +8,7 @@ type ChargesDetails3 struct {
 
 	// Specifies if it is a fixed amount or a percentage.
 	AmountOrPercentage *AmountOrPercentage2Choice `xml:"AmtOrPctg"`
-
 }
-
 
 func (c *ChargesDetails3) AddType() *ChargesType1Choice {
 	c.Type = new(ChargesType1Choice)
@@ -21,4 +19,3 @@ func (c *ChargesDetails3) AddAmountOrPercentage() *AmountOrPercentage2Choice {
 	c.AmountOrPercentage = new(AmountOrPercentage2Choice)
 	return c.AmountOrPercentage
 }
-

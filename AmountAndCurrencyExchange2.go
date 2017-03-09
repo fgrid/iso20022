@@ -13,16 +13,14 @@ type AmountAndCurrencyExchange2 struct {
 	CounterValueAmount *AmountAndCurrencyExchangeDetails1 `xml:"CntrValAmt,omitempty"`
 
 	// Information on the amount of money, based on terms of corporate action event and balance of underlying securities, entitled to/from the account owner.
-	// 
+	//
 	// Amount of money, based on terms of corporate action event and balance of underlying securities, entitled to/from the account owner.
 	// In those situations, this amount may alternatively be called entitled amount.
 	AnnouncedPostingAmount *AmountAndCurrencyExchangeDetails1 `xml:"AnncdPstngAmt,omitempty"`
 
 	// Provides proprietary amount information.
 	ProprietaryAmount []*AmountAndCurrencyExchangeDetails2 `xml:"PrtryAmt,omitempty"`
-
 }
-
 
 func (a *AmountAndCurrencyExchange2) AddInstructedAmount() *AmountAndCurrencyExchangeDetails1 {
 	a.InstructedAmount = new(AmountAndCurrencyExchangeDetails1)
@@ -45,8 +43,7 @@ func (a *AmountAndCurrencyExchange2) AddAnnouncedPostingAmount() *AmountAndCurre
 }
 
 func (a *AmountAndCurrencyExchange2) AddProprietaryAmount() *AmountAndCurrencyExchangeDetails2 {
-	newValue := new (AmountAndCurrencyExchangeDetails2)
+	newValue := new(AmountAndCurrencyExchangeDetails2)
 	a.ProprietaryAmount = append(a.ProprietaryAmount, newValue)
 	return newValue
 }
-

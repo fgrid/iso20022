@@ -11,9 +11,7 @@ type FinancialInstitutionIdentification6 struct {
 
 	// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 "Banking - Banking telecommunication messages - Business identifier code (BIC)".
 	BIC *BICIdentifier `xml:"BIC,omitempty"`
-
 }
-
 
 func (f *FinancialInstitutionIdentification6) AddClearingSystemMemberIdentification() *ClearingSystemMemberIdentification2Choice {
 	f.ClearingSystemMemberIdentification = new(ClearingSystemMemberIdentification2Choice)
@@ -28,4 +26,3 @@ func (f *FinancialInstitutionIdentification6) AddProprietaryIdentification() *Ge
 func (f *FinancialInstitutionIdentification6) SetBIC(value string) {
 	f.BIC = (*BICIdentifier)(&value)
 }
-

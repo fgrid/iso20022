@@ -10,12 +10,10 @@ type StatusReasonInformation1 struct {
 	StatusReason *StatusReason1Choice `xml:"StsRsn,omitempty"`
 
 	// Further details on the status reason.
-	// 
+	//
 	// Usage: Additional information can be used for several purposes, e.g. to report repaired information, or to further detail the status reason.
 	AdditionalStatusReasonInformation []*Max105Text `xml:"AddtlStsRsnInf,omitempty"`
-
 }
-
 
 func (s *StatusReasonInformation1) AddStatusOriginator() *PartyIdentification8 {
 	s.StatusOriginator = new(PartyIdentification8)
@@ -30,4 +28,3 @@ func (s *StatusReasonInformation1) AddStatusReason() *StatusReason1Choice {
 func (s *StatusReasonInformation1) AddAdditionalStatusReasonInformation(value string) {
 	s.AdditionalStatusReasonInformation = append(s.AdditionalStatusReasonInformation, (*Max105Text)(&value))
 }
-

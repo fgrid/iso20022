@@ -23,7 +23,7 @@ type PaymentTransaction33 struct {
 	StatusReasonInformation []*StatusReasonInformation9 `xml:"StsRsnInf,omitempty"`
 
 	// Provides information on the charges related to the processing of the rejection of the instruction.
-	// 
+	//
 	// Usage: This is passed on for information purposes only. Settlement of the charges will be done separately.
 	ChargesInformation []*Charges2 `xml:"ChrgsInf,omitempty"`
 
@@ -37,20 +37,18 @@ type PaymentTransaction33 struct {
 	ClearingSystemReference *Max35Text `xml:"ClrSysRef,omitempty"`
 
 	// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructing agent is the party sending the status message and not the party that sent the original instruction that is being reported on.
 	InstructingAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstgAgt,omitempty"`
 
 	// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-	// 
+	//
 	// Usage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.
 	InstructedAgent *BranchAndFinancialInstitutionIdentification5 `xml:"InstdAgt,omitempty"`
 
 	// Key elements used to identify the original transaction that is being referred to.
 	OriginalTransactionReference *OriginalTransactionReference16 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransaction33) SetStatusIdentification(value string) {
 	p.StatusIdentification = (*Max35Text)(&value)
@@ -73,13 +71,13 @@ func (p *PaymentTransaction33) SetTransactionStatus(value string) {
 }
 
 func (p *PaymentTransaction33) AddStatusReasonInformation() *StatusReasonInformation9 {
-	newValue := new (StatusReasonInformation9)
+	newValue := new(StatusReasonInformation9)
 	p.StatusReasonInformation = append(p.StatusReasonInformation, newValue)
 	return newValue
 }
 
 func (p *PaymentTransaction33) AddChargesInformation() *Charges2 {
-	newValue := new (Charges2)
+	newValue := new(Charges2)
 	p.ChargesInformation = append(p.ChargesInformation, newValue)
 	return newValue
 }
@@ -110,4 +108,3 @@ func (p *PaymentTransaction33) AddOriginalTransactionReference() *OriginalTransa
 	p.OriginalTransactionReference = new(OriginalTransactionReference16)
 	return p.OriginalTransactionReference
 }
-

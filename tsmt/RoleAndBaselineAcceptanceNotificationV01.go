@@ -7,7 +7,7 @@ import (
 )
 
 type Document05100101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.051.001.01 Document"`
+	XMLName xml.Name                                  `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.051.001.01 Document"`
 	Message *RoleAndBaselineAcceptanceNotificationV01 `xml:"RoleAndBaselnAccptncNtfctn"`
 }
 
@@ -27,10 +27,10 @@ type RoleAndBaselineAcceptanceNotificationV01 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
-	// Unique identification assigned by the matching application to the baseline when it is established. 
+	// Unique identification assigned by the matching application to the baseline when it is established.
 	EstablishedBaselineIdentification *iso20022.DocumentIdentification3 `xml:"EstblishdBaselnId,omitempty"`
 
 	// Identifies the status of the transaction by means of a code.
@@ -44,9 +44,7 @@ type RoleAndBaselineAcceptanceNotificationV01 struct {
 
 	// Information on the next processing step required.
 	RequestForAction *iso20022.PendingActivity2 `xml:"ReqForActn,omitempty"`
-
 }
-
 
 func (r *RoleAndBaselineAcceptanceNotificationV01) AddNotificationIdentification() *iso20022.MessageIdentification1 {
 	r.NotificationIdentification = new(iso20022.MessageIdentification1)
@@ -69,7 +67,7 @@ func (r *RoleAndBaselineAcceptanceNotificationV01) AddTransactionStatus() *iso20
 }
 
 func (r *RoleAndBaselineAcceptanceNotificationV01) AddUserTransactionReference() *iso20022.DocumentIdentification5 {
-	newValue := new (iso20022.DocumentIdentification5)
+	newValue := new(iso20022.DocumentIdentification5)
 	r.UserTransactionReference = append(r.UserTransactionReference, newValue)
 	return newValue
 }
@@ -83,4 +81,3 @@ func (r *RoleAndBaselineAcceptanceNotificationV01) AddRequestForAction() *iso200
 	r.RequestForAction = new(iso20022.PendingActivity2)
 	return r.RequestForAction
 }
-

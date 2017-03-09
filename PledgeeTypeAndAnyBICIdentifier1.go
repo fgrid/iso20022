@@ -8,9 +8,7 @@ type PledgeeTypeAndAnyBICIdentifier1 struct {
 
 	// Entity to which the financial instruments are pledged expressed as a code.
 	PledgeeType *PledgeeType1Code `xml:"PldgeeTp"`
-
 }
-
 
 func (p *PledgeeTypeAndAnyBICIdentifier1) SetIdentification(value string) {
 	p.Identification = (*AnyBICIdentifier)(&value)
@@ -19,4 +17,3 @@ func (p *PledgeeTypeAndAnyBICIdentifier1) SetIdentification(value string) {
 func (p *PledgeeTypeAndAnyBICIdentifier1) SetPledgeeType(value string) {
 	p.PledgeeType = (*PledgeeType1Code)(&value)
 }
-

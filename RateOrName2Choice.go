@@ -8,9 +8,7 @@ type RateOrName2Choice struct {
 
 	// Pricing expressed as a rate name.
 	RateName *RateName2 `xml:"RateNm"`
-
 }
-
 
 func (r *RateOrName2Choice) AddRate() *Rate2 {
 	r.Rate = new(Rate2)
@@ -21,4 +19,3 @@ func (r *RateOrName2Choice) AddRateName() *RateName2 {
 	r.RateName = new(RateName2)
 	return r.RateName
 }
-

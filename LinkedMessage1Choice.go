@@ -11,9 +11,7 @@ type LinkedMessage1Choice struct {
 
 	// Linked related reference.
 	RelatedReference *AdditionalReference3 `xml:"RltdRef"`
-
 }
-
 
 func (l *LinkedMessage1Choice) AddPreviousReference() *AdditionalReference3 {
 	l.PreviousReference = new(AdditionalReference3)
@@ -29,4 +27,3 @@ func (l *LinkedMessage1Choice) AddRelatedReference() *AdditionalReference3 {
 	l.RelatedReference = new(AdditionalReference3)
 	return l.RelatedReference
 }
-

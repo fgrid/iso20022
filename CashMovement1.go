@@ -17,9 +17,7 @@ type CashMovement1 struct {
 
 	// Provides information about the account which is debited/credited.
 	AccountDetails []*CashAccount18 `xml:"AcctDtls"`
-
 }
-
 
 func (c *CashMovement1) SetMovementIdentification(value string) {
 	c.MovementIdentification = (*Max35Text)(&value)
@@ -34,14 +32,13 @@ func (c *CashMovement1) SetTaxAmount(value, currency string) {
 }
 
 func (c *CashMovement1) AddCharges() *Charges1 {
-	newValue := new (Charges1)
+	newValue := new(Charges1)
 	c.Charges = append(c.Charges, newValue)
 	return newValue
 }
 
 func (c *CashMovement1) AddAccountDetails() *CashAccount18 {
-	newValue := new (CashAccount18)
+	newValue := new(CashAccount18)
 	c.AccountDetails = append(c.AccountDetails, newValue)
 	return newValue
 }
-

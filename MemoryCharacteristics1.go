@@ -14,9 +14,7 @@ type MemoryCharacteristics1 struct {
 
 	// Memory unit of the sizes.
 	Unit *MemoryUnit1Code `xml:"Unit"`
-
 }
-
 
 func (m *MemoryCharacteristics1) SetIdentification(value string) {
 	m.Identification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (m *MemoryCharacteristics1) SetFreeSize(value string) {
 func (m *MemoryCharacteristics1) SetUnit(value string) {
 	m.Unit = (*MemoryUnit1Code)(&value)
 }
-

@@ -35,9 +35,7 @@ type AmendmentInformationDetails10 struct {
 
 	// Original reason for the mandate to allow the user to distinguish between different mandates for the same creditor.
 	OriginalReason *MandateSetupReason1Choice `xml:"OrgnlRsn,omitempty"`
-
 }
-
 
 func (a *AmendmentInformationDetails10) SetOriginalMandateIdentification(value string) {
 	a.OriginalMandateIdentification = (*Max35Text)(&value)
@@ -91,4 +89,3 @@ func (a *AmendmentInformationDetails10) AddOriginalReason() *MandateSetupReason1
 	a.OriginalReason = new(MandateSetupReason1Choice)
 	return a.OriginalReason
 }
-

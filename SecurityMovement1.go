@@ -14,9 +14,7 @@ type SecurityMovement1 struct {
 
 	// Provides information about the account which is debited/credited.
 	AccountDetails []*SecuritiesAccount12 `xml:"AcctDtls"`
-
 }
-
 
 func (s *SecurityMovement1) SetMovementIdentification(value string) {
 	s.MovementIdentification = (*Max35Text)(&value)
@@ -33,8 +31,7 @@ func (s *SecurityMovement1) AddSecuritiesQuantity() *UnitOrFaceAmount1Choice {
 }
 
 func (s *SecurityMovement1) AddAccountDetails() *SecuritiesAccount12 {
-	newValue := new (SecuritiesAccount12)
+	newValue := new(SecuritiesAccount12)
 	s.AccountDetails = append(s.AccountDetails, newValue)
 	return newValue
 }
-

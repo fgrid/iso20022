@@ -17,9 +17,7 @@ type ImpliedCurrencyAmountRangeChoice struct {
 
 	// Value that an amount must not match to be considered valid.
 	NotEqualAmount *ImpliedCurrencyAndAmount `xml:"NEQAmt"`
-
 }
-
 
 func (i *ImpliedCurrencyAmountRangeChoice) AddFromAmount() *AmountRangeBoundary1 {
 	i.FromAmount = new(AmountRangeBoundary1)
@@ -43,4 +41,3 @@ func (i *ImpliedCurrencyAmountRangeChoice) SetEqualAmount(value, currency string
 func (i *ImpliedCurrencyAmountRangeChoice) SetNotEqualAmount(value, currency string) {
 	i.NotEqualAmount = NewImpliedCurrencyAndAmount(value, currency)
 }
-

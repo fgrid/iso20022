@@ -8,9 +8,7 @@ type MarketTypeFormat1Choice struct {
 
 	// Proprietary identification of the type of market in which transactions take place.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (m *MarketTypeFormat1Choice) SetCode(value string) {
 	m.Code = (*MarketType3Code)(&value)
@@ -20,4 +18,3 @@ func (m *MarketTypeFormat1Choice) AddProprietary() *GenericIdentification20 {
 	m.Proprietary = new(GenericIdentification20)
 	return m.Proprietary
 }
-

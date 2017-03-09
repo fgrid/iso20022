@@ -4,7 +4,7 @@ package iso20022
 type PaymentTransactionInformation3 struct {
 
 	// Unique and unambiguous identifier of a cancellation request, assigned by an instructing party.
-	// 
+	//
 	// Usage: the cancellation request identification can be used for reconciliation or to link tasks relating to the cancellation request transaction.
 	CancellationIdentification *Max35Text `xml:"CxlId,omitempty"`
 
@@ -12,7 +12,7 @@ type PaymentTransactionInformation3 struct {
 	OriginalPaymentInformationIdentification *Max35Text `xml:"OrgnlPmtInfId,omitempty"`
 
 	// Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.
-	// 
+	//
 	// Usage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction.
 	OriginalInstructionIdentification *Max35Text `xml:"OrgnlInstrId,omitempty"`
 
@@ -39,9 +39,7 @@ type PaymentTransactionInformation3 struct {
 
 	// Set of key elements of the original transaction being referred to.
 	OriginalTransactionReference *OriginalTransactionReference1 `xml:"OrgnlTxRef,omitempty"`
-
 }
-
 
 func (p *PaymentTransactionInformation3) SetCancellationIdentification(value string) {
 	p.CancellationIdentification = (*Max35Text)(&value)
@@ -82,7 +80,7 @@ func (p *PaymentTransactionInformation3) AddInstructedAgent() *BranchAndFinancia
 }
 
 func (p *PaymentTransactionInformation3) AddCancellationReasonInformation() *CancellationReasonInformation1 {
-	newValue := new (CancellationReasonInformation1)
+	newValue := new(CancellationReasonInformation1)
 	p.CancellationReasonInformation = append(p.CancellationReasonInformation, newValue)
 	return newValue
 }
@@ -91,4 +89,3 @@ func (p *PaymentTransactionInformation3) AddOriginalTransactionReference() *Orig
 	p.OriginalTransactionReference = new(OriginalTransactionReference1)
 	return p.OriginalTransactionReference
 }
-

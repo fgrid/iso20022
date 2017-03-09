@@ -8,9 +8,7 @@ type Extension2 struct {
 
 	// Technical element wrapping the extension.
 	ExtensionEnvelope *ExtensionEnvelope1 `xml:"XtnsnEnvlp"`
-
 }
-
 
 func (e *Extension2) SetPlaceAndName(value string) {
 	e.PlaceAndName = (*Max350Text)(&value)
@@ -20,4 +18,3 @@ func (e *Extension2) AddExtensionEnvelope() *ExtensionEnvelope1 {
 	e.ExtensionEnvelope = new(ExtensionEnvelope1)
 	return e.ExtensionEnvelope
 }
-

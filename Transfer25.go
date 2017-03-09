@@ -41,9 +41,7 @@ type Transfer25 struct {
 
 	// Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.
 	DeliveringAgentDetails *PartyIdentificationAndAccount93 `xml:"DlvrgAgtDtls,omitempty"`
-
 }
-
 
 func (t *Transfer25) AddEffectiveTransferDate() *DateAndDateTimeChoice {
 	t.EffectiveTransferDate = new(DateAndDateTimeChoice)
@@ -79,7 +77,7 @@ func (t *Transfer25) AddTotalUnitsNumber() *FinancialInstrumentQuantity1 {
 }
 
 func (t *Transfer25) AddUnitsDetails() *Unit3 {
-	newValue := new (Unit3)
+	newValue := new(Unit3)
 	t.UnitsDetails = append(t.UnitsDetails, newValue)
 	return newValue
 }
@@ -105,4 +103,3 @@ func (t *Transfer25) AddDeliveringAgentDetails() *PartyIdentificationAndAccount9
 	t.DeliveringAgentDetails = new(PartyIdentificationAndAccount93)
 	return t.DeliveringAgentDetails
 }
-

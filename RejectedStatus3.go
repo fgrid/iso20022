@@ -8,19 +8,16 @@ type RejectedStatus3 struct {
 
 	// Proprietary identification of a reason for a rejected status in the report.
 	DataSourceScheme []*GenericIdentification1 `xml:"DataSrcSchme"`
-
 }
 
-
 func (r *RejectedStatus3) AddReason() *RejectedStatusReason6 {
-	newValue := new (RejectedStatusReason6)
+	newValue := new(RejectedStatusReason6)
 	r.Reason = append(r.Reason, newValue)
 	return newValue
 }
 
 func (r *RejectedStatus3) AddDataSourceScheme() *GenericIdentification1 {
-	newValue := new (GenericIdentification1)
+	newValue := new(GenericIdentification1)
 	r.DataSourceScheme = append(r.DataSourceScheme, newValue)
 	return newValue
 }
-

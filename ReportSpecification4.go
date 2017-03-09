@@ -41,16 +41,14 @@ type ReportSpecification4 struct {
 
 	// Specifies a pending request for action for which the matching application must generate a report.
 	PendingRequestForAction []*PendingActivity1 `xml:"PdgReqForActn,omitempty"`
-
 }
-
 
 func (r *ReportSpecification4) AddTransactionIdentification(value string) {
 	r.TransactionIdentification = append(r.TransactionIdentification, (*Max35Text)(&value))
 }
 
 func (r *ReportSpecification4) AddTransactionStatus() *TransactionStatus4 {
-	newValue := new (TransactionStatus4)
+	newValue := new(TransactionStatus4)
 	r.TransactionStatus = append(r.TransactionStatus, newValue)
 	return newValue
 }
@@ -60,37 +58,37 @@ func (r *ReportSpecification4) AddSubmitterTransactionReference(value string) {
 }
 
 func (r *ReportSpecification4) AddEntitiesToBeReported() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.EntitiesToBeReported = append(r.EntitiesToBeReported, newValue)
 	return newValue
 }
 
 func (r *ReportSpecification4) AddCorrespondent() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.Correspondent = append(r.Correspondent, newValue)
 	return newValue
 }
 
 func (r *ReportSpecification4) AddSubmittingBank() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.SubmittingBank = append(r.SubmittingBank, newValue)
 	return newValue
 }
 
 func (r *ReportSpecification4) AddObligorBank() *BICIdentification1 {
-	newValue := new (BICIdentification1)
+	newValue := new(BICIdentification1)
 	r.ObligorBank = append(r.ObligorBank, newValue)
 	return newValue
 }
 
 func (r *ReportSpecification4) AddBuyer() *PartyIdentification28 {
-	newValue := new (PartyIdentification28)
+	newValue := new(PartyIdentification28)
 	r.Buyer = append(r.Buyer, newValue)
 	return newValue
 }
 
 func (r *ReportSpecification4) AddSeller() *PartyIdentification28 {
-	newValue := new (PartyIdentification28)
+	newValue := new(PartyIdentification28)
 	r.Seller = append(r.Seller, newValue)
 	return newValue
 }
@@ -108,8 +106,7 @@ func (r *ReportSpecification4) AddCorrespondentCountry(value string) {
 }
 
 func (r *ReportSpecification4) AddPendingRequestForAction() *PendingActivity1 {
-	newValue := new (PendingActivity1)
+	newValue := new(PendingActivity1)
 	r.PendingRequestForAction = append(r.PendingRequestForAction, newValue)
 	return newValue
 }
-

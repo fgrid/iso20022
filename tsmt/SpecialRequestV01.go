@@ -7,7 +7,7 @@ import (
 )
 
 type Document04700101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.047.001.01 Document"`
+	XMLName xml.Name           `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.047.001.01 Document"`
 	Message *SpecialRequestV01 `xml:"SpclReq"`
 }
 
@@ -34,9 +34,7 @@ type SpecialRequestV01 struct {
 
 	// Type and details of the notification.
 	Notification *iso20022.Notification1 `xml:"Ntfctn"`
-
 }
-
 
 func (s *SpecialRequestV01) AddRequestIdentification() *iso20022.MessageIdentification1 {
 	s.RequestIdentification = new(iso20022.MessageIdentification1)
@@ -57,4 +55,3 @@ func (s *SpecialRequestV01) AddNotification() *iso20022.Notification1 {
 	s.Notification = new(iso20022.Notification1)
 	return s.Notification
 }
-

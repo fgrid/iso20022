@@ -11,9 +11,7 @@ type PartyIdentification27 struct {
 
 	// Specifies the country of the party.
 	Country *CountryCode `xml:"Ctry"`
-
 }
-
 
 func (p *PartyIdentification27) SetName(value string) {
 	p.Name = (*Max70Text)(&value)
@@ -27,4 +25,3 @@ func (p *PartyIdentification27) AddProprietaryIdentification() *GenericIdentific
 func (p *PartyIdentification27) SetCountry(value string) {
 	p.Country = (*CountryCode)(&value)
 }
-

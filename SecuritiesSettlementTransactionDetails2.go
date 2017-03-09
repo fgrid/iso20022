@@ -50,9 +50,7 @@ type SecuritiesSettlementTransactionDetails2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionDetails2) AddSettlementTypeAndAdditionalParameters() *SettlementTypeAndAdditionalParameters5 {
 	s.SettlementTypeAndAdditionalParameters = new(SettlementTypeAndAdditionalParameters5)
@@ -60,7 +58,7 @@ func (s *SecuritiesSettlementTransactionDetails2) AddSettlementTypeAndAdditional
 }
 
 func (s *SecuritiesSettlementTransactionDetails2) AddLinkages() *Linkages1 {
-	newValue := new (Linkages1)
+	newValue := new(Linkages1)
 	s.Linkages = append(s.Linkages, newValue)
 	return newValue
 }
@@ -131,8 +129,7 @@ func (s *SecuritiesSettlementTransactionDetails2) AddAdditionalPhysicalOrRegistr
 }
 
 func (s *SecuritiesSettlementTransactionDetails2) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

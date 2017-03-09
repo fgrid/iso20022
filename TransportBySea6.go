@@ -23,9 +23,7 @@ type TransportBySea6 struct {
 
 	// Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.
 	CarrierAgentCountry *CountryCode `xml:"CrrierAgtCtry,omitempty"`
-
 }
-
 
 func (t *TransportBySea6) AddPortOfLoading(value string) {
 	t.PortOfLoading = append(t.PortOfLoading, (*Max35Text)(&value))
@@ -54,4 +52,3 @@ func (t *TransportBySea6) SetCarrierAgentName(value string) {
 func (t *TransportBySea6) SetCarrierAgentCountry(value string) {
 	t.CarrierAgentCountry = (*CountryCode)(&value)
 }
-

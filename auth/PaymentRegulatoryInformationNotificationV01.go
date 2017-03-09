@@ -7,7 +7,7 @@ import (
 )
 
 type Document02400101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:auth.024.001.01 Document"`
+	XMLName xml.Name                                     `xml:"urn:iso:std:iso:20022:tech:xsd:auth.024.001.01 Document"`
 	Message *PaymentRegulatoryInformationNotificationV01 `xml:"PmtRgltryInfNtfctn"`
 }
 
@@ -16,8 +16,8 @@ func (d *Document02400101) AddMessage() *PaymentRegulatoryInformationNotificatio
 	return d.Message
 }
 
-// The PaymentRegulatoryInformationNotification message is sent by the reporting party to the registration agent to provide details on the transaction details, when a payment has to be recorded against the registered currency control contract. 
-// 
+// The PaymentRegulatoryInformationNotification message is sent by the reporting party to the registration agent to provide details on the transaction details, when a payment has to be recorded against the registered currency control contract.
+//
 // In some cases, the registration agent may also sent this message to the reporting party.
 type PaymentRegulatoryInformationNotificationV01 struct {
 
@@ -29,9 +29,7 @@ type PaymentRegulatoryInformationNotificationV01 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (p *PaymentRegulatoryInformationNotificationV01) AddGroupHeader() *iso20022.CurrencyControlHeader3 {
 	p.GroupHeader = new(iso20022.CurrencyControlHeader3)
@@ -39,14 +37,13 @@ func (p *PaymentRegulatoryInformationNotificationV01) AddGroupHeader() *iso20022
 }
 
 func (p *PaymentRegulatoryInformationNotificationV01) AddTransactionNotification() *iso20022.RegulatoryReportingNotification1 {
-	newValue := new (iso20022.RegulatoryReportingNotification1)
+	newValue := new(iso20022.RegulatoryReportingNotification1)
 	p.TransactionNotification = append(p.TransactionNotification, newValue)
 	return newValue
 }
 
 func (p *PaymentRegulatoryInformationNotificationV01) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	p.SupplementaryData = append(p.SupplementaryData, newValue)
 	return newValue
 }
-

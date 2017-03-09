@@ -11,9 +11,7 @@ type Quantity40Choice struct {
 
 	// Quantity of financial instrument in units, original face amount or current face amount.
 	Quantity *FinancialInstrumentQuantity15Choice `xml:"Qty"`
-
 }
-
 
 func (q *Quantity40Choice) SetCode(value string) {
 	q.Code = (*Quantity1Code)(&value)
@@ -28,4 +26,3 @@ func (q *Quantity40Choice) AddQuantity() *FinancialInstrumentQuantity15Choice {
 	q.Quantity = new(FinancialInstrumentQuantity15Choice)
 	return q.Quantity
 }
-

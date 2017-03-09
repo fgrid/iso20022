@@ -11,9 +11,7 @@ type Reinvestment1 struct {
 
 	// Percentage of the reinvestment.
 	ReinvestmentPercentage *PercentageRate `xml:"RinvstmtPctg"`
-
 }
-
 
 func (r *Reinvestment1) AddFundDetails() *FinancialInstrument29 {
 	r.FundDetails = new(FinancialInstrument29)
@@ -27,4 +25,3 @@ func (r *Reinvestment1) SetRequestedNAVCurrency(value string) {
 func (r *Reinvestment1) SetReinvestmentPercentage(value string) {
 	r.ReinvestmentPercentage = (*PercentageRate)(&value)
 }
-

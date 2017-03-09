@@ -17,9 +17,7 @@ type MandateAmendment4 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MandateAmendment4) AddOriginalMessageInformation() *OriginalMessageInformation1 {
 	m.OriginalMessageInformation = new(OriginalMessageInformation1)
@@ -42,8 +40,7 @@ func (m *MandateAmendment4) AddOriginalMandate() *OriginalMandate3Choice {
 }
 
 func (m *MandateAmendment4) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -14,9 +14,7 @@ type ContractRegistrationStatementCriteria1 struct {
 
 	// Indicates whether the details on the currency control rule against which has been violated must be returned or not.
 	RegulatoryRuleValidation *TrueFalseIndicator `xml:"RgltryRuleVldtn,omitempty"`
-
 }
-
 
 func (c *ContractRegistrationStatementCriteria1) SetTransactionJournal(value string) {
 	c.TransactionJournal = (*TrueFalseIndicator)(&value)
@@ -33,4 +31,3 @@ func (c *ContractRegistrationStatementCriteria1) SetAdditionalSupportingDocument
 func (c *ContractRegistrationStatementCriteria1) SetRegulatoryRuleValidation(value string) {
 	c.RegulatoryRuleValidation = (*TrueFalseIndicator)(&value)
 }
-

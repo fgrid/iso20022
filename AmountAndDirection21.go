@@ -8,9 +8,7 @@ type AmountAndDirection21 struct {
 
 	// Indicates whether an entry is a credit or a debit.
 	CreditDebitIndicator *CreditDebitCode `xml:"CdtDbtInd,omitempty"`
-
 }
-
 
 func (a *AmountAndDirection21) SetAmount(value, currency string) {
 	a.Amount = NewActiveOrHistoricCurrencyAndAmount(value, currency)
@@ -19,4 +17,3 @@ func (a *AmountAndDirection21) SetAmount(value, currency string) {
 func (a *AmountAndDirection21) SetCreditDebitIndicator(value string) {
 	a.CreditDebitIndicator = (*CreditDebitCode)(&value)
 }
-

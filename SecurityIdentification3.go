@@ -20,9 +20,7 @@ type SecurityIdentification3 struct {
 
 	// Proprietary identification of a security assigned by an institution or organisation.
 	OtherIdentification *AlternateFinancialInstrumentIdentification1 `xml:"OthrId,omitempty"`
-
 }
-
 
 func (s *SecurityIdentification3) SetISIN(value string) {
 	s.ISIN = (*ISINIdentifier)(&value)
@@ -48,4 +46,3 @@ func (s *SecurityIdentification3) AddOtherIdentification() *AlternateFinancialIn
 	s.OtherIdentification = new(AlternateFinancialInstrumentIdentification1)
 	return s.OtherIdentification
 }
-

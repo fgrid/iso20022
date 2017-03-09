@@ -11,9 +11,7 @@ type PartyAndAccountIdentificationAndContactInformation1 struct {
 
 	// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').
 	ContactInformation *ContactIdentification1 `xml:"CtctInf,omitempty"`
-
 }
-
 
 func (p *PartyAndAccountIdentificationAndContactInformation1) AddPartyIdentification() *PartyIdentification8 {
 	p.PartyIdentification = new(PartyIdentification8)
@@ -29,4 +27,3 @@ func (p *PartyAndAccountIdentificationAndContactInformation1) AddContactInformat
 	p.ContactInformation = new(ContactIdentification1)
 	return p.ContactInformation
 }
-

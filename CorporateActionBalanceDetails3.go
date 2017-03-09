@@ -44,9 +44,7 @@ type CorporateActionBalanceDetails3 struct {
 
 	// Quantity of securities in the sub-balance.
 	RegisteredBalance *BalanceFormat1Choice `xml:"RegdBal,omitempty"`
-
 }
-
 
 func (c *CorporateActionBalanceDetails3) AddTotalEligibleBalance() *Quantity3Choice {
 	c.TotalEligibleBalance = new(Quantity3Choice)
@@ -79,13 +77,13 @@ func (c *CorporateActionBalanceDetails3) AddOnLoanBalance() *BalanceFormat1Choic
 }
 
 func (c *CorporateActionBalanceDetails3) AddPendingDeliveryBalance() *BalanceFormat1Choice {
-	newValue := new (BalanceFormat1Choice)
+	newValue := new(BalanceFormat1Choice)
 	c.PendingDeliveryBalance = append(c.PendingDeliveryBalance, newValue)
 	return newValue
 }
 
 func (c *CorporateActionBalanceDetails3) AddPendingReceiptBalance() *BalanceFormat1Choice {
-	newValue := new (BalanceFormat1Choice)
+	newValue := new(BalanceFormat1Choice)
 	c.PendingReceiptBalance = append(c.PendingReceiptBalance, newValue)
 	return newValue
 }
@@ -119,4 +117,3 @@ func (c *CorporateActionBalanceDetails3) AddRegisteredBalance() *BalanceFormat1C
 	c.RegisteredBalance = new(BalanceFormat1Choice)
 	return c.RegisteredBalance
 }
-

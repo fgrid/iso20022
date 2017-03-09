@@ -8,9 +8,7 @@ type AccountIdentification23Choice struct {
 
 	// Selected safekeeping accounts list (and optionally balance information) to which the corporate action event applies.
 	AccountsListAndBalanceDetails []*AccountAndBalance25 `xml:"AcctsListAndBalDtls"`
-
 }
-
 
 func (a *AccountIdentification23Choice) AddForAllAccounts() *AccountIdentification10 {
 	a.ForAllAccounts = new(AccountIdentification10)
@@ -18,8 +16,7 @@ func (a *AccountIdentification23Choice) AddForAllAccounts() *AccountIdentificati
 }
 
 func (a *AccountIdentification23Choice) AddAccountsListAndBalanceDetails() *AccountAndBalance25 {
-	newValue := new (AccountAndBalance25)
+	newValue := new(AccountAndBalance25)
 	a.AccountsListAndBalanceDetails = append(a.AccountsListAndBalanceDetails, newValue)
 	return newValue
 }
-

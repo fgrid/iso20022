@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.033.001.03 Document"`
+	XMLName xml.Name                            `xml:"urn:iso:std:iso:20022:tech:xsd:tsmt.033.001.03 Document"`
 	Message *StatusExtensionRequestRejectionV03 `xml:"StsXtnsnReqRjctn"`
 }
 
@@ -30,7 +30,7 @@ type StatusExtensionRequestRejectionV03 struct {
 
 	// Unique identification assigned by the matching application to the transaction.
 	// This identification is to be used in any communication between the parties.
-	// 
+	//
 	TransactionIdentification *iso20022.SimpleIdentificationInformation `xml:"TxId"`
 
 	// Reference to the transaction for the requesting financial institution.
@@ -41,9 +41,7 @@ type StatusExtensionRequestRejectionV03 struct {
 
 	// Reason why the user cannot accept the request.
 	RejectionReason *iso20022.Reason2 `xml:"RjctnRsn"`
-
 }
-
 
 func (s *StatusExtensionRequestRejectionV03) AddRejectionIdentification() *iso20022.MessageIdentification1 {
 	s.RejectionIdentification = new(iso20022.MessageIdentification1)
@@ -69,4 +67,3 @@ func (s *StatusExtensionRequestRejectionV03) AddRejectionReason() *iso20022.Reas
 	s.RejectionReason = new(iso20022.Reason2)
 	return s.RejectionReason
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01200101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:cain.012.001.01 Document"`
+	XMLName xml.Name             `xml:"urn:iso:std:iso:20022:tech:xsd:cain.012.001.01 Document"`
 	Message *KeyExchangeResponse `xml:"KeyXchgRspn"`
 }
 
@@ -27,9 +27,7 @@ type KeyExchangeResponse struct {
 
 	// Trailer of the message containing a MAC or a digital signature.
 	SecurityTrailer *iso20022.ContentInformationType12 `xml:"SctyTrlr"`
-
 }
-
 
 func (k *KeyExchangeResponse) AddHeader() *iso20022.Header17 {
 	k.Header = new(iso20022.Header17)
@@ -45,4 +43,3 @@ func (k *KeyExchangeResponse) AddSecurityTrailer() *iso20022.ContentInformationT
 	k.SecurityTrailer = new(iso20022.ContentInformationType12)
 	return k.SecurityTrailer
 }
-

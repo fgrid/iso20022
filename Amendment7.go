@@ -8,9 +8,7 @@ type Amendment7 struct {
 
 	// Proposed undertaking amendment status.
 	AmendmentStatus *UndertakingStatus2Code `xml:"AmdmntSts"`
-
 }
-
 
 func (a *Amendment7) AddAmendmentIdentification() *Amendment8 {
 	a.AmendmentIdentification = new(Amendment8)
@@ -20,4 +18,3 @@ func (a *Amendment7) AddAmendmentIdentification() *Amendment8 {
 func (a *Amendment7) SetAmendmentStatus(value string) {
 	a.AmendmentStatus = (*UndertakingStatus2Code)(&value)
 }
-

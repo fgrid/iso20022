@@ -11,9 +11,7 @@ type ReversalReasonInformation1 struct {
 
 	// Further details on the reversal reason.
 	AdditionalReversalReasonInformation []*Max105Text `xml:"AddtlRvslRsnInf,omitempty"`
-
 }
-
 
 func (r *ReversalReasonInformation1) AddReversalOriginator() *PartyIdentification8 {
 	r.ReversalOriginator = new(PartyIdentification8)
@@ -28,4 +26,3 @@ func (r *ReversalReasonInformation1) AddReversalReason() *ReversalReason1Choice 
 func (r *ReversalReasonInformation1) AddAdditionalReversalReasonInformation(value string) {
 	r.AdditionalReversalReasonInformation = append(r.AdditionalReversalReasonInformation, (*Max105Text)(&value))
 }
-

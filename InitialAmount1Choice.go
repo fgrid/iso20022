@@ -8,9 +8,7 @@ type InitialAmount1Choice struct {
 
 	// Amount to be paid or redeemed at the time the investment plan is created.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (i *InitialAmount1Choice) SetInitialNumberOfInstalments(value string) {
 	i.InitialNumberOfInstalments = (*Number)(&value)
@@ -19,4 +17,3 @@ func (i *InitialAmount1Choice) SetInitialNumberOfInstalments(value string) {
 func (i *InitialAmount1Choice) SetAmount(value, currency string) {
 	i.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-

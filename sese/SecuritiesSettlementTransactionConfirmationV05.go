@@ -7,7 +7,7 @@ import (
 )
 
 type Document02500105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.025.001.05 Document"`
+	XMLName xml.Name                                        `xml:"urn:iso:std:iso:20022:tech:xsd:sese.025.001.05 Document"`
 	Message *SecuritiesSettlementTransactionConfirmationV05 `xml:"SctiesSttlmTxConf"`
 }
 
@@ -79,9 +79,7 @@ type SecuritiesSettlementTransactionConfirmationV05 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementTransactionConfirmationV05) AddTransactionIdentificationDetails() *iso20022.SettlementTypeAndIdentification15 {
 	s.TransactionIdentificationDetails = new(iso20022.SettlementTypeAndIdentification15)
@@ -159,8 +157,7 @@ func (s *SecuritiesSettlementTransactionConfirmationV05) AddAdditionalPhysicalOr
 }
 
 func (s *SecuritiesSettlementTransactionConfirmationV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

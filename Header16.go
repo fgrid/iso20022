@@ -17,9 +17,7 @@ type Header16 struct {
 
 	// Unique identification of the partner that is the recipient of the exchange.
 	RecipientParty *GenericIdentification72 `xml:"RcptPty,omitempty"`
-
 }
-
 
 func (h *Header16) SetProtocolVersion(value string) {
 	h.ProtocolVersion = (*Max6Text)(&value)
@@ -42,4 +40,3 @@ func (h *Header16) AddRecipientParty() *GenericIdentification72 {
 	h.RecipientParty = new(GenericIdentification72)
 	return h.RecipientParty
 }
-

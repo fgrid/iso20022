@@ -11,9 +11,7 @@ type BillingMethod1Choice struct {
 
 	// Tax values are based on tax calculation method D.
 	MethodD *BillingMethod3 `xml:"MtdD"`
-
 }
-
 
 func (b *BillingMethod1Choice) AddMethodA() *BillingMethod1 {
 	b.MethodA = new(BillingMethod1)
@@ -29,4 +27,3 @@ func (b *BillingMethod1Choice) AddMethodD() *BillingMethod3 {
 	b.MethodD = new(BillingMethod3)
 	return b.MethodD
 }
-

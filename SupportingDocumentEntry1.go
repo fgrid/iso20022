@@ -10,7 +10,7 @@ type SupportingDocumentEntry1 struct {
 	OriginalDocument *DocumentIdentification22 `xml:"OrgnlDoc"`
 
 	// Document type in a coded form.
-	// 
+	//
 	// TBC: Data must support "_".
 	DocumentType *Exact4AlphaNumericText `xml:"DocTp"`
 
@@ -34,9 +34,7 @@ type SupportingDocumentEntry1 struct {
 
 	// Documents provided as attachments to the supporting document entry.
 	Attachment []*DocumentGeneralInformation3 `xml:"Attchmnt,omitempty"`
-
 }
-
 
 func (s *SupportingDocumentEntry1) SetEntryIdentification(value string) {
 	s.EntryIdentification = (*Max35Text)(&value)
@@ -77,8 +75,7 @@ func (s *SupportingDocumentEntry1) SetAdditionalInformation(value string) {
 }
 
 func (s *SupportingDocumentEntry1) AddAttachment() *DocumentGeneralInformation3 {
-	newValue := new (DocumentGeneralInformation3)
+	newValue := new(DocumentGeneralInformation3)
 	s.Attachment = append(s.Attachment, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type DiscountOrChargeType1Choice struct {
 
 	// Type of discount.
 	DiscountType *DiscountTypeFormat1Choice `xml:"DscntTp"`
-
 }
-
 
 func (d *DiscountOrChargeType1Choice) AddChargeType() *ChargeTypeFormat3Choice {
 	d.ChargeType = new(ChargeTypeFormat3Choice)
@@ -21,4 +19,3 @@ func (d *DiscountOrChargeType1Choice) AddDiscountType() *DiscountTypeFormat1Choi
 	d.DiscountType = new(DiscountTypeFormat1Choice)
 	return d.DiscountType
 }
-

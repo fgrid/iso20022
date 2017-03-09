@@ -18,11 +18,9 @@ type SecurityDate12 struct {
 	// Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.
 	PariPassuDate *DateFormat31Choice `xml:"PrpssDt,omitempty"`
 
-	// Date/time at which the securities to be reorganised will cease to be tradeable. 
+	// Date/time at which the securities to be reorganised will cease to be tradeable.
 	LastTradingDate *DateFormat31Choice `xml:"LastTradgDt,omitempty"`
-
 }
-
 
 func (s *SecurityDate12) AddPaymentDate() *DateFormat31Choice {
 	s.PaymentDate = new(DateFormat31Choice)
@@ -53,4 +51,3 @@ func (s *SecurityDate12) AddLastTradingDate() *DateFormat31Choice {
 	s.LastTradingDate = new(DateFormat31Choice)
 	return s.LastTradingDate
 }
-

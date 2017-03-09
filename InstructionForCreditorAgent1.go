@@ -8,9 +8,7 @@ type InstructionForCreditorAgent1 struct {
 
 	// Further information complementing the coded instruction or instruction to the creditor's agent that is bilaterally agreed or specific to a user community.
 	InstructionInformation *Max140Text `xml:"InstrInf,omitempty"`
-
 }
-
 
 func (i *InstructionForCreditorAgent1) SetCode(value string) {
 	i.Code = (*Instruction3Code)(&value)
@@ -19,4 +17,3 @@ func (i *InstructionForCreditorAgent1) SetCode(value string) {
 func (i *InstructionForCreditorAgent1) SetInstructionInformation(value string) {
 	i.InstructionInformation = (*Max140Text)(&value)
 }
-

@@ -14,9 +14,7 @@ type SingleTransport3 struct {
 
 	// Information related to the transportation of goods by rail.
 	TransportByRail *TransportByRail2 `xml:"TrnsprtByRail,omitempty"`
-
 }
-
 
 func (s *SingleTransport3) AddTransportByAir() *TransportByAir2 {
 	s.TransportByAir = new(TransportByAir2)
@@ -37,4 +35,3 @@ func (s *SingleTransport3) AddTransportByRail() *TransportByRail2 {
 	s.TransportByRail = new(TransportByRail2)
 	return s.TransportByRail
 }
-

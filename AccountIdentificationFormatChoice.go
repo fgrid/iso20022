@@ -11,9 +11,7 @@ type AccountIdentificationFormatChoice struct {
 
 	// Identification of the account expressed with a data source scheme, a code used within the data source scheme and the account identification.
 	IdentificationAsDSS *AccountIdentification3 `xml:"IdAsDSS"`
-
 }
-
 
 func (a *AccountIdentificationFormatChoice) AddSimpleIdentification() *AccountIdentification1 {
 	a.SimpleIdentification = new(AccountIdentification1)
@@ -29,4 +27,3 @@ func (a *AccountIdentificationFormatChoice) AddIdentificationAsDSS() *AccountIde
 	a.IdentificationAsDSS = new(AccountIdentification3)
 	return a.IdentificationAsDSS
 }
-

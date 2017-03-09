@@ -14,9 +14,7 @@ type ReferredDocumentInformation7 struct {
 
 	// Set of elements used to provide the content of the referred document line.
 	LineDetails []*DocumentLineInformation1 `xml:"LineDtls,omitempty"`
-
 }
-
 
 func (r *ReferredDocumentInformation7) AddType() *ReferredDocumentType4 {
 	r.Type = new(ReferredDocumentType4)
@@ -32,8 +30,7 @@ func (r *ReferredDocumentInformation7) SetRelatedDate(value string) {
 }
 
 func (r *ReferredDocumentInformation7) AddLineDetails() *DocumentLineInformation1 {
-	newValue := new (DocumentLineInformation1)
+	newValue := new(DocumentLineInformation1)
 	r.LineDetails = append(r.LineDetails, newValue)
 	return newValue
 }
-

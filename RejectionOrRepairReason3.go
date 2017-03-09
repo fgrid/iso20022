@@ -8,9 +8,7 @@ type RejectionOrRepairReason3 struct {
 
 	// Provides additional reason information that cannot be provided in a structured field.
 	AdditionalReasonInformation *Max210Text `xml:"AddtlRsnInf,omitempty"`
-
 }
-
 
 func (r *RejectionOrRepairReason3) AddCode() *RejectionAndRepairReason3Choice {
 	r.Code = new(RejectionAndRepairReason3Choice)
@@ -20,4 +18,3 @@ func (r *RejectionOrRepairReason3) AddCode() *RejectionAndRepairReason3Choice {
 func (r *RejectionOrRepairReason3) SetAdditionalReasonInformation(value string) {
 	r.AdditionalReasonInformation = (*Max210Text)(&value)
 }
-

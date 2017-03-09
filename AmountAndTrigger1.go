@@ -11,9 +11,7 @@ type AmountAndTrigger1 struct {
 
 	// Trigger that causes the variation to come into effect.
 	Trigger []*Trigger1 `xml:"Trggr"`
-
 }
-
 
 func (a *AmountAndTrigger1) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -25,8 +23,7 @@ func (a *AmountAndTrigger1) AddAmountDetailsChoice() *AmountOrPercentage1Choice 
 }
 
 func (a *AmountAndTrigger1) AddTrigger() *Trigger1 {
-	newValue := new (Trigger1)
+	newValue := new(Trigger1)
 	a.Trigger = append(a.Trigger, newValue)
 	return newValue
 }
-

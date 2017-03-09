@@ -7,7 +7,7 @@ import (
 )
 
 type Document03300103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.033.001.03 Document"`
+	XMLName xml.Name                `xml:"urn:iso:std:iso:20022:tech:xsd:camt.033.001.03 Document"`
 	Message *RequestForDuplicateV03 `xml:"ReqForDplct"`
 }
 
@@ -33,9 +33,7 @@ type RequestForDuplicateV03 struct {
 
 	// Identifies the investigation case.
 	Case *iso20022.Case2 `xml:"Case"`
-
 }
-
 
 func (r *RequestForDuplicateV03) AddAssignment() *iso20022.CaseAssignment2 {
 	r.Assignment = new(iso20022.CaseAssignment2)
@@ -46,4 +44,3 @@ func (r *RequestForDuplicateV03) AddCase() *iso20022.Case2 {
 	r.Case = new(iso20022.Case2)
 	return r.Case
 }
-

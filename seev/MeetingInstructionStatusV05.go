@@ -7,7 +7,7 @@ import (
 )
 
 type Document00600105 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.006.001.05 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:seev.006.001.05 Document"`
 	Message *MeetingInstructionStatusV05 `xml:"MtgInstrSts"`
 }
 
@@ -35,7 +35,7 @@ type MeetingInstructionStatusV05 struct {
 	// Series of elements which allow to identify a meeting.
 	MeetingReference *iso20022.MeetingReference7 `xml:"MtgRef"`
 
-	// Identifies the securities for which the meeting is organised. 
+	// Identifies the securities for which the meeting is organised.
 	FinancialInstrumentIdentification *iso20022.SecurityIdentification14 `xml:"FinInstrmId"`
 
 	// Type of instruction status.
@@ -43,9 +43,7 @@ type MeetingInstructionStatusV05 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (m *MeetingInstructionStatusV05) AddInstructionType() *iso20022.InstructionType1Choice {
 	m.InstructionType = new(iso20022.InstructionType1Choice)
@@ -68,8 +66,7 @@ func (m *MeetingInstructionStatusV05) AddInstructionTypeStatus() *iso20022.Instr
 }
 
 func (m *MeetingInstructionStatusV05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	m.SupplementaryData = append(m.SupplementaryData, newValue)
 	return newValue
 }
-

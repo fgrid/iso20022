@@ -17,9 +17,7 @@ type RejectionReason1 struct {
 
 	// Linked related reference that is invalid or unrecognised, of the message being rejected.
 	LinkedMessageRelatedReference *AdditionalReference2 `xml:"LkdMsgRltdRef,omitempty"`
-
 }
-
 
 func (r *RejectionReason1) SetReason(value string) {
 	r.Reason = (*MessageRejectedReason1Code)(&value)
@@ -43,4 +41,3 @@ func (r *RejectionReason1) AddLinkedMessageRelatedReference() *AdditionalReferen
 	r.LinkedMessageRelatedReference = new(AdditionalReference2)
 	return r.LinkedMessageRelatedReference
 }
-

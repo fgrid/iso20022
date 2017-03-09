@@ -7,7 +7,7 @@ import (
 )
 
 type Document02100106 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:semt.021.001.06 Document"`
+	XMLName xml.Name                     `xml:"urn:iso:std:iso:20022:tech:xsd:semt.021.001.06 Document"`
 	Message *SecuritiesStatementQueryV06 `xml:"SctiesStmtQry"`
 }
 
@@ -25,7 +25,7 @@ func (d *Document02100106) AddMessage() *SecuritiesStatementQueryV06 {
 // - a central securities depository participant which has an account with a central securities depository, or
 // - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
 // - a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.
-// 
+//
 // Usage
 // The message may also be used to:
 // - re-send a message previously sent,
@@ -51,9 +51,7 @@ type SecuritiesStatementQueryV06 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesStatementQueryV06) AddStatementRequested() *iso20022.DocumentNumber13 {
 	s.StatementRequested = new(iso20022.DocumentNumber13)
@@ -76,14 +74,13 @@ func (s *SecuritiesStatementQueryV06) AddSafekeepingAccount() *iso20022.Securiti
 }
 
 func (s *SecuritiesStatementQueryV06) AddAdditionalQueryParameters() *iso20022.AdditionalQueryParameters11 {
-	newValue := new (iso20022.AdditionalQueryParameters11)
+	newValue := new(iso20022.AdditionalQueryParameters11)
 	s.AdditionalQueryParameters = append(s.AdditionalQueryParameters, newValue)
 	return newValue
 }
 
 func (s *SecuritiesStatementQueryV06) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

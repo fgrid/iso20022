@@ -8,9 +8,7 @@ type CorporateActionEventType1CodeChoice struct {
 
 	// Corporate action event type in free text form.
 	Unstructured *Max35Text `xml:"Ustrd"`
-
 }
-
 
 func (c *CorporateActionEventType1CodeChoice) SetStructured(value string) {
 	c.Structured = (*CorporateActionEventType1Code)(&value)
@@ -19,4 +17,3 @@ func (c *CorporateActionEventType1CodeChoice) SetStructured(value string) {
 func (c *CorporateActionEventType1CodeChoice) SetUnstructured(value string) {
 	c.Unstructured = (*Max35Text)(&value)
 }
-

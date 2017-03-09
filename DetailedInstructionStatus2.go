@@ -23,9 +23,7 @@ type DetailedInstructionStatus2 struct {
 
 	// Details of the vote.
 	VotePerResolution []*Vote4 `xml:"VotePerRsltn"`
-
 }
-
 
 func (d *DetailedInstructionStatus2) SetInstructionIdentification(value string) {
 	d.InstructionIdentification = (*Max35Text)(&value)
@@ -45,7 +43,7 @@ func (d *DetailedInstructionStatus2) SetSubAccountIdentification(value string) {
 }
 
 func (d *DetailedInstructionStatus2) AddRightsHolder() *PartyIdentification9Choice {
-	newValue := new (PartyIdentification9Choice)
+	newValue := new(PartyIdentification9Choice)
 	d.RightsHolder = append(d.RightsHolder, newValue)
 	return newValue
 }
@@ -55,8 +53,7 @@ func (d *DetailedInstructionStatus2) SetStandingInstruction(value string) {
 }
 
 func (d *DetailedInstructionStatus2) AddVotePerResolution() *Vote4 {
-	newValue := new (Vote4)
+	newValue := new(Vote4)
 	d.VotePerResolution = append(d.VotePerResolution, newValue)
 	return newValue
 }
-

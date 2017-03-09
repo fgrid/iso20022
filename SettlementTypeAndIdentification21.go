@@ -11,9 +11,7 @@ type SettlementTypeAndIdentification21 struct {
 
 	// Identifies the intended settlement date.
 	SettlementDate *DateAndDateTimeChoice `xml:"SttlmDt,omitempty"`
-
 }
-
 
 func (s *SettlementTypeAndIdentification21) SetPayment(value string) {
 	s.Payment = (*DeliveryReceiptType2Code)(&value)
@@ -27,4 +25,3 @@ func (s *SettlementTypeAndIdentification21) AddSettlementDate() *DateAndDateTime
 	s.SettlementDate = new(DateAndDateTimeChoice)
 	return s.SettlementDate
 }
-

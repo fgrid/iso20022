@@ -11,9 +11,7 @@ type Group2 struct {
 
 	// Specifies a party and related certificate.
 	Party []*PartyAndCertificate3 `xml:"Pty"`
-
 }
-
 
 func (g *Group2) SetModificationCode(value string) {
 	g.ModificationCode = (*Modification1Code)(&value)
@@ -24,8 +22,7 @@ func (g *Group2) SetGroupIdentification(value string) {
 }
 
 func (g *Group2) AddParty() *PartyAndCertificate3 {
-	newValue := new (PartyAndCertificate3)
+	newValue := new(PartyAndCertificate3)
 	g.Party = append(g.Party, newValue)
 	return newValue
 }
-

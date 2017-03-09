@@ -8,9 +8,7 @@ type FrequencyPeriod1 struct {
 
 	// Number of instructions to be created and processed during the specified period
 	CountPerPeriod *DecimalNumber `xml:"CntPerPrd"`
-
 }
-
 
 func (f *FrequencyPeriod1) SetType(value string) {
 	f.Type = (*Frequency6Code)(&value)
@@ -19,4 +17,3 @@ func (f *FrequencyPeriod1) SetType(value string) {
 func (f *FrequencyPeriod1) SetCountPerPeriod(value string) {
 	f.CountPerPeriod = (*DecimalNumber)(&value)
 }
-

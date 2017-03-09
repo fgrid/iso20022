@@ -14,9 +14,7 @@ type MessageAndBusinessReference1 struct {
 
 	// Business reference of the transfer instruction message.
 	TransferReference *Max35Text `xml:"TrfRef,omitempty"`
-
 }
-
 
 func (m *MessageAndBusinessReference1) AddPreviousReference() *AdditionalReference2 {
 	m.PreviousReference = new(AdditionalReference2)
@@ -36,4 +34,3 @@ func (m *MessageAndBusinessReference1) AddInvestmentAccountDetails() *Investment
 func (m *MessageAndBusinessReference1) SetTransferReference(value string) {
 	m.TransferReference = (*Max35Text)(&value)
 }
-

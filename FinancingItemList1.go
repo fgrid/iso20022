@@ -53,9 +53,7 @@ type FinancingItemList1 struct {
 
 	// Financing status if applicable to the nature of the items.
 	FinancingStatus *FinancingInformationAndStatus1 `xml:"FincgSts,omitempty"`
-
 }
-
 
 func (f *FinancingItemList1) SetIdentifier(value string) {
 	f.Identifier = (*Max35Text)(&value)
@@ -66,7 +64,7 @@ func (f *FinancingItemList1) SetIssueDate(value string) {
 }
 
 func (f *FinancingItemList1) AddRelatedDocument() *QualifiedDocumentInformation1 {
-	newValue := new (QualifiedDocumentInformation1)
+	newValue := new(QualifiedDocumentInformation1)
 	f.RelatedDocument = append(f.RelatedDocument, newValue)
 	return newValue
 }
@@ -86,13 +84,13 @@ func (f *FinancingItemList1) AddAssigner() *QualifiedPartyIdentification1 {
 }
 
 func (f *FinancingItemList1) AddNotificationInformation() *FinancingNotificationParties1 {
-	newValue := new (FinancingNotificationParties1)
+	newValue := new(FinancingNotificationParties1)
 	f.NotificationInformation = append(f.NotificationInformation, newValue)
 	return newValue
 }
 
 func (f *FinancingItemList1) AddFinancialItem() *FinancialItem1 {
-	newValue := new (FinancialItem1)
+	newValue := new(FinancialItem1)
 	f.FinancialItem = append(f.FinancialItem, newValue)
 	return newValue
 }
@@ -120,7 +118,7 @@ func (f *FinancingItemList1) AddAgreedRate() *AgreedRate1 {
 }
 
 func (f *FinancingItemList1) AddFinancingInstalment() *Instalment2 {
-	newValue := new (Instalment2)
+	newValue := new(Instalment2)
 	f.FinancingInstalment = append(f.FinancingInstalment, newValue)
 	return newValue
 }
@@ -138,4 +136,3 @@ func (f *FinancingItemList1) AddFinancingStatus() *FinancingInformationAndStatus
 	f.FinancingStatus = new(FinancingInformationAndStatus1)
 	return f.FinancingStatus
 }
-

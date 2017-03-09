@@ -17,16 +17,14 @@ type AuthenticatedData4 struct {
 
 	// Message authentication code value.
 	MAC *Max140Binary `xml:"MAC"`
-
 }
-
 
 func (a *AuthenticatedData4) SetVersion(value string) {
 	a.Version = (*Number)(&value)
 }
 
 func (a *AuthenticatedData4) AddRecipient() *Recipient4Choice {
-	newValue := new (Recipient4Choice)
+	newValue := new(Recipient4Choice)
 	a.Recipient = append(a.Recipient, newValue)
 	return newValue
 }
@@ -44,4 +42,3 @@ func (a *AuthenticatedData4) AddEncapsulatedContent() *EncapsulatedContent3 {
 func (a *AuthenticatedData4) SetMAC(value string) {
 	a.MAC = (*Max140Binary)(&value)
 }
-

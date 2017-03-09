@@ -32,9 +32,7 @@ type PaymentTerms6 struct {
 
 	// Percent rate used to calculate the penalty for these payment terms.
 	PenaltyPercentRate *PercentageRate `xml:"PnltyPctRate,omitempty"`
-
 }
-
 
 func (p *PaymentTerms6) SetDueDate(value string) {
 	p.DueDate = (*ISODate)(&value)
@@ -76,4 +74,3 @@ func (p *PaymentTerms6) SetPenaltyAmount(value, currency string) {
 func (p *PaymentTerms6) SetPenaltyPercentRate(value string) {
 	p.PenaltyPercentRate = (*PercentageRate)(&value)
 }
-

@@ -8,9 +8,7 @@ type BreakDown1Choice struct {
 
 	// The intention to pay is based on a commercial invoice.
 	ByCommercialInvoice *ReportLine6 `xml:"ByComrclInvc"`
-
 }
-
 
 func (b *BreakDown1Choice) AddByPurchaseOrder() *ReportLine5 {
 	b.ByPurchaseOrder = new(ReportLine5)
@@ -21,4 +19,3 @@ func (b *BreakDown1Choice) AddByCommercialInvoice() *ReportLine6 {
 	b.ByCommercialInvoice = new(ReportLine6)
 	return b.ByCommercialInvoice
 }
-

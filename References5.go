@@ -20,9 +20,7 @@ type References5 struct {
 
 	// File name of a document logically related to the request.
 	AttachedDocumentName []*Max70Text `xml:"AttchdDocNm,omitempty"`
-
 }
-
 
 func (r *References5) SetRequestType(value string) {
 	r.RequestType = (*UseCases1Code)(&value)
@@ -39,7 +37,7 @@ func (r *References5) AddProcessIdentification() *MessageIdentification1 {
 }
 
 func (r *References5) AddAcknowledgedMessageIdentification() *MessageIdentification1 {
-	newValue := new (MessageIdentification1)
+	newValue := new(MessageIdentification1)
 	r.AcknowledgedMessageIdentification = append(r.AcknowledgedMessageIdentification, newValue)
 	return newValue
 }
@@ -51,4 +49,3 @@ func (r *References5) SetStatus(value string) {
 func (r *References5) AddAttachedDocumentName(value string) {
 	r.AttachedDocumentName = append(r.AttachedDocumentName, (*Max70Text)(&value))
 }
-

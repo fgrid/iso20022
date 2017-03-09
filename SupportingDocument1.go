@@ -29,9 +29,7 @@ type SupportingDocument1 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SupportingDocument1) SetSupportingDocumentIdentification(value string) {
 	s.SupportingDocumentIdentification = (*Max35Text)(&value)
@@ -67,14 +65,13 @@ func (s *SupportingDocument1) AddContractReference() *ContractRegistrationRefere
 }
 
 func (s *SupportingDocument1) AddEntry() *SupportingDocumentEntry1 {
-	newValue := new (SupportingDocumentEntry1)
+	newValue := new(SupportingDocumentEntry1)
 	s.Entry = append(s.Entry, newValue)
 	return newValue
 }
 
 func (s *SupportingDocument1) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

@@ -8,9 +8,7 @@ type UnitOrFaceAmountChoice struct {
 
 	// Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.
 	FaceAmount *CurrencyAndAmount `xml:"FaceAmt"`
-
 }
-
 
 func (u *UnitOrFaceAmountChoice) SetUnit(value string) {
 	u.Unit = (*DecimalNumber)(&value)
@@ -19,4 +17,3 @@ func (u *UnitOrFaceAmountChoice) SetUnit(value string) {
 func (u *UnitOrFaceAmountChoice) SetFaceAmount(value, currency string) {
 	u.FaceAmount = NewCurrencyAndAmount(value, currency)
 }
-

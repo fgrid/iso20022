@@ -8,9 +8,7 @@ type ClosingBalance1Choice struct {
 
 	// Closing balance of this page only. This balance must be the intermediary opening balance of the next page of the same statement.
 	Intermediary *BalanceQuantity5Choice `xml:"Intrmy"`
-
 }
-
 
 func (c *ClosingBalance1Choice) AddFinal() *BalanceQuantity5Choice {
 	c.Final = new(BalanceQuantity5Choice)
@@ -21,4 +19,3 @@ func (c *ClosingBalance1Choice) AddIntermediary() *BalanceQuantity5Choice {
 	c.Intermediary = new(BalanceQuantity5Choice)
 	return c.Intermediary
 }
-

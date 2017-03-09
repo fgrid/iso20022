@@ -20,9 +20,7 @@ type UnitPrice21 struct {
 
 	// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
 	TaxableIncomePerShare *ActiveCurrencyAnd13DecimalAmount `xml:"TaxblIncmPerShr,omitempty"`
-
 }
-
 
 func (u *UnitPrice21) AddType() *TypeOfPrice31Choice {
 	u.Type = new(TypeOfPrice31Choice)
@@ -49,4 +47,3 @@ func (u *UnitPrice21) SetNumberOfDaysAccrued(value string) {
 func (u *UnitPrice21) SetTaxableIncomePerShare(value, currency string) {
 	u.TaxableIncomePerShare = NewActiveCurrencyAnd13DecimalAmount(value, currency)
 }
-

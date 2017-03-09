@@ -32,9 +32,7 @@ type OriginalItemReference3 struct {
 
 	// Structured information that enables the matching, that is reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.
 	RemittanceInformation *RemittanceInformation10 `xml:"RmtInf,omitempty"`
-
 }
-
 
 func (o *OriginalItemReference3) AddAccount() *CashAccount24 {
 	o.Account = new(CashAccount24)
@@ -85,4 +83,3 @@ func (o *OriginalItemReference3) AddRemittanceInformation() *RemittanceInformati
 	o.RemittanceInformation = new(RemittanceInformation10)
 	return o.RemittanceInformation
 }
-

@@ -8,9 +8,7 @@ type MarketIdentification2 struct {
 
 	// Identifies the market.
 	Identification *MarketIdentification1Choice `xml:"Id,omitempty"`
-
 }
-
 
 func (m *MarketIdentification2) AddType() *MarketTypeFormat1Choice {
 	m.Type = new(MarketTypeFormat1Choice)
@@ -21,4 +19,3 @@ func (m *MarketIdentification2) AddIdentification() *MarketIdentification1Choice
 	m.Identification = new(MarketIdentification1Choice)
 	return m.Identification
 }
-

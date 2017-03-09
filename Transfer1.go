@@ -23,9 +23,7 @@ type Transfer1 struct {
 
 	// Value of a security, as booked in an account. Book value is often different from the current market value of the security.
 	AveragePrice *ActiveOrHistoricCurrencyAnd13DecimalAmount `xml:"AvrgPric,omitempty"`
-
 }
-
 
 func (t *Transfer1) SetTransferReference(value string) {
 	t.TransferReference = (*Max35Text)(&value)
@@ -46,7 +44,7 @@ func (t *Transfer1) SetPortfolioTransferOutRate(value string) {
 }
 
 func (t *Transfer1) AddUnitsDetails() *Unit1 {
-	newValue := new (Unit1)
+	newValue := new(Unit1)
 	t.UnitsDetails = append(t.UnitsDetails, newValue)
 	return newValue
 }
@@ -58,4 +56,3 @@ func (t *Transfer1) SetOwnAccountTransferIndicator(value string) {
 func (t *Transfer1) SetAveragePrice(value, currency string) {
 	t.AveragePrice = NewActiveOrHistoricCurrencyAnd13DecimalAmount(value, currency)
 }
-

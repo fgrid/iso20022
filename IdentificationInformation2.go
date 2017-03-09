@@ -11,9 +11,7 @@ type IdentificationInformation2 struct {
 
 	// Financial institution servicing an account for a party.
 	Agent *BranchAndFinancialInstitutionIdentification5 `xml:"Agt,omitempty"`
-
 }
-
 
 func (i *IdentificationInformation2) AddParty() *PartyIdentification43 {
 	i.Party = new(PartyIdentification43)
@@ -29,4 +27,3 @@ func (i *IdentificationInformation2) AddAgent() *BranchAndFinancialInstitutionId
 	i.Agent = new(BranchAndFinancialInstitutionIdentification5)
 	return i.Agent
 }
-

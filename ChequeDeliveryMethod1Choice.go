@@ -8,9 +8,7 @@ type ChequeDeliveryMethod1Choice struct {
 
 	// Specifies a proprietary delivery method of the cheque by the debtor's agent.
 	Proprietary *Max35Text `xml:"Prtry"`
-
 }
-
 
 func (c *ChequeDeliveryMethod1Choice) SetCode(value string) {
 	c.Code = (*ChequeDelivery1Code)(&value)
@@ -19,4 +17,3 @@ func (c *ChequeDeliveryMethod1Choice) SetCode(value string) {
 func (c *ChequeDeliveryMethod1Choice) SetProprietary(value string) {
 	c.Proprietary = (*Max35Text)(&value)
 }
-

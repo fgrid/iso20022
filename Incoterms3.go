@@ -8,9 +8,7 @@ type Incoterms3 struct {
 
 	// Location where the Incoterms are actioned. Reference UN/ECE Recommendation 16 - LOCODE - Code for Trade and Transport Locations (www.unece.org/cefact/recommendations).
 	Location *Max35Text `xml:"Lctn,omitempty"`
-
 }
-
 
 func (i *Incoterms3) AddIncotermsCode() *Incoterms4Choice {
 	i.IncotermsCode = new(Incoterms4Choice)
@@ -20,4 +18,3 @@ func (i *Incoterms3) AddIncotermsCode() *Incoterms4Choice {
 func (i *Incoterms3) SetLocation(value string) {
 	i.Location = (*Max35Text)(&value)
 }
-

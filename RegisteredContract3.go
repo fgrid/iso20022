@@ -29,9 +29,7 @@ type RegisteredContract3 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (r *RegisteredContract3) SetRegisteredContractAmendmentIdentification(value string) {
 	r.RegisteredContractAmendmentIdentification = (*Max35Text)(&value)
@@ -51,7 +49,7 @@ func (r *RegisteredContract3) AddContract() *UnderlyingContract1Choice {
 }
 
 func (r *RegisteredContract3) AddContractBalance() *ContractBalance1 {
-	newValue := new (ContractBalance1)
+	newValue := new(ContractBalance1)
 	r.ContractBalance = append(r.ContractBalance, newValue)
 	return newValue
 }
@@ -66,14 +64,13 @@ func (r *RegisteredContract3) SetAdditionalInformation(value string) {
 }
 
 func (r *RegisteredContract3) AddAttachment() *DocumentGeneralInformation3 {
-	newValue := new (DocumentGeneralInformation3)
+	newValue := new(DocumentGeneralInformation3)
 	r.Attachment = append(r.Attachment, newValue)
 	return newValue
 }
 
 func (r *RegisteredContract3) AddSupplementaryData() *SupplementaryData1 {
-	newValue := new (SupplementaryData1)
+	newValue := new(SupplementaryData1)
 	r.SupplementaryData = append(r.SupplementaryData, newValue)
 	return newValue
 }
-

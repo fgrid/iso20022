@@ -12,13 +12,11 @@ type RegisteredContractJournal1 struct {
 	// Date of closure of the registered contract.
 	ClosureDate *ISODate `xml:"ClsrDt"`
 
-	// Reason of closure 
-	// 
+	// Reason of closure
+	//
 	// TBD - codes to be defined.
 	ClosureReason *ContractClosureReason1Choice `xml:"ClsrRsn"`
-
 }
-
 
 func (r *RegisteredContractJournal1) AddRegistrationAgent() *BranchAndFinancialInstitutionIdentification5 {
 	r.RegistrationAgent = new(BranchAndFinancialInstitutionIdentification5)
@@ -38,4 +36,3 @@ func (r *RegisteredContractJournal1) AddClosureReason() *ContractClosureReason1C
 	r.ClosureReason = new(ContractClosureReason1Choice)
 	return r.ClosureReason
 }
-

@@ -68,9 +68,7 @@ type IndividualPerson10 struct {
 
 	// Alternative identification, for example, national registration identification number, passport number, or an account number used to further identify the beneficial owner, for example, a Central Provident Fund (CFP) account as required for Singapore.
 	OtherIdentification []*GenericIdentification9 `xml:"OthrId,omitempty"`
-
 }
-
 
 func (i *IndividualPerson10) SetNamePrefix(value string) {
 	i.NamePrefix = (*NamePrefix1Code)(&value)
@@ -134,13 +132,13 @@ func (i *IndividualPerson10) AddCountryAndResidentialStatus() *CountryAndResiden
 }
 
 func (i *IndividualPerson10) AddPostalAddress() *PostalAddress3 {
-	newValue := new (PostalAddress3)
+	newValue := new(PostalAddress3)
 	i.PostalAddress = append(i.PostalAddress, newValue)
 	return newValue
 }
 
 func (i *IndividualPerson10) AddCitizenship() *CitizenshipInformation {
-	newValue := new (CitizenshipInformation)
+	newValue := new(CitizenshipInformation)
 	i.Citizenship = append(i.Citizenship, newValue)
 	return newValue
 }
@@ -164,8 +162,7 @@ func (i *IndividualPerson10) AddSecondaryCommunicationAddress() *CommunicationAd
 }
 
 func (i *IndividualPerson10) AddOtherIdentification() *GenericIdentification9 {
-	newValue := new (GenericIdentification9)
+	newValue := new(GenericIdentification9)
 	i.OtherIdentification = append(i.OtherIdentification, newValue)
 	return newValue
 }
-

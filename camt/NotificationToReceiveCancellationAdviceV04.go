@@ -7,7 +7,7 @@ import (
 )
 
 type Document05800104 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:camt.058.001.04 Document"`
+	XMLName xml.Name                                    `xml:"urn:iso:std:iso:20022:tech:xsd:camt.058.001.04 Document"`
 	Message *NotificationToReceiveCancellationAdviceV04 `xml:"NtfctnToRcvCxlAdvc"`
 }
 
@@ -30,9 +30,7 @@ type NotificationToReceiveCancellationAdviceV04 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (n *NotificationToReceiveCancellationAdviceV04) AddGroupHeader() *iso20022.GroupHeader59 {
 	n.GroupHeader = new(iso20022.GroupHeader59)
@@ -45,8 +43,7 @@ func (n *NotificationToReceiveCancellationAdviceV04) AddOriginalNotification() *
 }
 
 func (n *NotificationToReceiveCancellationAdviceV04) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	n.SupplementaryData = append(n.SupplementaryData, newValue)
 	return newValue
 }
-

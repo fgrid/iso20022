@@ -23,9 +23,7 @@ type NetworkParameters1 struct {
 
 	// Client certificate chain.
 	ClientCertificate *Max3000Binary `xml:"ClntCert,omitempty"`
-
 }
-
 
 func (n *NetworkParameters1) SetPrimaryAddress(value string) {
 	n.PrimaryAddress = (*Max35Text)(&value)
@@ -54,4 +52,3 @@ func (n *NetworkParameters1) SetAccessCode(value string) {
 func (n *NetworkParameters1) SetClientCertificate(value string) {
 	n.ClientCertificate = (*Max3000Binary)(&value)
 }
-

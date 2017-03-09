@@ -7,7 +7,7 @@ import (
 )
 
 type Document02000101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.020.001.01 Document"`
+	XMLName xml.Name                               `xml:"urn:iso:std:iso:20022:tech:xsd:seev.020.001.01 Document"`
 	Message *AgentCAMovementCancellationRequestV01 `xml:"AgtCAMvmntCxlReq"`
 }
 
@@ -34,9 +34,7 @@ type AgentCAMovementCancellationRequestV01 struct {
 
 	// Details of the movement instructions to be cancelled.
 	MovementDetails *iso20022.MovementInstruction1 `xml:"MvmntDtls,omitempty"`
-
 }
-
 
 func (a *AgentCAMovementCancellationRequestV01) AddIdentification() *iso20022.DocumentIdentification8 {
 	a.Identification = new(iso20022.DocumentIdentification8)
@@ -57,4 +55,3 @@ func (a *AgentCAMovementCancellationRequestV01) AddMovementDetails() *iso20022.M
 	a.MovementDetails = new(iso20022.MovementInstruction1)
 	return a.MovementDetails
 }
-

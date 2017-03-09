@@ -14,9 +14,7 @@ type ATMService2 struct {
 
 	// Describes the type of withdrawal selected by the customer.
 	ServiceType *ATMServiceType1Code `xml:"SvcTp"`
-
 }
-
 
 func (a *ATMService2) SetServiceReference(value string) {
 	a.ServiceReference = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (a *ATMService2) SetHostServiceCode(value string) {
 func (a *ATMService2) SetServiceType(value string) {
 	a.ServiceType = (*ATMServiceType1Code)(&value)
 }
-

@@ -26,9 +26,7 @@ type ClosingData2 struct {
 
 	// Set of parameters used to calculate the valuation rate to be applied to a non-deliverable agreement.
 	ValuationInformation *ValuationData2 `xml:"ValtnInf"`
-
 }
-
 
 func (c *ClosingData2) SetTradeDate(value string) {
 	c.TradeDate = (*ISODate)(&value)
@@ -64,4 +62,3 @@ func (c *ClosingData2) AddValuationInformation() *ValuationData2 {
 	c.ValuationInformation = new(ValuationData2)
 	return c.ValuationInformation
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document01600101 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.016.001.01 Document"`
+	XMLName xml.Name                                              `xml:"urn:iso:std:iso:20022:tech:xsd:acmt.016.001.01 Document"`
 	Message *AccountExcludedMandateMaintenanceAmendmentRequestV01 `xml:"AcctExcldMndtMntncAmdmntReq"`
 }
 
@@ -34,7 +34,7 @@ type AccountExcludedMandateMaintenanceAmendmentRequestV01 struct {
 	// Unique and unambiguous identification of the account between the account owner and the account servicer.
 	Account *iso20022.CustomerAccount1 `xml:"Acct"`
 
-	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. 
+	// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
 	AccountServicerIdentification *iso20022.BranchAndFinancialInstitutionIdentification4 `xml:"AcctSvcrId"`
 
 	// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
@@ -42,9 +42,7 @@ type AccountExcludedMandateMaintenanceAmendmentRequestV01 struct {
 
 	// Contains the signature with its components, namely signed info, signature value, key info and the object.
 	DigitalSignature []*iso20022.PartyAndSignature1 `xml:"DgtlSgntr,omitempty"`
-
 }
-
 
 func (a *AccountExcludedMandateMaintenanceAmendmentRequestV01) AddReferences() *iso20022.References4 {
 	a.References = new(iso20022.References4)
@@ -72,14 +70,13 @@ func (a *AccountExcludedMandateMaintenanceAmendmentRequestV01) AddAccountService
 }
 
 func (a *AccountExcludedMandateMaintenanceAmendmentRequestV01) AddOrganisation() *iso20022.Organisation6 {
-	newValue := new (iso20022.Organisation6)
+	newValue := new(iso20022.Organisation6)
 	a.Organisation = append(a.Organisation, newValue)
 	return newValue
 }
 
 func (a *AccountExcludedMandateMaintenanceAmendmentRequestV01) AddDigitalSignature() *iso20022.PartyAndSignature1 {
-	newValue := new (iso20022.PartyAndSignature1)
+	newValue := new(iso20022.PartyAndSignature1)
 	a.DigitalSignature = append(a.DigitalSignature, newValue)
 	return newValue
 }
-

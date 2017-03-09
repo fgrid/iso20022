@@ -14,9 +14,7 @@ type ValidationResult5 struct {
 
 	// Description of the element that creates the mismatch.
 	MisMatchedElement []*ElementIdentification1 `xml:"MisMtchdElmt,omitempty"`
-
 }
-
 
 func (v *ValidationResult5) SetSequenceNumber(value string) {
 	v.SequenceNumber = (*Number)(&value)
@@ -31,8 +29,7 @@ func (v *ValidationResult5) SetRuleDescription(value string) {
 }
 
 func (v *ValidationResult5) AddMisMatchedElement() *ElementIdentification1 {
-	newValue := new (ElementIdentification1)
+	newValue := new(ElementIdentification1)
 	v.MisMatchedElement = append(v.MisMatchedElement, newValue)
 	return newValue
 }
-

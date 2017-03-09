@@ -32,9 +32,7 @@ type Resolution2 struct {
 
 	// Indicates how the notifying party recommends that the security holders vote.
 	NotifyingPartyRecommendation *VoteInstruction1Code `xml:"NtifngPtyRcmmndtn,omitempty"`
-
 }
-
 
 func (r *Resolution2) SetIssuerLabel(value string) {
 	r.IssuerLabel = (*Max35Text)(&value)
@@ -75,4 +73,3 @@ func (r *Resolution2) SetManagementRecommendation(value string) {
 func (r *Resolution2) SetNotifyingPartyRecommendation(value string) {
 	r.NotifyingPartyRecommendation = (*VoteInstruction1Code)(&value)
 }
-

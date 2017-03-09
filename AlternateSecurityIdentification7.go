@@ -8,9 +8,7 @@ type AlternateSecurityIdentification7 struct {
 
 	// Source of the identification, that is, domestic (national) or proprietary.
 	IdentificationSource *IdentificationSource1Choice `xml:"IdSrc"`
-
 }
-
 
 func (a *AlternateSecurityIdentification7) SetIdentification(value string) {
 	a.Identification = (*Max35Text)(&value)
@@ -20,4 +18,3 @@ func (a *AlternateSecurityIdentification7) AddIdentificationSource() *Identifica
 	a.IdentificationSource = new(IdentificationSource1Choice)
 	return a.IdentificationSource
 }
-

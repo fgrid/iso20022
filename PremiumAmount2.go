@@ -14,9 +14,7 @@ type PremiumAmount2 struct {
 
 	// Party that settles the premium amount on behalf of the paying party.  It may contain the BIC of a central settlement system, eg. CLSBUS33.
 	SettlementParty *PartyIdentification8Choice `xml:"SttlmPty,omitempty"`
-
 }
-
 
 func (p *PremiumAmount2) AddPremiumQuote() *PremiumQuote1Choice {
 	p.PremiumQuote = new(PremiumQuote1Choice)
@@ -35,4 +33,3 @@ func (p *PremiumAmount2) AddSettlementParty() *PartyIdentification8Choice {
 	p.SettlementParty = new(PartyIdentification8Choice)
 	return p.SettlementParty
 }
-

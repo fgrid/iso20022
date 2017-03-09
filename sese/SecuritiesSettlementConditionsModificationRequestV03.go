@@ -7,7 +7,7 @@ import (
 )
 
 type Document03000103 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:sese.030.001.03 Document"`
+	XMLName xml.Name                                              `xml:"urn:iso:std:iso:20022:tech:xsd:sese.030.001.03 Document"`
 	Message *SecuritiesSettlementConditionsModificationRequestV03 `xml:"SctiesSttlmCondsModReq"`
 }
 
@@ -51,9 +51,7 @@ type SecuritiesSettlementConditionsModificationRequestV03 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (s *SecuritiesSettlementConditionsModificationRequestV03) AddAccountOwner() *iso20022.PartyIdentification36Choice {
 	s.AccountOwner = new(iso20022.PartyIdentification36Choice)
@@ -66,20 +64,19 @@ func (s *SecuritiesSettlementConditionsModificationRequestV03) AddSafekeepingAcc
 }
 
 func (s *SecuritiesSettlementConditionsModificationRequestV03) AddRequestDetails() *iso20022.RequestDetails8 {
-	newValue := new (iso20022.RequestDetails8)
+	newValue := new(iso20022.RequestDetails8)
 	s.RequestDetails = append(s.RequestDetails, newValue)
 	return newValue
 }
 
 func (s *SecuritiesSettlementConditionsModificationRequestV03) AddAdditionalInformation() *iso20022.AdditionalInformation7 {
-	newValue := new (iso20022.AdditionalInformation7)
+	newValue := new(iso20022.AdditionalInformation7)
 	s.AdditionalInformation = append(s.AdditionalInformation, newValue)
 	return newValue
 }
 
 func (s *SecuritiesSettlementConditionsModificationRequestV03) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	s.SupplementaryData = append(s.SupplementaryData, newValue)
 	return newValue
 }
-

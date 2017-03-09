@@ -8,9 +8,7 @@ type IdentificationSource4Choice struct {
 
 	// Unique and unambiguous identification source using a proprietary identification scheme.
 	Proprietary *RestrictedFINExact2Text `xml:"Prtry"`
-
 }
-
 
 func (i *IdentificationSource4Choice) SetCode(value string) {
 	i.Code = (*ExternalFinancialInstrumentIdentificationType1Code)(&value)
@@ -19,4 +17,3 @@ func (i *IdentificationSource4Choice) SetCode(value string) {
 func (i *IdentificationSource4Choice) SetProprietary(value string) {
 	i.Proprietary = (*RestrictedFINExact2Text)(&value)
 }
-

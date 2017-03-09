@@ -125,9 +125,7 @@ type FinancialInstrumentStipulations2 struct {
 
 	// Indicates whether the security has no maturity date.
 	PerpetualIndicator *YesNoIndicator `xml:"PerptlInd,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentStipulations2) SetGeographics(value string) {
 	f.Geographics = (*Max35Text)(&value)
@@ -300,4 +298,3 @@ func (f *FinancialInstrumentStipulations2) SetEscrowedIndicator(value string) {
 func (f *FinancialInstrumentStipulations2) SetPerpetualIndicator(value string) {
 	f.PerpetualIndicator = (*YesNoIndicator)(&value)
 }
-

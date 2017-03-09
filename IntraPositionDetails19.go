@@ -29,9 +29,7 @@ type IntraPositionDetails19 struct {
 
 	// Balance to which the securities are moving.
 	BalanceTo *SecuritiesBalanceType2Choice `xml:"BalTo,omitempty"`
-
 }
-
 
 func (i *IntraPositionDetails19) SetPoolIdentification(value string) {
 	i.PoolIdentification = (*Max35Text)(&value)
@@ -76,4 +74,3 @@ func (i *IntraPositionDetails19) AddBalanceTo() *SecuritiesBalanceType2Choice {
 	i.BalanceTo = new(SecuritiesBalanceType2Choice)
 	return i.BalanceTo
 }
-

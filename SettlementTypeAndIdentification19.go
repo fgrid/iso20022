@@ -29,9 +29,7 @@ type SettlementTypeAndIdentification19 struct {
 
 	// Identification assigned by the account servicer to unambiguously identify a corporate action event.
 	CorporateActionEventIdentification *Max35Text `xml:"CorpActnEvtId,omitempty"`
-
 }
-
 
 func (s *SettlementTypeAndIdentification19) SetAccountOwnerTransactionIdentification(value string) {
 	s.AccountOwnerTransactionIdentification = (*Max35Text)(&value)
@@ -68,4 +66,3 @@ func (s *SettlementTypeAndIdentification19) SetPoolIdentification(value string) 
 func (s *SettlementTypeAndIdentification19) SetCorporateActionEventIdentification(value string) {
 	s.CorporateActionEventIdentification = (*Max35Text)(&value)
 }
-

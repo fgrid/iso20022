@@ -44,9 +44,7 @@ type LineItem7 struct {
 
 	// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.
 	SellerDefinedInformation []*UserDefinedInformation1 `xml:"SellrDfndInf,omitempty"`
-
 }
-
 
 func (l *LineItem7) SetGoodsDescription(value string) {
 	l.GoodsDescription = (*Max70Text)(&value)
@@ -66,7 +64,7 @@ func (l *LineItem7) AddShipmentDateRange() *ShipmentDateRange1 {
 }
 
 func (l *LineItem7) AddLineItemDetails() *LineItemDetails7 {
-	newValue := new (LineItemDetails7)
+	newValue := new(LineItemDetails7)
 	l.LineItemDetails = append(l.LineItemDetails, newValue)
 	return newValue
 }
@@ -81,13 +79,13 @@ func (l *LineItem7) AddRoutingSummary() *TransportMeans1 {
 }
 
 func (l *LineItem7) AddIncoterms() *Incoterms1 {
-	newValue := new (Incoterms1)
+	newValue := new(Incoterms1)
 	l.Incoterms = append(l.Incoterms, newValue)
 	return newValue
 }
 
 func (l *LineItem7) AddAdjustment() *Adjustment3 {
-	newValue := new (Adjustment3)
+	newValue := new(Adjustment3)
 	l.Adjustment = append(l.Adjustment, newValue)
 	return newValue
 }
@@ -98,7 +96,7 @@ func (l *LineItem7) AddFreightCharges() *Charge12 {
 }
 
 func (l *LineItem7) AddTax() *Tax13 {
-	newValue := new (Tax13)
+	newValue := new(Tax13)
 	l.Tax = append(l.Tax, newValue)
 	return newValue
 }
@@ -108,14 +106,13 @@ func (l *LineItem7) SetTotalNetAmount(value, currency string) {
 }
 
 func (l *LineItem7) AddBuyerDefinedInformation() *UserDefinedInformation1 {
-	newValue := new (UserDefinedInformation1)
+	newValue := new(UserDefinedInformation1)
 	l.BuyerDefinedInformation = append(l.BuyerDefinedInformation, newValue)
 	return newValue
 }
 
 func (l *LineItem7) AddSellerDefinedInformation() *UserDefinedInformation1 {
-	newValue := new (UserDefinedInformation1)
+	newValue := new(UserDefinedInformation1)
 	l.SellerDefinedInformation = append(l.SellerDefinedInformation, newValue)
 	return newValue
 }
-

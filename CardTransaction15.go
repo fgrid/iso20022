@@ -3,19 +3,19 @@ package iso20022
 // Card transaction for which the authorisation is requested.
 type CardTransaction15 struct {
 
-	// Type of transaction being undertaken for the main service. 
+	// Type of transaction being undertaken for the main service.
 	// It correspond partially to the ISO 8583 field number 3.
 	TransactionType *CardPaymentServiceType7Code `xml:"TxTp"`
 
-	// Service in addition to the main service. 
+	// Service in addition to the main service.
 	// It correspond partially to the ISO 8583:2003 field number 22-3.
 	AdditionalService []*CardPaymentServiceType8Code `xml:"AddtlSvc,omitempty"`
 
-	// Additional attribute of the service type. 
+	// Additional attribute of the service type.
 	// It correspond partially to the ISO 8583:2003 field number 22-3.
 	ServiceAttribute *CardPaymentServiceType3Code `xml:"SvcAttr,omitempty"`
 
-	// Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction. 
+	// Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.
 	// It correspond to the ISO 8583 field number 18 for the version 87, field numbers 18 and 26 for the version 93, and field number 26 for the version 2003.
 	MerchantCategoryCode *Min3Max4NumericText `xml:"MrchntCtgyCd,omitempty"`
 
@@ -51,9 +51,7 @@ type CardTransaction15 struct {
 
 	// Outcome of the authorisation.
 	AuthorisationResult *AuthorisationResult7 `xml:"AuthstnRslt,omitempty"`
-
 }
-
 
 func (c *CardTransaction15) SetTransactionType(value string) {
 	c.TransactionType = (*CardPaymentServiceType7Code)(&value)
@@ -114,4 +112,3 @@ func (c *CardTransaction15) AddAuthorisationResult() *AuthorisationResult7 {
 	c.AuthorisationResult = new(AuthorisationResult7)
 	return c.AuthorisationResult
 }
-

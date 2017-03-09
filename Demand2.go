@@ -14,9 +14,7 @@ type Demand2 struct {
 
 	// Additional information related to the demand.
 	AdditionalInformation []*Max2000Text `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (d *Demand2) SetIdentification(value string) {
 	d.Identification = (*Max35Text)(&value)
@@ -33,4 +31,3 @@ func (d *Demand2) SetAmount(value, currency string) {
 func (d *Demand2) AddAdditionalInformation(value string) {
 	d.AdditionalInformation = append(d.AdditionalInformation, (*Max2000Text)(&value))
 }
-

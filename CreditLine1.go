@@ -4,15 +4,13 @@ package iso20022
 type CreditLine1 struct {
 
 	// Indicates whether the credit line is included or not.
-	// 
+	//
 	// Usage : if not present, credit line is not included in the balance amount.
 	Included *TrueFalseIndicator `xml:"Incl"`
 
 	// Amount of money of the credit line.
 	Amount *CurrencyAndAmount `xml:"Amt,omitempty"`
-
 }
-
 
 func (c *CreditLine1) SetIncluded(value string) {
 	c.Included = (*TrueFalseIndicator)(&value)
@@ -21,4 +19,3 @@ func (c *CreditLine1) SetIncluded(value string) {
 func (c *CreditLine1) SetAmount(value, currency string) {
 	c.Amount = NewCurrencyAndAmount(value, currency)
 }
-

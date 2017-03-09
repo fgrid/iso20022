@@ -11,9 +11,7 @@ type AcceptanceResult6 struct {
 
 	// Further details on the reject reason.
 	AdditionalRejectReasonInformation []*Max105Text `xml:"AddtlRjctRsnInf,omitempty"`
-
 }
-
 
 func (a *AcceptanceResult6) SetAccepted(value string) {
 	a.Accepted = (*YesNoIndicator)(&value)
@@ -27,4 +25,3 @@ func (a *AcceptanceResult6) AddRejectReason() *MandateReason1Choice {
 func (a *AcceptanceResult6) AddAdditionalRejectReasonInformation(value string) {
 	a.AdditionalRejectReasonInformation = append(a.AdditionalRejectReasonInformation, (*Max105Text)(&value))
 }
-

@@ -11,9 +11,7 @@ type CorporateActionRate8 struct {
 
 	// Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.
 	RequestedTaxationRate *PercentageRate `xml:"ReqdTaxtnRate,omitempty"`
-
 }
-
 
 func (c *CorporateActionRate8) SetProposedRate(value string) {
 	c.ProposedRate = (*PercentageRate)(&value)
@@ -27,4 +25,3 @@ func (c *CorporateActionRate8) AddOversubscriptionRate() *RateAndAmountFormat12C
 func (c *CorporateActionRate8) SetRequestedTaxationRate(value string) {
 	c.RequestedTaxationRate = (*PercentageRate)(&value)
 }
-

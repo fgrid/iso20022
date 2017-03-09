@@ -11,9 +11,7 @@ type FinancialInstrumentDescription3 struct {
 
 	// Identification of the place of safekeeping.
 	SafekeepingPlace *PartyIdentification2Choice `xml:"SfkpgPlc,omitempty"`
-
 }
-
 
 func (f *FinancialInstrumentDescription3) AddSecurityIdentification() *SecurityIdentification7 {
 	f.SecurityIdentification = new(SecurityIdentification7)
@@ -28,4 +26,3 @@ func (f *FinancialInstrumentDescription3) AddSafekeepingPlace() *PartyIdentifica
 	f.SafekeepingPlace = new(PartyIdentification2Choice)
 	return f.SafekeepingPlace
 }
-

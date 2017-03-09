@@ -8,9 +8,7 @@ type AdditionalInformation1 struct {
 
 	// Contents of the additional information.
 	InformationValue *Max350Text `xml:"InfVal"`
-
 }
-
 
 func (a *AdditionalInformation1) AddInformationType() *InformationType1Choice {
 	a.InformationType = new(InformationType1Choice)
@@ -20,4 +18,3 @@ func (a *AdditionalInformation1) AddInformationType() *InformationType1Choice {
 func (a *AdditionalInformation1) SetInformationValue(value string) {
 	a.InformationValue = (*Max350Text)(&value)
 }
-

@@ -7,7 +7,7 @@ import (
 )
 
 type Document04200205 struct {
-	XMLName xml.Name `xml:"urn:iso:std:iso:20022:tech:xsd:seev.042.002.05 Document"`
+	XMLName xml.Name                                         `xml:"urn:iso:std:iso:20022:tech:xsd:seev.042.002.05 Document"`
 	Message *CorporateActionInstructionStatementReport002V05 `xml:"CorpActnInstrStmtRpt"`
 }
 
@@ -37,9 +37,7 @@ type CorporateActionInstructionStatementReport002V05 struct {
 
 	// Additional information that can not be captured in the structured fields and/or any other specific block.
 	SupplementaryData []*iso20022.SupplementaryData1 `xml:"SplmtryData,omitempty"`
-
 }
-
 
 func (c *CorporateActionInstructionStatementReport002V05) AddPagination() *iso20022.Pagination {
 	c.Pagination = new(iso20022.Pagination)
@@ -52,14 +50,13 @@ func (c *CorporateActionInstructionStatementReport002V05) AddStatementGeneralDet
 }
 
 func (c *CorporateActionInstructionStatementReport002V05) AddAccountAndStatementDetails() *iso20022.AccountIdentification35 {
-	newValue := new (iso20022.AccountIdentification35)
+	newValue := new(iso20022.AccountIdentification35)
 	c.AccountAndStatementDetails = append(c.AccountAndStatementDetails, newValue)
 	return newValue
 }
 
 func (c *CorporateActionInstructionStatementReport002V05) AddSupplementaryData() *iso20022.SupplementaryData1 {
-	newValue := new (iso20022.SupplementaryData1)
+	newValue := new(iso20022.SupplementaryData1)
 	c.SupplementaryData = append(c.SupplementaryData, newValue)
 	return newValue
 }
-

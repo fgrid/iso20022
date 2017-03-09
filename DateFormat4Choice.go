@@ -11,9 +11,7 @@ type DateFormat4Choice struct {
 
 	// Proprietary scheme to specify a date.
 	Proprietary *GenericIdentification13 `xml:"Prtry"`
-
 }
-
 
 func (d *DateFormat4Choice) AddDate() *DateAndDateTimeChoice {
 	d.Date = new(DateAndDateTimeChoice)
@@ -28,4 +26,3 @@ func (d *DateFormat4Choice) AddProprietary() *GenericIdentification13 {
 	d.Proprietary = new(GenericIdentification13)
 	return d.Proprietary
 }
-

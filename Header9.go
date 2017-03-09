@@ -23,9 +23,7 @@ type Header9 struct {
 
 	// Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.
 	Traceability []*Traceability1 `xml:"Tracblt,omitempty"`
-
 }
-
 
 func (h *Header9) SetMessageFunction(value string) {
 	h.MessageFunction = (*MessageFunction4Code)(&value)
@@ -54,8 +52,7 @@ func (h *Header9) AddRecipientParty() *GenericIdentification32 {
 }
 
 func (h *Header9) AddTraceability() *Traceability1 {
-	newValue := new (Traceability1)
+	newValue := new(Traceability1)
 	h.Traceability = append(h.Traceability, newValue)
 	return newValue
 }
-

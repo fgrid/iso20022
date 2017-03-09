@@ -11,9 +11,7 @@ type BillingBalance1 struct {
 
 	// Identifies the currency type used to report the balance. This is not the ISO code.
 	CurrencyType *BillingCurrencyType1Code `xml:"CcyTp,omitempty"`
-
 }
-
 
 func (b *BillingBalance1) AddType() *BillingBalanceType1Choice {
 	b.Type = new(BillingBalanceType1Choice)
@@ -28,4 +26,3 @@ func (b *BillingBalance1) AddValue() *AmountAndDirection34 {
 func (b *BillingBalance1) SetCurrencyType(value string) {
 	b.CurrencyType = (*BillingCurrencyType1Code)(&value)
 }
-

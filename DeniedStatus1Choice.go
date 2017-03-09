@@ -8,17 +8,14 @@ type DeniedStatus1Choice struct {
 
 	// Specifies the reason of the DeniedStatus.
 	Reason []*DeniedReason1 `xml:"Rsn,omitempty"`
-
 }
-
 
 func (d *DeniedStatus1Choice) SetNoSpecifiedReason(value string) {
 	d.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (d *DeniedStatus1Choice) AddReason() *DeniedReason1 {
-	newValue := new (DeniedReason1)
+	newValue := new(DeniedReason1)
 	d.Reason = append(d.Reason, newValue)
 	return newValue
 }
-

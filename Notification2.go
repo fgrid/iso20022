@@ -11,9 +11,7 @@ type Notification2 struct {
 
 	// Specifies how the notification is sent.
 	DistributionType *InformationDistribution1Choice `xml:"DstrbtnTp,omitempty"`
-
 }
-
 
 func (n *Notification2) SetNotificationType(value string) {
 	n.NotificationType = (*Max35Text)(&value)
@@ -27,4 +25,3 @@ func (n *Notification2) AddDistributionType() *InformationDistribution1Choice {
 	n.DistributionType = new(InformationDistribution1Choice)
 	return n.DistributionType
 }
-

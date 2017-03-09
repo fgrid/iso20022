@@ -44,9 +44,7 @@ type CorporateActionOption123 struct {
 
 	// Provides additional information.
 	AdditionalInformation *CorporateActionNarrative33 `xml:"AddtlInf,omitempty"`
-
 }
-
 
 func (c *CorporateActionOption123) AddOptionNumber() *OptionNumber1Choice {
 	c.OptionNumber = new(OptionNumber1Choice)
@@ -64,7 +62,7 @@ func (c *CorporateActionOption123) AddFractionDisposition() *FractionDisposition
 }
 
 func (c *CorporateActionOption123) AddChangeType() *CorporateActionChangeTypeFormat7Choice {
-	newValue := new (CorporateActionChangeTypeFormat7Choice)
+	newValue := new(CorporateActionChangeTypeFormat7Choice)
 	c.ChangeType = append(c.ChangeType, newValue)
 	return newValue
 }
@@ -114,4 +112,3 @@ func (c *CorporateActionOption123) AddAdditionalInformation() *CorporateActionNa
 	c.AdditionalInformation = new(CorporateActionNarrative33)
 	return c.AdditionalInformation
 }
-

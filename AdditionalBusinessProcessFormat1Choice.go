@@ -8,9 +8,7 @@ type AdditionalBusinessProcessFormat1Choice struct {
 
 	// Proprietary identification of the additional business process linked to a corporate action event.
 	Proprietary *GenericIdentification20 `xml:"Prtry"`
-
 }
-
 
 func (a *AdditionalBusinessProcessFormat1Choice) SetCode(value string) {
 	a.Code = (*AdditionalBusinessProcess1Code)(&value)
@@ -20,4 +18,3 @@ func (a *AdditionalBusinessProcessFormat1Choice) AddProprietary() *GenericIdenti
 	a.Proprietary = new(GenericIdentification20)
 	return a.Proprietary
 }
-

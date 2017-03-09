@@ -44,9 +44,7 @@ type AggregateBalancePerSafekeepingPlace20 struct {
 
 	// Provides additional information on the holding.
 	HoldingAdditionalDetails *Max350Text `xml:"HldgAddtlDtls,omitempty"`
-
 }
-
 
 func (a *AggregateBalancePerSafekeepingPlace20) AddSafekeepingPlace() *SafekeepingPlaceFormat3Choice {
 	a.SafekeepingPlace = new(SafekeepingPlaceFormat3Choice)
@@ -74,13 +72,13 @@ func (a *AggregateBalancePerSafekeepingPlace20) AddNotAvailableBalance() *Balanc
 }
 
 func (a *AggregateBalancePerSafekeepingPlace20) AddPriceDetails() *PriceInformation5 {
-	newValue := new (PriceInformation5)
+	newValue := new(PriceInformation5)
 	a.PriceDetails = append(a.PriceDetails, newValue)
 	return newValue
 }
 
 func (a *AggregateBalancePerSafekeepingPlace20) AddForeignExchangeDetails() *ForeignExchangeTerms14 {
-	newValue := new (ForeignExchangeTerms14)
+	newValue := new(ForeignExchangeTerms14)
 	a.ForeignExchangeDetails = append(a.ForeignExchangeDetails, newValue)
 	return newValue
 }
@@ -100,19 +98,19 @@ func (a *AggregateBalancePerSafekeepingPlace20) AddInstrumentCurrencyAmounts() *
 }
 
 func (a *AggregateBalancePerSafekeepingPlace20) AddQuantityBreakdown() *QuantityBreakdown23 {
-	newValue := new (QuantityBreakdown23)
+	newValue := new(QuantityBreakdown23)
 	a.QuantityBreakdown = append(a.QuantityBreakdown, newValue)
 	return newValue
 }
 
 func (a *AggregateBalancePerSafekeepingPlace20) AddBalanceBreakdown() *SubBalanceInformation11 {
-	newValue := new (SubBalanceInformation11)
+	newValue := new(SubBalanceInformation11)
 	a.BalanceBreakdown = append(a.BalanceBreakdown, newValue)
 	return newValue
 }
 
 func (a *AggregateBalancePerSafekeepingPlace20) AddAdditionalBalanceBreakdown() *AdditionalBalanceInformation11 {
-	newValue := new (AdditionalBalanceInformation11)
+	newValue := new(AdditionalBalanceInformation11)
 	a.AdditionalBalanceBreakdown = append(a.AdditionalBalanceBreakdown, newValue)
 	return newValue
 }
@@ -120,4 +118,3 @@ func (a *AggregateBalancePerSafekeepingPlace20) AddAdditionalBalanceBreakdown() 
 func (a *AggregateBalancePerSafekeepingPlace20) SetHoldingAdditionalDetails(value string) {
 	a.HoldingAdditionalDetails = (*Max350Text)(&value)
 }
-

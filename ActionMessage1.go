@@ -11,9 +11,7 @@ type ActionMessage1 struct {
 
 	// Electronic signature of the message to display or print.
 	MessageContentSignature *Max70Text `xml:"MsgCnttSgntr,omitempty"`
-
 }
-
 
 func (a *ActionMessage1) SetMessageDestination(value string) {
 	a.MessageDestination = (*UserInterface1Code)(&value)
@@ -26,4 +24,3 @@ func (a *ActionMessage1) SetMessageContent(value string) {
 func (a *ActionMessage1) SetMessageContentSignature(value string) {
 	a.MessageContentSignature = (*Max70Text)(&value)
 }
-

@@ -20,9 +20,7 @@ type ATMEnvironment3 struct {
 
 	// Card performing the transaction.
 	Card *PaymentCard17 `xml:"Card,omitempty"`
-
 }
-
 
 func (a *ATMEnvironment3) AddAcquirer() *Acquirer7 {
 	a.Acquirer = new(Acquirer7)
@@ -52,4 +50,3 @@ func (a *ATMEnvironment3) AddCard() *PaymentCard17 {
 	a.Card = new(PaymentCard17)
 	return a.Card
 }
-

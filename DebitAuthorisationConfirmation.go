@@ -14,9 +14,7 @@ type DebitAuthorisationConfirmation struct {
 
 	// Justification of the (partial) debit authorisation.
 	Reason *Max140Text `xml:"Rsn,omitempty"`
-
 }
-
 
 func (d *DebitAuthorisationConfirmation) SetDebitAuthorisation(value string) {
 	d.DebitAuthorisation = (*YesNoIndicator)(&value)
@@ -33,4 +31,3 @@ func (d *DebitAuthorisationConfirmation) SetValueDateToDebit(value string) {
 func (d *DebitAuthorisationConfirmation) SetReason(value string) {
 	d.Reason = (*Max140Text)(&value)
 }
-

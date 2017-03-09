@@ -32,9 +32,7 @@ type Contacts3 struct {
 
 	// Identification of a division of a large organisation or building.
 	Department *Max70Text `xml:"Dept,omitempty"`
-
 }
-
 
 func (c *Contacts3) SetNamePrefix(value string) {
 	c.NamePrefix = (*NamePrefix1Code)(&value)
@@ -75,4 +73,3 @@ func (c *Contacts3) SetResponsibility(value string) {
 func (c *Contacts3) SetDepartment(value string) {
 	c.Department = (*Max70Text)(&value)
 }
-

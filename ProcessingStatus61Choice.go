@@ -23,9 +23,7 @@ type ProcessingStatus61Choice struct {
 
 	// Cancellation requested executed.
 	Cancelled *CancellationStatus20Choice `xml:"Canc"`
-
 }
-
 
 func (p *ProcessingStatus61Choice) AddPendingCancellation() *PendingStatus51Choice {
 	p.PendingCancellation = new(PendingStatus51Choice)
@@ -61,4 +59,3 @@ func (p *ProcessingStatus61Choice) AddCancelled() *CancellationStatus20Choice {
 	p.Cancelled = new(CancellationStatus20Choice)
 	return p.Cancelled
 }
-

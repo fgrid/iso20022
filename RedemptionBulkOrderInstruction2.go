@@ -11,9 +11,7 @@ type RedemptionBulkOrderInstruction2 struct {
 
 	// Additional information that cannot be captured in the structured elements and/or any other specific block.
 	Extension []*Extension1 `xml:"Xtnsn,omitempty"`
-
 }
-
 
 func (r *RedemptionBulkOrderInstruction2) AddBulkOrderDetails() *RedemptionBulkOrder3 {
 	r.BulkOrderDetails = new(RedemptionBulkOrder3)
@@ -21,14 +19,13 @@ func (r *RedemptionBulkOrderInstruction2) AddBulkOrderDetails() *RedemptionBulkO
 }
 
 func (r *RedemptionBulkOrderInstruction2) AddRelatedPartyDetails() *Intermediary8 {
-	newValue := new (Intermediary8)
+	newValue := new(Intermediary8)
 	r.RelatedPartyDetails = append(r.RelatedPartyDetails, newValue)
 	return newValue
 }
 
 func (r *RedemptionBulkOrderInstruction2) AddExtension() *Extension1 {
-	newValue := new (Extension1)
+	newValue := new(Extension1)
 	r.Extension = append(r.Extension, newValue)
 	return newValue
 }
-

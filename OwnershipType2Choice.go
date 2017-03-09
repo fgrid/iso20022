@@ -8,9 +8,7 @@ type OwnershipType2Choice struct {
 
 	// Ownership type expressed as a proprietary code.
 	Proprietary *GenericIdentification47 `xml:"Prtry"`
-
 }
-
 
 func (o *OwnershipType2Choice) SetCode(value string) {
 	o.Code = (*AccountOwnershipType4Code)(&value)
@@ -20,4 +18,3 @@ func (o *OwnershipType2Choice) AddProprietary() *GenericIdentification47 {
 	o.Proprietary = new(GenericIdentification47)
 	return o.Proprietary
 }
-

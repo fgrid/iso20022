@@ -11,9 +11,7 @@ type DateFormat20Choice struct {
 
 	// Specifies the type of date.
 	DateCode *DateCode11Choice `xml:"DtCd"`
-
 }
-
 
 func (d *DateFormat20Choice) AddDate() *DateAndDateTimeChoice {
 	d.Date = new(DateAndDateTimeChoice)
@@ -29,4 +27,3 @@ func (d *DateFormat20Choice) AddDateCode() *DateCode11Choice {
 	d.DateCode = new(DateCode11Choice)
 	return d.DateCode
 }
-

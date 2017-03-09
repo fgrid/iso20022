@@ -8,17 +8,14 @@ type RejectedStatus14Choice struct {
 
 	// Reason for the rejected status.
 	Reason []*RejectedStatusReason14 `xml:"Rsn"`
-
 }
-
 
 func (r *RejectedStatus14Choice) SetNoSpecifiedReason(value string) {
 	r.NoSpecifiedReason = (*NoReasonCode)(&value)
 }
 
 func (r *RejectedStatus14Choice) AddReason() *RejectedStatusReason14 {
-	newValue := new (RejectedStatusReason14)
+	newValue := new(RejectedStatusReason14)
 	r.Reason = append(r.Reason, newValue)
 	return newValue
 }
-

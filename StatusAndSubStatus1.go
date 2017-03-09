@@ -8,9 +8,7 @@ type StatusAndSubStatus1 struct {
 
 	// Sub status expressed as a code.
 	SubStatusCode *Exact4AlphaNumericText `xml:"SubStsCd,omitempty"`
-
 }
-
 
 func (s *StatusAndSubStatus1) AddStatusCode() *Status13Choice {
 	s.StatusCode = new(Status13Choice)
@@ -20,4 +18,3 @@ func (s *StatusAndSubStatus1) AddStatusCode() *Status13Choice {
 func (s *StatusAndSubStatus1) SetSubStatusCode(value string) {
 	s.SubStatusCode = (*Exact4AlphaNumericText)(&value)
 }
-

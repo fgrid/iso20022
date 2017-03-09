@@ -16,9 +16,9 @@ type StructuredRemittanceInformation2 struct {
 	DocumentReferenceNumber *Max35Text `xml:"DocRefNb,omitempty"`
 
 	// Unique and unambiguous reference assigned by the creditor to refer to the payment transaction.
-	// 
+	//
 	// Usage: if available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the cash.
-	// 
+	//
 	// If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.
 	CreditorReference *Max35Text `xml:"CdtrRef,omitempty"`
 
@@ -27,9 +27,7 @@ type StructuredRemittanceInformation2 struct {
 
 	// Identification of the party to whom an invoice is issued, when different than the originator or debtor.
 	Invoicee *PartyIdentification1 `xml:"Invcee,omitempty"`
-
 }
-
 
 func (s *StructuredRemittanceInformation2) SetReferredDocumentType(value string) {
 	s.ReferredDocumentType = (*DocumentType1Code)(&value)
@@ -40,7 +38,7 @@ func (s *StructuredRemittanceInformation2) SetReferredDocumentRelatedDate(value 
 }
 
 func (s *StructuredRemittanceInformation2) AddReferredDocumentAmount() *ReferredDocumentAmount1Choice {
-	newValue := new (ReferredDocumentAmount1Choice)
+	newValue := new(ReferredDocumentAmount1Choice)
 	s.ReferredDocumentAmount = append(s.ReferredDocumentAmount, newValue)
 	return newValue
 }
@@ -62,4 +60,3 @@ func (s *StructuredRemittanceInformation2) AddInvoicee() *PartyIdentification1 {
 	s.Invoicee = new(PartyIdentification1)
 	return s.Invoicee
 }
-

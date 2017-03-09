@@ -17,12 +17,10 @@ type NetworkParameters3 struct {
 
 	// Identification of the X.509 Certificate required to authenticate the server, for instance a digest of the certificate.
 	ServerCertificateIdentifier []*Max140Binary `xml:"SvrCertIdr,omitempty"`
-
 }
 
-
 func (n *NetworkParameters3) AddAddress() *NetworkParameters4 {
-	newValue := new (NetworkParameters4)
+	newValue := new(NetworkParameters4)
 	n.Address = append(n.Address, newValue)
 	return newValue
 }
@@ -42,4 +40,3 @@ func (n *NetworkParameters3) AddServerCertificate(value string) {
 func (n *NetworkParameters3) AddServerCertificateIdentifier(value string) {
 	n.ServerCertificateIdentifier = append(n.ServerCertificateIdentifier, (*Max140Binary)(&value))
 }
-

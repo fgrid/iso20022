@@ -24,7 +24,7 @@ type TransportBySea5 struct {
 	// Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.
 	CarrierAgentCountry *CountryCode `xml:"CrrierAgtCtry,omitempty"`
 
-	// Name of the master or captain of a vessel that signs the document for example, bill of lading, charter party bill of lading, non-negotiable sea waybill or multimodal transport document that evidences shipment of the goods from a port of loading to a port of discharge. 
+	// Name of the master or captain of a vessel that signs the document for example, bill of lading, charter party bill of lading, non-negotiable sea waybill or multimodal transport document that evidences shipment of the goods from a port of loading to a port of discharge.
 	MasterName *Max70Text `xml:"MstrNm,omitempty"`
 
 	// Name of the company or individual that signs a charter party bill of lading that evidences shipment of the goods from a port of loading to a port of discharge and acts in the capacity of charterer.
@@ -38,9 +38,7 @@ type TransportBySea5 struct {
 
 	// Identifies the voyage by sea.
 	VoyageNumber *Max35Text `xml:"VygNb,omitempty"`
-
 }
-
 
 func (t *TransportBySea5) SetPortOfLoading(value string) {
 	t.PortOfLoading = (*Max35Text)(&value)
@@ -89,4 +87,3 @@ func (t *TransportBySea5) SetIMONumber(value string) {
 func (t *TransportBySea5) SetVoyageNumber(value string) {
 	t.VoyageNumber = (*Max35Text)(&value)
 }
-

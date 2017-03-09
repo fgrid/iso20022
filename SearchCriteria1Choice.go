@@ -14,9 +14,7 @@ type SearchCriteria1Choice struct {
 
 	// Specifies the original transaction number.
 	OriginalTransactionNumber []*RequestType1 `xml:"OrgnlTxNb"`
-
 }
-
 
 func (s *SearchCriteria1Choice) AddAccount() *AccountAndParties1 {
 	s.Account = new(AccountAndParties1)
@@ -34,8 +32,7 @@ func (s *SearchCriteria1Choice) AddPaymentInstrument() *PaymentInstrumentType1 {
 }
 
 func (s *SearchCriteria1Choice) AddOriginalTransactionNumber() *RequestType1 {
-	newValue := new (RequestType1)
+	newValue := new(RequestType1)
 	s.OriginalTransactionNumber = append(s.OriginalTransactionNumber, newValue)
 	return newValue
 }
-

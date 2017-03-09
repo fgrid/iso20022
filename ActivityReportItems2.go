@@ -18,16 +18,14 @@ type ActivityReportItems2 struct {
 
 	// Next processing step required.
 	PendingRequestForAction []*PendingActivity2 `xml:"PdgReqForActn,omitempty"`
-
 }
-
 
 func (a *ActivityReportItems2) SetTransactionIdentification(value string) {
 	a.TransactionIdentification = (*Max35Text)(&value)
 }
 
 func (a *ActivityReportItems2) AddUserTransactionReference() *DocumentIdentification5 {
-	newValue := new (DocumentIdentification5)
+	newValue := new(DocumentIdentification5)
 	a.UserTransactionReference = append(a.UserTransactionReference, newValue)
 	return newValue
 }
@@ -38,14 +36,13 @@ func (a *ActivityReportItems2) AddReportedEntity() *BICIdentification1 {
 }
 
 func (a *ActivityReportItems2) AddReportedItem() *ActivityDetails1 {
-	newValue := new (ActivityDetails1)
+	newValue := new(ActivityDetails1)
 	a.ReportedItem = append(a.ReportedItem, newValue)
 	return newValue
 }
 
 func (a *ActivityReportItems2) AddPendingRequestForAction() *PendingActivity2 {
-	newValue := new (PendingActivity2)
+	newValue := new(PendingActivity2)
 	a.PendingRequestForAction = append(a.PendingRequestForAction, newValue)
 	return newValue
 }
-

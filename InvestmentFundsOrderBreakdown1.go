@@ -11,9 +11,7 @@ type InvestmentFundsOrderBreakdown1 struct {
 
 	// Portion of the net amount that is attributed to an order type.
 	Amount *ActiveCurrencyAndAmount `xml:"Amt"`
-
 }
-
 
 func (i *InvestmentFundsOrderBreakdown1) SetOrderBreakdownType(value string) {
 	i.OrderBreakdownType = (*FundOrderType5Code)(&value)
@@ -26,4 +24,3 @@ func (i *InvestmentFundsOrderBreakdown1) SetExtendedOrderBreakdownType(value str
 func (i *InvestmentFundsOrderBreakdown1) SetAmount(value, currency string) {
 	i.Amount = NewActiveCurrencyAndAmount(value, currency)
 }
-
